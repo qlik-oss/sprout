@@ -1,0 +1,17 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {},
+    "build:npm": {
+      "dependsOn": ["^build:npm"]
+    },
+    "start": {},
+    "storybook:build": {},
+    "lint": {},
+    "check-types": {},
+    "test": {},
+    "test:update": {},
+    "format:write": {},
+    "format:check": {}
+  }
+}

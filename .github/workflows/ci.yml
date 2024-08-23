@@ -1,0 +1,48 @@
+name: "CI"
+on:
+  pull_request:
+    branches:
+      - "main"
+  push:
+    branches:
+      - "main"
+
+# This allows a subsequently queued workflow run to interrupt previous runs
+concurrency:
+  group: "ci @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # otherwise, ci will failed to push refs
+
+      - name: Install asdf & tools
+        uses: asdf-vm/actions/install@05e0d2ed97b598bfce82fd30daf324ae0c4570e6 #v3.0.2
+
+      - name: asdf cache
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4.0.2
+        with:
+          path: |
+            ~/.asdf/
+            $(pnpm store path)
+          key: ${{ runner.os }}-${{ hashFiles('**/.tool-versions') }}
+          restore-keys: |
+            ${{ runner.os }}-asdf
+
+      - run: pnpm install
+      - run: pnpm format:check
+      - run: pnpm build
+      - run: pnpm build:npm
+      - run: pnpm check-types
+      - run: pnpm lint
+      - run: pnpm test
+      # - name: Run Chromatic
+      #   uses: chromaui/action@latest
+      #   with:
+      #     projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      #     workingDir: packages/sprout-css-react
+      #     autoAcceptChanges: "main" # 👈 Option to accept all changes on main
