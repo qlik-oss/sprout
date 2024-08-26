@@ -1,0 +1,52 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Git Config
+        run: |
+          git config user.name "github-action"
+          git config user.email "github-action@noreply.github.com"
+
+      - uses: pnpm/action-setup@v3
+
+      - name: Install asdf & tools
+        uses: asdf-vm/actions/install@05e0d2ed97b598bfce82fd30daf324ae0c4570e6 #v3.0.2
+
+      - name: asdf cache
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4.0.2
+        with:
+          path: |
+            ~/.asdf/
+            $(pnpm store path)
+          key: ${{ runner.os }}-${{ hashFiles('**/.tool-versions') }}
+          restore-keys: |
+            ${{ runner.os }}-asdf
+
+      - run: pnpm install
+
+      - name: Create Release Pull Request or Publish to Qlik GitHub Packages npm registry
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          setupGitUser: false
+          commit: "chore(release): version packages"
+          title: "chore(release): version packages"
+          publish: pnpm publish-packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_CI_TOKEN }}
