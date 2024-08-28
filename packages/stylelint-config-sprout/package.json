@@ -13,12 +13,23 @@
   "sideEffects": false,
   "main": "src/index.mjs",
   "scripts": {
+    "format:check": "prettier --check '**' --ignore-unknown",
+    "format:write": "prettier --write '**' --ignore-unknown",
+    "lint": "eslint .",
     "test": "node --test src"
   },
   "dependencies": {
     "stylelint": "^16.8.2"
   },
   "devDependencies": {
+    "eslint": "9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "3.3.3",
     "stylelint-test-rule-node": "0.3.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

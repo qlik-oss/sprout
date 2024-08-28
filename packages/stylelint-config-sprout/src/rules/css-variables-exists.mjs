@@ -29,7 +29,7 @@ function checkVariable(value) {
 }
 
 /** @type {import('stylelint').Rule} */
-const ruleFunction = (primary, secondaryOptions, context) => {
+const ruleFunction = (primary) => {
   return (root, result) => {
     const validOptions = validateOptions(result, ruleName, {
       actual: primary,
@@ -39,7 +39,7 @@ const ruleFunction = (primary, secondaryOptions, context) => {
     if (!validOptions) return;
 
     root.walkDecls((declaration) => {
-      const { prop, value } = declaration;
+      const { value } = declaration;
       const splitted = value.split(" ");
       splitted.forEach((v) => {
         if (!checkVariable(v)) {

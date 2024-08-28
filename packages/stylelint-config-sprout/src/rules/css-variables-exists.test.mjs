@@ -11,6 +11,8 @@ testRule({
   accept: [
     {
       code: "a { color: #fff; }",
+    },
+    {
       code: "a { color: var(--sprout-common-foreground-color-default); }",
     },
   ],
