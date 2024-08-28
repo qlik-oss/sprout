@@ -361,5 +361,5 @@ export const TOKENS = [
   "--sprout-common-sizing-4xl",
   "--sprout-common-sizing-5xl",
   "--sprout-common-sizing-6xl",
-  "--sprout-common-sizing-7xl)",
+  "--sprout-common-sizing-7xl",
 ];
