@@ -17,10 +17,14 @@ module.exports = {
 
 ## Rules
 
-The goal of all rules is to help team to adopt design-tokens.
+The goal of all rules is to help team to adopt design-tokens in their stylesheet.
 We will go step by step on rules but the first idea is to track hard coded value inside styles.
 
 ### sprout/no-hardcoded-values
 
 Check size using a regexp `/[\d.]+(px|em|rem%)/`.
 If found check if the prop is something else than `[min-|max-]width`, `[min-|max-]height`.
+
+### sprout/css-variables-exists
+
+A typo is easy to do when using tokens. This rule will shows up if you use an non existing tokens.
