@@ -20,12 +20,12 @@
   },
   "prettier": "@qlik/prettier-config",
   "devDependencies": {
-    "@changesets/cli": "2.27.7",
+    "@changesets/cli": "2.27.8",
     "@qlik/prettier-config": "0.4.17",
     "rimraf": "6.0.1",
-    "turbo": "2.0.9"
+    "turbo": "2.1.2"
   },
-  "packageManager": "pnpm@9.5.0+sha256.dbdf5961c32909fb030595a9daa1dae720162e658609a8f92f2fa99835510ca5",
+  "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b",
   "engines": {
     "node": ">=20"
   },
