@@ -22,7 +22,7 @@ jobs:
           git config user.name "github-action"
           git config user.email "github-action@noreply.github.com"
 
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
 
       - name: Install asdf & tools
         uses: asdf-vm/actions/install@05e0d2ed97b598bfce82fd30daf324ae0c4570e6 #v3.0.2
