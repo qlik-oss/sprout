@@ -6,7 +6,7 @@
     "url": "https://github.com/qlik-trial/sprout-css-kit/issues"
   },
   "repository": "https://github.com/qlik-trial/sprout-css-kit.git",
-  "license": "Apache 2.0",
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": {

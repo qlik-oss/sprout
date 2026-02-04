@@ -274,43 +274,43 @@ importers:
         version: link:../sprout-icons
     devDependencies:
       '@axe-core/playwright':
-        specifier: 4.11.0
+        specifier: ^4.11.0
         version: 4.11.0(playwright-core@1.58.1)
       '@eslint/eslintrc':
-        specifier: 3.3.3
+        specifier: ^3.3.3
         version: 3.3.3
       '@eslint/js':
-        specifier: 9.39.2
+        specifier: ^9.39.2
         version: 9.39.2
       '@figma/code-connect':
-        specifier: 1.3.12
+        specifier: ^1.3.12
         version: 1.3.12
       '@playwright/experimental-ct-react':
-        specifier: 1.58.1
+        specifier: ^1.58.1
         version: 1.58.1(@types/node@24.10.1)(jiti@2.6.1)(vite@7.3.1(@types/node@24.10.1)(jiti@2.6.1))
       '@playwright/test':
-        specifier: 1.58.1
+        specifier: ^1.58.1
         version: 1.58.1
       '@qlik/browserslist-config':
-        specifier: 3.0.0
+        specifier: ^3.0.0
         version: 3.0.0
       '@qlik/eslint-config-sprout':
         specifier: workspace:*
         version: link:../../tools/eslint-config-sprout
       '@qlik/prettier-config':
-        specifier: 0.4.33
+        specifier: ^0.4.33
         version: 0.4.33(prettier@3.8.1)(svelte@4.2.18)(typescript@5.9.3)
       '@qlik/stylelint-config-sprout':
         specifier: workspace:*
         version: link:../../tools/stylelint-config-sprout
       '@qlik/tsconfig':
-        specifier: 0.3.1
+        specifier: ^0.3.1
         version: 0.3.1
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^6.0.2
         version: 6.0.2(@vue/compiler-sfc@3.5.27)(prettier-plugin-svelte@3.4.1(prettier@3.8.1)(svelte@4.2.18))(prettier@3.8.1)(svelte@4.2.18)
       '@types/node':
-        specifier: 24.10.1
+        specifier: ^24.10.1
         version: 24.10.1
       '@types/react':
         specifier: ^19.2.10
@@ -319,19 +319,19 @@ importers:
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.11)
       '@vitejs/plugin-react':
-        specifier: 5.1.2
+        specifier: ^5.1.2
         version: 5.1.2(vite@7.3.1(@types/node@24.10.1)(jiti@2.6.1))
       axe-core:
         specifier: ^4.11.1
         version: 4.11.1
       concurrently:
-        specifier: 9.2.1
+        specifier: ^9.2.1
         version: 9.2.1
       cpx2:
-        specifier: 8.0.0
+        specifier: ^8.0.0
         version: 8.0.0
       eslint:
-        specifier: 9.39.2
+        specifier: ^9.39.2
         version: 9.39.2(jiti@2.6.1)
       eslint-plugin-import:
         specifier: ^2.32.0
@@ -343,7 +343,7 @@ importers:
         specifier: ^0.5.4
         version: 0.5.4(@typescript-eslint/eslint-plugin@8.54.0(@typescript-eslint/parser@8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18)
       prettier:
-        specifier: 3.8.1
+        specifier: ^3.8.1
         version: 3.8.1
       react:
         specifier: ^18.3.1
@@ -355,7 +355,7 @@ importers:
         specifier: ^7.71.1
         version: 7.71.1(react@18.3.1)
       rimraf:
-        specifier: 6.1.2
+        specifier: ^6.1.2
         version: 6.1.2
       stylelint:
         specifier: ^17.1.0
@@ -367,7 +367,7 @@ importers:
         specifier: ^40.0.0
         version: 40.0.0(stylelint@17.1.1(typescript@5.9.3))
       typescript:
-        specifier: 5.9.3
+        specifier: ^5.9.3
         version: 5.9.3
       vitest:
         specifier: ^4.0.18
@@ -563,16 +563,16 @@ importers:
   packages/storybook:
     dependencies:
       '@codemirror/lang-sql':
-        specifier: 6.10.0
+        specifier: ^6.10.0
         version: 6.10.0
       '@dnd-kit/core':
         specifier: ^6.3.1
         version: 6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@faker-js/faker':
-        specifier: 10.2.0
+        specifier: ^10.2.0
         version: 10.2.0
       '@lezer/highlight':
-        specifier: 1.2.3
+        specifier: ^1.2.3
         version: 1.2.3
       '@qlik/design-tokens':
         specifier: workspace:*
@@ -599,10 +599,10 @@ importers:
         specifier: ^3.13.18
         version: 3.13.18(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@uiw/codemirror-themes':
-        specifier: 4.25.4
+        specifier: ^4.25.4
         version: 4.25.4(@codemirror/language@6.12.1)(@codemirror/state@6.5.4)(@codemirror/view@6.39.12)
       '@uiw/react-codemirror':
-        specifier: 4.25.4
+        specifier: ^4.25.4
         version: 4.25.4(@babel/runtime@7.25.4)(@codemirror/autocomplete@6.20.0)(@codemirror/language@6.12.1)(@codemirror/lint@6.9.3)(@codemirror/search@6.6.0)(@codemirror/state@6.5.4)(@codemirror/theme-one-dark@6.1.3)(@codemirror/view@6.39.12)(codemirror@6.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@uiw/react-json-view':
         specifier: 2.0.0-alpha.41
@@ -690,10 +690,10 @@ importers:
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.11)
       ag-grid-community:
-        specifier: 34.3.1
+        specifier: ^34.3.1
         version: 34.3.1
       ag-grid-react:
-        specifier: 34.3.1
+        specifier: ^34.3.1
         version: 34.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       axe-core:
         specifier: ^4.11.1

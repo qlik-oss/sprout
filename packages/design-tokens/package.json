@@ -2,7 +2,7 @@
   "name": "@qlik/design-tokens",
   "version": "0.16.29",
   "description": "Design tokens for Qlik UI's",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "type": "module",
   "main": "generated/tokens/js/sprout-tokens.js",
   "files": [

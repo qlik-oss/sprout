@@ -2,7 +2,7 @@
   "name": "@qlik/sprout-cli",
   "version": "0.16.29",
   "description": "CLI tools for Qlik Design System Sprout",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": "./lib/index.js"
