@@ -22,20 +22,10 @@ jobs:
           git config user.name "github-action"
           git config user.email "github-action@noreply.github.com"
 
-      - uses: pnpm/action-setup@v3
-
-      - name: Install asdf & tools
-        uses: asdf-vm/actions/install@05e0d2ed97b598bfce82fd30daf324ae0c4570e6 #v3.0.2
-
-      - name: asdf cache
-        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4.0.2
+      - name: Use Node.js
+        uses: ./.github/actions/setup-node
         with:
-          path: |
-            ~/.asdf/
-            $(pnpm store path)
-          key: ${{ runner.os }}-${{ hashFiles('**/.tool-versions') }}
-          restore-keys: |
-            ${{ runner.os }}-asdf
+          npm-token: ${{ secrets.NPM_CI_TOKEN }}
 
       - run: pnpm install
 
@@ -47,6 +37,7 @@ jobs:
           commit: "chore(release): version packages"
           title: "chore(release): version packages"
           publish: pnpm publish-packages
+          # cwd: .
         env:
           GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_CI_TOKEN }}
