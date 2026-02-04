@@ -1,11 +1,11 @@
 {
   "name": "@qlik/sprout-css-react",
   "version": "6.40.0",
-  "homepage": "https://github.com/qlik-trial/sprout-css#readme",
+  "homepage": "https://github.com/qlik/sprout#readme",
   "bugs": {
-    "url": "https://github.com/qlik-trial/sprout-css/issues"
+    "url": "https://github.com/qlik/sprout/issues"
   },
-  "repository": "https://github.com/qlik-trial/sprout-css.git",
+  "repository": "https://github.com/qlik/sprout.git",
   "license": "MIT",
   "sideEffects": false,
   "exports": {

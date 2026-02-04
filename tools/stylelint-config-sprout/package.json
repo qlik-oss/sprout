@@ -1,11 +1,11 @@
 {
   "name": "@qlik/stylelint-config-sprout",
   "version": "6.6.9",
-  "homepage": "https://github.com/qlik-trial/sprout-css-kit#readme",
+  "homepage": "https://github.com/qlik/sprout#readme",
   "bugs": {
-    "url": "https://github.com/qlik-trial/sprout-css-kit/issues"
+    "url": "https://github.com/qlik/sprout/issues"
   },
-  "repository": "https://github.com/qlik-trial/sprout-css-kit.git",
+  "repository": "https://github.com/qlik/sprout.git",
   "license": "MIT",
   "sideEffects": false,
   "exports": {

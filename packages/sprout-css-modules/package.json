@@ -2,7 +2,7 @@
   "name": "@qlik/sprout-css-modules",
   "version": "6.40.0",
   "description": "Collections of CSS modules ready to be used to implement sprout",
-  "repository": "https://github.com/qlik-trial/sprout-css.git",
+  "repository": "https://github.com/qlik/sprout.git",
   "license": "MIT",
   "sideEffects": false,
   "exports": {

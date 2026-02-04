@@ -1,18 +1,20 @@
 {
   "name": "@qlik/sprout-icons",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "build": "vite build",
-    "build:icons": "rimraf ./dist/icons ./optimized && svgo -f ./svg -o ./optimized --pretty --indent=2 && node ./scripts/build-icon-pkg.mjs",
-    "build:icons:package": "rimraf ./dist-icons && pnpm run build:icons && node ./scripts/build-icon-pkg.mjs dist-icons esm && node ./scripts/post-process-icon-pkg.mjs",
-    "check-types": "tsc --noEmit",
-    "dev": "vite",
-    "preview": "vite preview"
+    "build": "rimraf ./react ./vue ./raw ./optimized && svgo -f ./svg -o ./optimized --pretty --indent=2 && node ./scripts/build-icon-pkg.mjs"
   },
   "dependencies": {},
   "devDependencies": {
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@swc/core": "^1.15.11",
     "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
+    "@vue/compiler-dom": "^3.5.27",
+    "@xmldom/xmldom": "^0.9.8",
+    "camelcase": "^9.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rimraf": "^6.1.2",

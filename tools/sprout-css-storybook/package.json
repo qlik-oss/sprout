@@ -1,12 +1,12 @@
 {
   "name": "@qlik/sprout-css-storybook",
-  "version": "^7.2.7",
+  "version": "7.2.7",
   "description": "Storybook for sprout-css",
-  "homepage": "https://github.com/qlik-trial/sprout-css-kit#readme",
+  "homepage": "https://github.com/qlik/sprout#readme",
   "bugs": {
-    "url": "https://github.com/qlik-trial/sprout-css-kit/issues"
+    "url": "https://github.com/qlik/sprout/issues"
   },
-  "repository": "https://github.com/qlik-trial/sprout-css-kit.git",
+  "repository": "https://github.com/qlik/sprout.git",
   "license": "MIT",
   "type": "module",
   "exports": {

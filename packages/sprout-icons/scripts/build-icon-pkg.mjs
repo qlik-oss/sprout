@@ -72,8 +72,8 @@ async function ensureWrite(file, text) {
   await fs.writeFile(file, text, "utf8");
 }
 
-async function buildIcons(pkg, style, distFolder, format) {
-  const outDir = `./${distFolder}/${pkg}`;
+async function buildIcons(pkg, style, format) {
+  const outDir = `./${pkg}`;
   const icons = await getIcons(style);
 
   await Promise.all(
@@ -95,32 +95,24 @@ async function buildIcons(pkg, style, distFolder, format) {
   await ensureWrite(`${outDir}/index.d.ts`, exportAll(icons, "esm", false));
 }
 
-async function copyRawIcons(distFolder /*, style */) {
-  return fs.cp(OPTIMIZED_IMG_FOLDER, `${distFolder}/raw`, { recursive: true });
+async function copyRawIcons() {
+  return fs.cp(OPTIMIZED_IMG_FOLDER, `raw`, { recursive: true });
 }
 
-export async function main(distFolder, format) {
-  console.log(`Building icon packages into ${distFolder}...`);
+export async function main(format) {
+  console.log(`Building icons`);
 
-  await Promise.all([rimraf(`./${distFolder}/react/*`), rimraf(`./${distFolder}/vue/*`)]);
+  await Promise.all([rimraf(`./react/*`), rimraf(`./vue/*`)]);
 
-  await Promise.all([
-    buildIcons("react", "outline", distFolder, format),
-    buildIcons("vue", "outline", distFolder, format),
-    copyRawIcons(distFolder, "outline"),
-  ]);
+  await Promise.all([buildIcons("react", "outline", format), buildIcons("vue", "outline", format), copyRawIcons()]);
 
   return console.log("Finished building packages.");
 }
 
-let [distFolder, format] = process.argv.slice(2, 5);
-
-if (!distFolder) {
-  distFolder = "dist/icons";
-}
+let [format] = process.argv.slice(2, 3);
 
 if (!format) {
   format = "cjs";
 }
 
-await main(distFolder, format);
+await main(format);
