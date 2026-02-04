@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="generated/tokens/css/sprout-tokens.css" />
+
+    <title>Two Column Layout example page for css variables</title>
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <style>
+      html,
+      body,
+      p,
+      span,
+      a,
+      div,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .caption {
+        font: var(--sprout-label-font-xs);
+      }
+
+      html,
+      body,
+      .container {
+        height: 100%;
+      }
+
+      div {
+        border-radius: var(--sprout-common-border-radius-subtle);
+      }
+
+      .container {
+        display: flex;
+        gap: var(--sprout-common-sizing-m);
+      }
+
+      button,
+      input,
+      textarea {
+        padding: var(--sprout-common-sizing-m);
+        font: var(--sprout-label-font-m);
+      }
+
+      h5 {
+        font: var(--sprout-heading-font-xs);
+      }
+
+      textarea {
+        border-radius: var(--sprout-common-border-radius-subtle);
+        border: var(--sprout-common-border-weak);
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      button,
+      input {
+        border-radius: var(--sprout-common-border-radius-pill);
+      }
+
+      .script-variable {
+        color: var(--sprout-script-color-variable);
+      }
+
+      .script-string {
+        color: var(--sprout-script-color-string);
+      }
+
+      .script-keyword {
+        color: var(--sprout-script-color-keyword);
+      }
+
+      .script-comment {
+        color: var(--sprout-script-color-comment);
+      }
+
+      code {
+        font: var(--sprout-script-font-m);
+      }
+
+      body {
+        font: var(--sprout-body-font-m);
+        background: var(--sprout-common-background-color-default);
+        color: var(--sprout-common-foreground-color-default);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button {
+        color: var(--sprout-brand-primary-color-inverse);
+        background: var(--sprout-brand-primary-color-default);
+        box-shadow: none;
+        border: none;
+      }
+
+      button:hover {
+        background: var(--sprout-brand-primary-color-hover);
+      }
+      button:active {
+        background: var(--sprout-brand-primary-color-pressed);
+      }
+
+      .input {
+        background: var(--sprout-common-background-color-input);
+        color: var(--sprout-common-foreground-color-default);
+        border: var(--sprout-common-border-weak);
+        padding: var(--sprout-common-sizing-s);
+      }
+
+      .input:hover {
+        background: var(--sprout-common-background-color-hover);
+      }
+
+      .input:active {
+        background: var(--sprout-common-background-color-active);
+      }
+
+      .title {
+        border-bottom: 1px solid var(--sprout-brand-primary-color-default);
+      }
+
+      .li {
+        font: var(--sprout-body-font-s);
+      }
+
+      .image {
+        object-fit: fill;
+        width: 250px;
+        box-shadow: var(--sprout-common-elevation-default);
+      }
+
+      .container {
+        display: flex;
+        width: 100%;
+      }
+
+      .chart {
+        display: flex;
+        flex-direction: column;
+        border: var(--sprout-common-border-default);
+        flex-grow: 0;
+        padding: var(--sprout-common-sizing-m);
+        background-color: var(--sprout-common-background-color-default);
+      }
+
+      .bars {
+        gap: var(--sprout-common-sizing-s);
+        display: flex;
+        align-items: flex-end;
+        border-radius: 0;
+      }
+
+      .line {
+        width: 100%;
+        border-bottom: var(--sprout-common-border-default);
+      }
+
+      .bar {
+        width: var(--sprout-common-sizing-l);
+        cursor: pointer;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .bar:hover {
+        filter: brightness(0.9);
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+        background: var(--sprout-common-background-color-weak);
+        padding: var(--sprout-common-sizing-m);
+        border: var(--sprout-common-border-weak);
+        box-sizing: border-box;
+        gap: var(--sprout-common-sizing-l);
+      }
+
+      .left-panel {
+        width: 200px;
+        flex-shrink: 0;
+        height: 100%;
+        border-right: var(--sprout-common-border-default);
+        font: 14px sans-serif;
+        padding: 20px;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .control {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .control input {
+        padding: 4px;
+      }
+    </style>
+  </head>
+  <body
+    data-qlik-appearance="qlik-light"
+    data-qlik-density="comfortable"
+    data-qlik-roundness="soft"
+    data-qlik-typography="inter"
+    data-qlik-sizing="mid-sized"
+  >
+    <div class="container">
+      <div class="left-panel">
+        <h5>Theme compilation settings</h5>
+        <div class="control">
+          <label for="element-corner-select">Element corners</label>
+          <select id="element-corner-select">
+            <option value="sharp">Sharp</option>
+            <option value="soft" selected>Soft</option>
+            <option value="round">Round</option>
+          </select>
+        </div>
+        <h5>User settings</h5>
+        <div class="control">
+          <label for="font-scale-slider">Font Scale</label>
+          <input id="font-scale-slider" type="range" min="0.5" max="2" value="1" step="0.05" />
+        </div>
+        <div class="control">
+          <label for="density-slider">Density</label>
+          <input id="density-slider" type="range" min="0.5" max="4" value="1" step="0.1" />
+        </div>
+      </div>
+      <div class="column">
+        <h1 style="font: var(--sprout-heading-font-xxl)" class="title">Heading XXL</h1>
+        <p class="paragraph">This is a paragraph of text using Body M.</p>
+        <h5>Buttons</h5>
+        <div>
+          <button class="button">Button</button>
+          <button class="button">Button</button>
+          <button style="padding: var(--sprout-common-sizing-l)" class="button">Button with padding spacing-l</button>
+        </div>
+        <ul class="list">
+          <li style="margin-bottom: var(--sprout-common-spacing-xs)">List Item with --sprout-spacing-xs</li>
+          <li style="margin-bottom: var(--sprout-common-spacing-xs)">List Item with --sprout-spacing-xs</li>
+          <li style="margin-bottom: var(--sprout-common-spacing-xs)">List Item with --sprout-spacing-xs</li>
+        </ul>
+
+        <h5>Chart</h5>
+        <div class="chart">
+          <div class="bars">
+            <div class="bar" style="height: 150px; background: var(--sprout-chart-color-categorical-0-0)"></div>
+            <div class="bar" style="height: 140px; background: var(--sprout-chart-color-categorical-0-1)"></div>
+            <div class="bar" style="height: 130px; background: var(--sprout-chart-color-categorical-0-2)"></div>
+            <div class="bar" style="height: 110px; background: var(--sprout-chart-color-categorical-0-3)"></div>
+            <div class="bar" style="height: 100px; background: var(--sprout-chart-color-categorical-0-4)"></div>
+            <div class="bar" style="height: 90px; background: var(--sprout-chart-color-categorical-0-5)"></div>
+            <div class="bar" style="height: 70px; background: var(--sprout-chart-color-categorical-0-6)"></div>
+            <div class="bar" style="height: 64px; background: var(--sprout-chart-color-categorical-0-7)"></div>
+            <div class="bar" style="height: 50px; background: var(--sprout-chart-color-categorical-0-8)"></div>
+            <div class="bar" style="height: 47px; background: var(--sprout-chart-color-categorical-0-9)"></div>
+            <div class="bar" style="height: 45px; background: var(--sprout-chart-color-categorical-0-10)"></div>
+            <div class="bar" style="height: 20px; background: var(--sprout-chart-color-categorical-0-11)"></div>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h2 style="font: var(--sprout-heading-font-l)" class="title">Heading L</h2>
+        <a style="color: var(--sprout-link-color-default)" href="#">This is a link</a>
+        <input class="input" type="text" placeholder="Enter text" />
+        <img
+          style="
+            box-shadow: var(--sprout-common-elevation-default);
+            border-radius: var(--sprout-common-border-radius-soft);
+          "
+          class="image"
+          src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Placeholder Image"
+        />
+        <div class="caption">Image with some shadow</div>
+
+        <form>
+          <textarea class="input" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+        </form>
+
+        <h5>Script</h5>
+        <code>
+          <span class="script-keyword">SET </span> <span class="script-variable">vTest </span
+          ><span class="script-default"> = </span><span class="script-string">'myString'</span
+          ><span class="script-default">; </span> <span class="script-comment">// my variable </span>
+        </code>
+      </div>
+    </div>
+
+    <script src="./token-test.js" />
+  </body>
+</html>

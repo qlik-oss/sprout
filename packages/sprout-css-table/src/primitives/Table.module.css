@@ -1,0 +1,201 @@
+.table {
+  border-spacing: 0;
+}
+
+.thead {
+  display: initial;
+  scrollbar-width: none;
+}
+
+.tbody,
+.thead,
+.tr {
+  min-width: 100%;
+}
+
+.th {
+  min-width: var(--sprout-common-sizing-xl);
+  position: relative;
+}
+
+.tr_interactive {
+  cursor: pointer;
+}
+
+.tr_selected {
+  background-color: var(--sprout-selected-background-color-default);
+}
+
+.tr_toggled {
+  background-color: var(--sprout-common-background-color-toggled);
+}
+
+.tr_interactive:hover {
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.cell {
+  min-height: var(--sprout-common-sizing-3xl);
+  min-width: var(--sprout-common-sizing-xl);
+  outline: none;
+}
+
+.cell:focus-visible .cell_state {
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(-1 * var(--sprout-focus-border-default-width));
+  border-radius: var(--sprout-common-border-radius-pill);
+}
+
+.cell[data-column-selected="true"] {
+  background-color: var(--sprout-selected-background-color-default);
+}
+
+.cell[aria-selected="true"] .cell_state {
+  outline: var(--sprout-selected-border-default);
+  outline-offset: calc(-1 * var(--sprout-selected-border-default-width));
+  border-radius: var(--sprout-common-border-radius-pill);
+}
+
+.cell[data-interactive="true"]:hover {
+  cursor: pointer;
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.cell_content > div {
+  min-width: 0;
+}
+
+.cell_content[data-variant="number"] {
+  font: var(--sprout-data-font-tabular-s);
+}
+
+.table[data-variant="data"] {
+  border: var(--sprout-common-divider-default);
+
+  .thead {
+    background-color: var(--sprout-common-background-color-weak);
+    border-block-end: var(--sprout-common-divider-default);
+  }
+
+  .cell_selection {
+    background-color: var(--sprout-common-background-color-weak);
+    height: calc(100% - 2 * var(--sprout-common-border-default-width));
+  }
+
+  [role="gridcell"] {
+    border-inline-end: var(--sprout-common-divider-default);
+    border-block-end: none;
+  }
+
+  /* Hide last column border */
+  [role="gridcell"]:nth-last-child(1),
+  [role="columnheader"]:nth-last-child(1) {
+    border-inline-end: none;
+  }
+
+  .tbody .tr {
+    box-sizing: border-box;
+    border-block-end: var(--sprout-common-divider-default);
+  }
+
+  [role="columnheader"] {
+    border-inline-end: var(--sprout-common-divider-default);
+  }
+}
+
+.table[data-variant="list"] {
+  /* add a divider using CSS */
+  .th [data-layoutid="state-container"]::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: var(--sprout-common-divider-default-width);
+    top: 50%;
+    transform: translateY(-50%);
+    align-self: center;
+    width: var(--sprout-common-divider-default-width);
+    height: var(--sprout-common-sizing-xl);
+    background-color: var(--sprout-common-divider-default-color);
+  }
+
+  .tbody {
+    background-color: var(--sprout-common-background-color-default);
+    border-radius: var(--sprout-common-border-radius-soft);
+    border: var(--sprout-common-border-default);
+  }
+
+  .cell_selection {
+    height: 100%;
+  }
+}
+
+.th[data-variant="data"] {
+  background-color: var(--sprout-common-background-color-weak);
+}
+
+.th[data-variant="data"] hr {
+  display: none;
+}
+
+.th:hover {
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.th:focus-visible [data-layoutid="state-container"] {
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) * -1);
+}
+
+.th[aria-sort] {
+  cursor: pointer;
+}
+
+.cell_action_wrapper {
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/**
+ * That set of rules control when we have to display the contextual menu trigger.
+ */
+.th:hover .cell_action_wrapper,
+.th:focus .cell_action_wrapper,
+.th:focus-visible .cell_action_wrapper,
+.th:focus-within .cell_action_wrapper,
+.cell:hover .cell_action_wrapper,
+.cell:focus .cell_action_wrapper,
+.cell:focus-visible .cell_action_wrapper,
+.cell_action_wrapper:has(button:focus-visible),
+.cell_action_wrapper:has(button:focus),
+.cell_action_wrapper:has(button[aria-expanded="true"]) {
+  visibility: visible;
+  width: auto;
+  opacity: 1;
+  overflow: visible;
+}
+
+.sort_indicator__wrapper > svg {
+  min-width: var(--sprout-common-sizing-xl);
+}
+
+.resizing_indicator {
+  left: calc(100% - var(--sprout-common-sizing-m));
+  width: var(--sprout-common-sizing-m);
+}
+
+.th.line_number,
+.cell.line_number {
+  flex: 0;
+}
+
+.th.select_all,
+.cell.select_all {
+  flex: 0;
+}
+
+.row_number {
+  width: calc(2 * var(--sprout-common-spacing-m) + var(--sprout-common-sizing-xxl));
+}

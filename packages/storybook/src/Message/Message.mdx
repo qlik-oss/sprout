@@ -1,0 +1,35 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Message.stories";
+
+<Meta title="Components/Message" of={Stories} />
+
+# Message
+
+A Message component displays onboarding messaging or guided messages in content areas. Typically used for empty states.
+
+```tsx
+// if you want the field
+import { Message } from "@qlik/sprout-css-react";
+
+<Message
+  illustration={<svg />}
+  title="Message title"
+  message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
+  progress={{ percent: 35, label: "Loading progress" }}
+  actions={
+    <>
+      <Button variant="primary" label="Primary action" />
+      <Button variant="quiet" label="Another action" />
+    </>
+  }
+/>;
+```
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+Simple `div` with no special accessibility requirements by default.
+If `progress` property is given it will add `role="status"` and `aria-live="polite"` to the message div container.

@@ -1,0 +1,56 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./InputButton.stories";
+
+<Meta title="Components/InputButton" of={Stories} />
+
+# InputButton
+
+The InputButton is a clickable element used to trigger actions, similar to the IconButton. It features compact dimensions and is designed specifically for use as a subcomponent, commonly found in inputs like text fields (e.g. a clear button) or within tags.
+
+```tsx
+import { InputButton, Tooltip  } from "@qlik/sprout-css-react";
+
+function Component ({onRemove, removeLabel, removeLabelDefault: "Remove", ...props} : Props) {
+  return (
+    //...
+    <span {...props}>
+      {onRemove && <InputButton onClick={onRemove} aria-label={removeLabel || removeLabelDefault} size={size ? "xs" : "s"} />}
+    </span>
+    //...
+  )
+}
+
+function ComponentWithTooltip ({onRemove, removeLabel, removeLabelDefault: "Remove", ...props} : Props) {
+  return (
+    //...
+    <span {...props}>
+      {onRemove &&
+      <Tooltip title={removeLabel || removeLabelDefault}>
+        <InputButton onClick={onRemove} aria-label={removeLabel || removeLabelDefault} size={size ? "xs" : "s"} />
+      </Tooltip>
+      }
+    </span>
+    //...
+  )
+}
+```
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+[W3/WAI/ARIA/APG Button](https://www.w3.org/WAI/ARIA/apg/patterns/button/)
+
+HTML Structure
+
+- InputButton use the native HTML `button` so it has the implicit role `button`.
+- InputButton support all props to have an [accessible label](https://www.w3.org/WAI/tutorials/forms/labels/)
+- InputButton support `aria-describedby` props.
+- InputButton use explicit `disabled` props to show it has unavailable.
+
+Keyboard Navigation
+
+- `Space`: Activates the button.
+- `Enter`: Activates the button.

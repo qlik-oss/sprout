@@ -1,0 +1,90 @@
+.checkbox input[type="checkbox"] {
+  outline-offset: 0;
+  z-index: 1;
+}
+
+.checkbox input[type="checkbox"] + .box {
+  background: var(--sprout-input-background-color-default);
+  border: var(--sprout-common-border-strong);
+}
+
+.checkbox input[type="checkbox"]:hover + .box {
+  background: var(--sprout-common-background-color-hover);
+  border: var(--sprout-common-border-extra-strong);
+}
+
+.checkbox input[type="checkbox"]:active + .box {
+  background: var(--coral-color-accent-background-active);
+}
+
+.checkbox input[type="checkbox"]:checked + .box {
+  background: var(--sprout-selected-color-default);
+  border-color: var(--sprout-selected-color-default);
+}
+
+.checkbox input[type="checkbox"]:indeterminate + .box {
+  background: var(--sprout-selected-color-default);
+  border-color: var(--sprout-selected-color-default);
+}
+
+.checkbox input[type="checkbox"]:disabled + .box,
+.checkbox input[type="checkbox"]:checked:disabled + .box,
+.checkbox input[type="checkbox"]:indeterminate:disabled + .box {
+  background: var(--sprout-common-background-color-disabled);
+  border: var(--sprout-common-border-moderate);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.checkbox input[type="checkbox"]:focus-visible + .box {
+  /* background-color: var(--sprout-focus-background-color-default); */
+  outline: var(--sprout-focus-border-default);
+  outline-offset: var(--sprout-focus-border-default-width);
+}
+
+.checkbox
+  input[type="checkbox"]:not(:checked, :indeterminate):focus-visible
+  + .box {
+  outline: var(--sprout-focus-border-default);
+  outline-offset: 0;
+  border: none;
+}
+
+.checkbox input[type="checkbox"]:checked:not(:disabled):hover + .box,
+.checkbox input[type="checkbox"]:indeterminate:not(:disabled):hover + .box {
+  /** TODO: add that missing token */
+  background: var(
+    --sprout-selected-color-hover,
+    var(--sprout-brand-primary-color-hover)
+  );
+  border-color: var(--sprout-selected-color-default);
+}
+
+.checkbox input[type="checkbox"] + .box > svg {
+  block-size: var(--sprout-common-sizing-m);
+  inline-size: var(--sprout-common-sizing-m);
+  color: var(--sprout-selected-color-inverse);
+  opacity: 0;
+}
+
+.checkbox input[type="checkbox"]:checked + .box > svg[data-tick="checked"],
+.checkbox
+  input[type="checkbox"]:indeterminate
+  + .box
+  > svg[data-tick="indeterminate"] {
+  opacity: 1;
+}
+
+.checkbox
+  input[type="checkbox"]:checked:disabled
+  + .box
+  > svg[data-tick="checked"],
+.checkbox
+  input[type="checkbox"]:indeterminate:disabled
+  + .box
+  > svg[data-tick="indeterminate"] {
+  color: var(--sprout-common-foreground-color-disabled);
+}
+
+.checkbox label {
+  overflow-wrap: anywhere;
+}

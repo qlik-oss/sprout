@@ -1,0 +1,8 @@
+.field {
+  display: flex;
+  inline-size: 100%;
+  max-block-size: 100%;
+  flex-direction: column;
+  gap: var(--sprout-common-spacing-s);
+  align-items: flex-start;
+}

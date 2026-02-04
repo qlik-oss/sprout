@@ -1,0 +1,26 @@
+.value_edit_btn {
+  margin-inline-start: var(--sprout-common-spacing-s);
+  visibility: hidden;
+}
+
+.value_clickable:hover .value_edit_btn,
+.value_clickable:focus-visible .value_edit_btn {
+  visibility: visible;
+}
+
+.value_container .value_clickable {
+  min-inline-size: var(--sprout-common-sizing-xxl);
+  min-block-size: var(--sprout-common-sizing-3xl);
+}
+
+.floating_container {
+  pointer-events: none;
+}
+
+[data-placement^="top"] .floating_container {
+  align-items: end;
+}
+
+.floating_container > * {
+  pointer-events: auto;
+}

@@ -1,0 +1,85 @@
+.list {
+  margin: 0;
+  padding: 0;
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.item {
+  outline: none;
+  margin: 0;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--sprout-common-spacing-m);
+  position: relative;
+  border-radius: var(--sprout-common-border-radius-subtle);
+  font: var(--sprout-label-font-s);
+  color: var(--sprout-common-foreground-color-default);
+}
+
+.item_padding {
+  padding: var(--sprout-common-density-m) var(--sprout-common-spacing-m)
+    var(--sprout-common-density-m) var(--sprout-common-spacing-xl);
+}
+
+/* ensure children interactive elements receive this to let them on top of the button.item_interactive and let other elements under it */
+.item button:not(.item_interactive),
+.item input {
+  z-index: 1;
+}
+
+.item_divider {
+  display: flex;
+}
+
+.item .item_interactive {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  cursor: pointer;
+  inline-size: 100%;
+  block-size: 100%;
+  background: transparent;
+  border: none;
+}
+
+.item.item_interactive {
+  cursor: pointer;
+}
+
+.item.item_interactive:hover,
+.item:has(.item_interactive:not(:disabled):hover) {
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.item:has(.item_interactive:not(:disabled):active) {
+  background-color: var(--sprout-common-background-color-pressed);
+}
+
+.item:has(.item_interactive:not(:disabled):focus-visible) {
+  outline: var(--sprout-focus-border-default);
+}
+
+.item_selected {
+  position: relative;
+  background-color: var(--sprout-selected-background-color-default);
+}
+
+.item_selected::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  block-size: calc(100% - 2 * var(--sprout-common-density-m));
+  background-color: var(--sprout-brand-primary-color-default);
+
+  /* FIXME: wait for sizing-xs token */
+  inline-size: calc(var(--sprout-common-sizing-s) / 2);
+}
+
+.item_disabled {
+  color: var(--sprout-common-foreground-color-disabled);
+}

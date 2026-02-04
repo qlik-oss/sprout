@@ -1,0 +1,35 @@
+{
+  "name": "@qlik/sprout-icons",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "vite build",
+    "build:icons": "rimraf ./dist/icons ./optimized && svgo -f ./svg -o ./optimized --pretty --indent=2 && node ./scripts/build-icon-pkg.mjs",
+    "build:icons:package": "rimraf ./dist-icons && pnpm run build:icons && node ./scripts/build-icon-pkg.mjs dist-icons esm && node ./scripts/post-process-icon-pkg.mjs",
+    "check-types": "tsc --noEmit",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^6.1.2",
+    "svgo": "^4.0.0",
+    "typescript": "5.9.3",
+    "vue": "^3.5.27"
+  },
+  "peerDependencies": {
+    "react": ">= 18.0.0",
+    "vue": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  }
+}

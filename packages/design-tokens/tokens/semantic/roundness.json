@@ -1,0 +1,89 @@
+{
+  "sprout": {
+    "common": {
+      "border-radius": {
+        "subtle": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.subtle} * {sprout.common.scale.roundness}",
+          "$description": "Subtle border radius for use of smaller UI elements or those with a slightly less sharp feeling."
+        },
+        "soft": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.soft} * {sprout.common.scale.roundness}",
+          "$description": "Medium border radius for medium sizes UI elements and a softer feeling."
+        },
+        "cushiony": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.cushiony} * {sprout.common.scale.roundness}",
+          "$description": "Very soft border radius for use of larger elements or elements with a cushiony feeling."
+        },
+        "pill": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.pill} * {sprout.common.scale.roundness}",
+          "$description": "Border radius for UI elements that supports pill shape such as buttons and inputs."
+        },
+        "round": {
+          "$type": "borderRadius",
+          "$value": "2000",
+          "$description": "Border radius for elements that are meant to always be round"
+        }
+      },
+      "nested-border-radius": {
+        "subtle-xs": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.subtle} - {theming.common.spacing.xs}",
+          "$description": "Border radius for corner-aligned elements inside other element with a subtle border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+        },
+        "soft-xs": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.soft} - {theming.common.spacing.xs}",
+          "$description": "Border radius for corner-aligned elements inside other element with a soft border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+        },
+        "soft-s": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.soft} - {theming.common.spacing.s}",
+          "$description": "Border radius for corner-aligned elements inside other element with a soft border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+        },
+        "cushiony-xs": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.cushiony} - {theming.common.spacing.xs}",
+          "$description": "Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+        },
+        "cushiony-s": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.cushiony} - {theming.common.spacing.s}",
+          "$description": "Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+        },
+        "cushiony-m": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.cushiony} - {theming.common.spacing.m}",
+          "$description": "Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+        }
+      },
+      "twice-nested-border-radius": {
+        "soft-s-xs": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.soft} - {theming.common.spacing.s} - {theming.common.spacing.xs}",
+          "$description": "Border radius for corner-aligned elements inside other element with a soft border radius and another element with a nested border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+        },
+        "cushiony-s-xs": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.cushiony} - {theming.common.spacing.s} - {theming.common.spacing.xs}",
+          "$description": "Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+        },
+        "cushiony-m-s": {
+          "$type": "borderRadius",
+          "$value": "{theming.common.border-radius.cushiony} - {theming.common.spacing.m} - {theming.common.spacing.s}",
+          "$description": "Border radius for corner-aligned elements inside other element with a cushiony border radius and another element with a nested border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+        }
+      },
+      "scale": {
+        "roundness": {
+          "$type": "other",
+          "$value": "1",
+          "$description": "Roundness factor."
+        }
+      }
+    }
+  }
+}

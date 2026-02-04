@@ -1,0 +1,67 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as TokenStories from "../css/Tokens.stories";
+
+<Meta title="Docs/Design Tokens" />
+
+# Design Tokens
+
+In [Sprout](https://internal.qlik.dev/design/sprout/), we use [design tokens](https://internal.qlik.dev/design/sprout/design-tokens/).
+
+We implement tokens using [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*). You can also read the article on [Using CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) for more details.
+
+## Source
+
+The tokens are managed outside of this repository in the package `@qlik/design-tokens`.
+
+## IDE Extensions / Developer Experience
+
+If you are using VSCode, we recommend trying the [CSS Variable Autocomplete](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables) extension. It provides autocompletion for CSS variables, making it easier to work with design tokens.
+
+## How to Use
+
+If you’ve followed the steps in the Getting Started guide, you’ve already used the `ThemeProvider`. This means you can now reference tokens directly using native CSS syntax like this:
+
+```css
+.foo {
+  color: var(--sprout-common-foreground-color-default);
+  padding: var(--sprout-common-spacing-s);
+  width: var(--sprout-common-sizing-3xl);
+}
+```
+
+The philosophy behind tokens is to avoid relying on specific values and instead trust the semantic meaning of the tokens. As a frontend developer, your code should work seamlessly with different values, even if you don’t control them.
+
+This doesn’t mean you shouldn’t test these values. Storybook provides an excellent way to test the changes supported by Sprout.
+
+You can also use our [Tailwind CSS](https://tailwindcss.com/) classNames, which are implemented using [sprout-css-modules](?path=/docs/css-sprout-css-modules--docs). All class names follow the Tailwind CSS naming convention. Here’s an example:
+
+```jsx
+import { classNames } from "@qlik/sprout-css-react";
+
+function MyComponent() {
+  return (
+    <div className={classNames("flex", "bg_default", "text_default")}>
+      Hello world
+    </div>
+  );
+}
+```
+
+## Tokens Customization
+
+By customizing token values, you can make significant changes to the design. Our tokens are organized into different dimensions:
+
+- **Appearance**: Covers all colors and is the first step in customization.
+- **Roundness**: Helps adjust the UI to be more rounded or sharper.
+- **Typography**: Allows you to specify where your fonts are located.
+- **Density**: Focuses on accessibility and should generally not be changed.
+
+These tokens are considered a public API, enabling integrations to provide new values and make the UI look different.
+
+We will provide multiple examples in the future to help developers test their UI with "extreme" configurations.
+
+## Tokens Data Table
+
+<Controls of={TokenStories.DataTable} />
+<Canvas of={TokenStories.DataTable} />

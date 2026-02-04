@@ -1,0 +1,192 @@
+{
+  "alertbanner.dismiss": {
+    "value": "Odrzuć",
+    "comment": "AlertBanner component can have a dissmiss button to close it. This string is displayed in a tooltip when hovering over the dismiss button.",
+    "version": "v9m/MGj+ShGE+c2eUbjUMQ=="
+  },
+  "alertinline.dismiss": {
+    "value": "Odrzuć",
+    "comment": "AlertInline component can have a dissmiss button to close it. This string is displayed in a tooltip when hovering over the dismiss button.",
+    "version": "XsKnamNK++plCC4zqn1xFg=="
+  },
+  "alertmodal.label.details": {
+    "value": "Szczegóły",
+    "comment": "Label for a button in the AlertModal component which trigger the display of more information for the user.",
+    "version": "3vnsitIRn8rzasskUSKvrw=="
+  },
+  "avatar.label.alt": {
+    "value": "Awatar",
+    "comment": "Is read by screen reader. This is used as alt property of the Avatar image.",
+    "version": "1BIBffKYpuVKzl0abKe9Sg=="
+  },
+  "dialog.actions.close": {
+    "value": "Anuluj",
+    "comment": "Appear at the bottom of some dialog/modals in the bottom right. This is a default actions provided to the user to close the dialog/modal.",
+    "version": "+wjHMfhwuAeNHPW/+2SP1g=="
+  },
+  "dialog.header.back": {
+    "value": "Wstecz",
+    "comment": "Appear in an icon button of dialog/modal in the upper left corner to go back to the previous step.",
+    "version": "d8Twec+rsePoWwAJvBbTqA=="
+  },
+  "dialog.header.close": {
+    "value": "Zamknij",
+    "comment": "Appear in a tooltip of dialog/modal in the upper right corner to close it",
+    "version": "EvbbRoOjJYJeQ09AL+3zMQ=="
+  },
+  "fieldlabel.optional": {
+    "value": "opcjonalne",
+    "comment": "Appear after the label of a field inside parentheses to indicate that the field is optional.",
+    "version": "C85Gp22avg+rRc/5jd6Isg=="
+  },
+  "inline-edit.cancel": {
+    "value": "Anuluj",
+    "comment": "Text for screen reader in the inline edit component to cancel the change that has been done and closing the edition mode.",
+    "version": "/5v/PWEFC0Nnk3DwAeo01g=="
+  },
+  "inline-edit.save": {
+    "value": "Zapisz",
+    "comment": "Text for screen reader in the inline edit component to save the change that has been done and closing the edition mode.",
+    "version": "NgEUoJKxVOQBZDUQP+L5Ww=="
+  },
+  "input.clear": {
+    "value": "Wyczyść",
+    "comment": "Appear in input field when the clear action is available. It is displayed in a tooltip when hovering over the clear button.",
+    "version": "qBNS615hGxmrfzqzucYYOg=="
+  },
+  "menu.secondaryaction.label": {
+    "value": "Otwiera się w nowej karcie",
+    "comment": "Label for an icon button used as a secondary action in a menu item to open the link in a new browser tab.",
+    "version": "YS2WkZcyjvpXUaY8b2qzaA=="
+  },
+  "panel.action.resize": {
+    "value": "Zmień rozmiar panelu",
+    "comment": "Appear in a tooltip of panel in the upper right corner to resize it",
+    "version": "pcZIwNC31oA9eeyA/lsRmQ=="
+  },
+  "progress.circular.loading": {
+    "value": "Ładowanie",
+    "comment": "Is read by screen reader. This is used as aria-label property of the visual circular progress to indicate this is a loading state.",
+    "version": "B/NU6e9eITtG1O9P9TAZcA=="
+  },
+  "select.comboboxeditable.clear": {
+    "value": "Wyczyść",
+    "comment": "Appear in MultiSelect when there is more than one option selected. This action removes all selected tags. It is displayed in a tooltip when hovering over the clear button.",
+    "version": "QoQOPKmfWzfQfJBh5/I9GQ=="
+  },
+  "select.createoption.label": {
+    "value": "Utwórz",
+    "comment": "Appear at the end of every option that match the filter to propose to the user to create a new option in the list. The string is concatenated to the typed value by the user to create the corresponding sentence: Create ${typedinput}",
+    "version": "D6MSHaiSFV37DvorToISqg=="
+  },
+  "select.dropdown.no-results.message": {
+    "value": "Nie znaleziono wyników",
+    "comment": "Message displayed when no option match the current filter in Select dropdown component.",
+    "version": "7pmz/A5D+g9Q6v5Y4I4L5A=="
+  },
+  "select.dropdown.search.placeholder": {
+    "value": "Wyszukaj",
+    "comment": "Placeholder text in the search input field that is displayed in Select dropdown component.",
+    "version": "s3Exaw9jjCj4MAIS5uRU3g=="
+  },
+  "table.body.loadmore.label": {
+    "value": "Ładuj więcej",
+    "comment": "Label for the button to load more rows in the table when the user use a touch only device.",
+    "version": "DRsk0xzQDA5Hw3QA8OjvRA=="
+  },
+  "table.cell.menu.aria-label": {
+    "value": "Działania kontekstowe",
+    "comment": "Aria Label used by screen reader on top of a button to let the user access more actions contextual to a table cell.",
+    "version": "applc2m6e2Gf6iDUsPmm+w=="
+  },
+  "table.column.visibility-form.selectall.label": {
+    "value": "Wybierz wszystko",
+    "comment": "Label displayed in visibility-form to let the user express he wants to see all columns.",
+    "version": "9mmMUWReZZf7nYGrZo2ldQ=="
+  },
+  "table.column.visilibty-form.search.aria-label": {
+    "value": "Wyszukaj kolumny",
+    "comment": "Label used by screen readers in the Table component under the column manage actions.",
+    "version": "yxPcDG13kBQDoUkXLf3gQg=="
+  },
+  "table.column.visilibty-form.search.placeholder": {
+    "value": "Wyszukaj kolumny...",
+    "comment": "Placeholder text in the search input field in the Table component under the column manage actions.",
+    "version": "rhAO+l5Rt4PLsCiPHN9kZQ=="
+  },
+  "table.header.hide-column.label": {
+    "value": "Ukryj kolumnę",
+    "comment": "Label displayed in a dropdown menu available in the header of each column to let the user hide the column.",
+    "version": "gMZSzhNmEMIUs8P+Zk58nA=="
+  },
+  "table.header.manage-columns-visbility.label": {
+    "value": "Zarządzaj kolumnami",
+    "comment": "Label displayed in a dropdown menu available in the header of each column to let the user manage the visibility of the columns.",
+    "version": "lHUD2ln3aPYSCPxoZVRpAQ=="
+  },
+  "table.header.more-actions.aria-label": {
+    "value": "Działania kontekstowe",
+    "comment": "Aria Label used by screen reader on top of a button to let the user access more actions.",
+    "version": "mfhePIT2B+V4VXfDrPaGeg=="
+  },
+  "table.header.resize-column.aria-label": {
+    "value": "Zmień rozmiar kolumny",
+    "comment": "Aria Label used by screen reader on top of a button to let the user resize the column.",
+    "version": "sYMIq2sgy5N5hH/Se8ifGA=="
+  },
+  "table.header.select-all.aria-label": {
+    "value": "Wybierz wszystko",
+    "comment": "Aria Label used by screen reader on top of a checkbox input to let the user select all the rows inside the table.",
+    "version": "ZXeTs75ogWUSZLfkR1Kffw=="
+  },
+  "table.header.select-multiple.aria-label": {
+    "value": "Wybierz",
+    "comment": "Aria Label used by screen reader on top of a checkbox input to let the user select multiple columns.",
+    "version": "KEVn6vjvb5loppB1gfwApg=="
+  },
+  "table.header.select-radio.aria-label": {
+    "value": "Wybierz",
+    "comment": "Aria Label used by screen reader on top of a radio input to let the user select a current column.",
+    "version": "JEBTW4qLzIYqAGBM4Cd/hQ=="
+  },
+  "table.header.sort-ascending.label": {
+    "value": "Sortuj rosnąco",
+    "comment": "Label displayed in a dropdown menu available in the header of each column to let the user sort the column in ascending order.",
+    "version": "v71qPR4tmkXffqb6aS93Vw=="
+  },
+  "table.header.sort-descending.label": {
+    "value": "Sortuj malejąco",
+    "comment": "Label displayed in a dropdown menu available in the header of each column to let the user sort the column in descending order.",
+    "version": "wQhQUklZHIJ1kRVTj/YUiw=="
+  },
+  "table.norows.message.default-title": {
+    "value": "Brak wierszy",
+    "comment": "This title is displayed at the center of table which have no rows and if the dev didn't change the default message",
+    "version": "8pi7RMbYNP8INieXUDWBqQ=="
+  },
+  "table.row.selection.aria-label": {
+    "value": "Wybierz wiersz",
+    "comment": "Aria Label used by screen reader on top of a checkbox input to let the user select a row of the current table.",
+    "version": "/mUQD9g72kYIpv89HnYQgg=="
+  },
+  "tag.remove": {
+    "value": "Usuń",
+    "comment": "Appear in Tag component if they can be removed. The action remove the corresponding Tag. It is displayed in a tooltip when hovering over the remove button.",
+    "version": "IqdPJ7e8pNRWi32X5dx++A=="
+  },
+  "toast.dismiss": {
+    "value": "Odrzuć",
+    "comment": "Toast component have a dissmiss button to close it. This string is displayed in a tooltip when hovering over the dismiss button.",
+    "version": "pGH/rsNz1fa007mSWEYInA=="
+  },
+  "treeitem.label.close": {
+    "value": "Zwiń",
+    "comment": "Aria label for the button to collapse a tree item in the Tree component.",
+    "version": "EI2Pfm7q6x+fStGM2M//iQ=="
+  },
+  "treeitem.label.expand": {
+    "value": "Rozwiń",
+    "comment": "Aria label for the button to expand a tree item in the Tree component.",
+    "version": "uOKg5BL+KfHeJkMV3s4VyQ=="
+  }
+}

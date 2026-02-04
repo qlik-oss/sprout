@@ -1,0 +1,42 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Link.stories";
+
+<Meta title="Components/Link" />
+
+# Link
+
+```tsx
+import { Link } from "@qlik/sprout-css-react";
+
+<Link href="/folder">Folder</Link>;
+
+<Link href="https://www.qlik.com/" font="inherit" isExternal>
+  External link
+</Link>;
+
+<Link href="#" withEllipsis isExternal>
+  With ellipsis and isExternal too long you will see ellipsis
+</Link>;
+```
+
+## Demo
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+[W3/WAI/ARIA/APG link](https://www.w3.org/WAI/ARIA/apg/patterns/link/)
+
+HTML structure:
+
+- The current implementation use the native HTML `a` tag so it has the implicit role `link`.
+- Use the Link component `disabled` property will have to effect:
+  - `aria-disabled` to indicate that the link is not available
+  - set `tabindex` to `-1` to remove the link from the tab order
+
+Keyboard Interaction:
+
+`Enter`: Executes the link and moves focus to the link target.
+`Shift + F10` on `MS Windows`: Opens a context menu for the link.

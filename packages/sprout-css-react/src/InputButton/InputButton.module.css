@@ -1,0 +1,39 @@
+.input_button {
+  border: 0;
+}
+
+.input_button:focus-visible {
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) / -2);
+}
+
+.input_button:disabled {
+  color: var(--sprout-common-foreground-color-disabled);
+  pointer-events: none;
+}
+
+.input_button:hover {
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.input_button:active {
+  background-color: var(--sprout-common-background-color-pressed);
+}
+
+.input_button > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sprout-common-spacing-xs);
+  pointer-events: none;
+}
+
+.input_button svg {
+  inline-size: var(--sprout-common-sizing-l);
+  block-size: var(--sprout-common-sizing-l);
+  color: currentcolor;
+}
+
+.input_button[data-size="xs"] {
+  padding: var(--sprout-common-spacing-xs);
+}

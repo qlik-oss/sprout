@@ -1,0 +1,2757 @@
+{
+  "--sprout-common-foreground-color-default": {
+    "$value": "#404040",
+    "$type": "color",
+    "$description": "Primary text color"
+  },
+  "--sprout-common-foreground-color-weak": {
+    "$value": "rgb(25.098% 25.098% 25.098% / 0.76)",
+    "$type": "color",
+    "$description": "Secondary text color. Used for discrete text."
+  },
+  "--sprout-common-foreground-color-disabled": {
+    "$value": "rgb(25.098% 25.098% 25.098% / 0.55)",
+    "$type": "color",
+    "$description": "Disabled text color."
+  },
+  "--sprout-common-background-color-default": {
+    "$value": "#ffffff",
+    "$type": "color",
+    "$description": "First level surface color."
+  },
+  "--sprout-common-background-color-weak": {
+    "$value": "#fafafa",
+    "$type": "color",
+    "$description": "Second level surface color."
+  },
+  "--sprout-common-background-color-moderate": {
+    "$value": "#f2f2f2",
+    "$type": "color",
+    "$description": "Third level surface color."
+  },
+  "--sprout-common-background-color-strong": {
+    "$value": "#e6e6e6",
+    "$type": "color",
+    "$description": "Fourth level surface color."
+  },
+  "--sprout-common-background-color-enabled": {
+    "$value": "#ffffff",
+    "$type": "color",
+    "$description": "Default background color for enabled interactive elements"
+  },
+  "--sprout-common-background-color-hover": {
+    "$value": "rgb(0% 0% 0% / 0.03)",
+    "$type": "color",
+    "$description": "Hover background color for interactive elements"
+  },
+  "--sprout-common-background-color-pressed": {
+    "$value": "rgb(0% 0% 0% / 0.05)",
+    "$type": "color",
+    "$description": "Pressed background color for interactive elements"
+  },
+  "--sprout-common-background-color-toggled": {
+    "$value": "rgb(0% 0% 0% / 0.08)",
+    "$type": "color",
+    "$description": "Background color for toggled state of interactive elements"
+  },
+  "--sprout-common-background-color-disabled": {
+    "$value": "rgb(0% 0% 0% / 0.03)",
+    "$type": "color",
+    "$description": "Disabled background color for interactive elements"
+  },
+  "--sprout-common-elevation-default": {
+    "$value": "dropShadow 0 2px 4px 0 #00000026, dropShadow 0 0 0 1px #0000000d",
+    "$type": "shadow",
+    "$description": "Default elevation box shadow style"
+  },
+  "--sprout-common-elevation-weak": {
+    "$value": "dropShadow 0 1px 2px 0 #00000026, dropShadow 0 0 0 1px #0000000d",
+    "$type": "shadow",
+    "$description": "Weak elevation box shadow style"
+  },
+  "--sprout-common-elevation-moderate": {
+    "$value": "dropShadow 0 4px 10px 0 #00000026, dropShadow 0 0 0 1px #0000000d",
+    "$type": "shadow",
+    "$description": "Moderate elevation box shadow style"
+  },
+  "--sprout-common-elevation-strong": {
+    "$value": "dropShadow 0 6px 20px 0 #00000026, dropShadow 0 0 0 1px #0000000d",
+    "$type": "shadow",
+    "$description": "Strong elevation box shadow style"
+  },
+  "--sprout-common-border-radius-subtle": {
+    "$value": "4px",
+    "$type": "dimension",
+    "$description": "Subtle border radius for use of smaller UI elements or those with a slightly less sharp feeling."
+  },
+  "--sprout-common-border-radius-soft": {
+    "$value": "8px",
+    "$type": "dimension",
+    "$description": "Medium border radius for medium sizes UI elements and a softer feeling."
+  },
+  "--sprout-common-border-radius-cushiony": {
+    "$value": "16px",
+    "$type": "dimension",
+    "$description": "Very soft border radius for use of larger elements or elements with a cushiony feeling."
+  },
+  "--sprout-common-border-radius-pill": {
+    "$value": "4px",
+    "$type": "dimension",
+    "$description": "Border radius for UI elements that supports pill shape such as buttons and inputs."
+  },
+  "--sprout-common-border-radius-round": {
+    "$value": "2000px",
+    "$type": "dimension",
+    "$description": "Border radius for elements that are meant to always be round"
+  },
+  "--sprout-common-nested-border-radius-subtle-xs": {
+    "$value": "2px",
+    "$type": "dimension",
+    "$description": "Border radius for corner-aligned elements inside other element with a subtle border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+  },
+  "--sprout-common-nested-border-radius-soft-xs": {
+    "$value": "6px",
+    "$type": "dimension",
+    "$description": "Border radius for corner-aligned elements inside other element with a soft border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+  },
+  "--sprout-common-nested-border-radius-soft-s": {
+    "$value": "4px",
+    "$type": "dimension",
+    "$description": "Border radius for corner-aligned elements inside other element with a soft border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+  },
+  "--sprout-common-nested-border-radius-cushiony-xs": {
+    "$value": "14px",
+    "$type": "dimension",
+    "$description": "Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+  },
+  "--sprout-common-nested-border-radius-cushiony-s": {
+    "$value": "12px",
+    "$type": "dimension",
+    "$description": "Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+  },
+  "--sprout-common-nested-border-radius-cushiony-m": {
+    "$value": "8px",
+    "$type": "dimension",
+    "$description": "Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+  },
+  "--sprout-common-twice-nested-border-radius-soft-s-xs": {
+    "$value": "2px",
+    "$type": "dimension",
+    "$description": "Border radius for corner-aligned elements inside other element with a soft border radius and another element with a nested border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+  },
+  "--sprout-common-twice-nested-border-radius-cushiony-s-xs": {
+    "$value": "10px",
+    "$type": "dimension",
+    "$description": "Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+  },
+  "--sprout-common-twice-nested-border-radius-cushiony-m-s": {
+    "$value": "4px",
+    "$type": "dimension",
+    "$description": "Border radius for corner-aligned elements inside other element with a cushiony border radius and another element with a nested border radius. Designed to follow the curvature of the outer element element in all density and roundness settings"
+  },
+  "--sprout-common-scale-roundness": {
+    "$value": "1",
+    "$type": "other",
+    "$description": "Roundness factor."
+  },
+  "--sprout-common-scale-spacing": {
+    "$value": "1",
+    "$type": "number",
+    "$description": "(Variable only). Scaling property for spacing tokens"
+  },
+  "--sprout-common-scale-density": {
+    "$value": "1",
+    "$type": "number",
+    "$description": "(Variable only). Scaling property for density tokens"
+  },
+  "--sprout-common-scale-font-size": {
+    "$value": "1",
+    "$type": "number",
+    "$description": "(Variable only). Font scale variable for font size tokens"
+  },
+  "--sprout-common-sizing-s": {
+    "$value": "4px",
+    "$type": "dimension",
+    "$description": "S size"
+  },
+  "--sprout-common-sizing-m": {
+    "$value": "8px",
+    "$type": "dimension",
+    "$description": "M size. Default grid unit"
+  },
+  "--sprout-common-sizing-l": {
+    "$value": "12px",
+    "$type": "dimension",
+    "$description": "L size"
+  },
+  "--sprout-common-sizing-xl": {
+    "$value": "16px",
+    "$type": "dimension",
+    "$description": "XL size"
+  },
+  "--sprout-common-sizing-xxl": {
+    "$value": "24px",
+    "$type": "dimension",
+    "$description": "XXL size"
+  },
+  "--sprout-common-sizing-3xl": {
+    "$value": "32px",
+    "$type": "dimension",
+    "$description": "3XL size"
+  },
+  "--sprout-common-sizing-4xl": {
+    "$value": "40px",
+    "$type": "dimension",
+    "$description": "4XL size"
+  },
+  "--sprout-common-sizing-5xl": {
+    "$value": "48px",
+    "$type": "dimension",
+    "$description": "5XL size"
+  },
+  "--sprout-common-sizing-6xl": {
+    "$value": "56px",
+    "$type": "dimension",
+    "$description": "6XL size"
+  },
+  "--sprout-common-sizing-7xl": {
+    "$value": "64px",
+    "$type": "dimension",
+    "$description": "7XL size"
+  },
+  "--sprout-common-spacing-xs": {
+    "$value": "2px",
+    "$type": "dimension",
+    "$description": "XS spacing"
+  },
+  "--sprout-common-spacing-s": {
+    "$value": "4px",
+    "$type": "dimension",
+    "$description": "S spacing"
+  },
+  "--sprout-common-spacing-m": {
+    "$value": "8px",
+    "$type": "dimension",
+    "$description": "M spacing. Default grid unit"
+  },
+  "--sprout-common-spacing-l": {
+    "$value": "12px",
+    "$type": "dimension",
+    "$description": "L spacing"
+  },
+  "--sprout-common-spacing-xl": {
+    "$value": "16px",
+    "$type": "dimension",
+    "$description": "XL spacing"
+  },
+  "--sprout-common-spacing-xxl": {
+    "$value": "24px",
+    "$type": "dimension",
+    "$description": "XXL spacing"
+  },
+  "--sprout-common-spacing-3xl": {
+    "$value": "32px",
+    "$type": "dimension",
+    "$description": "3XL spacing"
+  },
+  "--sprout-common-density-xs": {
+    "$value": "2px",
+    "$type": "dimension",
+    "$description": "Extra small density"
+  },
+  "--sprout-common-density-s": {
+    "$value": "4px",
+    "$type": "dimension",
+    "$description": "S density"
+  },
+  "--sprout-common-density-m": {
+    "$value": "8px",
+    "$type": "dimension",
+    "$description": "M density"
+  },
+  "--sprout-common-density-l": {
+    "$value": "12px",
+    "$type": "dimension",
+    "$description": "L density"
+  },
+  "--sprout-common-density-xl": {
+    "$value": "16px",
+    "$type": "dimension",
+    "$description": "XL density"
+  },
+  "--sprout-common-density-xxl": {
+    "$value": "24px",
+    "$type": "dimension",
+    "$description": "XXL density"
+  },
+  "--sprout-common-density-3xl": {
+    "$value": "32px",
+    "$type": "dimension",
+    "$description": "3XL density"
+  },
+  "--sprout-inverse-foreground-color-default": {
+    "$value": "#ffffff",
+    "$type": "color",
+    "$description": "Contrasting text color"
+  },
+  "--sprout-inverse-foreground-color-disabled": {
+    "$value": "rgb(100% 100% 100% / 0.3)",
+    "$type": "color"
+  },
+  "--sprout-inverse-background-color-default": {
+    "$value": "#404040",
+    "$type": "color",
+    "$description": "Contrasting background color"
+  },
+  "--sprout-brand-primary-color-default": {
+    "$value": "#00873d",
+    "$type": "color",
+    "$description": "Primary brand color."
+  },
+  "--sprout-brand-primary-color-weak": {
+    "$value": "rgb(0% 52.941% 23.922% / 0.05)",
+    "$type": "color"
+  },
+  "--sprout-brand-primary-color-hover": {
+    "$value": "rgb(0% 42.353% 19.137%)",
+    "$type": "color",
+    "$description": "Primary brand color. (hover)"
+  },
+  "--sprout-brand-primary-color-pressed": {
+    "$value": "rgb(0% 29.647% 13.396%)",
+    "$type": "color",
+    "$description": "Primary brand color. (pressed)"
+  },
+  "--sprout-brand-primary-color-toggled": {
+    "$value": "rgb(0% 20.753% 9.3772%)",
+    "$type": "color",
+    "$description": "Primary brand color. (toggled)"
+  },
+  "--sprout-brand-primary-color-disabled": {
+    "$value": "rgb(0% 0% 0% / 0.15)",
+    "$type": "color",
+    "$description": "Primary brand color. (disabled)"
+  },
+  "--sprout-brand-primary-color-focus": {
+    "$value": "rgb(0% 42.353% 19.137%)",
+    "$type": "color",
+    "$description": "Primary brand color. (focus)"
+  },
+  "--sprout-brand-primary-color-inverse": {
+    "$value": "#ffffff",
+    "$type": "color",
+    "$description": "Primary brand color. (inverse)"
+  },
+  "--sprout-danger-color-default": {
+    "$value": "#d7004b",
+    "$type": "color",
+    "$description": "Danger color."
+  },
+  "--sprout-danger-color-weak": {
+    "$value": "rgb(84.314% 0% 29.412% / 0.05)",
+    "$type": "color"
+  },
+  "--sprout-danger-color-hover": {
+    "$value": "rgb(67.451% 0% 23.529%)",
+    "$type": "color",
+    "$description": "Danger color. (hover)"
+  },
+  "--sprout-danger-color-pressed": {
+    "$value": "rgb(47.216% 0% 16.47%)",
+    "$type": "color",
+    "$description": "Danger color. (pressed)"
+  },
+  "--sprout-danger-color-toggled": {
+    "$value": "rgb(33.051% 0% 11.529%)",
+    "$type": "color",
+    "$description": "Danger color. (toggled)"
+  },
+  "--sprout-danger-color-disabled": {
+    "$value": "rgb(0% 0% 0% / 0.15)",
+    "$type": "color",
+    "$description": "Danger color. (disabled)"
+  },
+  "--sprout-danger-color-focus": {
+    "$value": "rgb(81.784% 0% 28.529%)",
+    "$type": "color",
+    "$description": "Danger color. (focus)"
+  },
+  "--sprout-danger-color-inverse": {
+    "$value": "#ffffff",
+    "$type": "color",
+    "$description": "Danger color. (inverse)"
+  },
+  "--sprout-link-foreground-color-default": {
+    "$value": "#005db9",
+    "$type": "color",
+    "$description": "Link color"
+  },
+  "--sprout-focus-background-color-default": {
+    "$value": "rgb(0% 0% 0% / 0.03)",
+    "$type": "color",
+    "$description": "Focus background color for interactive elements"
+  },
+  "--sprout-focus-color-default": {
+    "$value": "#005db9",
+    "$type": "color",
+    "$description": "Focus color."
+  },
+  "--sprout-success-color-default": {
+    "$value": "#00873d",
+    "$type": "color",
+    "$description": "Success color."
+  },
+  "--sprout-success-color-weak": {
+    "$value": "rgb(0% 52.941% 23.922% / 0.05)",
+    "$type": "color"
+  },
+  "--sprout-success-color-inverse": {
+    "$value": "#ffffff",
+    "$type": "color",
+    "$description": "Success color. (inverse)"
+  },
+  "--sprout-warning-color-default": {
+    "$value": "#ef6d00",
+    "$type": "color",
+    "$description": "Warning color."
+  },
+  "--sprout-warning-color-weak": {
+    "$value": "rgb(93.725% 42.745% 0% / 0.05)",
+    "$type": "color"
+  },
+  "--sprout-warning-color-inverse": {
+    "$value": "#ffffff",
+    "$type": "color",
+    "$description": "Warning color. (inverse)"
+  },
+  "--sprout-info-color-default": {
+    "$value": "#005db9",
+    "$type": "color",
+    "$description": "Info color."
+  },
+  "--sprout-info-color-weak": {
+    "$value": "rgb(0% 36.471% 72.549% / 0.05)",
+    "$type": "color"
+  },
+  "--sprout-info-color-inverse": {
+    "$value": "#ffffff",
+    "$type": "color",
+    "$description": "Info color. (inverse)"
+  },
+  "--sprout-favorite-color-default": {
+    "$value": "#ffb84d",
+    "$type": "color",
+    "$description": "Color that conveys the 'favorite' feature(s)."
+  },
+  "--sprout-favorite-color-inverse": {
+    "$value": "#ffffff",
+    "$type": "color",
+    "$description": "Favorite color. (inverse)"
+  },
+  "--sprout-overlay-background-color-default": {
+    "$value": "rgb(100% 100% 100% / 0.8)",
+    "$type": "color",
+    "$description": "Overlay background color to be used to increase the contrast for foregrounds on top of surfaces with unpredictable colors such as images."
+  },
+  "--sprout-overlay-background-color-inverse": {
+    "$value": "rgb(0% 0% 0% / 0.05)",
+    "$type": "color",
+    "$description": "Surface contrast overlay color to be used to frame and separate content from background color tokens."
+  },
+  "--sprout-curtain-background-color-default": {
+    "$value": "rgb(0% 0% 0% / 0.6)",
+    "$type": "color",
+    "$description": "Curtain background color to be used when \"dimming\" down parts of the UI such as modals do."
+  },
+  "--sprout-input-background-color-default": {
+    "$value": "#ffffff",
+    "$type": "color",
+    "$description": "Background for input elements such as text areas and search fields"
+  },
+  "--sprout-script-color-default": {
+    "$value": "#404040",
+    "$type": "color",
+    "$description": "Syntax highlight color for default text"
+  },
+  "--sprout-script-color-comment": {
+    "$value": "rgb(47.569% 47.569% 47.569%)",
+    "$type": "color",
+    "$description": "Syntax highlight color for comment"
+  },
+  "--sprout-script-color-function": {
+    "$value": "rgb(22.627% 50.627% 73.137%)",
+    "$type": "color",
+    "$description": "Syntax highlight color for function"
+  },
+  "--sprout-script-color-keyword": {
+    "$value": "rgb(22.627% 50.627% 73.137%)",
+    "$type": "color",
+    "$description": "Syntax highlight color for keyword"
+  },
+  "--sprout-script-color-bracket-match": {
+    "$value": "rgb(86.863% 40.98% 2.5098%)",
+    "$type": "color",
+    "$description": "Syntax highlight color for bracket match"
+  },
+  "--sprout-script-color-variable": {
+    "$value": "rgb(75.059% 45.412% 52.549%)",
+    "$type": "color",
+    "$description": "Syntax highlight color for variable"
+  },
+  "--sprout-script-color-field": {
+    "$value": "rgb(77.529% 49.255% 7.5294%)",
+    "$type": "color",
+    "$description": "Syntax highlight color for field"
+  },
+  "--sprout-script-color-string": {
+    "$value": "rgb(17.569% 53.804% 31.216%)",
+    "$type": "color",
+    "$description": "Syntax highlight color for string"
+  },
+  "--sprout-script-color-measure": {
+    "$value": "rgb(38.275% 36.392% 58.745%)",
+    "$type": "color",
+    "$description": "Syntax highlight color for measure"
+  },
+  "--sprout-script-color-table": {
+    "$value": "rgb(73.098% 16.941% 47.059%)",
+    "$type": "color",
+    "$description": "Syntax highlight color for tables"
+  },
+  "--sprout-selected-color-default": {
+    "$value": "#00873d",
+    "$type": "color",
+    "$description": "Selected color"
+  },
+  "--sprout-selected-color-inverse": {
+    "$value": "#ffffff",
+    "$type": "color",
+    "$description": "Selected inverse color"
+  },
+  "--sprout-selected-background-color-default": {
+    "$value": "rgb(0% 0% 0% / 0.05)",
+    "$type": "color",
+    "$description": "Background color for selected items"
+  },
+  "--sprout-illustration-color-palette-0": {
+    "$value": "#595959",
+    "$type": "color",
+    "$description": "Illustration palette color"
+  },
+  "--sprout-illustration-color-palette-1": {
+    "$value": "#999999",
+    "$type": "color",
+    "$description": "Illustration palette color"
+  },
+  "--sprout-illustration-color-palette-2": {
+    "$value": "#009844",
+    "$type": "color",
+    "$description": "Illustration palette color"
+  },
+  "--sprout-illustration-color-palette-3": {
+    "$value": "#d7004b",
+    "$type": "color",
+    "$description": "Illustration palette color"
+  },
+  "--sprout-illustration-color-palette-4": {
+    "$value": "#005db9",
+    "$type": "color",
+    "$description": "Illustration palette color"
+  },
+  "--sprout-illustration-color-palette-5": {
+    "$value": "#870063",
+    "$type": "color",
+    "$description": "Illustration palette color"
+  },
+  "--sprout-illustration-color-palette-6": {
+    "$value": "#ef6d00",
+    "$type": "color",
+    "$description": "Illustration palette color"
+  },
+  "--sprout-illustration-sizing-s": {
+    "$value": "96px",
+    "$type": "dimension",
+    "$description": "Small illustration size"
+  },
+  "--sprout-illustration-sizing-m": {
+    "$value": "128px",
+    "$type": "dimension",
+    "$description": "Medium illustration size"
+  },
+  "--sprout-illustration-sizing-l": {
+    "$value": "160px",
+    "$type": "dimension",
+    "$description": "Large illustration size"
+  },
+  "--sprout-data-color-others": {
+    "$value": "#a6a6a6",
+    "$type": "color",
+    "$description": "Use for when grouping values into an \"others\" bucket"
+  },
+  "--sprout-data-color-null": {
+    "$value": "#d9d9d9",
+    "$type": "color",
+    "$description": "Use for visualizing the concept of 'null'"
+  },
+  "--sprout-data-color-support": {
+    "$value": "#b3b3b3",
+    "$type": "color",
+    "$description": "Color for supporing items, like last year values, when visualizing data"
+  },
+  "--sprout-data-color-support-weak": {
+    "$value": "#e6e6e6",
+    "$type": "color",
+    "$description": "Color for weak support areas, like confidence intervals, when visualizing data"
+  },
+  "--sprout-data-color-categorical-0-0": {
+    "$value": "#0047ad",
+    "$type": "color",
+    "$description": "Chart categorical color"
+  },
+  "--sprout-data-color-categorical-0-1": {
+    "$value": "#6694a8",
+    "$type": "color",
+    "$description": "Chart categorical color"
+  },
+  "--sprout-data-color-categorical-0-2": {
+    "$value": "#8bc5f5",
+    "$type": "color",
+    "$description": "Chart categorical color"
+  },
+  "--sprout-data-color-categorical-0-3": {
+    "$value": "#00b5aa",
+    "$type": "color",
+    "$description": "Chart categorical color"
+  },
+  "--sprout-data-color-categorical-0-4": {
+    "$value": "#00873d",
+    "$type": "color",
+    "$description": "Chart categorical color"
+  },
+  "--sprout-data-color-categorical-0-5": {
+    "$value": "#ffb84d",
+    "$type": "color",
+    "$description": "Chart categorical color"
+  },
+  "--sprout-data-color-categorical-0-6": {
+    "$value": "#ffcd80",
+    "$type": "color",
+    "$description": "Chart categorical color"
+  },
+  "--sprout-data-color-categorical-0-7": {
+    "$value": "#870063",
+    "$type": "color",
+    "$description": "Chart categorical color"
+  },
+  "--sprout-data-color-categorical-0-8": {
+    "$value": "#f15a81",
+    "$type": "color",
+    "$description": "Chart categorical color"
+  },
+  "--sprout-data-color-categorical-0-9": {
+    "$value": "#e74096",
+    "$type": "color",
+    "$description": "Chart categorical color"
+  },
+  "--sprout-data-color-categorical-0-10": {
+    "$value": "#ae006d",
+    "$type": "color",
+    "$description": "Chart categorical color"
+  },
+  "--sprout-data-color-categorical-0-11": {
+    "$value": "#d92686",
+    "$type": "color",
+    "$description": "Chart categorical color"
+  },
+  "--sprout-data-color-sequential-0-0": {
+    "$value": "#611100",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-0-1": {
+    "$value": "#8e2200",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-0-2": {
+    "$value": "#bf3900",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-0-3": {
+    "$value": "#e65200",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-0-4": {
+    "$value": "#ef6d00",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-0-5": {
+    "$value": "#ff9800",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-0-6": {
+    "$value": "#ffb84d",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-0-7": {
+    "$value": "#ffcd80",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-1-0": {
+    "$value": "#002d6d",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-1-1": {
+    "$value": "#003a8f",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-1-2": {
+    "$value": "#0047ad",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-1-3": {
+    "$value": "#005db9",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-1-4": {
+    "$value": "#0275d9",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-1-5": {
+    "$value": "#379def",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-1-6": {
+    "$value": "#8bc5f5",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-sequential-1-7": {
+    "$value": "#b8dbf9",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-diverging-0-0": {
+    "$value": "#8e2200",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-diverging-0-1": {
+    "$value": "#bf3900",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-diverging-0-2": {
+    "$value": "#f57d00",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-diverging-0-3": {
+    "$value": "#ff9800",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-diverging-0-4": {
+    "$value": "#edf7fc",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-diverging-0-5": {
+    "$value": "#8bc5f5",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-diverging-0-6": {
+    "$value": "#379def",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-diverging-0-7": {
+    "$value": "#0275d9",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-data-color-diverging-0-8": {
+    "$value": "#0047ad",
+    "$type": "color",
+    "$description": "Chart sequential color"
+  },
+  "--sprout-alternative-color-default": {
+    "$value": "#e6e6e6",
+    "$type": "color",
+    "$description": "Color for the 'alternative' values in an associative selection model"
+  },
+  "--sprout-alternative-color-inverse": {
+    "$value": "#404040",
+    "$type": "color",
+    "$description": "Color for the inverse 'alternative' values in an associative selection model"
+  },
+  "--sprout-excluded-color-default": {
+    "$value": "#b3b3b3",
+    "$type": "color",
+    "$description": "Color for the 'excluded' values in an associative selection model"
+  },
+  "--sprout-excluded-color-inverse": {
+    "$value": "#404040",
+    "$type": "color",
+    "$description": "Color for the inverse 'excluded' values in an associative selection model"
+  },
+  "--sprout-highlight-foreground-color-search-result": {
+    "$value": "#000000",
+    "$type": "color",
+    "$description": "Color for foreground of search results"
+  },
+  "--sprout-highlight-background-color-search-result-default": {
+    "$value": "#fff266",
+    "$type": "color",
+    "$description": "Background color for search results"
+  },
+  "--sprout-highlight-background-color-search-result-active": {
+    "$value": "#ffb84d",
+    "$type": "color",
+    "$description": "Background color for active search results"
+  },
+  "--sprout-highlight-background-color-marker": {
+    "$value": "#ffe600",
+    "$type": "color",
+    "$description": "Background color for marker"
+  },
+  "--sprout-container-sizing-xxs": {
+    "$value": "256px",
+    "$type": "dimension",
+    "$description": "Sizing token for the smallest containers"
+  },
+  "--sprout-container-sizing-xs": {
+    "$value": "320px",
+    "$type": "dimension",
+    "$description": "Sizing token for extra small containers"
+  },
+  "--sprout-container-sizing-s": {
+    "$value": "400px",
+    "$type": "dimension",
+    "$description": "Sizing token for small containers"
+  },
+  "--sprout-container-sizing-m": {
+    "$value": "512px",
+    "$type": "dimension",
+    "$description": "Sizing token for containers"
+  },
+  "--sprout-container-sizing-l": {
+    "$value": "640px",
+    "$type": "dimension",
+    "$description": "Sizing token for larger containers"
+  },
+  "--sprout-container-sizing-xl": {
+    "$value": "768px",
+    "$type": "dimension",
+    "$description": "Sizing token for extra large containers"
+  },
+  "--sprout-container-sizing-xxl": {
+    "$value": "960px",
+    "$type": "dimension",
+    "$description": "Sizing token for XXL containers"
+  },
+  "--sprout-container-sizing-3xl": {
+    "$value": "1024px",
+    "$type": "dimension",
+    "$description": "Sizing token for 3XL containers"
+  },
+  "--sprout-container-sizing-4xl": {
+    "$value": "1280px",
+    "$type": "dimension",
+    "$description": "Sizing token for 4XL containers"
+  },
+  "--sprout-container-breakpoint-s": {
+    "$value": "640px",
+    "$type": "dimension",
+    "$description": "Viewport width breakpoint token for small layouts"
+  },
+  "--sprout-container-breakpoint-m": {
+    "$value": "1024px",
+    "$type": "dimension",
+    "$description": "Viewport width breakpoint token for medium-wide layouts"
+  },
+  "--sprout-container-breakpoint-l": {
+    "$value": "1600px",
+    "$type": "dimension",
+    "$description": "Viewport width breakpoint token for wide layouts"
+  },
+  "--sprout-container-layer-stacked": {
+    "$value": "1000",
+    "$type": "other",
+    "$description": "Use for stacked items. Must be dismissable."
+  },
+  "--sprout-container-layer-floating": {
+    "$value": "1100",
+    "$type": "other",
+    "$description": "Must be in a fixed position related to its container. All stacked and default content beneath it must be reachable through scroll/pan interactions or it must be dimissible."
+  },
+  "--sprout-container-layer-overlay": {
+    "$value": "1300",
+    "$type": "other",
+    "$description": "Must be related to a sub-task. Must be accompanied with a curtain."
+  },
+  "--sprout-container-layer-context": {
+    "$value": "1350",
+    "$type": "other",
+    "$description": "Must be triggered through right-click/long press. Must be dismissible through clicking outside the area."
+  },
+  "--sprout-container-layer-time-sensitive": {
+    "$value": "1400",
+    "$type": "other",
+    "$description": "Must be related to something that happened in the system at that exact moment that is useful for the user to know. Must be dismissible or time-based."
+  },
+  "--sprout-container-layer-cursor": {
+    "$value": "1500",
+    "$type": "other",
+    "$description": "Must be user-triggered and related to the cursors/pointers current position. Must be dismissible with escape key."
+  },
+  "--sprout-common-border-default-color": {
+    "$value": "rgb(0% 0% 0% / 0.15)",
+    "$type": "color",
+    "$description": "Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active."
+  },
+  "--sprout-common-border-default-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active."
+  },
+  "--sprout-common-border-default-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active."
+  },
+  "--sprout-common-border-weak-color": {
+    "$value": "rgb(0% 0% 0% / 0.1)",
+    "$type": "color",
+    "$description": "Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced."
+  },
+  "--sprout-common-border-weak-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced."
+  },
+  "--sprout-common-border-weak-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced."
+  },
+  "--sprout-common-border-moderate-color": {
+    "$value": "rgb(0% 0% 0% / 0.43)",
+    "$type": "color",
+    "$description": "Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds."
+  },
+  "--sprout-common-border-moderate-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds."
+  },
+  "--sprout-common-border-moderate-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds."
+  },
+  "--sprout-common-border-strong-color": {
+    "$value": "rgb(0% 0% 0% / 0.6)",
+    "$type": "color",
+    "$description": "Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls)."
+  },
+  "--sprout-common-border-strong-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls)."
+  },
+  "--sprout-common-border-strong-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls)."
+  },
+  "--sprout-common-border-extra-strong-color": {
+    "$value": "rgb(0% 0% 0% / 0.75)",
+    "$type": "color",
+    "$description": "High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs."
+  },
+  "--sprout-common-border-extra-strong-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs."
+  },
+  "--sprout-common-border-extra-strong-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs."
+  },
+  "--sprout-common-divider-default-color": {
+    "$value": "rgb(0% 0% 0% / 0.08)",
+    "$type": "color",
+    "$description": "Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts."
+  },
+  "--sprout-common-divider-default-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts."
+  },
+  "--sprout-common-divider-default-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts."
+  },
+  "--sprout-common-divider-subtle-color": {
+    "$value": "rgb(0% 0% 0% / 0.08)",
+    "$type": "color",
+    "$description": "Compound token for subtle divider style"
+  },
+  "--sprout-common-divider-subtle-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Compound token for subtle divider style"
+  },
+  "--sprout-common-divider-subtle-style": {
+    "$value": "dashed",
+    "$type": "strokeStyle",
+    "$description": "Compound token for subtle divider style"
+  },
+  "--sprout-common-divider-subtle-weak-color": {
+    "$value": "rgb(0% 0% 0% / 0.04)",
+    "$type": "color",
+    "$description": "Compound token for a very subtle divider style"
+  },
+  "--sprout-common-divider-subtle-weak-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Compound token for a very subtle divider style"
+  },
+  "--sprout-common-divider-subtle-weak-style": {
+    "$value": "dashed",
+    "$type": "strokeStyle",
+    "$description": "Compound token for a very subtle divider style"
+  },
+  "--sprout-common-divider-weak-color": {
+    "$value": "rgb(0% 0% 0% / 0.04)",
+    "$type": "color",
+    "$description": "Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting."
+  },
+  "--sprout-common-divider-weak-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting."
+  },
+  "--sprout-common-divider-weak-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting."
+  },
+  "--sprout-common-divider-moderate-color": {
+    "$value": "rgb(0% 0% 0% / 0.08)",
+    "$type": "color",
+    "$description": "Compound token for moderate border style"
+  },
+  "--sprout-common-divider-moderate-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Compound token for moderate border style"
+  },
+  "--sprout-common-divider-moderate-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "Compound token for moderate border style"
+  },
+  "--sprout-common-divider-strong-color": {
+    "$value": "rgb(0% 0% 0% / 0.2)",
+    "$type": "color",
+    "$description": "Compound token for strong border style"
+  },
+  "--sprout-common-divider-strong-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Compound token for strong border style"
+  },
+  "--sprout-common-divider-strong-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "Compound token for strong border style"
+  },
+  "--sprout-common-divider-extra-strong-color": {
+    "$value": "rgb(0% 0% 0% / 0.43)",
+    "$type": "color",
+    "$description": "Maximum emphasis divider for critical or high-contrast requirements."
+  },
+  "--sprout-common-divider-extra-strong-width": {
+    "$value": "2px",
+    "$type": "dimension",
+    "$description": "Maximum emphasis divider for critical or high-contrast requirements."
+  },
+  "--sprout-common-divider-extra-strong-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "Maximum emphasis divider for critical or high-contrast requirements."
+  },
+  "--sprout-inverse-border-default-color": {
+    "$value": "#ffffff",
+    "$type": "color",
+    "$description": "Compound token for default inverse border"
+  },
+  "--sprout-inverse-border-default-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Compound token for default inverse border"
+  },
+  "--sprout-inverse-border-default-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "Compound token for default inverse border"
+  },
+  "--sprout-inverse-border-weak-color": {
+    "$value": "rgb(100% 100% 100% / 0.3)",
+    "$type": "color",
+    "$description": "Compound token for inverse weak border"
+  },
+  "--sprout-inverse-border-weak-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Compound token for inverse weak border"
+  },
+  "--sprout-inverse-border-weak-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "Compound token for inverse weak border"
+  },
+  "--sprout-focus-border-default-color": {
+    "$value": "#005db9",
+    "$type": "color"
+  },
+  "--sprout-focus-border-default-width": {
+    "$value": "2px",
+    "$type": "dimension"
+  },
+  "--sprout-focus-border-default-style": {
+    "$value": "solid",
+    "$type": "strokeStyle"
+  },
+  "--sprout-script-font-m-font-family": {
+    "$value": "Source Code Pro",
+    "$type": "fontFamily",
+    "$description": "Medium default code"
+  },
+  "--sprout-script-font-m-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Medium default code"
+  },
+  "--sprout-script-font-m-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Medium default code"
+  },
+  "--sprout-script-font-m-font-size": {
+    "$value": "16px",
+    "$type": "dimension",
+    "$description": "Medium default code"
+  },
+  "--sprout-script-font-m-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Medium default code"
+  },
+  "--sprout-script-font-m-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium default code"
+  },
+  "--sprout-script-font-m-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium default code"
+  },
+  "--sprout-script-font-m-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Medium default code"
+  },
+  "--sprout-script-font-m-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Medium default code"
+  },
+  "--sprout-script-font-s-font-family": {
+    "$value": "Source Code Pro",
+    "$type": "fontFamily",
+    "$description": "Small default code"
+  },
+  "--sprout-script-font-s-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Small default code"
+  },
+  "--sprout-script-font-s-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Small default code"
+  },
+  "--sprout-script-font-s-font-size": {
+    "$value": "14px",
+    "$type": "dimension",
+    "$description": "Small default code"
+  },
+  "--sprout-script-font-s-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Small default code"
+  },
+  "--sprout-script-font-s-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small default code"
+  },
+  "--sprout-script-font-s-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small default code"
+  },
+  "--sprout-script-font-s-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Small default code"
+  },
+  "--sprout-script-font-s-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Small default code"
+  },
+  "--sprout-script-font-m-emphasized-font-family": {
+    "$value": "Source Code Pro",
+    "$type": "fontFamily",
+    "$description": "Medium emphasized code"
+  },
+  "--sprout-script-font-m-emphasized-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Medium emphasized code"
+  },
+  "--sprout-script-font-m-emphasized-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Medium emphasized code"
+  },
+  "--sprout-script-font-m-emphasized-font-size": {
+    "$value": "16px",
+    "$type": "dimension",
+    "$description": "Medium emphasized code"
+  },
+  "--sprout-script-font-m-emphasized-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Medium emphasized code"
+  },
+  "--sprout-script-font-m-emphasized-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium emphasized code"
+  },
+  "--sprout-script-font-m-emphasized-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium emphasized code"
+  },
+  "--sprout-script-font-m-emphasized-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Medium emphasized code"
+  },
+  "--sprout-script-font-m-emphasized-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Medium emphasized code"
+  },
+  "--sprout-script-font-s-emphasized-font-family": {
+    "$value": "Source Code Pro",
+    "$type": "fontFamily",
+    "$description": "Small emphasized code"
+  },
+  "--sprout-script-font-s-emphasized-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Small emphasized code"
+  },
+  "--sprout-script-font-s-emphasized-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Small emphasized code"
+  },
+  "--sprout-script-font-s-emphasized-font-size": {
+    "$value": "14px",
+    "$type": "dimension",
+    "$description": "Small emphasized code"
+  },
+  "--sprout-script-font-s-emphasized-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Small emphasized code"
+  },
+  "--sprout-script-font-s-emphasized-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small emphasized code"
+  },
+  "--sprout-script-font-s-emphasized-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small emphasized code"
+  },
+  "--sprout-script-font-s-emphasized-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Small emphasized code"
+  },
+  "--sprout-script-font-s-emphasized-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Small emphasized code"
+  },
+  "--sprout-selected-border-default-color": {
+    "$value": "#00873d",
+    "$type": "color",
+    "$description": "Border for selected items"
+  },
+  "--sprout-selected-border-default-width": {
+    "$value": "2px",
+    "$type": "dimension",
+    "$description": "Border for selected items"
+  },
+  "--sprout-selected-border-default-style": {
+    "$value": "solid",
+    "$type": "strokeStyle",
+    "$description": "Border for selected items"
+  },
+  "--sprout-data-font-tabular-m-font-family": {
+    "$value": "Source Code Pro",
+    "$type": "fontFamily",
+    "$description": "Medium default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Medium default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Medium default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-font-size": {
+    "$value": "16px",
+    "$type": "dimension",
+    "$description": "Medium default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Medium default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Medium default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Medium default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-font-family": {
+    "$value": "Source Code Pro",
+    "$type": "fontFamily",
+    "$description": "Small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-font-size": {
+    "$value": "14px",
+    "$type": "dimension",
+    "$description": "Small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-font-family": {
+    "$value": "Source Code Pro",
+    "$type": "fontFamily",
+    "$description": "Extra small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Extra small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Extra small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-font-size": {
+    "$value": "12px",
+    "$type": "dimension",
+    "$description": "Extra small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Extra small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Extra small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Extra small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-emphasized-font-family": {
+    "$value": "Source Code Pro",
+    "$type": "fontFamily",
+    "$description": "Medium emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-emphasized-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Medium emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-emphasized-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Medium emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-emphasized-font-size": {
+    "$value": "16px",
+    "$type": "dimension",
+    "$description": "Medium emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-emphasized-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Medium emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-emphasized-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-emphasized-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-emphasized-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Medium emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-emphasized-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Medium emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-emphasized-font-family": {
+    "$value": "Source Code Pro",
+    "$type": "fontFamily",
+    "$description": "Small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-emphasized-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-emphasized-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-emphasized-font-size": {
+    "$value": "14px",
+    "$type": "dimension",
+    "$description": "Small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-emphasized-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-emphasized-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-emphasized-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-emphasized-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-emphasized-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-emphasized-font-family": {
+    "$value": "Source Code Pro",
+    "$type": "fontFamily",
+    "$description": "Extra small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-emphasized-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Extra small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-emphasized-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Extra small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-emphasized-font-size": {
+    "$value": "12px",
+    "$type": "dimension",
+    "$description": "Extra small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-emphasized-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Extra small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-emphasized-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-emphasized-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-emphasized-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Extra small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-emphasized-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Extra small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-placeholder-border-default-color": {
+    "$value": "rgb(0% 0% 0% / 0.43)",
+    "$type": "color",
+    "$description": "Border for placeholder elements such as dropzones."
+  },
+  "--sprout-placeholder-border-default-width": {
+    "$value": "1px",
+    "$type": "dimension",
+    "$description": "Border for placeholder elements such as dropzones."
+  },
+  "--sprout-placeholder-border-default-style": {
+    "$value": "dashed",
+    "$type": "strokeStyle",
+    "$description": "Border for placeholder elements such as dropzones."
+  },
+  "--sprout-heading-font-xs-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Extra small heading"
+  },
+  "--sprout-heading-font-xs-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Extra small heading"
+  },
+  "--sprout-heading-font-xs-line-height": {
+    "$value": "130%",
+    "$type": "lineHeight",
+    "$description": "Extra small heading"
+  },
+  "--sprout-heading-font-xs-font-size": {
+    "$value": "12px",
+    "$type": "dimension",
+    "$description": "Extra small heading"
+  },
+  "--sprout-heading-font-xs-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Extra small heading"
+  },
+  "--sprout-heading-font-xs-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small heading"
+  },
+  "--sprout-heading-font-xs-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small heading"
+  },
+  "--sprout-heading-font-xs-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Extra small heading"
+  },
+  "--sprout-heading-font-xs-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Extra small heading"
+  },
+  "--sprout-heading-font-s-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Small heading"
+  },
+  "--sprout-heading-font-s-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Small heading"
+  },
+  "--sprout-heading-font-s-line-height": {
+    "$value": "130%",
+    "$type": "lineHeight",
+    "$description": "Small heading"
+  },
+  "--sprout-heading-font-s-font-size": {
+    "$value": "16px",
+    "$type": "dimension",
+    "$description": "Small heading"
+  },
+  "--sprout-heading-font-s-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Small heading"
+  },
+  "--sprout-heading-font-s-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small heading"
+  },
+  "--sprout-heading-font-s-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small heading"
+  },
+  "--sprout-heading-font-s-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Small heading"
+  },
+  "--sprout-heading-font-s-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Small heading"
+  },
+  "--sprout-heading-font-m-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Medium heading"
+  },
+  "--sprout-heading-font-m-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Medium heading"
+  },
+  "--sprout-heading-font-m-line-height": {
+    "$value": "130%",
+    "$type": "lineHeight",
+    "$description": "Medium heading"
+  },
+  "--sprout-heading-font-m-font-size": {
+    "$value": "20px",
+    "$type": "dimension",
+    "$description": "Medium heading"
+  },
+  "--sprout-heading-font-m-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Medium heading"
+  },
+  "--sprout-heading-font-m-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium heading"
+  },
+  "--sprout-heading-font-m-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium heading"
+  },
+  "--sprout-heading-font-m-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Medium heading"
+  },
+  "--sprout-heading-font-m-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Medium heading"
+  },
+  "--sprout-heading-font-l-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Large heading"
+  },
+  "--sprout-heading-font-l-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Large heading"
+  },
+  "--sprout-heading-font-l-line-height": {
+    "$value": "130%",
+    "$type": "lineHeight",
+    "$description": "Large heading"
+  },
+  "--sprout-heading-font-l-font-size": {
+    "$value": "24px",
+    "$type": "dimension",
+    "$description": "Large heading"
+  },
+  "--sprout-heading-font-l-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Large heading"
+  },
+  "--sprout-heading-font-l-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Large heading"
+  },
+  "--sprout-heading-font-l-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Large heading"
+  },
+  "--sprout-heading-font-l-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Large heading"
+  },
+  "--sprout-heading-font-l-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Large heading"
+  },
+  "--sprout-heading-font-xl-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "XL heading"
+  },
+  "--sprout-heading-font-xl-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "XL heading"
+  },
+  "--sprout-heading-font-xl-line-height": {
+    "$value": "130%",
+    "$type": "lineHeight",
+    "$description": "XL heading"
+  },
+  "--sprout-heading-font-xl-font-size": {
+    "$value": "32px",
+    "$type": "dimension",
+    "$description": "XL heading"
+  },
+  "--sprout-heading-font-xl-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "XL heading"
+  },
+  "--sprout-heading-font-xl-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "XL heading"
+  },
+  "--sprout-heading-font-xl-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "XL heading"
+  },
+  "--sprout-heading-font-xl-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "XL heading"
+  },
+  "--sprout-heading-font-xl-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "XL heading"
+  },
+  "--sprout-heading-font-xxl-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "XXL heading"
+  },
+  "--sprout-heading-font-xxl-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "XXL heading"
+  },
+  "--sprout-heading-font-xxl-line-height": {
+    "$value": "130%",
+    "$type": "lineHeight",
+    "$description": "XXL heading"
+  },
+  "--sprout-heading-font-xxl-font-size": {
+    "$value": "40px",
+    "$type": "dimension",
+    "$description": "XXL heading"
+  },
+  "--sprout-heading-font-xxl-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "XXL heading"
+  },
+  "--sprout-heading-font-xxl-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "XXL heading"
+  },
+  "--sprout-heading-font-xxl-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "XXL heading"
+  },
+  "--sprout-heading-font-xxl-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "XXL heading"
+  },
+  "--sprout-heading-font-xxl-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "XXL heading"
+  },
+  "--sprout-body-font-xs-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Extra small body text"
+  },
+  "--sprout-body-font-xs-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Extra small body text"
+  },
+  "--sprout-body-font-xs-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Extra small body text"
+  },
+  "--sprout-body-font-xs-font-size": {
+    "$value": "12px",
+    "$type": "dimension",
+    "$description": "Extra small body text"
+  },
+  "--sprout-body-font-xs-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Extra small body text"
+  },
+  "--sprout-body-font-xs-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small body text"
+  },
+  "--sprout-body-font-xs-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small body text"
+  },
+  "--sprout-body-font-xs-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Extra small body text"
+  },
+  "--sprout-body-font-xs-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Extra small body text"
+  },
+  "--sprout-body-font-s-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Small body text"
+  },
+  "--sprout-body-font-s-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Small body text"
+  },
+  "--sprout-body-font-s-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Small body text"
+  },
+  "--sprout-body-font-s-font-size": {
+    "$value": "14px",
+    "$type": "dimension",
+    "$description": "Small body text"
+  },
+  "--sprout-body-font-s-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Small body text"
+  },
+  "--sprout-body-font-s-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small body text"
+  },
+  "--sprout-body-font-s-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small body text"
+  },
+  "--sprout-body-font-s-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Small body text"
+  },
+  "--sprout-body-font-s-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Small body text"
+  },
+  "--sprout-body-font-m-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Medium body text"
+  },
+  "--sprout-body-font-m-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Medium body text"
+  },
+  "--sprout-body-font-m-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Medium body text"
+  },
+  "--sprout-body-font-m-font-size": {
+    "$value": "16px",
+    "$type": "dimension",
+    "$description": "Medium body text"
+  },
+  "--sprout-body-font-m-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Medium body text"
+  },
+  "--sprout-body-font-m-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium body text"
+  },
+  "--sprout-body-font-m-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium body text"
+  },
+  "--sprout-body-font-m-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Medium body text"
+  },
+  "--sprout-body-font-m-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Medium body text"
+  },
+  "--sprout-body-font-l-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Large body text"
+  },
+  "--sprout-body-font-l-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Large body text"
+  },
+  "--sprout-body-font-l-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Large body text"
+  },
+  "--sprout-body-font-l-font-size": {
+    "$value": "20px",
+    "$type": "dimension",
+    "$description": "Large body text"
+  },
+  "--sprout-body-font-l-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Large body text"
+  },
+  "--sprout-body-font-l-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Large body text"
+  },
+  "--sprout-body-font-l-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Large body text"
+  },
+  "--sprout-body-font-l-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Large body text"
+  },
+  "--sprout-body-font-l-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Large body text"
+  },
+  "--sprout-body-font-xl-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "XL body text"
+  },
+  "--sprout-body-font-xl-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "XL body text"
+  },
+  "--sprout-body-font-xl-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "XL body text"
+  },
+  "--sprout-body-font-xl-font-size": {
+    "$value": "24px",
+    "$type": "dimension",
+    "$description": "XL body text"
+  },
+  "--sprout-body-font-xl-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "XL body text"
+  },
+  "--sprout-body-font-xl-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "XL body text"
+  },
+  "--sprout-body-font-xl-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "XL body text"
+  },
+  "--sprout-body-font-xl-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "XL body text"
+  },
+  "--sprout-body-font-xl-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "XL body text"
+  },
+  "--sprout-body-font-xxl-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "XXL body text"
+  },
+  "--sprout-body-font-xxl-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "XXL body text"
+  },
+  "--sprout-body-font-xxl-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "XXL body text"
+  },
+  "--sprout-body-font-xxl-font-size": {
+    "$value": "28px",
+    "$type": "dimension",
+    "$description": "XXL body text"
+  },
+  "--sprout-body-font-xxl-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "XXL body text"
+  },
+  "--sprout-body-font-xxl-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "XXL body text"
+  },
+  "--sprout-body-font-xxl-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "XXL body text"
+  },
+  "--sprout-body-font-xxl-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "XXL body text"
+  },
+  "--sprout-body-font-xxl-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "XXL body text"
+  },
+  "--sprout-label-font-xs-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Extra small default label"
+  },
+  "--sprout-label-font-xs-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Extra small default label"
+  },
+  "--sprout-label-font-xs-line-height": {
+    "$value": "16px",
+    "$type": "lineHeight",
+    "$description": "Extra small default label"
+  },
+  "--sprout-label-font-xs-font-size": {
+    "$value": "12px",
+    "$type": "dimension",
+    "$description": "Extra small default label"
+  },
+  "--sprout-label-font-xs-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Extra small default label"
+  },
+  "--sprout-label-font-xs-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small default label"
+  },
+  "--sprout-label-font-xs-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small default label"
+  },
+  "--sprout-label-font-xs-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Extra small default label"
+  },
+  "--sprout-label-font-xs-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Extra small default label"
+  },
+  "--sprout-label-font-xs-emphasized-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Extra small emphasized label"
+  },
+  "--sprout-label-font-xs-emphasized-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Extra small emphasized label"
+  },
+  "--sprout-label-font-xs-emphasized-line-height": {
+    "$value": "16px",
+    "$type": "lineHeight",
+    "$description": "Extra small emphasized label"
+  },
+  "--sprout-label-font-xs-emphasized-font-size": {
+    "$value": "12px",
+    "$type": "dimension",
+    "$description": "Extra small emphasized label"
+  },
+  "--sprout-label-font-xs-emphasized-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Extra small emphasized label"
+  },
+  "--sprout-label-font-xs-emphasized-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small emphasized label"
+  },
+  "--sprout-label-font-xs-emphasized-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small emphasized label"
+  },
+  "--sprout-label-font-xs-emphasized-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Extra small emphasized label"
+  },
+  "--sprout-label-font-xs-emphasized-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Extra small emphasized label"
+  },
+  "--sprout-label-font-s-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Small default label"
+  },
+  "--sprout-label-font-s-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Small default label"
+  },
+  "--sprout-label-font-s-line-height": {
+    "$value": "16px",
+    "$type": "lineHeight",
+    "$description": "Small default label"
+  },
+  "--sprout-label-font-s-font-size": {
+    "$value": "14px",
+    "$type": "dimension",
+    "$description": "Small default label"
+  },
+  "--sprout-label-font-s-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Small default label"
+  },
+  "--sprout-label-font-s-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small default label"
+  },
+  "--sprout-label-font-s-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small default label"
+  },
+  "--sprout-label-font-s-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Small default label"
+  },
+  "--sprout-label-font-s-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Small default label"
+  },
+  "--sprout-label-font-s-emphasized-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Small emphasized label"
+  },
+  "--sprout-label-font-s-emphasized-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Small emphasized label"
+  },
+  "--sprout-label-font-s-emphasized-line-height": {
+    "$value": "16px",
+    "$type": "lineHeight",
+    "$description": "Small emphasized label"
+  },
+  "--sprout-label-font-s-emphasized-font-size": {
+    "$value": "14px",
+    "$type": "dimension",
+    "$description": "Small emphasized label"
+  },
+  "--sprout-label-font-s-emphasized-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Small emphasized label"
+  },
+  "--sprout-label-font-s-emphasized-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small emphasized label"
+  },
+  "--sprout-label-font-s-emphasized-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Small emphasized label"
+  },
+  "--sprout-label-font-s-emphasized-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Small emphasized label"
+  },
+  "--sprout-label-font-s-emphasized-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Small emphasized label"
+  },
+  "--sprout-label-font-m-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Medium default label"
+  },
+  "--sprout-label-font-m-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Medium default label"
+  },
+  "--sprout-label-font-m-line-height": {
+    "$value": "20px",
+    "$type": "lineHeight",
+    "$description": "Medium default label"
+  },
+  "--sprout-label-font-m-font-size": {
+    "$value": "16px",
+    "$type": "dimension",
+    "$description": "Medium default label"
+  },
+  "--sprout-label-font-m-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Medium default label"
+  },
+  "--sprout-label-font-m-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium default label"
+  },
+  "--sprout-label-font-m-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium default label"
+  },
+  "--sprout-label-font-m-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Medium default label"
+  },
+  "--sprout-label-font-m-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Medium default label"
+  },
+  "--sprout-label-font-m-emphasized-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Medium emphasized label"
+  },
+  "--sprout-label-font-m-emphasized-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Medium emphasized label"
+  },
+  "--sprout-label-font-m-emphasized-line-height": {
+    "$value": "20px",
+    "$type": "lineHeight",
+    "$description": "Medium emphasized label"
+  },
+  "--sprout-label-font-m-emphasized-font-size": {
+    "$value": "16px",
+    "$type": "dimension",
+    "$description": "Medium emphasized label"
+  },
+  "--sprout-label-font-m-emphasized-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Medium emphasized label"
+  },
+  "--sprout-label-font-m-emphasized-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium emphasized label"
+  },
+  "--sprout-label-font-m-emphasized-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Medium emphasized label"
+  },
+  "--sprout-label-font-m-emphasized-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Medium emphasized label"
+  },
+  "--sprout-label-font-m-emphasized-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Medium emphasized label"
+  },
+  "--sprout-label-font-l-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Large default label"
+  },
+  "--sprout-label-font-l-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Large default label"
+  },
+  "--sprout-label-font-l-line-height": {
+    "$value": "24px",
+    "$type": "lineHeight",
+    "$description": "Large default label"
+  },
+  "--sprout-label-font-l-font-size": {
+    "$value": "20px",
+    "$type": "dimension",
+    "$description": "Large default label"
+  },
+  "--sprout-label-font-l-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Large default label"
+  },
+  "--sprout-label-font-l-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Large default label"
+  },
+  "--sprout-label-font-l-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Large default label"
+  },
+  "--sprout-label-font-l-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Large default label"
+  },
+  "--sprout-label-font-l-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Large default label"
+  },
+  "--sprout-label-font-l-emphasized-font-family": {
+    "$value": "Source Sans Pro",
+    "$type": "fontFamily",
+    "$description": "Large emphasized label"
+  },
+  "--sprout-label-font-l-emphasized-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Large emphasized label"
+  },
+  "--sprout-label-font-l-emphasized-line-height": {
+    "$value": "24px",
+    "$type": "lineHeight",
+    "$description": "Large emphasized label"
+  },
+  "--sprout-label-font-l-emphasized-font-size": {
+    "$value": "20px",
+    "$type": "dimension",
+    "$description": "Large emphasized label"
+  },
+  "--sprout-label-font-l-emphasized-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Large emphasized label"
+  },
+  "--sprout-label-font-l-emphasized-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Large emphasized label"
+  },
+  "--sprout-label-font-l-emphasized-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Large emphasized label"
+  },
+  "--sprout-label-font-l-emphasized-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Large emphasized label"
+  },
+  "--sprout-label-font-l-emphasized-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Large emphasized label"
+  },
+  "--sprout-common-border-default": {
+    "$value": "1px solid rgb(0% 0% 0% / 0.15)",
+    "$type": "border",
+    "$description": "Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active."
+  },
+  "--sprout-common-border-weak": {
+    "$value": "1px solid rgb(0% 0% 0% / 0.1)",
+    "$type": "border",
+    "$description": "Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced."
+  },
+  "--sprout-common-border-moderate": {
+    "$value": "1px solid rgb(0% 0% 0% / 0.43)",
+    "$type": "border",
+    "$description": "Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds."
+  },
+  "--sprout-common-border-strong": {
+    "$value": "1px solid rgb(0% 0% 0% / 0.6)",
+    "$type": "border",
+    "$description": "Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls)."
+  },
+  "--sprout-common-border-extra-strong": {
+    "$value": "1px solid rgb(0% 0% 0% / 0.75)",
+    "$type": "border",
+    "$description": "High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs."
+  },
+  "--sprout-common-divider-default": {
+    "$value": "1px solid rgb(0% 0% 0% / 0.08)",
+    "$type": "border",
+    "$description": "Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts."
+  },
+  "--sprout-common-divider-subtle": {
+    "$value": "1px dashed rgb(0% 0% 0% / 0.08)",
+    "$type": "border",
+    "$description": "Compound token for subtle divider style"
+  },
+  "--sprout-common-divider-subtle-weak": {
+    "$value": "1px dashed rgb(0% 0% 0% / 0.04)",
+    "$type": "border",
+    "$description": "Compound token for a very subtle divider style"
+  },
+  "--sprout-common-divider-weak": {
+    "$value": "1px solid rgb(0% 0% 0% / 0.04)",
+    "$type": "border",
+    "$description": "Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting."
+  },
+  "--sprout-common-divider-moderate": {
+    "$value": "1px solid rgb(0% 0% 0% / 0.08)",
+    "$type": "border",
+    "$description": "Compound token for moderate border style"
+  },
+  "--sprout-common-divider-strong": {
+    "$value": "1px solid rgb(0% 0% 0% / 0.2)",
+    "$type": "border",
+    "$description": "Compound token for strong border style"
+  },
+  "--sprout-common-divider-extra-strong": {
+    "$value": "2px solid rgb(0% 0% 0% / 0.43)",
+    "$type": "border",
+    "$description": "Maximum emphasis divider for critical or high-contrast requirements."
+  },
+  "--sprout-inverse-border-default": {
+    "$value": "1px solid #ffffff",
+    "$type": "border",
+    "$description": "Compound token for default inverse border"
+  },
+  "--sprout-inverse-border-weak": {
+    "$value": "1px solid rgb(100% 100% 100% / 0.3)",
+    "$type": "border",
+    "$description": "Compound token for inverse weak border"
+  },
+  "--sprout-focus-border-default": {
+    "$value": "2px solid #005db9",
+    "$type": "border"
+  },
+  "--sprout-script-font-m": {
+    "$value": "400 16px/150% Source Code Pro",
+    "$type": "typography",
+    "$description": "Medium default code"
+  },
+  "--sprout-script-font-s": {
+    "$value": "400 14px/150% Source Code Pro",
+    "$type": "typography",
+    "$description": "Small default code"
+  },
+  "--sprout-script-font-m-emphasized": {
+    "$value": "600 16px/150% Source Code Pro",
+    "$type": "typography",
+    "$description": "Medium emphasized code"
+  },
+  "--sprout-script-font-s-emphasized": {
+    "$value": "600 14px/150% Source Code Pro",
+    "$type": "typography",
+    "$description": "Small emphasized code"
+  },
+  "--sprout-selected-border-default": {
+    "$value": "2px solid #00873d",
+    "$type": "border",
+    "$description": "Border for selected items"
+  },
+  "--sprout-data-font-tabular-m": {
+    "$value": "400 16px/150% Source Code Pro",
+    "$type": "typography",
+    "$description": "Medium default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s": {
+    "$value": "400 14px/150% Source Code Pro",
+    "$type": "typography",
+    "$description": "Small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs": {
+    "$value": "400 12px/150% Source Code Pro",
+    "$type": "typography",
+    "$description": "Extra small default font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-m-emphasized": {
+    "$value": "600 16px/150% Source Code Pro",
+    "$type": "typography",
+    "$description": "Medium emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-s-emphasized": {
+    "$value": "600 14px/150% Source Code Pro",
+    "$type": "typography",
+    "$description": "Small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-data-font-tabular-xs-emphasized": {
+    "$value": "600 12px/150% Source Code Pro",
+    "$type": "typography",
+    "$description": "Extra small emphasized font for right-aligned tabular data"
+  },
+  "--sprout-placeholder-border-default": {
+    "$value": "1px dashed rgb(0% 0% 0% / 0.43)",
+    "$type": "border",
+    "$description": "Border for placeholder elements such as dropzones."
+  },
+  "--sprout-heading-font-xs": {
+    "$value": "600 12px/130% Source Sans Pro",
+    "$type": "typography",
+    "$description": "Extra small heading"
+  },
+  "--sprout-heading-font-s": {
+    "$value": "600 16px/130% Source Sans Pro",
+    "$type": "typography",
+    "$description": "Small heading"
+  },
+  "--sprout-heading-font-m": {
+    "$value": "600 20px/130% Source Sans Pro",
+    "$type": "typography",
+    "$description": "Medium heading"
+  },
+  "--sprout-heading-font-l": {
+    "$value": "600 24px/130% Source Sans Pro",
+    "$type": "typography",
+    "$description": "Large heading"
+  },
+  "--sprout-heading-font-xl": {
+    "$value": "600 32px/130% Source Sans Pro",
+    "$type": "typography",
+    "$description": "XL heading"
+  },
+  "--sprout-heading-font-xxl": {
+    "$value": "600 40px/130% Source Sans Pro",
+    "$type": "typography",
+    "$description": "XXL heading"
+  },
+  "--sprout-body-font-xs": {
+    "$value": "400 12px/150% Source Sans Pro",
+    "$type": "typography",
+    "$description": "Extra small body text"
+  },
+  "--sprout-body-font-s": {
+    "$value": "400 14px/150% Source Sans Pro",
+    "$type": "typography",
+    "$description": "Small body text"
+  },
+  "--sprout-body-font-m": {
+    "$value": "400 16px/150% Source Sans Pro",
+    "$type": "typography",
+    "$description": "Medium body text"
+  },
+  "--sprout-body-font-l": {
+    "$value": "400 20px/150% Source Sans Pro",
+    "$type": "typography",
+    "$description": "Large body text"
+  },
+  "--sprout-body-font-xl": {
+    "$value": "400 24px/150% Source Sans Pro",
+    "$type": "typography",
+    "$description": "XL body text"
+  },
+  "--sprout-body-font-xxl": {
+    "$value": "400 28px/150% Source Sans Pro",
+    "$type": "typography",
+    "$description": "XXL body text"
+  },
+  "--sprout-label-font-xs": {
+    "$value": "400 12px/16px Source Sans Pro",
+    "$type": "typography",
+    "$description": "Extra small default label"
+  },
+  "--sprout-label-font-xs-emphasized": {
+    "$value": "600 12px/16px Source Sans Pro",
+    "$type": "typography",
+    "$description": "Extra small emphasized label"
+  },
+  "--sprout-label-font-s": {
+    "$value": "400 14px/16px Source Sans Pro",
+    "$type": "typography",
+    "$description": "Small default label"
+  },
+  "--sprout-label-font-s-emphasized": {
+    "$value": "600 14px/16px Source Sans Pro",
+    "$type": "typography",
+    "$description": "Small emphasized label"
+  },
+  "--sprout-label-font-m": {
+    "$value": "400 16px/20px Source Sans Pro",
+    "$type": "typography",
+    "$description": "Medium default label"
+  },
+  "--sprout-label-font-m-emphasized": {
+    "$value": "600 16px/20px Source Sans Pro",
+    "$type": "typography",
+    "$description": "Medium emphasized label"
+  },
+  "--sprout-label-font-l": {
+    "$value": "400 20px/24px Source Sans Pro",
+    "$type": "typography",
+    "$description": "Large default label"
+  },
+  "--sprout-label-font-l-emphasized": {
+    "$value": "600 20px/24px Source Sans Pro",
+    "$type": "typography",
+    "$description": "Large emphasized label"
+  }
+}

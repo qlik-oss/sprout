@@ -1,0 +1,62 @@
+/**
+ * https://www.figma.com/file/HmokLgpDo4ogI5l5hpNApf/Sprout-Core-Components?type=design&node-id=6586-47016&mode=design&t=VANxYdwF4hUzJj6n-4
+ * FIXME: need tokens
+ */
+
+.container > .background {
+  stroke: var(--sprout-common-border-weak-color);
+  stroke-dasharray: 47;
+  stroke-dashoffset: 0;
+  stroke-width: var(--sprout-focus-border-default-width);
+}
+
+.container > .progress {
+  stroke: var(--sprout-brand-primary-color-default);
+  stroke-dasharray: 47;
+  stroke-dashoffset: 0;
+  stroke-width: var(--sprout-focus-border-default-width);
+}
+
+.container[data-variant="destructive"] > .progress {
+  stroke: var(--sprout-danger-color-default);
+}
+
+.container[data-animate="true"] > .progress {
+  animation: progress-circular-animation 1.3s ease-in-out infinite;
+
+  /* 20 is the radius of the circle */
+  stroke-dasharray: calc(pi * 20 * 2 / 10);
+  stroke-dashoffset: -35;
+}
+
+@keyframes progress-circular-animation {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+.container[data-size="s"] {
+  inline-size: var(--sprout-common-sizing-l);
+  block-size: var(--sprout-common-sizing-l);
+}
+
+.container[data-size="m"] {
+  inline-size: var(--sprout-common-sizing-xl);
+  block-size: var(--sprout-common-sizing-xl);
+}
+
+.container[data-size="l"] {
+  inline-size: var(--sprout-common-sizing-3xl);
+  block-size: var(--sprout-common-sizing-3xl);
+}

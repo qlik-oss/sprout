@@ -1,0 +1,68 @@
+/* https://www.a11yproject.com/posts/how-to-hide-content/#:~:text=The%20aria%2Dhidden%3D%22true,icons%20that%20accompany%20text%20labels. */
+/* stylelint-disable sprout/no-hardcoded-values */
+
+.contents {
+  display: contents;
+}
+
+.hidden {
+  display: none;
+}
+
+.sr_only,
+.sr-only {
+  border: 0;
+  clip-path: inset(50%);
+  block-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  inline-size: 1px;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline_block,
+.inline-block {
+  display: inline-block;
+}
+
+.inline_flex,
+.inline-flex {
+  display: inline-flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.inline_grid,
+.inline-grid {
+  display: inline-grid;
+}
+
+.flex {
+  /* reset */
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  /* good defaults */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.flex_noreset,
+.flex-noreset {
+  display: flex;
+}

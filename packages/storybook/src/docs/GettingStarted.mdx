@@ -1,0 +1,103 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Docs/Getting Started" />
+
+# Getting Started
+
+Welcome to the Sprout design system! This is the implementation of the Sprout design system built on top of React. To get started, ensure you have a React application set up and running. Once your React app is ready, you can add the following dependencies:
+
+```bash
+pnpm i @qlik/sprout-css-react
+```
+
+After installing the dependencies, you can test if everything works by adding the following snippet to your `App.tsx` file:
+
+```tsx
+import {
+  Button,
+  ThemeProvider,
+  classNames,
+} from "@qlik/sprout-css-react";
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <ThemeProvider asDiv>
+      <h1 className={className("m_o", "p_0", "text_default", "font_heading_m")}>
+        Vite + React
+      </h1>
+      <div className={className("flex", "col", "gap_xs")}>
+        <Button
+          variant="primary"
+          onClick={() => setCount((count) => count + 1)}
+          label={`Count is ${count}`}
+        />
+        <p className={className("text_default", "font_body_m")}>
+          Edit <code>src/App.tsx</code> and save to test HMR.
+        </p>
+      </div>
+    </ThemeProvider>
+  );
+}
+```
+
+## ThemeProvider
+
+The `ThemeProvider` is responsible for creating the necessary data attributes on top of HTML elements and provide useful information to all the components. However, it does not distribute tokens — that remains the responsibility of the application.
+
+This component is optional but highly useful in the following scenarios:
+
+- When using React components that rely on [portals](https://react.dev/reference/react-dom/createPortal).
+- When building a React application.
+- When setting up a Storybook instance (though we recommend using `@qlik/sprout-css-storybook` for this purpose).
+
+### API Highlights
+
+- **`asDiv`**: This property allows you to create a `div` element and apply the necessary data attributes to it.
+- **`onLoad`**: This callback provides the attributes, enabling you to add them wherever needed using the native DOM API.
+
+### Using ThemeProvider with Portals
+
+If your application uses [portals](https://react.dev/reference/react-dom/createPortal) and tokens are embedded by the app but not on the root element of the page, you must use the `ThemeProvider` to apply the tokens to the portal. The `ThemeProvider` relies on React context to access the current theme, just like any other React provider.
+
+Here’s an example:
+
+```tsx
+import { type ReactNode } from "react";
+
+import { ThemeProvider } from "@qlik/sprout-css-react";
+
+const MyCustomElement = ({ children }: { children: ReactNode }) => {
+  return createPortal(
+    <ThemeProvider className="custom-class" id="theme-provider">
+      {children}
+    </ThemeProvider>,
+    document.body,
+  );
+};
+```
+
+## Storybook Setup
+
+Setting up Sprout CSS in Storybook is straightforward. You can use the `@qlik/sprout-css-storybook` package to simplify the process.
+
+```jsx
+import {
+  getSproutGlobalTypes,
+  sproutCSSDecorator,
+} from "@qlik/sprout-css-storybook";
+
+export default {
+  // Automatically wraps your stories with the ThemeProvider
+  decorators: [sproutCSSDecorator],
+  globalTypes: {
+    // Enable appearance control via the default Storybook addon
+    ...getSproutGlobalTypes({ appearance: false }),
+  },
+};
+```
+
+### Final Notes
+
+Sprout CSS is designed to make your development experience smoother while ensuring a consistent and polished design system. If you encounter any issues or have suggestions, feel free to reach out or contribute to the project. Happy coding!

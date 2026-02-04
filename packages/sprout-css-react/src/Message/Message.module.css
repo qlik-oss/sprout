@@ -1,0 +1,33 @@
+.container,
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 0 var(--sprout-common-spacing-xl);
+  gap: var(--sprout-common-spacing-xl);
+  max-inline-size: var(--sprout-container-sizing-s);
+}
+
+.content {
+  gap: var(--sprout-common-spacing-m);
+}
+
+.title {
+  font: var(--sprout-label-font-m-emphasized);
+  text-align: center;
+}
+
+.message {
+  font: var(--sprout-body-font-s);
+  text-align: center;
+}
+
+.title,
+.message {
+  color: var(--sprout-common-foreground-color-default);
+  margin: 0;
+}

@@ -1,0 +1,59 @@
+/* We lack of tokens here */
+
+.skeleton {
+  display: block;
+  block-size: var(--sprout-common-sizing-l);
+  inline-size: var(--sprout-common-sizing-l);
+  background: var(--sprout-overlay-background-color-inverse);
+  animation: sprout-light-keyframes-blink 1.5s cubic-bezier(0.7, 0, 1, 1)
+    infinite;
+  border-radius: var(--sprout-common-border-radius-subtle);
+  cursor: wait;
+}
+
+@keyframes sprout-light-keyframes-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.skeleton[data-variant="text"] {
+  display: inline-block;
+  /* stylelint-disable-next-line sprout/no-hardcoded-values */
+  inline-size: 142px;
+  block-size: var(--sprout-common-spacing-xl);
+}
+
+.skeleton[data-variant="circle"] {
+  border-radius: var(--sprout-common-border-radius-round);
+  inline-size: var(--sprout-common-sizing-4xl);
+  block-size: var(--sprout-common-sizing-4xl);
+}
+
+.skeleton[data-variant="rectangle"] {
+  /* stylelint-disable-next-line sprout/no-hardcoded-values */
+  inline-size: 190px;
+  /* stylelint-disable-next-line sprout/no-hardcoded-values */
+  block-size: 120px;
+}
+
+.skeleton[data-variant="Button"] {
+  inline-size: var(--sprout-common-sizing-7xl);
+  block-size: var(--sprout-common-sizing-3xl);
+}
+
+.skeleton[data-variant="IconButton"] {
+  inline-size: var(--sprout-common-sizing-3xl);
+  block-size: var(--sprout-common-sizing-3xl);
+}
+
+.skeleton[data-variant="Input"] {
+  inline-size: var(--sprout-container-sizing-xxs);
+  block-size: var(--sprout-common-sizing-3xl);
+  border-radius: var(--sprout-common-border-radius-subtle);
+}

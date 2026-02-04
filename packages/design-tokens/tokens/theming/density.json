@@ -1,0 +1,80 @@
+{
+  "theming": {
+    "common": {
+      "spacing": {
+        "xs": {
+          "$type": "spacing",
+          "$value": "{qlik.density.xs}",
+          "$description": "XS spacing"
+        },
+        "s": {
+          "$type": "spacing",
+          "$value": "{qlik.density.s}",
+          "$description": "S spacing"
+        },
+        "m": {
+          "$type": "spacing",
+          "$value": "{qlik.density.m}",
+          "$description": "M spacing. Default grid unit"
+        },
+        "l": {
+          "$type": "spacing",
+          "$value": "{qlik.density.l}",
+          "$description": "L spacing"
+        },
+        "xl": {
+          "$type": "spacing",
+          "$value": "{qlik.density.xl}",
+          "$description": "XL spacing"
+        },
+        "xxl": {
+          "$type": "spacing",
+          "$value": "{qlik.density.xxl}",
+          "$description": "XXL spacing"
+        },
+        "3xl": {
+          "$type": "spacing",
+          "$value": "{qlik.density.3xl}",
+          "$description": "3XL spacing"
+        }
+      },
+      "density": {
+        "xs": {
+          "$type": "spacing",
+          "$value": "{qlik.density.xs}",
+          "$description": "Extra small density"
+        },
+        "s": {
+          "$type": "spacing",
+          "$value": "{qlik.density.s}",
+          "$description": "S density"
+        },
+        "m": {
+          "$type": "spacing",
+          "$value": "{qlik.density.m}",
+          "$description": "M density"
+        },
+        "l": {
+          "$type": "spacing",
+          "$value": "{qlik.density.l}",
+          "$description": "L density"
+        },
+        "xl": {
+          "$type": "spacing",
+          "$value": "{qlik.density.xl}",
+          "$description": "XL density"
+        },
+        "xxl": {
+          "$type": "spacing",
+          "$value": "{qlik.density.xxl}",
+          "$description": "XLL density"
+        },
+        "3xl": {
+          "$type": "spacing",
+          "$value": "{qlik.density.3xl}",
+          "$description": "3XL density"
+        }
+      }
+    }
+  }
+}

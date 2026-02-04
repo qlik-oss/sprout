@@ -1,0 +1,69 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Checkbox.stories";
+
+<Meta title="Components/Checkbox" />
+
+# Checkbox
+
+Checkboxes are form elements that allows a user to select one or multiple options from a list. Checkboxes can also be used to turn on and off controls in an interface.
+
+## Usage
+
+```jsx
+import { Checkbox, CheckboxGroup } from "@qlik/sprout-css-react";
+
+<Checkbox
+  name="myfield"
+  label="Label"
+  helpText="help me"
+  checked
+  disabled
+  onChange={() => {}}
+/>;
+
+<CheckboxGroup label="Select options">
+  <Checkbox name="option1" label="Option 1" />
+  <Checkbox name="option2" label="Option 2" checked />
+  <Checkbox name="option3" label="Option 3" disabled />
+</CheckboxGroup>;
+
+<CheckboxGroup
+  label="Select options"
+  options={[
+    { name: "option1", label: "Option 1" },
+    { name: "option2", label: "Option 2", checked: true },
+    { name: "option3", label: "Option 3", disabled: true },
+  ]}
+/>;
+```
+
+## Properties
+
+The Checkbox directly inherits properties from [HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox), excluding `value`, `type`, and `prefix`.
+
+### Checkbox
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+### CheckboxGroup
+
+<Canvas of={Stories.Group} />
+<Controls of={Stories.Group} />
+
+## Accessibility
+
+[W3/WAI/ARIA/APG Checkbox](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/)
+
+HTML Structure
+
+The current component use a native `input` tag using the attribute type set to `checkbox`. It means we do not need aria attributes except for the tri-state to express the `mixed` value.
+
+- Checkbox has the [implicit role](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#technical_summary) `checkbox`.
+- Checkbox support all [accessible label](https://www.w3.org/WAI/tutorials/forms/labels/) using `label` props for example.
+- Checkbox when checked add the `checked` html attribute so it has the implicit corresponding state.
+
+Keyboard
+
+- `Space` change the focused checkbox state to checked if unchecked and vice versa.

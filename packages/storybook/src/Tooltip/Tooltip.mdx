@@ -1,0 +1,40 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Tooltip.stories";
+
+<Meta title="Components/Tooltip" />
+
+# Tooltip
+
+Tooltips are contextual helpers that show information about an element when being hovered or focused.
+
+## Usage
+
+```tsx
+import { Tooltip } from "@qlik/sprout-css-react";
+
+
+<Tooltip title="Tooltip content">
+  <button>Hover or focus me</button
+</Tooltip>
+```
+
+> Note: For performance reason we do not mount the content of the tooltip except if it has an explicit `id`.
+> That is due to accessiblity requirement, if there is an id, an other element may refer to it using `aria-labelledby`.
+
+## Properties
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+[W3/WAI/ARIA/APG Tooltip](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/)
+
+HTML structure
+
+- The element that serves as the tooltip container has role `tooltip`.
+
+Keyboard navigation
+
+- `Escape`: Dismisses the Tooltip.

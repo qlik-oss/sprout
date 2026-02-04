@@ -1,0 +1,130 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Accordion.stories";
+
+<Meta title="Components/Accordion" of={Stories} />
+
+# Accordion
+
+An accordion component in a design system enables content to be expanded or collapsed, helping organize information neatly and reducing visual clutter.
+
+## Table of Contents
+
+- [Usage](#usage)
+- [Properties](#properties)
+  - [Accordion.Container](#accordioncontainer)
+  - [Accordion.Item](#accordionitem)
+- [Variant quiet](#variant-quiet)
+- [Accordion.Item Width](#accordionitem-width)
+  - [width="full"](#widthfull-is-the-default)
+  - [width="compact"](#widthcompact)
+- [With affix](#with-affix)
+  - [Interactive Menu Example](#interactive-menu-example)
+- [Accessibility](#accessibility)
+
+---
+
+## Usage
+
+The container controls the props around opened. The only exception is openedDefault with behavior="isolated"
+
+```jsx
+import { Accordion } from "@qlik/sprout-css-react";
+
+<Accordion.Container
+  variant="default"
+  renderContent
+  openedDefault={0}
+  behavior="linked"
+>
+  <Accordion.Item header="first panel" description="" value="value">
+    <p>Content</p>
+  </Accordion.Item>
+</Accordion.Container>;
+```
+
+## Properties
+
+### Accordion.Container
+
+<Canvas of={Stories.ContainerPlayground} />
+<Controls of={Stories.ContainerPlayground} />
+
+### Accordion.Item
+
+<Canvas of={Stories.ItemPlayground} />
+<Controls of={Stories.ItemPlayground} />
+
+## Variant quiet
+
+For a more subtle look, use the quiet style. Remember to leave room for outer spacing/parent padding.
+It will apply the rounded corners style at the same time
+
+```jsx
+<Accordion.Container variant="quiet">
+  <Accordion.Item header="So you don t repeat here">
+    <p>Content</p>
+  </Accordion.Item>
+</Accordion.Container>
+```
+
+Or at the Accordion.Item level it can does the same in case it used outside of the container.
+
+```jsx
+<Accordion.Item header="Click me" variant="quiet">
+  <p>Content</p>
+</Accordion.Item>
+```
+
+## Accordion.Item Width
+
+### width="full" (is the default)
+
+With accordion headers that span the full width on the container.
+
+```jsx
+<Accordion.Item header="Full width panel">
+  <p>Content</p>
+</Accordion.Item>
+```
+
+### width="compact"
+
+Accordion headers with variable width based on label, suitable for isolated instances of a single accordion item.
+
+```jsx
+<Accordion.Item header="Full width panel" width="compact">
+  <p>Content</p>
+</Accordion.Item>
+```
+
+## With affix
+
+The `affix` prop allows you to add custom content (like action buttons or menus) to the right side of the accordion header.
+
+### Interactive Menu Example
+
+You can add interactive elements like menus to provide additional actions for each accordion item:
+
+<Canvas of={Stories.WithAffix} />
+
+## Accessibility
+
+[W3/WAI/ARIA/APG Accordion](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/)
+
+- AccordionHeader use a `button` to trigger the visibility of the content
+- use semantic header if needed (h2 ... h6) using the `level` props
+- AccordionHeader use `aria-expanded`
+- AccordionHeader use `aria-controls` with a generated section id (fallback on provided id)
+- AccordionItem content use `aria-labelledby` to refer to the header
+- AccordionItem content set the role `region`
+
+Keyboard interaction
+
+- `Enter` or `Space`: When focus is on the accordion header for a collapsed panel, expands the associated panel. If the implementation allows only one panel to be expanded, and if another panel is expanded, collapses that panel.
+  When focus is on the accordion header for an expanded panel, collapses the panel if the implementation supports collapsing. Some implementations require one panel to be expanded at all times and allow only one panel to be expanded; so, they do not support a collapse function. -`Tab`: Moves focus to the next focusable element; all focusable elements in the accordion are included in the page Tab sequence.
+- `Shift + Tab`: Moves focus to the previous focusable element; all focusable elements in the accordion are included in the page Tab sequence.
+- `ArrowDown`: If focus is on an accordion header, moves focus to the next accordion header. If focus is on the last accordion header, either does nothing or moves focus to the first accordion header.
+- `ArrowUp`: If focus is on an accordion header, moves focus to the previous accordion header. If focus is on the first accordion header, either does nothing or moves focus to the last accordion header.
+- `Home`: When focus is on an accordion header, moves focus to the first accordion header.
+- `End`: When focus is on an accordion header, moves focus to the last accordion header.

@@ -1,0 +1,22 @@
+.input {
+  padding: calc(
+    var(--sprout-common-spacing-m) - var(--sprout-common-border-moderate-width)
+  );
+}
+
+.input.small {
+  padding: calc(
+      var(--sprout-common-spacing-s) -
+        var(--sprout-common-border-moderate-width)
+    )
+    calc(
+      var(--sprout-common-spacing-m) -
+        var(--sprout-common-border-moderate-width)
+    );
+  gap: var(--sprout-common-spacing-s);
+}
+
+.input[data-selected-value-display="label"]:has([data-part="description"])
+  [data-part="description"] {
+  display: none;
+}

@@ -1,0 +1,8 @@
+.nav_compact {
+  max-inline-size: var(--sprout-container-sizing-xxs);
+  gap: var(--sprout-common-spacing-l);
+}
+
+.item_compact {
+  max-inline-size: var(--sprout-container-sizing-xxs);
+}

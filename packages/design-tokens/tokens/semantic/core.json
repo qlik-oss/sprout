@@ -1,0 +1,55 @@
+{
+  "sprout": {
+    "container": {
+      "breakpoint": {
+        "s": {
+          "$type": "sizing",
+          "$value": "640px",
+          "$description": "Viewport width breakpoint token for small layouts"
+        },
+        "m": {
+          "$type": "sizing",
+          "$value": "1024px",
+          "$description": "Viewport width breakpoint token for medium-wide layouts"
+        },
+        "l": {
+          "$type": "sizing",
+          "$value": "1600px",
+          "$description": "Viewport width breakpoint token for wide layouts"
+        }
+      },
+      "layer": {
+        "stacked": {
+          "$type": "other",
+          "$value": "1000",
+          "$description": "Use for stacked items. Must be dismissable."
+        },
+        "floating": {
+          "$type": "other",
+          "$value": "1100",
+          "$description": "Must be in a fixed position related to its container. All stacked and default content beneath it must be reachable through scroll/pan interactions or it must be dimissible."
+        },
+        "overlay": {
+          "$type": "other",
+          "$value": "1300",
+          "$description": "Must be related to a sub-task. Must be accompanied with a curtain."
+        },
+        "context": {
+          "$type": "other",
+          "$value": "1350",
+          "$description": "Must be triggered through right-click/long press. Must be dismissible through clicking outside the area."
+        },
+        "time-sensitive": {
+          "$type": "other",
+          "$value": "1400",
+          "$description": "Must be related to something that happened in the system at that exact moment that is useful for the user to know. Must be dismissible or time-based."
+        },
+        "cursor": {
+          "$type": "other",
+          "$value": "1500",
+          "$description": "Must be user-triggered and related to the cursors/pointers current position. Must be dismissible with escape key."
+        }
+      }
+    }
+  }
+}

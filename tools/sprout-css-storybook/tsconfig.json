@@ -1,0 +1,8 @@
+{
+  "extends": "@qlik/tsconfig/recommended.json",
+  "compilerOptions": {
+    "declaration": true,
+    "noEmit": false
+  },
+  "include": ["src"],
+}

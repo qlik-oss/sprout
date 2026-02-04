@@ -1,0 +1,37 @@
+{
+  "name": "@qlik/sprout-cli",
+  "version": "0.16.29",
+  "description": "CLI tools for Qlik Design System Sprout",
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "bin": {
+    "sprout": "./sprout-cli.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tokens-studio/sd-transforms": "^2.0.3",
+    "commander": "^14.0.2",
+    "style-dictionary": "^5.1.1"
+  },
+  "devDependencies": {
+    "@commander-js/extra-typings": "^14.0.0",
+    "@qlik/tsconfig": "^0.3.1",
+    "@types/node": "^25.0.3",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

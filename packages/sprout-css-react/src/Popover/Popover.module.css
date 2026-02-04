@@ -1,0 +1,22 @@
+.popover {
+  outline: none;
+  background-color: var(--sprout-common-background-color-default);
+  border-radius: var(--sprout-common-border-radius-subtle);
+  border: var(--sprout-common-border-moderate);
+  box-shadow: var(--sprout-common-elevation-moderate);
+  box-sizing: border-box;
+  color: var(--sprout-common-foreground-color-default);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sprout-common-spacing-m);
+  overflow: auto;
+}
+
+.popover .header h4 {
+  margin: 0;
+}
+
+.popover .header span {
+  color: var(--sprout-common-foreground-color-weak);
+}

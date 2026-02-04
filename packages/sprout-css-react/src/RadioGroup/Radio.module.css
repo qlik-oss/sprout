@@ -1,0 +1,117 @@
+.radio {
+  display: inline-flex;
+  gap: var(--sprout-common-spacing-m);
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.radio input[type="radio"] {
+  margin: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.box {
+  flex-shrink: 0;
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--sprout-common-sizing-xl);
+  block-size: var(--sprout-common-sizing-xl);
+  border: var(--sprout-common-border-moderate);
+  border-radius: var(--sprout-common-border-radius-round);
+  background: var(--sprout-input-background-color-default);
+}
+
+.box > [data-tick="checked"] {
+  opacity: 0;
+  color: var(--sprout-inverse-foreground-color-default);
+  inline-size: calc(var(--sprout-common-sizing-l) / 2);
+  block-size: calc(var(--sprout-common-sizing-l) / 2);
+  border: 0;
+}
+
+/* from now we update box and tick based on input state */
+
+.radio input[type="radio"]:focus-visible + .box {
+  outline: var(--sprout-focus-border-default);
+  border-color: transparent;
+  background-color: var(--sprout-focus-background-color-default);
+}
+
+.radio input[type="radio"]:checked + .box {
+  border: transparent;
+  background-color: var(--sprout-brand-primary-color-default);
+}
+
+.radio input[type="radio"]:checked + .box > [data-tick="checked"] {
+  opacity: 1;
+}
+
+.radio input[type="radio"]:disabled + .box,
+.radio input[type="radio"]:checked:disabled + .box {
+  border-color: transparent;
+  background-color: var(--sprout-brand-primary-color-disabled);
+}
+
+.radio.radio_readOnly input[type="radio"]:not(:checked) + .box,
+.radio.radio_readOnly input[type="radio"]:checked + .box {
+  background-color: var(--sprout-brand-primary-color-disabled);
+  opacity: 1;
+}
+
+.radio input[type="radio"]:not([disabled]):hover + .box {
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.radio input[type="radio"]:checked:focus-visible + .box {
+  outline-offset: var(--sprout-focus-border-default-width);
+}
+
+.radio input[type="radio"]:checked:not([disabled]):hover + .box,
+.radio input[type="radio"]:checked:not([disabled]):focus-visible + .box {
+  background-color: var(--sprout-brand-primary-color-hover);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.radio input[type="radio"]:disabled ~ label,
+.radio input[type="radio"]:checked:disabled ~ label {
+  color: var(--sprout-common-foreground-color-disabled);
+}
+
+.radio.radio_readOnly input[type="radio"]:disabled ~ label {
+  color: var(--sprout-common-foreground-color-default);
+}
+
+.radio.radio_readOnly
+  input[type="radio"]:not(:checked)
+  + .box
+  > [data-tick="checked"],
+.radio.radio_readOnly
+  input[type="radio"]:checked
+  + .box
+  > [data-tick="checked"] {
+  opacity: 0;
+}
+
+.radio.radio_readOnly
+  input[type="radio"]:checked
+  + .box
+  > [data-tick="checked"],
+.radio.radio_readOnly
+  input[type="radio"]:checked:not([disabled]):hover
+  + .box
+  > [data-tick="checked"],
+.radio.radio_readOnly
+  input[type="radio"]:checked:not([disabled]):active
+  + .box
+  > [data-tick="checked"] {
+  opacity: 1;
+}

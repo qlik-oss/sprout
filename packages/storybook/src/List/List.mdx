@@ -1,0 +1,58 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./List.stories";
+
+<Meta title="Components/List" of={Stories} />
+
+# List
+
+Lists are used to present elements in a vertical layout.
+
+```tsx
+import { List, ListDivider, ListItem } from "@qlik/sprout-css-react";
+
+<List gap="m" dense>
+  <ListItem selected>item 1</ListItem>
+  <ListItem>item 2</ListItem>
+  <ListDivider />
+  <ListItem onClick={() => {}}>interactive item 3</ListItem>
+  <ListItem>item 4</ListItem>
+</List>;
+```
+
+<Canvas of={Stories.Default} />
+<Controls of={Stories.Default} />
+
+## API
+
+- `hasPadding` can be used to let the content manage the padding. The props can be used once at the `List` level or on each `ListItem`.
+- `useGesture` is a boolean to active the 'List' Keyboard navigation. More details in the next Accessibility section.
+
+## Accessibility
+
+HTML structure
+
+- `List` is an HTML `ul` element.
+- `ListItem` is an HTML `li` element.
+- `ListDivider` is an HTML `li` element which contains a `Divider` with `role="separator"` attribute.
+
+Note on interactive `ListItem`: If it receives `onClick` event handler it becomes interactive.
+In this context to avoid composition issue, the `ListItem` doesn't receive the onClick. It adds a button children aside the provided children and use absolute position to make it visually be the list item.
+
+Keyboard Navigation
+
+Variant one: without `useGesture` property:
+
+- `Tab`: When focus moves into the first `ListItem` with onClick property.
+- `Tab`: When a `ListItem` has the focus, moves focus to the next `ListItem` element with onClick property.
+
+Variant two: with `useGesture` property:
+
+- `Tab`: When focus moves into the `List`, places focus on the selected `ListItem` element.
+- `Tab`: When the `List` contains the focus, moves focus to the next element in the page tab sequence outside the List.
+- When focus is on a `ListItem` element:
+  - `ArrowDown`: moves focus to the next `ListItem`. If focus is on the last, moves focus to the first.
+  - `ArrowUp`: moves focus to the previous `ListItem`. If focus is on the first, moves focus to the last.
+  - `Home`: Moves focus to the first `ListItem`.
+  - `End`: Moves focus to the last `ListItem`.
+  - `Space` or `Enter`: trigger the `onClick`. The list is controlled so the `selected` props must be updated.

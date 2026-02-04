@@ -1,0 +1,13 @@
+/* Limit the content height to 3 rows */
+.content_max_rows {
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* stylelint-disable-next-line property-no-deprecated */
+  -webkit-box-orient: block-axis;
+}
+
+.content_max_height {
+  max-block-size: calc(var(--sprout-label-font-s-line-height) * 4);
+  scrollbar-width: thin;
+}

@@ -1,0 +1,28 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Thumbnail.stories";
+
+<Meta title="Components/Thumbnail" of={Stories} />
+
+# Thumbnail
+
+Thumbnails represent an artifact in the system. There are two types, `type="img"` which expects an html image element as child, and `type="icon"` which expects an svg icon.
+
+```tsx
+import { Thumbnail } from "@qlik/sprout-css-react";
+import PersonIcon from "@qlik/sprout-icons/react/Person";
+
+<Thumbnail size="xl" type="icon">
+    <PersonIcon />
+</Thumbnail>
+
+<Thumbnail size="xl" type="img">
+    <img src={src} alt="avatar" />
+</Thumbnail>
+```
+
+<Canvas of={Stories.Playground} />
+
+## Properties
+
+<Controls of={Stories.Playground} />

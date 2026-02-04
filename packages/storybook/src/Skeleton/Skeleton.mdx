@@ -1,0 +1,92 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Skeleton.stories";
+
+<Meta title="Components/Skeleton" of={Stories} />
+
+# Skeleton
+
+Skeletons are used when loading a screen. It provides a visual cue of what is loading.
+
+```tsx
+import { Skeleton, type SkeletonProps } from "@qlik/sprout-css-react";
+
+<Skeleton variant="text" />
+<Skeleton variant="circle" />
+<Skeleton variant="rectangle" />
+<Skeleton variant="Button" />
+<Skeleton variant="IconButton" />
+<Skeleton variant="Input" />
+<Skeleton variant="InputField" />
+```
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## Layout
+
+Most of the time you will have to build your own layout by using div with [sprout-css-modules](/?path=/docs/css-sprout-css-modules--docs).
+
+Here is random example of a layout with skeletons.
+
+```tsx
+<div
+  className={sprout.classNames(
+    "flex",
+    "row",
+    "border_box",
+    "gap_0",
+    "w_full",
+    "h_full",
+  )}
+>
+  <div
+    className={sprout.classNames(
+      "flex",
+      "col",
+      "p_s",
+      "gap_m",
+      "bg_weak",
+      "w_s",
+      "h_full",
+    )}
+  >
+    <Skeleton variant="rectangle" height="40px" width="100%" />
+    <Skeleton variant="rectangle" height="40px" width="100%" />
+    <Skeleton variant="rectangle" height="40px" width="100%" />
+    <Skeleton variant="rectangle" height="40px" width="100%" />
+  </div>
+  <div
+    className={sprout.classNames("flex", "col", "gap_m", "w_full", "h_full")}
+  >
+    <div
+      className={sprout.classNames(
+        "flex",
+        "col",
+        "p_s",
+        "gap_m",
+        "w_full",
+        "h_fit",
+        "bg_weak",
+      )}
+    >
+      <Skeleton variant="rectangle" height="40px" />
+      <Skeleton variant="rectangle" height="20px" width="50%" />
+    </div>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "col",
+        "p_xl",
+        "gap_m",
+        "w_full",
+        "h_full",
+      )}
+    >
+      <Skeleton variant="InputField" />
+      <Skeleton variant="InputField" />
+      <Skeleton variant="InputField" />
+    </div>
+  </div>
+</div>
+```

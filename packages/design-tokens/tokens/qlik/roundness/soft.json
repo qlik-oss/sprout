@@ -1,0 +1,22 @@
+{
+  "qlik": {
+    "roundness": {
+      "pill": {
+        "$type": "borderRadius",
+        "$value": "4px"
+      },
+      "s": {
+        "$type": "borderRadius",
+        "$value": "4px"
+      },
+      "m": {
+        "$type": "borderRadius",
+        "$value": "8px"
+      },
+      "l": {
+        "$type": "borderRadius",
+        "$value": "16px"
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.tablist {
+  border-block-end: var(--sprout-selected-border-default-width)
+    var(--sprout-common-border-default-style) transparent;
+}
+
+.tablist.show_track {
+  border-block-end-color: var(--sprout-common-border-weak-color);
+}
+
+.tabpanel {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.tabpanel__hidden {
+  display: none;
+}
+
+.tab {
+  cursor: pointer;
+  background: transparent;
+  color: var(--sprout-common-foreground-color-default);
+
+  --private-transition: 200ms;
+  --private-transform-init: translateY(100%) translateX(-100%);
+  --private-transform-active: translateY(100%) translateX(0);
+
+  block-size: calc(
+    var(--sprout-common-sizing-4xl) -
+      var(--sprout-selected-border-default-width)
+  );
+  position: relative;
+  text-decoration: none;
+  border: 0;
+  margin: 0;
+}
+
+.tab:disabled {
+  cursor: not-allowed;
+  color: var(--sprout-common-foreground-color-disabled);
+}
+
+.tab_small {
+  block-size: calc(
+    var(--sprout-common-sizing-3xl) -
+      var(--sprout-selected-border-default-width)
+  );
+}
+
+.tab:focus {
+  outline: none;
+}
+
+.tab:focus-visible {
+  outline: var(--sprout-focus-border-default);
+}
+
+.tab__label {
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  text-overflow: ellipsis;
+  min-inline-size: 0;
+  overflow: hidden;
+  text-align: start;
+  white-space: nowrap;
+}
+
+.track {
+  position: relative;
+}
+
+.container {
+  block-size: inherit;
+}
+
+.tracker {
+  position: absolute;
+  inset-block-end: calc(0px - var(--sprout-selected-border-default-width));
+  inset-inline-start: calc(100vw * -2);
+  background: var(--sprout-selected-border-default-color);
+  transition: inset-inline-start 200ms;
+  block-size: var(--sprout-selected-border-default-width);
+  z-index: 1;
+}
+
+.inner {
+  position: relative;
+}
+
+.inner > svg {
+  inline-size: var(--sprout-common-sizing-xl);
+  block-size: var(--sprout-common-sizing-xl);
+}
+
+.tab_small .inner > svg {
+  inline-size: var(--sprout-common-sizing-l);
+  block-size: var(--sprout-common-sizing-l);
+}
+
+.tab:not(:disabled, [aria-selected="true"]):hover::after {
+  opacity: 1;
+  content: "";
+  position: absolute;
+  inset-block-end: calc(var(--sprout-selected-border-default-width) * -1);
+  inset-inline-start: 0;
+  inline-size: 100%;
+  border-block-end: var(--sprout-selected-border-default-width)
+    var(--sprout-common-border-default-style)
+    var(--sprout-common-border-moderate-color);
+}

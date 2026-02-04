@@ -1,0 +1,33 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Divider.stories";
+
+<Meta title="Components/Divider" of={Stories} />
+
+# Divider
+
+A divider serves as a visual separator between elements.
+
+## Usage
+
+```jsx
+import { Divider, type DividerProps } from "@qlik/sprout-css-react";
+
+<Divider orientation="horizontal" />
+<Divider orientation="vertical" />
+```
+
+## Properties
+
+The Divider directly inherits properties from [HTML Thematic Break element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/hr).
+
+<Canvas of={Stories.Horizontal} />
+<Controls of={Stories.Horizontal} />
+
+<Canvas of={Stories.Vertical} />
+<Controls of={Stories.Vertical} />
+
+## Accessibility
+
+The implementation uses the `hr` HTML tag so it has the [implicit role](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr#technical_summary) `separator`.
+It uses the `aria-orientation` attribute to specify the orientation of the separator.

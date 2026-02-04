@@ -1,0 +1,154 @@
+{
+  "alertbanner.dismiss": {
+    "value": "Dismiss",
+    "comment": "AlertBanner component can have a dissmiss button to close it. This string is displayed in a tooltip when hovering over the dismiss button."
+  },
+  "alertinline.dismiss": {
+    "value": "Dismiss",
+    "comment": "AlertInline component can have a dissmiss button to close it. This string is displayed in a tooltip when hovering over the dismiss button."
+  },
+  "alertmodal.label.details": {
+    "value": "Details",
+    "comment": "Label for a button in the AlertModal component which trigger the display of more information for the user."
+  },
+  "avatar.label.alt": {
+    "value": "Avatar",
+    "comment": "Is read by screen reader. This is used as alt property of the Avatar image."
+  },
+  "dialog.actions.close": {
+    "value": "Cancel",
+    "comment": "Appear at the bottom of some dialog/modals in the bottom right. This is a default actions provided to the user to close the dialog/modal."
+  },
+  "dialog.header.back": {
+    "value": "Go back",
+    "comment": "Appear in an icon button of dialog/modal in the upper left corner to go back to the previous step."
+  },
+  "dialog.header.close": {
+    "value": "Close",
+    "comment": "Appear in a tooltip of dialog/modal in the upper right corner to close it"
+  },
+  "fieldlabel.optional": {
+    "value": "optional",
+    "comment": "Appear after the label of a field inside parentheses to indicate that the field is optional."
+  },
+  "inline-edit.cancel": {
+    "value": "Cancel",
+    "comment": "Text for screen reader in the inline edit component to cancel the change that has been done and closing the edition mode."
+  },
+  "inline-edit.save": {
+    "value": "Save",
+    "comment": "Text for screen reader in the inline edit component to save the change that has been done and closing the edition mode."
+  },
+  "input.clear": {
+    "value": "Clear",
+    "comment": "Appear in input field when the clear action is available. It is displayed in a tooltip when hovering over the clear button."
+  },
+  "menu.secondaryaction.label": {
+    "value": "Opens in a new tab",
+    "comment": "Label for an icon button used as a secondary action in a menu item to open the link in a new browser tab."
+  },
+  "progress.circular.loading": {
+    "value": "Loading",
+    "comment": "Is read by screen reader. This is used as aria-label property of the visual circular progress to indicate this is a loading state."
+  },
+  "panel.action.resize": {
+    "value": "Resize panel",
+    "comment": "Appear in a tooltip of panel in the upper right corner to resize it"
+  },
+  "select.comboboxeditable.clear": {
+    "value": "Clear",
+    "comment": "Appear in MultiSelect when there is more than one option selected. This action removes all selected tags. It is displayed in a tooltip when hovering over the clear button."
+  },
+  "select.createoption.label": {
+    "value": "Create",
+    "comment": "Appear at the end of every option that match the filter to propose to the user to create a new option in the list. The string is concatenated to the typed value by the user to create the corresponding sentence: Create ${typedinput}"
+  },
+  "select.dropdown.search.placeholder": {
+    "value": "Search",
+    "comment": "Placeholder text in the search input field that is displayed in Select dropdown component."
+  },
+  "select.dropdown.no-results.message": {
+    "value": "No results found",
+    "comment": "Message displayed when no option match the current filter in Select dropdown component."
+  },
+  "table.column.visilibty-form.search.aria-label": {
+    "value": "Search columns",
+    "comment": "Label used by screen readers in the Table component under the column manage actions."
+  },
+  "table.column.visilibty-form.search.placeholder": {
+    "value": "Search columns…",
+    "comment": "Placeholder text in the search input field in the Table component under the column manage actions."
+  },
+  "table.column.visibility-form.selectall.label": {
+    "value": "Select all",
+    "comment": "Label displayed in visibility-form to let the user express he wants to see all columns."
+  },
+  "table.header.select-all.aria-label": {
+    "value": "Select all",
+    "comment": "Aria Label used by screen reader on top of a checkbox input to let the user select all the rows inside the table."
+  },
+  "table.header.select-radio.aria-label": {
+    "value": "Select",
+    "comment": "Aria Label used by screen reader on top of a radio input to let the user select a current column."
+  },
+  "table.header.select-multiple.aria-label": {
+    "value": "Select",
+    "comment": "Aria Label used by screen reader on top of a checkbox input to let the user select multiple columns."
+  },
+  "table.header.sort-ascending.label": {
+    "value": "Sort ascending",
+    "comment": "Label displayed in a dropdown menu available in the header of each column to let the user sort the column in ascending order."
+  },
+  "table.header.sort-descending.label": {
+    "value": "Sort descending",
+    "comment": "Label displayed in a dropdown menu available in the header of each column to let the user sort the column in descending order."
+  },
+  "table.header.hide-column.label": {
+    "value": "Hide column",
+    "comment": "Label displayed in a dropdown menu available in the header of each column to let the user hide the column."
+  },
+  "table.header.manage-columns-visbility.label": {
+    "value": "Manage columns",
+    "comment": "Label displayed in a dropdown menu available in the header of each column to let the user manage the visibility of the columns."
+  },
+  "table.header.more-actions.aria-label": {
+    "value": "Contextual actions",
+    "comment": "Aria Label used by screen reader on top of a button to let the user access more actions."
+  },
+  "table.header.resize-column.aria-label": {
+    "value": "Resize column",
+    "comment": "Aria Label used by screen reader on top of a button to let the user resize the column."
+  },
+  "table.cell.menu.aria-label": {
+    "value": "Contextual actions",
+    "comment": "Aria Label used by screen reader on top of a button to let the user access more actions contextual to a table cell."
+  },
+  "table.norows.message.default-title": {
+    "value": "There are no rows",
+    "comment": "This title is displayed at the center of table which have no rows and if the dev didn't change the default message"
+  },
+  "table.row.selection.aria-label": {
+    "value": "Select row",
+    "comment": "Aria Label used by screen reader on top of a checkbox input to let the user select a row of the current table."
+  },
+  "table.body.loadmore.label": {
+    "value": "Load more",
+    "comment": "Label for the button to load more rows in the table when the user use a touch only device."
+  },
+  "tag.remove": {
+    "value": "Remove",
+    "comment": "Appear in Tag component if they can be removed. The action remove the corresponding Tag. It is displayed in a tooltip when hovering over the remove button."
+  },
+  "toast.dismiss": {
+    "value": "Dismiss",
+    "comment": "Toast component have a dissmiss button to close it. This string is displayed in a tooltip when hovering over the dismiss button."
+  },
+  "treeitem.label.close": {
+    "value": "Collapse",
+    "comment": "Aria label for the button to collapse a tree item in the Tree component."
+  },
+  "treeitem.label.expand": {
+    "value": "Expand",
+    "comment": "Aria label for the button to expand a tree item in the Tree component."
+  }
+}

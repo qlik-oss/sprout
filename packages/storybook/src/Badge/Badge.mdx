@@ -1,0 +1,49 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Badge.stories";
+
+<Meta title="Components/Badge" of={Stories} />
+
+# Badge
+
+A badge serves as a visual indicator designed to attract attention to its accompanying element or to display additional information. Badges are commonly used to show new or unread items, highlight changes, or for decorative purposes.
+
+## Usage
+
+```tsx
+import { Avatar, Badge } from "@qlik/sprout-css-react";
+
+<Badge variant="dot" />;
+
+<Badge variant="alphanumeric" text="1" color="info" />;
+
+<Avatar
+  size="s"
+  text="OC"
+  badge={<Badge variant="alphanumeric" text="1" color="danger" />}
+/>;
+```
+
+## Properties
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+HTML structure
+
+Badge use a simple `span` element.
+In some context you will have to add `role="status"` and `aria-live="polite"` to indicate this number may changes depending on some user actions.
+Adding an aria-label to the badge will always be considered useful for screen reader users but it is not required.
+But if the value is a static number it is considered useless to add those attributes.
+
+```tsx
+<Badge
+  variant="alphanumeric"
+  text="14"
+  role="status"
+  arial-live="polite"
+  aria-label="14 items in your shopping cart"
+/>
+```

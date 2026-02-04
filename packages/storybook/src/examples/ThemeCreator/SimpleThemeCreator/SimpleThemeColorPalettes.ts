@@ -1,0 +1,108 @@
+export type SimpleThemeParamPaletteColors = {
+  backgrounds: Array<string>;
+  foregrounds: Array<string>;
+  brands: Array<string>;
+  selecteds: Array<string>;
+};
+
+export const LIGHTPALETTE: SimpleThemeParamPaletteColors = {
+  backgrounds: [
+    "#ffffff",
+    "#f8f9fa",
+    "#e3f2fd",
+    "#fef5e7",
+    "#fce4ec",
+    "#e8f5e9",
+    "#f3e5f5",
+    "#fff3e0",
+    "#e0f2f1",
+    "#fbe9e7",
+  ],
+  foregrounds: [
+    "#444444",
+    "#000000",
+    "#263238",
+    "#3e2723",
+    "#1b5e20",
+    "#311b92",
+    "#880e4f",
+    "#e65100",
+    "#004d40",
+    "#bf360c",
+  ],
+  brands: [
+    "#00873d",
+    "#6610f2",
+    "#6f42c1",
+    "#e83e8c",
+    "#dc3545",
+    "#fd7e14",
+    "#20c997",
+    "#ffc107",
+    "#17a2b8",
+    "#28a745",
+  ],
+  selecteds: [
+    "#00873d",
+    "#004085",
+    "#383d41",
+    "#155724",
+    "#856404",
+    "#0c5460",
+    "#721c24",
+    "#533f03",
+    "#1c313a",
+    "#4a148c",
+  ],
+};
+
+export const DARKPALETTE: SimpleThemeParamPaletteColors = {
+  backgrounds: [
+    "#1a1a1a",
+    "#212121",
+    "#263238",
+    "#3e2723",
+    "#1b5e20",
+    "#311b92",
+    "#4a148c",
+    "#e65100",
+    "#004d40",
+    "#bf360c",
+  ],
+  foregrounds: [
+    "#ffffff",
+    "#f8f9fa",
+    "#e3f2fd",
+    "#fef5e7",
+    "#fce4ec",
+    "#e8f5e9",
+    "#f3e5f5",
+    "#fff3e0",
+    "#e0f2f1",
+    "#fbe9e7",
+  ],
+  brands: [
+    "#00c853",
+    "#a855f7",
+    "#c084fc",
+    "#f472b6",
+    "#fb7185",
+    "#fb923c",
+    "#34d399",
+    "#fcd34d",
+    "#22d3ee",
+    "#4ade80",
+  ],
+  selecteds: [
+    "#00873d",
+    "#004085",
+    "#383d41",
+    "#155724",
+    "#856404",
+    "#0c5460",
+    "#721c24",
+    "#533f03",
+    "#1c313a",
+    "#4a148c",
+  ],
+};

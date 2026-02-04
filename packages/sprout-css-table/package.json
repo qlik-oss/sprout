@@ -1,0 +1,105 @@
+{
+  "name": "@qlik/sprout-css-table",
+  "version": "0.15.1",
+  "homepage": "https://github.com/qlik/sprout#readme",
+  "bugs": {
+    "url": "https://github.com/qlik/sprout/issues"
+  },
+  "repository": "https://github.com/qlik/sprout.git",
+  "license": "Apache 2.0",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js"
+    }
+  },
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "pnpm run build:tsc && pnpm run copy",
+    "build-storybook": "storybook build",
+    "build:tsc": "rm -rf lib && tsc -p tsconfig.build.json",
+    "build:watch": "concurrently \"pnpm run build:tsc --watch\" \"pnpm run copy:watch\"",
+    "check-types": "pnpm run build:tsc --noEmit",
+    "clean": "rimraf playwright-report storybook-static test-results playwright/.cache lib",
+    "copy": "cpx \"src/**/*.{css,json}*\" lib",
+    "copy:watch": "cpx \"src/**/*.{css,json}*\" lib --watch",
+    "format:check": "prettier --check ./** --ignore-unknown",
+    "format:write": "prettier --write ./** --ignore-unknown",
+    "lint": "eslint .",
+    "start": "storybook dev",
+    "pretest": "playwright install --with-deps",
+    "test": "pnpm test:playwright",
+    "test:playwright": "playwright test",
+    "test:ui": "playwright test --ui"
+  },
+  "prettier": "@qlik/prettier-config",
+  "dependencies": {
+    "@qlik/sprout-css-hooks": "workspace:*",
+    "@qlik/sprout-css-react": "workspace:*",
+    "@qlik/sprout-icons": "workspace:*",
+    "@tanstack/react-table": "^8.21.3",
+    "@tanstack/react-virtual": "^3.13.18"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "@chromatic-com/storybook": "^5.0.0",
+    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/js": "^9.39.2",
+    "@faker-js/faker": "^10.2.0",
+    "@playwright/experimental-ct-react": "^1.58.1",
+    "@playwright/test": "^1.58.1",
+    "@qlik/eslint-config-sprout": "workspace:*",
+    "@qlik/prettier-config": "^0.4.33",
+    "@qlik/sprout-css-storybook": "workspace:*",
+    "@qlik/tsconfig": "^0.3.1",
+    "@release-it/conventional-changelog": "^10.0.4",
+    "@storybook/addon-a11y": "^10.2.3",
+    "@storybook/addon-designs": "^11.1.1",
+    "@storybook/addon-docs": "^10.2.3",
+    "@storybook/addon-links": "^10.2.3",
+    "@storybook/addon-themes": "^10.2.3",
+    "@storybook/react": "^10.2.3",
+    "@storybook/react-vite": "^10.2.3",
+    "@types/node": "^25.0.5",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "axe-core": "^4.11.1",
+    "concurrently": "^9.2.1",
+    "cpx2": "^8.0.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest": "^29.12.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-playwright": "^2.5.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-storybook": "^10.2.3",
+    "eslint-plugin-svelte": "^3.14.0",
+    "eslint-plugin-testing-library": "^7.15.4",
+    "glob": "^13.0.0",
+    "prettier": "^3.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^6.1.2",
+    "storybook": "^10.2.3",
+    "storybook-addon-pseudo-states": "^10.2.3",
+    "storybook-addon-rtl": "^3.0.1",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

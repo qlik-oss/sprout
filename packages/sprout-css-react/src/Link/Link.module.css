@@ -1,0 +1,80 @@
+.link,
+.link:active {
+  display: inline-flex;
+  box-sizing: content-box;
+  color: var(--sprout-link-foreground-color-default);
+  background: none;
+  border: none;
+  border-block-end-color: currentcolor;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: inherit;
+}
+
+.link_inherit {
+  font: inherit;
+}
+
+.link:focus,
+.link:focus-visible,
+.link:visited {
+  text-decoration: none;
+}
+
+.link:has(.with_ellipsis) {
+  overflow: hidden;
+  max-inline-size: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+
+.link:focus-visible {
+  outline: var(--sprout-common-border-default-width) solid
+    var(--sprout-focus-color-default);
+  outline-offset: var(--sprout-common-spacing-xs);
+  border-radius: var(--sprout-common-border-radius-pill);
+}
+
+.link:not([aria-disabled="true"]):hover {
+  text-decoration: underline solid var(--sprout-link-foreground-color-default);
+}
+
+.link[aria-disabled="true"] {
+  cursor: not-allowed;
+  color: var(--sprout-common-foreground-color-disabled);
+}
+
+.link[aria-disabled="true"] .link__text {
+  text-decoration-color: transparent;
+}
+
+.link__external {
+  display: inline-flex;
+  box-sizing: border-box;
+  margin-inline-start: var(--sprout-common-spacing-m);
+
+  /* The design map each icon size to a token based on the used font size.
+  this is something we can do but it will not support inherit mode.
+  After discussion we fall agree to use em based sizing of the icon in the code */
+  /* stylelint-disable-next-line sprout/no-hardcoded-values */
+  inline-size: 0.75em;
+  /* stylelint-disable-next-line sprout/no-hardcoded-values */
+  block-size: 0.75em;
+}
+
+.link__external > img,
+.link__external > svg {
+  display: inline-block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.with_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link:has(.with_ellipsis) .link__external {
+  flex-shrink: 0;
+}

@@ -1,0 +1,17 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+import * as ListStories from "./ListTable.stories";
+import * as DataStories from "./DataTable.stories";
+
+<Meta title="Docs/Columns/column selection" />
+
+# Column selection
+
+Column selection allows users to select one or more columns in a table. This can be useful for various purposes, such as highlighting important data or enabling actions on selected columns.
+
+## Enabling column selection
+
+To enable column selection, you need to set the `columnSelectionMode` prop on the `Table` component. This prop can take two values: `single` or `multiple`.
+Then you can push your controlled state into it. To make it easier to use with typescript both states can be pushed but only one will be used:
+
+<Controls of={DataStories.ColumnSelection} />
+<Canvas of={DataStories.ColumnSelection} />

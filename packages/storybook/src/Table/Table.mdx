@@ -1,0 +1,55 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as TableStories from "./Table.stories";
+
+<Meta title="Components/Table" of={TableStories} />
+
+## Table
+
+Warning: This component is in it's early stage, you should not use without working closely with the design system team.
+
+Used to display structured data in a tabular format, with rows and columns. It organizes and presents information for easy scanning, comparison, and interaction.
+
+HTML markup use `div` and not `table` here is why:
+
+- Performance
+  - `table` takes more time to render.
+  - `div` based grids can be virtualized.
+
+- Flexibility:
+  - `table` elements come with rigid rules
+    - columns cannot easily have independent widths
+    - pinned columns, column resizing are hard to implement
+  - `div` elements can be styled and positioned easily
+
+- Responsive:
+  - `table` elements are not responsive by nature
+  - `div` elements can be made responsive by using flexbox or grid layout
+
+- Accessibility:
+  - `table` elements are semantically correct
+  - `div` elements can be made accessible by using ARIA roles
+
+<Canvas of={TableStories.HTMLTable} sourceState="shown" />
+
+Looking for a library we have the following you should compare using [npmtrends](https://npmtrends.com/@mui/x-data-grid-vs-@tanstack/react-virtual-vs-ag-grid-react-vs-react-virtualized)
+
+## TanStack Table
+
+[TanStack Table](https://tanstack.com/table/) is a headless library for building powerful talbes & datagrids.
+It gives all the features we need without providing any UI which is perfect to build a Design System.
+
+You can find our integration of TanStack [qlik-trial/sprout-css-table](https://github.com/qlik-trial/sprout-css-table)
+
+## AgGrid
+
+[ag-grid-react](https://www.ag-grid.com/react-data-grid/getting-started/) is a well know table/grid on the market.
+It provides a lot of features and is very customizable but it is based on customization which doesn't fit well design system.
+
+We have a WIP theme but not used and not working enough well to be exposed.
+
+## MUI X Data Grid
+
+[@mui/x-data-grid](https://mui.com/x/react-data-grid/) is a fast and extendable React data table and React data grid. It's a feature-rich component available with MIT or commercial licenses.
+
+No work has been done to integrate it with our design system for now.

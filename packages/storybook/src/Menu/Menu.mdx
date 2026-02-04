@@ -1,0 +1,228 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Menu.stories";
+import * as ContentStory from "./MenuContent.stories";
+import * as ContextualStory from "./MenuContextual.stories";
+import * as GroupStory from "./MenuGroup.stories";
+import * as GroupLabelStory from "./MenuGroupLabel.stories";
+import * as ItemStory from "./MenuItem.stories";
+import * as SecondaryActionStory from "./MenuSecondaryAction.stories";
+import * as SkeletonStory from "./MenuSkeleton.stories";
+import * as SplitStory from "./MenuSplit.stories";
+import * as SubStory from "./MenuSub.stories";
+import * as TriggerStory from "./MenuTrigger.stories";
+
+<Meta title="Components/Menu" of={Stories} />
+
+# Menu
+
+Temporary menu that appears on demand. A menu typically closes when selecting an item or clicking outside. Most of the settings can be found in the Menu item itself and Menu is the composite component. Select menu is a separate component that is to be used only as the popover in Select (dropdown) components.
+
+<Canvas of={Stories.JsxApi} />
+
+## Table of Contents
+
+- [Usage](#usage)
+- [Properties](#properties)
+  - [Menu.Trigger](#menutrigger)
+  - [Menu.Contextual](#menucontextual)
+  - [Menu.Item](#menuitem)
+  - [Menu.Sub](#menusub)
+  - [Menu.Group](#menugroup)
+  - [Menu.GroupLabel](#menugrouplabel)
+  - [Menu.SecondaryAction](#menusecondaryaction)
+  - [Menu.Divider](#menudivider)
+  - [Menu.Skeleton](#menuskeleton)
+  - [Menu.Split](#menusplit)
+  - [Menu.Content](#menucontent)
+  - [Controlled](#controlled)
+- [Accessibility](#accessibility)
+- [Breaking Changes](#breaking-changes)
+
+---
+
+## Usage
+
+```jsx
+import { Menu } from "@qlik/sprout-css-react";
+
+// data API
+const MENU_DATA = [
+  { component: "groupLabel", label: "User" },
+  { component: "item", icon: <PersonIcon />, label: "Profile", disabled: true },
+  { component: "divider" },
+];
+
+<Menu.Trigger menu={MENU_DATA}>
+  <Button label="Open Menu" />
+</Menu.Trigger>;
+
+// JSX composition
+<Menu.Trigger
+  menu={
+    <>
+      <Menu.GroupLabel label="User" />
+      <Menu.Item icon={<PersonIcon />} label="Profile" disabled />
+      <Menu.Item icon={<LogoutIcon />} label="Logout" />
+      <Menu.Item icon={null} label="Reload" />
+      <Menu.Item icon={null} label="Share" />
+      <Menu.Sub icon={<SettingsIcon />} label="Settings">
+        <Menu.Item label="Text" />
+        <Menu.Item label="Video" />
+        <Menu.Sub label="Image">
+          <Menu.Item label=".png" />
+          <Menu.Item label=".jpg" />
+          <Menu.Item label=".svg" />
+          <Menu.Item label=".gif" />
+        </Menu.Sub>
+        <Menu.Item label="Audio" />
+      </Menu.Sub>
+      <Menu.Divider />
+      <Menu.Item
+        icon={<EditIcon />}
+        label="Edit"
+        description="Don’t remember what we said about overflow, but this would be it."
+        valueLabel="⌘ E"
+      />
+      <Menu.Item icon={<BinIcon />} label="Delete" />
+      <Menu.Divider />
+      <Menu.Item icon={null} label="Cut" valueLabel="⌘ X" />
+      <Menu.Item icon={null} label="Copy" valueLabel="⌘ C" />
+      <Menu.Item icon={null} label="Paste" disabled valueLabel="⌘ V" />
+      <Menu.Divider />
+      <Menu.Split>
+        <Menu.Item label="Open source" />
+        <Menu.SecondaryAction
+          onClick={() => {
+            window
+              .open("/?path=/story/components-menu--secondary-action", "_blank")
+              ?.focus();
+          }}
+        />
+      </Menu.Split>
+    </>
+  }
+>
+  <Button label="Open Menu" />
+</Menu.Trigger>;
+```
+
+## Properties
+
+### Menu.Trigger
+
+<Canvas of={TriggerStory.Trigger} />
+<Controls of={TriggerStory.Trigger} />
+
+### Menu.Contextual
+
+<Canvas of={ContextualStory.Contextual} />
+<Controls of={ContextualStory.Contextual} />
+
+### Menu.Item
+
+<Canvas of={ItemStory.Item} />
+<Controls of={ItemStory.Item} />
+
+### Menu.Sub
+
+<Canvas of={SubStory.Sub} />
+<Controls of={SubStory.Sub} />
+
+### Menu.Group
+
+<Canvas of={GroupStory.Group} />
+<Controls of={GroupStory.Group} />
+
+### Menu.GroupLabel
+
+<Canvas of={GroupLabelStory.GroupLabel} />
+<Controls of={GroupLabelStory.GroupLabel} />
+
+### Menu.SecondaryAction
+
+<Canvas of={SecondaryActionStory.SecondaryAction} />
+<Controls of={SecondaryActionStory.SecondaryAction} />
+
+### Menu.Divider
+
+> No properties
+
+### Menu.Skeleton
+
+<Canvas of={SkeletonStory.Skeleton} />
+
+> No properties
+
+### Menu.Split
+
+<Canvas of={SplitStory.Split} />
+<Controls of={SplitStory.Split} />
+
+### Menu.Content
+
+<Canvas of={ContentStory.Content} />
+<Controls of={ContentStory.Content} />
+
+#### Controlled
+
+`Menu.Trigger` support the control of opening / closing the menu by using the following props:
+
+- `defaultOpen`: boolean (only for initial state)
+- `open`: boolean (controlled state)
+- `onOpenChange`: function (callback for controlled state) with onChange(open: boolean).
+
+## Accessibility
+
+[W3/WAI/ARIA/APG Menu bar](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/)
+
+HTML structure
+
+- Menu.Trigger use a `button` to trigger the visibility of the menu and have the following attributes:
+  - `aria-haspopup="menu"`
+  - `aria-expanded="true|false"`
+  - `aria-controls` pointing to the menu id
+- Menu.Container receive the following attributes
+  - `role="menu"`
+  - `aria-labelledby` pointing to the trigger id
+  - `aria-orientation="vertical"`
+- Menu.Group is a `div` with `role="group"`
+  - FIXME: should it has aria-labelledby ?
+- Menu.Item is a `button` with `role="menuitem"`
+  - if `selectable` is true `role` becomes `menuitemcheckbox` and `aria-checked="false"`
+  - if `selected` and `selectable` is true `aria-checked="true"`
+  - no `aria-checked` attribute otherwise
+
+Keyboard navigation
+
+- The first element in the menu receive the focus when the menu is opened.
+- `ArrowDown` and `ArrowUp` navigate between all not disabled `menuitem` elements.
+- `Home` and `End` navigate to the first and last not disabled `menuitem` elements.
+- `Space` and `Enter` trigger click event on the focused `menuitem` element.
+- `ArrowRight` open the menu if the focused `menuitem` element has a submenu using the `aria-haspopup="menu"` attribute.
+- `ArrowLeft` close the menu and move the focus ont the parent menu's `menuitem` element.
+
+## Breaking Changes
+
+In the discussion of API we have decided to go with a composition and renderer approach.
+
+```diff
+- import { ContextMenu, MenuTrigger, MenuItem, Menu, MenuDivider, MenuGroupLabel } from "@qlik/sprout-css-react";
++ import { Menu } from "@qlik/sprout-css-react";
+
+
+- <MenuContent
++ <Menu.Content
+- <ContextMenu
++ <Menu.Contextual
+- <MenuTrigger
++ <Menu.Trigger
+- <MenuItem
++ <Menu.Item
+- <MenuDivider
++ <Menu.Divider
+- <MenuGroupLabel
++ <Menu.GroupLabel
+- <Menu
++ <Menu.Sub
+```

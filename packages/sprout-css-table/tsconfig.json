@@ -1,0 +1,9 @@
+{
+  "extends": "@qlik/tsconfig/react.json",
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "./lib",
+    "declaration": true,
+    "noEmit": false
+  }
+}

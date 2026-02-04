@@ -1,0 +1,42 @@
+{
+  "theme": {
+    "common": {
+      "font-family": {
+        "default": {
+          "$type": "text",
+          "$value": "Source Sans Pro",
+          "$description": "Default font"
+        }
+      },
+      "font-weight": {
+        "default": {
+          "$type": "text",
+          "$value": "Regular"
+        },
+        "emphasized": {
+          "$type": "text",
+          "$value": "Semibold"
+        }
+      }
+    },
+    "code": {
+      "font-family": {
+        "default": {
+          "$type": "text",
+          "$value": "Source Code Pro",
+          "$description": "Default font for code blocks and syntax"
+        }
+      },
+      "font-weight": {
+        "default": {
+          "$type": "text",
+          "$value": "Regular"
+        },
+        "emphasized": {
+          "$type": "text",
+          "$value": "SemiBold"
+        }
+      }
+    }
+  }
+}

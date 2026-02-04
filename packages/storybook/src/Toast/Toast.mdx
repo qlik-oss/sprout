@@ -1,0 +1,40 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Toast.stories";
+
+<Meta title="Components/Toast" of={Stories} />
+
+# Toast
+
+A Toast is a small, non-intrusive message that pops up temporarily to notify users about an action or event.
+It typically appears at the edge of the screen and disappears automatically after a few seconds, though it can be dismissed manually.
+Toasts are ideal for brief, context-aware feedback like form submissions, errors, or connection status updates.
+They should be used to provide real-time alerts without interrupting the user’s workflow.
+
+```tsx
+import { Toast, type ToastProps } from "@qlik/sprout-css-react";
+
+<Toast.Container placement="top">
+  <Toast.Content
+    severity="info"
+    title="Document created"
+    message="You will find it here"
+    onClose={() => {}}
+    action={{ label: "Undo", onClick: () => {} }}
+  />
+</Toast.Container>;
+```
+
+<Canvas of={Stories.Playground} />
+
+## Properties
+
+Timeout implementation rely on the application state and this component is not intended to provide any opinion on it for now.
+
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+The component use a div with `role="alert"`.
+
+Pressing `escape` key closes the toast.

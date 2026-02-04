@@ -1,0 +1,17 @@
+componentId: sprout-css-table
+botSlackChannel: '#sprout-ci'
+owningTeam: design-system
+publishedPackages:
+  npm:
+    ids:
+      - sprout-css-table
+branches:
+  - name: main
+# branches:
+#   - name: main
+#   releaseEnvironments:
+#   - environment: qmfe-integration
+production-approval: not-applicable
+production-approval/compliance/api-governance: not-applicable
+primaryChampion: jmfrancois
+codeCoverageExclusionReason: qmfe

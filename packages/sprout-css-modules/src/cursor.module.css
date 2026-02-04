@@ -1,0 +1,79 @@
+.cursor_auto,
+.cursor-auto {
+  cursor: auto;
+}
+
+.cursor_default,
+.cursor-default {
+  cursor: default;
+}
+
+.cursor_pointer,
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor_wait,
+.cursor-wait {
+  cursor: wait;
+}
+
+.cursor_text,
+.cursor-text {
+  cursor: text;
+}
+
+.cursor_progress,
+.cursor-progress {
+  cursor: progress;
+}
+
+.cursor_not_allowed,
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.cursor_none,
+.cursor-none {
+  cursor: none;
+}
+
+.cursor_no_drop,
+.cursor-no-drop {
+  cursor: no-drop;
+}
+
+.cursor_unset,
+.cursor-unset {
+  cursor: unset;
+}
+
+.cursor_initial,
+.cursor-initial {
+  cursor: initial;
+}
+
+.cursor_help,
+.cursor-help {
+  cursor: help;
+}
+
+.cursor_row_resize,
+.cursor-row-resize {
+  cursor: row-resize;
+}
+
+.cursor_col_resize,
+.cursor-col-resize {
+  cursor: col-resize;
+}
+
+.pointer_events_none,
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer_events_auto,
+.pointer-events-auto {
+  pointer-events: auto;
+}

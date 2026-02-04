@@ -1,0 +1,311 @@
+.button {
+  /* reset outline */
+  outline: none;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  font: var(--sprout-label-font-s-emphasized);
+
+  /* common value */
+  inline-size: fit-content;
+  border-radius: var(--sprout-common-border-radius-pill);
+  position: relative;
+  padding: var(--sprout-common-spacing-m);
+}
+
+.button [data-type="icon"] {
+  inline-size: var(--sprout-common-sizing-xl);
+  block-size: var(--sprout-common-sizing-xl);
+}
+
+.button[data-justified="false"] {
+  /* button should not go beyond 256px and make label ellipsis */
+  max-inline-size: var(--sprout-container-sizing-xxs);
+}
+
+.button[data-justified="true"] {
+  inline-size: 100%;
+}
+
+.button > span > svg {
+  fill: currentcolor;
+  inline-size: var(--sprout-common-sizing-xl);
+  block-size: var(--sprout-common-sizing-xl);
+  flex-shrink: 0;
+}
+
+.button:enabled {
+  cursor: pointer;
+}
+
+.button [data-label] {
+  padding: 0 var(--sprout-common-spacing-m);
+  white-space: nowrap;
+  overflow: hidden;
+  max-inline-size: 100%;
+  text-overflow: ellipsis;
+}
+
+.button[data-variant="default"] {
+  background-color: var(--sprout-common-background-color-enabled);
+  color: var(--sprout-common-foreground-color-default);
+  border: var(--sprout-common-border-moderate);
+}
+
+.button[data-variant="default"]:focus-visible {
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) / -2);
+  border-color: transparent;
+  background-color: var(--sprout-focus-background-color-default);
+}
+
+.button[data-variant="default"]:disabled,
+.button[data-variant="default"][data-loading="true"] {
+  background-color: var(--sprout-common-background-color-disabled);
+  color: var(--sprout-common-foreground-color-disabled);
+  border: var(--sprout-common-border-weak);
+}
+
+.button[data-variant="default"]:hover:enabled {
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.button[data-variant="default"]:active:enabled {
+  background-color: var(--sprout-common-background-color-pressed);
+}
+
+.button[data-variant="primary"] {
+  background-color: var(--sprout-brand-primary-color-default);
+  color: var(--sprout-brand-primary-color-inverse);
+  border: var(--sprout-common-border-default);
+  border-color: transparent;
+}
+
+.button[data-variant="primary"]:focus-visible {
+  background-color: var(--sprout-brand-primary-color-focus);
+
+  /* need some tokens here */
+  outline: var(--sprout-focus-border-default);
+  outline-offset: var(--sprout-focus-border-default-width);
+}
+
+.button[data-variant="primary"]:disabled {
+  background-color: var(--sprout-brand-primary-color-disabled);
+  color: var(--sprout-common-foreground-color-disabled);
+}
+
+.button[data-variant="primary"]:hover:enabled {
+  background-color: var(--sprout-brand-primary-color-hover);
+}
+
+.button[data-variant="primary"]:active:enabled {
+  background-color: var(--sprout-brand-primary-color-pressed);
+}
+
+.button[data-variant="secondary"] {
+  background-color: var(--sprout-common-background-color-enabled);
+  color: var(--sprout-brand-primary-color-default);
+  border: var(--sprout-common-border-default);
+  border-color: var(--sprout-brand-primary-color-default);
+}
+
+.button[data-variant="secondary"]:focus-visible {
+  background-color: var(--sprout-focus-background-color-default);
+  color: var(--sprout-brand-primary-color-focus);
+
+  /* focus ring centered */
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) / -2);
+  border-color: transparent;
+}
+
+.button[data-variant="secondary"]:disabled {
+  background-color: var(--sprout-common-background-color-disabled);
+  color: var(--sprout-common-foreground-color-disabled);
+  border: var(--sprout-common-border-default);
+}
+
+.button[data-variant="secondary"]:hover:enabled {
+  background-color: var(--sprout-common-background-color-hover);
+  color: var(--sprout-brand-primary-color-hover);
+}
+
+.button[data-variant="secondary"]:active:enabled {
+  background-color: var(--sprout-common-background-color-pressed);
+  color: var(--sprout-brand-primary-color-pressed);
+}
+
+.button[data-variant="secondary"][data-destructive="true"] {
+  background-color: var(--sprout-common-background-color-enabled);
+  color: var(--sprout-danger-color-default);
+  border: var(--sprout-common-border-default);
+  border-color: var(--sprout-danger-color-default);
+}
+
+.button[data-variant="secondary"][data-destructive="true"]:focus-visible {
+  background-color: var(--sprout-focus-background-color-default);
+  color: var(--sprout-danger-color-focus);
+
+  /* focus ring centered */
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) / -2);
+  border-color: transparent;
+}
+
+.button[data-variant="secondary"][data-destructive="true"]:disabled {
+  background-color: var(--sprout-common-background-color-disabled);
+  color: var(--sprout-common-foreground-color-disabled);
+  border: var(--sprout-common-border-default);
+}
+
+.button[data-variant="secondary"][data-destructive="true"]:hover:enabled {
+  background-color: var(--sprout-common-background-color-hover);
+  color: var(--sprout-danger-color-hover);
+}
+
+.button[data-variant="secondary"][data-destructive="true"]:active:enabled {
+  background-color: var(--sprout-common-background-color-pressed);
+  color: var(--sprout-danger-color-pressed);
+}
+
+.button[data-variant="quiet"] {
+  border: var(--sprout-common-border-default);
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--sprout-common-foreground-color-default);
+}
+
+.button[data-variant="quiet"]:focus-visible {
+  background-color: var(--sprout-focus-background-color-default);
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) / -2);
+}
+
+.button[data-variant="quiet"]:disabled {
+  color: var(--sprout-common-foreground-color-disabled);
+}
+
+.button[data-variant="quiet"]:hover:enabled {
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.button[data-variant="quiet"]:active:enabled {
+  background-color: var(--sprout-common-background-color-pressed);
+}
+
+.button[data-variant="primary"][data-destructive="true"] {
+  background-color: var(--sprout-danger-color-default);
+  color: var(--sprout-danger-color-inverse);
+  border: var(--sprout-common-border-default);
+  border-color: transparent;
+}
+
+.button[data-variant="primary"][data-destructive="true"]:focus-visible {
+  background-color: var(--sprout-danger-color-focus);
+  outline: var(--sprout-focus-border-default);
+  outline-offset: var(--sprout-focus-border-default-width);
+}
+
+.button[data-variant="primary"][data-destructive="true"]:disabled {
+  background-color: var(--sprout-danger-color-disabled);
+  color: var(--sprout-common-foreground-color-disabled);
+}
+
+.button[data-variant="primary"][data-destructive="true"]:hover:enabled {
+  background-color: var(--sprout-danger-color-hover);
+}
+
+.button[data-variant="primary"][data-destructive="true"]:active:enabled {
+  background-color: var(--sprout-danger-color-pressed);
+}
+
+.button[data-size="default"] {
+  padding: calc(
+    var(--sprout-common-spacing-m) - var(--sprout-common-border-default-width)
+  );
+}
+
+.button[data-size="small"] {
+  font: var(--sprout-label-font-xs-emphasized);
+  padding: calc(
+    var(--sprout-common-spacing-s) - var(--sprout-common-border-default-width)
+  );
+}
+
+.button[data-size="small"] [data-label] {
+  padding: 0 var(--sprout-common-spacing-s);
+}
+
+.content {
+  display: inline-flex;
+  padding: 0;
+  align-items: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.button[data-size="small"] > .content {
+  padding: 0 var(--sprout-common-spacing-s);
+  gap: var(--sprout-common-spacing-xs);
+}
+
+.button.nolabel[data-size="small"] {
+  padding: calc(
+    var(--sprout-common-spacing-s) - var(--sprout-common-border-default-width)
+  );
+}
+
+.button.nolabel[data-size="small"] .content {
+  padding: var(--sprout-common-spacing-xs);
+  gap: var(--sprout-common-spacing-s);
+}
+
+.button[data-size="small"] [data-type="icon"] {
+  inline-size: var(--sprout-common-sizing-l);
+  block-size: var(--sprout-common-sizing-l);
+}
+
+.badge {
+  pointer-events: auto;
+  display: inline-flex;
+  padding-inline-end: var(--sprout-common-spacing-s);
+}
+
+.nolabel .badge {
+  padding-inline-end: 0;
+}
+
+/* loading state should keep existing width of the button and hide the label.
+ * ProgressCircular Icon is placed in the middle of the button
+ */
+.button[data-loading="true"] [data-label],
+.button[data-loading="true"] [data-type="icon"],
+.button[data-loading="true"] .badge {
+  visibility: hidden;
+}
+
+.button [data-loader] {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* state toggle */
+.toggle[aria-pressed="true"] {
+  background-color: var(--sprout-common-background-color-toggled);
+  color: var(--sprout-common-foreground-color-default);
+  border: var(--sprout-common-border-extra-strong);
+}
+
+/* ButtonGroup integration when borderless to avoid !important. We inject a divider */
+[role="group"] > .borderless:not(:first-child)::before {
+  content: "";
+  inline-size: var(--sprout-common-border-moderate-width);
+  block-size: calc(100% + var(--sprout-common-border-moderate-width) * 2);
+  position: absolute;
+  background-color: var(--sprout-common-divider-moderate-color);
+  inset-block: calc(var(--sprout-common-border-moderate-width) * -1);
+  inset-inline-start: calc(var(--sprout-common-border-moderate-width) * -1);
+}

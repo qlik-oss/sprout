@@ -1,0 +1,55 @@
+/* group container */
+.button_group {
+  display: flex;
+  gap: 0;
+}
+
+.button_group > button,
+.button_group > div {
+  border-radius: 0;
+}
+
+.button_group[data-variant="vertical"] > button {
+  inline-size: 100%;
+}
+
+.button_group > button:focus-visible,
+.button_group > div:focus-visible {
+  z-index: 1;
+}
+
+.button_group > button[aria-pressed="true"] + button {
+  border-inline-start: var(--sprout-common-border-extra-strong);
+}
+
+.button_group[data-variant="horizontal"] > button:first-child,
+.button_group[data-variant="horizontal"] > div:first-child {
+  border-start-start-radius: var(--sprout-common-border-radius-pill);
+  border-end-start-radius: var(--sprout-common-border-radius-pill);
+}
+
+.button_group[data-variant="horizontal"] > button:last-child,
+.button_group[data-variant="horizontal"] > div:last-child {
+  border-end-end-radius: var(--sprout-common-border-radius-pill);
+  border-start-end-radius: var(--sprout-common-border-radius-pill);
+}
+
+.button_group[data-variant="horizontal"] > button:not(:last-child),
+.button_group[data-variant="horizontal"] > div:not(:last-child) {
+  border-inline-end-width: 0;
+}
+
+.button_group[data-variant="vertical"] > button:first-child {
+  border-start-start-radius: var(--sprout-common-border-radius-pill);
+  border-start-end-radius: var(--sprout-common-border-radius-pill);
+}
+
+.button_group[data-variant="vertical"] > button:not(:last-child),
+.button_group[data-variant="vertical"] > div:not(:last-child) {
+  border-block-end-width: 0;
+}
+
+.button_group[data-variant="vertical"] > button:last-child {
+  border-end-start-radius: var(--sprout-common-border-radius-pill);
+  border-end-end-radius: var(--sprout-common-border-radius-pill);
+}

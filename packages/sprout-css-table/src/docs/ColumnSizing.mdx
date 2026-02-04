@@ -1,0 +1,76 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Docs/Columns/column sizing" />
+
+# Column sizing
+
+Column sizing allows to dynamically change the width of all columns, by dragging the column headers.
+This can be useful when there is not enough space to display all content in the column.
+
+## Column sizing state
+
+### Default column sizing
+
+If we want to set an initial columns size, this can be done by passing the `width` property in column definition.
+
+```tsx
+const columns = [
+  { field: "name", headerName: "Product Name", width: 200 },
+  { field: "description", headerName: "Description", width: 300 },
+];
+```
+
+### Controlled sizing
+
+The controlled resizing is useful in scenarios where we would like to control sizing state externally,
+and execute some code when sizing state changes.
+Example: saving column sizing state in local storage or indexedDB, to store the state between logins or refresh.
+
+Use `columnSizing` table prop to control the column sizing state.
+
+Use `onColumnSizingChange` function as table prop to listen to changes in column sizing state
+
+```tsx
+import { useState } from "react";
+import { Table, type ColumnSizingState } from "@qlik/sprout-css-table";
+
+function ComponentUsingTable() {
+  const [columnSizingState, setColumnSizingState] = useState<ColumnSizingState>();
+
+  const onColumnSizingChange = (columnSizing: ColumnSizingState) => {
+    setColumnSizingState(columnSizing);
+    // do something else
+  };
+
+  return (
+    <Table rows={rows} columns={columns} columnSizing={columnSizingState} onColumnSizingChange={onColumnSizingChange} />
+  );
+}
+```
+
+## Enabling column sizing
+
+The column sizing is enabled for all columns by default
+
+## Disable column sizing
+
+### For all table columns
+
+The `disableColumnResize` table prop allows to disable resizing for all table columns
+
+```tsx
+import { Table } from "@qlik/sprout-css-table";
+
+return <Table rows={rows} columns={columns} disableColumnResize />;
+```
+
+### For some columns
+
+The `resizable` column property allows to disable resizing for specific column.
+
+```tsx
+const columns = [
+  { field: "name", headerName: "Product Name", width: 200 },
+  { field: "description", headerName: "Description", width: 300, resizable: false },
+];
+```

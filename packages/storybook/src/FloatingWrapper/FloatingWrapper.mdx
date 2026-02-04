@@ -1,0 +1,49 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./FloatingWrapper.stories";
+
+<Meta title="Components/FloatingWrapper" of={Stories} />
+
+# FloatingWrapper
+
+Allows a subset of components to assume a floating style and behaviour, to use on dynamic backgrounds such as a canvas.
+
+```tsx
+import { FloatingWrapper } from "@qlik/sprout-css-react";
+```
+
+## Button
+
+Adds a Button to the FloatingWrapper
+
+<Canvas of={Stories.FloatingButton} />
+
+## IconButton
+
+Adds an IconButton to the FloatingWrapper
+
+<Canvas of={Stories.FloatingIconButton} />
+
+## ToggleButton
+
+Adds a ToggleButton to the FloatingWrapper
+
+<Canvas of={Stories.FloatingToggleButton} />
+
+## ToggleIconButton
+
+Adds a ToggleIconButton to the FloatingWrapper
+
+<Canvas of={Stories.FloatingToggleIconButton} />
+
+## TextField
+
+Adds a TextField to the FloatingWrapper
+
+<Canvas of={Stories.FloatingTextField} />
+
+## Search (TextField + type=search)
+
+Adds a Search to the FloatingWrapper
+
+<Canvas of={Stories.FloatingTextFieldSearch} />

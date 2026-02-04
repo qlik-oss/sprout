@@ -1,0 +1,130 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Select.stories";
+
+<Meta title="Components/Select" of={Stories} />
+
+# Select
+
+Selects are form elements that allows a user to select an option from a list of several options.
+
+```tsx
+import { Select } from "@qlik/sprout-css-react";
+
+<Select.Select defaultValue="red" placeholder="Select a color" size="default">
+  {/* This is good to have the empty value as in HTML */}
+  <Select.Option value="" label="--Please choose an option--" />
+  <Select.OptGroup label="Basic Colors">
+    <Select.Option value="red">Red</Select.Option>
+    <Select.Option value="orange">Orange</Select.Option>
+    <Select.Option value="green" disabled>
+      Green
+    </Select.Option>
+  </Select.OptGroup>
+  {/* Divider in case you have multiple groups */}
+  <Select.Divider />
+  <Select.OptGroup label="Cool Colors">
+    <Select.Option value="cyan">Cyan</Select.Option>
+    <Select.Option value="purple">Purple</Select.Option>
+  </Select.OptGroup>
+  <Select.Divider />
+  <Select.OptGroup label="Deprecated Colors">
+    <Select.Option value="chartreuse">
+      <Select.OptionStyled label="Chartreuse" description="nice color btw" />
+    </Select.Option>
+    <Select.Option value="cornsilk">Cornsilk</Select.Option>
+    <Select.Option value="pink">Gainsboro</Select.Option>
+  </Select.OptGroup>
+</Select.Select>;
+```
+
+By default, without `onChange` and `value` you are using the "Uncontrolled" version of the component.
+
+<Canvas of={Stories.UnControlled} />
+<Controls of={Stories.UnControlled} />
+
+## Searchable Select
+
+By default, the Select is not searchable.
+In order to make it serchable, `<Select.Search />` need to be passed as first child to `<Select.Select>`.
+
+```tsx
+import { Select } from "@qlik/sprout-css-react";
+
+<Select.Select defaultValue="red" placeholder="Select a color" size="default">
+  {/* Select.Search need to be passed as first child */}
+  <Select.Search />
+  {/* This is good to have the empty value as in HTML */}
+  <Select.Option value="" label="--Please choose an option--" />
+  <Select.OptGroup label="Basic Colors">
+    <Select.Option value="red">Red</Select.Option>
+    <Select.Option value="orange">Orange</Select.Option>
+    <Select.Option value="green" disabled>
+      Green
+    </Select.Option>
+  </Select.OptGroup>
+  {/* Divider in case you have multiple groups */}
+  <Select.Divider />
+  <Select.OptGroup label="Cool Colors">
+    <Select.Option value="cyan">Cyan</Select.Option>
+    <Select.Option value="purple">Purple</Select.Option>
+  </Select.OptGroup>
+</Select.Select>;
+```
+
+<Canvas of={Stories.Searchable} />
+<Controls of={Stories.Searchable} />
+
+## onChange API
+
+We are exposing a type inside SelectProps['ChangeEvent'] that you can use with typescript
+
+```tsx
+onChange: (event: SelectProps['ChangeEvent']) => void;
+```
+
+## Manage overflow
+
+By default the max-width of the listbox is `--sprout-container-sizing-m` but you can change it by using the `maxWidth` prop.
+For example it is pretty common to use maxWidth="reference" so it match the combobox.
+
+## Accessibility
+
+Content after refer to the most important part of the following patterns:
+
+- [W3/WAI/ARIA/APG combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/)
+
+HTML structure
+
+- `Combobox` use a button with the role `combobox`.
+- `Combobox` require `aria-controls` to be set.
+- `Combobox` manage `aria-expanded` to indicate the state of the popup.
+- `Listbox` has the role `listbox`.
+- `Option` has the role `option`
+- `OptGroup` has the role `group` and contains Option
+- `OptGroup` must at least contains one Option: Dev are responsible for that
+- `OptGroup` is not valid without the `label` props
+- `Option` use a button tag so it rely on `aria-selected` to indicate it's state
+- Only one `Option` can be selected (implied by the value using a React Context)
+- All `Option` that are not selected but selectable have the `aria-selected` set to false
+
+Keyboard Navigation
+
+- `Combobox` keep the focus. The component has the `aria-activedescendant` attribute to specify which element inside the listbox is in 'hover'. We will use the 'focus' word here but this is not the case.
+- `ArrowDown`: If the listbox is closed, it becomes open with the focus on the first \[selected\] option.
+- `ArrowDown`: If the listbox is opened, moves the "focus" to the next item.
+- `ArrowUp`: If the listbox is opened the "focus" is moved to the previous option.
+- Loop over options is activated.
+- `Escape`: Dismisses the listbox. Optionally, if the popup is hidden before Escape is pressed, clears the combobox.
+- `Enter`: If the combobox is editable and an autocomplete suggestion is selected in the popup, accepts the suggestion either by placing the input cursor at the end of the accepted value in the combobox or by performing a default action on the value.
+- TODO: Printable Characters should moves focus to a value that starts with the typed characters.
+
+Searchable select
+
+Search input is displayed at the top of popover, and, the search input should be focused when opening the popover.
+So, real focus will be kept on search input, and when navigating using keyboard, items will be visually focused using hover state.
+Keyboard navigation works the same as for none searchable select.
+
+```
+
+```

@@ -1,0 +1,44 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Stepper.stories";
+
+<Meta title="Components/Stepper" of={Stories} />
+
+# Stepper
+
+The stepper component is a navigation element that guides users through a multi-step process. It is typically used in forms, wizards, or other processes that require sequential steps.
+
+```jsx
+import { Stepper } from "@qlik/sprout-css-react";
+
+// Step semantic controlled by the container
+<Stepper.Container {...args} currentStepIndex={1} currentStepError={false} orientation={orientation}>
+  {/* add onClick to a step will make it interactive */}
+  <Stepper.Step text="Completed" onClick={() => {}} />
+  <Stepper.Step text="Active" />
+  <Stepper.Step text="Inactive" />
+  <Stepper.Step text="Inactive" />
+</Stepper.Container>
+
+
+// full control of each step semantic
+<Stepper.Container orientation={orientation}>
+  {/* add onClick to a step will make it interactive */}
+  <Stepper.Step semantic="completed" text="Completed" onClick={() => {}} />
+  <Stepper.Step semantic="active" text="Active" />
+  <Stepper.Step semantic="error" text="Error" />
+  <Stepper.Step semantic="inactive" text="Inactive" />
+</Stepper.Container>
+
+```
+
+<Canvas of={Stories.Playground} sourceState="shown" />
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+HTML Structure
+
+- Note: aria-orientation can't be used on a list item so we have used a data attribute for that.
+- `Stepper.Container` uses the HTML tag OL to give a semantic representation of an ordererd list of steps.
+- `Stepper.Step` uses the HTML tag LI to represent each step in the list. It uses `aria-current=false|step` attribute.

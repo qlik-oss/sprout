@@ -1,0 +1,126 @@
+{
+  "theming": {
+    "common": {
+      "sizing": {
+        "s": {
+          "$type": "sizing",
+          "$value": "4px",
+          "$description": "S size"
+        },
+        "m": {
+          "$type": "sizing",
+          "$value": "8px",
+          "$description": "M size. Default grid unit"
+        },
+        "l": {
+          "$type": "sizing",
+          "$value": "12px",
+          "$description": "L size"
+        },
+        "xl": {
+          "$type": "sizing",
+          "$value": "16px",
+          "$description": "XL size"
+        },
+        "xxl": {
+          "$type": "sizing",
+          "$value": "24px",
+          "$description": "XXL size"
+        },
+        "3xl": {
+          "$type": "sizing",
+          "$value": "32px",
+          "$description": "3XL size"
+        },
+        "4xl": {
+          "$type": "sizing",
+          "$value": "40px",
+          "$description": "4XL size"
+        },
+        "5xl": {
+          "$type": "sizing",
+          "$value": "48px",
+          "$description": "5XL size"
+        },
+        "6xl": {
+          "$type": "sizing",
+          "$value": "56px",
+          "$description": "6XL size"
+        },
+        "7xl": {
+          "$type": "sizing",
+          "$value": "64px",
+          "$description": "7XL size"
+        }
+      }
+    },
+    "container": {
+      "sizing": {
+        "xxs": {
+          "$type": "sizing",
+          "$value": "256px",
+          "$description": "Sizing token for the smallest containers"
+        },
+        "xs": {
+          "$type": "sizing",
+          "$value": "320px",
+          "$description": "Sizing token for extra small containers"
+        },
+        "s": {
+          "$type": "sizing",
+          "$value": "400px",
+          "$description": "Sizing token for small containers"
+        },
+        "m": {
+          "$type": "sizing",
+          "$value": "512px",
+          "$description": "Sizing token for containers"
+        },
+        "l": {
+          "$type": "sizing",
+          "$value": "640px",
+          "$description": "Sizing token for larger containers"
+        },
+        "xl": {
+          "$type": "sizing",
+          "$value": "768px",
+          "$description": "Sizing token for extra large containers"
+        },
+        "xxl": {
+          "$type": "sizing",
+          "$value": "960px",
+          "$description": "Sizing token for XXL containers"
+        },
+        "3xl": {
+          "$type": "sizing",
+          "$value": "1024px",
+          "$description": "Sizing token for 3XL containers"
+        },
+        "4xl": {
+          "$type": "sizing",
+          "$value": "1280px",
+          "$description": "Sizing token for 4XL containers"
+        }
+      }
+    },
+    "illustration": {
+      "sizing": {
+        "s": {
+          "$type": "sizing",
+          "$value": "96px",
+          "$description": "Small illustration size"
+        },
+        "m": {
+          "$type": "sizing",
+          "$value": "128px",
+          "$description": "Medium illustration size"
+        },
+        "l": {
+          "$type": "sizing",
+          "$value": "160px",
+          "$description": "Large illustration size"
+        }
+      }
+    }
+  }
+}

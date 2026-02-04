@@ -1,0 +1,53 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./typography.stories";
+
+<Meta title="CSS/sprout-css-modules/typography" />
+
+## Typography in Sprout
+
+- [Typography in Figma Documentation](https://www.figma.com/design/aW0477Tif8HI1ogm3v9nv1/Sprout-DLS-Documentation?node-id=205-5249&t=gV5ImAJrr3pID7LL-0)
+- Status: can be used
+
+With React we provide you a className utility to get the right class that will give you access to the correct set of tokens
+
+```javascript
+
+// This example keep the native user agent style and just override color and font
+<h1 className={classNames("font-heading-xxl", "text-default")}>my title</h1>
+
+// But you can use 'flex' className to reset styles
+<h1 className={classNames("font-heading-xxl", "text-default")}>my title</h1>
+```
+
+<Canvas of={Stories.font} />
+
+## Semantic
+
+While you can use any class to apply style the semantic of the document stays important for accessibility.
+
+Use the right heading level for your titles and subtitles. So order is important and should be defined by the application structure.
+
+### Don't:
+
+- skip styles
+  - use `<h3>` if there is no `<h2>` before it
+  - use `<p>` for paragraphs without any styles applied
+  - use `<strong>` or `<b>` without any styles applied
+
+### Do:
+
+- use `<p className={classNames("font-body-m")}>` for paragraphs
+- use `<span className={classNames("font-body-m")}>` for inline text
+- use font_heading class for heading
+  - example 1:
+    - `<h1 className={classNames("font-heading-xxl")}>`
+    - `<h2 className={classNames("font-heading-xl")}>`
+    - `<h3 className={classNames("font-heading-l")}>`
+  - example 2:
+    - `<h1 className={classNames("font-heading-xl")}>`
+    - `<h2 className={classNames("font-heading-l")}>`
+    - `<h3 className={classNames("font-heading-m")}>`
+- use strong or bold with the corresponding class which should be an emphasized token
+  - `<strong className={classNames("font-label-s-emphasized")}>`
+  - `<b className={classNames("font-label-s-emphasized")}>`

@@ -1,0 +1,42 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./AlertModal.stories";
+
+<Meta title="Components/AlertModal" of={Stories} />
+
+# AlertModal
+
+Alert modals are a type of pop-up dialog used to grab the user's attention and communicate important information that requires immediate acknowledgment or action. These modals temporarily interrupt the user's workflow, making them an effective tool for delivering critical alerts, warnings, or confirmations. Designed to be visually prominent and concise, alert modals often include clear messaging and actionable buttons to guide the user in responding appropriately. Due to their disruptive nature, they should be used sparingly and only for high-priority communications that cannot be conveyed effectively through less intrusive means.
+
+## Usage
+
+```jsx
+import { useState } from "react";
+
+import { AlertModal, Button } from "@qlik/sprout-css-react";
+
+const [open, setOpen] = useState(false);
+
+<AlertModal
+  visible={open}
+  onClose={() => setOpen(false)}
+  title="Alert Title"
+  children="This is an important alert message."
+  details={<div>Additional details can go here.</div>}
+  variant="error"
+  footerRight={
+    <>
+      <Button label="Cancel" variant="quiet" />
+      <Button label="Continue" variant="default" />
+    </>
+  }
+/>;
+```
+
+## Properties
+
+<Controls of={Stories.ErrorVariant} />
+
+## Accessibility
+
+See the [Modal](/docs/components-modal--docs#accessibility) documentation for more information.

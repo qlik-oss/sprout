@@ -1,0 +1,106 @@
+{
+  "qlik": {
+    "appearance": {
+      "border-color": {
+        "default": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.15"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{qlik.appearance.border}"
+        },
+        "weak": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.1"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{qlik.appearance.border-color.default}"
+        },
+        "moderate": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.43"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{qlik.appearance.border-color.default}"
+        },
+        "strong": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.60"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{qlik.appearance.border-color.moderate}"
+        },
+        "extra-strong": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.75"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{qlik.appearance.border-color.strong}"
+        }
+      },
+      "mix": {
+        "weak": {
+          "$type": "other",
+          "$value": "0.05"
+        },
+        "default": {
+          "$type": "other",
+          "$value": "0.55",
+          "$description": "Used for border and comment"
+        }
+      },
+      "border-width": {
+        "default": {
+          "$type": "borderWidth",
+          "$value": "1"
+        },
+        "strong": {
+          "$type": "borderWidth",
+          "$value": "2"
+        }
+      },
+      "border-style": {
+        "default": {
+          "$type": "other",
+          "$value": "solid",
+          "$description": "Default border style"
+        },
+        "dashed": {
+          "$type": "other",
+          "$value": "dashed",
+          "$description": "Dashed border style"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@qlik/design-tokens",
+  "version": "0.16.29",
+  "description": "Design tokens for Qlik UI's",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "generated/tokens/js/sprout-tokens.js",
+  "files": [
+    "generated/",
+    "tokens/"
+  ],
+  "scripts": {
+    "gen-css": "pnpm sprout tokens --config sprout-token-config.json --format css --source tokens --output generated/tokens",
+    "gen-csv": "pnpm sprout tokens --config sprout-token-config.json --format csv --source tokens --output generated/tokens",
+    "gen-js": "pnpm sprout tokens --config sprout-token-config.json --format js --source tokens --output generated/tokens",
+    "gen-json": "pnpm sprout tokens --config sprout-token-config.json --format json --source tokens --output generated/tokens",
+    "gen-schema": "pnpm sprout tokens --config sprout-token-config.json --format jsonschema --source tokens/theming --output generated/tokens",
+    "gen-tokens": "pnpm sprout tokens --config sprout-token-config.json --source tokens --output generated/tokens",
+    "test": "vitest run --typecheck",
+    "test:watch": "vitest --typecheck"
+  },
+  "devDependencies": {
+    "@qlik/sprout-cli": "workspace:*",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

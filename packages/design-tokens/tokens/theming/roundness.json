@@ -1,0 +1,28 @@
+{
+  "theming": {
+    "common": {
+      "border-radius": {
+        "subtle": {
+          "$type": "borderRadius",
+          "$value": "{qlik.roundness.s} * {sprout.common.scale.roundness}",
+          "$description": "Subtle border radius for use of smaller UI elements or those with a slightly less sharp feeling."
+        },
+        "soft": {
+          "$type": "borderRadius",
+          "$value": "{qlik.roundness.m} * {sprout.common.scale.roundness}",
+          "$description": "Medium border radius for medium sizes UI elements and a softer feeling."
+        },
+        "cushiony": {
+          "$type": "borderRadius",
+          "$value": "{qlik.roundness.l} * {sprout.common.scale.roundness}",
+          "$description": "Very soft border radius for use of larger elements or elements with a cushiony feeling."
+        },
+        "pill": {
+          "$type": "borderRadius",
+          "$value": "{qlik.roundness.pill} * {sprout.common.scale.roundness}",
+          "$description": "Border radius for UI elements that supports pill shape such as buttons and inputs."
+        }
+      }
+    }
+  }
+}

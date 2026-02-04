@@ -1,0 +1,41 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Tree.stories";
+
+<Meta title="Components/Tree" />
+
+# Tree
+
+Tree views help users navigate large amounts of information by organizing content into a hierarchical structure using nested headings.In the tree view, branch nodes can be expanded or collapsed to reveal or hide their child nodes.
+
+```jsx
+import { Tree } from "@qlik/sprout-css-react";
+
+<Tree.TreeItem
+  id="leaf-icon"
+  path={["folder_expanded"]}
+  label="Leaf icon"
+  isLeaf
+  icon={<FileOutline />}
+/>;
+```
+
+<Canvas of={Stories.TreeItem} />
+
+<Controls of={Stories.TreeItem} />
+
+## Tree in a Table List / Data
+
+<Canvas of={Stories.TreeTable} />
+
+## Accessibility
+
+[W3/WAI/ARIA/APG Tree View](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/)
+
+HTML Structure
+
+The current component use a native `button` and a `IconButton` to manage the expand state.
+
+Keyboard
+
+- `Space` change the expand state.

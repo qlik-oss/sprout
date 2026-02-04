@@ -34,7 +34,9 @@
   "pnpm": {
     "updateConfig": {
       "ignoreDependencies": [
-        "eslint"
+        "eslint",
+        "react",
+        "react-dom"
       ]
     }
   }

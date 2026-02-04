@@ -1,0 +1,133 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Slider.stories";
+
+<Meta title="Components/Slider" />
+
+# Slider
+
+## Usage
+
+```tsx
+import { Slider } from "@qlik/sprout-css-react";
+
+<Slider.Single label="Volume" min={0} max={100} step={1} value={50} />;
+
+<Slider.Range label="Distance" min={0} max={100} step={10} value={[20, 50]} />;
+```
+
+## Properties
+
+> The `ref` is forwarded to the root element of both `Slider.Single` and `Slider.Range`.
+
+### Slider.Single
+
+<Canvas of={Stories.PlaygroundSingle} />
+<Controls of={Stories.PlaygroundSingle} />
+
+### Slider.Range
+
+<Canvas of={Stories.PlaygroundRange} />
+<Controls of={Stories.PlaygroundRange} />
+
+## React Hook Form Integration
+
+A live example is available [here](/story/integration-react-hook-form--form).
+
+The Slider component can be integrated with React Hook Form using the `Controller` component to manage its state and validation. Here's an example of how to use it:
+
+```tsx
+import { Controller, useForm } from "react-hook-form";
+
+import { Slider } from "@qlik/sprout-css-react";
+
+const { control, handleSubmit } = useForm();
+const onSubmit = (data) => {
+  console.log(data);
+};
+return (
+  <form onSubmit={handleSubmit(onSubmit)}>
+    <Controller
+      control={control}
+      name="amount"
+      render={({
+        field: { onChange, value, disabled },
+        fieldState: { invalid, error },
+      }) => (
+        <Slider.Single
+          value={value}
+          onChange={onChange}
+          disabled={disabled}
+          isError={invalid}
+          errorMessages={error?.message ? [error.message] : undefined}
+        />
+      )}
+    />
+
+    <Controller
+      control={control}
+      name="priceRange"
+      rules={{
+        validate: (value) => {
+          if (!Array.isArray(value) || value.length !== 2) {
+            return "Invalid range";
+          }
+
+          const [min, max] = value;
+          return min !== max || "Start and end values can't be the same";
+        },
+      }}
+      render={({
+        field: { onChange, value, disabled },
+        fieldState: { invalid, error },
+      }) => (
+        <Slider.Range
+          label="Price Range"
+          value={value}
+          onChange={onChange}
+          disabled={disabled}
+          isError={invalid}
+          errorMessages={error?.message ? [error.message] : undefined}
+        />
+      )}
+    />
+    <button type="submit">Submit</button>
+  </form>
+);
+```
+
+## Accessibility
+
+[W3/WAI/ARIA/APG Slider](https://www.w3.org/WAI/ARIA/apg/patterns/slider/) <br/>
+[W3/WAI/ARIA/APG Slider Multi-Thumb Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/slider-multithumb/examples/slider-multithumb/)
+
+### HTML Structure
+
+The slider components are built using compound components to promote reuse of shared structure and styles. The layout follows accessibility best practices:
+
+- The **outer wrapper** uses `role="group"` and `aria-labelledby` to associate the slider group with its visible label, allowing screen readers to announce the overall context of the control.
+- The `Field` component wraps the entire slider and provides consistent handling of e.g. label, help text, error messages, and info icon tooltip. It is reused across multiple form elements, including [TextField](/docs/components-textfield--docs).
+- The **track** and **indicator** elements are purely visual and use `role="presentation"` so they are ignored by assistive technologies.
+- Each **grip (thumb)** is a styled `div` and contains a visually hidden [input type="range" element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/range). This input enables native pointer and keyboard interaction.
+- An [output element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/output) is rendered alongside each grip to visually display the current value of its corresponding input. The output uses `aria-live="off"` to prevent screen readers from announcing changes unless the grip is actively focused.
+- The hidden input includes attributes like `aria-valuemin`, `aria-valuemax`, `aria-valuenow`, and `aria-orientation` to expose the value and behavior of the slider to assistive technologies.
+- Each input also includes a `tabindex="0"` attribute to ensure keyboard accessibility.
+- Each grip's input uses `aria-labelledby` to reference both the field label and its associated value label (`<output>`), allowing screen readers to announce full context such as "Slider range, 20".
+
+### Keyboard Interaction
+
+- `Right Arrow`: Increase the value of the slider by one step.
+- `Up Arrow`: Increase the value of the slider by one step.
+- `Left Arrow`: Decrease the value of the slider by one step.
+- `Down Arrow`: Decrease the value of the slider by one step.
+- `Home`: Set the slider to the first allowed value in its range.
+- `End`: Set the slider to the last allowed value in its range.
+- `Page Up`: Increase the slider value by an amount larger than the step change made by `Up/Right Arrow`.
+- `Page Down`: Decrease the slider value by an amount larger than the step change made by `Down/Left Arrow`.
+
+## Known Issues
+
+- Disabled state: Visual and functional support for the disabled state is not fully implemented.
+- Value label collision: There is no design in place to handle overlapping value labels when slider thumbs are close together.
+- Error state: Error state styling and behavior are not fully implemented.
+- Track notch interaction: Clicking or tapping notches (e.g., at min/max) does not yet move the thumb to the corresponding value.

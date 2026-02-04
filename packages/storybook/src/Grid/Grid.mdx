@@ -1,0 +1,37 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as GridStories from "./Grid.stories";
+import * as GridColumnStories from "./GridColumn.stories";
+import * as GridContainerStories from "./GridContainer.stories";
+
+<Meta title="Components/Grid" />
+
+# Grid
+
+Grid is a powerful layout system available as a React component.
+It's entirely built on top `@qlik/sprout-css-modules` [grid](/?path=/docs/css-sprout-css-modules--docs#grid) and [media](/?path=/story/css-sprout-css-modules--media)
+
+Sprout defines a 16 based column system that is great to create responsive layouts.
+
+## Grid.Container
+
+<Canvas of={GridContainerStories.GridContainer} />
+
+### API
+
+<Controls of={GridContainerStories.GridContainer} />
+
+## Grid.Column
+
+<Canvas of={GridColumnStories.GridColumn} />
+<Controls of={GridColumnStories.GridColumn} />
+
+## Responsive styles
+
+The `useMedia` hook is a React hook that allow you to easily get the current viewport size.
+
+```tsx
+import { useMedia } from "@qlik/sprout-css-hooks";
+```
+
+<Canvas of={GridStories.ResponsiveStyles} />

@@ -1,0 +1,20 @@
+.header {
+  border: none;
+  min-block-size: var(--sprout-common-sizing-l);
+  padding-block-end: calc(
+    var(--sprout-common-density-m) - var(--sprout-common-divider-default-width)
+  );
+}
+
+.header[data-variant="quiet"] {
+  padding-block-end: var(--sprout-common-density-m);
+  border-radius: var(--sprout-common-border-radius-subtle);
+}
+
+.divider {
+  border-block-end: var(--sprout-common-divider-default);
+}
+
+.icon > svg {
+  fill: currentcolor;
+}

@@ -1,0 +1,814 @@
+{
+  "sprout": {
+    "common": {
+      "foreground-color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.common.foreground-color.default}",
+          "$description": "Primary text color"
+        },
+        "weak": {
+          "$type": "color",
+          "$value": "{theming.common.foreground-color.weak}",
+          "$description": "Secondary text color. Used for discrete text."
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{theming.common.foreground-color.disabled}",
+          "$description": "Disabled text color."
+        }
+      },
+      "background-color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.common.background-color.default}",
+          "$description": "First level surface color."
+        },
+        "weak": {
+          "$type": "color",
+          "$value": "{theming.common.background-color.weak}",
+          "$description": "Second level surface color."
+        },
+        "moderate": {
+          "$type": "color",
+          "$value": "{theming.common.background-color.moderate}",
+          "$description": "Third level surface color."
+        },
+        "strong": {
+          "$type": "color",
+          "$value": "{theming.common.background-color.strong}",
+          "$description": "Fourth level surface color."
+        },
+        "enabled": {
+          "$type": "color",
+          "$value": "{theming.common.background-color.enabled}",
+          "$description": "Default background color for enabled interactive elements"
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "{theming.common.background-color.hover}",
+          "$description": "Hover background color for interactive elements"
+        },
+        "pressed": {
+          "$type": "color",
+          "$value": "{theming.common.background-color.pressed}",
+          "$description": "Pressed background color for interactive elements"
+        },
+        "toggled": {
+          "$type": "color",
+          "$value": "{theming.common.background-color.toggled}",
+          "$description": "Background color for toggled state of interactive elements"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{theming.common.background-color.disabled}",
+          "$description": "Disabled background color for interactive elements"
+        }
+      },
+      "border": {
+        "default": {
+          "$type": "border",
+          "$value": "{theming.common.border.default}",
+          "$description": "Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active."
+        },
+        "weak": {
+          "$type": "border",
+          "$value": "{theming.common.border.weak}",
+          "$description": "Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced."
+        },
+        "moderate": {
+          "$type": "border",
+          "$value": "{theming.common.border.moderate}",
+          "$description": "Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds."
+        },
+        "strong": {
+          "$type": "border",
+          "$value": "{theming.common.border.strong}",
+          "$description": "Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls)."
+        },
+        "extra-strong": {
+          "$type": "border",
+          "$value": "{theming.common.border.extra-strong}",
+          "$description": "High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs."
+        }
+      },
+      "elevation": {
+        "default": {
+          "$type": "boxShadow",
+          "$value": "{theming.common.elevation.default}",
+          "$description": "Default elevation box shadow style"
+        },
+        "weak": {
+          "$type": "boxShadow",
+          "$value": "{theming.common.elevation.weak}",
+          "$description": "Weak elevation box shadow style"
+        },
+        "moderate": {
+          "$type": "boxShadow",
+          "$value": "{theming.common.elevation.moderate}",
+          "$description": "Moderate elevation box shadow style"
+        },
+        "strong": {
+          "$type": "boxShadow",
+          "$value": "{theming.common.elevation.strong}",
+          "$description": "Strong elevation box shadow style"
+        }
+      },
+      "divider": {
+        "default": {
+          "$type": "border",
+          "$value": "{theming.common.divider.default}",
+          "$description": "Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts."
+        },
+        "subtle": {
+          "$type": "border",
+          "$value": "{theming.common.divider.subtle}",
+          "$description": "Compound token for subtle divider style"
+        },
+        "subtle-weak": {
+          "$type": "border",
+          "$value": "{theming.common.divider.subtle-weak}",
+          "$description": "Compound token for a very subtle divider style"
+        },
+        "weak": {
+          "$type": "border",
+          "$value": "{theming.common.divider.weak}",
+          "$description": "Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting."
+        },
+        "moderate": {
+          "$type": "border",
+          "$value": "{theming.common.divider.moderate}",
+          "$description": "Compound token for moderate border style"
+        },
+        "strong": {
+          "$type": "border",
+          "$value": "{theming.common.divider.strong}",
+          "$description": "Compound token for strong border style"
+        },
+        "extra-strong": {
+          "$type": "border",
+          "$value": "{theming.common.divider.extra-strong}",
+          "$description": "Maximum emphasis divider for critical or high-contrast requirements."
+        }
+      }
+    },
+    "inverse": {
+      "foreground-color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.inverse.foreground-color.default}",
+          "$description": "Contrasting text color"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{theming.inverse.foreground-color.disabled}"
+        }
+      },
+      "background-color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.inverse.background-color.default}",
+          "$description": "Contrasting background color"
+        }
+      },
+      "border": {
+        "default": {
+          "$type": "border",
+          "$value": "{theming.inverse.border.default}",
+          "$description": "Compound token for default inverse border"
+        },
+        "weak": {
+          "$type": "border",
+          "$value": "{theming.inverse.border.weak}",
+          "$description": "Compound token for inverse weak border"
+        }
+      }
+    },
+    "brand-primary": {
+      "color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.brand-primary.color.default}",
+          "$description": "Primary brand color."
+        },
+        "weak": {
+          "$type": "color",
+          "$value": "{theming.brand-primary.color.weak}"
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "{theming.brand-primary.color.hover}",
+          "$description": "Primary brand color. (hover)"
+        },
+        "pressed": {
+          "$type": "color",
+          "$value": "{theming.brand-primary.color.pressed}",
+          "$description": "Primary brand color. (pressed)"
+        },
+        "toggled": {
+          "$type": "color",
+          "$value": "{theming.brand-primary.color.toggled}",
+          "$description": "Primary brand color. (toggled)"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{theming.brand-primary.color.disabled}",
+          "$description": "Primary brand color. (disabled)"
+        },
+        "focus": {
+          "$type": "color",
+          "$value": "{theming.brand-primary.color.focus}",
+          "$description": "Primary brand color. (focus)"
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{theming.brand-primary.color.inverse}",
+          "$description": "Primary brand color. (inverse)"
+        }
+      }
+    },
+    "danger": {
+      "color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.danger.color.default}",
+          "$description": "Danger color."
+        },
+        "weak": {
+          "$type": "color",
+          "$value": "{theming.danger.color.weak}"
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "{theming.danger.color.hover}",
+          "$description": "Danger color. (hover)"
+        },
+        "pressed": {
+          "$type": "color",
+          "$value": "{theming.danger.color.pressed}",
+          "$description": "Danger color. (pressed)"
+        },
+        "toggled": {
+          "$type": "color",
+          "$value": "{theming.danger.color.toggled}",
+          "$description": "Danger color. (toggled)"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{theming.danger.color.disabled}",
+          "$description": "Danger color. (disabled)"
+        },
+        "focus": {
+          "$type": "color",
+          "$value": "{theming.danger.color.focus}",
+          "$description": "Danger color. (focus)"
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{theming.danger.color.inverse}",
+          "$description": "Danger color. (inverse)"
+        }
+      }
+    },
+    "link": {
+      "foreground-color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.link.foreground-color.default}",
+          "$description": "Link color"
+        }
+      }
+    },
+    "focus": {
+      "background-color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.focus.background-color.default}",
+          "$description": "Focus background color for interactive elements"
+        }
+      },
+      "color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.focus.color.default}",
+          "$description": "Focus color."
+        }
+      },
+      "border": {
+        "default": {
+          "$type": "border",
+          "$value": "{theming.focus.border.default}"
+        }
+      }
+    },
+    "success": {
+      "color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.success.color.default}",
+          "$description": "Success color."
+        },
+        "weak": {
+          "$type": "color",
+          "$value": "{theming.success.color.weak}"
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{theming.success.color.inverse}",
+          "$description": "Success color. (inverse)"
+        }
+      }
+    },
+    "warning": {
+      "color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.warning.color.default}",
+          "$description": "Warning color."
+        },
+        "weak": {
+          "$type": "color",
+          "$value": "{theming.warning.color.weak}"
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{theming.warning.color.inverse}",
+          "$description": "Warning color. (inverse)"
+        }
+      }
+    },
+    "info": {
+      "color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.info.color.default}",
+          "$description": "Info color."
+        },
+        "weak": {
+          "$type": "color",
+          "$value": "{theming.info.color.weak}"
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{theming.info.color.inverse}",
+          "$description": "Info color. (inverse)"
+        }
+      }
+    },
+    "favorite": {
+      "color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.favorite.color.default}",
+          "$description": "Color that conveys the 'favorite' feature(s)."
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{theming.favorite.color.inverse}",
+          "$description": "Favorite color. (inverse)"
+        }
+      }
+    },
+    "overlay": {
+      "background-color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.overlay.background-color.default}",
+          "$description": "Overlay background color to be used to increase the contrast for foregrounds on top of surfaces with unpredictable colors such as images."
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{theming.overlay.background-color.inverse}",
+          "$description": "Surface contrast overlay color to be used to frame and separate content from background color tokens."
+        }
+      }
+    },
+    "curtain": {
+      "background-color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.curtain.background-color.default}",
+          "$description": "Curtain background color to be used when \"dimming\" down parts of the UI such as modals do."
+        }
+      }
+    },
+    "input": {
+      "background-color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.input.background-color.default}",
+          "$description": "Background for input elements such as text areas and search fields"
+        }
+      }
+    },
+    "script": {
+      "color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.script.color.default}",
+          "$description": "Syntax highlight color for default text"
+        },
+        "comment": {
+          "$type": "color",
+          "$value": "{theming.script.color.comment}",
+          "$description": "Syntax highlight color for comment"
+        },
+        "function": {
+          "$type": "color",
+          "$value": "{theming.script.color.function}",
+          "$description": "Syntax highlight color for function"
+        },
+        "keyword": {
+          "$type": "color",
+          "$value": "{theming.script.color.keyword}",
+          "$description": "Syntax highlight color for keyword"
+        },
+        "bracket-match": {
+          "$type": "color",
+          "$value": "{theming.script.color.bracket-match}",
+          "$description": "Syntax highlight color for bracket match"
+        },
+        "variable": {
+          "$type": "color",
+          "$value": "{theming.script.color.variable}",
+          "$description": "Syntax highlight color for variable"
+        },
+        "field": {
+          "$type": "color",
+          "$value": "{theming.script.color.field}",
+          "$description": "Syntax highlight color for field"
+        },
+        "string": {
+          "$type": "color",
+          "$value": "{theming.script.color.string}",
+          "$description": "Syntax highlight color for string"
+        },
+        "measure": {
+          "$type": "color",
+          "$value": "{theming.script.color.measure}",
+          "$description": "Syntax highlight color for measure"
+        },
+        "table": {
+          "$type": "color",
+          "$value": "{theming.script.color.table}",
+          "$description": "Syntax highlight color for tables"
+        }
+      }
+    },
+    "selected": {
+      "border": {
+        "default": {
+          "$type": "border",
+          "$value": "{theming.selected.border.default}",
+          "$description": "Border for selected items"
+        }
+      },
+      "color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.selected.color.default}",
+          "$description": "Selected color"
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{theming.selected.color.inverse}",
+          "$description": "Selected inverse color"
+        }
+      },
+      "background-color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.selected.background-color.default}",
+          "$description": "Background color for selected items"
+        }
+      }
+    },
+    "illustration": {
+      "color": {
+        "palette": {
+          "0": {
+            "$type": "color",
+            "$value": "{theming.illustration.color.palette.0}",
+            "$description": "Illustration palette color"
+          },
+          "1": {
+            "$type": "color",
+            "$value": "{theming.illustration.color.palette.1}",
+            "$description": "Illustration palette color"
+          },
+          "2": {
+            "$type": "color",
+            "$value": "{theming.illustration.color.palette.2}",
+            "$description": "Illustration palette color"
+          },
+          "3": {
+            "$type": "color",
+            "$value": "{theming.illustration.color.palette.3}",
+            "$description": "Illustration palette color"
+          },
+          "4": {
+            "$type": "color",
+            "$value": "{theming.illustration.color.palette.4}",
+            "$description": "Illustration palette color"
+          },
+          "5": {
+            "$type": "color",
+            "$value": "{theming.illustration.color.palette.5}",
+            "$description": "Illustration palette color"
+          },
+          "6": {
+            "$type": "color",
+            "$value": "{theming.illustration.color.palette.6}",
+            "$description": "Illustration palette color"
+          }
+        }
+      }
+    },
+    "data": {
+      "color": {
+        "others": {
+          "$type": "color",
+          "$value": "{theming.data.color.others}",
+          "$description": "Use for when grouping values into an \"others\" bucket"
+        },
+        "null": {
+          "$type": "color",
+          "$value": "{theming.data.color.null}",
+          "$description": "Use for visualizing the concept of 'null'"
+        },
+        "support": {
+          "$type": "color",
+          "$value": "{theming.data.color.support}",
+          "$description": "Color for supporing items, like last year values, when visualizing data"
+        },
+        "support-weak": {
+          "$type": "color",
+          "$value": "{theming.data.color.support-weak}",
+          "$description": "Color for weak support areas, like confidence intervals, when visualizing data"
+        },
+        "categorical": {
+          "0": {
+            "0": {
+              "$type": "color",
+              "$value": "{theming.data.color.categorical.0.0}",
+              "$description": "Chart categorical color"
+            },
+            "1": {
+              "$type": "color",
+              "$value": "{theming.data.color.categorical.0.1}",
+              "$description": "Chart categorical color"
+            },
+            "2": {
+              "$type": "color",
+              "$value": "{theming.data.color.categorical.0.2}",
+              "$description": "Chart categorical color"
+            },
+            "3": {
+              "$type": "color",
+              "$value": "{theming.data.color.categorical.0.3}",
+              "$description": "Chart categorical color"
+            },
+            "4": {
+              "$type": "color",
+              "$value": "{theming.data.color.categorical.0.4}",
+              "$description": "Chart categorical color"
+            },
+            "5": {
+              "$type": "color",
+              "$value": "{theming.data.color.categorical.0.5}",
+              "$description": "Chart categorical color"
+            },
+            "6": {
+              "$type": "color",
+              "$value": "{theming.data.color.categorical.0.6}",
+              "$description": "Chart categorical color"
+            },
+            "7": {
+              "$type": "color",
+              "$value": "{theming.data.color.categorical.0.7}",
+              "$description": "Chart categorical color"
+            },
+            "8": {
+              "$type": "color",
+              "$value": "{theming.data.color.categorical.0.8}",
+              "$description": "Chart categorical color"
+            },
+            "9": {
+              "$type": "color",
+              "$value": "{theming.data.color.categorical.0.9}",
+              "$description": "Chart categorical color"
+            },
+            "10": {
+              "$type": "color",
+              "$value": "{theming.data.color.categorical.0.10}",
+              "$description": "Chart categorical color"
+            },
+            "11": {
+              "$type": "color",
+              "$value": "{theming.data.color.categorical.0.11}",
+              "$description": "Chart categorical color"
+            }
+          }
+        },
+        "sequential": {
+          "0": {
+            "0": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.0.0}",
+              "$description": "Chart sequential color"
+            },
+            "1": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.0.1}",
+              "$description": "Chart sequential color"
+            },
+            "2": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.0.2}",
+              "$description": "Chart sequential color"
+            },
+            "3": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.0.3}",
+              "$description": "Chart sequential color"
+            },
+            "4": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.0.4}",
+              "$description": "Chart sequential color"
+            },
+            "5": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.0.5}",
+              "$description": "Chart sequential color"
+            },
+            "6": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.0.6}",
+              "$description": "Chart sequential color"
+            },
+            "7": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.0.7}",
+              "$description": "Chart sequential color"
+            }
+          },
+          "1": {
+            "0": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.1.0}",
+              "$description": "Chart sequential color"
+            },
+            "1": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.1.1}",
+              "$description": "Chart sequential color"
+            },
+            "2": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.1.2}",
+              "$description": "Chart sequential color"
+            },
+            "3": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.1.3}",
+              "$description": "Chart sequential color"
+            },
+            "4": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.1.4}",
+              "$description": "Chart sequential color"
+            },
+            "5": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.1.5}",
+              "$description": "Chart sequential color"
+            },
+            "6": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.1.6}",
+              "$description": "Chart sequential color"
+            },
+            "7": {
+              "$type": "color",
+              "$value": "{theming.data.color.sequential.1.7}",
+              "$description": "Chart sequential color"
+            }
+          }
+        },
+        "diverging": {
+          "0": {
+            "0": {
+              "$type": "color",
+              "$value": "{theming.data.color.diverging.0.0}",
+              "$description": "Chart sequential color"
+            },
+            "1": {
+              "$type": "color",
+              "$value": "{theming.data.color.diverging.0.1}",
+              "$description": "Chart sequential color"
+            },
+            "2": {
+              "$type": "color",
+              "$value": "{theming.data.color.diverging.0.2}",
+              "$description": "Chart sequential color"
+            },
+            "3": {
+              "$type": "color",
+              "$value": "{theming.data.color.diverging.0.3}",
+              "$description": "Chart sequential color"
+            },
+            "4": {
+              "$type": "color",
+              "$value": "{theming.data.color.diverging.0.4}",
+              "$description": "Chart sequential color"
+            },
+            "5": {
+              "$type": "color",
+              "$value": "{theming.data.color.diverging.0.5}",
+              "$description": "Chart sequential color"
+            },
+            "6": {
+              "$type": "color",
+              "$value": "{theming.data.color.diverging.0.6}",
+              "$description": "Chart sequential color"
+            },
+            "7": {
+              "$type": "color",
+              "$value": "{theming.data.color.diverging.0.7}",
+              "$description": "Chart sequential color"
+            },
+            "8": {
+              "$type": "color",
+              "$value": "{theming.data.color.diverging.0.8}",
+              "$description": "Chart sequential color"
+            }
+          }
+        }
+      }
+    },
+    "alternative": {
+      "color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.alternative.color.default}",
+          "$description": "Color for the 'alternative' values in an associative selection model"
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{theming.alternative.color.inverse}",
+          "$description": "Color for the inverse 'alternative' values in an associative selection model"
+        }
+      }
+    },
+    "excluded": {
+      "color": {
+        "default": {
+          "$type": "color",
+          "$value": "{theming.excluded.color.default}",
+          "$description": "Color for the 'excluded' values in an associative selection model"
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{theming.excluded.color.inverse}",
+          "$description": "Color for the inverse 'excluded' values in an associative selection model"
+        }
+      }
+    },
+    "highlight": {
+      "foreground-color": {
+        "search-result": {
+          "$type": "color",
+          "$value": "{theming.highlight.foreground-color.search-result}",
+          "$description": "Color for foreground of search results"
+        }
+      },
+      "background-color": {
+        "search-result-default": {
+          "$type": "color",
+          "$value": "{theming.highlight.background-color.search-result-default}",
+          "$description": "Background color for search results"
+        },
+        "search-result-active": {
+          "$type": "color",
+          "$value": "{theming.highlight.background-color.search-result-active}",
+          "$description": "Background color for active search results"
+        },
+        "marker": {
+          "$type": "color",
+          "$value": "{theming.highlight.background-color.marker}",
+          "$description": "Background color for marker"
+        }
+      }
+    },
+    "placeholder": {
+      "border": {
+        "default": {
+          "$type": "border",
+          "$value": "{theming.placeholder.border.default}",
+          "$description": "Border for placeholder elements such as dropzones."
+        }
+      }
+    }
+  }
+}

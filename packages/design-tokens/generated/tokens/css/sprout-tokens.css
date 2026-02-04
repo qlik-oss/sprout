@@ -1,0 +1,1229 @@
+[data-qlik-appearance="qlik-dark"] {
+  --sprout-alternative-color-default: #e6e6e6; /* Color for the 'alternative' values in an associative selection model */
+  --sprout-alternative-color-inverse: #404040; /* Color for the inverse 'alternative' values in an associative selection model */
+  --sprout-brand-primary-color-default: #4ec574; /* Primary brand color. */
+  --sprout-brand-primary-color-disabled: rgb(100% 100% 100% / 0.15); /* Primary brand color. (disabled) */
+  --sprout-brand-primary-color-focus: rgb(44.471% 81.804% 56.392%); /* Primary brand color. (focus) */
+  --sprout-brand-primary-color-hover: rgb(44.471% 81.804% 56.392%); /* Primary brand color. (hover) */
+  --sprout-brand-primary-color-inverse: #333333; /* Primary brand color. (inverse) */
+  --sprout-brand-primary-color-pressed: rgb(61.13% 87.263% 69.474%); /* Primary brand color. (pressed) */
+  --sprout-brand-primary-color-toggled: rgb(72.791% 91.084% 78.632%); /* Primary brand color. (toggled) */
+  --sprout-brand-primary-color-weak: rgb(30.588% 77.255% 45.49% / 0.05);
+  --sprout-common-background-color-default: #333333; /* First level surface color. */
+  --sprout-common-background-color-disabled: rgb(
+    100% 100% 100% / 0.15
+  ); /* Disabled background color for interactive elements */
+  --sprout-common-background-color-enabled: rgb(
+    100% 100% 100% / 0.08
+  ); /* Default background color for enabled interactive elements */
+  --sprout-common-background-color-hover: rgb(
+    100% 100% 100% / 0.2
+  ); /* Hover background color for interactive elements */
+  --sprout-common-background-color-moderate: #1a1a1a; /* Third level surface color. */
+  --sprout-common-background-color-pressed: rgb(
+    100% 100% 100% / 0.1
+  ); /* Pressed background color for interactive elements */
+  --sprout-common-background-color-strong: #0e0e0e; /* Fourth level surface color. */
+  --sprout-common-background-color-toggled: rgb(
+    100% 100% 100% / 0.3
+  ); /* Background color for toggled state of interactive elements */
+  --sprout-common-background-color-weak: #262626; /* Second level surface color. */
+  --sprout-common-border-default-color: rgb(
+    100% 100% 100% / 0.15
+  ); /* Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active. */
+  --sprout-common-border-default-style: solid; /* Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active. */
+  --sprout-common-border-default-width: 1px; /* Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active. */
+  --sprout-common-border-extra-strong-color: rgb(
+    100% 100% 100% / 0.75
+  ); /* High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs. */
+  --sprout-common-border-extra-strong-style: solid; /* High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs. */
+  --sprout-common-border-extra-strong-width: 1px; /* High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs. */
+  --sprout-common-border-moderate-color: rgb(
+    100% 100% 100% / 0.43
+  ); /* Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds. */
+  --sprout-common-border-moderate-style: solid; /* Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds. */
+  --sprout-common-border-moderate-width: 1px; /* Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds. */
+  --sprout-common-border-strong-color: rgb(
+    100% 100% 100% / 0.6
+  ); /* Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls). */
+  --sprout-common-border-strong-style: solid; /* Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls). */
+  --sprout-common-border-strong-width: 1px; /* Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls). */
+  --sprout-common-border-weak-color: rgb(
+    100% 100% 100% / 0.1
+  ); /* Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced. */
+  --sprout-common-border-weak-style: solid; /* Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced. */
+  --sprout-common-border-weak-width: 1px; /* Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced. */
+  --sprout-common-divider-default-color: rgb(
+    100% 100% 100% / 0.3
+  ); /* Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts. */
+  --sprout-common-divider-default-style: solid; /* Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts. */
+  --sprout-common-divider-default-width: 1px; /* Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts. */
+  --sprout-common-divider-extra-strong-color: rgb(
+    100% 100% 100% / 0.7
+  ); /* Maximum emphasis divider for critical or high-contrast requirements. */
+  --sprout-common-divider-extra-strong-style: solid; /* Maximum emphasis divider for critical or high-contrast requirements. */
+  --sprout-common-divider-extra-strong-width: 2px; /* Maximum emphasis divider for critical or high-contrast requirements. */
+  --sprout-common-divider-moderate-color: rgb(100% 100% 100% / 0.3); /* Compound token for moderate border style */
+  --sprout-common-divider-moderate-style: solid; /* Compound token for moderate border style */
+  --sprout-common-divider-moderate-width: 1px; /* Compound token for moderate border style */
+  --sprout-common-divider-strong-color: rgb(100% 100% 100% / 0.5); /* Compound token for strong border style */
+  --sprout-common-divider-strong-style: solid; /* Compound token for strong border style */
+  --sprout-common-divider-strong-width: 1px; /* Compound token for strong border style */
+  --sprout-common-divider-subtle-color: rgb(100% 100% 100% / 0.3); /* Compound token for subtle divider style */
+  --sprout-common-divider-subtle-style: dashed; /* Compound token for subtle divider style */
+  --sprout-common-divider-subtle-weak-color: rgb(
+    100% 100% 100% / 0.12
+  ); /* Compound token for a very subtle divider style */
+  --sprout-common-divider-subtle-weak-style: dashed; /* Compound token for a very subtle divider style */
+  --sprout-common-divider-subtle-weak-width: 1px; /* Compound token for a very subtle divider style */
+  --sprout-common-divider-subtle-width: 1px; /* Compound token for subtle divider style */
+  --sprout-common-divider-weak-color: rgb(
+    100% 100% 100% / 0.12
+  ); /* Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting. */
+  --sprout-common-divider-weak-style: solid; /* Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting. */
+  --sprout-common-divider-weak-width: 1px; /* Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting. */
+  --sprout-common-elevation-default:
+    0 2px 4px 0 #00000026, 0 0 0 1px #0000000d; /* Default elevation box shadow style */
+  --sprout-common-elevation-moderate:
+    0 4px 10px 0 #00000026, 0 0 0 1px #0000000d; /* Moderate elevation box shadow style */
+  --sprout-common-elevation-strong: 0 6px 20px 0 #00000026, 0 0 0 1px #0000000d; /* Strong elevation box shadow style */
+  --sprout-common-elevation-weak: 0 1px 2px 0 #00000026, 0 0 0 1px #0000000d; /* Weak elevation box shadow style */
+  --sprout-common-foreground-color-default: #ffffff; /* Primary text color */
+  --sprout-common-foreground-color-disabled: rgb(100% 100% 100% / 0.55); /* Disabled text color. */
+  --sprout-common-foreground-color-weak: rgb(100% 100% 100% / 0.76); /* Secondary text color. Used for discrete text. */
+  --sprout-curtain-background-color-default: rgb(
+    0% 0% 0% / 0.6
+  ); /* Curtain background color to be used when "dimming" down parts of the UI such as modals do. */
+  --sprout-danger-color-default: #f15a81; /* Danger color. */
+  --sprout-danger-color-disabled: rgb(100% 100% 100% / 0.15); /* Danger color. (disabled) */
+  --sprout-danger-color-focus: rgb(94.675% 37.235% 52.071%); /* Danger color. (focus) */
+  --sprout-danger-color-hover: rgb(95.608% 48.235% 60.471%); /* Danger color. (hover) */
+  --sprout-danger-color-inverse: #333333; /* Danger color. (inverse) */
+  --sprout-danger-color-pressed: rgb(96.926% 63.765% 72.33%); /* Danger color. (pressed) */
+  --sprout-danger-color-toggled: rgb(97.848% 74.636% 80.631%); /* Danger color. (toggled) */
+  --sprout-danger-color-weak: rgb(94.51% 35.294% 50.588% / 0.05);
+  --sprout-data-color-categorical-0-0: #5daef1; /* Chart categorical color */
+  --sprout-data-color-categorical-0-1: #6694a8; /* Chart categorical color */
+  --sprout-data-color-categorical-0-10: #ae006d; /* Chart categorical color */
+  --sprout-data-color-categorical-0-11: #d92686; /* Chart categorical color */
+  --sprout-data-color-categorical-0-2: #8bc5f5; /* Chart categorical color */
+  --sprout-data-color-categorical-0-3: #00b5aa; /* Chart categorical color */
+  --sprout-data-color-categorical-0-4: #00873d; /* Chart categorical color */
+  --sprout-data-color-categorical-0-5: #ffb84d; /* Chart categorical color */
+  --sprout-data-color-categorical-0-6: #ffcd80; /* Chart categorical color */
+  --sprout-data-color-categorical-0-7: #870063; /* Chart categorical color */
+  --sprout-data-color-categorical-0-8: #f15a81; /* Chart categorical color */
+  --sprout-data-color-categorical-0-9: #e74096; /* Chart categorical color */
+  --sprout-data-color-diverging-0-0: #ff9800; /* Chart sequential color */
+  --sprout-data-color-diverging-0-1: #f57d00; /* Chart sequential color */
+  --sprout-data-color-diverging-0-2: #bf3900; /* Chart sequential color */
+  --sprout-data-color-diverging-0-3: #8e2200; /* Chart sequential color */
+  --sprout-data-color-diverging-0-4: rgb(19.02% 12.157% 21.373%); /* Chart sequential color */
+  --sprout-data-color-diverging-0-5: #0047ad; /* Chart sequential color */
+  --sprout-data-color-diverging-0-6: #0275d9; /* Chart sequential color */
+  --sprout-data-color-diverging-0-7: #379def; /* Chart sequential color */
+  --sprout-data-color-diverging-0-8: #8bc5f5; /* Chart sequential color */
+  --sprout-data-color-null: #666666; /* Use for visualizing the concept of 'null' */
+  --sprout-data-color-others: #b3b3b3; /* Use for when grouping values into an "others" bucket */
+  --sprout-data-color-sequential-0-0: #ffcd80; /* Chart sequential color */
+  --sprout-data-color-sequential-0-1: #ffb84d; /* Chart sequential color */
+  --sprout-data-color-sequential-0-2: #ff9800; /* Chart sequential color */
+  --sprout-data-color-sequential-0-3: #ef6d00; /* Chart sequential color */
+  --sprout-data-color-sequential-0-4: #e65200; /* Chart sequential color */
+  --sprout-data-color-sequential-0-5: #bf3900; /* Chart sequential color */
+  --sprout-data-color-sequential-0-6: #8e2200; /* Chart sequential color */
+  --sprout-data-color-sequential-0-7: #611100; /* Chart sequential color */
+  --sprout-data-color-sequential-1-0: #b8dbf9; /* Chart sequential color */
+  --sprout-data-color-sequential-1-1: #8bc5f5; /* Chart sequential color */
+  --sprout-data-color-sequential-1-2: #379def; /* Chart sequential color */
+  --sprout-data-color-sequential-1-3: #0275d9; /* Chart sequential color */
+  --sprout-data-color-sequential-1-4: #005db9; /* Chart sequential color */
+  --sprout-data-color-sequential-1-5: #0047ad; /* Chart sequential color */
+  --sprout-data-color-sequential-1-6: #003a8f; /* Chart sequential color */
+  --sprout-data-color-sequential-1-7: #002d6d; /* Chart sequential color */
+  --sprout-data-color-support: #a6a6a6; /* Color for supporing items, like last year values, when visualizing data */
+  --sprout-data-color-support-weak: #666666; /* Color for weak support areas, like confidence intervals, when visualizing data */
+  --sprout-excluded-color-default: #b3b3b3; /* Color for the 'excluded' values in an associative selection model */
+  --sprout-excluded-color-inverse: #404040; /* Color for the inverse 'excluded' values in an associative selection model */
+  --sprout-favorite-color-default: #ffb84d; /* Color that conveys the 'favorite' feature(s). */
+  --sprout-favorite-color-inverse: #333333; /* Favorite color. (inverse) */
+  --sprout-focus-background-color-default: rgb(
+    100% 100% 100% / 0.2
+  ); /* Focus background color for interactive elements */
+  --sprout-focus-border-default-color: #5daef1;
+  --sprout-focus-border-default-style: solid;
+  --sprout-focus-border-default-width: 2px;
+  --sprout-focus-color-default: #5daef1; /* Focus color. */
+  --sprout-highlight-background-color-marker: #8f7700; /* Background color for marker */
+  --sprout-highlight-background-color-search-result-active: #ef6d00; /* Background color for active search results */
+  --sprout-highlight-background-color-search-result-default: #b39500; /* Background color for search results */
+  --sprout-highlight-foreground-color-search-result: #ffffff; /* Color for foreground of search results */
+  --sprout-illustration-color-palette-0: #ffffff; /* Illustration palette color */
+  --sprout-illustration-color-palette-1: #cccccc; /* Illustration palette color */
+  --sprout-illustration-color-palette-2: #4ec574; /* Illustration palette color */
+  --sprout-illustration-color-palette-3: #f15a81; /* Illustration palette color */
+  --sprout-illustration-color-palette-4: #5daef1; /* Illustration palette color */
+  --sprout-illustration-color-palette-5: #ed60a9; /* Illustration palette color */
+  --sprout-illustration-color-palette-6: #ffb84d; /* Illustration palette color */
+  --sprout-info-color-default: #5daef1; /* Info color. */
+  --sprout-info-color-inverse: #333333; /* Info color. (inverse) */
+  --sprout-info-color-weak: rgb(36.471% 68.235% 94.51% / 0.05);
+  --sprout-input-background-color-default: rgb(
+    100% 100% 100% / 0.06
+  ); /* Background for input elements such as text areas and search fields */
+  --sprout-inverse-background-color-default: #ffffff; /* Contrasting background color */
+  --sprout-inverse-border-default-color: #333333; /* Compound token for default inverse border */
+  --sprout-inverse-border-default-style: solid; /* Compound token for default inverse border */
+  --sprout-inverse-border-default-width: 1px; /* Compound token for default inverse border */
+  --sprout-inverse-border-weak-color: rgb(20% 20% 20% / 0.3); /* Compound token for inverse weak border */
+  --sprout-inverse-border-weak-style: solid; /* Compound token for inverse weak border */
+  --sprout-inverse-border-weak-width: 1px; /* Compound token for inverse weak border */
+  --sprout-inverse-foreground-color-default: #333333; /* Contrasting text color */
+  --sprout-inverse-foreground-color-disabled: rgb(20% 20% 20% / 0.3);
+  --sprout-link-foreground-color-default: #5daef1; /* Link color */
+  --sprout-overlay-background-color-default: rgb(
+    20% 20% 20% / 0.8
+  ); /* Overlay background color to be used to increase the contrast for foregrounds on top of surfaces with unpredictable colors such as images. */
+  --sprout-overlay-background-color-inverse: rgb(
+    100% 100% 100% / 0.08
+  ); /* Surface contrast overlay color to be used to frame and separate content from background color tokens. */
+  --sprout-placeholder-border-default-color: rgb(
+    100% 100% 100% / 0.43
+  ); /* Border for placeholder elements such as dropzones. */
+  --sprout-placeholder-border-default-style: dashed; /* Border for placeholder elements such as dropzones. */
+  --sprout-placeholder-border-default-width: 1px; /* Border for placeholder elements such as dropzones. */
+  --sprout-script-color-bracket-match: rgb(94.353% 48.471% 10%); /* Syntax highlight color for bracket match */
+  --sprout-script-color-comment: rgb(76% 76% 76%); /* Syntax highlight color for comment */
+  --sprout-script-color-default: #ffffff; /* Syntax highlight color for default text */
+  --sprout-script-color-field: rgb(100% 71.725% 30%); /* Syntax highlight color for field */
+  --sprout-script-color-function: rgb(45.098% 73.098% 95.608%); /* Syntax highlight color for function */
+  --sprout-script-color-keyword: rgb(45.098% 73.098% 95.608%); /* Syntax highlight color for keyword */
+  --sprout-script-color-measure: rgb(68.235% 66.353% 88.706%); /* Syntax highlight color for measure */
+  --sprout-script-color-string: rgb(47.529% 83.765% 61.176%); /* Syntax highlight color for string */
+  --sprout-script-color-table: rgb(88.078% 31.922% 62.039%); /* Syntax highlight color for tables */
+  --sprout-script-color-variable: rgb(97.529% 67.882% 75.02%); /* Syntax highlight color for variable */
+  --sprout-selected-background-color-default: rgb(100% 100% 100% / 0.1); /* Background color for selected items */
+  --sprout-selected-border-default-color: #4ec574; /* Border for selected items */
+  --sprout-selected-border-default-style: solid; /* Border for selected items */
+  --sprout-selected-border-default-width: 2px; /* Border for selected items */
+  --sprout-selected-color-default: #4ec574; /* Selected color */
+  --sprout-selected-color-inverse: #333333; /* Selected inverse color */
+  --sprout-success-color-default: #4ec574; /* Success color. */
+  --sprout-success-color-inverse: #333333; /* Success color. (inverse) */
+  --sprout-success-color-weak: rgb(30.588% 77.255% 45.49% / 0.05);
+  --sprout-warning-color-default: #ff9800; /* Warning color. */
+  --sprout-warning-color-inverse: #333333; /* Warning color. (inverse) */
+  --sprout-warning-color-weak: rgb(100% 59.608% 0% / 0.05);
+}
+
+[data-qlik-appearance="qlik-light"] {
+  --sprout-alternative-color-default: #e6e6e6; /* Color for the 'alternative' values in an associative selection model */
+  --sprout-alternative-color-inverse: #404040; /* Color for the inverse 'alternative' values in an associative selection model */
+  --sprout-brand-primary-color-default: #00873d; /* Primary brand color. */
+  --sprout-brand-primary-color-disabled: rgb(0% 0% 0% / 0.15); /* Primary brand color. (disabled) */
+  --sprout-brand-primary-color-focus: rgb(0% 42.353% 19.137%); /* Primary brand color. (focus) */
+  --sprout-brand-primary-color-hover: rgb(0% 42.353% 19.137%); /* Primary brand color. (hover) */
+  --sprout-brand-primary-color-inverse: #ffffff; /* Primary brand color. (inverse) */
+  --sprout-brand-primary-color-pressed: rgb(0% 29.647% 13.396%); /* Primary brand color. (pressed) */
+  --sprout-brand-primary-color-toggled: rgb(0% 20.753% 9.3772%); /* Primary brand color. (toggled) */
+  --sprout-brand-primary-color-weak: rgb(0% 52.941% 23.922% / 0.05);
+  --sprout-common-background-color-default: #ffffff; /* First level surface color. */
+  --sprout-common-background-color-disabled: rgb(
+    0% 0% 0% / 0.03
+  ); /* Disabled background color for interactive elements */
+  --sprout-common-background-color-enabled: #ffffff; /* Default background color for enabled interactive elements */
+  --sprout-common-background-color-hover: rgb(0% 0% 0% / 0.03); /* Hover background color for interactive elements */
+  --sprout-common-background-color-moderate: #f2f2f2; /* Third level surface color. */
+  --sprout-common-background-color-pressed: rgb(
+    0% 0% 0% / 0.05
+  ); /* Pressed background color for interactive elements */
+  --sprout-common-background-color-strong: #e6e6e6; /* Fourth level surface color. */
+  --sprout-common-background-color-toggled: rgb(
+    0% 0% 0% / 0.08
+  ); /* Background color for toggled state of interactive elements */
+  --sprout-common-background-color-weak: #fafafa; /* Second level surface color. */
+  --sprout-common-border-default-color: rgb(
+    0% 0% 0% / 0.15
+  ); /* Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active. */
+  --sprout-common-border-default-style: solid; /* Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active. */
+  --sprout-common-border-default-width: 1px; /* Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active. */
+  --sprout-common-border-extra-strong-color: rgb(
+    0% 0% 0% / 0.75
+  ); /* High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs. */
+  --sprout-common-border-extra-strong-style: solid; /* High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs. */
+  --sprout-common-border-extra-strong-width: 1px; /* High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs. */
+  --sprout-common-border-moderate-color: rgb(
+    0% 0% 0% / 0.43
+  ); /* Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds. */
+  --sprout-common-border-moderate-style: solid; /* Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds. */
+  --sprout-common-border-moderate-width: 1px; /* Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds. */
+  --sprout-common-border-strong-color: rgb(
+    0% 0% 0% / 0.6
+  ); /* Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls). */
+  --sprout-common-border-strong-style: solid; /* Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls). */
+  --sprout-common-border-strong-width: 1px; /* Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls). */
+  --sprout-common-border-weak-color: rgb(
+    0% 0% 0% / 0.1
+  ); /* Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced. */
+  --sprout-common-border-weak-style: solid; /* Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced. */
+  --sprout-common-border-weak-width: 1px; /* Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced. */
+  --sprout-common-divider-default-color: rgb(
+    0% 0% 0% / 0.08
+  ); /* Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts. */
+  --sprout-common-divider-default-style: solid; /* Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts. */
+  --sprout-common-divider-default-width: 1px; /* Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts. */
+  --sprout-common-divider-extra-strong-color: rgb(
+    0% 0% 0% / 0.43
+  ); /* Maximum emphasis divider for critical or high-contrast requirements. */
+  --sprout-common-divider-extra-strong-style: solid; /* Maximum emphasis divider for critical or high-contrast requirements. */
+  --sprout-common-divider-extra-strong-width: 2px; /* Maximum emphasis divider for critical or high-contrast requirements. */
+  --sprout-common-divider-moderate-color: rgb(0% 0% 0% / 0.08); /* Compound token for moderate border style */
+  --sprout-common-divider-moderate-style: solid; /* Compound token for moderate border style */
+  --sprout-common-divider-moderate-width: 1px; /* Compound token for moderate border style */
+  --sprout-common-divider-strong-color: rgb(0% 0% 0% / 0.2); /* Compound token for strong border style */
+  --sprout-common-divider-strong-style: solid; /* Compound token for strong border style */
+  --sprout-common-divider-strong-width: 1px; /* Compound token for strong border style */
+  --sprout-common-divider-subtle-color: rgb(0% 0% 0% / 0.08); /* Compound token for subtle divider style */
+  --sprout-common-divider-subtle-style: dashed; /* Compound token for subtle divider style */
+  --sprout-common-divider-subtle-weak-color: rgb(0% 0% 0% / 0.04); /* Compound token for a very subtle divider style */
+  --sprout-common-divider-subtle-weak-style: dashed; /* Compound token for a very subtle divider style */
+  --sprout-common-divider-subtle-weak-width: 1px; /* Compound token for a very subtle divider style */
+  --sprout-common-divider-subtle-width: 1px; /* Compound token for subtle divider style */
+  --sprout-common-divider-weak-color: rgb(
+    0% 0% 0% / 0.04
+  ); /* Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting. */
+  --sprout-common-divider-weak-style: solid; /* Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting. */
+  --sprout-common-divider-weak-width: 1px; /* Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting. */
+  --sprout-common-elevation-default:
+    0 2px 4px 0 #00000026, 0 0 0 1px #0000000d; /* Default elevation box shadow style */
+  --sprout-common-elevation-moderate:
+    0 4px 10px 0 #00000026, 0 0 0 1px #0000000d; /* Moderate elevation box shadow style */
+  --sprout-common-elevation-strong: 0 6px 20px 0 #00000026, 0 0 0 1px #0000000d; /* Strong elevation box shadow style */
+  --sprout-common-elevation-weak: 0 1px 2px 0 #00000026, 0 0 0 1px #0000000d; /* Weak elevation box shadow style */
+  --sprout-common-foreground-color-default: #404040; /* Primary text color */
+  --sprout-common-foreground-color-disabled: rgb(25.098% 25.098% 25.098% / 0.55); /* Disabled text color. */
+  --sprout-common-foreground-color-weak: rgb(
+    25.098% 25.098% 25.098% / 0.76
+  ); /* Secondary text color. Used for discrete text. */
+  --sprout-curtain-background-color-default: rgb(
+    0% 0% 0% / 0.6
+  ); /* Curtain background color to be used when "dimming" down parts of the UI such as modals do. */
+  --sprout-danger-color-default: #d7004b; /* Danger color. */
+  --sprout-danger-color-disabled: rgb(0% 0% 0% / 0.15); /* Danger color. (disabled) */
+  --sprout-danger-color-focus: rgb(81.784% 0% 28.529%); /* Danger color. (focus) */
+  --sprout-danger-color-hover: rgb(67.451% 0% 23.529%); /* Danger color. (hover) */
+  --sprout-danger-color-inverse: #ffffff; /* Danger color. (inverse) */
+  --sprout-danger-color-pressed: rgb(47.216% 0% 16.47%); /* Danger color. (pressed) */
+  --sprout-danger-color-toggled: rgb(33.051% 0% 11.529%); /* Danger color. (toggled) */
+  --sprout-danger-color-weak: rgb(84.314% 0% 29.412% / 0.05);
+  --sprout-data-color-categorical-0-0: #0047ad; /* Chart categorical color */
+  --sprout-data-color-categorical-0-1: #6694a8; /* Chart categorical color */
+  --sprout-data-color-categorical-0-10: #ae006d; /* Chart categorical color */
+  --sprout-data-color-categorical-0-11: #d92686; /* Chart categorical color */
+  --sprout-data-color-categorical-0-2: #8bc5f5; /* Chart categorical color */
+  --sprout-data-color-categorical-0-3: #00b5aa; /* Chart categorical color */
+  --sprout-data-color-categorical-0-4: #00873d; /* Chart categorical color */
+  --sprout-data-color-categorical-0-5: #ffb84d; /* Chart categorical color */
+  --sprout-data-color-categorical-0-6: #ffcd80; /* Chart categorical color */
+  --sprout-data-color-categorical-0-7: #870063; /* Chart categorical color */
+  --sprout-data-color-categorical-0-8: #f15a81; /* Chart categorical color */
+  --sprout-data-color-categorical-0-9: #e74096; /* Chart categorical color */
+  --sprout-data-color-diverging-0-0: #8e2200; /* Chart sequential color */
+  --sprout-data-color-diverging-0-1: #bf3900; /* Chart sequential color */
+  --sprout-data-color-diverging-0-2: #f57d00; /* Chart sequential color */
+  --sprout-data-color-diverging-0-3: #ff9800; /* Chart sequential color */
+  --sprout-data-color-diverging-0-4: #edf7fc; /* Chart sequential color */
+  --sprout-data-color-diverging-0-5: #8bc5f5; /* Chart sequential color */
+  --sprout-data-color-diverging-0-6: #379def; /* Chart sequential color */
+  --sprout-data-color-diverging-0-7: #0275d9; /* Chart sequential color */
+  --sprout-data-color-diverging-0-8: #0047ad; /* Chart sequential color */
+  --sprout-data-color-null: #d9d9d9; /* Use for visualizing the concept of 'null' */
+  --sprout-data-color-others: #a6a6a6; /* Use for when grouping values into an "others" bucket */
+  --sprout-data-color-sequential-0-0: #611100; /* Chart sequential color */
+  --sprout-data-color-sequential-0-1: #8e2200; /* Chart sequential color */
+  --sprout-data-color-sequential-0-2: #bf3900; /* Chart sequential color */
+  --sprout-data-color-sequential-0-3: #e65200; /* Chart sequential color */
+  --sprout-data-color-sequential-0-4: #ef6d00; /* Chart sequential color */
+  --sprout-data-color-sequential-0-5: #ff9800; /* Chart sequential color */
+  --sprout-data-color-sequential-0-6: #ffb84d; /* Chart sequential color */
+  --sprout-data-color-sequential-0-7: #ffcd80; /* Chart sequential color */
+  --sprout-data-color-sequential-1-0: #002d6d; /* Chart sequential color */
+  --sprout-data-color-sequential-1-1: #003a8f; /* Chart sequential color */
+  --sprout-data-color-sequential-1-2: #0047ad; /* Chart sequential color */
+  --sprout-data-color-sequential-1-3: #005db9; /* Chart sequential color */
+  --sprout-data-color-sequential-1-4: #0275d9; /* Chart sequential color */
+  --sprout-data-color-sequential-1-5: #379def; /* Chart sequential color */
+  --sprout-data-color-sequential-1-6: #8bc5f5; /* Chart sequential color */
+  --sprout-data-color-sequential-1-7: #b8dbf9; /* Chart sequential color */
+  --sprout-data-color-support: #b3b3b3; /* Color for supporing items, like last year values, when visualizing data */
+  --sprout-data-color-support-weak: #e6e6e6; /* Color for weak support areas, like confidence intervals, when visualizing data */
+  --sprout-excluded-color-default: #b3b3b3; /* Color for the 'excluded' values in an associative selection model */
+  --sprout-excluded-color-inverse: #404040; /* Color for the inverse 'excluded' values in an associative selection model */
+  --sprout-favorite-color-default: #ffb84d; /* Color that conveys the 'favorite' feature(s). */
+  --sprout-favorite-color-inverse: #ffffff; /* Favorite color. (inverse) */
+  --sprout-focus-background-color-default: rgb(0% 0% 0% / 0.03); /* Focus background color for interactive elements */
+  --sprout-focus-border-default-color: #005db9;
+  --sprout-focus-border-default-style: solid;
+  --sprout-focus-border-default-width: 2px;
+  --sprout-focus-color-default: #005db9; /* Focus color. */
+  --sprout-highlight-background-color-marker: #ffe600; /* Background color for marker */
+  --sprout-highlight-background-color-search-result-active: #ffb84d; /* Background color for active search results */
+  --sprout-highlight-background-color-search-result-default: #fff266; /* Background color for search results */
+  --sprout-highlight-foreground-color-search-result: #000000; /* Color for foreground of search results */
+  --sprout-illustration-color-palette-0: #595959; /* Illustration palette color */
+  --sprout-illustration-color-palette-1: #999999; /* Illustration palette color */
+  --sprout-illustration-color-palette-2: #009844; /* Illustration palette color */
+  --sprout-illustration-color-palette-3: #d7004b; /* Illustration palette color */
+  --sprout-illustration-color-palette-4: #005db9; /* Illustration palette color */
+  --sprout-illustration-color-palette-5: #870063; /* Illustration palette color */
+  --sprout-illustration-color-palette-6: #ef6d00; /* Illustration palette color */
+  --sprout-info-color-default: #005db9; /* Info color. */
+  --sprout-info-color-inverse: #ffffff; /* Info color. (inverse) */
+  --sprout-info-color-weak: rgb(0% 36.471% 72.549% / 0.05);
+  --sprout-input-background-color-default: #ffffff; /* Background for input elements such as text areas and search fields */
+  --sprout-inverse-background-color-default: #404040; /* Contrasting background color */
+  --sprout-inverse-border-default-color: #ffffff; /* Compound token for default inverse border */
+  --sprout-inverse-border-default-style: solid; /* Compound token for default inverse border */
+  --sprout-inverse-border-default-width: 1px; /* Compound token for default inverse border */
+  --sprout-inverse-border-weak-color: rgb(100% 100% 100% / 0.3); /* Compound token for inverse weak border */
+  --sprout-inverse-border-weak-style: solid; /* Compound token for inverse weak border */
+  --sprout-inverse-border-weak-width: 1px; /* Compound token for inverse weak border */
+  --sprout-inverse-foreground-color-default: #ffffff; /* Contrasting text color */
+  --sprout-inverse-foreground-color-disabled: rgb(100% 100% 100% / 0.3);
+  --sprout-link-foreground-color-default: #005db9; /* Link color */
+  --sprout-overlay-background-color-default: rgb(
+    100% 100% 100% / 0.8
+  ); /* Overlay background color to be used to increase the contrast for foregrounds on top of surfaces with unpredictable colors such as images. */
+  --sprout-overlay-background-color-inverse: rgb(
+    0% 0% 0% / 0.05
+  ); /* Surface contrast overlay color to be used to frame and separate content from background color tokens. */
+  --sprout-placeholder-border-default-color: rgb(
+    0% 0% 0% / 0.43
+  ); /* Border for placeholder elements such as dropzones. */
+  --sprout-placeholder-border-default-style: dashed; /* Border for placeholder elements such as dropzones. */
+  --sprout-placeholder-border-default-width: 1px; /* Border for placeholder elements such as dropzones. */
+  --sprout-script-color-bracket-match: rgb(86.863% 40.98% 2.5098%); /* Syntax highlight color for bracket match */
+  --sprout-script-color-comment: rgb(47.569% 47.569% 47.569%); /* Syntax highlight color for comment */
+  --sprout-script-color-default: #404040; /* Syntax highlight color for default text */
+  --sprout-script-color-field: rgb(77.529% 49.255% 7.5294%); /* Syntax highlight color for field */
+  --sprout-script-color-function: rgb(22.627% 50.627% 73.137%); /* Syntax highlight color for function */
+  --sprout-script-color-keyword: rgb(22.627% 50.627% 73.137%); /* Syntax highlight color for keyword */
+  --sprout-script-color-measure: rgb(38.275% 36.392% 58.745%); /* Syntax highlight color for measure */
+  --sprout-script-color-string: rgb(17.569% 53.804% 31.216%); /* Syntax highlight color for string */
+  --sprout-script-color-table: rgb(73.098% 16.941% 47.059%); /* Syntax highlight color for tables */
+  --sprout-script-color-variable: rgb(75.059% 45.412% 52.549%); /* Syntax highlight color for variable */
+  --sprout-selected-background-color-default: rgb(0% 0% 0% / 0.05); /* Background color for selected items */
+  --sprout-selected-border-default-color: #00873d; /* Border for selected items */
+  --sprout-selected-border-default-style: solid; /* Border for selected items */
+  --sprout-selected-border-default-width: 2px; /* Border for selected items */
+  --sprout-selected-color-default: #00873d; /* Selected color */
+  --sprout-selected-color-inverse: #ffffff; /* Selected inverse color */
+  --sprout-success-color-default: #00873d; /* Success color. */
+  --sprout-success-color-inverse: #ffffff; /* Success color. (inverse) */
+  --sprout-success-color-weak: rgb(0% 52.941% 23.922% / 0.05);
+  --sprout-warning-color-default: #ef6d00; /* Warning color. */
+  --sprout-warning-color-inverse: #ffffff; /* Warning color. (inverse) */
+  --sprout-warning-color-weak: rgb(93.725% 42.745% 0% / 0.05);
+}
+
+:root {
+  --sprout-container-breakpoint-s: 640px; /* Viewport width breakpoint token for small layouts */
+  --sprout-container-breakpoint-m: 1024px; /* Viewport width breakpoint token for medium-wide layouts */
+  --sprout-container-breakpoint-l: 1600px; /* Viewport width breakpoint token for wide layouts */
+  --sprout-container-layer-stacked: 1000; /* Use for stacked items. Must be dismissable. */
+  --sprout-container-layer-floating: 1100; /* Must be in a fixed position related to its container. All stacked and default content beneath it must be reachable through scroll/pan interactions or it must be dimissible. */
+  --sprout-container-layer-overlay: 1300; /* Must be related to a sub-task. Must be accompanied with a curtain. */
+  --sprout-container-layer-context: 1350; /* Must be triggered through right-click/long press. Must be dismissible through clicking outside the area. */
+  --sprout-container-layer-time-sensitive: 1400; /* Must be related to something that happened in the system at that exact moment that is useful for the user to know. Must be dismissible or time-based. */
+  --sprout-container-layer-cursor: 1500; /* Must be user-triggered and related to the cursors/pointers current position. Must be dismissible with escape key. */
+}
+
+[data-qlik-density="comfortable"] {
+  --sprout-common-spacing-xs: 2px; /* XS spacing */
+  --sprout-common-spacing-s: 4px; /* S spacing */
+  --sprout-common-spacing-m: 8px; /* M spacing. Default grid unit */
+  --sprout-common-spacing-l: 12px; /* L spacing */
+  --sprout-common-spacing-xl: 16px; /* XL spacing */
+  --sprout-common-spacing-xxl: 24px; /* XXL spacing */
+  --sprout-common-spacing-3xl: 32px; /* 3XL spacing */
+  --sprout-common-density-xs: 2px; /* Extra small density */
+  --sprout-common-density-s: 4px; /* S density */
+  --sprout-common-density-m: 8px; /* M density */
+  --sprout-common-density-l: 12px; /* L density */
+  --sprout-common-density-xl: 16px; /* XL density */
+  --sprout-common-density-xxl: 24px; /* XXL density */
+  --sprout-common-density-3xl: 32px; /* 3XL density */
+  --sprout-common-scale-spacing: 1; /* (Variable only). Scaling property for spacing tokens */
+  --sprout-common-scale-density: 1; /* (Variable only). Scaling property for density tokens */
+}
+
+[data-qlik-density="dense"] {
+  --sprout-common-spacing-xs: 1px; /* XS spacing */
+  --sprout-common-spacing-s: 2px; /* S spacing */
+  --sprout-common-spacing-m: 4px; /* M spacing. Default grid unit */
+  --sprout-common-spacing-l: 8px; /* L spacing */
+  --sprout-common-spacing-xl: 12px; /* XL spacing */
+  --sprout-common-spacing-xxl: 20px; /* XXL spacing */
+  --sprout-common-spacing-3xl: 24px; /* 3XL spacing */
+  --sprout-common-density-xs: 1px; /* Extra small density */
+  --sprout-common-density-s: 2px; /* S density */
+  --sprout-common-density-m: 4px; /* M density */
+  --sprout-common-density-l: 8px; /* L density */
+  --sprout-common-density-xl: 12px; /* XL density */
+  --sprout-common-density-xxl: 20px; /* XXL density */
+  --sprout-common-density-3xl: 24px; /* 3XL density */
+  --sprout-common-scale-spacing: 1; /* (Variable only). Scaling property for spacing tokens */
+  --sprout-common-scale-density: 1; /* (Variable only). Scaling property for density tokens */
+}
+
+[data-qlik-density="spacious"] {
+  --sprout-common-spacing-xs: 4px; /* XS spacing */
+  --sprout-common-spacing-s: 8px; /* S spacing */
+  --sprout-common-spacing-m: 12px; /* M spacing. Default grid unit */
+  --sprout-common-spacing-l: 16px; /* L spacing */
+  --sprout-common-spacing-xl: 24px; /* XL spacing */
+  --sprout-common-spacing-xxl: 32px; /* XXL spacing */
+  --sprout-common-spacing-3xl: 40px; /* 3XL spacing */
+  --sprout-common-density-xs: 4px; /* Extra small density */
+  --sprout-common-density-s: 8px; /* S density */
+  --sprout-common-density-m: 12px; /* M density */
+  --sprout-common-density-l: 16px; /* L density */
+  --sprout-common-density-xl: 24px; /* XL density */
+  --sprout-common-density-xxl: 32px; /* XXL density */
+  --sprout-common-density-3xl: 40px; /* 3XL density */
+  --sprout-common-scale-spacing: 1; /* (Variable only). Scaling property for spacing tokens */
+  --sprout-common-scale-density: 1; /* (Variable only). Scaling property for density tokens */
+}
+
+[data-qlik-roundness="rounded"] {
+  --sprout-common-border-radius-subtle: 8px; /* Subtle border radius for use of smaller UI elements or those with a slightly less sharp feeling. */
+  --sprout-common-border-radius-soft: 12px; /* Medium border radius for medium sizes UI elements and a softer feeling. */
+  --sprout-common-border-radius-cushiony: 20px; /* Very soft border radius for use of larger elements or elements with a cushiony feeling. */
+  --sprout-common-border-radius-pill: 2000px; /* Border radius for UI elements that supports pill shape such as buttons and inputs. */
+  --sprout-common-border-radius-round: 2000px; /* Border radius for elements that are meant to always be round */
+  --sprout-common-nested-border-radius-subtle-xs: 6px; /* Border radius for corner-aligned elements inside other element with a subtle border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-soft-xs: 10px; /* Border radius for corner-aligned elements inside other element with a soft border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-soft-s: 8px; /* Border radius for corner-aligned elements inside other element with a soft border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-cushiony-xs: 18px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-cushiony-s: 16px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-cushiony-m: 12px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-twice-nested-border-radius-soft-s-xs: 6px; /* Border radius for corner-aligned elements inside other element with a soft border radius and another element with a nested border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-twice-nested-border-radius-cushiony-s-xs: 14px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-twice-nested-border-radius-cushiony-m-s: 8px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius and another element with a nested border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-scale-roundness: 1; /* Roundness factor. */
+}
+
+[data-qlik-roundness="sharp"] {
+  --sprout-common-border-radius-subtle: 0px; /* Subtle border radius for use of smaller UI elements or those with a slightly less sharp feeling. */
+  --sprout-common-border-radius-soft: 0px; /* Medium border radius for medium sizes UI elements and a softer feeling. */
+  --sprout-common-border-radius-cushiony: 0px; /* Very soft border radius for use of larger elements or elements with a cushiony feeling. */
+  --sprout-common-border-radius-pill: 0px; /* Border radius for UI elements that supports pill shape such as buttons and inputs. */
+  --sprout-common-border-radius-round: 2000px; /* Border radius for elements that are meant to always be round */
+  --sprout-common-nested-border-radius-subtle-xs: -2px; /* Border radius for corner-aligned elements inside other element with a subtle border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-soft-xs: -2px; /* Border radius for corner-aligned elements inside other element with a soft border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-soft-s: -4px; /* Border radius for corner-aligned elements inside other element with a soft border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-cushiony-xs: -2px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-cushiony-s: -4px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-cushiony-m: -8px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-twice-nested-border-radius-soft-s-xs: -6px; /* Border radius for corner-aligned elements inside other element with a soft border radius and another element with a nested border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-twice-nested-border-radius-cushiony-s-xs: -6px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-twice-nested-border-radius-cushiony-m-s: -12px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius and another element with a nested border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-scale-roundness: 1; /* Roundness factor. */
+}
+
+[data-qlik-roundness="soft"] {
+  --sprout-common-border-radius-subtle: 4px; /* Subtle border radius for use of smaller UI elements or those with a slightly less sharp feeling. */
+  --sprout-common-border-radius-soft: 8px; /* Medium border radius for medium sizes UI elements and a softer feeling. */
+  --sprout-common-border-radius-cushiony: 16px; /* Very soft border radius for use of larger elements or elements with a cushiony feeling. */
+  --sprout-common-border-radius-pill: 4px; /* Border radius for UI elements that supports pill shape such as buttons and inputs. */
+  --sprout-common-border-radius-round: 2000px; /* Border radius for elements that are meant to always be round */
+  --sprout-common-nested-border-radius-subtle-xs: 2px; /* Border radius for corner-aligned elements inside other element with a subtle border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-soft-xs: 6px; /* Border radius for corner-aligned elements inside other element with a soft border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-soft-s: 4px; /* Border radius for corner-aligned elements inside other element with a soft border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-cushiony-xs: 14px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-cushiony-s: 12px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-nested-border-radius-cushiony-m: 8px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-twice-nested-border-radius-soft-s-xs: 2px; /* Border radius for corner-aligned elements inside other element with a soft border radius and another element with a nested border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-twice-nested-border-radius-cushiony-s-xs: 10px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-twice-nested-border-radius-cushiony-m-s: 4px; /* Border radius for corner-aligned elements inside other element with a cushiony border radius and another element with a nested border radius. Designed to follow the curvature of the outer element element in all density and roundness settings */
+  --sprout-common-scale-roundness: 1; /* Roundness factor. */
+}
+
+[data-qlik-appearance="qlik-dark"] {
+  --sprout-common-border-default: 1px solid rgb(100% 100% 100% / 0.15); /* Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active. */
+  --sprout-common-border-extra-strong: 1px solid rgb(100% 100% 100% / 0.75); /* High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs. */
+  --sprout-common-border-moderate: 1px solid rgb(100% 100% 100% / 0.43); /* Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds. */
+  --sprout-common-border-strong: 1px solid rgb(100% 100% 100% / 0.6); /* Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls). */
+  --sprout-common-border-weak: 1px solid rgb(100% 100% 100% / 0.1); /* Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced. */
+  --sprout-common-divider-default: 1px solid rgb(100% 100% 100% / 0.3); /* Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts. */
+  --sprout-common-divider-extra-strong: 2px solid rgb(100% 100% 100% / 0.7); /* Maximum emphasis divider for critical or high-contrast requirements. */
+  --sprout-common-divider-moderate: 1px solid rgb(100% 100% 100% / 0.3); /* Compound token for moderate border style */
+  --sprout-common-divider-strong: 1px solid rgb(100% 100% 100% / 0.5); /* Compound token for strong border style */
+  --sprout-common-divider-subtle: 1px dashed rgb(100% 100% 100% / 0.3); /* Compound token for subtle divider style */
+  --sprout-common-divider-subtle-weak: 1px dashed rgb(100% 100% 100% / 0.12); /* Compound token for a very subtle divider style */
+  --sprout-common-divider-weak: 1px solid rgb(100% 100% 100% / 0.12); /* Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting. */
+  --sprout-focus-border-default: 2px solid #5daef1;
+  --sprout-inverse-border-default: 1px solid #333333; /* Compound token for default inverse border */
+  --sprout-inverse-border-weak: 1px solid rgb(20% 20% 20% / 0.3); /* Compound token for inverse weak border */
+  --sprout-placeholder-border-default: 1px dashed rgb(100% 100% 100% / 0.43); /* Border for placeholder elements such as dropzones. */
+  --sprout-selected-border-default: 2px solid #4ec574; /* Border for selected items */
+}
+
+[data-qlik-appearance="qlik-light"] {
+  --sprout-common-border-default: 1px solid rgb(0% 0% 0% / 0.15); /* Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active. */
+  --sprout-common-border-extra-strong: 1px solid rgb(0% 0% 0% / 0.75); /* High-emphasis border style for critical visibility. Reserved for toggle indicators, or high-contrast / accessibility needs. */
+  --sprout-common-border-moderate: 1px solid rgb(0% 0% 0% / 0.43); /* Primary, WCAG-compliant border style. Used for active and enabled interactive elements such as buttons, text fields, and inputs. Ensures accessible contrast against backgrounds. */
+  --sprout-common-border-strong: 1px solid rgb(0% 0% 0% / 0.6); /* Emphasized border style for interaction and highlight. Used for hover states, or cases where stronger separation is required (e.g., hovered text fields, active controls). */
+  --sprout-common-border-weak: 1px solid rgb(0% 0% 0% / 0.1); /* Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced. */
+  --sprout-common-divider-default: 1px solid rgb(0% 0% 0% / 0.08); /* Baseline divider style for standard separation. Used to clearly separate related but distinct content blocks (e.g., between list items, form sections, or stacked cards). Provides a neutral level of contrast suitable for most layouts. */
+  --sprout-common-divider-extra-strong: 2px solid rgb(0% 0% 0% / 0.43); /* Maximum emphasis divider for critical or high-contrast requirements. */
+  --sprout-common-divider-moderate: 1px solid rgb(0% 0% 0% / 0.08); /* Compound token for moderate border style */
+  --sprout-common-divider-strong: 1px solid rgb(0% 0% 0% / 0.2); /* Compound token for strong border style */
+  --sprout-common-divider-subtle: 1px dashed rgb(0% 0% 0% / 0.08); /* Compound token for subtle divider style */
+  --sprout-common-divider-subtle-weak: 1px dashed rgb(0% 0% 0% / 0.04); /* Compound token for a very subtle divider style */
+  --sprout-common-divider-weak: 1px solid rgb(0% 0% 0% / 0.04); /* Reduced-contrast divider for low-emphasis boundaries. Suitable for secondary layout divisions, soft grid lines, or visual rhythm where a stronger divider would be distracting. */
+  --sprout-focus-border-default: 2px solid #005db9;
+  --sprout-inverse-border-default: 1px solid #ffffff; /* Compound token for default inverse border */
+  --sprout-inverse-border-weak: 1px solid rgb(100% 100% 100% / 0.3); /* Compound token for inverse weak border */
+  --sprout-placeholder-border-default: 1px dashed rgb(0% 0% 0% / 0.43); /* Border for placeholder elements such as dropzones. */
+  --sprout-selected-border-default: 2px solid #00873d; /* Border for selected items */
+}
+
+[data-qlik-typography="inter"] {
+  --sprout-heading-font-xs: 600 12px/130% Inter; /* Extra small heading */
+  --sprout-heading-font-s: 600 16px/130% Inter; /* Small heading */
+  --sprout-heading-font-m: 600 20px/130% Inter; /* Medium heading */
+  --sprout-heading-font-l: 600 24px/130% Inter; /* Large heading */
+  --sprout-heading-font-xl: 600 32px/130% Inter; /* XL heading */
+  --sprout-heading-font-xxl: 600 40px/130% Inter; /* XXL heading */
+  --sprout-body-font-xs: 400 12px/150% Inter; /* Extra small body text */
+  --sprout-body-font-s: 400 14px/150% Inter; /* Small body text */
+  --sprout-body-font-m: 400 16px/150% Inter; /* Medium body text */
+  --sprout-body-font-l: 400 20px/150% Inter; /* Large body text */
+  --sprout-body-font-xl: 400 24px/150% Inter; /* XL body text */
+  --sprout-body-font-xxl: 400 28px/150% Inter; /* XXL body text */
+  --sprout-label-font-xs: 400 12px/16px Inter; /* Extra small default label */
+  --sprout-label-font-xs-emphasized: 600 12px/16px Inter; /* Extra small emphasized label */
+  --sprout-label-font-s: 400 14px/16px Inter; /* Small default label */
+  --sprout-label-font-s-emphasized: 600 14px/16px Inter; /* Small emphasized label */
+  --sprout-label-font-m: 400 16px/20px Inter; /* Medium default label */
+  --sprout-label-font-m-emphasized: 600 16px/20px Inter; /* Medium emphasized label */
+  --sprout-label-font-l: 400 20px/24px Inter; /* Large default label */
+  --sprout-label-font-l-emphasized: 600 20px/24px Inter; /* Large emphasized label */
+  --sprout-script-font-m: 400 16px/150% Source Code Pro; /* Medium default code */
+  --sprout-script-font-s: 400 14px/150% Source Code Pro; /* Small default code */
+  --sprout-script-font-m-emphasized: 600 16px/150% Source Code Pro; /* Medium emphasized code */
+  --sprout-script-font-s-emphasized: 600 14px/150% Source Code Pro; /* Small emphasized code */
+  --sprout-data-font-tabular-m: 400 16px/150% Source Code Pro; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s: 400 14px/150% Source Code Pro; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs: 400 12px/150% Source Code Pro; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized: 600 16px/150% Source Code Pro; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized: 600 14px/150% Source Code Pro; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized: 600 12px/150% Source Code Pro; /* Extra small emphasized font for right-aligned tabular data */
+}
+
+[data-qlik-typography="source-sans"] {
+  --sprout-heading-font-xs: 600 12px/130% Source Sans Pro; /* Extra small heading */
+  --sprout-heading-font-s: 600 16px/130% Source Sans Pro; /* Small heading */
+  --sprout-heading-font-m: 600 20px/130% Source Sans Pro; /* Medium heading */
+  --sprout-heading-font-l: 600 24px/130% Source Sans Pro; /* Large heading */
+  --sprout-heading-font-xl: 600 32px/130% Source Sans Pro; /* XL heading */
+  --sprout-heading-font-xxl: 600 40px/130% Source Sans Pro; /* XXL heading */
+  --sprout-body-font-xs: 400 12px/150% Source Sans Pro; /* Extra small body text */
+  --sprout-body-font-s: 400 14px/150% Source Sans Pro; /* Small body text */
+  --sprout-body-font-m: 400 16px/150% Source Sans Pro; /* Medium body text */
+  --sprout-body-font-l: 400 20px/150% Source Sans Pro; /* Large body text */
+  --sprout-body-font-xl: 400 24px/150% Source Sans Pro; /* XL body text */
+  --sprout-body-font-xxl: 400 28px/150% Source Sans Pro; /* XXL body text */
+  --sprout-label-font-xs: 400 12px/16px Source Sans Pro; /* Extra small default label */
+  --sprout-label-font-xs-emphasized: 600 12px/16px Source Sans Pro; /* Extra small emphasized label */
+  --sprout-label-font-s: 400 14px/16px Source Sans Pro; /* Small default label */
+  --sprout-label-font-s-emphasized: 600 14px/16px Source Sans Pro; /* Small emphasized label */
+  --sprout-label-font-m: 400 16px/20px Source Sans Pro; /* Medium default label */
+  --sprout-label-font-m-emphasized: 600 16px/20px Source Sans Pro; /* Medium emphasized label */
+  --sprout-label-font-l: 400 20px/24px Source Sans Pro; /* Large default label */
+  --sprout-label-font-l-emphasized: 600 20px/24px Source Sans Pro; /* Large emphasized label */
+  --sprout-script-font-m: 400 16px/150% Source Code Pro; /* Medium default code */
+  --sprout-script-font-s: 400 14px/150% Source Code Pro; /* Small default code */
+  --sprout-script-font-m-emphasized: 600 16px/150% Source Code Pro; /* Medium emphasized code */
+  --sprout-script-font-s-emphasized: 600 14px/150% Source Code Pro; /* Small emphasized code */
+  --sprout-data-font-tabular-m: 400 16px/150% Source Code Pro; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s: 400 14px/150% Source Code Pro; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs: 400 12px/150% Source Code Pro; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized: 600 16px/150% Source Code Pro; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized: 600 14px/150% Source Code Pro; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized: 600 12px/150% Source Code Pro; /* Extra small emphasized font for right-aligned tabular data */
+}
+
+[data-qlik-sizing="mid-sized"] {
+  --sprout-common-sizing-s: 4px; /* S size */
+  --sprout-common-sizing-m: 8px; /* M size. Default grid unit */
+  --sprout-common-sizing-l: 12px; /* L size */
+  --sprout-common-sizing-xl: 16px; /* XL size */
+  --sprout-common-sizing-xxl: 24px; /* XXL size */
+  --sprout-common-sizing-3xl: 32px; /* 3XL size */
+  --sprout-common-sizing-4xl: 40px; /* 4XL size */
+  --sprout-common-sizing-5xl: 48px; /* 5XL size */
+  --sprout-common-sizing-6xl: 56px; /* 6XL size */
+  --sprout-common-sizing-7xl: 64px; /* 7XL size */
+  --sprout-container-sizing-xxs: 256px; /* Sizing token for the smallest containers */
+  --sprout-container-sizing-xs: 320px; /* Sizing token for extra small containers */
+  --sprout-container-sizing-s: 400px; /* Sizing token for small containers */
+  --sprout-container-sizing-m: 512px; /* Sizing token for containers */
+  --sprout-container-sizing-l: 640px; /* Sizing token for larger containers */
+  --sprout-container-sizing-xl: 768px; /* Sizing token for extra large containers */
+  --sprout-container-sizing-xxl: 960px; /* Sizing token for XXL containers */
+  --sprout-container-sizing-3xl: 1024px; /* Sizing token for 3XL containers */
+  --sprout-container-sizing-4xl: 1280px; /* Sizing token for 4XL containers */
+  --sprout-illustration-sizing-s: 96px; /* Small illustration size */
+  --sprout-illustration-sizing-m: 128px; /* Medium illustration size */
+  --sprout-illustration-sizing-l: 160px; /* Large illustration size */
+}
+
+[data-qlik-typography="inter"] {
+  --sprout-common-scale-font-size: 1; /* (Variable only). Font scale variable for font size tokens */
+  --sprout-heading-font-xs-font-family: Inter; /* Extra small heading */
+  --sprout-heading-font-xs-font-weight: 600; /* Extra small heading */
+  --sprout-heading-font-xs-line-height: 130%; /* Extra small heading */
+  --sprout-heading-font-xs-font-size: 12px; /* Extra small heading */
+  --sprout-heading-font-xs-letter-spacing: ; /* Extra small heading */
+  --sprout-heading-font-xs-paragraph-spacing: ; /* Extra small heading */
+  --sprout-heading-font-xs-paragraph-indent: ; /* Extra small heading */
+  --sprout-heading-font-xs-text-case: ; /* Extra small heading */
+  --sprout-heading-font-xs-text-decoration: ; /* Extra small heading */
+  --sprout-heading-font-s-font-family: Inter; /* Small heading */
+  --sprout-heading-font-s-font-weight: 600; /* Small heading */
+  --sprout-heading-font-s-line-height: 130%; /* Small heading */
+  --sprout-heading-font-s-font-size: 16px; /* Small heading */
+  --sprout-heading-font-s-letter-spacing: ; /* Small heading */
+  --sprout-heading-font-s-paragraph-spacing: ; /* Small heading */
+  --sprout-heading-font-s-paragraph-indent: ; /* Small heading */
+  --sprout-heading-font-s-text-case: ; /* Small heading */
+  --sprout-heading-font-s-text-decoration: ; /* Small heading */
+  --sprout-heading-font-m-font-family: Inter; /* Medium heading */
+  --sprout-heading-font-m-font-weight: 600; /* Medium heading */
+  --sprout-heading-font-m-line-height: 130%; /* Medium heading */
+  --sprout-heading-font-m-font-size: 20px; /* Medium heading */
+  --sprout-heading-font-m-letter-spacing: ; /* Medium heading */
+  --sprout-heading-font-m-paragraph-spacing: ; /* Medium heading */
+  --sprout-heading-font-m-paragraph-indent: ; /* Medium heading */
+  --sprout-heading-font-m-text-case: ; /* Medium heading */
+  --sprout-heading-font-m-text-decoration: ; /* Medium heading */
+  --sprout-heading-font-l-font-family: Inter; /* Large heading */
+  --sprout-heading-font-l-font-weight: 600; /* Large heading */
+  --sprout-heading-font-l-line-height: 130%; /* Large heading */
+  --sprout-heading-font-l-font-size: 24px; /* Large heading */
+  --sprout-heading-font-l-letter-spacing: ; /* Large heading */
+  --sprout-heading-font-l-paragraph-spacing: ; /* Large heading */
+  --sprout-heading-font-l-paragraph-indent: ; /* Large heading */
+  --sprout-heading-font-l-text-case: ; /* Large heading */
+  --sprout-heading-font-l-text-decoration: ; /* Large heading */
+  --sprout-heading-font-xl-font-family: Inter; /* XL heading */
+  --sprout-heading-font-xl-font-weight: 600; /* XL heading */
+  --sprout-heading-font-xl-line-height: 130%; /* XL heading */
+  --sprout-heading-font-xl-font-size: 32px; /* XL heading */
+  --sprout-heading-font-xl-letter-spacing: ; /* XL heading */
+  --sprout-heading-font-xl-paragraph-spacing: ; /* XL heading */
+  --sprout-heading-font-xl-paragraph-indent: ; /* XL heading */
+  --sprout-heading-font-xl-text-case: ; /* XL heading */
+  --sprout-heading-font-xl-text-decoration: ; /* XL heading */
+  --sprout-heading-font-xxl-font-family: Inter; /* XXL heading */
+  --sprout-heading-font-xxl-font-weight: 600; /* XXL heading */
+  --sprout-heading-font-xxl-line-height: 130%; /* XXL heading */
+  --sprout-heading-font-xxl-font-size: 40px; /* XXL heading */
+  --sprout-heading-font-xxl-letter-spacing: ; /* XXL heading */
+  --sprout-heading-font-xxl-paragraph-spacing: ; /* XXL heading */
+  --sprout-heading-font-xxl-paragraph-indent: ; /* XXL heading */
+  --sprout-heading-font-xxl-text-case: ; /* XXL heading */
+  --sprout-heading-font-xxl-text-decoration: ; /* XXL heading */
+  --sprout-body-font-xs-font-family: Inter; /* Extra small body text */
+  --sprout-body-font-xs-font-weight: 400; /* Extra small body text */
+  --sprout-body-font-xs-line-height: 150%; /* Extra small body text */
+  --sprout-body-font-xs-font-size: 12px; /* Extra small body text */
+  --sprout-body-font-xs-letter-spacing: ; /* Extra small body text */
+  --sprout-body-font-xs-paragraph-spacing: ; /* Extra small body text */
+  --sprout-body-font-xs-paragraph-indent: ; /* Extra small body text */
+  --sprout-body-font-xs-text-case: ; /* Extra small body text */
+  --sprout-body-font-xs-text-decoration: ; /* Extra small body text */
+  --sprout-body-font-s-font-family: Inter; /* Small body text */
+  --sprout-body-font-s-font-weight: 400; /* Small body text */
+  --sprout-body-font-s-line-height: 150%; /* Small body text */
+  --sprout-body-font-s-font-size: 14px; /* Small body text */
+  --sprout-body-font-s-letter-spacing: ; /* Small body text */
+  --sprout-body-font-s-paragraph-spacing: ; /* Small body text */
+  --sprout-body-font-s-paragraph-indent: ; /* Small body text */
+  --sprout-body-font-s-text-case: ; /* Small body text */
+  --sprout-body-font-s-text-decoration: ; /* Small body text */
+  --sprout-body-font-m-font-family: Inter; /* Medium body text */
+  --sprout-body-font-m-font-weight: 400; /* Medium body text */
+  --sprout-body-font-m-line-height: 150%; /* Medium body text */
+  --sprout-body-font-m-font-size: 16px; /* Medium body text */
+  --sprout-body-font-m-letter-spacing: ; /* Medium body text */
+  --sprout-body-font-m-paragraph-spacing: ; /* Medium body text */
+  --sprout-body-font-m-paragraph-indent: ; /* Medium body text */
+  --sprout-body-font-m-text-case: ; /* Medium body text */
+  --sprout-body-font-m-text-decoration: ; /* Medium body text */
+  --sprout-body-font-l-font-family: Inter; /* Large body text */
+  --sprout-body-font-l-font-weight: 400; /* Large body text */
+  --sprout-body-font-l-line-height: 150%; /* Large body text */
+  --sprout-body-font-l-font-size: 20px; /* Large body text */
+  --sprout-body-font-l-letter-spacing: ; /* Large body text */
+  --sprout-body-font-l-paragraph-spacing: ; /* Large body text */
+  --sprout-body-font-l-paragraph-indent: ; /* Large body text */
+  --sprout-body-font-l-text-case: ; /* Large body text */
+  --sprout-body-font-l-text-decoration: ; /* Large body text */
+  --sprout-body-font-xl-font-family: Inter; /* XL body text */
+  --sprout-body-font-xl-font-weight: 400; /* XL body text */
+  --sprout-body-font-xl-line-height: 150%; /* XL body text */
+  --sprout-body-font-xl-font-size: 24px; /* XL body text */
+  --sprout-body-font-xl-letter-spacing: ; /* XL body text */
+  --sprout-body-font-xl-paragraph-spacing: ; /* XL body text */
+  --sprout-body-font-xl-paragraph-indent: ; /* XL body text */
+  --sprout-body-font-xl-text-case: ; /* XL body text */
+  --sprout-body-font-xl-text-decoration: ; /* XL body text */
+  --sprout-body-font-xxl-font-family: Inter; /* XXL body text */
+  --sprout-body-font-xxl-font-weight: 400; /* XXL body text */
+  --sprout-body-font-xxl-line-height: 150%; /* XXL body text */
+  --sprout-body-font-xxl-font-size: 28px; /* XXL body text */
+  --sprout-body-font-xxl-letter-spacing: ; /* XXL body text */
+  --sprout-body-font-xxl-paragraph-spacing: ; /* XXL body text */
+  --sprout-body-font-xxl-paragraph-indent: ; /* XXL body text */
+  --sprout-body-font-xxl-text-case: ; /* XXL body text */
+  --sprout-body-font-xxl-text-decoration: ; /* XXL body text */
+  --sprout-label-font-xs-font-family: Inter; /* Extra small default label */
+  --sprout-label-font-xs-font-weight: 400; /* Extra small default label */
+  --sprout-label-font-xs-line-height: 16px; /* Extra small default label */
+  --sprout-label-font-xs-font-size: 12px; /* Extra small default label */
+  --sprout-label-font-xs-letter-spacing: ; /* Extra small default label */
+  --sprout-label-font-xs-paragraph-spacing: ; /* Extra small default label */
+  --sprout-label-font-xs-paragraph-indent: ; /* Extra small default label */
+  --sprout-label-font-xs-text-case: ; /* Extra small default label */
+  --sprout-label-font-xs-text-decoration: ; /* Extra small default label */
+  --sprout-label-font-xs-emphasized-font-family: Inter; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-font-weight: 600; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-line-height: 16px; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-font-size: 12px; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-letter-spacing: ; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-paragraph-spacing: ; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-paragraph-indent: ; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-text-case: ; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-text-decoration: ; /* Extra small emphasized label */
+  --sprout-label-font-s-font-family: Inter; /* Small default label */
+  --sprout-label-font-s-font-weight: 400; /* Small default label */
+  --sprout-label-font-s-line-height: 16px; /* Small default label */
+  --sprout-label-font-s-font-size: 14px; /* Small default label */
+  --sprout-label-font-s-letter-spacing: ; /* Small default label */
+  --sprout-label-font-s-paragraph-spacing: ; /* Small default label */
+  --sprout-label-font-s-paragraph-indent: ; /* Small default label */
+  --sprout-label-font-s-text-case: ; /* Small default label */
+  --sprout-label-font-s-text-decoration: ; /* Small default label */
+  --sprout-label-font-s-emphasized-font-family: Inter; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-font-weight: 600; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-line-height: 16px; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-font-size: 14px; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-letter-spacing: ; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-paragraph-spacing: ; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-paragraph-indent: ; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-text-case: ; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-text-decoration: ; /* Small emphasized label */
+  --sprout-label-font-m-font-family: Inter; /* Medium default label */
+  --sprout-label-font-m-font-weight: 400; /* Medium default label */
+  --sprout-label-font-m-line-height: 20px; /* Medium default label */
+  --sprout-label-font-m-font-size: 16px; /* Medium default label */
+  --sprout-label-font-m-letter-spacing: ; /* Medium default label */
+  --sprout-label-font-m-paragraph-spacing: ; /* Medium default label */
+  --sprout-label-font-m-paragraph-indent: ; /* Medium default label */
+  --sprout-label-font-m-text-case: ; /* Medium default label */
+  --sprout-label-font-m-text-decoration: ; /* Medium default label */
+  --sprout-label-font-m-emphasized-font-family: Inter; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-font-weight: 600; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-line-height: 20px; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-font-size: 16px; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-letter-spacing: ; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-paragraph-spacing: ; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-paragraph-indent: ; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-text-case: ; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-text-decoration: ; /* Medium emphasized label */
+  --sprout-label-font-l-font-family: Inter; /* Large default label */
+  --sprout-label-font-l-font-weight: 400; /* Large default label */
+  --sprout-label-font-l-line-height: 24px; /* Large default label */
+  --sprout-label-font-l-font-size: 20px; /* Large default label */
+  --sprout-label-font-l-letter-spacing: ; /* Large default label */
+  --sprout-label-font-l-paragraph-spacing: ; /* Large default label */
+  --sprout-label-font-l-paragraph-indent: ; /* Large default label */
+  --sprout-label-font-l-text-case: ; /* Large default label */
+  --sprout-label-font-l-text-decoration: ; /* Large default label */
+  --sprout-label-font-l-emphasized-font-family: Inter; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-font-weight: 600; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-line-height: 24px; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-font-size: 20px; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-letter-spacing: ; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-paragraph-spacing: ; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-paragraph-indent: ; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-text-case: ; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-text-decoration: ; /* Large emphasized label */
+  --sprout-script-font-m-font-family: Source Code Pro; /* Medium default code */
+  --sprout-script-font-m-font-weight: 400; /* Medium default code */
+  --sprout-script-font-m-line-height: 150%; /* Medium default code */
+  --sprout-script-font-m-font-size: 16px; /* Medium default code */
+  --sprout-script-font-m-letter-spacing: ; /* Medium default code */
+  --sprout-script-font-m-paragraph-spacing: ; /* Medium default code */
+  --sprout-script-font-m-paragraph-indent: ; /* Medium default code */
+  --sprout-script-font-m-text-case: ; /* Medium default code */
+  --sprout-script-font-m-text-decoration: ; /* Medium default code */
+  --sprout-script-font-s-font-family: Source Code Pro; /* Small default code */
+  --sprout-script-font-s-font-weight: 400; /* Small default code */
+  --sprout-script-font-s-line-height: 150%; /* Small default code */
+  --sprout-script-font-s-font-size: 14px; /* Small default code */
+  --sprout-script-font-s-letter-spacing: ; /* Small default code */
+  --sprout-script-font-s-paragraph-spacing: ; /* Small default code */
+  --sprout-script-font-s-paragraph-indent: ; /* Small default code */
+  --sprout-script-font-s-text-case: ; /* Small default code */
+  --sprout-script-font-s-text-decoration: ; /* Small default code */
+  --sprout-script-font-m-emphasized-font-family: Source Code Pro; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-font-weight: 600; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-line-height: 150%; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-font-size: 16px; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-letter-spacing: ; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-paragraph-spacing: ; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-paragraph-indent: ; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-text-case: ; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-text-decoration: ; /* Medium emphasized code */
+  --sprout-script-font-s-emphasized-font-family: Source Code Pro; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-font-weight: 600; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-line-height: 150%; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-font-size: 14px; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-letter-spacing: ; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-paragraph-spacing: ; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-paragraph-indent: ; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-text-case: ; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-text-decoration: ; /* Small emphasized code */
+  --sprout-data-font-tabular-m-font-family: Source Code Pro; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-font-weight: 400; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-line-height: 150%; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-font-size: 16px; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-letter-spacing: ; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-paragraph-spacing: ; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-paragraph-indent: ; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-text-case: ; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-text-decoration: ; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-font-family: Source Code Pro; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-font-weight: 400; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-line-height: 150%; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-font-size: 14px; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-letter-spacing: ; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-paragraph-spacing: ; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-paragraph-indent: ; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-text-case: ; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-text-decoration: ; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-font-family: Source Code Pro; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-font-weight: 400; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-line-height: 150%; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-font-size: 12px; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-letter-spacing: ; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-paragraph-spacing: ; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-paragraph-indent: ; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-text-case: ; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-text-decoration: ; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-font-family: Source Code Pro; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-font-weight: 600; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-line-height: 150%; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-font-size: 16px; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-letter-spacing: ; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-paragraph-spacing: ; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-paragraph-indent: ; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-text-case: ; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-text-decoration: ; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-font-family: Source Code Pro; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-font-weight: 600; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-line-height: 150%; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-font-size: 14px; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-letter-spacing: ; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-paragraph-spacing: ; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-paragraph-indent: ; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-text-case: ; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-text-decoration: ; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-font-family: Source Code Pro; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-font-weight: 600; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-line-height: 150%; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-font-size: 12px; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-letter-spacing: ; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-paragraph-spacing: ; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-paragraph-indent: ; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-text-case: ; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-text-decoration: ; /* Extra small emphasized font for right-aligned tabular data */
+}
+
+[data-qlik-typography="source-sans"] {
+  --sprout-common-scale-font-size: 1; /* (Variable only). Font scale variable for font size tokens */
+  --sprout-heading-font-xs-font-family: Source Sans Pro; /* Extra small heading */
+  --sprout-heading-font-xs-font-weight: 600; /* Extra small heading */
+  --sprout-heading-font-xs-line-height: 130%; /* Extra small heading */
+  --sprout-heading-font-xs-font-size: 12px; /* Extra small heading */
+  --sprout-heading-font-xs-letter-spacing: ; /* Extra small heading */
+  --sprout-heading-font-xs-paragraph-spacing: ; /* Extra small heading */
+  --sprout-heading-font-xs-paragraph-indent: ; /* Extra small heading */
+  --sprout-heading-font-xs-text-case: ; /* Extra small heading */
+  --sprout-heading-font-xs-text-decoration: ; /* Extra small heading */
+  --sprout-heading-font-s-font-family: Source Sans Pro; /* Small heading */
+  --sprout-heading-font-s-font-weight: 600; /* Small heading */
+  --sprout-heading-font-s-line-height: 130%; /* Small heading */
+  --sprout-heading-font-s-font-size: 16px; /* Small heading */
+  --sprout-heading-font-s-letter-spacing: ; /* Small heading */
+  --sprout-heading-font-s-paragraph-spacing: ; /* Small heading */
+  --sprout-heading-font-s-paragraph-indent: ; /* Small heading */
+  --sprout-heading-font-s-text-case: ; /* Small heading */
+  --sprout-heading-font-s-text-decoration: ; /* Small heading */
+  --sprout-heading-font-m-font-family: Source Sans Pro; /* Medium heading */
+  --sprout-heading-font-m-font-weight: 600; /* Medium heading */
+  --sprout-heading-font-m-line-height: 130%; /* Medium heading */
+  --sprout-heading-font-m-font-size: 20px; /* Medium heading */
+  --sprout-heading-font-m-letter-spacing: ; /* Medium heading */
+  --sprout-heading-font-m-paragraph-spacing: ; /* Medium heading */
+  --sprout-heading-font-m-paragraph-indent: ; /* Medium heading */
+  --sprout-heading-font-m-text-case: ; /* Medium heading */
+  --sprout-heading-font-m-text-decoration: ; /* Medium heading */
+  --sprout-heading-font-l-font-family: Source Sans Pro; /* Large heading */
+  --sprout-heading-font-l-font-weight: 600; /* Large heading */
+  --sprout-heading-font-l-line-height: 130%; /* Large heading */
+  --sprout-heading-font-l-font-size: 24px; /* Large heading */
+  --sprout-heading-font-l-letter-spacing: ; /* Large heading */
+  --sprout-heading-font-l-paragraph-spacing: ; /* Large heading */
+  --sprout-heading-font-l-paragraph-indent: ; /* Large heading */
+  --sprout-heading-font-l-text-case: ; /* Large heading */
+  --sprout-heading-font-l-text-decoration: ; /* Large heading */
+  --sprout-heading-font-xl-font-family: Source Sans Pro; /* XL heading */
+  --sprout-heading-font-xl-font-weight: 600; /* XL heading */
+  --sprout-heading-font-xl-line-height: 130%; /* XL heading */
+  --sprout-heading-font-xl-font-size: 32px; /* XL heading */
+  --sprout-heading-font-xl-letter-spacing: ; /* XL heading */
+  --sprout-heading-font-xl-paragraph-spacing: ; /* XL heading */
+  --sprout-heading-font-xl-paragraph-indent: ; /* XL heading */
+  --sprout-heading-font-xl-text-case: ; /* XL heading */
+  --sprout-heading-font-xl-text-decoration: ; /* XL heading */
+  --sprout-heading-font-xxl-font-family: Source Sans Pro; /* XXL heading */
+  --sprout-heading-font-xxl-font-weight: 600; /* XXL heading */
+  --sprout-heading-font-xxl-line-height: 130%; /* XXL heading */
+  --sprout-heading-font-xxl-font-size: 40px; /* XXL heading */
+  --sprout-heading-font-xxl-letter-spacing: ; /* XXL heading */
+  --sprout-heading-font-xxl-paragraph-spacing: ; /* XXL heading */
+  --sprout-heading-font-xxl-paragraph-indent: ; /* XXL heading */
+  --sprout-heading-font-xxl-text-case: ; /* XXL heading */
+  --sprout-heading-font-xxl-text-decoration: ; /* XXL heading */
+  --sprout-body-font-xs-font-family: Source Sans Pro; /* Extra small body text */
+  --sprout-body-font-xs-font-weight: 400; /* Extra small body text */
+  --sprout-body-font-xs-line-height: 150%; /* Extra small body text */
+  --sprout-body-font-xs-font-size: 12px; /* Extra small body text */
+  --sprout-body-font-xs-letter-spacing: ; /* Extra small body text */
+  --sprout-body-font-xs-paragraph-spacing: ; /* Extra small body text */
+  --sprout-body-font-xs-paragraph-indent: ; /* Extra small body text */
+  --sprout-body-font-xs-text-case: ; /* Extra small body text */
+  --sprout-body-font-xs-text-decoration: ; /* Extra small body text */
+  --sprout-body-font-s-font-family: Source Sans Pro; /* Small body text */
+  --sprout-body-font-s-font-weight: 400; /* Small body text */
+  --sprout-body-font-s-line-height: 150%; /* Small body text */
+  --sprout-body-font-s-font-size: 14px; /* Small body text */
+  --sprout-body-font-s-letter-spacing: ; /* Small body text */
+  --sprout-body-font-s-paragraph-spacing: ; /* Small body text */
+  --sprout-body-font-s-paragraph-indent: ; /* Small body text */
+  --sprout-body-font-s-text-case: ; /* Small body text */
+  --sprout-body-font-s-text-decoration: ; /* Small body text */
+  --sprout-body-font-m-font-family: Source Sans Pro; /* Medium body text */
+  --sprout-body-font-m-font-weight: 400; /* Medium body text */
+  --sprout-body-font-m-line-height: 150%; /* Medium body text */
+  --sprout-body-font-m-font-size: 16px; /* Medium body text */
+  --sprout-body-font-m-letter-spacing: ; /* Medium body text */
+  --sprout-body-font-m-paragraph-spacing: ; /* Medium body text */
+  --sprout-body-font-m-paragraph-indent: ; /* Medium body text */
+  --sprout-body-font-m-text-case: ; /* Medium body text */
+  --sprout-body-font-m-text-decoration: ; /* Medium body text */
+  --sprout-body-font-l-font-family: Source Sans Pro; /* Large body text */
+  --sprout-body-font-l-font-weight: 400; /* Large body text */
+  --sprout-body-font-l-line-height: 150%; /* Large body text */
+  --sprout-body-font-l-font-size: 20px; /* Large body text */
+  --sprout-body-font-l-letter-spacing: ; /* Large body text */
+  --sprout-body-font-l-paragraph-spacing: ; /* Large body text */
+  --sprout-body-font-l-paragraph-indent: ; /* Large body text */
+  --sprout-body-font-l-text-case: ; /* Large body text */
+  --sprout-body-font-l-text-decoration: ; /* Large body text */
+  --sprout-body-font-xl-font-family: Source Sans Pro; /* XL body text */
+  --sprout-body-font-xl-font-weight: 400; /* XL body text */
+  --sprout-body-font-xl-line-height: 150%; /* XL body text */
+  --sprout-body-font-xl-font-size: 24px; /* XL body text */
+  --sprout-body-font-xl-letter-spacing: ; /* XL body text */
+  --sprout-body-font-xl-paragraph-spacing: ; /* XL body text */
+  --sprout-body-font-xl-paragraph-indent: ; /* XL body text */
+  --sprout-body-font-xl-text-case: ; /* XL body text */
+  --sprout-body-font-xl-text-decoration: ; /* XL body text */
+  --sprout-body-font-xxl-font-family: Source Sans Pro; /* XXL body text */
+  --sprout-body-font-xxl-font-weight: 400; /* XXL body text */
+  --sprout-body-font-xxl-line-height: 150%; /* XXL body text */
+  --sprout-body-font-xxl-font-size: 28px; /* XXL body text */
+  --sprout-body-font-xxl-letter-spacing: ; /* XXL body text */
+  --sprout-body-font-xxl-paragraph-spacing: ; /* XXL body text */
+  --sprout-body-font-xxl-paragraph-indent: ; /* XXL body text */
+  --sprout-body-font-xxl-text-case: ; /* XXL body text */
+  --sprout-body-font-xxl-text-decoration: ; /* XXL body text */
+  --sprout-label-font-xs-font-family: Source Sans Pro; /* Extra small default label */
+  --sprout-label-font-xs-font-weight: 400; /* Extra small default label */
+  --sprout-label-font-xs-line-height: 16px; /* Extra small default label */
+  --sprout-label-font-xs-font-size: 12px; /* Extra small default label */
+  --sprout-label-font-xs-letter-spacing: ; /* Extra small default label */
+  --sprout-label-font-xs-paragraph-spacing: ; /* Extra small default label */
+  --sprout-label-font-xs-paragraph-indent: ; /* Extra small default label */
+  --sprout-label-font-xs-text-case: ; /* Extra small default label */
+  --sprout-label-font-xs-text-decoration: ; /* Extra small default label */
+  --sprout-label-font-xs-emphasized-font-family: Source Sans Pro; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-font-weight: 600; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-line-height: 16px; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-font-size: 12px; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-letter-spacing: ; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-paragraph-spacing: ; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-paragraph-indent: ; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-text-case: ; /* Extra small emphasized label */
+  --sprout-label-font-xs-emphasized-text-decoration: ; /* Extra small emphasized label */
+  --sprout-label-font-s-font-family: Source Sans Pro; /* Small default label */
+  --sprout-label-font-s-font-weight: 400; /* Small default label */
+  --sprout-label-font-s-line-height: 16px; /* Small default label */
+  --sprout-label-font-s-font-size: 14px; /* Small default label */
+  --sprout-label-font-s-letter-spacing: ; /* Small default label */
+  --sprout-label-font-s-paragraph-spacing: ; /* Small default label */
+  --sprout-label-font-s-paragraph-indent: ; /* Small default label */
+  --sprout-label-font-s-text-case: ; /* Small default label */
+  --sprout-label-font-s-text-decoration: ; /* Small default label */
+  --sprout-label-font-s-emphasized-font-family: Source Sans Pro; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-font-weight: 600; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-line-height: 16px; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-font-size: 14px; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-letter-spacing: ; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-paragraph-spacing: ; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-paragraph-indent: ; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-text-case: ; /* Small emphasized label */
+  --sprout-label-font-s-emphasized-text-decoration: ; /* Small emphasized label */
+  --sprout-label-font-m-font-family: Source Sans Pro; /* Medium default label */
+  --sprout-label-font-m-font-weight: 400; /* Medium default label */
+  --sprout-label-font-m-line-height: 20px; /* Medium default label */
+  --sprout-label-font-m-font-size: 16px; /* Medium default label */
+  --sprout-label-font-m-letter-spacing: ; /* Medium default label */
+  --sprout-label-font-m-paragraph-spacing: ; /* Medium default label */
+  --sprout-label-font-m-paragraph-indent: ; /* Medium default label */
+  --sprout-label-font-m-text-case: ; /* Medium default label */
+  --sprout-label-font-m-text-decoration: ; /* Medium default label */
+  --sprout-label-font-m-emphasized-font-family: Source Sans Pro; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-font-weight: 600; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-line-height: 20px; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-font-size: 16px; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-letter-spacing: ; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-paragraph-spacing: ; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-paragraph-indent: ; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-text-case: ; /* Medium emphasized label */
+  --sprout-label-font-m-emphasized-text-decoration: ; /* Medium emphasized label */
+  --sprout-label-font-l-font-family: Source Sans Pro; /* Large default label */
+  --sprout-label-font-l-font-weight: 400; /* Large default label */
+  --sprout-label-font-l-line-height: 24px; /* Large default label */
+  --sprout-label-font-l-font-size: 20px; /* Large default label */
+  --sprout-label-font-l-letter-spacing: ; /* Large default label */
+  --sprout-label-font-l-paragraph-spacing: ; /* Large default label */
+  --sprout-label-font-l-paragraph-indent: ; /* Large default label */
+  --sprout-label-font-l-text-case: ; /* Large default label */
+  --sprout-label-font-l-text-decoration: ; /* Large default label */
+  --sprout-label-font-l-emphasized-font-family: Source Sans Pro; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-font-weight: 600; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-line-height: 24px; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-font-size: 20px; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-letter-spacing: ; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-paragraph-spacing: ; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-paragraph-indent: ; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-text-case: ; /* Large emphasized label */
+  --sprout-label-font-l-emphasized-text-decoration: ; /* Large emphasized label */
+  --sprout-script-font-m-font-family: Source Code Pro; /* Medium default code */
+  --sprout-script-font-m-font-weight: 400; /* Medium default code */
+  --sprout-script-font-m-line-height: 150%; /* Medium default code */
+  --sprout-script-font-m-font-size: 16px; /* Medium default code */
+  --sprout-script-font-m-letter-spacing: ; /* Medium default code */
+  --sprout-script-font-m-paragraph-spacing: ; /* Medium default code */
+  --sprout-script-font-m-paragraph-indent: ; /* Medium default code */
+  --sprout-script-font-m-text-case: ; /* Medium default code */
+  --sprout-script-font-m-text-decoration: ; /* Medium default code */
+  --sprout-script-font-s-font-family: Source Code Pro; /* Small default code */
+  --sprout-script-font-s-font-weight: 400; /* Small default code */
+  --sprout-script-font-s-line-height: 150%; /* Small default code */
+  --sprout-script-font-s-font-size: 14px; /* Small default code */
+  --sprout-script-font-s-letter-spacing: ; /* Small default code */
+  --sprout-script-font-s-paragraph-spacing: ; /* Small default code */
+  --sprout-script-font-s-paragraph-indent: ; /* Small default code */
+  --sprout-script-font-s-text-case: ; /* Small default code */
+  --sprout-script-font-s-text-decoration: ; /* Small default code */
+  --sprout-script-font-m-emphasized-font-family: Source Code Pro; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-font-weight: 600; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-line-height: 150%; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-font-size: 16px; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-letter-spacing: ; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-paragraph-spacing: ; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-paragraph-indent: ; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-text-case: ; /* Medium emphasized code */
+  --sprout-script-font-m-emphasized-text-decoration: ; /* Medium emphasized code */
+  --sprout-script-font-s-emphasized-font-family: Source Code Pro; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-font-weight: 600; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-line-height: 150%; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-font-size: 14px; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-letter-spacing: ; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-paragraph-spacing: ; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-paragraph-indent: ; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-text-case: ; /* Small emphasized code */
+  --sprout-script-font-s-emphasized-text-decoration: ; /* Small emphasized code */
+  --sprout-data-font-tabular-m-font-family: Source Code Pro; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-font-weight: 400; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-line-height: 150%; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-font-size: 16px; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-letter-spacing: ; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-paragraph-spacing: ; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-paragraph-indent: ; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-text-case: ; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-text-decoration: ; /* Medium default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-font-family: Source Code Pro; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-font-weight: 400; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-line-height: 150%; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-font-size: 14px; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-letter-spacing: ; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-paragraph-spacing: ; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-paragraph-indent: ; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-text-case: ; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-text-decoration: ; /* Small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-font-family: Source Code Pro; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-font-weight: 400; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-line-height: 150%; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-font-size: 12px; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-letter-spacing: ; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-paragraph-spacing: ; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-paragraph-indent: ; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-text-case: ; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-text-decoration: ; /* Extra small default font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-font-family: Source Code Pro; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-font-weight: 600; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-line-height: 150%; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-font-size: 16px; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-letter-spacing: ; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-paragraph-spacing: ; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-paragraph-indent: ; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-text-case: ; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-m-emphasized-text-decoration: ; /* Medium emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-font-family: Source Code Pro; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-font-weight: 600; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-line-height: 150%; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-font-size: 14px; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-letter-spacing: ; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-paragraph-spacing: ; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-paragraph-indent: ; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-text-case: ; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-s-emphasized-text-decoration: ; /* Small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-font-family: Source Code Pro; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-font-weight: 600; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-line-height: 150%; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-font-size: 12px; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-letter-spacing: ; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-paragraph-spacing: ; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-paragraph-indent: ; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-text-case: ; /* Extra small emphasized font for right-aligned tabular data */
+  --sprout-data-font-tabular-xs-emphasized-text-decoration: ; /* Extra small emphasized font for right-aligned tabular data */
+}
