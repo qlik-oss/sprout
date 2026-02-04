@@ -20,11 +20,20 @@ jobs:
         with:
           fetch-depth: 0 # otherwise, ci will failed to push refs
 
+      - name: Check for @qlik-trial strings
+        run: |
+          if grep -r "@qlik-trial" --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.github --exclude-dir=.husky --exclude-dir=.turbo; then
+            echo "❌ Error: Found '@qlik-trial' in the codebase."
+            echo "Please remove these references before pushing."
+            exit 1
+          fi
+          echo "✅ No '@qlik-trial' strings found."
+
       - name: Use Node.js
         uses: ./.github/actions/setup-node
         with:
           npm-token: ${{ secrets.NPM_CI_TOKEN }}
-      
+
       - run: pnpm install
       - run: pnpm format:check
       - run: pnpm build
