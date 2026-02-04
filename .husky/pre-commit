@@ -1,0 +1,21 @@
+#!/bin/sh
+# Pre-commit hook to prevent commits containing "@qlik-trial" in source code
+# (ignores references in configuration, workflow, and hook files)
+
+# Get list of staged files excluding .github and .husky
+STAGED_FILES=$(git diff --cached --name-only | grep -v "^\\.github/" | grep -v "^\\.husky/")
+
+# Check for @qlik-trial in those files
+if [ -n "$STAGED_FILES" ]; then
+  if echo "$STAGED_FILES" | xargs git diff --cached --unified=0 -- | grep -E "^\+.*@qlik-trial" > /dev/null; then
+    echo "❌ Error: Found '@qlik-trial' in staged changes."
+    echo ""
+    echo "The following lines contain '@qlik-trial':"
+    echo "$STAGED_FILES" | xargs git diff --cached --unified=0 -- | grep -E "^\+.*@qlik-trial"
+    echo ""
+    echo "Please remove these references before committing."
+    exit 1
+  fi
+fi
+
+exit 0
