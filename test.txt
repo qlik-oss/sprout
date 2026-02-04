@@ -3,3 +3,4 @@ a;ma fm
  asdklasfas
  fm
 
+ @qlik-trial/foo bar
