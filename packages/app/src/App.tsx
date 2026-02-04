@@ -11,7 +11,7 @@ import {
   Select,
   ThemeProvider,
 } from "@qlik/sprout-css-react";
-import Star from "@qlik/sprout-icons/react/Star";
+import { BookmarkIcon } from "@qlik/sprout-icons/react";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -42,12 +42,12 @@ function App() {
 
         <h2>Button</h2>
         <Button variant="primary" size="small" label="Click me" onClick={() => {}} />
-        <IconButton variant="default" icon={<Star />} label="Click me" onClick={() => {}} />
+        <IconButton variant="default" icon={<BookmarkIcon />} label="Click me" onClick={() => {}} />
         <ButtonFloating>
           <Button variant="primary" size="small" label="Click me" onClick={() => {}} />
         </ButtonFloating>
         <ButtonFloating>
-          <IconButton variant="default" icon={<Star />} label="Click me" onClick={() => {}} />
+          <IconButton variant="default" icon={<BookmarkIcon />} label="Click me" onClick={() => {}} />
         </ButtonFloating>
         <Button variant="primary" onClick={() => setCount((count) => count + 1)} label={`count is ${count}`} />
         <Select.Select

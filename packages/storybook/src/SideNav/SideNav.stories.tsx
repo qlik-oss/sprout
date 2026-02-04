@@ -6,11 +6,7 @@ import {
   type SideNavProps,
   classNames,
 } from "@qlik/sprout-css-react";
-import CloudUploadIcon from "@qlik/sprout-icons/react/CloudUpload";
-import HistoryIcon from "@qlik/sprout-icons/react/History";
-import ShareIcon from "@qlik/sprout-icons/react/Share";
-import Star2Icon from "@qlik/sprout-icons/react/Star2";
-import UploadIcon from "@qlik/sprout-icons/react/Upload";
+import {UploadIcon, HistoryIcon, BookmarkIcon, BookmarkedIcon} from "@qlik/sprout-icons/react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta: Meta = {
@@ -52,7 +48,7 @@ export const Playground: StoryObj<PlaygroundArgs> = {
           <ListItem hasPadding={false} interactive>
             <SideNav.Link
               href="#shared"
-              icon={<ShareIcon {...UNZIED_PROPS} />}
+              icon={<BookmarkIcon {...UNZIED_PROPS} />}
               label="Shared"
               variant={variant}
             />
@@ -135,7 +131,7 @@ export const VisualTest = {
             <ListItem hasPadding={false} interactive>
               <SideNav.Link
                 href="#upload"
-                icon={<CloudUploadIcon {...UNZIED_PROPS} />}
+                icon={<UploadIcon {...UNZIED_PROPS} />}
                 label="Uploads"
               />
             </ListItem>
@@ -150,7 +146,7 @@ export const VisualTest = {
             <ListItem hasPadding={false} interactive>
               <SideNav.Link
                 href="#shared"
-                icon={<ShareIcon {...UNZIED_PROPS} />}
+                icon={<BookmarkIcon {...UNZIED_PROPS} />}
                 label="Shared"
                 isExternal
               />
@@ -158,7 +154,7 @@ export const VisualTest = {
             <ListItem hasPadding={false} interactive>
               <SideNav.Link
                 href="#shared"
-                icon={<Star2Icon {...UNZIED_PROPS} />}
+                icon={<BookmarkedIcon {...UNZIED_PROPS} />}
                 label="Extra long label with icon"
               />
             </ListItem>
@@ -199,7 +195,7 @@ export const VisualTest = {
                 <SideNav.Link
                   variant="compact"
                   href="#upload"
-                  icon={<CloudUploadIcon {...UNZIED_PROPS} />}
+                  icon={<UploadIcon {...UNZIED_PROPS} />}
                   label="Uploads"
                 />
               </ListItem>
@@ -216,7 +212,7 @@ export const VisualTest = {
                 <SideNav.Link
                   variant="compact"
                   href="#shared"
-                  icon={<ShareIcon {...UNZIED_PROPS} />}
+                  icon={<BookmarkIcon {...UNZIED_PROPS} />}
                   label="Shared"
                   isExternal
                 />
@@ -225,7 +221,7 @@ export const VisualTest = {
                 <SideNav.Link
                   variant="compact"
                   href="#shared"
-                  icon={<Star2Icon {...UNZIED_PROPS} />}
+                  icon={<BookmarkedIcon {...UNZIED_PROPS} />}
                   iconSize="large"
                   label="Extra long label with large icon"
                 />
@@ -239,7 +235,7 @@ export const VisualTest = {
                 <SideNav.Link
                   variant="compact"
                   href="#upload"
-                  icon={<CloudUploadIcon {...UNZIED_PROPS} />}
+                  icon={<UploadIcon {...UNZIED_PROPS} />}
                   aria-label="Uploads"
                 />
               </ListItem>
@@ -256,7 +252,7 @@ export const VisualTest = {
                 <SideNav.Link
                   variant="compact"
                   href="#shared"
-                  icon={<ShareIcon {...UNZIED_PROPS} />}
+                  icon={<BookmarkIcon {...UNZIED_PROPS} />}
                   aria-label="Shared"
                   isExternal
                 />
@@ -273,7 +269,7 @@ export const VisualTest = {
               <SideNav.Link
                 variant="compact"
                 href="#upload"
-                icon={<CloudUploadIcon {...UNZIED_PROPS} />}
+                icon={<UploadIcon {...UNZIED_PROPS} />}
                 label="Uploads"
               />
             </ListItem>
@@ -290,7 +286,7 @@ export const VisualTest = {
               <SideNav.Link
                 variant="compact"
                 href="#shared"
-                icon={<ShareIcon {...UNZIED_PROPS} />}
+                icon={<BookmarkIcon {...UNZIED_PROPS} />}
                 label="Shared"
                 isExternal
               />
@@ -299,7 +295,7 @@ export const VisualTest = {
               <SideNav.Link
                 variant="compact"
                 href="#shared"
-                icon={<Star2Icon {...UNZIED_PROPS} />}
+                icon={<BookmarkedIcon {...UNZIED_PROPS} />}
                 iconSize="large"
                 label="Extra long label with large icon"
               />
@@ -313,7 +309,7 @@ export const VisualTest = {
               <SideNav.Link
                 variant="compact"
                 href="#upload"
-                icon={<CloudUploadIcon {...UNZIED_PROPS} />}
+                icon={<UploadIcon {...UNZIED_PROPS} />}
                 aria-label="Uploads"
               />
             </ListItem>
@@ -330,7 +326,7 @@ export const VisualTest = {
               <SideNav.Link
                 variant="compact"
                 href="#shared"
-                icon={<ShareIcon {...UNZIED_PROPS} />}
+                icon={<BookmarkIcon {...UNZIED_PROPS} />}
                 aria-label="Shared"
                 isExternal
               />

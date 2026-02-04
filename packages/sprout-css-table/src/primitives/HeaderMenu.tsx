@@ -1,11 +1,14 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
 import type { MouseEvent, ReactNode } from "react";
 
-import AscendingIcon from "@qlik/sprout-icons/react/Ascending";
-import ColumnsIcon from "@qlik/sprout-icons/react/Columns";
-import DescendingIcon from "@qlik/sprout-icons/react/Descending";
-import MoreIcon from "@qlik/sprout-icons/react/More";
-import ViewDisabledIcon from "@qlik/sprout-icons/react/ViewDisabled";
+import {
+  ColumnsIcon,
+  HideIcon,
+  MoreIcon,
+  ShowIcon,
+  SortAscendingIcon,
+  SortDescendingIcon,
+} from "@qlik/sprout-icons/react";
 
 import { IconButton, Menu, useSproutI18n, type MenuProps } from "@qlik/sprout-css-react";
 
@@ -49,7 +52,7 @@ export function HeaderMenuContent({
       {onSortChange ? (
         <>
           <Menu.Item
-            icon={<AscendingIcon />}
+            icon={<SortAscendingIcon />}
             disabled={sortOrder === "asc"}
             label={t("table.header.sort-ascending.label")}
             onClick={(e) => {
@@ -59,7 +62,7 @@ export function HeaderMenuContent({
             }}
           />
           <Menu.Item
-            icon={<DescendingIcon />}
+            icon={<SortDescendingIcon />}
             disabled={sortOrder === "desc"}
             label={t("table.header.sort-descending.label")}
             onClick={(e) => {
@@ -73,7 +76,7 @@ export function HeaderMenuContent({
       {onSortChange && (onHideColumn || onManageColumns) ? <Menu.Divider /> : null}
       {onHideColumn ? (
         <Menu.Item
-          icon={<ViewDisabledIcon />}
+          icon={<ShowIcon />}
           label={t("table.header.hide-column.label")}
           onClick={() => {
             onHideColumn();

@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
 import { type MouseEvent, type ReactNode, type Ref, forwardRef } from "react";
 
-import GotoIcon from "@qlik/sprout-icons/react/Goto";
-
 import type { PossibleValues } from "../Typography";
 import { classNames } from "../classNames";
 import type { HTMLAnchorProps } from "../htmlTypes";
+import { GotoIcon } from "../icons";
 
 import style from "./Link.module.css";
 

@@ -6,11 +6,10 @@ import {
   useState,
 } from "react";
 
-import ResizerIcon from "@qlik/sprout-icons/react/Resizer";
-
 import { classNames } from "../classNames";
 import { useI18n } from "../hooks/useI18n";
 import type { HTMLDivProps } from "../htmlTypes";
+import { ResizerIcon } from "../icons";
 
 import style from "./Panel.module.css";
 

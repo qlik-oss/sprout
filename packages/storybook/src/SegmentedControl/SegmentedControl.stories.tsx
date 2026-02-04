@@ -1,5 +1,5 @@
 import { SegmentedControl, classNames } from "@qlik/sprout-css-react";
-import Star2 from "@qlik/sprout-icons/react/Star2";
+import {BookmarkIcon} from "@qlik/sprout-icons/react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import {
@@ -24,29 +24,29 @@ export const Playground: StoryGroup = {
           <SegmentedControl.Segment
             value="A"
             label="Segment"
-            icon={<Star2 />}
+            icon={<BookmarkIcon />}
             defaultChecked
           />
           <SegmentedControl.Segment
             value="B"
             label="Segment"
-            icon={<Star2 />}
+            icon={<BookmarkIcon />}
           />
           <SegmentedControl.Segment
             value="C"
             label="Segment"
-            icon={<Star2 />}
+            icon={<BookmarkIcon />}
             disabled
           />
           <SegmentedControl.Segment
             value="D"
             label="Segment"
-            icon={<Star2 />}
+            icon={<BookmarkIcon />}
           />
           <SegmentedControl.Segment
             value="E"
             label="Segment"
-            icon={<Star2 />}
+            icon={<BookmarkIcon />}
           />
         </SegmentedControl.Group>
       </div>
@@ -163,29 +163,29 @@ export const VisualTest: StoryObj = {
             <SegmentedControl.Segment
               value="A"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
               defaultChecked
             />
             <SegmentedControl.Segment
               value="B"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
             />
             <SegmentedControl.Segment
               value="C"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
               disabled
             />
             <SegmentedControl.Segment
               value="D"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
             />
             <SegmentedControl.Segment
               value="E"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
             />
           </SegmentedControl.Group>
         </span>
@@ -198,29 +198,29 @@ export const VisualTest: StoryObj = {
             <SegmentedControl.Segment
               value="A"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
               defaultChecked
             />
             <SegmentedControl.Segment
               value="B"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
             />
             <SegmentedControl.Segment
               value="C"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
               disabled
             />
             <SegmentedControl.Segment
               value="D"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
             />
             <SegmentedControl.Segment
               value="E"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
             />
           </SegmentedControl.Group>
         </span>
@@ -237,29 +237,29 @@ export const VisualTest: StoryObj = {
             <SegmentedControl.Segment
               value="A"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
               defaultChecked
             />
             <SegmentedControl.Segment
               value="B"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
             />
             <SegmentedControl.Segment
               value="C"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
               disabled
             />
             <SegmentedControl.Segment
               value="D"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
             />
             <SegmentedControl.Segment
               value="E"
               label="Segment"
-              icon={<Star2 />}
+              icon={<BookmarkIcon />}
             />
           </SegmentedControl.Group>
         </span>

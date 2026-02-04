@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "rimraf ./react ./vue ./raw ./optimized && svgo -f ./svg -o ./optimized --pretty --indent=2 && node ./scripts/build-icon-pkg.mjs"
+    "build": "rimraf ./react ./vue ./raw ./optimized && svgo -f ./svg -o ./optimized --pretty --indent=2 && node ./scripts/build-icon-pkg.mjs esm"
   },
   "dependencies": {},
   "devDependencies": {

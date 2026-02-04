@@ -15,9 +15,8 @@ import {
 
 import { tokens } from "@qlik/design-tokens";
 import { useControl } from "@qlik/sprout-css-hooks";
-import CrossOutline from "@qlik/sprout-icons/react/CrossOutline";
-import EditOutline from "@qlik/sprout-icons/react/EditOutline";
-import TickOutline from "@qlik/sprout-icons/react/TickOutline";
+import Close from "@qlik/sprout-icons/react/Close";
+import Edit from "@qlik/sprout-icons/react/Edit";
 
 import { AlertInline } from "../AlertInline";
 import { IconButton } from "../Button";
@@ -32,6 +31,7 @@ import { mergeRefs } from "../Utils/mergeRef";
 import { classNames } from "../classNames";
 import { useI18n } from "../hooks/useI18n";
 import type { HTMLDivProps } from "../htmlTypes";
+import { TickOutline } from "../icons";
 
 import css from "./InlineEdit.module.css";
 
@@ -158,7 +158,7 @@ function InlineEditPrimitiveBase(
   }, [editControl.value]);
 
   const editIcon = (showEditButton || showEditIcon) && (
-    <EditOutline
+    <Edit
       className={classNames(
         "shrink-0",
         "size-xl",
@@ -291,7 +291,7 @@ function InlineEditPrimitiveBase(
                       editControl.onChange(false);
                       setFocusOn("view");
                     }}
-                    icon={<CrossOutline />}
+                    icon={<Close />}
                   />
                 </FloatingWrapper>
                 <FloatingWrapper data-target>

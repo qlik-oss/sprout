@@ -1,8 +1,8 @@
-import type { TableProps } from "@qlik/sprout-css-react";
+import type {} from "@qlik/sprout-css-react";
 import type { HeaderContext } from "@tanstack/react-table";
 import { useRef } from "react";
 import type { ColumnSelectionColumn } from "../features";
-import { TableHTML } from "../primitives";
+import { TableHTML, type TableHTMLProps } from "../primitives";
 import type { ColumnDef } from "../props";
 
 export type HeaderWrapperProps<ContentType> = {
@@ -10,7 +10,7 @@ export type HeaderWrapperProps<ContentType> = {
   colDef: ColumnDef<ContentType>;
   minWidth?: number;
   maxWidth?: number;
-} & TableProps["Header"];
+} & TableHTMLProps["Header"];
 
 export function HeaderWrapper<ContentType>({ info, colDef, children, ...props }: HeaderWrapperProps<ContentType>) {
   const ref = useRef<HTMLDivElement>(null);

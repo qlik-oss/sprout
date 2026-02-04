@@ -9,11 +9,7 @@ import {
   type ToggleButtonProps,
   ToggleIconButton,
 } from "@qlik/sprout-css-react";
-import BinOutline from "@qlik/sprout-icons/react/BinOutline";
-import Book from "@qlik/sprout-icons/react/Book";
-import EditOutline from "@qlik/sprout-icons/react/EditOutline";
-import GotoIcon from "@qlik/sprout-icons/react/Goto";
-import Star from "@qlik/sprout-icons/react/Star";
+import { Edit, BookmarkIcon, DeleteIcon} from "@qlik/sprout-icons/react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { ToggleButtonArgTypes } from "./ToggleButton.argTypes";
@@ -94,7 +90,7 @@ export const Controlled: Story = {
 export const ToggleIconButtonPlayground: Story = {
   render: (props: Omit<ToggleButtonProps, "icon">) => (
     <div className={sprout.classNames("gap-s")}>
-      <ToggleIconButton icon={<BinOutline />} {...props} />
+      <ToggleIconButton icon={<DeleteIcon />} {...props} />
     </div>
   ),
   args: {
@@ -158,20 +154,20 @@ export const VisualTest: Story = {
           "flex-row",
         )}
       >
-        <ToggleButton icon={<BinOutline />} label="Default" />
-        <ToggleButton icon={<BinOutline />} label="Hover" data-testid="hover" />
+        <ToggleButton icon={<DeleteIcon />} label="Default" />
+        <ToggleButton icon={<DeleteIcon />} label="Hover" data-testid="hover" />
         <ToggleButton
-          icon={<BinOutline />}
+          icon={<DeleteIcon />}
           label="Active"
           data-testid="active"
         />
         <ToggleButton
-          icon={<BinOutline />}
+          icon={<DeleteIcon />}
           label="Focus"
           data-testid="focused"
         />
-        <ToggleButton icon={<BinOutline />} label="Toggle" toggled />
-        <ToggleButton icon={<BinOutline />} label="Dropdown" asDropdown />
+        <ToggleButton icon={<DeleteIcon />} label="Toggle" toggled />
+        <ToggleButton icon={<DeleteIcon />} label="Dropdown" asDropdown />
       </div>
       <div
         className={sprout.classNames(
@@ -184,36 +180,36 @@ export const VisualTest: Story = {
       >
         <ToggleIconButton
           size="small"
-          icon={<BinOutline height={undefined} width={undefined} />}
+          icon={<DeleteIcon height={undefined} width={undefined} />}
           label="Default"
         />
         <ToggleIconButton
           size="small"
-          icon={<BinOutline height={undefined} width={undefined} />}
+          icon={<DeleteIcon height={undefined} width={undefined} />}
           label="Hover"
           data-testid="hover"
         />
         <ToggleIconButton
           size="small"
-          icon={<BinOutline height={undefined} width={undefined} />}
+          icon={<DeleteIcon height={undefined} width={undefined} />}
           label="Active"
           data-testid="active"
         />
         <ToggleIconButton
           size="small"
-          icon={<BinOutline height={undefined} width={undefined} />}
+          icon={<DeleteIcon height={undefined} width={undefined} />}
           label="Focus"
           data-testid="focused"
         />
         <ToggleIconButton
           size="small"
-          icon={<BinOutline height={undefined} width={undefined} />}
+          icon={<DeleteIcon height={undefined} width={undefined} />}
           label="Toggle"
           toggled
         />
         <ToggleIconButton
           size="small"
-          icon={<BinOutline height={undefined} width={undefined} />}
+          icon={<DeleteIcon height={undefined} width={undefined} />}
           label="Dropdown"
           asDropdown
         />
@@ -269,55 +265,55 @@ export const VisualTest: Story = {
       </ButtonGroup>
       <H2>ToggleIconButton</H2>
       <ButtonGroup>
-        <ToggleIconButton label="Default" icon={<BinOutline />} />
-        <ToggleIconButton label="Hover" icon={<Book />} data-testid="hover" />
+        <ToggleIconButton label="Default" icon={<DeleteIcon />} />
+        <ToggleIconButton label="Hover" icon={<BookmarkIcon />} data-testid="hover" />
         <ToggleIconButton
           label="Active"
-          icon={<EditOutline />}
+          icon={<Edit />}
           data-testid="active"
         />
         <ToggleIconButton
           label="Focus"
-          icon={<GotoIcon />}
+          icon={<BookmarkIcon />}
           data-testid="focused"
         />
-        <ToggleIconButton label="Toggle" icon={<Star />} toggled />
-        <ToggleIconButton label="Dropdown" icon={<Star />} toggled asDropdown />
+        <ToggleIconButton label="Toggle" icon={<BookmarkIcon />} toggled />
+        <ToggleIconButton label="Dropdown" icon={<BookmarkIcon />} toggled asDropdown />
       </ButtonGroup>
       <ButtonGroup>
         <ToggleIconButton
           label="Default"
           badge={<Badge text="1" variant="alphanumeric" />}
-          icon={<BinOutline />}
+          icon={<DeleteIcon />}
         />
         <ToggleIconButton
           label="Hover"
           badge={<Badge text="1" variant="alphanumeric" />}
-          icon={<Book />}
+          icon={<BookmarkIcon />}
           data-testid="hover"
         />
         <ToggleIconButton
           label="Active"
           badge={<Badge text="1" variant="alphanumeric" />}
-          icon={<EditOutline />}
+          icon={<Edit />}
           data-testid="active"
         />
         <ToggleIconButton
           label="Focus"
           badge={<Badge text="1" variant="alphanumeric" />}
-          icon={<GotoIcon />}
+          icon={<BookmarkIcon />}
           data-testid="focused"
         />
         <ToggleIconButton
           label="Toggle"
           badge={<Badge text="1" variant="alphanumeric" />}
-          icon={<Star />}
+          icon={<BookmarkIcon />}
           toggled
         />
         <ToggleIconButton
           label="Toggle"
           badge={<Badge text="1" variant="alphanumeric" />}
-          icon={<Star />}
+          icon={<BookmarkIcon />}
           asDropdown
         />
       </ButtonGroup>

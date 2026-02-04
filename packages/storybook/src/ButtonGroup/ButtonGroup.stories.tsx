@@ -9,7 +9,7 @@ import {
   classNames,
 } from "@qlik/sprout-css-react";
 import BinOutline from "@qlik/sprout-icons/react/BinOutline";
-import DropdownArrow from "@qlik/sprout-icons/react/DropdownArrow";
+
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { OPTIONS_WITH_GROUP } from "../Select/SelectTest";

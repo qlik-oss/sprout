@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useEffect, useState } from "react";
 
-import { applyTheme } from "@qlik/sprout-theme-provider";
-
 import { ThemeProvider, useTheme } from "./ThemeProvider";
 
 function useRemoveBodyDataset() {
@@ -21,7 +19,12 @@ function useRemoveBodyDataset() {
     // @ts-ignore
     delete document.body.dataset.typography;
     return () => {
-      applyTheme(document.body);
+      document.body.dataset.qlikTheme = "qlik-light";
+      document.body.dataset.qlikAppearance = "qlik-light";
+      document.body.dataset.qlikDensity = "comfortable";
+      document.body.dataset.qlikRoundness = "soft";
+      document.body.dataset.qlikSizing = "mid-sized";
+      document.body.dataset.qlikTypography = "source-sans";
     };
   }, []);
 }

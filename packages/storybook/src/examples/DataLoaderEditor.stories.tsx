@@ -29,7 +29,7 @@ import CommentOutline from "@qlik/sprout-icons/react/CommentOutline";
 import DatabaseArrow from "@qlik/sprout-icons/react/DatabaseArrow";
 import DatabaseArrowInOutline from "@qlik/sprout-icons/react/DatabaseArrowInOutline";
 import DebugOutline from "@qlik/sprout-icons/react/DebugOutline";
-import DropdownArrow from "@qlik/sprout-icons/react/DropdownArrow";
+
 import Folder from "@qlik/sprout-icons/react/Folder";
 import Forward from "@qlik/sprout-icons/react/Forward";
 import HistoryIcon from "@qlik/sprout-icons/react/History";

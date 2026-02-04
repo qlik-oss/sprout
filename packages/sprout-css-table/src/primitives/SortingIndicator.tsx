@@ -1,5 +1,4 @@
-import AscendingIcon from "@qlik/sprout-icons/react/Ascending";
-import DescendingIcon from "@qlik/sprout-icons/react/Descending";
+import { SortAscendingIcon, SortDescendingIcon } from "@qlik/sprout-icons/react";
 import type { CSSProperties } from "react";
 
 export type SortingIndicatorProps = {
@@ -10,10 +9,10 @@ export type SortingIndicatorProps = {
 
 export function SortingIndicator({ direction, className, style }: SortingIndicatorProps) {
   if (direction === "asc") {
-    return <AscendingIcon className={className} style={style} />;
+    return <SortAscendingIcon className={className} style={style} />;
   }
   if (direction === "desc") {
-    return <DescendingIcon className={className} style={style} />;
+    return <SortDescendingIcon className={className} style={style} />;
   }
   return null;
 }

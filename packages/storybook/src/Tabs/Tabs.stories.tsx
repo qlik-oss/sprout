@@ -3,9 +3,7 @@ import { useState } from "react";
 import { fn } from "storybook/test";
 
 import { Badge, Button, Tabs, classNames } from "@qlik/sprout-css-react";
-import BookOutline from "@qlik/sprout-icons/react/BookOutline";
-import Cogwheel from "@qlik/sprout-icons/react/Cogwheel";
-import Star from "@qlik/sprout-icons/react/Star";
+import {BookmarkIcon, BookmarkedIcon} from "@qlik/sprout-icons/react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import {
@@ -57,13 +55,13 @@ export const Uncontrolled: StoryObj<TabsCompositionArgTypesProps> = {
             <Tabs.Tab
               aria-controls="Assets"
               title={title || "Assets"}
-              icon={icon || <BookOutline />}
+              icon={icon || <BookmarkIcon />}
               useIconButton={useIconButton}
             />
             <Tabs.Tab
               aria-controls="Settings"
               title="Settings"
-              icon={<Cogwheel />}
+              icon={<BookmarkIcon />}
               useIconButton={useIconButton}
             />
             <Tabs.Tab
@@ -74,7 +72,7 @@ export const Uncontrolled: StoryObj<TabsCompositionArgTypesProps> = {
             <Tabs.Tab
               aria-controls="Users"
               title="Users"
-              icon={<Star />}
+              icon={<BookmarkedIcon />}
               disabled
               useIconButton={useIconButton}
             />
@@ -126,14 +124,14 @@ export const TabsWithoutPanel: StoryObj = {
             <Tabs.Tab
               aria-controls="Assets"
               title="Assets"
-              icon={<BookOutline />}
+              icon={<BookmarkIcon />}
             />
             <Tabs.Tab
               aria-controls="Settings"
               title="Settings"
-              icon={<Cogwheel />}
+              icon={<BookmarkIcon />}
             />
-            <Tabs.Tab aria-controls="Users" title="Users" icon={<Star />} />
+            <Tabs.Tab aria-controls="Users" title="Users" icon={<BookmarkedIcon />} />
           </Tabs.List>
         </Tabs.Container>
 
@@ -184,13 +182,13 @@ export const Height: StoryObj<TabsCompositionArgTypesProps> = {
             <Tabs.Tab
               aria-controls="Assets"
               title={title || "Assets"}
-              icon={icon || <BookOutline />}
+              icon={icon || <BookmarkIcon />}
               useIconButton={useIconButton}
             />
             <Tabs.Tab
               aria-controls="Settings"
               title="Settings"
-              icon={<Cogwheel />}
+              icon={<BookmarkIcon />}
               useIconButton={useIconButton}
             />
             <Tabs.Tab
@@ -201,7 +199,7 @@ export const Height: StoryObj<TabsCompositionArgTypesProps> = {
             <Tabs.Tab
               aria-controls="Users"
               title="Users"
-              icon={<Star />}
+              icon={<BookmarkedIcon />}
               disabled
               useIconButton={useIconButton}
             />
@@ -245,7 +243,7 @@ const TABS = [
   {
     title: "Assets",
     "aria-controls": "assets-panel",
-    icon: <BookOutline />,
+    icon: <BookmarkIcon />,
     badge: <Badge text="3" color="warning" variant="alphanumeric" />,
     panel: (
       <div className={classNames("font-body-s", "text-default")}>
@@ -256,7 +254,7 @@ const TABS = [
   {
     title: "Settings",
     "aria-controls": "settings-panel",
-    icon: <Cogwheel />,
+    icon: <BookmarkIcon />,
     panel: (
       <div className={classNames("font-body-s", "text-default")}>
         Tab 2 content
@@ -266,7 +264,7 @@ const TABS = [
   {
     title: "Users",
     "aria-controls": "users-panel",
-    icon: <Star />,
+    icon: <BookmarkedIcon />,
     panel: (
       <div className={classNames("font-body-s", "text-default")}>
         Tab 3 content
@@ -321,13 +319,13 @@ export const VisualTests: StoryObj<typeof Tabs> = {
           <Tabs.Tab
             aria-controls="Active"
             title="ActiveTab"
-            icon={<BookOutline />}
+            icon={<BookmarkIcon />}
             badge={<Badge variant="alphanumeric" color="warning" text="3" />}
           />
           <Tabs.Tab
             aria-controls="Enabled"
             title="EnabledTab"
-            icon={<BookOutline />}
+            icon={<BookmarkIcon />}
           />
           <Tabs.Tab
             aria-controls="Hovered"
@@ -342,7 +340,7 @@ export const VisualTests: StoryObj<typeof Tabs> = {
           <Tabs.Tab
             aria-controls="DisabledTab"
             title="DisabledTab"
-            icon={<Star />}
+            icon={<BookmarkedIcon />}
             disabled
           />
         </Tabs.List>
@@ -368,13 +366,13 @@ export const VisualTests: StoryObj<typeof Tabs> = {
           <Tabs.Tab
             aria-controls="Small Active"
             title="Small ActiveTab"
-            icon={<BookOutline />}
+            icon={<BookmarkIcon />}
             badge={<Badge variant="alphanumeric" color="warning" text="3" />}
           />
           <Tabs.Tab
             aria-controls="Small Enabled"
             title="Small EnabledTab"
-            icon={<BookOutline />}
+            icon={<BookmarkIcon />}
           />
           <Tabs.Tab
             aria-controls="Small Hovered"
@@ -389,7 +387,7 @@ export const VisualTests: StoryObj<typeof Tabs> = {
           <Tabs.Tab
             aria-controls="Small DisabledTab"
             title="Small DisabledTab"
-            icon={<Star />}
+            icon={<BookmarkedIcon />}
             disabled
           />
         </Tabs.List>

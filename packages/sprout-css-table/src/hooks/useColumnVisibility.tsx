@@ -3,9 +3,9 @@
  * This file contains all the common utility to build a table using TanStack
  * We should make a package from it in the future
  */
-import { classNames, type TableProps } from "@qlik/sprout-css-react";
+import { classNames } from "@qlik/sprout-css-react";
 import { useEffect, useMemo, useState, type RefObject } from "react";
-import { TableHTML } from "../primitives";
+import { TableHTML, type TableHTMLProps } from "../primitives";
 import { useControlled } from "./useControl";
 
 type TableAction = {
@@ -18,7 +18,7 @@ type CustomEventMap = {
 };
 
 type ColumnVisibilityControl = {
-  tColumns: TableProps["ColumnVisibilityMenu"]["columns"];
+  tColumns: TableHTMLProps["ColumnVisibilityMenu"]["columns"];
   columnVisibility?: Record<string, boolean>;
   onColumnVisibilityChange?: (columnVisibility: Record<string, boolean>) => void;
   defaultColumnVisibility?: Record<string, boolean>;
@@ -64,8 +64,8 @@ export const useColumnVisibilityState = ({
 
 export type UseColumnVisibilityViewProps = {
   headerRef?: RefObject<HTMLDivElement | null>;
-  onColumnVisibilityChange?: TableProps["ColumnVisibilityMenu"]["onColumnVisibilityChange"];
-  columns: TableProps["ColumnVisibilityMenu"]["columns"];
+  onColumnVisibilityChange?: TableHTMLProps["ColumnVisibilityMenu"]["onColumnVisibilityChange"];
+  columns: TableHTMLProps["ColumnVisibilityMenu"]["columns"];
 };
 
 export function useColumnVisibilityView({

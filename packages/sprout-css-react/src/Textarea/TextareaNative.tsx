@@ -2,7 +2,7 @@
 import { type FocusEvent, type Ref, forwardRef } from "react";
 
 import sprout from "@qlik/sprout-css-modules";
-import ErrorOutlineIcon from "@qlik/sprout-icons/react/ErrorOutline";
+import ErrorIcon from "@qlik/sprout-icons/react/Error";
 
 import type { HTMLTextareaProps } from "../htmlTypes";
 
@@ -102,7 +102,7 @@ function TextareaNativeBase(
       />
 
       {!!hasError && (
-        <ErrorOutlineIcon
+        <ErrorIcon
           width={undefined}
           height={undefined}
           data-icon="error"

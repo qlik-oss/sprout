@@ -1,4 +1,3 @@
-import { type PaddingProps, getPaddingProps } from "../Box/padding";
 import {
   FloatingPrimitive,
   type FloatingPrimitiveProps,
@@ -7,11 +6,15 @@ import { classNames } from "../classNames";
 
 import style from "./Popover.module.css";
 
-export type PopoverProps = Omit<
-  FloatingPrimitiveProps,
-  "className" | "zIndex"
-> &
-  PaddingProps;
+export type PopoverProps = Omit<FloatingPrimitiveProps, "zIndex"> & {
+  p?: "xs" | "s" | "m" | "l" | "xl";
+  px?: "xs" | "s" | "m" | "l" | "xl";
+  py?: "xs" | "s" | "m" | "l" | "xl";
+  pt?: "xs" | "s" | "m" | "l" | "xl";
+  pb?: "xs" | "s" | "m" | "l" | "xl";
+  pl?: "xs" | "s" | "m" | "l" | "xl";
+  pr?: "xs" | "s" | "m" | "l" | "xl";
+};
 
 /**
  * @deprecated use PopoverProps instead
@@ -26,7 +29,17 @@ export function Popover({
   maxWidth,
   ...props
 }: PopoverProps) {
-  const { className, ...rest } = getPaddingProps<PopoverProps>(props);
+  const { className, p, px, py, pt, pb, pl, pr, ...rest } = props;
+  classNames({
+    [className || ""]: !!className,
+    [`p-${p}`]: !!p,
+    [`px-${px}`]: !!px,
+    [`py-${py}`]: !!py,
+    [`pt-${pt}`]: !!pt,
+    [`pb-${pb}`]: !!pb,
+    [`pl-${pl}`]: !!pl,
+    [`pr-${pr}`]: !!pr,
+  });
   return (
     <FloatingPrimitive
       hideBackdrop

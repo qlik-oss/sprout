@@ -11,7 +11,7 @@ import {
   classNames,
 } from "@qlik/sprout-css-react";
 import AddOutline from "@qlik/sprout-icons/react/AddOutline";
-import DropdownArrow from "@qlik/sprout-icons/react/DropdownArrow";
+
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { ButtonArgTypes, ButtonIconArgTypes, SIZES } from "./Button.argTypes";

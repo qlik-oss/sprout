@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { InfoOutlineIcon } from "@qlik/sprout-icons/react";
+import { InfoIcon } from "@qlik/sprout-icons/react";
 
 import { Popover } from "../Popover";
 import { Clickable } from "../_Clickable/Clickable";
@@ -25,7 +25,7 @@ export function InfoPopoverPrimitive(props: InfoPopoverPrimitiveProps) {
         type="button"
         data-testid="info-popover-button"
       >
-        <InfoOutlineIcon
+        <InfoIcon
           width={undefined}
           height={undefined}
           className={classNames("shrink-0", "fill-current")}

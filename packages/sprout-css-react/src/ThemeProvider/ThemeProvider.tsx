@@ -12,6 +12,7 @@ import {
 
 import { getDeviceInputType } from "../Utils/device";
 import type { DataAttributes, HTMLDivProps } from "../htmlTypes";
+import { getTheme, themeToDataset } from "./theme";
 
 function getBodyTheme() {
   return {

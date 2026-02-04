@@ -1,8 +1,8 @@
 import chroma from "chroma-js";
 
 import { Tabs, Tag, classNames } from "@qlik/sprout-css-react";
-import StarIcon from "@qlik/sprout-icons/react/Star";
-import Star2Icon from "@qlik/sprout-icons/react/Star2";
+import {BookmarkIcon} from "@qlik/sprout-icons/react";
+
 
 import type {
   DarkModeSproutThemePartial,
@@ -90,8 +90,7 @@ function ThemeColorCombo({
                     color: fgColor,
                   }}
                 >
-                  <Star2Icon />
-                  <StarIcon />
+                  <BookmarkIcon />
                 </span>
                 <span
                   className={classNames(
