@@ -11,8 +11,8 @@
   },
   "prettier": "@qlik/prettier-config",
   "devDependencies": {
-    "@qlik/prettier-config": "0.4.17",
-    "prettier": "3.3.3"
+    "@qlik/prettier-config": "^0.4.33",
+    "prettier": "^3.8.1"
   },
   "publishConfig": {
     "access": "public",

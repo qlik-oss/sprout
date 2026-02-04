@@ -13,7 +13,7 @@ importers:
         version: 2.29.8
       '@qlik/prettier-config':
         specifier: ^0.4.33
-        version: 0.4.33(prettier@3.3.3)(svelte@4.2.18)(typescript@5.5.4)
+        version: 0.4.33(prettier@3.8.1)(svelte@4.2.18)(typescript@5.5.4)
       rimraf:
         specifier: ^6.1.2
         version: 6.1.2
@@ -24,11 +24,11 @@ importers:
   packages/sprout-react:
     devDependencies:
       '@qlik/prettier-config':
-        specifier: 0.4.17
-        version: 0.4.17(prettier@3.3.3)(svelte@4.2.18)(typescript@5.5.4)
+        specifier: ^0.4.33
+        version: 0.4.33(prettier@3.8.1)(svelte@4.2.18)(typescript@5.5.4)
       prettier:
-        specifier: 3.3.3
-        version: 3.3.3
+        specifier: ^3.8.1
+        version: 3.8.1
 
 packages:
 
@@ -148,16 +148,6 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@pkgr/core@0.1.1':
-    resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
-    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
-
-  '@qlik/prettier-config@0.4.17':
-    resolution: {integrity: sha512-7VrpQBds+WgTwGiBfwglHZuSFxuoaBJ2iPxTrsDoN23c7XR9T2PfRXgsJFF0ZK845V2JSYKMwRdXHWzvxlrgoQ==}
-    engines: {node: '>=16'}
-    peerDependencies:
-      prettier: ^3.0.0
-
   '@qlik/prettier-config@0.4.33':
     resolution: {integrity: sha512-clTzzD9hN+QaEBws/yaE9MR+kxVVHJOQ9bw2kDKn+sTf9JHBV7XrWVU+e5gInwk9u5HKa4GSZ3etgb7n05/HCQ==}
     engines: {node: '>=18'}
@@ -238,10 +228,6 @@ packages:
     resolution: {integrity: sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJht4oQDv0F0BMlwaYtA==}
     engines: {node: '>=8'}
 
-  detect-indent@7.0.1:
-    resolution: {integrity: sha512-Mc7QhQ8s+cLrnUfU/Ji94vG/r8M26m8f++vyres4ZoojaRDpZ1eSIh/EpzLNwlWuvzSZ3UbDFspjFvTDXe6e/g==}
-    engines: {node: '>=12.20'}
-
   detect-indent@7.0.2:
     resolution: {integrity: sha512-y+8xyqdGLL+6sh0tVeHcfP/QDd8gUgbasolJJpY7NgeQGSZ739bDtSiaiDgtoicy+mtYB81dKLxO9xRhCyIB3A==}
     engines: {node: '>=12.20'}
@@ -301,13 +287,6 @@ packages:
     resolution: {integrity: sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==}
     engines: {node: '>=6 <7 || >=8'}
 
-  get-stdin@9.0.0:
-    resolution: {integrity: sha512-dVKBjfWisLAicarI2Sf+JuBE/DghV4UzNAVe9yhEJuzeREd3JhOTE9cUaJTeSa77fsbQUK3pcOpJfM59+VKZaA==}
-    engines: {node: '>=12'}
-
-  git-hooks-list@3.1.0:
-    resolution: {integrity: sha512-LF8VeHeR7v+wAbXqfgRlTSX/1BJR9Q1vEMR8JAz1cEg6GX07+zyj3sAdDvYjj/xnlIfVuGgj4qBei1K3hKH+PA==}
-
   git-hooks-list@4.2.1:
     resolution: {integrity: sha512-WNvqJjOxxs/8ZP9+DWdwWJ7cDsd60NHf39XnD82pDVrKO5q7xfPqpkK6hwEAmBa/ZSEE4IOoR75EzbbIuwGlMw==}
 
@@ -322,10 +301,6 @@ packages:
   globby@11.1.0:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
-
-  globby@13.2.2:
-    resolution: {integrity: sha512-Y1zNGV+pzQdh7H39l9zgB4PJqjRNqydvdYCDG4HFXM4XuvSaQQlEc91IU1yALL8gUTDomgBAfz3XJdmUS+oo0w==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
@@ -407,10 +382,6 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  micromatch@4.0.7:
-    resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
-    engines: {node: '>=8.6'}
-
   micromatch@4.0.8:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
@@ -426,9 +397,6 @@ packages:
   mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
-
-  mvdan-sh@0.10.1:
-    resolution: {integrity: sha512-kMbrH0EObaKmK3nVRKUIIya1dpASHIEusM13S4V1ViHFuxuNxCo+arxoa6j/dbV22YBGjl7UKJm9QQKJ2Crzhg==}
 
   outdent@0.5.0:
     resolution: {integrity: sha512-/jHxFIzoMXdqPzTaCpFzAAWhpkSjZPF4Vsn6jAfNpmbH/ymsmd7Qc6VE9BGn0L6YMj6uwpQLxCECpus4ukKS9Q==}
@@ -493,19 +461,6 @@ packages:
     resolution: {integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==}
     engines: {node: '>=6'}
 
-  prettier-plugin-organize-imports@4.0.0:
-    resolution: {integrity: sha512-vnKSdgv9aOlqKeEFGhf9SCBsTyzDSyScy1k7E0R1Uo4L0cTcOV7c1XQaT7jfXIOc/p08WLBfN2QUQA9zDSZMxA==}
-    peerDependencies:
-      '@vue/language-plugin-pug': ^2.0.24
-      prettier: '>=2.0'
-      typescript: '>=2.9'
-      vue-tsc: ^2.0.24
-    peerDependenciesMeta:
-      '@vue/language-plugin-pug':
-        optional: true
-      vue-tsc:
-        optional: true
-
   prettier-plugin-organize-imports@4.3.0:
     resolution: {integrity: sha512-FxFz0qFhyBsGdIsb697f/EkvHzi5SZOhWAjxcx2dLt+Q532bAlhswcXGYB1yzjZ69kW8UoadFBw7TyNwlq96Iw==}
     peerDependencies:
@@ -516,14 +471,6 @@ packages:
       vue-tsc:
         optional: true
 
-  prettier-plugin-packagejson@2.5.1:
-    resolution: {integrity: sha512-6i4PW1KxEA+VrokYNGeI/q8qQX3u5DNBc7eLr9GX4OrvWr9DMls1lhbuNopkKG7Li9rTNxerWnYQyjxoUO4ROA==}
-    peerDependencies:
-      prettier: '>= 1.16.0'
-    peerDependenciesMeta:
-      prettier:
-        optional: true
-
   prettier-plugin-packagejson@3.0.0:
     resolution: {integrity: sha512-z8/QmPSqx/ANvvQMWJSkSq1+ihBXeuwDEYdjX3ZjRJ5Ty1k7vGbFQfhzk2eDe0rwS/TNyRjWK/qnjJEStAOtDw==}
     peerDependencies:
@@ -532,23 +479,11 @@ packages:
       prettier:
         optional: true
 
-  prettier-plugin-sh@0.14.0:
-    resolution: {integrity: sha512-hfXulj5+zEl/ulrO5kMuuTPKmXvOg0bnLHY1hKFNN/N+/903iZbNp8NyZBTsgI8dtkSgFfAEIQq0IQTyP1ZVFQ==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      prettier: ^3.0.3
-
   prettier-plugin-sh@0.18.0:
     resolution: {integrity: sha512-cW1XL27FOJQ/qGHOW6IHwdCiNWQsAgK+feA8V6+xUTaH0cD3Mh+tFAtBvEEWvuY6hTDzRV943Fzeii+qMOh7nQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       prettier: ^3.6.0
-
-  prettier-plugin-svelte@3.2.6:
-    resolution: {integrity: sha512-Y1XWLw7vXUQQZmgv1JAEiLcErqUniAF2wO7QJsw8BVMvpLET2dI5WpEIEJx1r11iHVdSMzQxivyfrH9On9t2IQ==}
-    peerDependencies:
-      prettier: ^3.0.0
-      svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
 
   prettier-plugin-svelte@3.4.1:
     resolution: {integrity: sha512-xL49LCloMoZRvSwa6IEdN2GV6cq2IqpYGstYtMT+5wmml1/dClEoI0MZR78MiVPpu6BdQFfN0/y73yO6+br5Pg==}
@@ -561,8 +496,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.8.1:
+    resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -595,19 +530,10 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  semver@7.6.3:
-    resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.7.3:
     resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
     engines: {node: '>=10'}
     hasBin: true
-
-  sh-syntax@0.4.2:
-    resolution: {integrity: sha512-/l2UZ5fhGZLVZa16XQM9/Vq/hezGGbdHeVEA01uWjOL1+7Ek/gt6FquW0iKKws4a9AYPYvlz6RyVvjh3JxOteg==}
-    engines: {node: '>=16.0.0'}
 
   sh-syntax@0.5.8:
     resolution: {integrity: sha512-JfVoxf4FxQI5qpsPbkHhZo+n6N9YMJobyl4oGEUBb/31oQYlgTjkXQD8PBiafS2UbWoxrTO0Z5PJUBXEPAG1Zw==}
@@ -629,19 +555,8 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  slash@4.0.0:
-    resolution: {integrity: sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==}
-    engines: {node: '>=12'}
-
-  sort-object-keys@1.1.3:
-    resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
-
   sort-object-keys@2.1.0:
     resolution: {integrity: sha512-SOiEnthkJKPv2L6ec6HMwhUcN0/lppkeYuN1x63PbyPRrgSPIuBJCiYxYyvWRTtjMlOi14vQUCGUJqS6PLVm8g==}
-
-  sort-package-json@2.10.0:
-    resolution: {integrity: sha512-MYecfvObMwJjjJskhxYfuOADkXp1ZMMnCFC8yhp+9HDsk7HhR336hd7eiBs96lTXfiqmUNI+WQCeCMRBhl251g==}
-    hasBin: true
 
   sort-package-json@3.6.0:
     resolution: {integrity: sha512-fyJsPLhWvY7u2KsKPZn1PixbXp+1m7V8NWqU8CvgFRbMEX41Ffw1kD8n0CfJiGoaSfoAvbrqRRl/DcHO8omQOQ==}
@@ -670,10 +585,6 @@ packages:
     resolution: {integrity: sha512-d0FdzYIiAePqRJEb90WlJDkjUEx42xhivxN8muUBmfZnP+tzUgz12DJ2hRJi8sIHCME7jeK1PTMgKPSfTd8JrA==}
     engines: {node: '>=16'}
 
-  synckit@0.9.1:
-    resolution: {integrity: sha512-7gr8p9TQP6RAHusBOSLs46F4564ZrjV8xFmw5zCmgmhGUcw2hxsShhJ6CEiHQMgPDwAQ1fWHPM0ypc4RMAig4A==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-
   term-size@2.2.1:
     resolution: {integrity: sha512-wK0Ri4fOGjv/XPy8SBHZChl8CM7uMc5VML7SqiQ0zG7+J5Vr+RMQDoHa2CNT6KHUnTGIXH34UDMkPzAUyapBZg==}
     engines: {node: '>=8'}
@@ -685,9 +596,6 @@ packages:
   to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
-
-  tslib@2.6.3:
-    resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
@@ -765,7 +673,7 @@ snapshots:
       outdent: 0.5.0
       prettier: 2.8.8
       resolve-from: 5.0.0
-      semver: 7.6.3
+      semver: 7.7.3
 
   '@changesets/assemble-release-plan@6.0.9':
     dependencies:
@@ -774,7 +682,7 @@ snapshots:
       '@changesets/should-skip-package': 0.1.2
       '@changesets/types': 6.1.0
       '@manypkg/get-packages': 1.1.3
-      semver: 7.6.3
+      semver: 7.7.3
 
   '@changesets/changelog-git@0.2.1':
     dependencies:
@@ -807,7 +715,7 @@ snapshots:
       package-manager-detector: 0.2.0
       picocolors: 1.1.0
       resolve-from: 5.0.0
-      semver: 7.6.3
+      semver: 7.7.3
       spawndamnit: 3.0.1
       term-size: 2.2.1
     transitivePeerDependencies:
@@ -832,7 +740,7 @@ snapshots:
       '@changesets/types': 6.1.0
       '@manypkg/get-packages': 1.1.3
       picocolors: 1.1.0
-      semver: 7.6.3
+      semver: 7.7.3
 
   '@changesets/get-release-plan@4.0.14':
     dependencies:
@@ -951,28 +859,13 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@pkgr/core@0.1.1': {}
-
-  '@qlik/prettier-config@0.4.17(prettier@3.3.3)(svelte@4.2.18)(typescript@5.5.4)':
+  '@qlik/prettier-config@0.4.33(prettier@3.8.1)(svelte@4.2.18)(typescript@5.5.4)':
     dependencies:
-      prettier: 3.3.3
-      prettier-plugin-organize-imports: 4.0.0(prettier@3.3.3)(typescript@5.5.4)
-      prettier-plugin-packagejson: 2.5.1(prettier@3.3.3)
-      prettier-plugin-sh: 0.14.0(prettier@3.3.3)
-      prettier-plugin-svelte: 3.2.6(prettier@3.3.3)(svelte@4.2.18)
-    transitivePeerDependencies:
-      - '@vue/language-plugin-pug'
-      - svelte
-      - typescript
-      - vue-tsc
-
-  '@qlik/prettier-config@0.4.33(prettier@3.3.3)(svelte@4.2.18)(typescript@5.5.4)':
-    dependencies:
-      prettier: 3.3.3
-      prettier-plugin-organize-imports: 4.3.0(prettier@3.3.3)(typescript@5.5.4)
-      prettier-plugin-packagejson: 3.0.0(prettier@3.3.3)
-      prettier-plugin-sh: 0.18.0(prettier@3.3.3)
-      prettier-plugin-svelte: 3.4.1(prettier@3.3.3)(svelte@4.2.18)
+      prettier: 3.8.1
+      prettier-plugin-organize-imports: 4.3.0(prettier@3.8.1)(typescript@5.5.4)
+      prettier-plugin-packagejson: 3.0.0(prettier@3.8.1)
+      prettier-plugin-sh: 0.18.0(prettier@3.8.1)
+      prettier-plugin-svelte: 3.4.1(prettier@3.8.1)(svelte@4.2.18)
     transitivePeerDependencies:
       - svelte
       - typescript
@@ -1039,8 +932,6 @@ snapshots:
 
   detect-indent@6.1.0: {}
 
-  detect-indent@7.0.1: {}
-
   detect-indent@7.0.2: {}
 
   detect-newline@4.0.1: {}
@@ -1068,7 +959,7 @@ snapshots:
       '@nodelib/fs.walk': 1.2.8
       glob-parent: 5.1.2
       merge2: 1.4.1
-      micromatch: 4.0.7
+      micromatch: 4.0.8
 
   fastq@1.17.1:
     dependencies:
@@ -1099,10 +990,6 @@ snapshots:
       jsonfile: 4.0.0
       universalify: 0.1.2
 
-  get-stdin@9.0.0: {}
-
-  git-hooks-list@3.1.0: {}
-
   git-hooks-list@4.2.1: {}
 
   glob-parent@5.1.2:
@@ -1123,14 +1010,6 @@ snapshots:
       ignore: 5.3.2
       merge2: 1.4.1
       slash: 3.0.0
-
-  globby@13.2.2:
-    dependencies:
-      dir-glob: 3.0.1
-      fast-glob: 3.3.2
-      ignore: 5.3.2
-      merge2: 1.4.1
-      slash: 4.0.0
 
   graceful-fs@4.2.11: {}
 
@@ -1195,11 +1074,6 @@ snapshots:
 
   merge2@1.4.1: {}
 
-  micromatch@4.0.7:
-    dependencies:
-      braces: 3.0.3
-      picomatch: 2.3.1
-
   micromatch@4.0.8:
     dependencies:
       braces: 3.0.3
@@ -1212,8 +1086,6 @@ snapshots:
   minipass@7.1.2: {}
 
   mri@1.2.0: {}
-
-  mvdan-sh@0.10.1: {}
 
   outdent@0.5.0: {}
 
@@ -1262,54 +1134,31 @@ snapshots:
 
   pify@4.0.1: {}
 
-  prettier-plugin-organize-imports@4.0.0(prettier@3.3.3)(typescript@5.5.4):
+  prettier-plugin-organize-imports@4.3.0(prettier@3.8.1)(typescript@5.5.4):
     dependencies:
-      prettier: 3.3.3
+      prettier: 3.8.1
       typescript: 5.5.4
 
-  prettier-plugin-organize-imports@4.3.0(prettier@3.3.3)(typescript@5.5.4):
-    dependencies:
-      prettier: 3.3.3
-      typescript: 5.5.4
-
-  prettier-plugin-packagejson@2.5.1(prettier@3.3.3):
-    dependencies:
-      sort-package-json: 2.10.0
-      synckit: 0.9.1
-    optionalDependencies:
-      prettier: 3.3.3
-
-  prettier-plugin-packagejson@3.0.0(prettier@3.3.3):
+  prettier-plugin-packagejson@3.0.0(prettier@3.8.1):
     dependencies:
       sort-package-json: 3.6.0
     optionalDependencies:
-      prettier: 3.3.3
+      prettier: 3.8.1
 
-  prettier-plugin-sh@0.14.0(prettier@3.3.3):
-    dependencies:
-      mvdan-sh: 0.10.1
-      prettier: 3.3.3
-      sh-syntax: 0.4.2
-
-  prettier-plugin-sh@0.18.0(prettier@3.3.3):
+  prettier-plugin-sh@0.18.0(prettier@3.8.1):
     dependencies:
       '@reteps/dockerfmt': 0.3.6
-      prettier: 3.3.3
+      prettier: 3.8.1
       sh-syntax: 0.5.8
 
-  prettier-plugin-svelte@3.2.6(prettier@3.3.3)(svelte@4.2.18):
+  prettier-plugin-svelte@3.4.1(prettier@3.8.1)(svelte@4.2.18):
     dependencies:
-      prettier: 3.3.3
-      svelte: 4.2.18
-
-  prettier-plugin-svelte@3.4.1(prettier@3.3.3)(svelte@4.2.18):
-    dependencies:
-      prettier: 3.3.3
+      prettier: 3.8.1
       svelte: 4.2.18
 
   prettier@2.8.8: {}
 
-  prettier@3.3.3: {}
+  prettier@3.8.1: {}
 
   queue-microtask@1.2.3: {}
 
@@ -1337,13 +1186,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  semver@7.6.3: {}
-
   semver@7.7.3: {}
-
-  sh-syntax@0.4.2:
-    dependencies:
-      tslib: 2.6.3
 
   sh-syntax@0.5.8:
     dependencies:
@@ -1359,22 +1202,7 @@ snapshots:
 
   slash@3.0.0: {}
 
-  slash@4.0.0: {}
-
-  sort-object-keys@1.1.3: {}
-
   sort-object-keys@2.1.0: {}
-
-  sort-package-json@2.10.0:
-    dependencies:
-      detect-indent: 7.0.1
-      detect-newline: 4.0.1
-      get-stdin: 9.0.0
-      git-hooks-list: 3.1.0
-      globby: 13.2.2
-      is-plain-obj: 4.1.0
-      semver: 7.6.3
-      sort-object-keys: 1.1.3
 
   sort-package-json@3.6.0:
     dependencies:
@@ -1418,11 +1246,6 @@ snapshots:
       magic-string: 0.30.11
       periscopic: 3.1.0
 
-  synckit@0.9.1:
-    dependencies:
-      '@pkgr/core': 0.1.1
-      tslib: 2.6.3
-
   term-size@2.2.1: {}
 
   tinyglobby@0.2.15:
@@ -1433,8 +1256,6 @@ snapshots:
   to-regex-range@5.0.1:
     dependencies:
       is-number: 7.0.0
-
-  tslib@2.6.3: {}
 
   tslib@2.8.1: {}
 
