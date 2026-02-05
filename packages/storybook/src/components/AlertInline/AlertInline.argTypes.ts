@@ -1,4 +1,4 @@
-import type { AlertInlineProps } from "@qlik/sprout-css-react";
+import type { AlertInlineProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
 export const AlertInlineArgTypes: ArgTypes<AlertInlineProps> = {
@@ -6,8 +6,7 @@ export const AlertInlineArgTypes: ArgTypes<AlertInlineProps> = {
     control: {
       type: "text",
     },
-    description:
-      "Content of the alert inline. `message` prop has been deprecated.",
+    description: "Content of the alert inline. `message` prop has been deprecated.",
     table: {
       type: { summary: "ReactNode" },
     },

@@ -1,3 +1,4 @@
+import { DeleteIcon } from "@qlik/sprout-icons/react";
 import {
   Button,
   FloatingWrapper,
@@ -6,8 +7,7 @@ import {
   ToggleButton,
   ToggleIconButton,
   classNames,
-} from "@qlik/sprout-css-react";
-import { DeleteIcon } from "@qlik/sprout-icons/react";
+} from "@qlik/sprout-react";
 
 export default {
   title: "Components/FloatingWrapper",

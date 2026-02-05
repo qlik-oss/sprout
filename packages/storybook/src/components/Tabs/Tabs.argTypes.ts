@@ -1,4 +1,4 @@
-import type { TabsCompositionProps, TabsProps } from "@qlik/sprout-css-react";
+import type { TabsCompositionProps, TabsProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 import { ICONS_MAP, ICON_OPTIONS } from "../internal/icons/Icons";

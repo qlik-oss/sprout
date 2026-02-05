@@ -1,4 +1,4 @@
-import type { ToggleButtonProps } from "@qlik/sprout-css-react";
+import type { ToggleButtonProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
 export const ToggleButtonArgTypes: ArgTypes<ToggleButtonProps> = {
@@ -23,8 +23,7 @@ export const ToggleButtonArgTypes: ArgTypes<ToggleButtonProps> = {
     control: {
       type: "boolean",
     },
-    description:
-      "Controls the toggle state. Setting this prop will make the button controlled.",
+    description: "Controls the toggle state. Setting this prop will make the button controlled.",
     table: {
       type: {
         summary: "boolean",

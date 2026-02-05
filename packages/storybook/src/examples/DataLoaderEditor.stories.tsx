@@ -3,6 +3,20 @@ import { type ReactNode, useEffect, useState } from "react";
 import { sql } from "@codemirror/lang-sql";
 import { tags as t } from "@lezer/highlight";
 import {
+  AddIcon,
+  CommentCodeIcon,
+  DatabaseIcon,
+  DebugIcon,
+  FolderClosedIcon,
+  HistoryIcon,
+  IndentDecreaseIcon,
+  IndentIncreaseIcon,
+  LockIcon,
+  RedoIcon,
+  RunIcon,
+  UndoIcon,
+} from "@qlik/sprout-icons/react";
+import {
   Accordion,
   Avatar,
   Badge,
@@ -22,21 +36,7 @@ import {
   type ToastProps,
   ToggleButton,
   classNames,
-} from "@qlik/sprout-css-react";
-import {
-  AddIcon,
-  CommentCodeIcon,
-  DatabaseIcon,
-  DebugIcon,
-  FolderClosedIcon,
-  HistoryIcon,
-  IndentDecreaseIcon,
-  IndentIncreaseIcon,
-  LockIcon,
-  RedoIcon,
-  RunIcon,
-  UndoIcon,
-} from "@qlik/sprout-icons/react";
+} from "@qlik/sprout-react";
 
 import { createTheme } from "@uiw/codemirror-themes";
 import CodeMirror from "@uiw/react-codemirror";

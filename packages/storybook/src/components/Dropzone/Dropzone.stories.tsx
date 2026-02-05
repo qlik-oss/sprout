@@ -1,5 +1,5 @@
-import { AlertInline, Button, Dropzone, type DropzoneProps, classNames } from "@qlik/sprout-css-react";
 import { UploadIcon } from "@qlik/sprout-icons/react";
+import { AlertInline, Button, Dropzone, type DropzoneProps, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { DropzoneArgTypes } from "./Dropzone.argTypes";

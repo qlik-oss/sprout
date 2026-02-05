@@ -1,8 +1,4 @@
-import {
-  Textarea,
-  type TextareaProps,
-  classNames,
-} from "@qlik/sprout-css-react";
+import { Textarea, type TextareaProps, classNames } from "@qlik/sprout-react";
 import type { Meta } from "@storybook/react-vite";
 
 import { TextareaArgTypes } from "./Textarea.argTypes";
@@ -14,24 +10,13 @@ export default {
 } as Meta;
 
 const errorMessages = ["Error message 1"];
-const longErrorMessage = [
-  "A very very very very very very very very long error message",
-];
+const longErrorMessage = ["A very very very very very very very very long error message"];
 const LOREM_IPSUM = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.`;
 const disableSnap = { chromatic: { disableSnapshot: true } };
 
 export function VisualTest(props: Partial<TextareaProps>) {
   return (
-    <div
-      className={classNames(
-        "flex",
-        "flex-col",
-        "border-box",
-        "w-fit",
-        "p-s",
-        "w-xs",
-      )}
-    >
+    <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s", "w-xs")}>
       <Textarea
         id="Textarea1"
         label="Default"
@@ -40,27 +25,9 @@ export function VisualTest(props: Partial<TextareaProps>) {
         defaultValue="This is the textarea's value"
         {...props}
       />
-      <Textarea
-        id="Textarea-resizable"
-        label="Resizable"
-        placeholder="Textarea resizable"
-        resizable
-        {...props}
-      />
-      <Textarea
-        id="Textarea-disabled"
-        label="Disabled"
-        placeholder="Disabled Textarea"
-        disabled
-        {...props}
-      />
-      <Textarea
-        id="Textarea-readonly"
-        label="Readonly"
-        placeholder="Readonly Textarea"
-        readOnly
-        {...props}
-      />
+      <Textarea id="Textarea-resizable" label="Resizable" placeholder="Textarea resizable" resizable {...props} />
+      <Textarea id="Textarea-disabled" label="Disabled" placeholder="Disabled Textarea" disabled {...props} />
+      <Textarea id="Textarea-readonly" label="Readonly" placeholder="Readonly Textarea" readOnly {...props} />
       <Textarea
         id="Textarea-error-message"
         label="Error"
@@ -69,14 +36,7 @@ export function VisualTest(props: Partial<TextareaProps>) {
         errorMessages={errorMessages}
         {...props}
       />
-      <Textarea
-        id="Textarea-error"
-        label="Error"
-        placeholder="Textarea in error"
-        hasError
-        resizable
-        {...props}
-      />
+      <Textarea id="Textarea-error" label="Error" placeholder="Textarea in error" hasError resizable {...props} />
       <Textarea
         id="Textarea-max-character-count"
         label="Character Count Empty"

@@ -1,4 +1,4 @@
-import type { TextareaProps } from "@qlik/sprout-css-react";
+import type { TextareaProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
 import { CommonFieldArgTypes, FieldArgTypes } from "../Field.argTypes";
@@ -37,11 +37,7 @@ export const TextareaArgTypes: ArgTypes<TextareaProps> = {
     control: {
       type: "select",
     },
-    options: [
-      undefined,
-      "simple value",
-      "very very long value that exceeds the width of the text field",
-    ],
+    options: [undefined, "simple value", "very very long value that exceeds the width of the text field"],
     description: "The value of the text field in controlled mode.",
   },
   defaultValue: {

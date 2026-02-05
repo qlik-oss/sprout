@@ -15,7 +15,7 @@ Once your React app is ready, you can add the following dependencies:
 Install the package using your preferred package manager. For example, if you are using `pnpm`, run:
 
 ```bash
-pnpm i @qlik/sprout-css-table
+pnpm i @qlik/sprout-table
 ```
 
 ## Importing Components
@@ -23,7 +23,7 @@ pnpm i @qlik/sprout-css-table
 You can import the components in any `tsx` file like this:
 
 ```tsx
-import { Table } from "@qlik/sprout-css-table";
+import { Table } from "@qlik/sprout-table";
 ```
 
 ## Define rows
@@ -51,7 +51,7 @@ const rows: MyObject[] = [
 ## Define columns
 
 ```tsx
-import { type ColumnDef } from "@qlik/sprout-css-table";
+import { type ColumnDef } from "@qlik/sprout-table";
 
 const columns: ColumnDef<MyObject>[] = [
   { field: "name", headerName: "Product Name", width: 200 },

@@ -9,17 +9,13 @@ import * as Stories from "./SideNav.stories";
 Side navigation is typically used as a primary or secondary navigation in a side panel.
 
 ```tsx
-import { SideNav } from "@qlik/sprout-css-react";
+import { SideNav } from "@qlik/sprout-react";
 
 <SideNav.Nav>
   <SideNav.Section label="Default">
     <List gap="s">
       <ListItem hasPadding={false} interactive>
-        <SideNav.Link
-          href="#upload"
-          icon={<CloudUploadIcon {...UNZIED_PROPS} />}
-          label="Uploads"
-        />
+        <SideNav.Link href="#upload" icon={<CloudUploadIcon {...UNZIED_PROPS} />} label="Uploads" />
       </ListItem>
     </List>
   </SideNav.Section>
@@ -34,12 +30,7 @@ and this property doesn't appear in the source code panel
 ## API
 
 ```typescript
-import {
-  HTMLAnchorProps,
-  HTMLDivProps,
-  type HTMLNavProps,
-  type HTMLSectionProps,
-} from "../htmlTypes";
+import { HTMLAnchorProps, HTMLDivProps, type HTMLNavProps, type HTMLSectionProps } from "../htmlTypes";
 
 type SideNavProps = {
   Nav: {

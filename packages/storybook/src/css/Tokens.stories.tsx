@@ -14,17 +14,8 @@ import {
 
 import sproutTokens from "@qlik/design-tokens/generated/tokens/json/sprout-tokens.json";
 import sprout from "@qlik/sprout-css-modules";
-import {
-  TextField,
-  Toast,
-  type ToastProps,
-  classNames,
-} from "@qlik/sprout-css-react";
-import {
-  type ColumnDef,
-  Table,
-  type TableCellParams,
-} from "@qlik/sprout-css-table";
+import { TextField, Toast, type ToastProps, classNames } from "@qlik/sprout-react";
+import { type ColumnDef, Table, type TableCellParams } from "@qlik/sprout-table";
 
 export default {
   title: "CSS/Tokens",
@@ -112,9 +103,7 @@ function getTokens() {
   return buff;
 }
 
-const ToastContext = createContext<(props: ToastProps["Content"]) => void>(
-  () => {},
-);
+const ToastContext = createContext<(props: ToastProps["Content"]) => void>(() => {});
 
 function ToastContainerStory({ children }: { children: ReactNode }) {
   const [toasts, setToasts] = useState<Array<ToastProps["Content"]>>([]);
@@ -146,21 +135,14 @@ function ToastContainerStory({ children }: { children: ReactNode }) {
   );
 }
 
-function CSSToken({
-  children,
-  wrap,
-}: {
-  children: ReactNode;
-  wrap: "var" | "sprout";
-}) {
+function CSSToken({ children, wrap }: { children: ReactNode; wrap: "var" | "sprout" }) {
   const toastContext = useContext(ToastContext);
   const childString = (Children.toArray(children).join("") || "").toString();
   return (
     <button
       type="button"
       onClick={() => {
-        const value =
-          wrap === "var" ? `var(${childString})` : `sprout.${childString}`;
+        const value = wrap === "var" ? `var(${childString})` : `sprout.${childString}`;
         navigator.clipboard
           .writeText(value)
           .then(() => {
@@ -186,9 +168,7 @@ function CSSToken({
       )}
       style={{ cursor: "copy", textWrap: "nowrap" }}
     >
-      <span style={{ color: "var(--sprout-script-color-string)" }}>
-        {childString}
-      </span>
+      <span style={{ color: "var(--sprout-script-color-string)" }}>{childString}</span>
     </button>
   );
 }
@@ -231,26 +211,12 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
   const [value, setValue] = useState(colDef.field ? row[colDef.field] : "");
   useEffect(() => {
     if (ref.current) {
-      setValue(
-        getComputedStyle(ref.current).getPropertyValue(
-          ref.current.dataset.key || "color",
-        ),
-      );
+      setValue(getComputedStyle(ref.current).getPropertyValue(ref.current.dataset.key || "color"));
     }
   }, []);
   if (row.usage === "border") {
     return (
-      <div
-        className={classNames(
-          "flex",
-          "flex-row",
-          "border-box",
-          "items-center",
-          "bg-default",
-          "p-s",
-          "h-full",
-        )}
-      >
+      <div className={classNames("flex", "flex-row", "border-box", "items-center", "bg-default", "p-s", "h-full")}>
         <div
           className={classNames("flex", "flex-row", "border-box")}
           style={{
@@ -264,17 +230,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
   }
   if (row.usage === "divider") {
     return (
-      <div
-        className={classNames(
-          "flex",
-          "flex-row",
-          "border-box",
-          "items-center",
-          "bg-default",
-          "p-s",
-          "h-full",
-        )}
-      >
+      <div className={classNames("flex", "flex-row", "border-box", "items-center", "bg-default", "p-s", "h-full")}>
         <div
           className={classNames("flex", "flex-row", "border-box")}
           style={{
@@ -289,28 +245,13 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
   if (row.usage === "foreground-color") {
     return (
       <div
-        className={classNames(
-          "flex",
-          "flex-row",
-          "border-box",
-          "items-center",
-          "p-s",
-          "h-full",
-          "w-full",
-          {
-            "bg-default": row.semantic !== "inverse",
-            "bg-inverse": row.semantic === "inverse",
-          },
-        )}
+        className={classNames("flex", "flex-row", "border-box", "items-center", "p-s", "h-full", "w-full", {
+          "bg-default": row.semantic !== "inverse",
+          "bg-inverse": row.semantic === "inverse",
+        })}
       >
         <div
-          className={classNames(
-            "flex",
-            "flex-row",
-            "border-box",
-            "font-label-s",
-            "radius-round",
-          )}
+          className={classNames("flex", "flex-row", "border-box", "font-label-s", "radius-round")}
           ref={ref}
           data-key="color"
           style={{ color: `var(${row.name})` }}
@@ -320,11 +261,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
       </div>
     );
   }
-  if (
-    ["background-color", "color", "border-color", "divider-color"].includes(
-      row.usage,
-    )
-  ) {
+  if (["background-color", "color", "border-color", "divider-color"].includes(row.usage)) {
     return (
       <div
         className={classNames(
@@ -345,13 +282,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
         )}
       >
         <div
-          className={classNames(
-            "flex",
-            "flex-row",
-            "border-box",
-            "radius-round",
-            "border-default",
-          )}
+          className={classNames("flex", "flex-row", "border-box", "radius-round", "border-default")}
           ref={ref}
           data-key="background-color"
           style={{
@@ -367,17 +298,10 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
   if (row.usage === "elevation") {
     return (
       <div
-        className={classNames(
-          "flex",
-          "flex-row",
-          "border-box",
-          "items-center",
-          "h-full",
-          {
-            "bg-inverse": row.semantic === "inverse",
-            "bg-default": row.semantic !== "inverse",
-          },
-        )}
+        className={classNames("flex", "flex-row", "border-box", "items-center", "h-full", {
+          "bg-inverse": row.semantic === "inverse",
+          "bg-default": row.semantic !== "inverse",
+        })}
       >
         <div
           className={classNames(
@@ -405,18 +329,10 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
   if (row.dimension === "typography" && row.usage === "font") {
     return (
       <div
-        className={classNames(
-          "flex",
-          "flex-row",
-          "border-box",
-          "items-center",
-          "p-s",
-          "h-full",
-          {
-            "bg-inverse": row.semantic === "inverse",
-            "bg-default": row.semantic !== "inverse",
-          },
-        )}
+        className={classNames("flex", "flex-row", "border-box", "items-center", "p-s", "h-full", {
+          "bg-inverse": row.semantic === "inverse",
+          "bg-default": row.semantic !== "inverse",
+        })}
       >
         <div
           className={classNames(
@@ -438,15 +354,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
     );
   }
   return (
-    <div
-      className={classNames(
-        "flex",
-        "flex-row",
-        "border-box",
-        "items-center",
-        "h-full",
-      )}
-    >
+    <div className={classNames("flex", "flex-row", "border-box", "items-center", "h-full")}>
       {colDef.field ? row[colDef.field] : null}
     </div>
   );
@@ -493,17 +401,10 @@ export const DataTable = {
     useEffect(() => {
       setRowData(
         TOKEN_DATA.filter((token) => {
-          const matchName = token.name
-            .toLowerCase()
-            .includes((name || "").toLowerCase());
-          const matchDimension =
-            !dimension ||
-            token.dimension.toLowerCase() === (dimension || "").toLowerCase();
-          const matchSemantic =
-            !semantic ||
-            token.semantic.toLowerCase() === (semantic || "").toLowerCase();
-          const matchUsage =
-            !usage || token.usage.toLowerCase() === (usage || "").toLowerCase();
+          const matchName = token.name.toLowerCase().includes((name || "").toLowerCase());
+          const matchDimension = !dimension || token.dimension.toLowerCase() === (dimension || "").toLowerCase();
+          const matchSemantic = !semantic || token.semantic.toLowerCase() === (semantic || "").toLowerCase();
+          const matchUsage = !usage || token.usage.toLowerCase() === (usage || "").toLowerCase();
 
           return matchName && matchDimension && matchSemantic && matchUsage;
         }),
@@ -513,38 +414,17 @@ export const DataTable = {
     const filteredRows = useMemo(
       () =>
         rowData.filter((row) =>
-          [
-            row.name,
-            row.usage,
-            row.dimension,
-            row.semantic,
-            row.defaultVariant,
-          ].some((v) => v?.toLowerCase().includes(searchTerm.toLowerCase())),
+          [row.name, row.usage, row.dimension, row.semantic, row.defaultVariant].some((v) =>
+            v?.toLowerCase().includes(searchTerm.toLowerCase()),
+          ),
         ),
       [rowData, searchTerm],
     );
 
     return (
       <ToastContainerStory>
-        <div
-          className={classNames(
-            "flex",
-            "flex-col",
-            "border-box",
-            "h-screen",
-            "overflow-hidden",
-            "p-l",
-          )}
-        >
-          <div
-            className={classNames(
-              "flex",
-              "flex-col",
-              "gap-m",
-              "border-box",
-              "size-full",
-            )}
-          >
+        <div className={classNames("flex", "flex-col", "border-box", "h-screen", "overflow-hidden", "p-l")}>
+          <div className={classNames("flex", "flex-col", "gap-m", "border-box", "size-full")}>
             <div className={classNames("flex", "items-center", "w-s")}>
               <TextField
                 value={searchTerm}
@@ -556,12 +436,7 @@ export const DataTable = {
               />
             </div>
             <div className={classNames("flex-auto", "min-h-0", "w-full")}>
-              <Table
-                variant="data"
-                columns={colDef}
-                rowHeight={40}
-                rows={filteredRows}
-              />
+              <Table variant="data" columns={colDef} rowHeight={40} rows={filteredRows} />
             </div>
           </div>
         </div>

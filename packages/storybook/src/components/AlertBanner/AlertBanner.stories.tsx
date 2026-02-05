@@ -1,12 +1,6 @@
 import { fn } from "storybook/test";
 
-import {
-  AlertBanner,
-  type AlertBannerProps,
-  Button,
-  Link,
-  classNames,
-} from "@qlik/sprout-css-react";
+import { AlertBanner, type AlertBannerProps, Button, Link, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { AlertBannerArgTypes } from "./AlertBanner.argTypes";
@@ -25,16 +19,8 @@ const onClickAction = fn();
 
 export const Playground: Story = {
   render: ({ ...props }) => (
-    <div
-      className={classNames("flex", "flex-col", "p-m", "w-s")}
-      data-testid="wrapper"
-    >
-      <AlertBanner
-        {...props}
-        action={
-          <Button variant="quiet" label="Action" onClick={onClickAction} />
-        }
-      />
+    <div className={classNames("flex", "flex-col", "p-m", "w-s")} data-testid="wrapper">
+      <AlertBanner {...props} action={<Button variant="quiet" label="Action" onClick={onClickAction} />} />
     </div>
   ),
 
@@ -62,9 +48,7 @@ export const VisualTest: Story = {
       style={{ maxInlineSize: 500 }}
       data-testid="wrapper"
     >
-      <p className={classNames("text-default", "font-body-m")}>
-        Content default:
-      </p>
+      <p className={classNames("text-default", "font-body-m")}>Content default:</p>
       <AlertBanner
         {...defaultProps}
         variant="info"
@@ -78,9 +62,7 @@ export const VisualTest: Story = {
       <AlertBanner {...defaultProps} variant="warning" />
       <AlertBanner {...defaultProps} variant="error" />
 
-      <p className={classNames("text-default", "font-body-m")}>
-        Content centered `justify="center"`:
-      </p>
+      <p className={classNames("text-default", "font-body-m")}>Content centered `justify="center"`:</p>
       <AlertBanner
         {...defaultProps}
         justify="center"
@@ -94,9 +76,7 @@ export const VisualTest: Story = {
       <AlertBanner {...defaultProps} justify="center" variant="success" />
       <AlertBanner {...defaultProps} justify="center" variant="warning" />
       <AlertBanner {...defaultProps} justify="center" variant="error" />
-      <p className={classNames("text-default", "font-body-m")}>
-        Without action and link:
-      </p>
+      <p className={classNames("text-default", "font-body-m")}>Without action and link:</p>
       <AlertBanner
         content={defaultProps.content}
         justify="center"
@@ -109,20 +89,10 @@ export const VisualTest: Story = {
         variant="success"
         onClickDismiss={defaultProps.onClickDismiss}
       />
-      <AlertBanner
-        content={defaultProps.content}
-        variant="warning"
-        onClickDismiss={defaultProps.onClickDismiss}
-      />
-      <AlertBanner
-        content={defaultProps.content}
-        variant="error"
-        onClickDismiss={defaultProps.onClickDismiss}
-      />
+      <AlertBanner content={defaultProps.content} variant="warning" onClickDismiss={defaultProps.onClickDismiss} />
+      <AlertBanner content={defaultProps.content} variant="error" onClickDismiss={defaultProps.onClickDismiss} />
 
-      <p className={classNames("text-default", "font-body-m")}>
-        Custom content:
-      </p>
+      <p className={classNames("text-default", "font-body-m")}>Custom content:</p>
       <AlertBanner
         variant="info"
         onClickDismiss={defaultProps.onClickDismiss}
@@ -150,18 +120,15 @@ export const VisualTest: Story = {
         content={
           <div className={classNames("flex", "flex-col", "gap-s")}>
             <p className={classNames("text-default", "font-body-s", "m-0")}>
-              This is an example of passing a <strong>React node</strong>{" "}
-              instead of just a <code>string</code>.
+              This is an example of passing a <strong>React node</strong> instead of just a <code>string</code>.
             </p>
             <p className={classNames("text-default", "font-body-s", "m-0")}>
-              The banner will handle this and by default, a maximum height of 3
-              rows of text is applied to keep the layout consistent and visually
-              balanced.
+              The banner will handle this and by default, a maximum height of 3 rows of text is applied to keep the
+              layout consistent and visually balanced.
             </p>
             <p className={classNames("text-default", "font-body-s", "m-0")}>
-              However, we recommend following the guidelines and preferring
-              plain strings when possible to keep content consistent across the
-              design system.
+              However, we recommend following the guidelines and preferring plain strings when possible to keep content
+              consistent across the design system.
             </p>
           </div>
         }
@@ -176,12 +143,12 @@ export const VisualTest: Story = {
               This is an error banner using <strong>React node</strong> content.
             </p>
             <p className={classNames("text-default", "font-body-s", "m-0")}>
-              The same rules apply here: by default the maximum height is
-              limited to 3 rows, so the layout stays predictable.
+              The same rules apply here: by default the maximum height is limited to 3 rows, so the layout stays
+              predictable.
             </p>
             <p className={classNames("text-default", "font-body-s", "m-0")}>
-              Whenever possible, prefer plain string content to maintain design
-              system consistency across all alert banners.
+              Whenever possible, prefer plain string content to maintain design system consistency across all alert
+              banners.
             </p>
           </div>
         }

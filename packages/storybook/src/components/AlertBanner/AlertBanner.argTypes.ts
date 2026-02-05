@@ -1,4 +1,4 @@
-import type { AlertBannerProps } from "@qlik/sprout-css-react";
+import type { AlertBannerProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
 export const AlertBannerArgTypes: ArgTypes<AlertBannerProps> = {

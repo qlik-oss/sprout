@@ -1,4 +1,4 @@
-import { Slider, classNames } from "@qlik/sprout-css-react";
+import { Slider, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { SliderRangeArgTypes, SliderSingleArgTypes } from "./Slider.argTypes";
@@ -56,11 +56,7 @@ export const VisualTest = {
       <div className={classNames("flex", "flex-col", "gap-l", "w-xs")}>
         <Slider.Single defaultValue={50} label="Default" />
         <Slider.Single defaultValue={50} label="Hover" data-testid="hover" />
-        <Slider.Single
-          defaultValue={50}
-          label="Focus"
-          data-testid="focusVisible"
-        />
+        <Slider.Single defaultValue={50} label="Focus" data-testid="focusVisible" />
         <Slider.Single defaultValue={50} label="Disabled" disabled />
         <Slider.Single
           defaultValue={50}
@@ -88,27 +84,13 @@ export const VisualTest = {
           label="With helper text"
           helpText="Use the slider to choose a value within the allowed range"
         />
-        <Slider.Single
-          defaultValue={50}
-          label="With error"
-          errorMessages={["This is an error"]}
-        />
+        <Slider.Single defaultValue={50} label="With error" errorMessages={["This is an error"]} />
       </div>
 
       <div className={classNames("flex", "flex-col", "gap-l", "w-xs")}>
         <Slider.Range label="Range" />
-        <Slider.Range
-          label="Range with marks"
-          defaultValue={[30, 70]}
-          step={10}
-          marks
-        />
-        <Slider.Range
-          label="Range custom min/max"
-          min={100}
-          max={600}
-          defaultValue={[200, 470]}
-        />
+        <Slider.Range label="Range with marks" defaultValue={[30, 70]} step={10} marks />
+        <Slider.Range label="Range custom min/max" min={100} max={600} defaultValue={[200, 470]} />
         <Slider.Range
           label="Range with optional"
           defaultValue={[40, 70]}
@@ -118,16 +100,8 @@ export const VisualTest = {
       </div>
 
       <div className={classNames("flex", "flex-row", "gap-l")}>
-        <Slider.Single
-          defaultValue={50}
-          label="Vertical"
-          orientation="vertical"
-        />
-        <Slider.Range
-          label="Vertical Range"
-          orientation="vertical"
-          defaultValue={[20, 80]}
-        />
+        <Slider.Single defaultValue={50} label="Vertical" orientation="vertical" />
+        <Slider.Range label="Vertical Range" orientation="vertical" defaultValue={[20, 80]} />
         <Slider.Single
           defaultValue={50}
           label="Vertical with marks"
@@ -153,8 +127,7 @@ export const VisualTest = {
   parameters: {
     controls: { disable: true },
     pseudo: {
-      hover:
-        '[data-testid="hover"] [role="presentation"] [role="presentation"]',
+      hover: '[data-testid="hover"] [role="presentation"] [role="presentation"]',
       focusVisible: '[data-testid="focusVisible"] input[type="range"]',
     },
   },

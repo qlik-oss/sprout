@@ -1,23 +1,9 @@
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
-import {
-  Divider,
-  SegmentedControl,
-  classNames,
-} from "@qlik/sprout-css-react";
+import { Divider, SegmentedControl, classNames } from "@qlik/sprout-react";
 
 import { JSONViewer } from "../JSONViewer/JSONViewer";
-import {
-  DARKPALETTE,
-  LIGHTPALETTE,
-} from "../SimpleThemeCreator/SimpleThemeColorPalettes";
+import { DARKPALETTE, LIGHTPALETTE } from "../SimpleThemeCreator/SimpleThemeColorPalettes";
 import { SimpleThemeCreator } from "../SimpleThemeCreator/SimpleThemeCreator";
 import { ThemePreviewer } from "../ThemePreviewer/ThemePreviewer";
 
@@ -34,10 +20,7 @@ export type BothModeSproutThemePartial = {
   dark: SingleModeThemePartial;
 };
 
-export type SproutThemePartial =
-  | LightModeSproutThemePartial
-  | DarkModeSproutThemePartial
-  | BothModeSproutThemePartial;
+export type SproutThemePartial = LightModeSproutThemePartial | DarkModeSproutThemePartial | BothModeSproutThemePartial;
 
 export type SingleModeThemePartial = {
   sprout: { [key: string]: SemanticGroupPartial };
@@ -49,11 +32,7 @@ export type SemanticGroupPartial = {
 
 const noop = () => {};
 
-export function ThemePairCreator({
-  onUpdate = noop,
-}: {
-  onUpdate: (themePair: SproutThemePartial) => void;
-}) {
+export function ThemePairCreator({ onUpdate = noop }: { onUpdate: (themePair: SproutThemePartial) => void }) {
   const defaultThemeParams = {
     light: {
       background: LIGHTPALETTE.backgrounds[0],
@@ -153,13 +132,7 @@ export function ThemePairCreator({
             </SegmentedControl.Group>
 
             <div
-              className={classNames(
-                "flex",
-                "flex-col",
-                "gap-m",
-                "h-full",
-                "overflow-auto",
-              )}
+              className={classNames("flex", "flex-col", "gap-m", "h-full", "overflow-auto")}
               style={{
                 blockSize: "var(--sprout-container-sizing-l)",
               }}

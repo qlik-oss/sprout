@@ -9,7 +9,7 @@ import * as Stories from "./Slider.stories";
 ## Usage
 
 ```tsx
-import { Slider } from "@qlik/sprout-css-react";
+import { Slider } from "@qlik/sprout-react";
 
 <Slider.Single label="Volume" min={0} max={100} step={1} value={50} />;
 
@@ -39,7 +39,7 @@ The Slider component can be integrated with React Hook Form using the `Controlle
 ```tsx
 import { Controller, useForm } from "react-hook-form";
 
-import { Slider } from "@qlik/sprout-css-react";
+import { Slider } from "@qlik/sprout-react";
 
 const { control, handleSubmit } = useForm();
 const onSubmit = (data) => {
@@ -50,10 +50,7 @@ return (
     <Controller
       control={control}
       name="amount"
-      render={({
-        field: { onChange, value, disabled },
-        fieldState: { invalid, error },
-      }) => (
+      render={({ field: { onChange, value, disabled }, fieldState: { invalid, error } }) => (
         <Slider.Single
           value={value}
           onChange={onChange}
@@ -77,10 +74,7 @@ return (
           return min !== max || "Start and end values can't be the same";
         },
       }}
-      render={({
-        field: { onChange, value, disabled },
-        fieldState: { invalid, error },
-      }) => (
+      render={({ field: { onChange, value, disabled }, fieldState: { invalid, error } }) => (
         <Slider.Range
           label="Price Range"
           value={value}

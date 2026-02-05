@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@qlik/sprout-css-modules": "workspace:*",
-    "@qlik/sprout-css-react": "workspace:*",
     "@qlik/sprout-icons": "workspace:*",
+    "@qlik/sprout-react": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

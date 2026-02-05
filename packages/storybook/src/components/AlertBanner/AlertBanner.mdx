@@ -11,17 +11,9 @@ Alerts are short messages that shows feedback, information, warnings, or critica
 ## Usage
 
 ```tsx
-import {
-  AlertBanner,
-  type AlertBannerProps,
-} from "@qlik/sprout-css-react";
+import { AlertBanner, type AlertBannerProps } from "@qlik/sprout-react";
 
-<AlertBanner
-  variant="info"
-  content="Alert content"
-  onClickDismiss={() => {}}
-  action={<></>}
-/>;
+<AlertBanner variant="info" content="Alert content" onClickDismiss={() => {}} action={<></>} />;
 ```
 
 ## Properties
@@ -35,10 +27,5 @@ This component use a `div` html tag with the `role=status` and `aria-live="polit
 You can switch to a real alert by overriding those two properties like this:
 
 ```tsx
-<AlertBanner
-  role="alert"
-  aria-live="assertive"
-  variant="error"
-  content="Urgent alert"
-/>
+<AlertBanner role="alert" aria-live="assertive" variant="error" content="Urgent alert" />
 ```

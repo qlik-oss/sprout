@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import sprout from "@qlik/sprout-css-modules";
+import { BookmarkIcon } from "@qlik/sprout-icons/react";
 import {
   Accordion,
   AlertBanner,
@@ -10,8 +11,7 @@ import {
   IconButton,
   Select,
   ThemeProvider,
-} from "@qlik/sprout-css-react";
-import { BookmarkIcon } from "@qlik/sprout-icons/react";
+} from "@qlik/sprout-react";
 
 function App() {
   const [count, setCount] = useState(0);

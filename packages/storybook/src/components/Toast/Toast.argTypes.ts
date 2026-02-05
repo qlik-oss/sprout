@@ -1,4 +1,4 @@
-import type { ToastProps } from "@qlik/sprout-css-react";
+import type { ToastProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
 export type ToastArgs = ToastProps["Content"] & {
@@ -18,14 +18,7 @@ export const ToastArgTypes: ArgTypes<ToastArgs> = {
     control: {
       type: "select",
     },
-    options: [
-      "top-start",
-      "top",
-      "top-end",
-      "bottom-start",
-      "bottom",
-      "bottom-end",
-    ],
+    options: ["top-start", "top", "top-end", "bottom-start", "bottom", "bottom-end"],
     table: { subcategory: "Toast.Container" },
   },
   action: {

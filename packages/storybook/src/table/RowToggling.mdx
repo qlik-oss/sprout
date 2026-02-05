@@ -23,7 +23,7 @@ Example: opening / closing Panel when toggling the row, to display row details.
 In such case, when refreshing application with opened Panel, we would like corresponding row in the Table to be already toggled / highlighted.
 
 ```tsx
-import { Table } from "@qlik/sprout-css-table";
+import { Table } from "@qlik/sprout-table";
 
 // the entity with such id should be present in rows array in order for default toggling state to work
 const defaultToggledRowId = "entity-id";
@@ -45,7 +45,7 @@ Use `onToggledRowChange` function as table prop to listen to changes in toggled 
 
 ```tsx
 import { useState } from "react";
-import { Table } from "@qlik/sprout-css-table";
+import { Table } from "@qlik/sprout-table";
 
 function ComponentUsingTable() {
   const [toggledRowId, setToggledRowId] = useState<string | undefined>();

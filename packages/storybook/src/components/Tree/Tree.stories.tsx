@@ -1,19 +1,9 @@
 import { type ReactNode, createContext, useContext, useMemo, useState } from "react";
 
 import sprout from "@qlik/sprout-css-modules";
-import {
-  Badge,
-  Checkbox,
-  IconButton,
-  List,
-  Tag,
-  Tooltip,
-  Tree,
-  type TreeProps,
-  classNames,
-} from "@qlik/sprout-css-react";
-import { type ColumnDef, Table, type TableCellParams } from "@qlik/sprout-css-table";
 import { CopyIcon, EditIcon, FileIcon, FolderClosedIcon, InfoIcon } from "@qlik/sprout-icons/react";
+import { Badge, Checkbox, IconButton, List, Tag, Tooltip, Tree, type TreeProps, classNames } from "@qlik/sprout-react";
+import { type ColumnDef, Table, type TableCellParams } from "@qlik/sprout-table";
 import type { StoryObj } from "@storybook/react-vite";
 
 import { TreeItemArgTypes } from "./Tree.argTypes";

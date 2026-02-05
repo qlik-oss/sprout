@@ -1,6 +1,6 @@
 import { fn } from "storybook/test";
 
-import { Button, Menu, classNames } from "@qlik/sprout-css-react";
+import { Button, Menu, classNames } from "@qlik/sprout-react";
 
 import Person from "@qlik/sprout-icons/react/Person";
 import type { Meta, StoryObj } from "@storybook/react";

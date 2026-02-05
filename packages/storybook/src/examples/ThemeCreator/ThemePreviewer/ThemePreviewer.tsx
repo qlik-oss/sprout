@@ -1,8 +1,7 @@
 import chroma from "chroma-js";
 
-import { Tabs, Tag, classNames } from "@qlik/sprout-css-react";
-import {BookmarkIcon} from "@qlik/sprout-icons/react";
-
+import { BookmarkIcon } from "@qlik/sprout-icons/react";
+import { Tabs, Tag, classNames } from "@qlik/sprout-react";
 
 import type {
   DarkModeSproutThemePartial,
@@ -25,9 +24,7 @@ function ThemeColorCombo({
   backgroundColor: string;
   backgroundColorName: string;
 }) {
-  const fgColorToUse = Object.entries(foregroundColors)[0]
-    ? Object.entries(foregroundColors)[0][1].value
-    : "#000000";
+  const fgColorToUse = Object.entries(foregroundColors)[0] ? Object.entries(foregroundColors)[0][1].value : "#000000";
 
   return (
     <div>
@@ -39,15 +36,9 @@ function ThemeColorCombo({
         }}
         className={classNames("p-m")}
       >
-        <div
-          className={classNames("font-label-s-emphasized")}
-          style={{ color: fgColorToUse }}
-        >
+        <div className={classNames("font-label-s-emphasized")} style={{ color: fgColorToUse }}>
           <span>{backgroundColorName}</span>
-          <span className={classNames("font-label-s")}>
-            {" "}
-            ({backgroundColor})
-          </span>
+          <span className={classNames("font-label-s")}> ({backgroundColor})</span>
         </div>
 
         {Object.entries(foregroundColors).map(([fgKey, fgColorObj]) => {
@@ -57,84 +48,45 @@ function ThemeColorCombo({
               key={fgKey}
               style={{
                 color: fgColor,
-                gridTemplateColumns:
-                  "repeat(2, minmax(0, 140px)) minmax(0, 50px) minmax(0,140px) ",
+                gridTemplateColumns: "repeat(2, minmax(0, 140px)) minmax(0, 50px) minmax(0,140px) ",
               }}
-              className={classNames(
-                "font-label-xs",
-                "grid",
-                "grid-cols-4",
-                "items-baseline",
-                "mt-m",
-              )}
+              className={classNames("font-label-xs", "grid", "grid-cols-4", "items-baseline", "mt-m")}
             >
-              <span
-                className={classNames(
-                  "overflow-hidden",
-                  "text-nowrap",
-                  "truncate",
-                )}
-              >
-                {fgKey}
-              </span>
+              <span className={classNames("overflow-hidden", "text-nowrap", "truncate")}>{fgKey}</span>
 
               <div className={classNames("flex", "items-center", "flex-row")}>
                 <span
-                  className={classNames(
-                    "flex",
-                    "items-center",
-                    "flex-row",
-                    "mr-xs",
-                  )}
+                  className={classNames("flex", "items-center", "flex-row", "mr-xs")}
                   style={{
                     color: fgColor,
                   }}
                 >
                   <BookmarkIcon />
                 </span>
-                <span
-                  className={classNames(
-                    "overflow-hidden",
-                    "text-nowrap",
-                    "truncate",
-                  )}
-                >
-                  {fgColor}
-                </span>
+                <span className={classNames("overflow-hidden", "text-nowrap", "truncate")}>{fgColor}</span>
               </div>
               {(() => {
                 // Blend colors with alpha channels against a white background before calculating contrast
                 const blendedBg =
                   chroma(backgroundColor).alpha() < 1
-                    ? chroma.mix(
-                        "#ffffff",
-                        backgroundColor,
-                        chroma(backgroundColor).alpha(),
-                        "rgb",
-                      )
+                    ? chroma.mix("#ffffff", backgroundColor, chroma(backgroundColor).alpha(), "rgb")
                     : chroma(backgroundColor);
                 const blendedFg =
                   chroma(fgColor).alpha() < 1
-                    ? chroma.mix(
-                        blendedBg.hex(),
-                        fgColor,
-                        chroma(fgColor).alpha(),
-                        "rgb",
-                      )
+                    ? chroma.mix(blendedBg.hex(), fgColor, chroma(fgColor).alpha(), "rgb")
                     : chroma(fgColor);
                 const contrastRatio = chroma.contrast(blendedBg, blendedFg);
                 return (
                   <>
                     <div>{contrastRatio.toFixed(1)}: 1 </div>
-                    {fgKey !== "disabled" &&
-                      backgroundColorName !== "disabled" && (
-                        <Tag
-                          color={contrastRatio >= 4.5 ? "success" : "error"}
-                          text={contrastRatio >= 4.5 ? "PASS" : "FAIL"}
-                          title="WCAG 2.1 AA classification"
-                          size="s"
-                        />
-                      )}
+                    {fgKey !== "disabled" && backgroundColorName !== "disabled" && (
+                      <Tag
+                        color={contrastRatio >= 4.5 ? "success" : "error"}
+                        text={contrastRatio >= 4.5 ? "PASS" : "FAIL"}
+                        title="WCAG 2.1 AA classification"
+                        size="s"
+                      />
+                    )}
                   </>
                 );
               })()}
@@ -146,13 +98,7 @@ function ThemeColorCombo({
   );
 }
 
-function SemanticGroupColorPreview({
-  name,
-  semanticGroups,
-}: {
-  name: string;
-  semanticGroups: SemanticGroups;
-}) {
+function SemanticGroupColorPreview({ name, semanticGroups }: { name: string; semanticGroups: SemanticGroups }) {
   let lightColorCombos: Array<ColorCombo> = [];
   let darkColorCombos: Array<ColorCombo> = [];
   if (Object.hasOwn(semanticGroups, "light")) {
@@ -168,69 +114,46 @@ function SemanticGroupColorPreview({
       <div
         className={classNames(
           "grid",
-          lightColorCombos.length > 0 && darkColorCombos.length > 0
-            ? "grid_cols_2"
-            : "grid_cols_1",
+          lightColorCombos.length > 0 && darkColorCombos.length > 0 ? "grid_cols_2" : "grid_cols_1",
         )}
       >
         <div>
-          {lightColorCombos.map(
-            ({
-              foregroundColors,
-              backgroundColor,
-              backgroundColorName,
-              backgroundColorType,
-            }) => (
-              <ThemeColorCombo
-                key={`${name}-${backgroundColorName}-${backgroundColorType}-colorCombo-light`}
-                foregroundColors={foregroundColors}
-                backgroundColor={backgroundColor}
-                backgroundColorName={backgroundColorName}
-              />
-            ),
-          )}
+          {lightColorCombos.map(({ foregroundColors, backgroundColor, backgroundColorName, backgroundColorType }) => (
+            <ThemeColorCombo
+              key={`${name}-${backgroundColorName}-${backgroundColorType}-colorCombo-light`}
+              foregroundColors={foregroundColors}
+              backgroundColor={backgroundColor}
+              backgroundColorName={backgroundColorName}
+            />
+          ))}
         </div>
         <div>
-          {darkColorCombos.map(
-            ({
-              foregroundColors,
-              backgroundColor,
-              backgroundColorName,
-              backgroundColorType,
-            }) => (
-              <ThemeColorCombo
-                key={`${name}-${backgroundColorName}-${backgroundColorType}-colorCombo-dark`}
-                foregroundColors={foregroundColors}
-                backgroundColor={backgroundColor}
-                backgroundColorName={backgroundColorName}
-              />
-            ),
-          )}
+          {darkColorCombos.map(({ foregroundColors, backgroundColor, backgroundColorName, backgroundColorType }) => (
+            <ThemeColorCombo
+              key={`${name}-${backgroundColorName}-${backgroundColorType}-colorCombo-dark`}
+              foregroundColors={foregroundColors}
+              backgroundColor={backgroundColor}
+              backgroundColorName={backgroundColorName}
+            />
+          ))}
         </div>
       </div>
     </div>
   );
 }
 
-function getPossibleForegroundColorsForColor(
-  semanticGroup: SemanticGroupPartial,
-): {
+function getPossibleForegroundColorsForColor(semanticGroup: SemanticGroupPartial): {
   [key: string]: { value: string };
 } {
   const foregroundColors: { [key: string]: { value: string } } = {};
   // When using a color as background, we can only match with its inverse color as foreground
-  if (
-    Object.hasOwn(semanticGroup, "color") &&
-    Object.hasOwn(semanticGroup["color"], "inverse")
-  ) {
+  if (Object.hasOwn(semanticGroup, "color") && Object.hasOwn(semanticGroup["color"], "inverse")) {
     foregroundColors["inverse"] = semanticGroup.color.inverse;
   }
   return foregroundColors;
 }
 
-function getPossibleForegroundColorsForBackground(
-  semanticGroup: SemanticGroupPartial,
-): {
+function getPossibleForegroundColorsForBackground(semanticGroup: SemanticGroupPartial): {
   [key: string]: { value: string };
 } {
   const foregroundColors: { [key: string]: { value: string } } = {};
@@ -261,16 +184,13 @@ type ColorCombo = {
   backgroundColorType: string;
 };
 
-function getColorCombosFromSemanticGroup(
-  semanticGroup: SemanticGroupPartial,
-): Array<ColorCombo> {
+function getColorCombosFromSemanticGroup(semanticGroup: SemanticGroupPartial): Array<ColorCombo> {
   const colorCombos: Array<ColorCombo> = [];
 
   for (const key in semanticGroup["background-color"]) {
     if (key !== "foreground-color" && key !== "inverse") {
       colorCombos.push({
-        foregroundColors:
-          getPossibleForegroundColorsForBackground(semanticGroup),
+        foregroundColors: getPossibleForegroundColorsForBackground(semanticGroup),
         backgroundColor: semanticGroup["background-color"][key].value,
         backgroundColorName: key,
         backgroundColorType: "background-color",
@@ -296,8 +216,7 @@ function getColorCombosFromSemanticGroup(
       });
     } else if (key === "inverse") {
       colorCombos.push({
-        foregroundColors:
-          getPossibleForegroundColorsForBackground(semanticGroup),
+        foregroundColors: getPossibleForegroundColorsForBackground(semanticGroup),
         backgroundColor: semanticGroup["color"][key].value,
         backgroundColorName: key,
         backgroundColorType: "color",
@@ -324,24 +243,16 @@ export function ThemePreviewer({ theme }: { theme: SproutThemePartial }) {
       <Tabs.Container defaultActiveKey="Surfaces">
         <Tabs.List showTrack>
           <Tabs.Tab aria-controls="Surfaces" defaultChecked title="Surfaces" />
-          <Tabs.Tab
-            aria-controls="Components"
-            title="Components (Not yet implemented)"
-            disabled
-          />
+          <Tabs.Tab aria-controls="Components" title="Components (Not yet implemented)" disabled />
         </Tabs.List>
         <Tabs.Panel id="Surfaces">
           {semanticGroupKeys.map((semanticGroupKey) => {
             const semanticGroups: SemanticGroups = { light: {}, dark: {} };
             if (Object.hasOwn(theme, "light")) {
-              semanticGroups.light = (
-                theme as LightModeSproutThemePartial
-              ).light.sprout[semanticGroupKey];
+              semanticGroups.light = (theme as LightModeSproutThemePartial).light.sprout[semanticGroupKey];
             }
             if (Object.hasOwn(theme, "dark")) {
-              semanticGroups.dark = (
-                theme as DarkModeSproutThemePartial
-              ).dark.sprout[semanticGroupKey];
+              semanticGroups.dark = (theme as DarkModeSproutThemePartial).dark.sprout[semanticGroupKey];
             }
             return (
               <SemanticGroupColorPreview
@@ -352,9 +263,7 @@ export function ThemePreviewer({ theme }: { theme: SproutThemePartial }) {
             );
           })}
         </Tabs.Panel>
-        <Tabs.Panel id="Components">
-          Components preview not yet implemented
-        </Tabs.Panel>
+        <Tabs.Panel id="Components">Components preview not yet implemented</Tabs.Panel>
       </Tabs.Container>
     </div>
   );

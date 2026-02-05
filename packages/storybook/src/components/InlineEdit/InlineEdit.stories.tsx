@@ -2,9 +2,9 @@
 import { type JSX, createContext, useCallback, useContext, useEffect, useState } from "react";
 import { fn } from "storybook/test";
 
-import { InlineEdit, type InlineEditProps, Select, Switch, classNames } from "@qlik/sprout-css-react";
-import { Table, type TableProps } from "@qlik/sprout-css-table";
 import { AiSparklesIcon } from "@qlik/sprout-icons/react";
+import { InlineEdit, type InlineEditProps, Select, Switch, classNames } from "@qlik/sprout-react";
+import { Table, type TableProps } from "@qlik/sprout-table";
 import type { StoryObj } from "@storybook/react-vite";
 
 import { OPTIONS_WITH_GROUP } from "../Select/SelectTest";

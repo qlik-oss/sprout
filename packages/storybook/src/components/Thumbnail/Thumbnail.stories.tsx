@@ -1,5 +1,5 @@
-import { Thumbnail, classNames } from "@qlik/sprout-css-react";
 import { TenantIcon } from "@qlik/sprout-icons/react";
+import { Thumbnail, classNames } from "@qlik/sprout-react";
 import type { StoryObj } from "@storybook/react-vite";
 
 import src from "../internal/assets/truck.png";

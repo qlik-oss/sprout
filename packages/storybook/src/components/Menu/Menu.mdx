@@ -44,7 +44,7 @@ Temporary menu that appears on demand. A menu typically closes when selecting an
 ## Usage
 
 ```jsx
-import { Menu } from "@qlik/sprout-css-react";
+import { Menu } from "@qlik/sprout-react";
 
 // data API
 const MENU_DATA = [
@@ -94,9 +94,7 @@ const MENU_DATA = [
         <Menu.Item label="Open source" />
         <Menu.SecondaryAction
           onClick={() => {
-            window
-              .open("/?path=/story/components-menu--secondary-action", "_blank")
-              ?.focus();
+            window.open("/?path=/story/components-menu--secondary-action", "_blank")?.focus();
           }}
         />
       </Menu.Split>
@@ -207,8 +205,8 @@ Keyboard navigation
 In the discussion of API we have decided to go with a composition and renderer approach.
 
 ```diff
-- import { ContextMenu, MenuTrigger, MenuItem, Menu, MenuDivider, MenuGroupLabel } from "@qlik/sprout-css-react";
-+ import { Menu } from "@qlik/sprout-css-react";
+- import { ContextMenu, MenuTrigger, MenuItem, Menu, MenuDivider, MenuGroupLabel } from "@qlik/sprout-react";
++ import { Menu } from "@qlik/sprout-react";
 
 
 - <MenuContent

@@ -1,4 +1,4 @@
-import { Menu, classNames } from "@qlik/sprout-css-react";
+import { Menu, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { MenuSplitArgTypes } from "./Menu.argTypes";
@@ -16,9 +16,7 @@ export const Split: StoryObj<typeof Menu.Split> = {
         <Menu.Item label="Link" selectable />
         <Menu.SecondaryAction
           onClick={() => {
-            window
-              .open("/?path=/story/components-menu--secondary-action", "_blank")
-              ?.focus();
+            window.open("/?path=/story/components-menu--secondary-action", "_blank")?.focus();
           }}
         />
       </Menu.Split>

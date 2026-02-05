@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { Button, classNames, Menu, Skeleton } from "@qlik/sprout-css-react";
+import { Button, classNames, Menu, Skeleton } from "@qlik/sprout-react";
 import type { StoryObj } from "@storybook/react-vite";
 import { useEffect, useRef, useState } from "react";
 import { fn } from "storybook/test";
 
-import { Table, type SortingState, type TableProps } from "@qlik/sprout-css-table";
+import { Table, type SortingState, type TableProps } from "@qlik/sprout-table";
 import {
   ColumnSizingArgTypes,
   hideArg,

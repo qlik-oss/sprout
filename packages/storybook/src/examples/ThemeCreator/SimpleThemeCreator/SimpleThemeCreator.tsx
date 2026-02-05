@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { classNames } from "@qlik/sprout-css-react";
+import { classNames } from "@qlik/sprout-react";
 
 import type { SingleModeThemePartial } from "../ThemePairCreator/ThemePairCreator";
 import { ColorPicker } from "./ColorPicker/ColorPicker";
@@ -16,18 +16,10 @@ export function SimpleThemeCreator({
   palettes: SimpleThemeParamPaletteColors;
   onUpdate: (theme: SingleModeThemePartial) => void;
 }) {
-  const [backgroundThemeValue, setBackgroundThemeValue] = useState<string>(
-    defaultThemeParams.background,
-  );
-  const [foregroundThemeValue, setForegroundThemeValue] = useState<string>(
-    defaultThemeParams.foreground,
-  );
-  const [brandThemeValue, setBrandThemeValue] = useState<string>(
-    defaultThemeParams.brand,
-  );
-  const [selectedThemeValue, setSelectedThemeValue] = useState<string>(
-    defaultThemeParams.selected,
-  );
+  const [backgroundThemeValue, setBackgroundThemeValue] = useState<string>(defaultThemeParams.background);
+  const [foregroundThemeValue, setForegroundThemeValue] = useState<string>(defaultThemeParams.foreground);
+  const [brandThemeValue, setBrandThemeValue] = useState<string>(defaultThemeParams.brand);
+  const [selectedThemeValue, setSelectedThemeValue] = useState<string>(defaultThemeParams.selected);
 
   useEffect(() => {
     const newTheme = createTokenValuesFromBaseColors({
@@ -37,28 +29,14 @@ export function SimpleThemeCreator({
       selected: selectedThemeValue,
     });
     onUpdate(newTheme);
-  }, [
-    backgroundThemeValue,
-    foregroundThemeValue,
-    brandThemeValue,
-    selectedThemeValue,
-    onUpdate,
-  ]);
+  }, [backgroundThemeValue, foregroundThemeValue, brandThemeValue, selectedThemeValue, onUpdate]);
 
   return (
     <div className={classNames("flex", "flex-col", "gap-m")}>
       <span className={classNames("font-label-l-emphasized")}>Appearance</span>
       <span className={classNames("font-label-m-emphasized")}>Colors</span>
 
-      <div
-        className={classNames(
-          "grid",
-          "grid-cols-2",
-          "gap-m",
-          "flex-row",
-          "items-baseline",
-        )}
-      >
+      <div className={classNames("grid", "grid-cols-2", "gap-m", "flex-row", "items-baseline")}>
         <span className={classNames("font-label-s")}>Background</span>
         <ColorPicker
           colors={palettes.backgrounds}

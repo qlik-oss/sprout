@@ -1,4 +1,4 @@
-import type { ModalCompositionProps, ModalProps } from "@qlik/sprout-css-react";
+import type { ModalCompositionProps, ModalProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 import { FieldArgTypes } from "../Field.argTypes";

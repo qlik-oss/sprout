@@ -1,4 +1,4 @@
-import type { InputButtonProps } from "@qlik/sprout-css-react";
+import type { InputButtonProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
 const SIZES = [undefined, "xs", "s"];
@@ -40,8 +40,7 @@ export const InputButtonArgTypes: ArgTypes<InputButtonProps> = {
     control: {
       type: "boolean",
     },
-    description:
-      "See [Progress](./?path=/docs/components-progress--docs) for details.",
+    description: "See [Progress](./?path=/docs/components-progress--docs) for details.",
     table: {
       type: {
         summary: "boolean",

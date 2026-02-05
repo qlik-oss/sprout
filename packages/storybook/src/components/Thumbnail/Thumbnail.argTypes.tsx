@@ -1,4 +1,4 @@
-import type { ThumbnailProps } from "@qlik/sprout-css-react";
+import type { ThumbnailProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
 export const ThumbnailArgTypes: ArgTypes<ThumbnailProps> = {

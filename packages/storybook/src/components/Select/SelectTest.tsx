@@ -1,4 +1,4 @@
-import { Select } from "@qlik/sprout-css-react";
+import { Select } from "@qlik/sprout-react";
 
 export const OPTIONS_WITH_GROUP = (
   <>

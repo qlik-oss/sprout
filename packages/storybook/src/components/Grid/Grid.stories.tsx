@@ -1,5 +1,5 @@
-import { useMedia } from "@qlik/sprout-css-hooks";
-import { Grid, classNames } from "@qlik/sprout-css-react";
+import { useMedia } from "@qlik/sprout-hooks";
+import { Grid, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta: Meta = {
@@ -24,7 +24,7 @@ export const ResponsiveStyles: StoryObj = {
     },
   },
   render: () => {
-    // FIXME: replace by the incoming useMedia when available in sprout-css-hooks
+    // FIXME: replace by the incoming useMedia when available in sprout-hooks
     const media = useMedia();
     return (
       <Grid.Container

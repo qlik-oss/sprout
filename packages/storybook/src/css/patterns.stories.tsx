@@ -1,8 +1,8 @@
 import { fn } from "storybook/test";
 
 import sprout from "@qlik/sprout-css-modules";
-import { IconButton } from "@qlik/sprout-css-react";
 import { CopyIcon, PasteIcon } from "@qlik/sprout-icons/react";
+import { IconButton } from "@qlik/sprout-react";
 import type { StoryObj } from "@storybook/react";
 
 export default {

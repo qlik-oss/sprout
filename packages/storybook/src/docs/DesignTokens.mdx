@@ -37,14 +37,10 @@ This doesn’t mean you shouldn’t test these values. Storybook provides an exc
 You can also use our [Tailwind CSS](https://tailwindcss.com/) classNames, which are implemented using [sprout-css-modules](?path=/docs/css-sprout-css-modules--docs). All class names follow the Tailwind CSS naming convention. Here’s an example:
 
 ```jsx
-import { classNames } from "@qlik/sprout-css-react";
+import { classNames } from "@qlik/sprout-react";
 
 function MyComponent() {
-  return (
-    <div className={classNames("flex", "bg_default", "text_default")}>
-      Hello world
-    </div>
-  );
+  return <div className={classNames("flex", "bg_default", "text_default")}>Hello world</div>;
 }
 ```
 

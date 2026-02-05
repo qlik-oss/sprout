@@ -1,4 +1,4 @@
-import type { AlertModalProps } from "@qlik/sprout-css-react";
+import type { AlertModalProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 import { CommonModalArgTypes } from "../Modal/Modal.argTypes";

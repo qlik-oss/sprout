@@ -23,10 +23,10 @@ function MyComponent(props) {
 }
 ```
 
-If you are using `@qlik/sprout-css-react` you can directly import classNames from it which is convinient because it uses a named export
+If you are using `@qlik/sprout-react` you can directly import classNames from it which is convinient because it uses a named export
 
 ```ts
-import { classNames } from "@qlik/sprout-css-react";
+import { classNames } from "@qlik/sprout-react";
 ```
 
 ## How to contribute

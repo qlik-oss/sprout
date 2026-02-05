@@ -1,9 +1,0 @@
-{
-  "codeConnect": {
-    "parser": "react",
-    "include": ["/**/*.{tsx,jsx}"],
-    "importPaths": {
-      "src/*": "@qlik/sprout-css-react"
-    }
-  }
-}

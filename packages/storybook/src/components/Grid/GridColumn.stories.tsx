@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { Grid, type GridProps, classNames } from "@qlik/sprout-css-react";
+import { Grid, type GridProps, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { GridColumnArgTypes } from "./Grid.argTypes";
@@ -13,19 +13,7 @@ const meta: Meta = {
 export default meta;
 
 function Item({ children }: { children: ReactNode }) {
-  return (
-    <div
-      className={classNames(
-        "border-default",
-        "border-box",
-        "flex",
-        "items-center",
-        "p-m",
-      )}
-    >
-      {children}
-    </div>
-  );
+  return <div className={classNames("border-default", "border-box", "flex", "items-center", "p-m")}>{children}</div>;
 }
 
 export const GridColumn: StoryObj<GridProps["Column"]> = {

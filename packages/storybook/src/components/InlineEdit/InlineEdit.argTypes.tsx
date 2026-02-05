@@ -1,10 +1,8 @@
-import type { InlineEditProps } from "@qlik/sprout-css-react";
+import type { InlineEditProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
 export const InlineEditArgTypes: ArgTypes<
-  | InlineEditProps["MultiSelect"]
-  | InlineEditProps["TextField"]
-  | InlineEditProps["Select"]
+  InlineEditProps["MultiSelect"] | InlineEditProps["TextField"] | InlineEditProps["Select"]
 > = {
   showEditIcon: {
     control: { type: "boolean" },
@@ -15,8 +13,7 @@ export const InlineEditArgTypes: ArgTypes<
   },
   showFormButtons: {
     control: { type: "boolean" },
-    description:
-      "Displays form buttons (save/cancel) when editing as an overlay to the edit view.",
+    description: "Displays form buttons (save/cancel) when editing as an overlay to the edit view.",
     table: {
       type: { summary: "boolean" },
     },
@@ -65,8 +62,7 @@ export const InlineEditArgTypes: ArgTypes<
   },
   errorMessages: {
     control: { type: "object" },
-    description:
-      "Array of error messages to display when the input has errors.",
+    description: "Array of error messages to display when the input has errors.",
     table: {
       type: { summary: "string[]" },
     },
@@ -87,9 +83,7 @@ export const InlineEditArgTypes: ArgTypes<
   },
 };
 
-export const InlineEditPrimitiveArgTypes: ArgTypes<
-  InlineEditProps["Primitive"]
-> = {
+export const InlineEditPrimitiveArgTypes: ArgTypes<InlineEditProps["Primitive"]> = {
   view: {
     control: false,
     description: "Custom view component to render the value in view mode.",
@@ -124,9 +118,7 @@ export const InlineEditPrimitiveArgTypes: ArgTypes<
   },
 };
 
-export const InlineEditTextFieldArgTypes: ArgTypes<
-  InlineEditProps["TextField"]
-> = {
+export const InlineEditTextFieldArgTypes: ArgTypes<InlineEditProps["TextField"]> = {
   value: {
     control: { type: "text" },
     description: "Current value of the text field in Controlled mode.",
@@ -193,9 +185,7 @@ export const InlineEditSelectArgTypes: ArgTypes<InlineEditProps["Select"]> = {
   },
 };
 
-export const InlineEditMultiSelectArgTypes: ArgTypes<
-  InlineEditProps["MultiSelect"]
-> = {
+export const InlineEditMultiSelectArgTypes: ArgTypes<InlineEditProps["MultiSelect"]> = {
   children: {
     control: false,
     description: "Options to display in the multi-select dropdown.",

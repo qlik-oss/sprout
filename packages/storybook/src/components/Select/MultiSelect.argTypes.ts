@@ -1,4 +1,4 @@
-import { Field, type SelectProps } from "@qlik/sprout-css-react";
+import { Field, type SelectProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
 import { CommonFieldArgTypes, FieldArgTypes } from "../Field.argTypes";

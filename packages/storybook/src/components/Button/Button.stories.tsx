@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { fn } from "storybook/test";
 
+import { AddIcon } from "@qlik/sprout-icons/react";
 import {
   Button,
   ButtonFloating,
@@ -9,8 +10,7 @@ import {
   IconButton,
   Menu,
   classNames,
-} from "@qlik/sprout-css-react";
-import { AddIcon } from "@qlik/sprout-icons/react";
+} from "@qlik/sprout-react";
 
 import type { Meta, StoryObj } from "@storybook/react-vite";
 

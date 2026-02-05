@@ -1,4 +1,4 @@
-import type { BreadCrumbProps } from "@qlik/sprout-css-react";
+import type { BreadCrumbProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 export const BreadcrumbArgTypes: ArgTypes<BreadCrumbProps> = {

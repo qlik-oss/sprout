@@ -1,5 +1,5 @@
-import { Menu, classNames } from "@qlik/sprout-css-react";
 import Person from "@qlik/sprout-icons/react/Person";
+import { Menu, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { MenuItemArgTypes } from "./Menu.argTypes";

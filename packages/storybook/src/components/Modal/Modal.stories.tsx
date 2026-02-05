@@ -2,7 +2,8 @@
 import { forwardRef, useState } from "react";
 import { fn } from "storybook/test";
 
-import { useContainer } from "@qlik/sprout-css-hooks";
+import { useContainer } from "@qlik/sprout-hooks";
+import { ConnectIcon } from "@qlik/sprout-icons/react";
 import {
   Button,
   type ButtonProps,
@@ -16,8 +17,7 @@ import {
   TextField,
   Textarea,
   classNames,
-} from "@qlik/sprout-css-react";
-import { ConnectIcon } from "@qlik/sprout-icons/react";
+} from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { CommonModalArgTypes, ModalArgTypes } from "./Modal.argTypes";

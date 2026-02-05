@@ -1,4 +1,4 @@
-import type { RadioGroupProps, RadioProps } from "@qlik/sprout-css-react";
+import type { RadioGroupProps, RadioProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
 import { FieldArgTypes } from "../Field.argTypes";

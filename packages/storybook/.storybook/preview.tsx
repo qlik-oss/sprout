@@ -2,8 +2,8 @@
 import { StrictMode, useEffect, useState } from "react";
 import { MINIMAL_VIEWPORTS, type ViewportMap } from "storybook/viewport";
 
-import { ThemeProvider as SproutThemeProvider } from "@qlik/sprout-css-react";
 import { getSproutGlobalTypes, getSproutIntialGlobals, sproutCSSDecorator } from "@qlik/sprout-css-storybook";
+import { ThemeProvider as SproutThemeProvider } from "@qlik/sprout-react";
 import { Controls, Description, Primary, Stories, Subtitle, Title } from "@storybook/addon-docs/blocks";
 import type { Preview } from "@storybook/react";
 

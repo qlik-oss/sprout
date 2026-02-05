@@ -1,4 +1,4 @@
-import { Tag, type TreeProps } from "@qlik/sprout-css-react";
+import { Tag, type TreeProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
 import { ICONS_MAP, ICON_OPTIONS } from "../internal/icons/Icons";
