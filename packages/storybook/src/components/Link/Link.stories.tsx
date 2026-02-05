@@ -212,7 +212,7 @@ export const VisualTest: Story = {
           </p>
           <h2 className={classNames("font-heading-m")}>
             With a{" "}
-            <Link font="heading_m" href="#">
+            <Link font="heading-m" href="#">
               title
             </Link>
           </h2>

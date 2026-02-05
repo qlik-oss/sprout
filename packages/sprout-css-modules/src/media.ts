@@ -1,4 +1,4 @@
-import { classNames, type SproutClassKey } from "./classNames";
+import { classNames, type AllClasses } from "./classNames";
 
 export type ViewportSize = "s" | "m" | "l" | "xl";
 export type Breakpoint = "s" | "m" | "l";
@@ -31,7 +31,7 @@ export type MediaAPI = {
    * ```
    * @return string
    */
-  classNames: (options: ViewportOptions<Array<SproutClassKey> | SproutClassKey>, className?: string) => string;
+  classNames: (options: ViewportOptions<Array<AllClasses> | AllClasses>, className?: string) => string;
   /**
    * addListener let you integrate sprout.media with your framework reactivity system.
    * It's based on native matchMedia API.
@@ -179,13 +179,8 @@ class MediaConstructor implements MediaAPI {
   }
 
   // Generic method directly in object
-  classNames(
-    options: Partial<Record<ViewportSize, Array<SproutClassKey> | SproutClassKey>>,
-    className?: string,
-  ): string {
-    const normalizeClasses = (
-      value: Array<SproutClassKey> | SproutClassKey | undefined,
-    ): Array<SproutClassKey> | undefined => {
+  classNames(options: Partial<Record<ViewportSize, Array<AllClasses> | AllClasses>>, className?: string): string {
+    const normalizeClasses = (value: Array<AllClasses> | AllClasses | undefined): Array<AllClasses> | undefined => {
       if (value === undefined) return undefined;
       return Array.isArray(value) ? value : [value];
     };

@@ -1,4 +1,4 @@
-import sprout, { type SproutClasses } from "@qlik/sprout-css-modules";
+import sprout, { type AllClasses } from "@qlik/sprout-css-modules";
 import type { StoryObj } from "@storybook/react-vite";
 
 export default {
@@ -8,7 +8,7 @@ export default {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { classNames, ...rest } = sprout;
 
-export const Playground: StoryObj<{ classNames: Array<SproutClasses> }> = {
+export const Playground: StoryObj<{ classNames: Array<AllClasses> }> = {
   name: "classNames",
   // eslint-disable-next-line @typescript-eslint/no-shadow
   render: ({ classNames }) => (

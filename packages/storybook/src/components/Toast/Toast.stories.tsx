@@ -338,7 +338,7 @@ export const VisualTest = {
 
               <p>
                 Here&apos;s a{" "}
-                <Link font="body_xs" href="#/foo">
+                <Link font="body-xs" href="#/foo">
                   link
                 </Link>{" "}
                 that goes nowhere

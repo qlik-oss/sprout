@@ -18,4 +18,8 @@ export type PossibleFont =
   | "label-m"
   | "label-m-emphasized"
   | "label-l"
-  | "label-l-emphasized";
+  | "label-l-emphasized"
+  | "script-s"
+  | "script-s-emphasized"
+  | "script-m"
+  | "script-m-emphasized";

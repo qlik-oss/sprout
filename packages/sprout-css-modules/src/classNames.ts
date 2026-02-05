@@ -48,11 +48,11 @@ export type SproutClasses = typeof overflowClasses &
   typeof patternsClasses &
   typeof rtlClasses;
 
-export type SproutClassKey = keyof SproutClasses;
+export type AllClasses = keyof SproutClasses;
 
 type LiteralUnion<T extends string> = T | (string & { _?: never });
 
-export type ClassNameArg = LiteralUnion<SproutClassKey> | Record<SproutClassKey | string, boolean>;
+export type ClassNameArg = LiteralUnion<AllClasses> | Record<AllClasses | string, boolean>;
 export type ClassNamesAPI = (...args: Array<ClassNameArg>) => string;
 
 export const sproutClasses: SproutClasses = {
@@ -81,7 +81,7 @@ export const sproutClasses: SproutClasses = {
   ...patternsClasses,
 };
 
-function isSproutClassKey(key: string): key is SproutClassKey {
+function isAllClasses(key: string): key is AllClasses {
   return key in sproutClasses;
 }
 
@@ -93,7 +93,7 @@ function isSproutClassKey(key: string): key is SproutClassKey {
 export const classNames: ClassNamesAPI = (...args) => {
   const newArgs = args.reduce<Array<string | Record<string, boolean>>>((acc, arg) => {
     if (typeof arg === "string") {
-      if (isSproutClassKey(arg)) {
+      if (isAllClasses(arg)) {
         acc.push(sproutClasses[arg]);
       } else {
         acc.push(arg);
@@ -101,7 +101,7 @@ export const classNames: ClassNamesAPI = (...args) => {
     } else if (typeof arg === "object") {
       const newObj: Record<string, boolean> = {};
       Object.keys(arg).forEach((key) => {
-        if (isSproutClassKey(key)) {
+        if (isAllClasses(key)) {
           newObj[sproutClasses[key]] = arg[key];
         } else {
           newObj[key] = arg[key];

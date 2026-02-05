@@ -1,4 +1,4 @@
-import { classNames, type SproutClassKey } from "./classNames";
+import { classNames, type AllClasses } from "./classNames";
 
 export type ContainerSize = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "3xl" | "4xl";
 export type ContainerSizeBreakpoints = Record<ContainerSize, number>;
@@ -7,7 +7,7 @@ export type CreateContainerAPI = (
   containerSize: ContainerSize,
   element?: Element | null,
 ) => {
-  classNames: (options: ContainerOptions<Array<SproutClassKey> | SproutClassKey>, className?: string) => string;
+  classNames: (options: ContainerOptions<Array<AllClasses> | AllClasses>, className?: string) => string;
   get: <T>(options: ContainerOptions<T>) => T;
   match: (width: number, element?: Element | null) => ContainerSize;
 };
@@ -33,7 +33,7 @@ export type CreateContainerAPI = (
  *   Defaults to `document.documentElement` if not provided.
  *
  * @returns {{
- *   classNames: (options: Partial<Record<ContainerSize, Array<SproutClassKey> | SproutClassKey>>, className?: string) => string;
+ *   classNames: (options: Partial<Record<ContainerSize, Array<AllClasses> | AllClasses>>, className?: string) => string;
  *   get: <T>(options: Partial<Record<ContainerSize, T>>) => T;
  *   match: (width: number, element?: Element | null) => keyof Record<ContainerSize, number>;
  * }}
@@ -91,17 +91,7 @@ export const createContainer: CreateContainerAPI = (size, element) => {
       }
     },
     classNames(
-      {
-        xxs,
-        xs,
-        s,
-        m,
-        l,
-        xl,
-        xxl,
-        "3xl": threeXl,
-        "4xl": fourXl,
-      }: ContainerOptions<Array<SproutClassKey> | SproutClassKey>,
+      { xxs, xs, s, m, l, xl, xxl, "3xl": threeXl, "4xl": fourXl }: ContainerOptions<Array<AllClasses> | AllClasses>,
       className?: string,
     ) {
       const safeArgs = {
@@ -131,17 +121,7 @@ export const createContainer: CreateContainerAPI = (size, element) => {
 
   return {
     classNames(
-      {
-        xxs,
-        xs,
-        s,
-        m,
-        l,
-        xl,
-        xxl,
-        "3xl": threeXl,
-        "4xl": fourXl,
-      }: ContainerOptions<Array<SproutClassKey> | SproutClassKey>,
+      { xxs, xs, s, m, l, xl, xxl, "3xl": threeXl, "4xl": fourXl }: ContainerOptions<Array<AllClasses> | AllClasses>,
       className?: string,
     ) {
       return container.classNames({ xxs, xs, s, m, l, xl, xxl, "3xl": threeXl, "4xl": fourXl }, className);
