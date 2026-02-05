@@ -1,0 +1,38 @@
+/** Note:
+* this css has been built to follow https://floating-ui.com/ library which is framework agnostic
+ * This library is the current reference as positioning engine.
+ * It is the official replacement of https://popper.js.org/
+ */
+.container {
+  box-sizing: border-box;
+  padding: var(--sprout-common-spacing-s) var(--sprout-common-spacing-m);
+  font: var(--sprout-label-font-xs);
+  color: var(--sprout-inverse-foreground-color-default);
+  background: var(--sprout-inverse-background-color-default);
+  border-radius: var(--sprout-common-border-radius-subtle);
+  transition-property: opacity;
+  overflow-wrap: break-word;
+  white-space: pre-line;
+}
+
+.container[data-displayed="false"] {
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.container[data-displayed="true"] {
+  transition-duration: 200ms;
+  transition-timing-function: ease-in;
+  visibility: visible;
+  opacity: 1;
+}
+
+.arrow {
+  fill: var(--sprout-inverse-background-color-default);
+}
+
+.arrow :global(.stroke) {
+  display: none;
+}

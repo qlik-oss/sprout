@@ -1,0 +1,71 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Docs/Components" />
+
+# Components
+
+This document specifies all common APIs and patterns used across all components in this package.
+
+## Component API
+
+Each component in the library is designed to closely align with the native behavior of the web platform. The goal is to avoid inventing new APIs and instead adhere as much as possible to web standards.
+
+Since this component library is an implementation of a design system, we do not allow `className` and `style` injection. **Customization** of components is considered harmful. To customize the look and feel, you should refer to [Design Tokens](?path=/docs/docs-designtokens--docs) or [OEM](?path=/docs/docs-oem--docs). These tools are intended for OEM users, not frontend developers using Sprout. The design system provides "lego bricks" for building consistent UIs.
+
+If the style does not match the design, it could mean one of two things:
+
+- The designer has created a new component. In this case, the frontend developer should either create the new component or challenge the design.
+- The designer has modified (detached or overridden) the component. This is considered a harmful practice and should be strongly challenged.
+
+The component API should follow Figma properties whenever possible. For example, a `State='disabled'` in Figma should correspond to the `:disabled` pseudo-class in CSS. Sometimes, a property in Figma may be designer-oriented, such as `hasIcon`. As a frontend developer, you should translate this into an `icon` property.
+
+Each component should expose its property definitions in TypeScript using the convention `[ComponentName]Props`.
+
+```typescript
+export type MyComponentProps = HTMLDivProps & {
+  figmaProp: boolean;
+  icon: ReactNode;
+};
+```
+
+## Spread the Rest of the Properties to the Highest Element in the Tree
+
+```typescript
+<div {...props}>rest of the code</div>
+```
+
+Spreading props in a component library is useful to allow users to make small adjustments, such as adding `data-attributes`.
+
+## Controlled / Uncontrolled
+
+This [state pattern](https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components) is primarily applied to form inputs in the React documentation. However, the concept extends to any component that provides interactions.
+
+The key decision is whether the parent component or the provided component manages the state.
+
+A component library should support both controlled and uncontrolled behaviors. However, implementing both can be cumbersome, as the code becomes harder to write and read. To simplify this, you can use library like [uncontrollable](https://www.npmjs.com/package/uncontrollable).
+
+## Accessibility
+
+This implementation follows the [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/) guidelines and relies on the [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) to ensure compliance with [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) AA standards.
+
+Since the library uses many native HTML elements, components provide their **implicit** roles and states.
+
+Each component is tested using the [axe-core](https://www.deque.com/axe/) library across all possible states. Storybook is set up with the `@storybook/addon-a11y` plugin, allowing anyone to view accessibility reports for each story.
+
+We also test keyboard navigation using Playwright to ensure that gestures remain functional after changes.
+
+An important note: this implementation stays as native as possible to the browser. It does not attempt to fix browser-specific issues that deviate from the spec. We believe browsers are evolving every day, and users are familiar with their browser's behavior.
+
+For example, a button will not display the `:active` state when the user presses the space key in Firefox. This is due to [Bug 68851](https://bugzilla.mozilla.org/show_bug.cgi?id=68851), reported 24 years ago, which explains that Firefox does not trigger the `:active` state because the spec defines the "main" action as a `click`. In contrast, Chrome triggers the `:active` state even on a right-click.
+
+Some open-source libraries, such as Adobe's [react-spectrum](https://react-spectrum.adobe.com), reimplement everything in JavaScript (event handlers) to create state machines for every component. For example, the `react-aria` button in Firefox will display the `:active` state, but this comes at the cost of significant JavaScript overhead.
+
+## Responsive Design
+
+Currently, we rely on CSS media queries to handle responsive design. We do not provide any utilities for this purpose because we are a component library, not a CSS framework. Our goal is to avoid reinventing the wheel by creating a new API for responsive design. We believe CSS media queries are the most effective way to manage responsive design in a component library.
+
+It is worth noting that media queries do not support CSS variables. We have explored alternative solutions, such as JavaScript-based approaches, but they did not gain sufficient traction.
+
+Within `@qlik/sprout-css-modules`, we intentionally avoid using prefixed CSS classes, such as those used by TailwindCSS. This is because TailwindCSS operates as a compile-time utility, whereas our library functions at runtime.
+
+In conclusion, the current recommendation is to use CSS media queries in projects that utilize Sprout.

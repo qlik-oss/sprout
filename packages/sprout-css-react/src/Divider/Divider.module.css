@@ -1,0 +1,13 @@
+.divider {
+  border: none;
+}
+
+.divider[aria-orientation="horizontal"] {
+  border-block-start: var(--sprout-common-divider-default);
+}
+
+.divider[aria-orientation="vertical"] {
+  display: inline-block;
+  min-block-size: 2ch;
+  border-inline-start: var(--sprout-common-divider-default);
+}

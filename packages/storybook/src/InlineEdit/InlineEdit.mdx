@@ -1,0 +1,199 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./InlineEdit.stories";
+
+<Meta title="Components/InlineEdit" of={Stories} />
+
+# InlineEdit
+
+Inline edit is a wrapper component that allows editing of content that is not in a traditional input element through the popping of a form-like UI in a popover-like UI. Use this pattern to simplify editing of simple fields.
+
+```tsx
+import { InlineEdit, type InlineEditProps } from "@qlik/sprout-css-react";
+```
+
+## Table of Contents
+
+- [InlineEdit.TextField](#inlineedittextfield)
+- [InlineEdit.Select](#inlineeditselect)
+- [InlineEdit.MultiSelect](#inlineeditmultiselect)
+- [InlineEdit.Primitive](#inlineeditprimitive)
+  - [Performance and usage notes](#performance-and-usage-notes)
+
+---
+
+## InlineEdit.TextField
+
+<Canvas of={Stories.TextField} />
+<Controls of={Stories.TextField} />
+
+Providing onChange make the field to switch in control mode.
+onSave and onCancel are helper to trigger backend API calls with the value.
+
+If you use ref you will have the root element of the InlineEdit component so you can get your input from it.
+
+## InlineEdit.Select
+
+<Canvas of={Stories.SelectDemo} />
+<Controls of={Stories.SelectDemo} />
+
+## InlineEdit.MultiSelect
+
+<Canvas of={Stories.MultiSelect} />
+<Controls of={Stories.MultiSelect} />
+
+## InlineEdit.Primitive
+
+The primitive is meant to let you build your own InlineEdit component. It provides the basic structure and behavior of an inline edit component, allowing you to customize the content and controls as needed.
+
+```tsx
+import { InlineEdit, classNames } from "@qlik/sprout-css-react";
+import { SparkleIcon } from "@qlik/sprout-icons/react";
+
+export type MyCustomInlineEditProps = {
+  value: boolean;
+  onChange: (newValue: boolean, reason?: "cancel") => void;
+};
+
+export const MyCustomInlineEdit = ({
+  value,
+  onChange,
+}: MyCustomInlineEditProps) => {
+  return (
+    <div
+      className={classNames("flex", "border_box", "p_xl", "w_xs", "bg_weak")}
+    >
+      <InlineEdit.Primitive
+        onCancel={() => {
+          // let the parent reset the initial value
+          onChange(value, "cancel");
+        }}
+        onSave={() => {
+          // submit the value to your backend or perform any action needed
+        }}
+        // JSX.Element API: pass pre-created elements
+        view={
+          <div
+            className={classNames(
+              "flex",
+              "row",
+              "gap_m",
+              "ai_center",
+              "text_default",
+            )}
+          >
+            <SparkleIcon className={classNames("fill_current")} />
+            <div className={classNames("flex", "col", "gap_m")}>
+              <span
+                className={classNames(
+                  "font_label_m_emphasized",
+                  "text_default",
+                )}
+              >
+                {value ? "On" : "Off"}
+              </span>
+              <span className={classNames("font_label_s", "text_weak")}>
+                AI Features
+              </span>
+            </div>
+          </div>
+        }
+        edit={
+          <div
+            className={classNames(
+              "flex",
+              "row",
+              "bg_default",
+              "gap_m",
+              "px_m",
+              "py_xl",
+              "ai_center",
+            )}
+          >
+            <Switch
+              checked={value}
+              onChange={() => onChange(!value)}
+              label="AI Features"
+            />
+          </div>
+        }
+      />
+    </div>
+  );
+};
+```
+
+<Canvas of={Stories.CustomInlineEdit} />
+<Controls of={Stories.CustomInlineEdit} />
+
+### Performance and usage notes
+
+`InlineEdit` accepts `view` and `edit` content as either a React element (`JSX.Element`) or a render function (`() => JSX.Element`). Both APIs are supported, but they have slightly different trade-offs:
+
+- Use a **render function** when the content is expensive to render, when the component is used many times (for example in tables), or when the view/edit content performs side effects (data fetching, subscriptions, etc.). The function form lets `InlineEdit` decide when to call the view or edit renderer so that only the active one is evaluated.
+- Using a **pre-created React element** (for example `view={<MyView />}`) is fine for simple, cheap content or when you already have an element instance you want to reuse.
+
+The `react/no-unstable-nested-components` rule warns when components are
+defined inside another component’s render function. Defining components inside
+render means they are recreated on every render and capture the parent’s
+props and state. Even if you wrap them in `useCallback` or `useMemo`, their
+definition still happens during the render phase and they are still considered
+nested components. Keeping component definitions outside of render avoids
+unnecessary work for React and reduces the risk of subtle bugs.
+
+This keeps components out of render functions (which satisfies the lint rule),
+avoids unnecessary React work in large lists or tables, and still lets you
+choose between the JSX and render-function APIs depending on your use case.
+
+If you need to reuse a view or edit component, prefer defining it at the module
+level and then using the render-function API to call it:
+
+```tsx
+const AiFeaturesView = ({ value }: { value: boolean }) => {
+  return (
+    <div
+      className={classNames(
+        "flex",
+        "row",
+        "gap_m",
+        "ai_center",
+        "text_default",
+      )}
+    >
+      <SparkleIcon className={classNames("fill_current")} />
+      <div className={classNames("flex", "col", "gap_m")}>
+        <span className={classNames("font_label_m_emphasized", "text_default")}>
+          {value ? "On" : "Off"}
+        </span>
+        <span className={classNames("font_label_s", "text_weak")}>
+          AI Features
+        </span>
+      </div>
+    </div>
+  );
+};
+
+export const MyCustomInlineEdit = ({
+  value,
+  onChange,
+}: MyCustomInlineEditProps) => {
+  return (
+    <InlineEdit.Primitive
+      onCancel={() => {
+        onChange(value, "cancel");
+      }}
+      onSave={() => {
+        // submit the value to your backend or perform any action needed
+      }}
+      view={() => <AiFeaturesView value={value} />}
+      edit={() => (
+        <Switch
+          checked={value}
+          onChange={() => onChange(!value)}
+          label="AI Features"
+        />
+      )}
+    />
+  );
+};
+```

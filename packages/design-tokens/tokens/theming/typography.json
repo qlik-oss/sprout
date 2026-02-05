@@ -1,0 +1,474 @@
+{
+  "theming": {
+    "heading": {
+      "font": {
+        "xs": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.emphasized}",
+            "lineHeight": "{qlik.typography.line-height.heading}",
+            "fontSize": "{qlik.typography.font-size.xs}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Extra small heading"
+        },
+        "s": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.emphasized}",
+            "lineHeight": "{qlik.typography.line-height.heading}",
+            "fontSize": "{qlik.typography.font-size.m}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Small heading"
+        },
+        "m": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.emphasized}",
+            "lineHeight": "{qlik.typography.line-height.heading}",
+            "fontSize": "{qlik.typography.font-size.l}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Medium heading"
+        },
+        "l": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.emphasized}",
+            "lineHeight": "{qlik.typography.line-height.heading}",
+            "fontSize": "{qlik.typography.font-size.xl}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Large heading"
+        },
+        "xl": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.emphasized}",
+            "lineHeight": "{qlik.typography.line-height.heading}",
+            "fontSize": "{qlik.typography.font-size.3xl}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "XL heading"
+        },
+        "xxl": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.emphasized}",
+            "lineHeight": "{qlik.typography.line-height.heading}",
+            "fontSize": "{qlik.typography.font-size.4xl}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "XXL heading"
+        }
+      }
+    },
+    "body": {
+      "font": {
+        "xs": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.default}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.xs}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Extra small body text"
+        },
+        "s": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.default}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.s}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Small body text"
+        },
+        "m": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.default}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.m}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Medium body text"
+        },
+        "l": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.default}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.l}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Large body text"
+        },
+        "xl": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.default}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.xl}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "XL body text"
+        },
+        "xxl": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.default}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.xxl}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "XXL body text"
+        }
+      }
+    },
+    "label": {
+      "font": {
+        "xs": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.default}",
+            "lineHeight": "16px",
+            "fontSize": "{qlik.typography.font-size.xs}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Extra small default label"
+        },
+        "xs-emphasized": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.emphasized}",
+            "lineHeight": "16px",
+            "fontSize": "{qlik.typography.font-size.xs}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Extra small emphasized label"
+        },
+        "s": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.default}",
+            "lineHeight": "16px",
+            "fontSize": "{qlik.typography.font-size.s}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Small default label"
+        },
+        "s-emphasized": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.emphasized}",
+            "lineHeight": "16px",
+            "fontSize": "{qlik.typography.font-size.s}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Small emphasized label"
+        },
+        "m": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.default}",
+            "lineHeight": "20px",
+            "fontSize": "{qlik.typography.font-size.m}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Medium default label"
+        },
+        "m-emphasized": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.emphasized}",
+            "lineHeight": "20px",
+            "fontSize": "{qlik.typography.font-size.m}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Medium emphasized label"
+        },
+        "l": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.default}",
+            "lineHeight": "24px",
+            "fontSize": "{qlik.typography.font-size.l}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Large default label"
+        },
+        "l-emphasized": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.common.font-family.default}",
+            "fontWeight": "{qlik.common.font-weight.emphasized}",
+            "lineHeight": "24px",
+            "fontSize": "{qlik.typography.font-size.l}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Large emphasized label"
+        }
+      }
+    },
+    "script": {
+      "font": {
+        "m": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.code.font-family.default}",
+            "fontWeight": "{qlik.code.font-weight.default}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.m}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Medium default code"
+        },
+        "s": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.code.font-family.default}",
+            "fontWeight": "{qlik.code.font-weight.default}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.s}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Small default code"
+        },
+        "m-emphasized": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.code.font-family.default}",
+            "fontWeight": "{qlik.code.font-weight.emphasized}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.m}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Medium emphasized code"
+        },
+        "s-emphasized": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.code.font-family.default}",
+            "fontWeight": "{qlik.code.font-weight.emphasized}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.s}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Small emphasized code"
+        }
+      }
+    },
+    "data": {
+      "font": {
+        "tabular-m": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.code.font-family.default}",
+            "fontWeight": "{qlik.code.font-weight.default}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.m}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Medium default font for right-aligned tabular data"
+        },
+        "tabular-s": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.code.font-family.default}",
+            "fontWeight": "{qlik.code.font-weight.default}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.s}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Small default font for right-aligned tabular data"
+        },
+        "tabular-xs": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.code.font-family.default}",
+            "fontWeight": "{qlik.code.font-weight.default}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.xs}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Extra small default font for right-aligned tabular data"
+        },
+        "tabular-m-emphasized": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.code.font-family.default}",
+            "fontWeight": "{qlik.code.font-weight.emphasized}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.m}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Medium emphasized font for right-aligned tabular data"
+        },
+        "tabular-s-emphasized": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.code.font-family.default}",
+            "fontWeight": "{qlik.code.font-weight.emphasized}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.s}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Small emphasized font for right-aligned tabular data"
+        },
+        "tabular-xs-emphasized": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.code.font-family.default}",
+            "fontWeight": "{qlik.code.font-weight.emphasized}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.xs}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Extra small emphasized font for right-aligned tabular data"
+        }
+      }
+    }
+  }
+}

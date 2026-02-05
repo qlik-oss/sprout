@@ -1,0 +1,61 @@
+.input {
+  padding-block: calc(
+    var(--sprout-common-spacing-s) - var(--sprout-common-border-moderate-width)
+  );
+  padding-inline: calc(
+      var(--sprout-common-spacing-s) -
+        var(--sprout-common-border-moderate-width)
+    )
+    calc(
+      var(--sprout-common-spacing-m) -
+        var(--sprout-common-border-moderate-width)
+    );
+}
+
+.input:hover {
+  border: var(--sprout-common-border-strong);
+  background: var(--sprout-common-background-color-hover);
+}
+
+.input_disabled,
+.input_disabled:hover {
+  background: var(--sprout-common-background-color-disabled);
+  border: var(--sprout-common-border-weak);
+}
+
+.input_error,
+.input_error:hover {
+  border-color: var(--sprout-danger-color-default);
+}
+
+.input:has(input:placeholder-shown) {
+  padding-inline-start: calc(
+    var(--sprout-common-spacing-m) - var(--sprout-common-border-moderate-width)
+  );
+}
+
+.input:has(input:focus) {
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) / 2 * -1);
+  background: var(--sprout-input-background-color-default);
+}
+
+.input_readonly,
+.input_readonly:has(input:focus) {
+  background: var(--sprout-common-background-color-disabled);
+  border: var(--sprout-common-border-moderate);
+}
+
+.search_input {
+  min-inline-size: var(
+    --sprout-common-sizing-7xl
+  ); /* FIXME: add this to spec */
+}
+
+/* push the button over the absolute button to manage the dropdown */
+.input [data-class="tag-groups"] button,
+.input [data-class="tag-groups"] span > span,
+.input button[data-clear="true"] {
+  position: relative;
+  z-index: 1;
+}

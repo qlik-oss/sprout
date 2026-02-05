@@ -1,0 +1,57 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Button.stories";
+
+<Meta title="Components/Button" of={Stories} />
+
+# Button
+
+Buttons are clickable items used for actions. They can have different styles depending on the needs.
+To use it you just have to import the Button component like this:
+
+```jsx
+import { Button, IconButton, ButtonFloating } from "@qlik/sprout-css-react";
+import { Icon } from "@qlik/sprout-icons/react";
+
+<Button variant="primary" size="small" label="Click me" onClick={() => {}} />
+
+<IconButton variant="default" icon={<Icon />} label="Click me" onClick={() => {}} />
+
+<ButtonFloating>
+    <Button variant="primary" size="small" label="Click me" onClick={() => {}} />
+</ButtonFloating>
+
+<ButtonFloating>
+    <IconButton variant="default" icon={<Icon />} label="Click me" onClick={() => {}} />
+</ButtonFloating>
+```
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+[W3/WAI/ARIA/APG Button](https://www.w3.org/WAI/ARIA/apg/patterns/button/)
+
+HTML Structure
+
+- Button and IconButton use the native HTML `button` so it has the implicit role `button`.
+- Button and IconButton support all props to have an [accessible label](https://www.w3.org/WAI/tutorials/forms/labels/)
+- Button and IconButton support `aria-describedby` props.
+- Button and IconButton use explicit `disabled` props to show it has unavailable. Question: should we add `aria-disabled`?
+
+Keyboard Navigation
+
+- `Space`: Activates the button.
+- `Enter`: Activates the button.
+
+## Variations
+
+<Canvas of={Stories.VisualTest} />
+
+## IconButton
+
+This variant is a shortcut to use the Button but label is moved inside a Tooltip.
+Accessibility is covered using the tooltip with the `aria-label` attribute.
+
+<Canvas of={Stories.IconPlayground} />

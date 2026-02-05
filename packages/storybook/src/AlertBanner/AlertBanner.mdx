@@ -1,0 +1,44 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./AlertBanner.stories";
+
+<Meta title="Components/AlertBanner" of={Stories} />
+
+# AlertBanner
+
+Alerts are short messages that shows feedback, information, warnings, or critical errors.
+
+## Usage
+
+```tsx
+import {
+  AlertBanner,
+  type AlertBannerProps,
+} from "@qlik/sprout-css-react";
+
+<AlertBanner
+  variant="info"
+  content="Alert content"
+  onClickDismiss={() => {}}
+  action={<></>}
+/>;
+```
+
+## Properties
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+This component use a `div` html tag with the `role=status` and `aria-live="polite"` attribute to announce the alert to screen readers.
+You can switch to a real alert by overriding those two properties like this:
+
+```tsx
+<AlertBanner
+  role="alert"
+  aria-live="assertive"
+  variant="error"
+  content="Urgent alert"
+/>
+```

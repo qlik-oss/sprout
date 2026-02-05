@@ -1,0 +1,18 @@
+{
+  "box-className": {
+    "prefix": "boxclassName",
+    "scope": "typescriptreact",
+    "body": [
+      "className={classNames(\"flex\", \"flex-row\", \"border-box\"$1)}"
+    ],
+    "description": "add classNames={classNames(\"flex\", \"flex-row\", \"border-box\"$1)}"
+  },
+  "box-div": {
+    "prefix": "boxdiv",
+    "scope": "typescriptreact",
+    "body": [
+      "<div className={classNames(\"flex\", \"flex-row\", \"border-box\"$1)}></div>"
+    ],
+    "description": "add a complete div with all basic classNames"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "sprout": {
+    "heading": {
+      "font": {
+        "xs": {
+          "$type": "typography",
+          "$value": "{theming.heading.font.xs}",
+          "$description": "Extra small heading"
+        },
+        "s": {
+          "$type": "typography",
+          "$value": "{theming.heading.font.s}",
+          "$description": "Small heading"
+        },
+        "m": {
+          "$type": "typography",
+          "$value": "{theming.heading.font.m}",
+          "$description": "Medium heading"
+        },
+        "l": {
+          "$type": "typography",
+          "$value": "{theming.heading.font.l}",
+          "$description": "Large heading"
+        },
+        "xl": {
+          "$type": "typography",
+          "$value": "{theming.heading.font.xl}",
+          "$description": "XL heading"
+        },
+        "xxl": {
+          "$type": "typography",
+          "$value": "{theming.heading.font.xxl}",
+          "$description": "XXL heading"
+        }
+      }
+    },
+    "body": {
+      "font": {
+        "xs": {
+          "$type": "typography",
+          "$value": "{theming.body.font.xs}",
+          "$description": "Extra small body text"
+        },
+        "s": {
+          "$type": "typography",
+          "$value": "{theming.body.font.s}",
+          "$description": "Small body text"
+        },
+        "m": {
+          "$type": "typography",
+          "$value": "{theming.body.font.m}",
+          "$description": "Medium body text"
+        },
+        "l": {
+          "$type": "typography",
+          "$value": "{theming.body.font.l}",
+          "$description": "Large body text"
+        },
+        "xl": {
+          "$type": "typography",
+          "$value": "{theming.body.font.xl}",
+          "$description": "XL body text"
+        },
+        "xxl": {
+          "$type": "typography",
+          "$value": "{theming.body.font.xxl}",
+          "$description": "XXL body text"
+        }
+      }
+    },
+    "label": {
+      "font": {
+        "xs": {
+          "$type": "typography",
+          "$value": "{theming.label.font.xs}",
+          "$description": "Extra small default label"
+        },
+        "xs-emphasized": {
+          "$type": "typography",
+          "$value": "{theming.label.font.xs-emphasized}",
+          "$description": "Extra small emphasized label"
+        },
+        "s": {
+          "$type": "typography",
+          "$value": "{theming.label.font.s}",
+          "$description": "Small default label"
+        },
+        "s-emphasized": {
+          "$type": "typography",
+          "$value": "{theming.label.font.s-emphasized}",
+          "$description": "Small emphasized label"
+        },
+        "m": {
+          "$type": "typography",
+          "$value": "{theming.label.font.m}",
+          "$description": "Medium default label"
+        },
+        "m-emphasized": {
+          "$type": "typography",
+          "$value": "{theming.label.font.m-emphasized}",
+          "$description": "Medium emphasized label"
+        },
+        "l": {
+          "$type": "typography",
+          "$value": "{theming.label.font.l}",
+          "$description": "Large default label"
+        },
+        "l-emphasized": {
+          "$type": "typography",
+          "$value": "{theming.label.font.l-emphasized}",
+          "$description": "Large emphasized label"
+        }
+      }
+    },
+    "script": {
+      "font": {
+        "m": {
+          "$type": "typography",
+          "$value": "{theming.script.font.m}",
+          "$description": "Medium default code"
+        },
+        "s": {
+          "$type": "typography",
+          "$value": "{theming.script.font.s}",
+          "$description": "Small default code"
+        },
+        "m-emphasized": {
+          "$type": "typography",
+          "$value": "{theming.script.font.m-emphasized}",
+          "$description": "Medium emphasized code"
+        },
+        "s-emphasized": {
+          "$type": "typography",
+          "$value": "{theming.script.font.s-emphasized}",
+          "$description": "Small emphasized code"
+        }
+      }
+    },
+    "common": {
+      "scale": {
+        "font-size": {
+          "$type": "number",
+          "$value": "1",
+          "$description": "(Variable only). Font scale variable for font size tokens"
+        }
+      }
+    },
+    "data": {
+      "font": {
+        "tabular-m": {
+          "$type": "typography",
+          "$value": "{theming.data.font.tabular-m}",
+          "$description": "Medium default font for right-aligned tabular data"
+        },
+        "tabular-s": {
+          "$type": "typography",
+          "$value": "{theming.data.font.tabular-s}",
+          "$description": "Small default font for right-aligned tabular data"
+        },
+        "tabular-xs": {
+          "$type": "typography",
+          "$value": "{theming.data.font.tabular-xs}",
+          "$description": "Extra small default font for right-aligned tabular data"
+        },
+        "tabular-m-emphasized": {
+          "$type": "typography",
+          "$value": "{theming.data.font.tabular-m-emphasized}",
+          "$description": "Medium emphasized font for right-aligned tabular data"
+        },
+        "tabular-s-emphasized": {
+          "$type": "typography",
+          "$value": "{theming.data.font.tabular-s-emphasized}",
+          "$description": "Small emphasized font for right-aligned tabular data"
+        },
+        "tabular-xs-emphasized": {
+          "$type": "typography",
+          "$value": "{theming.data.font.tabular-xs-emphasized}",
+          "$description": "Extra small emphasized font for right-aligned tabular data"
+        }
+      }
+    }
+  }
+}

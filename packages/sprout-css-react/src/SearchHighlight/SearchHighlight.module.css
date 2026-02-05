@@ -1,0 +1,13 @@
+.highlight_default {
+  background-color: var(
+    --sprout-highlight-background-color-search-result-default
+  );
+  border-radius: var(--sprout-common-border-radius-subtle);
+}
+
+.highlight_active {
+  background-color: var(
+    --sprout-highlight-background-color-search-result-active
+  );
+  border-radius: var(--sprout-common-border-radius-subtle);
+}

@@ -1,0 +1,119 @@
+.font_heading_xs,
+.font-heading-xs {
+  font: var(--sprout-heading-font-xs);
+}
+
+.font_heading_s,
+.font-heading-s {
+  font: var(--sprout-heading-font-s);
+}
+
+.font_heading_m,
+.font-heading-m {
+  font: var(--sprout-heading-font-m);
+}
+
+.font_heading_l,
+.font-heading-l {
+  font: var(--sprout-heading-font-l);
+}
+
+.font_heading_xl,
+.font-heading-xl {
+  font: var(--sprout-heading-font-xl);
+}
+
+.font_heading_xxl,
+.font-heading-xxl {
+  font: var(--sprout-heading-font-xxl);
+}
+
+.font_body_xs,
+.font-body-xs {
+  font: var(--sprout-body-font-xs);
+}
+
+.font_body_s,
+.font-body-s {
+  font: var(--sprout-body-font-s);
+}
+
+.font_body_m,
+.font-body-m {
+  font: var(--sprout-body-font-m);
+}
+
+.font_body_l,
+.font-body-l {
+  font: var(--sprout-body-font-l);
+}
+
+.font_body_xl,
+.font-body-xl {
+  font: var(--sprout-body-font-xl);
+}
+
+.font_body_xxl,
+.font-body-xxl {
+  font: var(--sprout-body-font-xxl);
+}
+
+.font_label_xs,
+.font-label-xs {
+  font: var(--sprout-label-font-xs);
+}
+
+.font_label_xs_emphasized,
+.font-label-xs-emphasized {
+  font: var(--sprout-label-font-xs-emphasized);
+}
+
+.font_label_s,
+.font-label-s {
+  font: var(--sprout-label-font-s);
+}
+
+.font_label_s_emphasized,
+.font-label-s-emphasized {
+  font: var(--sprout-label-font-s-emphasized);
+}
+
+.font_label_m,
+.font-label-m {
+  font: var(--sprout-label-font-m);
+}
+
+.font_label_m_emphasized,
+.font-label-m-emphasized {
+  font: var(--sprout-label-font-m-emphasized);
+}
+
+.font_label_l,
+.font-label-l {
+  font: var(--sprout-label-font-l);
+}
+
+.font_label_l_emphasized,
+.font-label-l-emphasized {
+  font: var(--sprout-label-font-l-emphasized);
+}
+
+.font_script_s,
+.font-script-s {
+  font: var(--sprout-script-font-s);
+}
+
+.font_script_s_emphasized,
+.font-script-s-emphasized {
+  font: var(--sprout-script-font-s-emphasized);
+}
+
+.font_script_m,
+.font-script-m {
+  font: var(--sprout-script-font-m);
+}
+
+.font_script_m_emphasized,
+.font-script-m-emphasized {
+  font: var(--sprout-script-font-m-emphasized);
+}

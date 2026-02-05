@@ -1,0 +1,126 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Modal.stories";
+import * as ModalActionsStory from "./ModalActions.stories";
+import * as ModalContentStory from "./ModalContent.stories";
+import * as ModalHeaderStory from "./ModalHeader.stories";
+import * as ModalRootStory from "./ModalRoot.stories";
+
+<Meta of={Stories} />
+
+# Modal
+
+Please first read the [Modal](https://internal.qlik.dev/design/sprout/components/modal/) documentation on usage of the Modal component to understand it's API.
+
+The Modal exposes two usage API patterns: a **props-driven API** for a quick configuration and a **composition API** for full structural control.
+
+## Table of contents
+
+- [Usage](#usage)
+- [Properties](#properties)
+  - [Modal.Root](#modalroot)
+  - [Modal.Header](#modalheader)
+  - [Modal.Content](#modalcontent)
+  - [Modal.Actions](#modalactions)
+  - [ModalProps (props-driven API)](#modalprops-props-driven-api)
+- [Style](#style)
+- [Accessibility](#accessibility)
+- [Breaking changes](#breaking-changes)
+- [Known issues](#known-issues)
+
+## Usage
+
+```tsx
+import { Modal } from "@qlik/sprout-css-react";
+
+// props API
+<Modal
+  visible
+  variant="dialog"
+  headerTitle="Title"
+  headerDescription="Description"
+  onClose={() => {}}
+  preventEscaping // escape do not close
+  preventInteractiveBackdrop // click on backdrop do not close
+  footerLeft={<Checkbox name="checkbox-name" label="Checkbox label" onChange={() => {}} />}
+  footerActions={
+    <>
+      <Button variant="secondary" label="Secondary action" onClick={() => {}} />
+      <Button variant="primary" label="Primary action" onClick={() => {}} />
+    </>
+  }
+>
+  <Modal.Content padding overflowY="none">
+    What ever you want inside the body
+  </div>
+</Modal>;
+
+// Composition API
+import { Modal } from "@qlik/sprout-css-react";
+
+<Modal.Root visible variant="dialog">
+  <Modal.Header description="Header description">Header title</Modal.Header>
+  <Modal.Content padding overflowY="auto">
+    What ever you want inside the body
+  </Modal.Content>
+  <Modal.Actions left={<Checkbox name="checkbox-name" label="Checkbox label" onChange={() => {}} />}>
+    <Button variant="secondary" label="Secondary action" onClick={() => {}} />
+    <Button variant="primary" label="Primary action" onClick={() => {}} />
+  </Modal.Actions>
+</Modal.Root>
+```
+
+## Properties
+
+Modal.Root extends attributes and properties from a standard [HTML div element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/div#attributes) and `ModalContainerProps`.
+
+### Modal.Root
+
+<Controls of={ModalRootStory.Root} />
+
+### Modal.Header
+
+<Canvas of={ModalHeaderStory.Header} />
+<Controls of={ModalHeaderStory.Header} />
+
+### Modal.Content
+
+This component do not exists in Figma but it was part of the previous design.
+To avoid too much repetition we keep it as a utility not required.
+
+<Canvas of={ModalContentStory.Content} />
+<Controls of={ModalContentStory.Content} />
+
+### Modal.Actions
+
+<Canvas of={ModalActionsStory.Actions} />
+<Controls of={ModalActionsStory.Actions} />
+
+### ModalProps (props-driven API)
+
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+- [W3/WAI/ARIA/APG modal](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
+
+HTML structure
+
+- `Modal` is a div with `role="dialog"` and `aria-modal="true"` attributes.
+- `Modal` structure is `ModalBackdrop` -> `ModalContainer` -> `ModalHeader` & `ModalContent` & `ModalActions`.
+- `ModalBackdrop` which is a simple div without any special attributes to it.
+- `ModalContainer` add `aria-labelledby` with the id of the `ModalHeader`'s title.
+- `ModalContainer` add `aria-describedby` with the id of the `ModalHeader`'s description.
+
+Keyboard navigation
+
+- `ModalContainer` trap the focus except for floating-ui portals.
+- `Escape` key close the modal (can be prevented with `preventEscaping`).
+
+Mouse navigation
+
+- `click` on the `ModalBackdrop` close the `Modal` (can be prevented with `preventInteractiveBackdrop` or `preventEscaping` properties).
+
+## Known issues
+
+- When using a [Select](https://main--66c7483fb987c73a261ba13b.chromatic.com/?path=/docs/components-select--docs) near the bottom of a modal, interacting with it may cause the body to display a scrollbar — but only on the first click. This occurs because the modal is not aware of body scroll and does not reposition itself accordingly. This is a known limitation of `floating-ui`. For more details, see [DLS-387](https://qlik-dev.atlassian.net/browse/DLS-387).

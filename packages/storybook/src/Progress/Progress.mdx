@@ -1,0 +1,64 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Progress from "./Progress.stories";
+
+<Meta title="Components/Progress" />
+
+# Progress
+
+Progress indicators, or loaders, are used to show progression of system events. They can be determinate or indeterminate.
+
+## ProgressBar
+
+Used for progress representation. ProgressBar directly inherits properties from [HTML div element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) but add some extra properties to handle the progress representation.
+
+### Usage
+
+```tsx
+import { ProgressBar } from "@qlik/sprout-css-react";
+
+<ProgressBar percent="70" aria-label="work in progress" />;
+```
+
+### Properties
+
+<Canvas of={Progress.PlaygroundProgressBar} />
+<Controls of={Progress.PlaygroundProgressBar} />
+
+### Accessibility
+
+[MDN ARIA: progressbar role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
+
+HTML Structure
+
+- `ProgressBar` uses the HTML tag `div`
+- if the props `percent` is set
+  - the role `progressbar` is used.
+  - the attributes `aria-value[min|max|now]` are added
+- if no `percent` props is passed it is considered as indetermined
+  - the role `status` is used.
+  - the attributes `aria-busy` are added
+
+## ProgressCircular
+
+Used for progress representation within components, such as a button or a textfield. Can be used by its own. ProgressCircular directly inherits properties from [SVG element](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg) but add some extra properties to handle the progress representation.
+
+### Usage
+
+```tsx
+import { ProgressCircular } from "@qlik/sprout-css-react";
+
+<ProgressCircular size="m" percent="70" />;
+```
+
+### Properties
+
+<Canvas of={Progress.PlaygroundProgressCircular} />
+<Controls of={Progress.PlaygroundProgressCircular} />
+
+### Accessibility
+
+This component is a visual component made using SVG. It rely on the following aria-attributes to describe the progress semantic:
+
+- if no `percent` props: it uses [role="status"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
+- if `percent` props: it uses [role="progressbar"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)

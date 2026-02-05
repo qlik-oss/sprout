@@ -1,0 +1,7 @@
+.color-picker-selected-color-box {
+  width: var(--sprout-common-sizing-xl);
+  height: var(--sprout-common-sizing-xl);
+  rx: var(--sprout-common-border-radius-subtle);
+  stroke: var(--sprout-common-border-default-color);
+  stroke-width: var(--sprout-common-border-default-width);
+}

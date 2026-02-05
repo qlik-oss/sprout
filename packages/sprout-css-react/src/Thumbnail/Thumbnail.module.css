@@ -1,0 +1,60 @@
+.thumb {
+  display: inline-flex;
+  border-radius: var(--sprout-common-border-radius-subtle);
+  background-color: var(--sprout-overlay-background-color-inverse);
+  inline-size: var(--sprout-common-sizing-3xl);
+  block-size: var(--sprout-common-sizing-3xl);
+}
+
+.thumb__xs {
+  inline-size: var(--sprout-common-sizing-xl);
+  block-size: var(--sprout-common-sizing-xl);
+}
+
+.thumb__s {
+  inline-size: var(--sprout-common-sizing-xxl);
+  block-size: var(--sprout-common-sizing-xxl);
+}
+
+.thumb__l {
+  inline-size: var(--sprout-common-sizing-4xl);
+  block-size: var(--sprout-common-sizing-4xl);
+}
+
+.thumb__xl {
+  inline-size: var(--sprout-common-sizing-6xl);
+  block-size: var(--sprout-common-sizing-6xl);
+}
+
+.thumb__icon {
+  justify-content: center;
+  align-items: center;
+}
+
+.thumb__icon > svg,
+.thumb__icon.thumb__l > svg {
+  inline-size: var(--sprout-common-sizing-xl);
+  block-size: var(--sprout-common-sizing-xl);
+}
+
+.thumb__icon.thumb__xs > svg {
+  inline-size: var(--sprout-common-sizing-m);
+  block-size: var(--sprout-common-sizing-m);
+}
+
+.thumb__icon.thumb__s > svg {
+  inline-size: var(--sprout-common-sizing-l);
+  block-size: var(--sprout-common-sizing-l);
+}
+
+.thumb__icon.thumb__xl > svg {
+  inline-size: var(--sprout-common-sizing-xxl);
+  block-size: var(--sprout-common-sizing-xxl);
+}
+
+.thumb__img > img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: fill;
+  border-radius: var(--sprout-common-border-radius-subtle);
+}

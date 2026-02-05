@@ -1,0 +1,150 @@
+.stepper {
+  inline-size: 100%;
+  display: flex;
+  box-sizing: border-box;
+  list-style-type: none;
+  padding: var(--sprout-common-spacing-s);
+  justify-content: space-between;
+  margin: 0;
+}
+
+.stepper > li {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.line {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.stepper[data-orientation="vertical"] {
+  flex-direction: column;
+  overflow-block: auto;
+}
+
+.stepper[data-orientation="vertical"] > li {
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.stepper[data-orientation="vertical"] .line {
+  inline-size: var(--sprout-common-sizing-3xl);
+  min-block-size: var(--sprout-common-sizing-3xl);
+  min-inline-size: var(--sprout-common-sizing-3xl);
+}
+
+.stepper[data-orientation="vertical"] .line::before {
+  content: " ";
+  block-size: 100%;
+  min-block-size: var(--sprout-common-sizing-3xl);
+  inline-size: var(--sprout-common-border-extra-strong-width);
+  background-color: var(--sprout-common-border-extra-strong-color);
+}
+
+.stepper[data-orientation="horizontal"] {
+  overflow-inline: auto;
+  inline-size: 100%;
+  align-items: center;
+  flex-direction: row;
+}
+
+.stepper[data-orientation="horizontal"] > li {
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+}
+
+.stepper[data-orientation="horizontal"] .line {
+  block-size: var(--sprout-common-sizing-xxl);
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.stepper[data-orientation="horizontal"] .line::before {
+  content: " ";
+  block-size: var(--sprout-common-border-extra-strong-width);
+  inline-size: 100%;
+  min-inline-size: var(--sprout-common-sizing-3xl);
+  background-color: var(--sprout-common-border-extra-strong-color);
+}
+
+.stepper[data-orientation="horizontal"] > li:last-child {
+  flex-grow: 0;
+}
+
+/* when the step indicator display text */
+.indicator > span {
+  background-color: var(--sprout-brand-primary-color-default);
+  color: var(--sprout-brand-primary-color-inverse);
+}
+
+/* when the step indicator display icon */
+.indicator > svg {
+  overflow: visible; /* no idea why the icon goes in overflow */
+  inline-size: var(--sprout-common-sizing-xxl);
+  block-size: var(--sprout-common-sizing-xxl);
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+  gap: var(--sprout-common-spacing-m);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--sprout-common-border-radius-soft);
+  padding: var(--sprout-common-spacing-s);
+}
+
+.step[role="button"] {
+  cursor: pointer;
+}
+
+.step[role="button"]:disabled {
+  font: inherit;
+  color: inherit;
+}
+
+.step[role="button"]:hover {
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.step[role="button"]:active {
+  background-color: var(--sprout-common-background-color-pressed);
+}
+
+.step[role="button"]:focus-visible {
+  background-color: var(--sprout-focus-background-color-default);
+  border-width: var(--sprout-focus-border-default-width);
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) / 2 * -1);
+}
+
+.step[data-semantic="inactive"] > .indicator > span {
+  background-color: var(--sprout-common-background-color-enabled);
+  border: var(--sprout-common-border-default);
+  font: var(--sprout-label-font-s-emphasized);
+  color: var(--sprout-common-foreground-color-weak);
+}
+
+.step[role="button"]:active .indicator > span {
+  background-color: var(--sprout-brand-primary-color-hover);
+}
+
+.step [data-surface="progress-circular"] {
+  inline-size: var(--sprout-common-sizing-xxl);
+  block-size: var(--sprout-common-sizing-xxl);
+}
+
+.text {
+  display: inline-flex;
+  flex-shrink: 1;
+  font: var(--sprout-label-font-s-emphasized);
+  color: var(--sprout-common-foreground-color-default);
+}

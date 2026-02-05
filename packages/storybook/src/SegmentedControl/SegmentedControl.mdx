@@ -1,0 +1,99 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./SegmentedControl.stories";
+
+<Meta title="Components/SegmentedControl" of={Stories} />
+
+# SegmentedControl
+
+The segmented control allows users to make a mutually exclusive selection from a range of predefined options, similar to a radio group but with a more compact and visually distinct layout.
+
+The `SegmentedControl.Segment` directly inherits properties from [HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input) and is set to `type="radio"`.
+
+```tsx
+import { SegmentedControl } from "@qlik/sprout-css-react";
+
+// With label and icon
+<SegmentedControl.Group name="segmented-control-group">
+  <SegmentedControl.Segment value="A" label="Segment" icon={<Star2 />} />
+  <SegmentedControl.Segment value="B" label="Segment" icon={<Star2 />} />
+  <SegmentedControl.Segment
+    value="C"
+    label="Segment"
+    icon={<Star2 />}
+    disabled
+  />
+</SegmentedControl.Group>;
+
+// Icon only
+<SegmentedControl.Group name="segmented-control-group" iconOnly>
+  <SegmentedControl.Segment value="A" label="Segment" icon={<Star2 />} />
+  <SegmentedControl.Segment value="B" label="Segment" icon={<Star2 />} />
+  <SegmentedControl.Segment
+    value="C"
+    label="Segment"
+    icon={<Star2 />}
+    disabled
+  />
+</SegmentedControl.Group>;
+
+// Vertical layout
+<SegmentedControl.Group name="segmented-control-group" orientation="vertical">
+  <SegmentedControl.Segment value="A" label="Segment" icon={<Star2 />} />
+  <SegmentedControl.Segment value="B" label="Segment" icon={<Star2 />} />
+  <SegmentedControl.Segment
+    value="C"
+    label="Segment"
+    icon={<Star2 />}
+    disabled
+  />
+</SegmentedControl.Group>;
+
+// Set name either on the group or on each segment
+<SegmentedControl.Group>
+  <SegmentedControl.Segment
+    value="A"
+    label="Segment A"
+    name="segmented-control-group"
+  />
+  <SegmentedControl.Segment
+    value="B"
+    label="Segment B"
+    name="segmented-control-group"
+  />
+  <SegmentedControl.Segment
+    value="C"
+    label="Segment C"
+    name="segmented-control-group"
+    disabled
+  />
+</SegmentedControl.Group>;
+```
+
+## Properties
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+<Canvas of={Stories.Segment} />
+<Controls of={Stories.Segment} />
+
+## Accessibility
+
+[W3/WAI/ARIA/APG RadioGroup](https://www.w3.org/WAI/ARIA/apg/patterns/radio/)
+
+HTML Structure
+
+- The radio buttons are contained in or owned by an element with role `radiogroup`.
+- Each radio button element has role `radio`.
+- If a radio button is checked, the radio element has `aria-checked` set to true. If it is not checked, it has `aria-checked` set to false.
+- Each radio element is labelled by its content, has a visible label referenced by `aria-labelledby`, or has a label specified with `aria-label`.
+- The radiogroup element has a visible label referenced by `aria-labelledby` or has a label specified with `aria-label`.
+- If elements providing additional information about either the radio group or each radio button are present, those elements are referenced by the radiogroup element or radio elements with the `aria-describedby` property.
+- HTML `input` element with type="checkbox" and type="radio" as these have built in semantics and do not require ARIA attributes. [Source](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
+
+Keyboard navigation
+
+- `Tab` and `Tab + Shift`: Move focus into and out of the radio group. When focus moves into a radio group, and a radio button is already checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.
+- `Space`: Checks the focused radio button if it is not already checked.
+- `Right Arrow` and `Down Arrow`: move focus to the next radio button in the group, uncheck the previously focused button, and check the newly focused button. If focus is on the last button, focus moves to the first button.
+- `Left Arrow` and `Up Arrow`: move focus to the previous radio button in the group, uncheck the previously focused button, and check the newly focused button. If focus is on the first button, focus moves to the last button.

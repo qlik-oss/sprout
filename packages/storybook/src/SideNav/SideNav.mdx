@@ -1,0 +1,71 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./SideNav.stories";
+
+<Meta title="Components/SideNavigation" of={Stories} />
+
+# SideNav
+
+Side navigation is typically used as a primary or secondary navigation in a side panel.
+
+```tsx
+import { SideNav } from "@qlik/sprout-css-react";
+
+<SideNav.Nav>
+  <SideNav.Section label="Default">
+    <List gap="s">
+      <ListItem hasPadding={false} interactive>
+        <SideNav.Link
+          href="#upload"
+          icon={<CloudUploadIcon {...UNZIED_PROPS} />}
+          label="Uploads"
+        />
+      </ListItem>
+    </List>
+  </SideNav.Section>
+</SideNav.Nav>;
+```
+
+Note: ListItem need hasPadding={false} when used in SideNav for the sake of composition.
+and this property doesn't appear in the source code panel
+
+<Canvas of={Stories.Playground} sourceState="shown" />
+
+## API
+
+```typescript
+import {
+  HTMLAnchorProps,
+  HTMLDivProps,
+  type HTMLNavProps,
+  type HTMLSectionProps,
+} from "../htmlTypes";
+
+type SideNavProps = {
+  Nav: {
+    variant?: "compact";
+  }; // & HTMLNavProps
+  Section: {
+    label: string;
+    level?: "h2" | "h3" | "h4" | "h5" | "h6";
+  }; // & HTMLSectionProps
+  Item: {
+    variant?: "compact";
+    icon?: ReactNode;
+    iconSize?: "large";
+    label: ReactNode;
+    indentation?: number;
+    isExternal?: boolean;
+  }; // & HTMLDivProps
+  Link: {}; // same as Item + HTMLAnchorProps
+};
+```
+
+## Accessibility
+
+- The `SideNav.Nav` use a `nav` element
+- The `SideNav.Section` use a `section` element. The title use by default `h2`. It can be set by using the `level` property.
+- The `SideNav.Link` use a `a` element and wrap the `SideNav.Item`.
+- The `SideNav.Item` use a `span` element.
+
+Please see the [List](?path=/docs/components-list--docs) documentation for info about it.

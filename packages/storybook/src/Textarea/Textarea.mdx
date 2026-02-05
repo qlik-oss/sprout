@@ -1,0 +1,48 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Textarea.stories";
+
+<Meta title="Components/Textarea" of={Stories} />
+
+# Textarea
+
+Use text area when a user is inputting longer texts or tags.
+
+```tsx
+import { Textarea } from "@qlik/sprout-css-react";
+
+<Textarea
+  label="Label"
+  helpText="help me"
+  placeholder="Placeholder"
+  defaultValue="value"
+  value={value}
+/>;
+```
+
+<Canvas of={Stories.Playground} />
+
+## Properties for Textarea
+
+The Textarea directly inherits properties from [HTML textarea element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea).
+
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+HTML structure
+
+- `Textarea` structure use `Field` -> `TextareaNative` -> `textarea` HTML tag.
+- `disabled` props is map to textarea native `disabled` attribute.
+- `readOnly` props is map to textarea native `readOnly` attribute.
+- `hasError` props is map to textarea native `aria-invalid` attribute.
+- `label` generate a label tag with the htmlFor attribute.
+- `label` props add a `aria-labelledby` attribute to the textarea.
+- `helpText` and `errorMessages` props add a `aria-describedby` attribute to the textarea.
+
+Keyboard Interaction:
+
+- `Enter`: as we rely on native textarea tag the behavior is the same as the native textarea tag: Add a new line.
+- `Tab`: if focused it will move to the next focusable element.
+- `Shift + Tab`: if focused it will move to the previous focusable element.
+- `Backspace`: if focused it will delete the character before the cursor.

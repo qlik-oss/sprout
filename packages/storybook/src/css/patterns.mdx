@@ -1,0 +1,102 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./patterns.stories";
+
+<Meta title="CSS/sprout-css-modules/patterns" />
+
+# Patterns
+
+Here you will find classNames that doesn't exists in tailwindcss as they are opinionated classes that provide accessibility and useful features for every day use.
+
+## Focusable / Activable blocks
+
+It's not rare to see the need to make a `div` focusable to improve user experience. But it's wrong in the accessibility point of view.
+One solution is to use `tabindex="0"` on the `div` but it's still not enough as you must also provide a click and keydown handler.
+In the end the goal is to make a `div` behave like a button or a link.
+
+To achieve that sprout-css-modules provide some utility classes to help you with that.
+
+### Don't
+
+```tsx
+<div tabIndex={0}>Focusable div yes but NOT ACCESSIBLE SO PLEASE DON'T</div>
+```
+
+### Do
+
+```tsx
+<div className={sprout.classNames("focusable-target")}>
+  <button
+    type="button"
+    aria-label="focus me"
+    className={sprout.classNames("focusable-trigger")}
+  />
+  Content that can be focused in a way that is accessible
+</div>
+```
+
+<Canvas of={Stories.FocusableTarget} />
+
+## Progressive disclosure
+
+[Progressive disclosure](https://internal.qlik.dev/design/sprout/design-patterns/progressive-disclosure/) is a pattern used to show additional content or actions only when needed, reducing cognitive load and improving user experience.
+
+### Display actions on Hover
+
+One common request for a dev is to display actions on hover.
+
+#### Don't
+
+```css
+/* Hide actions by default */
+.actions {
+  display: none;
+}
+
+/* Show actions on container hover but that will not be shown in keyboard navigation !!! */
+.container:hover .actions {
+  display: block;
+}
+```
+
+#### Do
+
+The following example demonstrates how to implement progressive disclosure using Sprout CSS Modules:
+
+```tsx
+<div
+  className={sprout.classNames(
+    "disclosure-trigger",
+    "focusable-target",
+    "flex",
+    "flex-row",
+    "items-center",
+    "justify-between",
+    "border-default",
+    "p-xs",
+    "w-m",
+    "bg-interactive",
+  )}
+>
+  <button
+    type="button"
+    aria-label="label of the current main action"
+    className={sprout.classNames("focusable_trigger")}
+  />
+  <p>disclosure_target</p>
+  <div
+    className={sprout.classNames(
+      "disclosure-target",
+      "flex",
+      "flex-row",
+      "gap-s",
+    )}
+  >
+    <IconButton label="Copy" icon={<Copy height={undefined} />} />
+    <IconButton label="Paste" icon={<Paste height={undefined} />} />
+  </div>
+</div>
+```
+
+<Canvas of={Stories.ProgressiveDisclosure} />
+````

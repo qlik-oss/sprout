@@ -1,0 +1,171 @@
+import { HomeIcon, SearchIcon } from "@qlik/sprout-icons/react";
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./core.stories";
+
+<Meta title="CSS/sprout-css-modules/core" />
+
+# Core concepts
+
+- [Responsive](#responsive)
+  - [sprout.media](#sproutmedia)
+  - [sprout.widthObserver](#sproutwidthobserver)
+  - [sprout.createContainer](#sproutcreatecontainer)
+- [RTL](#rtl)
+
+## Responsive
+
+Using responsive APIs to build adaptive user interfaces.
+
+### sprout.media
+
+`sprout.media` is an API that will give you everything you need to build layout based on viewport sizes.
+It plays well with any JS framework and extend existing API like classNames.
+It also expose the needed low-level API to build a responsive grid in your Framework.
+
+First, make sure you've added the viewport meta tag to the `<head>` of your document:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+<Canvas of={Stories.Responsive} />
+<Controls of={Stories.Responsive} />
+
+### sprout.widthObserver
+
+`widthObserver` wraps the native `ResizeObserver` and calls you back when an element’s width changes.
+
+<Canvas of={Stories.WidthObserver} />
+
+#### API
+
+```ts
+
+type BoxSizing = "content-box" | "border-box" | "device-pixel-content-box";
+
+widthObserver(
+  element: HTMLElement | (() => HTMLElement | null) | null,
+  opts?: {
+    boxSizing?: BoxSizing;
+    onResize?: (width: number | undefined) => void;
+  }
+): {
+  observe(): void;
+  disconnect(): void;
+};
+```
+
+##### Parameters
+
+- `element`: The element to observe, or a function that returns it.
+- `opts.boxSizing`: Which box to measure. Defaults to `"content-box"`.
+- `opts.onResize(width)`: Called whenever the element’s width changes.
+
+##### Returns
+
+- `{ observe, disconnect }`: Start and stop observing.
+
+#### Usage
+
+```tsx
+const observer = sprout.widthObserver(() => ref.current, {
+  boxSizing: "border-box",
+  onResize: (w) => setWidth(w),
+});
+
+observer.observe();
+// later..
+observer.disconnect();
+```
+
+---
+
+### sprout.createContainer
+
+`createContainer(width, element)` turns a measured width into a container with **size breakpoints** you can query.
+
+<Canvas of={Stories.CreateContainer} />
+
+#### API
+
+```ts
+type ContainerSize = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "3xl" | "4xl";
+type AllClasses = keyof typeof classes;
+type ContainerOptions<T> = Partial<Record<ContainerSize, T>>;
+
+
+createContainer(
+  size: ContainerSize,
+  element?: Element | null
+): {
+  classNames: (
+    options: ContainerOptions<Array<AllClasses> | AllClasses>,
+    className?: string
+  ) => string;
+  get: <T>(options: ContainerOptions<T>) => T;
+  match: (
+    width: number,
+    element?: Element | null
+  ) => ContainerSize
+}
+```
+
+##### Parameters
+
+- `size`: Container size context to bind (one of `"xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "3xl" | "4xl"`).
+- `element`: Optional element whose computed styles hold the CSS variables; defaults to `document.documentElement`.
+
+##### How sizes are defined
+
+- Breakpoints come from CSS custom properties on `element`:
+  - `--sprout-container-sizing-xxs`
+  - `--sprout-container-sizing-xs`
+  - `--sprout-container-sizing-s`
+  - `--sprout-container-sizing-m`
+  - `--sprout-container-sizing-l`
+  - `--sprout-container-sizing-xl`
+  - `--sprout-container-sizing-xxl`
+  - `--sprout-container-sizing-3xl`
+  - `--sprout-container-sizing-4xl`
+
+##### Returns
+
+- `{ classNames, get, match }`: Utilities bound to the chosen size. Missing keys gracefully fall back to nearby sizes.
+
+#### Usage
+
+```tsx
+const container = sprout.createContainer("m", ref.current);
+
+// Read a value that depends on the container size
+const justified = container.get({ xxs: true, m: false });
+
+// Compute classes that depend on the container size
+<div
+  className={container.classNames(
+    {
+      xxs: ["grid-cols-1", "gap-s"],
+      xs: ["grid-cols-2", "gap-s"],
+      s: ["grid-cols-3", "gap-m"],
+      m: ["grid-cols-4", "gap-m"],
+      l: ["grid-cols-5", "gap-l"],
+      xl: ["grid-cols-6", "gap-l"],
+      xxl: ["grid-cols-7", "gap-xl"],
+      "3xl": ["grid-cols-8", "gap-xl"],
+      "4xl": ["grid-cols-9", "gap-xl"],
+    },
+    sprout.classNames("grid", "border-box", "p-m"),
+  )}
+/>;
+```
+
+## RTL
+
+Icons that represent directional concepts (like arrows) should be mirrored, while icons that do not convey direction (like a home icon) should remain unchanged. <HomeIcon />
+
+The majority of users in RTL-writing countries are also right-handed, so such icons should not be mirrored. <SearchIcon />
+
+Not all icons are mirrored in RTL !
+
+<Canvas of={Stories.RTL} />

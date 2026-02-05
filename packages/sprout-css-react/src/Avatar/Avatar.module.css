@@ -1,0 +1,155 @@
+/* stylelint-disable sprout/no-hardcoded-values */
+/* stylelint-disable color-function-notation */
+
+.avatar {
+  background-color: rgb(64, 64, 64);
+  color: white;
+}
+
+.avatar.illustration {
+  /* we use var fallback because the current token has just been defined
+   * @TODO remove fallback when token is live
+   */
+  inline-size: var(--sprout-illustration-sizing-s, 96px);
+  block-size: var(--sprout-illustration-sizing-s, 96px);
+  font-size: var(--sprout-common-sizing-xxl);
+}
+
+.avatar.xl {
+  block-size: var(--sprout-common-sizing-6xl);
+  inline-size: var(--sprout-common-sizing-6xl);
+  font-size: var(--sprout-common-sizing-xxl);
+}
+
+.avatar.l {
+  block-size: var(--sprout-common-sizing-4xl);
+  inline-size: var(--sprout-common-sizing-4xl);
+}
+
+.avatar.s {
+  block-size: var(--sprout-common-sizing-xxl);
+  inline-size: var(--sprout-common-sizing-xxl);
+  font-size: var(--sprout-common-sizing-l);
+}
+
+.avatar.xs {
+  block-size: var(--sprout-common-sizing-xl);
+  inline-size: var(--sprout-common-sizing-xl);
+  font-size: var(--sprout-common-sizing-m);
+}
+
+/* icon avatar */
+.avatar > svg,
+.avatar.l > svg {
+  block-size: var(--sprout-common-sizing-xl);
+  inline-size: var(--sprout-common-sizing-xl);
+}
+
+.avatar.xl > svg {
+  block-size: var(--sprout-common-sizing-xxl);
+  inline-size: var(--sprout-common-sizing-xxl);
+}
+
+.avatar.illustration > svg {
+  block-size: var(--sprout-common-sizing-3xl);
+  inline-size: var(--sprout-common-sizing-3xl);
+}
+
+.avatar.s > svg {
+  block-size: var(--sprout-common-sizing-l);
+  inline-size: var(--sprout-common-sizing-l);
+}
+
+.avatar.xs > svg {
+  block-size: var(--sprout-common-sizing-m);
+  inline-size: var(--sprout-common-sizing-m);
+}
+
+.avatar > img {
+  block-size: 100%;
+  inline-size: 100%;
+  border-radius: var(--sprout-common-border-radius-round);
+}
+
+.badge > * {
+  border: var(--sprout-common-border-strong);
+  border-color: var(--sprout-brand-primary-color-inverse);
+}
+
+.avatar > .badge {
+  display: flex;
+  inset-inline-start: calc(
+    var(--sprout-common-sizing-3xl) - var(--sprout-common-sizing-m)
+  );
+  inset-block-start: calc(
+    var(--sprout-common-sizing-3xl) - var(--sprout-common-sizing-m)
+  );
+}
+
+.avatar.xs > .badge {
+  inset-inline-start: calc(
+    var(--sprout-common-sizing-xl) - var(--sprout-common-sizing-s)
+  );
+  inset-block-start: calc(
+    var(--sprout-common-sizing-xl) - var(--sprout-common-sizing-s)
+  );
+}
+
+.avatar.s > .badge {
+  inset-inline-start: calc(
+    var(--sprout-common-sizing-xxl) - var(--sprout-common-sizing-m)
+  );
+  inset-block-start: calc(
+    var(--sprout-common-sizing-xxl) - var(--sprout-common-sizing-m)
+  );
+}
+
+.avatar.l > .badge {
+  inset-inline-start: calc(
+    var(--sprout-common-sizing-4xl) - var(--sprout-common-sizing-m)
+  );
+  inset-block-start: calc(
+    var(--sprout-common-sizing-4xl) - var(--sprout-common-sizing-m)
+  );
+}
+
+.avatar.xl > .badge {
+  inset-inline-start: calc(
+    var(--sprout-common-sizing-6xl) - var(--sprout-common-sizing-l)
+  );
+  inset-block-start: calc(
+    var(--sprout-common-sizing-6xl) - var(--sprout-common-sizing-l)
+  );
+}
+
+.avatar.bg0 {
+  background-color: rgb(113, 18, 161);
+}
+
+.avatar.bg1 {
+  background-color: rgb(161, 18, 18);
+}
+
+.avatar.bg2 {
+  background-color: rgb(161, 113, 18);
+}
+
+.avatar.bg3 {
+  background-color: rgb(113, 161, 18);
+}
+
+.avatar.bg4 {
+  background-color: rgb(18, 161, 18);
+}
+
+.avatar.bg5 {
+  background-color: rgb(18, 161, 113);
+}
+
+.avatar.bg6 {
+  background-color: rgb(18, 113, 161);
+}
+
+.avatar.bg7 {
+  background-color: rgb(18, 18, 161);
+}

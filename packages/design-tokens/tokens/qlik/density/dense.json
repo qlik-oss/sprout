@@ -1,0 +1,34 @@
+{
+  "qlik": {
+    "density": {
+      "xs": {
+        "$type": "spacing",
+        "$value": "1px"
+      },
+      "s": {
+        "$type": "spacing",
+        "$value": "2px"
+      },
+      "m": {
+        "$type": "spacing",
+        "$value": "4px"
+      },
+      "l": {
+        "$type": "spacing",
+        "$value": "8px"
+      },
+      "xl": {
+        "$type": "spacing",
+        "$value": "12px"
+      },
+      "xxl": {
+        "$type": "spacing",
+        "$value": "20px"
+      },
+      "3xl": {
+        "$type": "spacing",
+        "$value": "24px"
+      }
+    }
+  }
+}

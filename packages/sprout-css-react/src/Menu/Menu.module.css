@@ -1,0 +1,80 @@
+.menu {
+  background-color: var(--sprout-common-background-color-default);
+  box-shadow: var(--sprout-common-elevation-moderate);
+  outline: none;
+  padding: var(--sprout-common-spacing-s);
+  overflow-block: auto;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  border-radius: var(--sprout-common-border-radius-subtle);
+  /* stylelint-disable-next-line sprout/no-hardcoded-values */
+  min-inline-size: 120px;
+  max-inline-size: var(--sprout-container-sizing-s);
+
+  /* Hide every group with empty entries */
+  div[role="group"]:not(:has([role="option"]:not([aria-hidden="true"]))) {
+    display: none;
+  }
+}
+
+.menuitem[aria-hidden="true"] {
+  display: none;
+}
+
+.menuitem[data-variant="destructive"] {
+  color: var(--sprout-danger-color-default);
+}
+
+.menuitem:disabled,
+.menuitem[data-variant="destructive"]:disabled {
+  cursor: not-allowed;
+  color: var(--sprout-common-foreground-color-disabled);
+}
+
+.menuitem:focus-visible,
+.menuitem[data-focus-visible="true"] {
+  background-color: var(--sprout-focus-background-color-default);
+  outline: var(--sprout-focus-border-default);
+}
+
+.menuitem:not([disabled]):hover,
+.menuitem:not([disabled])[data-hovered="true"] {
+  background: var(--sprout-common-background-color-hover);
+}
+
+.menuitem:not([disabled]):active {
+  background: var(--sprout-common-background-color-pressed);
+}
+
+.menuitem[data-focus-inside][data-open] {
+  background: var(--sprout-common-background-color-pressed);
+}
+
+.menu_icon {
+  align-self: start;
+  inline-size: var(--sprout-common-sizing-xl);
+  block-size: var(--sprout-common-sizing-xl);
+  flex-shrink: 0;
+}
+
+.menu_icon > img {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.menu_icon > svg {
+  fill: currentcolor;
+}
+
+.menu_divider {
+  padding: var(--sprout-common-spacing-s) var(--sprout-common-spacing-l);
+}
+
+/* Integration when MenuItem is displayed inside a combobox */
+[role="combobox"] .menu_content_label,
+[role="combobox"] .menu_content_description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

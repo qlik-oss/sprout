@@ -1,0 +1,23 @@
+declare const classes: {
+  container: string;
+  panel: string;
+  panel__top: string;
+  panel__left: string;
+  panel__right: string;
+  panel__bottom: string;
+  panel__x: string;
+  panel__y: string;
+  fullscreen: string;
+  overlay: string;
+  overlay_s: string;
+  overlay_m: string;
+  overlay_l: string;
+  overlay_xl: string;
+  overlay_xxl: string;
+  overlay_3xl: string;
+  overlay_4xl: string;
+  start: string;
+  end: string;
+  resize_btn: string;
+};
+export default classes;

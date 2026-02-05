@@ -1,0 +1,71 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./TextField.stories";
+
+<Meta title="Components/TextField" of={Stories} />
+
+# TextField
+
+```tsx
+// if you want the field
+import { TextField } from "@qlik/sprout-css-react";
+
+<TextField label="Label" helpText="helpText" />;
+```
+
+<Canvas of={Stories.Playground} />
+
+## Properties for TextField
+
+The TextField directly inherits properties from [HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input) but only support `type="text"` and `type="search"`.
+
+<Controls of={Stories.Playground} />
+
+## Variations
+
+The props `designSize` accept two values: `small` or `default`.
+You can also pass the type="search".
+
+<Canvas of={Stories.Search} />
+
+## AffixWrapper
+
+To position affixes according to our guidelines you can make use of the AffixWrapper help component.
+
+```tsx
+import { AffixWrapper } from "@qlik/sprout-css-react";
+
+<TextField
+  label="Label"
+  helpText="helpText"
+  rightAffix={
+    <AffixWrapper>
+      <IconButton
+        variant="quiet"
+        size="small"
+        label="Copy the key"
+        icon={<Copy width={undefined} height={undefined} />}
+      />
+    </AffixWrapper>
+  }
+/>;
+```
+
+## Accessibility
+
+HTML structure
+
+- `TextField` structure use `Field` -> `Input` -> `input` HTML tag with `type="text"` by default.
+- `disabled` props is map to input native `disabled` attribute.
+- `readOnly` props is map to input native `readOnly` attribute.
+- `hasError` props is map to input native `aria-invalid` attribute.
+- `label` generate a label tag with the htmlFor attribute.
+- `label` props add a `aria-labelledby` attribute to the textarea.
+- `helpText` and `errorMessages` props add a `aria-describedby` attribute to the textarea.
+
+Keyboard Interaction:
+
+- `Enter`: as we rely on native input tag the behavior is the same as the native input tag: Submit the form.
+- `Tab`: if focused it will move to the next focusable element.
+- `Shift + Tab`: if focused it will move to the previous focusable element.
+- `Backspace`: if focused it will delete the character before the cursor.

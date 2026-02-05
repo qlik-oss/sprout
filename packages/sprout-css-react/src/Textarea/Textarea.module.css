@@ -1,0 +1,49 @@
+.wrapper {
+  background: var(--sprout-input-background-color-default);
+  border: var(--sprout-common-border-moderate);
+  max-inline-size: 100%;
+  max-block-size: 100%;
+  min-inline-size: var(--sprout-common-sizing-4xl);
+  min-block-size: var(--sprout-common-sizing-3xl);
+}
+
+.wrapper:hover {
+  border: var(--sprout-common-border-strong);
+}
+
+.wrapper_disabled,
+.wrapper_disabled:hover {
+  background: var(--sprout-common-background-color-disabled);
+  border: var(--sprout-common-border-weak);
+}
+
+.wrapper_readonly {
+  border: var(--sprout-common-border-moderate);
+  background: var(--sprout-common-background-color-disabled);
+}
+
+.wrapper_error {
+  border-color: var(--sprout-danger-color-default);
+}
+
+.wrapper:focus-within,
+.wrapper:focus {
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) * -1 / 2);
+  border-color: transparent;
+}
+
+.textarea {
+  line-height: var(--sprout-common-sizing-xxl);
+  scrollbar-width: thin;
+}
+
+.textarea::placeholder {
+  color: var(--sprout-common-foreground-color-weak);
+}
+
+.textarea_error {
+  padding-inline-end: calc(
+    var(--sprout-common-spacing-m) + var(--sprout-common-sizing-xl)
+  );
+}

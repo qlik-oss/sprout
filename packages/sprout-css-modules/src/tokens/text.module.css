@@ -1,0 +1,137 @@
+.text_default,
+.text-default {
+  color: var(--sprout-common-foreground-color-default);
+}
+
+.text_disabled,
+.text-disabled {
+  color: var(--sprout-common-foreground-color-disabled);
+}
+
+.text_weak,
+.text-weak {
+  color: var(--sprout-common-foreground-color-weak);
+}
+
+.text_inverse,
+.text-inverse {
+  color: var(--sprout-inverse-foreground-color-default);
+}
+
+.text_danger,
+.text-danger {
+  color: var(--sprout-danger-color-default);
+}
+
+.text_danger_inverse,
+.text-danger-inverse {
+  color: var(--sprout-danger-color-inverse);
+}
+
+.text_info,
+.text-info {
+  color: var(--sprout-info-color-default);
+}
+
+.text_info_inverse,
+.text-info-inverse {
+  color: var(--sprout-info-color-inverse);
+}
+
+.text_warning,
+.text-warning {
+  color: var(--sprout-warning-color-default);
+}
+
+.text_warning_inverse,
+.text-warning-inverse {
+  color: var(--sprout-warning-color-inverse);
+}
+
+.text_success,
+.text-success {
+  color: var(--sprout-success-color-default);
+}
+
+.text_success_inverse,
+.text-success-inverse {
+  color: var(--sprout-success-color-inverse);
+}
+
+.text_clip,
+.text-clip {
+  text-overflow: clip;
+}
+
+.text_ellipsis,
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.truncate,
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.text_wrap,
+.text-wrap {
+  text-wrap: wrap;
+}
+
+.text_nowrap,
+.text-nowrap {
+  text-wrap: nowrap;
+}
+
+.text_center,
+.text-center {
+  text-align: center;
+}
+
+.text_left,
+.text_start,
+.text-start,
+.text-left {
+  text-align: start;
+}
+
+.text_right,
+.text_end,
+.text-right,
+.text-end {
+  text-align: end;
+}
+
+.text_justify,
+.text-justify {
+  text-align: justify;
+}
+
+.no_underline,
+.no-underline {
+  text-decoration-line: none;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.overline {
+  text-decoration-line: overline;
+}
+
+.linethrough {
+  text-decoration-line: line-through;
+}
+
+.break_words,
+.break-words {
+  overflow-wrap: break-word;
+}
+
+.break_all,
+.break-all {
+  word-break: break-all;
+}

@@ -1,0 +1,59 @@
+import { Canvas, Controls, Meta, Story } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./AlertInline.stories";
+
+<Meta title="Components/Trigger/AlertInline" of={Stories} />
+
+# AlertInline
+
+Alerts are short messages that shows feedback, information, warnings, or critical errors.
+
+## Usage
+
+```jsx
+import { AlertInline } from "@qlik/sprout-css-react";
+
+<AlertInline
+  severity="info"
+  title="Title"
+  // onDismiss handler trigger the display of the dismiss button
+  onDismiss={() => console.log("Dismissed")}
+  actionBar={<Button variant="primary" label="Label" />}
+>
+  <p>Structured text but up to you to style it</p>
+</AlertInline>;
+
+<AlertInline
+  severity="info"
+  title="Title"
+  layout="horizontal"
+  onDismiss={() => console.log("Dismissed")}
+  actionBar={
+    <>
+      <Button variant="default" label="Learn more" />
+      <Link isExternal>Link</Link>
+    </>
+  }
+>
+  <p>Structured text but up to you to style it</p>
+</AlertInline>;
+```
+
+## Properties
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+This component use a `div` html tag with the `role=status` and `aria-live="polite"` attribute to announce the alert to screen readers.
+You can switch to a alert by overriding those two properties like this:
+
+```tsx
+<AlertInline
+  role="alert"
+  aria-live="assertive"
+  severity="error"
+  content="Urgent alert"
+/>
+```

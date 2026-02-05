@@ -1,0 +1,98 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./MultiSelect.stories";
+
+<Meta title="Components/MultiSelect" of={Stories} />
+
+# MultiSelect
+
+Multi select elements are UI components that let users choose multiple options from a predefined list. Commonly found in forms, they simplify selection tasks and enhance usability by presenting choices in an organized format and allowing to filter them.
+
+```tsx
+import { Select } from "@qlik/sprout-css-react";
+
+<Select.Multi defaultValue={["red", "orange"]} placeholder="Select a color">
+  {/* This is good to have the empty value as in HTML */}
+  <Select.Option value="" label="--Please choose an option--" />
+  <Select.OptGroup label="Basic Colors">
+    <Select.Option value="red">Red</Select.Option>
+    <Select.Option value="orange">Orange</Select.Option>
+    <Select.Option value="green" disabled>
+      Green
+    </Select.Option>
+  </Select.OptGroup>
+  {/* Divider in case you have multiple groups */}
+  <Select.Divider />
+  <Select.OptGroup label="Cool Colors">
+    <Select.Option value="cyan">Cyan</Select.Option>
+    <Select.Option value="purple">Purple</Select.Option>
+  </Select.OptGroup>
+  {/* Divider in case you have multiple groups */}
+  <Select.Divider />
+  {/* Simple and efficient composition */}
+  <Select.OptGroup label="Deprecated Colors">
+    <Select.Option
+      label="Chartreuse"
+      value="chartreuse"
+      description="nice color btw"
+    />
+    <Select.Option label="Cornsilk" value="cornsilk" />
+    <Select.Option label="Gainsboro" value="pink" />
+  </Select.OptGroup>
+</Select.Multi>;
+```
+
+By default, without `onChange` and `value` you are using the "Uncontrolled" version of the component.
+
+<Canvas of={Stories.UnControlled} />
+<Controls of={Stories.UnControlled} />
+
+## onChange API
+
+We are exposing a type inside SelectProps['ChangeEvent'] that you can use with typescript
+
+```tsx
+onChange: (event: SelectProps['ChangeEvent']) => void;
+```
+
+## Create new option
+
+The following example let the user create a new option using `Select.OptionCreate` component.
+You must add it as the last option of the dropdown, it will appear after typing at least 2 characters.
+Clicking on it both creates and selects the option.
+
+<Canvas of={Stories.CreateOption} />
+
+## Accessibility
+
+Content after refer to the most important part of the following patterns:
+
+- [W3/WAI/ARIA/APG combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/)
+
+HTML structure
+
+- The field state is synchronized in a visually hidden HTML `select` element with the `multiple` attribute set which receive `ref` and `name` attributes.
+- `ComboboxEditable` use a input type text with the role `combobox`.
+- `ComboboxEditable` manage `aria-expanded` to indicate the state of the popup.
+- `Listbox` has the role `listbox`.
+- `Option` has the role `option`
+- `OptGroup` has the role `group` and contains Option
+- `OptGroup` must at least contains one Option: Dev are responsible for that
+- `OptGroup` is not valid without the `label` props
+- `Option` use a button tag so it rely on `aria-selected` to indicate it's state
+- Multiple `Option` can be selected (implied by the value using a React Context)
+- All `Option` that are not selected but selectable have the `aria-selected` set to false
+
+Keyboard Navigation
+
+- `ComboboxEditable` will keep the focus during the usage of the field.
+- `Tab` will move the focus from/to the combobox or to the next tabbable elements.
+- `Shift + Tab` will move the focus from/to the combobox or to the previous tabbable elements.
+- `Tag` are used to display each selected option. It displays a button to remove it and they are tabbable.
+- `ComboboxEditable` add `aria-activedescendant` attribute to specify which element inside the listbox is in 'hover' state. We will use the 'focus' word here but this is not the case.
+- `ArrowDown`: If the listbox is closed, it opens it with the focus on the first \[selected\] option.
+- `ArrowDown`: If the listbox is opened, moves the "focus" to the next item.
+- `ArrowUp`: If the listbox is opened the "focus" is moved to the previous option.
+- `ArrowDown` and `ArrowUp` make loop over options.
+- `Escape`: Dismisses the listbox.
+- `Enter`: If the combobox is editable and an autocomplete suggestion is focused in the popup, accepts the suggestion reset the filter the accepted value in the combobox.

@@ -1,0 +1,70 @@
+@keyframes sprout-progressbar-keyframes {
+  0% {
+    transform: translateX(var(--progressbar-start));
+  }
+
+  50% {
+    transform: translateX(var(--progressbar-middle));
+  }
+
+  100% {
+    transform: translateX(var(--progressbar-start));
+  }
+}
+
+.progress {
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sprout-common-spacing-s);
+
+  --progressbar-start: -100;
+  --progressbar-middle: 300%;
+}
+
+:dir(rtl) .progress {
+  --progressbar-start: 100;
+  --progressbar-middle: -300%;
+}
+
+.progress.fixed {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+}
+
+.progress.hidden {
+  display: none;
+}
+
+.wrapper {
+  background-color: var(--sprout-overlay-background-color-inverse);
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress .percent {
+  /* stylelint-disable-next-line sprout/no-hardcoded-values */
+  block-size: 5px;
+  background: var(--sprout-brand-primary-color-default);
+  transition: inline-size 200ms ease;
+  overflow: hidden;
+}
+
+.progress .undetermined {
+  position: relative;
+  inline-size: 33%;
+  animation: sprout-progressbar-keyframes 2s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.label {
+  display: flex;
+  inline-size: 100%;
+  align-items: center;
+  justify-content: center;
+  font: var(--sprout-body-font-xs);
+  color: var(--sprout-common-foreground-color-weak);
+}

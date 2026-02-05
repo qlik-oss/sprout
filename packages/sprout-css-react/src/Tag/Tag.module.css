@@ -1,0 +1,101 @@
+.tag {
+  padding: calc(
+    var(--sprout-common-spacing-s) - var(--sprout-common-border-strong-width)
+  );
+}
+
+.tag_text {
+  font: var(--sprout-label-font-s);
+  padding: var(--sprout-common-spacing-s);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.error {
+  border-color: var(--sprout-danger-color-default);
+  color: var(--sprout-danger-color-default);
+}
+
+.info {
+  border-color: var(--sprout-info-color-default);
+  color: var(--sprout-info-color-default);
+}
+
+.warning {
+  border-color: var(--sprout-warning-color-default);
+  color: var(--sprout-warning-color-default);
+}
+
+.success {
+  border-color: var(--sprout-success-color-default);
+  color: var(--sprout-success-color-default);
+}
+
+.tag_small {
+  padding: calc(
+      var(--sprout-common-spacing-xs) - var(--sprout-common-border-strong-width)
+    )
+    calc(
+      var(--sprout-common-spacing-s) - var(--sprout-common-border-strong-width)
+    );
+}
+
+.tag_small > .tag_text {
+  font: var(--sprout-label-font-xs);
+  padding: var(--sprout-common-spacing-xs) var(--sprout-common-spacing-s);
+}
+
+.tags_group {
+  display: flex;
+  gap: var(--sprout-common-spacing-s);
+  flex-wrap: wrap;
+  inline-size: 100%;
+}
+
+.tag_badge {
+  display: flex;
+  padding: 0 var(--sprout-common-spacing-s) 0 0;
+}
+
+.tag_icon {
+  display: flex;
+  padding: 0 0 0 var(--sprout-common-spacing-s);
+}
+
+.interactive {
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+}
+
+.interactive:focus-visible {
+  outline: none;
+}
+
+.interactive:hover > .tag {
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.interactive:active > .tag {
+  background-color: var(--sprout-common-background-color-pressed);
+}
+
+.interactive:focus-visible > .tag {
+  border-color: transparent;
+  background-color: var(--sprout-common-background-color-default);
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) / 2 * -1);
+}
+
+.interactive:disabled > .tag,
+.interactive[aria-disabled] > .tag {
+  cursor: not-allowed;
+  background-color: var(--sprout-common-background-color-disabled);
+  border: var(--sprout-common-border-weak);
+  color: var(--sprout-common-foreground-color-disabled);
+}

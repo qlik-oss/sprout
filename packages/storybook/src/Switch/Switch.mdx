@@ -1,0 +1,59 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Switch.stories";
+
+<Meta title="Components/Switch" of={Stories} />
+
+# Switch
+
+A toggle switch is a user interface component that allows users to turn a setting or feature on or off by toggling between two states. The two states typically represent opposite conditions, such as "on" and "off," "enabled" and "disabled," or "active" and "inactive." The toggle switch visually displays the current state and provides a mechanism for users to change it.
+
+Switch inherits all standard attributes from the native [HTML checkbox input](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/checkbox), excluding `type` (which is always `"checkbox"`) and value.
+
+[Figma Spec](https://www.figma.com/design/HmokLgpDo4ogI5l5hpNApf/Sprout-Core-Components-BETA?node-id=6564-39128&t=TKbA2VvgnYjhH8JQ-4)
+
+## Usage
+
+```tsx
+import { Switch, type SwitchProps } from "@qlik/sprout-css-react";
+
+// Uncontrolled
+<Switch name="field" label="Label" />
+
+// Controlled
+const [checked, setChecked] = useState(false)
+<Switch name="field" label="Label" checked={checked} onChange={() => setChecked(!checked)} />
+```
+
+## Properties
+
+<Canvas of={Stories.Uncontrolled} />
+<Controls of={Stories.Uncontrolled} />
+
+## Accessibility
+
+[W3/WAI/ARIA/APG Switch](https://www.w3.org/WAI/ARIA/apg/patterns/switch/)
+
+HTML Structure
+
+- Switch use `input` tag with type `checkbox`.
+- Switch use span tags to create the knob
+- Switch use `svg` icon for the tick.
+- Switch input has the `role=switch` followed by `checked=true|false` attribute.
+
+Keyboard Navigation
+
+- `Space`: When focus is on the switch, changes the state of the switch.
+- `Enter`: When focus is on the switch, changes the state of the switch.
+
+## Bugs
+
+### Bug1 (2024/10/31)
+
+The lack of borders on the checked state comes from a bug in figma.
+`Slider-foreground` should be on top of `Slider-track` as it is in absolute position.
+
+### Bug2 (2024/10/31)
+
+The `knob` border-color uses a token that has an alpha channel. The transparency happens over the background color of it.
+This is an accepted difference in behavior with Figma.

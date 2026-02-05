@@ -1,0 +1,69 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./sprout-css-modules.stories";
+
+<Meta title="CSS/sprout-css-modules" />
+
+# @qlik/sprout-css-modules
+
+## Introduction
+
+`@qlik/sprout-css-modules` is our main CSS Modules that is framework independant. It's API is taken from tailwindcss and is a great way to use sprout in your application.
+It decrease the size of your bundle as we reuse the same CSS over and over again by just dropping few classes. There are two ways to use it. The first is to use it directly in your framework.
+
+```typescript
+// First usage, framework agnostic
+import sprout from "@qlik/sprout-css-modules";
+
+sprout.classNames("flex, bg-default", "text-default") ===
+  `${sprout.flex} ${sprout.bg_default} ${sprout.text_default}`;
+```
+
+The main function is `classNames` which rely on [classnames](https://www.npmjs.com/package/classnames) with a small difference in it's definition to provide a better experience with sprout.
+
+```typescript
+function classNames(...args: Array<ClassNameArg>): string;
+```
+
+So if you want to use your own className you can do it like this:
+
+```tsx
+import style from "./myComponent.module.css";
+
+classNames("flex", style.my_class, {
+  [style.maybe_class]: condition,
+});
+```
+
+## classNames
+
+The second usage is when you already rely on `@qlik/sprout-css-react` you don't need to add both package as this one re-export `className` function for you.
+
+```tsx
+import { classNames } from "@qlik/sprout-css-react";
+
+function MyComponent() {
+  return (
+    <div className={classNames("flex", "bg-default", "text-default")}>
+      Hello world
+    </div>
+  );
+}
+```
+
+## VSCode snippet
+
+Set up the following snippets to further boost your productivity.
+They provide shorthand replacements for `<Box>` and `getBoxProps`.
+
+```json
+{
+  "className-box": {
+    "prefix": "classNames",
+    "body": [
+      "className={classNames(\"flex\", \"border-box\", \"flex-row\"$1)}"
+    ],
+    "description": "add classNames={classNames(\"flex\", \"flex-row\", \"border-box\"$1)}"
+  }
+}
+```

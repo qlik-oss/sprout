@@ -1,0 +1,153 @@
+{
+  "tokenSet": {
+    "palette/core": "source",
+    "qlik/appearance/core": "source",
+    "qlik/appearance/qlik-light": "source",
+    "qlik/density/comfortable": "source",
+    "qlik/roundness/soft": "source",
+    "qlik/typography/core": "source",
+    "qlik/typography/source-sans": "source",
+    "theming/appearance": "source",
+    "theming/roundness": "source",
+    "theming/sizing": "source",
+    "theming/density": "source",
+    "theming/typography": "source",
+    "semantic/appearance": "enabled",
+    "semantic/roundness": "enabled",
+    "semantic/sizing": "enabled",
+    "semantic/density": "enabled",
+    "semantic/typography": "enabled",
+    "semantic/core": "enabled"
+  },
+  "theme": [
+    {
+      "id": "appearance-qlik-light",
+      "name": "qlik-light",
+      "group": "appearance",
+      "selectedTokenSets": {
+        "palette/core": "source",
+        "qlik/appearance/core": "source",
+        "qlik/appearance/qlik-light": "source",
+        "semantic/appearance": "enabled",
+        "theming/appearance": "source"
+      }
+    },
+    {
+      "id": "appearance-qlik-dark",
+      "name": "qlik-dark",
+      "group": "appearance",
+      "selectedTokenSets": {
+        "palette/core": "source",
+        "qlik/appearance/core": "source",
+        "qlik/appearance/qlik-dark": "source",
+        "semantic/appearance": "enabled",
+        "theming/appearance": "source"
+      }
+    },
+    {
+      "name": "mid-sized",
+      "selectedTokenSets": {
+        "semantic/sizing": "enabled",
+        "theming/sizing": "source"
+      },
+      "group": "sizing"
+    },
+    {
+      "name": "dense",
+      "selectedTokenSets": {
+        "palette/core": "source",
+        "qlik/density/dense": "source",
+        "semantic/density": "enabled",
+        "theming/density": "source"
+      },
+      "group": "density"
+    },
+    {
+      "name": "comfortable",
+      "selectedTokenSets": {
+        "palette/core": "source",
+        "qlik/density/comfortable": "source",
+        "theming/density": "source",
+        "semantic/density": "enabled"
+      },
+      "group": "density"
+    },
+    {
+      "name": "spacious",
+      "selectedTokenSets": {
+        "palette/core": "source",
+        "qlik/density/spacious": "source",
+        "theming/density": "source",
+        "semantic/density": "enabled"
+      },
+      "group": "density"
+    },
+    {
+      "name": "sharp",
+      "selectedTokenSets": {
+        "palette/core": "source",
+        "qlik/density/comfortable": "source",
+        "theming/density": "source",
+        "semantic/density": "source",
+        "qlik/roundness/sharp": "source",
+        "theming/roundness": "source",
+        "semantic/roundness": "enabled"
+      },
+      "group": "roundness"
+    },
+    {
+      "name": "soft",
+      "selectedTokenSets": {
+        "palette/core": "source",
+        "qlik/density/comfortable": "source",
+        "theming/density": "source",
+        "semantic/density": "source",
+        "qlik/roundness/soft": "source",
+        "theming/roundness": "source",
+        "semantic/roundness": "enabled"
+      },
+      "group": "roundness"
+    },
+    {
+      "name": "rounded",
+      "selectedTokenSets": {
+        "palette/core": "source",
+        "qlik/density/comfortable": "source",
+        "theming/density": "source",
+        "semantic/density": "source",
+        "qlik/roundness/rounded": "source",
+        "theming/roundness": "source",
+        "semantic/roundness": "enabled"
+      },
+      "group": "roundness"
+    },
+    {
+      "name": "source-sans",
+      "selectedTokenSets": {
+        "qlik/typography/core": "source",
+        "qlik/typography/source-sans": "source",
+        "theming/typography": "source",
+        "semantic/typography": "enabled"
+      },
+      "group": "typography"
+    },
+    {
+      "name": "inter",
+      "selectedTokenSets": {
+        "qlik/typography/core": "source",
+        "qlik/typography/inter": "source",
+        "theming/typography": "source",
+        "semantic/typography": "enabled"
+      },
+      "group": "typography"
+    },
+    {
+      "name": "core",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "semantic/core": "enabled"
+      },
+      "group": "core"
+    }
+  ]
+}

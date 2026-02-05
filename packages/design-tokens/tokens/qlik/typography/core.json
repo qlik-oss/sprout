@@ -1,0 +1,79 @@
+{
+  "qlik": {
+    "typography": {
+      "line-height": {
+        "heading": {
+          "$type": "lineHeights",
+          "$value": "130%"
+        },
+        "body": {
+          "$type": "lineHeights",
+          "$value": "150%"
+        },
+        "label": {
+          "s": {
+            "$type": "lineHeights",
+            "$value": "16px"
+          },
+          "m": {
+            "$type": "lineHeights",
+            "$value": "20px"
+          },
+          "l": {
+            "$type": "lineHeights",
+            "$value": "24px"
+          }
+        }
+      },
+      "font-size": {
+        "xs": {
+          "$type": "fontSizes",
+          "$value": "12px",
+          "$description": "Extra small font size"
+        },
+        "s": {
+          "$type": "fontSizes",
+          "$value": "14px",
+          "$description": "Small font size."
+        },
+        "m": {
+          "$type": "fontSizes",
+          "$value": "16px",
+          "$description": "Medium font size."
+        },
+        "l": {
+          "$type": "fontSizes",
+          "$value": "20px",
+          "$description": "Large font size."
+        },
+        "xl": {
+          "$type": "fontSizes",
+          "$value": "24px",
+          "$description": "Extra large font size."
+        },
+        "xxl": {
+          "$type": "fontSizes",
+          "$value": "28px",
+          "$description": "XXL font size."
+        },
+        "3xl": {
+          "$type": "fontSizes",
+          "$value": "32px",
+          "$description": "XXXL font size."
+        },
+        "4xl": {
+          "$type": "fontSizes",
+          "$value": "40px",
+          "$description": "XXXXL font size."
+        }
+      },
+      "underline": {
+        "default": {
+          "$type": "textDecoration",
+          "$value": "underline",
+          "$description": "Low level token for underline text decoration"
+        }
+      }
+    }
+  }
+}

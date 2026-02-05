@@ -1,0 +1,138 @@
+/* support dark mode of input */
+[data-qlik-appearance$="dark"] .input {
+  color-scheme: dark;
+}
+
+.field {
+  box-shadow: 0 0 0 0 transparent;
+  background: var(--sprout-input-background-color-default);
+}
+
+.field:hover {
+  border: var(--sprout-common-border-strong);
+}
+
+.field:has(input:read-only) {
+  background: var(--sprout-common-background-color-moderate);
+}
+
+.fieldcontent {
+  display: flex;
+  flex-flow: row;
+  padding-inline: calc(
+      var(--sprout-common-spacing-m) - var(--sprout-common-border-default-width)
+    )
+    var(--sprout-common-spacing-s);
+}
+
+.field.small .fieldcontent {
+  padding-inline: calc(
+      var(--sprout-common-spacing-m) - var(--sprout-common-border-default-width)
+    )
+    var(--sprout-common-spacing-xs);
+}
+
+.field_disabled,
+.field_disabled:hover {
+  background: var(--sprout-common-background-color-disabled);
+  border: var(--sprout-common-border-weak);
+}
+
+.field_error,
+.field_error:hover {
+  border-color: var(--sprout-danger-color-default);
+}
+
+.input:disabled {
+  color: var(--sprout-common-foreground-color-disabled);
+  cursor: not-allowed;
+}
+
+.input::placeholder {
+  color: var(--sprout-common-foreground-color-weak);
+}
+
+.input:disabled::placeholder {
+  color: var(--sprout-common-foreground-color-disabled);
+}
+
+.input[readonly] {
+  color: var(--sprout-common-foreground-color-default);
+}
+
+.input:focus {
+  outline: 0;
+}
+
+.field:has(.input:focus-within),
+.field:has(.input:focus) {
+  z-index: 1;
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) / -2);
+}
+
+/* icon alongside the content */
+.fieldcontent > svg {
+  background: transparent;
+  block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* error icon bring some colors */
+.fieldcontent > svg[data-icon="error"] {
+  color: var(--sprout-danger-color-default);
+  align-self: center;
+  inline-size: var(--sprout-common-sizing-xl);
+  flex-shrink: 0;
+  block-size: var(--sprout-common-sizing-xl);
+  margin-inline-end: var(--sprout-common-spacing-m);
+}
+
+.small .fieldcontent > svg[data-icon="error"] {
+  inline-size: var(--sprout-common-sizing-l);
+  block-size: var(--sprout-common-sizing-l);
+}
+
+/* affix buttons */
+.field > button[data-variant] {
+  border-radius: 0;
+  border-block-start: transparent;
+  border-block-end: transparent;
+}
+
+.field > button[data-variant]:first-child {
+  border-inline-start: transparent;
+  border-start-start-radius: var(--sprout-common-border-radius-pill);
+  border-end-start-radius: var(--sprout-common-border-radius-pill);
+  margin-inline-start: var(--sprout-common-border-default-width);
+}
+
+.field > button[data-variant]:last-child {
+  border-inline-end: transparent;
+  border-start-end-radius: var(--sprout-common-border-radius-pill);
+  border-end-end-radius: var(--sprout-common-border-radius-pill);
+  margin-inline-end: var(--sprout-common-border-default-width);
+}
+
+/* duplicate the wrapper class to increase the weight of the css selector to override the button one */
+.field.field > button[data-variant]:focus-visible {
+  outline-offset: 0;
+}
+
+.field.small > span {
+  font: var(--sprout-label-font-xs);
+}
+
+.field:has(.input:placeholder-shown)
+  > button[data-feature="input-search-clear"] {
+  visibility: hidden;
+}
+
+/* Only unsets for Chromium */
+.input::-webkit-calendar-picker-indicator {
+  padding: unset;
+  margin: unset;
+  color: inherit;
+}

@@ -1,0 +1,32 @@
+{
+  "tokenSetOrder": [
+    "palette/core",
+    "qlik/appearance/core",
+    "qlik/appearance/qlik-dark",
+    "qlik/appearance/qlik-light",
+    "qlik/density/comfortable",
+    "qlik/density/dense",
+    "qlik/density/spacious",
+    "qlik/roundness/rounded",
+    "qlik/roundness/sharp",
+    "qlik/roundness/soft",
+    "qlik/typography/core",
+    "qlik/typography/inter",
+    "qlik/typography/pseudo",
+    "qlik/typography/source-sans",
+    "theming/appearance",
+    "theming/density",
+    "theming/roundness",
+    "theming/sizing",
+    "theming/typography",
+    "semantic/appearance",
+    "semantic/core",
+    "semantic/density",
+    "semantic/roundness",
+    "semantic/sizing",
+    "semantic/typography",
+    "figma/appearance",
+    "figma/typography/inter",
+    "figma/typography/source-sans"
+  ]
+}

@@ -1,0 +1,172 @@
+.modal__backdrop::before,
+.modal__backdrop {
+  position: fixed;
+  inset: 0;
+}
+
+.modal__backdrop::before {
+  content: "";
+
+  /* token contains opacity using alpha channel; */
+  background-color: var(--sprout-curtain-background-color-default);
+}
+
+.modal__backdrop {
+  /* z-index should be synced with FloatingPrimitive.tsx */
+  z-index: var(--sprout-container-layer-overlay, 1300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  outline: none;
+
+  /* z-index should be synced with FloatingPrimitive.tsx */
+  z-index: var(--sprout-container-layer-overlay, 1300);
+  position: fixed;
+  min-inline-size: min(var(--sprout-container-sizing-s), 100%);
+  max-inline-size: 95%;
+  max-block-size: 80%;
+  box-shadow: var(--sprout-common-elevation-moderate);
+  border-radius: var(--sprout-common-border-radius-subtle);
+  background: var(--sprout-common-background-color-default);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal > :first-child {
+  overflow: hidden;
+}
+
+/* Size (deprecated) */
+.modal[data-size] {
+  max-inline-size: unset;
+}
+
+.modal[data-size="s"] {
+  inline-size: var(--sprout-container-sizing-s);
+}
+
+.modal[data-size="m"] {
+  inline-size: var(--sprout-container-sizing-m);
+}
+
+.modal[data-size="l"] {
+  inline-size: var(--sprout-container-sizing-l);
+}
+
+.modal[data-size="xl"] {
+  inline-size: var(--sprout-container-sizing-xl);
+}
+
+.modal[data-size="xxl"] {
+  inline-size: var(--sprout-container-sizing-xxl);
+}
+
+.modal[data-size="3xl"] {
+  inline-size: var(--sprout-container-sizing-3xl);
+}
+
+.modal[data-size="full"] {
+  inline-size: 100%;
+  max-block-size: unset;
+  block-size: 100vh;
+}
+
+.modal[data-size="full"] .modal_body {
+  flex-grow: 1;
+  padding: 0;
+}
+
+.modal[data-size="full-with-margin"] {
+  inline-size: calc(100% - var(--sprout-common-spacing-3xl) * 2);
+  max-block-size: unset;
+  block-size: calc(100vh - var(--sprout-common-spacing-3xl) * 2);
+}
+
+.modal[data-size="full-with-margin"] .modal_body {
+  flex-grow: 1;
+}
+
+/* Variant */
+.modal[data-variant] {
+  max-inline-size: unset;
+}
+
+.modal[data-variant="dialog"] {
+  inline-size: var(--sprout-container-sizing-s);
+  max-block-size: min(
+    calc(100vh - var(--sprout-common-spacing-xxl) * 2),
+    var(--sprout-container-sizing-l)
+  );
+}
+
+.modal[data-variant="form"] {
+  inline-size: var(--sprout-container-sizing-l);
+  max-block-size: calc(100vh - var(--sprout-common-spacing-xxl) * 2);
+}
+
+.modal[data-variant="form-wide"] {
+  inline-size: var(--sprout-container-sizing-3xl);
+  max-block-size: calc(100vh - var(--sprout-common-spacing-xxl) * 2);
+}
+
+.modal[data-variant="workflow"] {
+  inline-size: calc(100% - var(--sprout-common-spacing-3xl) * 2);
+  max-block-size: unset;
+  block-size: calc(100vh - var(--sprout-common-spacing-3xl) * 2);
+}
+
+/* Media rules */
+@media screen and (width <= 400px) {
+  .modal {
+    inline-size: 100%;
+    max-inline-size: unset;
+    overflow-inline: auto;
+  }
+
+  .modal[data-size],
+  .modal[data-variant] {
+    inline-size: 100%;
+    max-block-size: 100%;
+  }
+}
+
+@media screen and (width <= 512px) {
+  .modal[data-size="m"] {
+    inline-size: 100%;
+    max-block-size: 100%;
+  }
+}
+
+@media screen and (width <= 640px) {
+  .modal[data-size="l"],
+  .modal[data-variant="form"] {
+    inline-size: 100%;
+    max-block-size: 100%;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .modal[data-size="xl"] {
+    inline-size: 100%;
+    max-block-size: 100%;
+  }
+}
+
+@media screen and (width <= 960px) {
+  .modal[data-size="xxl"] {
+    inline-size: 100%;
+    max-block-size: 100%;
+  }
+}
+
+@media screen and (width <= 1024px) {
+  .modal[data-size="3xl"],
+  .modal[data-variant="form-wide"] {
+    inline-size: 100%;
+    max-block-size: 100%;
+  }
+}

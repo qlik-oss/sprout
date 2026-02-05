@@ -1,0 +1,28 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./FieldLabel.stories";
+
+<Meta title="Components/FieldLabel" of={Stories} />
+
+# FieldLabel
+
+FieldLabel is the primary label component for form fields. It renders a semantic `label` element, supports an optional indicator, and can display an information icon next to the text. FieldLabel directly inherits properties from the [HTML label element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label#attributes).
+
+```tsx
+import { FieldLabel, Popover } from "@qlik/sprout-css-react";
+
+<FieldLabel label="Label" optional />
+
+<FieldLabel label="Label" infoIconPopover={<Popover />} />
+```
+
+<Canvas of={Stories.Playground} />
+## Properties for FieldLabel
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+HTML structure
+
+- `FieldLabel` structure use `label` HTML tag.
+- `htmlFor` props is map to label native `for` attribute.

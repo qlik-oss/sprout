@@ -1,0 +1,85 @@
+{
+  "name": "@qlik/sprout-css-hooks",
+  "version": "1.2.1",
+  "homepage": "https://github.com/qlik/sprout#readme",
+  "bugs": {
+    "url": "https://github.com/qlik/sprout/issues"
+  },
+  "repository": "https://github.com/qlik/sprout.git",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js"
+    }
+  },
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib",
+    "src",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig-build.json",
+    "build:watch": "concurrently \"tsc -p tsconfig-build.json --watch\"",
+    "check-types": "tsc -p tsconfig.json --noEmit",
+    "clean": "rimraf playwright-report test-results playwright/.cache lib",
+    "format:check": "prettier --check ./** --ignore-unknown",
+    "format:write": "prettier --write ./** --ignore-unknown",
+    "lint": "eslint . --max-warnings=0",
+    "lint:ci": "eslint . -f json -o eslint-report.json",
+    "release": "release-it --'hooks.after:bump=pnpm run format:write'",
+    "release-pre-alpha": "release-it preRelease=alpha",
+    "start": "pnpm storybook:docs",
+    "storybook:build": "storybook build --docs",
+    "storybook:docs": "storybook dev --docs -p 6008",
+    "pretest": "playwright install --with-deps",
+    "test": "pnpm test:playwright",
+    "test:playwright": "playwright test",
+    "test:ui": "playwright test --ui"
+  },
+  "prettier": "@qlik/prettier-config",
+  "dependencies": {
+    "@qlik/design-tokens": "workspace:*",
+    "@qlik/sprout-css-modules": "workspace:*"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "@faker-js/faker": "^10.2.0",
+    "@playwright/experimental-ct-react": "^1.58.1",
+    "@playwright/test": "^1.58.1",
+    "@qlik/eslint-config": "^1.4.16",
+    "@qlik/prettier-config": "^0.4.33",
+    "@qlik/sprout-css-storybook": "workspace:*",
+    "@qlik/tsconfig": "^0.3.1",
+    "@storybook/addon-docs": "^10.2.6",
+    "@storybook/addon-links": "^10.2.6",
+    "@storybook/addon-themes": "^10.2.6",
+    "@storybook/react": "^10.2.6",
+    "@storybook/react-vite": "^10.2.6",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "@types/node": "^25.1.0",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "axe-core": "^4.11.1",
+    "cpx2": "^8.0.0",
+    "eslint": "^9.39.2",
+    "eslint-plugin-storybook": "^10.2.6",
+    "glob": "^13.0.0",
+    "prettier": "^3.8.1",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "rimraf": "^6.1.2",
+    "storybook": "^10.2.6",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

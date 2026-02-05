@@ -1,0 +1,42 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Avatar.stories";
+
+<Meta title="Components/Avatar" />
+
+# Avatar
+
+Avatars represent a user in the system.
+
+```tsx
+import { Avatar, type AvatarProps } from "@qlik/sprout-css-react";
+
+<Avatar size="s" text="OC" />
+
+<Avatar img={{src: 'http://', alt: 'img title'}} />
+
+<Avtar icon={<MyIcon />}>
+```
+
+## Text
+
+<Canvas of={Stories.TextStory} />
+<Controls of={Stories.TextStory} />
+
+## Icon
+
+<Canvas of={Stories.Icon} />
+<Controls of={Stories.Icon} />
+
+## Image
+
+<Canvas of={Stories.Img} />
+<Controls of={Stories.Img} />
+
+## Accessibility
+
+HTML structure
+
+- The component use a simple `span` tag with the `role="img"` attribute.
+- The `aria-label` property or `aria-labelledby` must be provided for accessibility reason.
+- The `img` property if provided must contains an `alt` attribute for accessibility reason.

@@ -1,0 +1,64 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./ToggleButton.stories";
+
+<Meta title="Components/ToggleButton" of={Stories} />
+
+# ToggleButton
+
+```tsx
+import { ToggleButton } from "@qlik/sprout-css-react";
+
+<ToggleButton label="Label" onChange={(toggled) => {}} />;
+```
+
+<Canvas of={Stories.Playground} />
+
+## asDropdown
+
+You can use the `asDropdown` prop to render the ToggleButton as a dropdown trigger. This is useful when you want the button to open a menu or similar overlay.
+
+```tsx
+<ToggleButton label="Dropdown" asDropdown onChange={() => {}} />
+```
+
+## Properties
+
+ToggleButton inherits all properties from the [HTML button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button).
+
+<Controls of={Stories.Playground} />
+
+## ButtonGroup
+
+This wrapper component for the buttons that turns any number of ToggleButton children into a button group.
+
+```tsx
+<ButtonGroup>
+  {["One", "Two", "Three"].map((label) => (
+    <ToggleButton
+      key={label}
+      label={label}
+      toggled={toggled === label}
+      onChange={() => setToggled(label)}
+    />
+  ))}
+</ButtonGroup>
+```
+
+<Canvas of={Stories.ToggleButtonGroup} />
+
+## Accessibility
+
+[W3/WAI/ARIA/APG Button](https://www.w3.org/WAI/ARIA/apg/patterns/button/)
+
+HTML Structure
+
+- ToggleButton use the native HTML `button` so it has the implicit role `button`.
+- ToggleButton support all props to have an [accessible label](https://www.w3.org/WAI/tutorials/forms/labels/)
+- ToggleButton support `aria-describedby` props.
+- ToggleButton use explicit `disabled` props to show it has unavailable. Question: should we add `aria-disabled`?
+
+Keyboard Navigation
+
+- `Space`: Activates the button.
+- `Enter`: Activates the button.

@@ -1,0 +1,42 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Tag.stories";
+
+<Meta title="Components/Tag" of={Stories} />
+
+# Tag
+
+Tags are clickable items used for actions. They can have different styles depending on the needs.
+To use it you just have to import the Tag component like this:
+
+```tsx
+import {
+  Tag,
+  TagButton,
+  TagLink,
+  type TagProps,
+} from "@qlik/sprout-css-react";
+
+<Tag
+  color="info"
+  text="Tag"
+  size="s"
+  onRemove={() => {}}
+  badge={{ color: "info", type: "number", text: "14" }}
+  icon={<MyIcon />}
+/>;
+```
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## Variants
+
+`TagLink` and `TagButton` are interactive variant of the `Tag`.
+Note `onRemove` and `color` properties are not accepted on these variants.
+
+## Accessibility
+
+- `Tag` is a simple text element so it does not need any special accessibility treatment.
+- `TagLink` is a wrapper of `Tag` using the HTML anchor `a` tag. It does not need any special accessibility treatment.
+- `TagButton` is a wrapper of `Tag` using the HTML `button` tag. It does not need any special accessibility treatment.

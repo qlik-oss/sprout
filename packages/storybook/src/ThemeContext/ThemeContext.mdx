@@ -1,0 +1,21 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./ThemeContext.stories";
+
+<Meta title="Components/ThemeContext" />
+
+# ThemeContext / useTheme
+
+You can read if the current device is touch-enabled by using the `isTouch` property from the context value:
+
+```tsx
+import { useTheme } from "@qlik/sprout-css-react";
+
+const MyComponent = () => {
+  const { isTouch } = useTheme();
+
+  return <div>{isTouch ? "Touch device" : "Non-touch device"}</div>;
+};
+```
+
+<Canvas of={Stories.UseThemeTouch} />

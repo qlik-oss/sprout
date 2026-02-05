@@ -1,0 +1,21 @@
+.opacity_0,
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity_1,
+.opacity-1 {
+  opacity: 1;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.collapse {
+  visibility: collapse;
+}

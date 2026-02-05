@@ -1,0 +1,57 @@
+/**
+ * So we have some trouble to make every usecases works:
+ * - center the text vertically: we have used padding-block-start trick for that
+ * - center the text horizontally depends on if we have one character or more
+ * - make the text truncate when too long
+ * - make the text truncate when the parent container is too small (!OK)
+ */
+.badge {
+  block-size: var(--sprout-common-sizing-xl);
+}
+
+.badge[data-variant="alphanumeric"] {
+  padding: 0 var(--sprout-common-spacing-s) 0 var(--sprout-common-spacing-s);
+  min-inline-size: var(--sprout-common-sizing-xl);
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  justify-content: center;
+  color: var(--sprout-info-color-inverse);
+}
+
+.badge[data-variant="dot"] {
+  block-size: var(--sprout-common-sizing-m);
+  inline-size: var(--sprout-common-sizing-m);
+}
+
+.badge[data-color="info"] {
+  background-color: var(--sprout-info-color-default);
+}
+
+.badge[data-color="danger"] {
+  background-color: var(--sprout-danger-color-default);
+}
+
+.badge[data-color="warning"] {
+  background-color: var(--sprout-warning-color-default);
+}
+
+.badge[data-color="success"] {
+  background-color: var(--sprout-success-color-default);
+}
+
+.badge[data-color="selected"] {
+  background-color: var(--sprout-common-background-color-default);
+  outline: var(--sprout-common-border-default);
+  outline-color: var(--sprout-selected-color-default);
+  outline-offset: calc(var(--sprout-common-border-default-width) * -1);
+  color: var(--sprout-selected-color-default);
+}
+
+.overflow {
+  max-inline-size: 12ch;
+}
+
+.textwrap {
+  /* stylelint-disable-next-line sprout/no-hardcoded-values */
+  padding-block-start: 1px;
+}

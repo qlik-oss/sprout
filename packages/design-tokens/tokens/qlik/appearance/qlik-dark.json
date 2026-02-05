@@ -1,0 +1,724 @@
+{
+  "qlik": {
+    "appearance": {
+      "background-color": {
+        "enabled": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.08"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{palette.grey.100}",
+          "$description": "Default background color for enabled interactive elements"
+        },
+        "hover": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.20"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{palette.grey.100}",
+          "$description": "Hover background color for interactive elements"
+        },
+        "pressed": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.10"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{palette.grey.100}",
+          "$description": "Pressed background color for interactive elements"
+        },
+        "selected": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.10"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{palette.grey.100}",
+          "$description": "Selected background color for interactive elements"
+        },
+        "toggled": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.30"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{palette.grey.100}",
+          "$description": "Background color for toggled state of interactive elements"
+        },
+        "disabled": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.15"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{palette.grey.100}",
+          "$description": "Disabled background color for interactive elements"
+        },
+        "curtain": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.6"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{palette.grey.0}"
+        },
+        "default": {
+          "$type": "color",
+          "$value": "{palette.grey.20}"
+        },
+        "weak": {
+          "$type": "color",
+          "$value": "{palette.grey.15}"
+        },
+        "moderate": {
+          "$type": "color",
+          "$value": "{palette.grey.10}"
+        },
+        "strong": {
+          "$type": "color",
+          "$value": "{palette.grey.5}"
+        },
+        "input": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "lch",
+                "value": "0.06"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{palette.grey.100}",
+          "$description": "Background color for input"
+        },
+        "overlay-inverse": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "lch",
+                "value": "0.08"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{palette.grey.100}"
+        }
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{palette.grey.100}"
+      },
+      "red": {
+        "$type": "color",
+        "$value": "{palette.ruby.300}"
+      },
+      "orange": {
+        "$type": "color",
+        "$value": "{palette.carnelian.400}"
+      },
+      "green": {
+        "$type": "color",
+        "$value": "{palette.emerald.400}"
+      },
+      "blue": {
+        "$type": "color",
+        "$value": "{palette.sapphire.300}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{palette.grey.100}"
+      },
+      "divider": {
+        "$type": "color",
+        "$value": "{palette.grey.100}"
+      },
+      "shadow": {
+        "$type": "color",
+        "$value": "{palette.grey.0}"
+      },
+      "brand-primary": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{qlik.appearance.green}",
+            "$description": "Primary brand color."
+          },
+          "weak": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "space": "srgb",
+                  "value": "0.05"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{qlik.appearance.brand-primary.color.default}"
+          },
+          "hover": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "lighten",
+                  "space": "srgb",
+                  "value": "0.20",
+                  "color": "{sprout.common.foreground-color.default}"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{qlik.appearance.brand-primary.color.default}",
+            "$description": "Primary brand color. (hover)"
+          },
+          "pressed": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "lighten",
+                  "space": "srgb",
+                  "value": "0.3"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{qlik.appearance.brand-primary.color.hover}",
+            "$description": "Primary brand color. (pressed)"
+          },
+          "toggled": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "lighten",
+                  "space": "srgb",
+                  "value": "0.3"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{qlik.appearance.brand-primary.color.pressed}",
+            "$description": "Primary brand color. (toggled)"
+          },
+          "disabled": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "space": "srgb",
+                  "value": "0.15"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{palette.grey.100}",
+            "$description": "Primary brand color. (disabled)"
+          },
+          "focus": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "lighten",
+                  "space": "srgb",
+                  "value": "0.20"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{qlik.appearance.brand-primary.color.default}",
+            "$description": "Primary brand color. (focus)"
+          },
+          "inverse": {
+            "$type": "color",
+            "$value": "{qlik.appearance.background-color.default}",
+            "$description": "Primary brand color. (inverse)"
+          }
+        }
+      },
+      "danger": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{qlik.appearance.red}",
+            "$description": "Danger color."
+          },
+          "weak": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "space": "srgb",
+                  "value": "0.05"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{qlik.appearance.danger.color.default}"
+          },
+          "hover": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "lighten",
+                  "space": "srgb",
+                  "value": "0.20",
+                  "color": "{sprout.common.foreground-color.default}"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{qlik.appearance.danger.color.default}",
+            "$description": "Danger color. (hover)"
+          },
+          "pressed": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "lighten",
+                  "space": "srgb",
+                  "value": "0.3"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{qlik.appearance.danger.color.hover}",
+            "$description": "Danger color. (pressed)"
+          },
+          "toggled": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "lighten",
+                  "space": "srgb",
+                  "value": "0.3"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{qlik.appearance.danger.color.pressed}",
+            "$description": "Danger color. (toggled)"
+          },
+          "disabled": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "space": "srgb",
+                  "value": "0.15"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{palette.grey.100}",
+            "$description": "Danger color. (disabled)"
+          },
+          "focus": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "lighten",
+                  "space": "srgb",
+                  "value": "0.03"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{qlik.appearance.danger.color.default}",
+            "$description": "Danger color. (focus)"
+          },
+          "inverse": {
+            "$type": "color",
+            "$value": "{qlik.appearance.background-color.default}",
+            "$description": "Danger color. (inverse)"
+          }
+        }
+      },
+      "illustration": {
+        "color": {
+          "palette": {
+            "0": {
+              "$type": "color",
+              "$value": "{qlik.appearance.fg}",
+              "$description": "Illustration palette color"
+            },
+            "1": {
+              "$type": "color",
+              "$value": "{palette.grey.80}",
+              "$description": "Illustration palette color"
+            },
+            "2": {
+              "$type": "color",
+              "$value": "{qlik.appearance.green}",
+              "$description": "Illustration palette color"
+            },
+            "3": {
+              "$type": "color",
+              "$value": "{qlik.appearance.red}",
+              "$description": "Illustration palette color"
+            },
+            "4": {
+              "$type": "color",
+              "$value": "{qlik.appearance.blue}",
+              "$description": "Illustration palette color"
+            },
+            "5": {
+              "$type": "color",
+              "$value": "{palette.wine.300}",
+              "$description": "Illustration palette color"
+            },
+            "6": {
+              "$type": "color",
+              "$value": "{palette.carnelian.200}",
+              "$description": "Illustration palette color"
+            }
+          }
+        }
+      },
+      "data": {
+        "color": {
+          "others": {
+            "$type": "color",
+            "$value": "{palette.grey.70}",
+            "$description": "Use for when grouping values into an \"others\" bucket"
+          },
+          "null": {
+            "$type": "color",
+            "$value": "{palette.grey.40}",
+            "$description": "Use to visualize the concept of null"
+          },
+          "support": {
+            "$type": "color",
+            "$value": "{palette.grey.65}"
+          },
+          "support-weak": {
+            "$type": "color",
+            "$value": "{palette.grey.40}"
+          },
+          "categorical": {
+            "0": {
+              "0": {
+                "$type": "color",
+                "$value": "{qlik.appearance.blue}"
+              },
+              "1": {
+                "$type": "color",
+                "$value": "{palette.slate.400}"
+              },
+              "2": {
+                "$type": "color",
+                "$value": "{palette.sapphire.200}"
+              },
+              "3": {
+                "$type": "color",
+                "$value": "{palette.aquamarine.400}"
+              },
+              "4": {
+                "$type": "color",
+                "$value": "{palette.emerald.800}"
+              },
+              "5": {
+                "$type": "color",
+                "$value": "{palette.carnelian.200}"
+              },
+              "6": {
+                "$type": "color",
+                "$value": "{palette.carnelian.100}"
+              },
+              "7": {
+                "$type": "color",
+                "$value": "{palette.wine.800}"
+              },
+              "8": {
+                "$type": "color",
+                "$value": "{palette.ruby.300}"
+              },
+              "9": {
+                "$type": "color",
+                "$value": "{palette.wine.400}"
+              },
+              "10": {
+                "$type": "color",
+                "$value": "{palette.wine.700}"
+              },
+              "11": {
+                "$type": "color",
+                "$value": "{palette.wine.500}"
+              }
+            }
+          },
+          "sequential": {
+            "0": {
+              "0": {
+                "$type": "color",
+                "$value": "{palette.carnelian.100}"
+              },
+              "1": {
+                "$type": "color",
+                "$value": "{palette.carnelian.200}"
+              },
+              "2": {
+                "$type": "color",
+                "$value": "{palette.carnelian.400}"
+              },
+              "3": {
+                "$type": "color",
+                "$value": "{palette.carnelian.600}"
+              },
+              "4": {
+                "$type": "color",
+                "$value": "{palette.carnelian.700}"
+              },
+              "5": {
+                "$type": "color",
+                "$value": "{palette.carnelian.800}"
+              },
+              "6": {
+                "$type": "color",
+                "$value": "{palette.carnelian.900}"
+              },
+              "7": {
+                "$type": "color",
+                "$value": "{palette.carnelian.1000}"
+              }
+            },
+            "1": {
+              "0": {
+                "$type": "color",
+                "$value": "{palette.sapphire.100}"
+              },
+              "1": {
+                "$type": "color",
+                "$value": "{palette.sapphire.200}"
+              },
+              "2": {
+                "$type": "color",
+                "$value": "{palette.sapphire.400}"
+              },
+              "3": {
+                "$type": "color",
+                "$value": "{palette.sapphire.600}"
+              },
+              "4": {
+                "$type": "color",
+                "$value": "{palette.sapphire.700}"
+              },
+              "5": {
+                "$type": "color",
+                "$value": "{palette.sapphire.800}"
+              },
+              "6": {
+                "$type": "color",
+                "$value": "{palette.sapphire.900}"
+              },
+              "7": {
+                "$type": "color",
+                "$value": "{palette.sapphire.1000}"
+              }
+            }
+          },
+          "diverging": {
+            "0": {
+              "0": {
+                "$type": "color",
+                "$value": "{palette.carnelian.400}"
+              },
+              "1": {
+                "$type": "color",
+                "$value": "{palette.carnelian.500}"
+              },
+              "2": {
+                "$type": "color",
+                "$value": "{palette.carnelian.800}"
+              },
+              "3": {
+                "$type": "color",
+                "$value": "{palette.carnelian.900}"
+              },
+              "4": {
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "mix",
+                      "value": ".5",
+                      "space": "srgb",
+                      "color": "{palette.carnelian.1000} "
+                    }
+                  }
+                },
+                "$type": "color",
+                "$value": "{palette.sapphire.1000}"
+              },
+              "5": {
+                "$type": "color",
+                "$value": "{palette.sapphire.800}"
+              },
+              "6": {
+                "$type": "color",
+                "$value": "{palette.sapphire.600}"
+              },
+              "7": {
+                "$type": "color",
+                "$value": "{palette.sapphire.400}"
+              },
+              "8": {
+                "$type": "color",
+                "$value": "{palette.sapphire.200}"
+              }
+            }
+          }
+        }
+      },
+      "alternative": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{palette.grey.55}"
+          }
+        }
+      },
+      "excluded": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{palette.grey.80}"
+          }
+        }
+      },
+      "highlight": {
+        "foreground-color": {
+          "search-result": {
+            "$type": "color",
+            "$value": "{palette.grey.100}",
+            "$description": "Color for foreground of search results"
+          }
+        },
+        "background-color": {
+          "search-result-default": {
+            "$type": "color",
+            "$value": "{palette.sunbeam.800}",
+            "$description": "Background color for search results"
+          },
+          "search-result-active": {
+            "$type": "color",
+            "$value": "{palette.carnelian.600}",
+            "$description": "Background color for active search results"
+          },
+          "marker": {
+            "$type": "color",
+            "$value": "{palette.sunbeam.900}",
+            "$description": "Background color for marker"
+          }
+        }
+      },
+      "divider-color": {
+        "default": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.3",
+                "space": "lch"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{qlik.appearance.divider}"
+        },
+        "weak": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.12",
+                "color": "{sprout.common.background-color.default} "
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{qlik.appearance.divider}"
+        },
+        "moderate": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.30",
+                "color": "{sprout.common.foreground-color.default} "
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{qlik.appearance.divider}"
+        },
+        "strong": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.50",
+                "color": "{sprout.common.foreground-color.default} "
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{qlik.appearance.divider}"
+        },
+        "extra-strong": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "space": "srgb",
+                "value": "0.70",
+                "color": "{sprout.common.foreground-color.default} "
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{qlik.appearance.divider}"
+        }
+      }
+    }
+  }
+}

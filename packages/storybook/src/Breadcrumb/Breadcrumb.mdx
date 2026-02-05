@@ -1,0 +1,67 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Breadcrumb.stories";
+
+<Meta title="Components/Breadcrumb" />
+
+# Breadcrumb
+
+A breadcrumb is a navigational UI for hierarchical content.
+The `Breadcrumb` component extends the native [HTML nav element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav) attributes, so all standard navigation landmark properties are supported.
+
+## Usage
+
+```tsx
+import { Breadcrumb, BreadcrumbItem, Link } from "@qlik/sprout-css-react";
+
+<Breadcrumb
+  items={[
+    {
+      label: "Root",
+      href: "/",
+    },
+    {
+      label: "Folder",
+      href: "/folder",
+    },
+    {
+      label: "Page",
+      href: "/page",
+    },
+  ]}
+/>
+
+// Both examples are equivalent and valid but note that you need
+// to add the `aria-current="page"` attribute on the last link.
+
+<Breadcrumb>
+    <BreadcrumbItem>
+      <Link href="/">Home</Link>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      <Link href="/folder">Folder</Link>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      <Link href="/folder/mypage" aria-current="page">
+        current page
+      </Link>
+    </BreadcrumbItem>
+</Breadcrumb>
+```
+
+## Properties
+
+<Canvas of={Stories.Basic} />
+<Controls of={Stories.Basic} />
+
+## Accessibility
+
+The `composition` API doesn't add the needed attribute to respect the accessibility spec, so please consider that great powers comes with responsibilities.
+
+[W3/WAI/ARIA/APG Breadcrumb](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/)
+
+The current component use the `Link` component so refer to it for the corresponding accessibility questions.
+
+- The set of Links is structured using an ordered list.
+- The Breadcrumb (nav element) is labeled Breadcrumb identifies the structure as a breadcrumb trail and makes it a navigation landmark so that it is easy to locate.
+- The Link to the current page has aria-current set to page. If the element representing the current page is not a link, aria-current is optional.

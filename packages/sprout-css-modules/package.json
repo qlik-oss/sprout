@@ -1,0 +1,76 @@
+{
+  "name": "@qlik/sprout-css-modules",
+  "version": "6.40.0",
+  "description": "Collections of CSS modules ready to be used to implement sprout",
+  "repository": "https://github.com/qlik/sprout.git",
+  "license": "MIT",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./src/sprout.d.ts",
+        "import": "./src/sprout.js",
+        "default": "./src/sprout.js"
+      }
+    }
+  },
+  "module": "src/sprout.js",
+  "types": "src/sprout.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm build:tsc && pnpm build:umd",
+    "build:tsc": "tsc -p tsconfig.npm.json",
+    "build:umd": "vite build",
+    "build:watch": "tsc -p tsconfig.npm.json --watch",
+    "clean": "rimraf dist && rimraf src/{classNames,create-container,media,sprout,width-observer}.{js,js.map,d.ts}",
+    "format:check": "prettier --check ./** --ignore-unknown",
+    "format:write": "prettier --write ./** --ignore-unknown",
+    "lint": "eslint .",
+    "lint:ci": "eslint . -f json -o eslint-report.json && stylelint 'src/**/*.css' -f json -o stylelint-report.json",
+    "lint:css": "stylelint 'src/**/*.css'",
+    "lint:css:fix": "stylelint --fix 'src/**/*.css'",
+    "lint:fix": "eslint . --fix",
+    "playwright:install": "pnpm -w exec playwright install --with-deps",
+    "start": "concurrently \"vite build --watch\" \"vite preview\"",
+    "test": "vitest run",
+    "vitest:ui": "vitest --ui"
+  },
+  "prettier": "@qlik/prettier-config",
+  "dependencies": {
+    "@qlik/design-tokens": "workspace:*",
+    "classnames": "^2.5.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/js": "^9.39.2",
+    "@qlik/eslint-config-sprout": "workspace:*",
+    "@qlik/prettier-config": "^0.4.33",
+    "@qlik/stylelint-config-sprout": "workspace:*",
+    "@qlik/tsconfig": "^0.3.1",
+    "@vitejs/plugin-react": "^5.1.2",
+    "@vitest/browser-playwright": "^4.0.18",
+    "@vitest/ui": "^4.0.18",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.2",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-vitest": "^0.5.4",
+    "jsdom": "^27.0.1",
+    "playwright": "^1.58.1",
+    "prettier": "^3.8.1",
+    "stylelint": "^17.1.0",
+    "stylelint-config-css-modules": "^4.6.0",
+    "stylelint-config-standard": "^40.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-mkcert": "^1.17.9",
+    "vitest": "^4.0.18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

@@ -1,0 +1,32 @@
+.breadcrumb {
+  display: flex;
+  font: var(--sprout-body-font-m);
+}
+
+.breadcrumb .entry {
+  display: flex;
+  align-items: center;
+  max-inline-size: var(--sprout-container-sizing-xs);
+  list-style-type: none;
+}
+
+.breadcrumb .entry__collapsed {
+  flex-shrink: 0;
+}
+
+.breadcrumb .entry .copy {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.breadcrumb .entry + .entry::before {
+  display: inline-block;
+  transform: skew(-15deg);
+  margin: 0 var(--sprout-common-spacing-m);
+  border-inline-end: var(--sprout-common-border-default);
+  border-color: var(--sprout-common-foreground-color-weak);
+  /* stylelint-disable-next-line sprout/no-hardcoded-values */
+  block-size: 10px;
+  content: "";
+}

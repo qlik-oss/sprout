@@ -1,0 +1,47 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Panel.stories";
+
+<Meta title="Components/Panel" of={Stories} />
+
+# Panel
+
+The Panel is a container used to group content or controls in a consistent manner.
+Panels can display various types of information, such as forms, media, lists, or interactive components.
+Panels are used to divide the page into distinct sections, often serving as containers for related elements.
+Panels are attached to an edge of a parent container or viewport.
+
+```tsx
+import { Panel } from "@qlik/sprout-css-react";
+
+// example with Overlay: true | "s" | "m" | "l" | "xl" | "xxl" | "2xl" | "3xl" | "4xl";
+<div className={classNames("flex", "flex_row", "border_box")}>
+  <Panel.Container overlay="l">
+    <div className={classNames("flex", "flex_row", "border_box")}>Content that will be under the panels if overlay value match the size</div>
+    <Panel.Left resizable>
+      My panel as left and resizable
+    </Panel.Left>
+  </Panel.Container>
+</div>
+
+// example without overlay
+<Panel.Container>
+    <Panel.Left>
+    My panel as left
+    </Panel.Left>
+    <div className={classNames("flex", "flex_row", "border_box")}>Content within the space left are inside the Container</div>
+</Panel.Container>
+```
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## API
+
+The `Panel.Container` `overlay` props will move content into the grid.
+
+The `Panel.Container` `children` accept only one `Panel.Left|Right|Top|Bottom` as children. Any overflow is hidden.
+The Panel is considered as a region and it is nice to had an `aria-label` to describe that region.
+
+All Panel support a `resizable` property that control the size of the panel along it's axis.
+`onResize` is provided if you want to make it persistent.

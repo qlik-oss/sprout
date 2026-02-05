@@ -1,0 +1,44 @@
+import { Canvas, Controls, Markdown, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Popover.stories";
+
+<Meta title="Components/Popover" of={Stories} />
+
+# Popover
+
+A popover is a floating container that appears adjacent to a trigger. Commonly used for menus.
+
+```tsx
+import { Popover, type PopoverProps } from "@qlik/sprout-css-react";
+```
+
+<Canvas of={Stories.Playground} />
+
+## API
+
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+[W3/WAI/ARIA/APG Dialog](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
+
+HTML structure
+
+- `Popover` component inject `aria-expanded="true|false"` and `aria-haspopup="dialog"` attributes on the children.
+- `PopoverContent` wrap the content into a `div` with `role="dialog"` and `aria-modal="true"` attributes.
+
+Keyboard navigation
+
+- Focus is given on dialog when it is opened.
+- `Escape`: Closes the dialog if it is opened.
+
+## Breaking changes
+
+### v3.0.0
+
+`Popover` do not inject padding anymore in the content to give a complete controls over it.
+
+```diff
+-      <Popover content={content}>
++      <Popover content={content} p="xl" pb="m">
+```

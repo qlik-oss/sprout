@@ -7,9 +7,9 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "build:npm": "turbo run build:npm",
     "check": "pnpm check-types && pnpm lint && pnpm format:check && pnpm test",
     "check-types": "turbo run check-types",
+    "clean": "turbo run clean && pnpm clean:cache",
     "clean:cache": "rimraf */*/.turbo .turbo */*/node_modules/.cache node_modules/.cache",
     "format:check": "turbo run format:check",
     "format:write": "turbo run format:write",
@@ -17,6 +17,7 @@
     "prepare": "husky",
     "prepare-release": "changeset",
     "publish-packages": "changeset publish",
+    "start:storybook": "pnpm --filter \"@qlik/storybook\" run start",
     "test": "turbo run test"
   },
   "prettier": "@qlik/prettier-config",
@@ -24,6 +25,7 @@
     "@changesets/cli": "^2.29.8",
     "@qlik/prettier-config": "^0.4.33",
     "husky": "^9.1.7",
+    "prettier": "^3.8.1",
     "rimraf": "^6.1.2",
     "turbo": "^2.8.3"
   },
@@ -34,7 +36,9 @@
   "pnpm": {
     "updateConfig": {
       "ignoreDependencies": [
-        "eslint"
+        "eslint",
+        "react",
+        "react-dom"
       ]
     }
   }

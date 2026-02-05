@@ -1,0 +1,20 @@
+import {
+  type Dispatch,
+  type HTMLProps,
+  type SetStateAction,
+  createContext,
+} from "react";
+
+export const MenuContext = createContext<{
+  getItemProps: (userProps?: HTMLProps<HTMLElement>) => Record<string, unknown>;
+  activeIndex: number | null;
+  setActiveIndex: Dispatch<SetStateAction<number | null>>;
+  setHasFocusInside: Dispatch<SetStateAction<boolean>>;
+  isOpen: boolean;
+}>({
+  getItemProps: () => ({}),
+  activeIndex: null,
+  setActiveIndex: () => {},
+  setHasFocusInside: () => {},
+  isOpen: false,
+});

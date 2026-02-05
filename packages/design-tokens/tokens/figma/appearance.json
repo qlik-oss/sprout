@@ -1,0 +1,110 @@
+{
+  "sprout": {
+    "common": {
+      "border": {
+        "default": {
+          "$type": "color",
+          "$value": "{qlik.appearance.border-color.default}",
+          "$description": "Compound token for default border style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a border-color token. "
+        },
+        "weak": {
+          "$type": "color",
+          "$value": "{qlik.appearance.border-color.weak}",
+          "$description": "Compound token for weak border style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a border-color token."
+        },
+        "moderate": {
+          "$type": "color",
+          "$value": "{qlik.appearance.border-color.moderate}",
+          "$description": "Compound token for moderate border style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a border-color token."
+        },
+        "strong": {
+          "$type": "color",
+          "$value": "{qlik.appearance.border-color.strong}",
+          "$description": "Compound token for strong border style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a border-color token."
+        },
+        "extra-strong": {
+          "$type": "color",
+          "$value": "{qlik.appearance.border-color.extra-strong}",
+          "$description": "Compound token for extra strong border style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a border-color token."
+        }
+      },
+      "divider": {
+        "default": {
+          "$type": "color",
+          "$value": "{qlik.appearance.divider-color.default}",
+          "$description": "Compound token for default divider style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a divider-color token. "
+        },
+        "subtle": {
+          "$type": "color",
+          "$value": "{qlik.appearance.divider-color.default}",
+          "$description": "Compound token for subtle divider style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a divider-color token."
+        },
+        "subtle-weak": {
+          "$type": "color",
+          "$value": "{qlik.appearance.divider-color.weak}",
+          "$description": "Compound token for a very subtle divider style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a divider-color token."
+        },
+        "weak": {
+          "$type": "color",
+          "$value": "{qlik.appearance.divider-color.weak}",
+          "$description": "Compound token for weak divider style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a divider-color token."
+        },
+        "moderate": {
+          "$type": "color",
+          "$value": "{qlik.appearance.divider-color.moderate}",
+          "$description": "Compound token for moderate divider style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a divider-color token."
+        },
+        "strong": {
+          "$type": "color",
+          "$value": "{qlik.appearance.divider-color.strong}",
+          "$description": "Compound token for strong divider style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a divider-color token."
+        },
+        "extra-strong": {
+          "$type": "color",
+          "$value": "{qlik.appearance.divider-color.extra-strong}",
+          "$description": "Compound token for extra strong divider style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a divider-color token."
+        }
+      }
+    },
+    "focus": {
+      "border": {
+        "default": {
+          "$type": "color",
+          "$value": "{sprout.focus.color.default}",
+          "$description": "Compound token for focus border style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a border-color token. ALWAYS USE WITH 2PX WIDTH!"
+        }
+      }
+    },
+    "inverse": {
+      "border": {
+        "default": {
+          "$type": "color",
+          "$value": "{sprout.inverse.foreground-color.default}",
+          "$description": "Compound token for inverse border style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a border-color token. ALWAYS USE WITH 1PX WIDTH!"
+        },
+        "weak": {
+          "$type": "color",
+          "$value": "{sprout.inverse.foreground-color.disabled}",
+          "$description": "Compound token for inverse border style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a border-color token. ALWAYS USE WITH 1PX WIDTH!"
+        }
+      }
+    },
+    "selected": {
+      "border": {
+        "default": {
+          "$type": "color",
+          "$value": "{qlik.appearance.green}",
+          "$description": "Compound token for focus border style. Note: Figma doesn't support compound tokens so in figma this token is replaced with a border-color token. ALWAYS USE WITH 2PX WIDTH!"
+        }
+      }
+    },
+    "placeholder": {
+      "border": {
+        "default": {
+          "$type": "color",
+          "$value": "{qlik.appearance.border-color.moderate}"
+        }
+      }
+    }
+  }
+}

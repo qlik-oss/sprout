@@ -1,0 +1,45 @@
+/**
+ * progressive disclosure pattern for the hover effect
+ * accessibility kicks in with focus-visible support
+ * we also need to support devices that do not support hover
+ */
+@media (hover: hover) {
+  .disclosure-target {
+    opacity: 0;
+  }
+
+  .disclosure-trigger:hover .disclosure-target,
+  .disclosure-trigger:focus-visible .disclosure-target,
+  .disclosure-trigger:has(:focus-visible) .disclosure-target {
+    opacity: 1;
+  }
+}
+
+/**
+  * make an element focusable by using either a anchor or a button 
+  */
+.focusable-target {
+  position: relative;
+}
+
+/* ensure children interactive elements receive this to let them on top of the button.item-interactive and let other elements under it */
+.focusable-target button:not(.focusable-trigger),
+.focusable-target a:not(.focusable-trigger),
+.focusable-target input,
+.focusable-target select,
+.focusable-target textarea {
+  z-index: 1;
+}
+
+.focusable-trigger {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  inline-size: 100%;
+  block-size: 100%;
+  background: transparent;
+  border: none;
+}

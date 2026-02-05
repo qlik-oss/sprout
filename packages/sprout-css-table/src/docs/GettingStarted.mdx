@@ -1,0 +1,68 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as ListStories from "./ListTable.stories";
+import * as DataStories from "./DataTable.stories";
+
+<Meta title="Docs/Getting Started" />
+
+# Getting Started
+
+Welcome to the Sprout CSS Table documentation.
+Once your React app is ready, you can add the following dependencies:
+
+## Installation
+
+Install the package using your preferred package manager. For example, if you are using `pnpm`, run:
+
+```bash
+pnpm i @qlik/sprout-css-table
+```
+
+## Importing Components
+
+You can import the components in any `tsx` file like this:
+
+```tsx
+import { Table } from "@qlik/sprout-css-table";
+```
+
+## Define rows
+
+Each row in DataTable and ListTable is an object with key-value pairs that correspond to the column and its value.
+In ListTable and DataTable we named it as `rows`.
+
+```tsx
+type MyObject = {
+  id: number;
+  name: string;
+  description: string;
+};
+
+const rows: MyObject[] = [
+  { id: 1, name: "Qlik Cloud Analytics", description: "Uncover insights" },
+  { id: 2, name: "Qlik Talend Cloud", description: "Deliver trusted data" },
+  { id: 3, name: "Talend Data Fabric", description: "Unify, integrate and govern disparate data environments" },
+  { id: 4, name: "Qlik Sense (on-prem)", description: "Seamless integration of data from multiple systems" },
+  { id: 5, name: "Qlik Replicate", description: "Accelerate data ingestion and streaming" },
+  { id: 6, name: "Qlik Answers", description: "Gen-AI driven answers from unstructured content" },
+];
+```
+
+## Define columns
+
+```tsx
+import { type ColumnDef } from "@qlik/sprout-css-table";
+
+const columns: ColumnDef<MyObject>[] = [
+  { field: "name", headerName: "Product Name", width: 200 },
+  { field: "description", headerName: "Description", width: 300 },
+];
+```
+
+## Render the component
+
+<Canvas of={ListStories.GettingStarted} />
+
+## API
+
+<Controls of={ListStories.Playground} />

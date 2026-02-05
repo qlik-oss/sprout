@@ -1,0 +1,7 @@
+{
+  "extends": "@qlik/tsconfig/react.json",
+  "compilerOptions": {
+    "declaration": true,
+    "noEmit": false
+  },
+}
