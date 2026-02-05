@@ -25,7 +25,6 @@
   "main": "./src/index.mjs",
   "types": "./src/index.d.ts",
   "scripts": {
-    "clean": "echo clean",
     "format:check": "prettier --check ./** --ignore-unknown",
     "format:write": "prettier --write ./** --ignore-unknown",
     "lint": "eslint .",
