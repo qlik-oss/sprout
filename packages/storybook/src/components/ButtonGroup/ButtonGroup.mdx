@@ -1,0 +1,68 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as BtnStories from "../Button/Button.stories";
+import * as InputStories from "../TextField/TextField.stories";
+import * as Stories from "./ButtonGroup.stories";
+
+<Meta title="Components/Trigger/ButtonGroup" of={Stories} />
+
+# ButtonGroup
+
+ButtonGroup is used to group two or more `Button` together.
+
+## Usage
+
+```tsx
+import { Button, ButtonGroup } from "@qlik/sprout-css-react";
+
+<ButtonGroup orientation="horizontal">
+  <Button label="Name" />
+  <Button label="Date" />
+  <Button label="City" />
+  <Button label="Country" />
+</ButtonGroup>;
+```
+
+## Properties
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## SplitButton
+
+<Canvas of={BtnStories.SplitButton} />
+
+```tsx
+import { Button, ButtonGroup, IconButton, Menu } from "@qlik/sprout-css-react";
+import { DropdownArrow } from "@qlik/sprout-icons/react";
+
+<ButtonGroup>
+  <Button label="Label" />
+  <Menu.Trigger
+    placement="bottom-end"
+    menu={
+      <>
+        <Menu.Item label="foo" />
+      </>
+    }
+  >
+    <IconButton variant="primary" aria-label="Select your stuff" icon={<DropdownArrow />} />
+  </Menu.Trigger>
+</ButtonGroup>;
+```
+
+## API
+
+Under the hood `ButtonGroup` change button and div that has border. It let the content set it's own border, it will only change the `border-radius`.
+To make your component works well with it you have only one constraint the border and focus has to be defined at the root html element of the component.
+
+```tsx
+type ButtonGroupProps = HTMLDivProps & {
+  orientation?: "horizontal" | "vertical";
+  fullWidth?: boolean;
+};
+```
+
+## Accessibility
+
+HTML structure: The `ButtonGroup` is a simple `div` element with a role="group" attribute.

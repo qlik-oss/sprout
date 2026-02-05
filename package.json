@@ -17,7 +17,8 @@
     "prepare": "husky",
     "prepare-release": "changeset",
     "publish-packages": "changeset publish",
-    "start:storybook": "pnpm --filter \"@qlik/storybook\" run start",
+    "storybook:build": "pnpm --filter \"@qlik/storybook\" run storybook:build",
+    "storybook:start": "pnpm --filter \"@qlik/storybook\" run storybook:start",
     "test": "turbo run test"
   },
   "prettier": "@qlik/prettier-config",

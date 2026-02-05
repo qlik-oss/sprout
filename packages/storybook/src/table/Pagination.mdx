@@ -1,0 +1,17 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+import * as ListStories from "./ListTable.stories";
+import * as DataStories from "./DataTable.stories";
+
+<Meta title="Table/Docs/Pagination" />
+
+## Pagination
+
+Pagination is a technique used to divide large datasets into smaller, more manageable chunks or pages.
+In the context of the table component, pagination allows users to navigate through large sets of data without overwhelming the interface or causing performance issues.
+
+In the current implementation, pagination is achieved through a combination using infinite scrolling and traditional pagination controls on touch devices, ensuring a smooth user experience across different devices.
+On a touch enabled device, a "Load more" button will appear at the bottom of the table to allow users to load additional rows manually. Otherwise, as the user scrolls down the table, more rows will be automatically loaded when they reach the bottom of the current view.
+
+<Canvas of={ListStories.Pagination} />
+
+<Controls of={ListStories.Pagination} />

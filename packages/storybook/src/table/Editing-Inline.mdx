@@ -1,0 +1,88 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+import * as ListStories from "./ListTable.stories";
+import * as DataStories from "./DataTable.stories";
+
+<Meta title="Table/Docs/Editing/InlineEdit" />
+
+# Editing - InlineEdit
+
+Composition is a powerful concept in software design, allowing developers to build complex systems by combining simpler components. In the context of editing, composition enables the creation of flexible and reusable editing components that can be tailored to specific use cases.
+
+The core set of components of Sprout provides the [InlineEdit](https://effective-chainsaw-mz3je65.pages.github.io/?path=/docs/components-inlineedit--docs) which allows for in-place editing of table cells, providing a seamless user experience.
+
+## Usage
+
+For very simple use cases we expose a simple API to economize on boilerplate.
+
+```tsx
+import { Table, TableInlineEdit } from "@qlik/sprout-css-table";
+
+const TableInlineEditContext = TableInlineEdit.createContext<Person>();
+const InlineEditString = TableInlineEdit.getEditString<Person>(TableInlineEditContext);
+
+const columns: ColumnDef<Person>[] = [
+  {
+    field: "firstName",
+    headerName: "First Name",
+    renderCell: (props) => {
+      return <InlineEditString {...props} />;
+    },
+  },
+  // ... other columns
+];
+
+function MyPersonTable({ data }: { data: Person[] }) {
+  const [rows, setRows] = useState<Person[]>(initialRows as Person[]);
+  const onRowChange = useCallback(
+    (row: Person) => {
+      // this is where you can call POST HTTP api
+      setRows((prevRows) => prevRows.map((r) => (r.uuid === row.uuid ? { ...r, ...row } : r)));
+    },
+    [rows],
+  );
+
+  return (
+    <TableInlineEditContext.Provider
+      value={{
+        onRowChange,
+      }}
+    >
+      <Table variant="data" rows={rows} columns={columns} />
+    </TableInlineEditContext.Provider>
+  );
+}
+```
+
+But in many cases you will need to implement your own custom editing components. In this case you can use the `InlineEdit.Primitive` component to create your own editing components and leverage the [renderCell](?path=/docs/docs-columns-column-definition--docs#rendercell) API.
+
+```tsx
+import { TableCellParams, editUtility } from "@qlik/sprout-css-table";
+
+function InlineEditNumber({ row, colDef, value }: TableCellParams<Person>) {
+  const context = useContext(TableInlineEditContext);
+
+  const field = colDef.field as keyof Person;
+  const [state, setState] = useState<number>(value as number);
+
+  useEffect(() => {
+    setState(value as number);
+  }, [value]);
+
+  return (
+    <div className={classNames("px_s", "border_box", "w_full", "relative")}>
+      <InlineEdit.Primitive
+        view={() => <span className={classNames("text_default", "font_label_s")}>{state}</span>}
+        edit={() => <TextField value={state} type="number" onChange={(e) => setState(parseInt(e.target.value, 10))} />}
+        onCancel={() => {
+          setState(value as number);
+        }}
+        onSave={() => {
+          context.onRowChange(editUtility.getUpdatedRow(row, colDef, state));
+        }}
+      />
+    </div>
+  );
+}
+```
+
+<Canvas of={DataStories.InlineEditTable} />

@@ -1,0 +1,107 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+import * as ListStories from "./ListTable.stories";
+import * as DataStories from "./DataTable.stories";
+
+<Meta title="Table/Docs/Rows/Row actions" />
+
+# Table - Row Actions
+
+## rowActions
+
+The `rowActions` prop allows you to create a menu with actions that can be performed on each row of the table.
+
+```tsx
+import { Table } from "@qlik/sprout-css-table";
+
+return (
+  <Table
+    rowHeight={45}
+    rows={rows}
+    columns={columns}
+    rowActions={(row) => (
+      <>
+        <Menu.Item onClick={(e) => {}}>Edit</Menu.Item>
+        <Menu.Item onClick={(e) => {}}>Delete</Menu.Item>
+      </>
+    )}
+  />
+);
+```
+
+<Canvas of={ListStories.RowActions} />
+
+If you need async processing to build the content of the menu you can manage it easily by providing a loading menu:
+
+```tsx
+
+function LazyMenu({ row }: { row: Entity }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isInView, setIsInView] = useState(false);
+  const [content, setContent] = useState(
+    <>
+      <div className={classNames("flex", "border_box", "p_m")}>
+        <Skeleton variant="text" width={100} height={16} />
+      </div>
+      <div className={classNames("flex", "border_box", "p_m")}>
+        <Skeleton variant="text" width={100} height={16} />
+      </div>
+    </>,
+  );
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsInView(entry.isIntersecting);
+    });
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+  useEffect(() => {
+    if (isInView) {
+      // simulate api call or any asynchreous operation using the row
+      setTimeout(() => {
+        setContent(
+          <>
+            <Menu.Item>Edit {row.name}</Menu.Item>
+            <Menu.Item>Delete {row.name}</Menu.Item>
+          </>,
+        );
+      }, 1000);
+    }
+  }, [isInView]);
+  return <div ref={ref}>{content}</div>;
+}
+// now you can use this component in the rowActions prop
+<Table ... rowActions={(row) => <LazyMenu row={row} />} />
+```
+
+<Canvas of={ListStories.LazyRowActions} />
+
+## onRowClick
+
+The `onRowClick` prop allows you to handle click events on the row. This can be useful for navigating to a detail view or performing an action when a row is clicked.
+
+```tsx
+import { Table } from "@qlik/sprout-css-table";
+import { rows, columns } from "./data";
+
+<Table
+  variant="list"
+  columns={columns}
+  rows={rows}
+  onRowClick={(e, row) => {
+    console.log("Row clicked:", row);
+  }}
+/>;
+```
+
+Note: This is different from the `onCellClick` prop, which allows you to handle click events on individual cells.
+
+Note: You can use the `event` argument and call `preventDefault()`. That will stop the Table from triggering the [row selection](./?path=/docs/docs-rows-row-selection--docs).
+
+```tsx
+// API
+type onRowClick = (event: MouseEvent<HTMLDivElement>, row: ContentType) => void;
+```

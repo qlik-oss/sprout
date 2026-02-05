@@ -3,7 +3,6 @@
   "version": "6.40.0",
   "private": true,
   "scripts": {
-    "build-storybook": "pnpm storybook:build",
     "check-types": "tsc --noEmit -p tsconfig.json",
     "chromatic": "pnpm dlx chromatic",
     "clean": "rimraf storybook-static",
@@ -13,6 +12,7 @@
     "start": "storybook dev",
     "storybook:build": "storybook build",
     "storybook:docs": "storybook dev --docs -p 6008",
+    "storybook:start": "storybook dev",
     "test": "echo no test",
     "test:visual": "playwright test"
   },
