@@ -182,37 +182,37 @@ export const VisualTest: Story = {
           className={classNames("flex", "flex-col", "items-start", "p-s", "gap-s", "border-default", "text-default")}
           style={{ inlineSize: "210px" }}
         >
-          <Link href="#">Without ellipsis if too long you will not see ellipsis</Link>
-          <Link href="#" withEllipsis>
+          <Link href="#/foo">Without ellipsis if too long you will not see ellipsis</Link>
+          <Link href="#/foo" withEllipsis>
             With ellipsis if too long you will see ellipsis
           </Link>
-          <Link href="#" isExternal>
+          <Link href="#/foo" isExternal>
             Without ellipsis and isExternal if too long you will not see ellipsis but the icon
           </Link>
-          <Link href="#" withEllipsis isExternal>
+          <Link href="#/foo" withEllipsis isExternal>
             With ellipsis and isExternal too long you will see ellipsis
           </Link>
           <Tooltip title="Tooltip content" placement="right" initialOpen>
-            <Link href="#">With tooltip</Link>
+            <Link href="#/foo">With tooltip</Link>
           </Tooltip>
           <div className={classNames("p-xl", "border-default", "flex-col")}>
-            <Link href="#">With a Box col</Link>
+            <Link href="#/foo">With a Box col</Link>
           </div>
           <span className={classNames("font-body-s")} style={{ whiteSpace: "nowrap" }}>
             with a{" "}
-            <Link font="body-s" href="#">
+            <Link font="body-s" href="#/foo">
               span
             </Link>
           </span>
           <p className={classNames("font-body-m")}>
             With a{" "}
-            <Link href="#" font="body-m">
+            <Link href="#/foo" font="body-m">
               paragraph
             </Link>
           </p>
           <h2 className={classNames("font-heading-m")}>
             With a{" "}
-            <Link font="heading-m" href="#">
+            <Link font="heading-m" href="#/foo">
               title
             </Link>
           </h2>
@@ -220,7 +220,7 @@ export const VisualTest: Story = {
             <span className={classNames("font-body-m")} style={{ whiteSpace: "nowrap" }}>
               Inline link:{" "}
             </span>
-            <Link href="#" withEllipsis isExternal>
+            <Link href="#/foo" withEllipsis isExternal>
               withEllipsis and isExternal
             </Link>
           </div>
