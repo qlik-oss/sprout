@@ -1,0 +1,72 @@
+import{r as l,j as s}from"./iframe-BQJExRCF.js";import{t as x}from"./sprout-tokens-DrATkuH6.js";import{s as j}from"./sprout-DxA14K3u.js";import{T as k}from"./TanstackTable-Bs1NmEfZ.js";import{T as h}from"./index-DFRbf9nk.js";import{T as E}from"./TextField-C-5GsH-r.js";import{c as o}from"./classNames-B0wfWtWT.js";import"./preload-helper-PPVm8Dsz.js";import"./useI18n-B99T9obj.js";import"./Button-C7-D-GN_.js";import"./icons-CzMI2h-K.js";import"./Button.module-C2ELNEem.js";import"./Badge-B9--3FkB.js";import"./Tooltip-CVFOQrqK.js";import"./sprout-tokens-D9QRO1qB.js";import"./renderOrClone-DAgGzV0n.js";import"./useId-Drz8gmS2.js";import"./ProgressCircular-B4mHH4_Y.js";import"./SortDescending-BWpZ9BF7.js";import"./IconButton-BEI3RZpW.js";import"./Menu-D_upy4ds.js";import"./useControl-XJuj1vyK.js";import"./Divider-Byw016rg.js";import"./list-B1zo5gaH.js";import"./NewTab-BMHt_Vx2.js";import"./Skeleton-C323E7Fo.js";import"./Checkbox-DxL7CNq4.js";import"./useValueControl-CRzMHMlu.js";import"./HelperText-CWubgWiG.js";import"./InfoTooltipPrimitive-BqPdPqRN.js";import"./Info-BfRROe8g.js";import"./List-BPN2kntc.js";import"./useListGesture-B8rp38Ns.js";import"./Popover-CTsqc6Mc.js";import"./Radio-CIqNDp5q.js";import"./Message-C0IrDS9-.js";import"./ProgressBar-LweF-ALg.js";import"./Close-VT6FC74F.js";import"./SeverityIcon-CI0epH8x.js";import"./Error-B95qseKK.js";import"./Warning-BB_ZpJQH.js";import"./Dialog-V0hlaycj.js";import"./InputButton-CeEVJl7G.js";import"./useFieldProps-C0xARZ1e.js";import"./useFieldAriaProps-DaZEG-MV.js";import"./Field-BIldF_Al.js";import"./FieldLabel-BWOyYL3A.js";const Le={title:"CSS/Tokens"};function b(r){const e=r.split("-"),n=e[3];return n==="brand"&&e[4]==="primary"?"brand-primary":n}function L(r){const e=r.split("-");let n=4;b(r)==="brand-primary"&&(n=5);let t=e[n];return t==="foreground"&&e[n+1]==="color"?t="foreground-color":t==="background"&&e[n+1]==="color"?t="background-color":t==="border"&&e[e.length-1]==="width"?t="border-width":t==="border"&&e[e.length-1]==="style"?t="border-style":t==="border"&&e[e.length-1]==="color"?t="border-color":t==="border"&&e[n+1]==="radius"?t="border-radius":t==="divider"&&e[e.length-1]==="width"?t="divider-width":t==="divider"&&e[e.length-1]==="style"?t="divider-style":t==="divider"&&e[e.length-1]==="color"?t="divider-color":t==="font"?e[e.length-1]==="size"?t="font-size":e[e.length-1]==="weight"?t="font-weight":e[e.length-1]==="style"?t="font-style":e[e.length-1]==="familly"?t="font-familly":e.length===5&&(t="font"):(t==="nested"||t==="twice")&&(t="border",e.includes("radius")&&(t="border-radius")),t}function D(){const r=[];return Object.keys(x).filter(Boolean).forEach(e=>{const n=e.replaceAll("_","-");r.push({name:n,defaultVariant:x[e].$value,dimension:x[e].$type,semantic:b(n),usage:L(n)})}),r.sort((e,n)=>e.name.localeCompare(n.name)),r}const g=l.createContext(()=>{});function A({children:r}){const[e,n]=l.useState([]),a=l.useCallback(t=>{const d=Math.random().toString();n(c=>[...c,{"data-id":d,...t}]),setTimeout(()=>{n(c=>c.filter(m=>m["data-id"]!==d))},3e3)},[n]);return s.jsxs(g.Provider,{value:a,children:[r,s.jsx(h.Container,{placement:"bottom",children:e.map((t,d)=>s.jsx(h.Content,{...t,onClose:()=>{n(c=>c.filter(m=>m.id!==t.id))}},d))})]})}function z({children:r,wrap:e}){const n=l.useContext(g),a=(l.Children.toArray(r).join("")||"").toString();return s.jsx("button",{type:"button",onClick:()=>{const t=e==="var"?`var(${a})`:`sprout.${a}`;navigator.clipboard.writeText(t).then(()=>{n({message:"token copied"})}).catch(()=>{n({message:"failed to copy token"})})},className:j.classNames("flex","flex-row","ai-start","border-none","font-script-m","bg-transparent","text-default","w-full","overflow-hidden",{"px-m":e==="sprout"}),style:{cursor:"copy",textWrap:"nowrap"},children:s.jsx("span",{style:{color:"var(--sprout-script-color-string)"},children:a})})}const u=D(),v=u.reduce((r,e)=>(r.includes(e.dimension)||r.push(e.dimension),r),[]);v.sort();const N=u.reduce((r,e)=>(r.includes(e.semantic)||r.push(e.semantic),r),[]);N.sort();const w=u.reduce((r,e)=>(r.includes(e.usage)||r.push(e.usage),r),[]);w.sort();function O({colDef:r,row:e}){const n=r.field;return n?s.jsx(z,{wrap:"var",children:e[n]}):null}function _({colDef:r,row:e}){const n=l.useRef(null),[a,t]=l.useState(r.field?e[r.field]:"");return l.useEffect(()=>{n.current&&t(getComputedStyle(n.current).getPropertyValue(n.current.dataset.key||"color"))},[]),e.usage==="border"?s.jsx("div",{className:o("flex","flex-row","border-box","items-center","bg-default","p-s","h-full"),children:s.jsx("div",{className:o("flex","flex-row","border-box"),style:{border:`var(${e.name})`,inlineSize:"20px",blockSize:"20px"}})}):e.usage==="divider"?s.jsx("div",{className:o("flex","flex-row","border-box","items-center","bg-default","p-s","h-full"),children:s.jsx("div",{className:o("flex","flex-row","border-box"),style:{borderBlockStart:`var(${e.name})`,inlineSize:"100px",blockSize:"2px"}})}):e.usage==="foreground-color"?s.jsx("div",{className:o("flex","flex-row","border-box","items-center","p-s","h-full","w-full",{"bg-default":e.semantic!=="inverse","bg-inverse":e.semantic==="inverse"}),children:s.jsx("div",{className:o("flex","flex-row","border-box","font-label-s","radius-round"),ref:n,"data-key":"color",style:{color:`var(${e.name})`},children:a})}):["background-color","color","border-color","divider-color"].includes(e.usage)?s.jsxs("div",{className:o("flex","flex-row","border-box","items-center","p-s","gap-s","size-full","font-label-s",{"bg-default":e.semantic!=="inverse","bg-inverse":e.semantic==="inverse","text-inverse":e.semantic==="inverse","text-default":e.semantic!=="inverse"}),children:[s.jsx("div",{className:o("flex","flex-row","border-box","radius-round","border-default"),ref:n,"data-key":"background-color",style:{backgroundColor:`var(${e.name})`,inlineSize:"20px",blockSize:"20px"}}),a]}):e.usage==="elevation"?s.jsx("div",{className:o("flex","flex-row","border-box","items-center","h-full",{"bg-inverse":e.semantic==="inverse","bg-default":e.semantic!=="inverse"}),children:s.jsx("div",{className:o("flex","flex-row","border-box","items-center","justify-center","radius-subtle","w-fit","bg-default","font-label-xs"),style:{boxShadow:`var(${e.name})`,blockSize:"var(--sprout-common-sizing-xl)",whiteSpace:"nowrap"},children:r.field?e[r.field]:null})}):e.dimension==="typography"&&e.usage==="font"?s.jsx("div",{className:o("flex","flex-row","border-box","items-center","p-s","h-full",{"bg-inverse":e.semantic==="inverse","bg-default":e.semantic!=="inverse"}),children:s.jsx("div",{className:o("flex","flex-row","border-box","items-center","justify-center","radius-subtle","bg-default","text-nowrap","w-fit"),style:{font:`var(${e.name})`},children:r.field?e[r.field]:null})}):s.jsx("div",{className:o("flex","flex-row","border-box","items-center","h-full"),children:r.field?e[r.field]:null})}const R=[{field:"name",headerName:"Name",renderCell:O,flex:1},{field:"defaultVariant",headerName:"Default Variant",renderCell:_,width:300},{field:"dimension",headerName:"Dimension",width:128},{field:"semantic",headerName:"Semantic",width:128},{field:"usage",headerName:"Usage",width:128}],f={name:"All Tokens",render:({name:r,dimension:e,semantic:n,usage:a})=>{const[t,d]=l.useState(u),[c,m]=l.useState("");l.useEffect(()=>{d(u.filter(i=>{const p=i.name.toLowerCase().includes((r||"").toLowerCase()),T=!e||i.dimension.toLowerCase()===(e||"").toLowerCase(),y=!n||i.semantic.toLowerCase()===(n||"").toLowerCase(),C=!a||i.usage.toLowerCase()===(a||"").toLowerCase();return p&&T&&y&&C}))},[r,e,n,a]);const S=l.useMemo(()=>t.filter(i=>[i.name,i.usage,i.dimension,i.semantic,i.defaultVariant].some(p=>p?.toLowerCase().includes(c.toLowerCase()))),[t,c]);return s.jsx(A,{children:s.jsx("div",{className:o("flex","flex-col","border-box","h-screen","overflow-hidden","p-l"),children:s.jsxs("div",{className:o("flex","flex-col","gap-m","border-box","size-full"),children:[s.jsx("div",{className:o("flex","items-center","w-s"),children:s.jsx(E,{value:c,type:"search",placeholder:"Search all tokens",onChange:i=>{m(i.target.value||"")}})}),s.jsx("div",{className:o("flex-auto","min-h-0","w-full"),children:s.jsx(k,{variant:"data",columns:R,rowHeight:40,rows:S})})]})})})},argTypes:{name:{control:{type:"text"}},dimension:{control:{type:"select"},options:[""].concat(v)},semantic:{control:{type:"select"},options:[""].concat(N)},usage:{control:{type:"select"},options:[""].concat(w)}},parameters:{layout:"fullscreen",chromatic:{disableSnapshot:!0}}};f.parameters={...f.parameters,docs:{...f.parameters?.docs,source:{originalSource:`{
+  name: "All Tokens",
+  render: ({
+    name,
+    dimension,
+    semantic,
+    usage
+  }: {
+    name?: string;
+    dimension?: string;
+    semantic?: string;
+    usage?: string;
+  }) => {
+    const [rowData, setRowData] = useState(TOKEN_DATA);
+    const [searchTerm, setSearchTerm] = useState("");
+    useEffect(() => {
+      setRowData(TOKEN_DATA.filter(token => {
+        const matchName = token.name.toLowerCase().includes((name || "").toLowerCase());
+        const matchDimension = !dimension || token.dimension.toLowerCase() === (dimension || "").toLowerCase();
+        const matchSemantic = !semantic || token.semantic.toLowerCase() === (semantic || "").toLowerCase();
+        const matchUsage = !usage || token.usage.toLowerCase() === (usage || "").toLowerCase();
+        return matchName && matchDimension && matchSemantic && matchUsage;
+      }));
+    }, [name, dimension, semantic, usage]);
+    const filteredRows = useMemo(() => rowData.filter(row => [row.name, row.usage, row.dimension, row.semantic, row.defaultVariant].some(v => v?.toLowerCase().includes(searchTerm.toLowerCase()))), [rowData, searchTerm]);
+    return <ToastContainerStory>
+        <div className={classNames("flex", "flex-col", "border-box", "h-screen", "overflow-hidden", "p-l")}>
+          <div className={classNames("flex", "flex-col", "gap-m", "border-box", "size-full")}>
+            <div className={classNames("flex", "items-center", "w-s")}>
+              <TextField value={searchTerm} type="search" placeholder="Search all tokens" onChange={e => {
+              setSearchTerm(e.target.value || "");
+            }} />
+            </div>
+            <div className={classNames("flex-auto", "min-h-0", "w-full")}>
+              <Table variant="data" columns={colDef} rowHeight={40} rows={filteredRows} />
+            </div>
+          </div>
+        </div>
+      </ToastContainerStory>;
+  },
+  argTypes: {
+    name: {
+      control: {
+        type: "text"
+      }
+    },
+    dimension: {
+      control: {
+        type: "select"
+      },
+      options: [""].concat(TOKEN_DIMENSIONS)
+    },
+    semantic: {
+      control: {
+        type: "select"
+      },
+      options: [""].concat(TOKEN_SEMANTICS)
+    },
+    usage: {
+      control: {
+        type: "select"
+      },
+      options: [""].concat(TOKEN_USAGES)
+    }
+  },
+  parameters: {
+    layout: "fullscreen",
+    chromatic: {
+      disableSnapshot: true
+    }
+  }
+}`,...f.parameters?.docs?.source}}};const De=["DataTable"];export{f as DataTable,De as __namedExportsOrder,Le as default};

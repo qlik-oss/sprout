@@ -1,0 +1,11 @@
+import{j as o}from"./iframe-BQJExRCF.js";import{c as i}from"./Modal.argTypes-L03BYPI-.js";import{M as t}from"./Modal-BcMqdrC6.js";import{c as p}from"./classNames-B0wfWtWT.js";import"./preload-helper-PPVm8Dsz.js";import"./Field.argTypes-1rEre7SB.js";import"./Icons-D8r5JLXA.js";import"./Add-CPO6AOva.js";import"./AiSparkles-ybqQooZU.js";import"./Next-BCf902gw.js";import"./Bookmark-DEDDSCCD.js";import"./Upload-JDlmgr1C.js";import"./Text-fjMciMda.js";import"./Close-VT6FC74F.js";import"./SortDescending-BWpZ9BF7.js";import"./Undo-B1PPlUQq.js";import"./Person-8oMSnh08.js";import"./Copy-ERSXBUQF.js";import"./Delete-CrLV--N3.js";import"./Filter-bb23MOEL.js";import"./Edit-Bc7r3LZJ.js";import"./Error-B95qseKK.js";import"./History-BSF-XiSG.js";import"./Search-B3R4dCNd.js";import"./Info-BfRROe8g.js";import"./Subtract-Ca-OouU7.js";import"./Map-pFYOI1fT.js";import"./NewTab-BMHt_Vx2.js";import"./Notification-BlWUDy4b.js";import"./Paste-Cd-nv27Q.js";import"./Warning-BB_ZpJQH.js";import"./Tenant-I_uTRlDg.js";import"./Tooltip-CVFOQrqK.js";import"./sprout-tokens-D9QRO1qB.js";import"./renderOrClone-DAgGzV0n.js";import"./useId-Drz8gmS2.js";import"./sprout-DxA14K3u.js";import"./useI18n-B99T9obj.js";import"./Button-C7-D-GN_.js";import"./icons-CzMI2h-K.js";import"./Button.module-C2ELNEem.js";import"./Badge-B9--3FkB.js";import"./ProgressCircular-B4mHH4_Y.js";import"./InfoTooltipPrimitive-BqPdPqRN.js";import"./IconButton-BEI3RZpW.js";import"./useHasOverflow-o-wZv5E2.js";import"./Divider-Byw016rg.js";import"./Dialog-V0hlaycj.js";import"./useControl-XJuj1vyK.js";const or={title:"Components/Modal/Composition/Header",component:t.Header},r={render:e=>o.jsx("div",{className:p("max-w-3xl"),children:o.jsx(t.Header,{...e})}),args:{children:"Modal Header",description:"This is a description for the modal header",preventClose:!1},argTypes:i};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
+  render: props => <div className={classNames("max-w-3xl")}>
+      <Modal.Header {...props} />
+    </div>,
+  args: {
+    children: "Modal Header",
+    description: "This is a description for the modal header",
+    preventClose: false
+  },
+  argTypes: ModalHeaderArgTypes
+}`,...r.parameters?.docs?.source}}};const tr=["Header"];export{r as Header,tr as __namedExportsOrder,or as default};
