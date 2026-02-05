@@ -24,14 +24,14 @@ export function CellContent({ variant, children, ellipsis, lines, className: cla
         "text-default",
         "justify-start",
         "w-full",
-        "border_box",
+        "border-box",
         "overflow-hidden",
         classNameProp || "",
         {
           [styles.cell_content]: true,
-          j_start: variant !== "number",
-          font_label_s: variant !== "number",
-          j_end: variant === "number",
+          "justify-start": variant !== "number",
+          "font-label-s": variant !== "number",
+          "justify-end": variant === "number",
         },
       )}
       data-variant={variant}
@@ -41,7 +41,7 @@ export function CellContent({ variant, children, ellipsis, lines, className: cla
       <div
         data-layoutid="frame-98"
         className={classNames("h-full", "overflow-hidden", {
-          ellipsis: !!ellipsis,
+          truncate: !!ellipsis,
         })}
         style={
           lines

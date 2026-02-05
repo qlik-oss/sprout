@@ -14,6 +14,9 @@ importers:
       '@qlik/prettier-config':
         specifier: ^0.4.33
         version: 0.4.33(prettier@3.8.1)(svelte@4.2.18)(typescript@5.9.3)
+      concurrently:
+        specifier: ^9.2.1
+        version: 9.2.1
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -32,12 +35,12 @@ importers:
       '@qlik/sprout-css-modules':
         specifier: workspace:*
         version: link:../sprout-css-modules
-      '@qlik/sprout-react':
-        specifier: workspace:*
-        version: link:../sprout-react
       '@qlik/sprout-icons':
         specifier: workspace:*
         version: link:../sprout-icons
+      '@qlik/sprout-react':
+        specifier: workspace:*
+        version: link:../sprout-react
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -81,79 +84,6 @@ importers:
       vitest:
         specifier: ^4.0.16
         version: 4.0.18(@types/node@25.2.0)(@vitest/browser-playwright@4.0.18)(@vitest/ui@4.0.18)(jiti@2.6.1)(jsdom@27.0.1)
-
-  packages/sprout-hooks:
-    dependencies:
-      '@qlik/design-tokens':
-        specifier: workspace:*
-        version: link:../design-tokens
-      '@qlik/sprout-css-modules':
-        specifier: workspace:*
-        version: link:../sprout-css-modules
-    devDependencies:
-      '@axe-core/playwright':
-        specifier: ^4.11.0
-        version: 4.11.0(playwright-core@1.58.1)
-      '@faker-js/faker':
-        specifier: ^10.2.0
-        version: 10.2.0
-      '@playwright/experimental-ct-react':
-        specifier: ^1.58.1
-        version: 1.58.1(@types/node@25.2.0)(jiti@2.6.1)(vite@7.3.1(@types/node@25.2.0)(jiti@2.6.1))
-      '@playwright/test':
-        specifier: ^1.58.1
-        version: 1.58.1
-      '@qlik/eslint-config':
-        specifier: ^1.4.16
-        version: 1.4.16(@typescript-eslint/eslint-plugin@8.54.0(@typescript-eslint/parser@8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(svelte@4.2.18)(typescript@5.9.3)(vitest@4.0.18)
-      '@qlik/prettier-config':
-        specifier: ^0.4.33
-        version: 0.4.33(prettier@3.8.1)(svelte@4.2.18)(typescript@5.9.3)
-      '@qlik/tsconfig':
-        specifier: ^0.3.1
-        version: 0.3.1
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: ^6.0.2
-        version: 6.0.2(@vue/compiler-sfc@3.5.27)(prettier-plugin-svelte@3.4.1(prettier@3.8.1)(svelte@4.2.18))(prettier@3.8.1)(svelte@4.2.18)
-      '@types/node':
-        specifier: ^25.1.0
-        version: 25.2.0
-      '@types/react':
-        specifier: ^19.2.10
-        version: 19.2.11
-      '@types/react-dom':
-        specifier: ^19.2.3
-        version: 19.2.3(@types/react@19.2.11)
-      axe-core:
-        specifier: ^4.11.1
-        version: 4.11.1
-      cpx2:
-        specifier: ^8.0.0
-        version: 8.0.0
-      eslint:
-        specifier: ^9.39.2
-        version: 9.39.2(jiti@2.6.1)
-      eslint-plugin-storybook:
-        specifier: ^10.2.6
-        version: 10.2.6(eslint@9.39.2(jiti@2.6.1))(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3)
-      glob:
-        specifier: ^13.0.0
-        version: 13.0.0
-      prettier:
-        specifier: ^3.8.1
-        version: 3.8.1
-      react:
-        specifier: ^18.3.0
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.0
-        version: 18.3.1(react@18.3.1)
-      rimraf:
-        specifier: ^6.1.2
-        version: 6.1.2
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
 
   packages/sprout-css-modules:
     dependencies:
@@ -237,6 +167,124 @@ importers:
         specifier: ^4.0.18
         version: 4.0.18(@types/node@25.2.0)(@vitest/browser-playwright@4.0.18)(@vitest/ui@4.0.18)(jiti@2.6.1)(jsdom@27.0.1)
 
+  packages/sprout-hooks:
+    dependencies:
+      '@qlik/design-tokens':
+        specifier: workspace:*
+        version: link:../design-tokens
+      '@qlik/sprout-css-modules':
+        specifier: workspace:*
+        version: link:../sprout-css-modules
+    devDependencies:
+      '@axe-core/playwright':
+        specifier: ^4.11.0
+        version: 4.11.0(playwright-core@1.58.1)
+      '@faker-js/faker':
+        specifier: ^10.2.0
+        version: 10.2.0
+      '@playwright/experimental-ct-react':
+        specifier: ^1.58.1
+        version: 1.58.1(@types/node@25.2.0)(jiti@2.6.1)(vite@7.3.1(@types/node@25.2.0)(jiti@2.6.1))
+      '@playwright/test':
+        specifier: ^1.58.1
+        version: 1.58.1
+      '@qlik/eslint-config':
+        specifier: ^1.4.16
+        version: 1.4.16(@typescript-eslint/eslint-plugin@8.54.0(@typescript-eslint/parser@8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(svelte@4.2.18)(typescript@5.9.3)(vitest@4.0.18)
+      '@qlik/prettier-config':
+        specifier: ^0.4.33
+        version: 0.4.33(prettier@3.8.1)(svelte@4.2.18)(typescript@5.9.3)
+      '@qlik/tsconfig':
+        specifier: ^0.3.1
+        version: 0.3.1
+      '@trivago/prettier-plugin-sort-imports':
+        specifier: ^6.0.2
+        version: 6.0.2(@vue/compiler-sfc@3.5.27)(prettier-plugin-svelte@3.4.1(prettier@3.8.1)(svelte@4.2.18))(prettier@3.8.1)(svelte@4.2.18)
+      '@types/node':
+        specifier: ^25.1.0
+        version: 25.2.0
+      '@types/react':
+        specifier: ^19.2.10
+        version: 19.2.11
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.11)
+      axe-core:
+        specifier: ^4.11.1
+        version: 4.11.1
+      cpx2:
+        specifier: ^8.0.0
+        version: 8.0.0
+      eslint:
+        specifier: ^9.39.2
+        version: 9.39.2(jiti@2.6.1)
+      eslint-plugin-storybook:
+        specifier: ^10.2.6
+        version: 10.2.6(eslint@9.39.2(jiti@2.6.1))(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3)
+      glob:
+        specifier: ^13.0.0
+        version: 13.0.0
+      prettier:
+        specifier: ^3.8.1
+        version: 3.8.1
+      react:
+        specifier: ^18.3.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.0
+        version: 18.3.1(react@18.3.1)
+      rimraf:
+        specifier: ^6.1.2
+        version: 6.1.2
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  packages/sprout-icons:
+    devDependencies:
+      '@svgr/core':
+        specifier: ^8.1.0
+        version: 8.1.0(typescript@5.9.3)
+      '@svgr/plugin-jsx':
+        specifier: ^8.1.0
+        version: 8.1.0(@svgr/core@8.1.0(typescript@5.9.3))
+      '@swc/core':
+        specifier: ^1.15.11
+        version: 1.15.11
+      '@types/react':
+        specifier: ^19.2.10
+        version: 19.2.11
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.11)
+      '@vue/compiler-dom':
+        specifier: ^3.5.27
+        version: 3.5.27
+      '@xmldom/xmldom':
+        specifier: ^0.9.8
+        version: 0.9.8
+      camelcase:
+        specifier: ^9.0.0
+        version: 9.0.0
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      rimraf:
+        specifier: ^6.1.2
+        version: 6.1.2
+      svgo:
+        specifier: ^4.0.0
+        version: 4.0.0
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+      vue:
+        specifier: ^3.5.27
+        version: 3.5.27(typescript@5.9.3)
+
   packages/sprout-react:
     dependencies:
       '@floating-ui/react':
@@ -245,12 +293,12 @@ importers:
       '@qlik/design-tokens':
         specifier: workspace:*
         version: link:../design-tokens
-      '@qlik/sprout-hooks':
-        specifier: workspace:*
-        version: link:../sprout-hooks
       '@qlik/sprout-css-modules':
         specifier: workspace:*
         version: link:../sprout-css-modules
+      '@qlik/sprout-hooks':
+        specifier: workspace:*
+        version: link:../sprout-hooks
       '@qlik/sprout-icons':
         specifier: workspace:*
         version: link:../sprout-icons
@@ -360,12 +408,12 @@ importers:
       '@qlik/sprout-hooks':
         specifier: workspace:*
         version: link:../sprout-hooks
-      '@qlik/sprout-react':
-        specifier: workspace:*
-        version: link:../sprout-react
       '@qlik/sprout-icons':
         specifier: workspace:*
         version: link:../sprout-icons
+      '@qlik/sprout-react':
+        specifier: workspace:*
+        version: link:../sprout-react
       '@tanstack/react-table':
         specifier: ^8.21.3
         version: 8.21.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -479,51 +527,6 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  packages/sprout-icons:
-    devDependencies:
-      '@svgr/core':
-        specifier: ^8.1.0
-        version: 8.1.0(typescript@5.9.3)
-      '@svgr/plugin-jsx':
-        specifier: ^8.1.0
-        version: 8.1.0(@svgr/core@8.1.0(typescript@5.9.3))
-      '@swc/core':
-        specifier: ^1.15.11
-        version: 1.15.11
-      '@types/react':
-        specifier: ^19.2.10
-        version: 19.2.11
-      '@types/react-dom':
-        specifier: ^19.2.3
-        version: 19.2.3(@types/react@19.2.11)
-      '@vue/compiler-dom':
-        specifier: ^3.5.27
-        version: 3.5.27
-      '@xmldom/xmldom':
-        specifier: ^0.9.8
-        version: 0.9.8
-      camelcase:
-        specifier: ^9.0.0
-        version: 9.0.0
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-      rimraf:
-        specifier: ^6.1.2
-        version: 6.1.2
-      svgo:
-        specifier: ^4.0.0
-        version: 4.0.0
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
-      vue:
-        specifier: ^3.5.27
-        version: 3.5.27(typescript@5.9.3)
-
   packages/storybook:
     dependencies:
       '@codemirror/lang-sql':
@@ -541,24 +544,24 @@ importers:
       '@qlik/design-tokens':
         specifier: workspace:*
         version: link:../design-tokens
-      '@qlik/sprout-hooks':
-        specifier: workspace:*
-        version: link:../sprout-hooks
       '@qlik/sprout-css-modules':
         specifier: workspace:*
         version: link:../sprout-css-modules
-      '@qlik/sprout-react':
-        specifier: workspace:*
-        version: link:../sprout-react
       '@qlik/sprout-css-storybook':
         specifier: workspace:*
         version: link:../../tools/sprout-css-storybook
-      '@qlik/sprout-table':
+      '@qlik/sprout-hooks':
         specifier: workspace:*
-        version: link:../sprout-table
+        version: link:../sprout-hooks
       '@qlik/sprout-icons':
         specifier: workspace:*
         version: link:../sprout-icons
+      '@qlik/sprout-react':
+        specifier: workspace:*
+        version: link:../sprout-react
+      '@qlik/sprout-table':
+        specifier: workspace:*
+        version: link:../sprout-table
       '@tanstack/react-virtual':
         specifier: ^3.13.18
         version: 3.13.18(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
