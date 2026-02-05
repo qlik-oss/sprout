@@ -4,10 +4,10 @@ import { type MouseEvent, useState } from "react";
 import { fn } from "storybook/test";
 
 import { Button, Menu, classNames } from "@qlik/sprout-css-react";
-import { CogwheelIcon, ControlIcon, DeleteIcon, EditIcon } from "@qlik/sprout-icons/react";
-import LogOut from "@qlik/sprout-icons/react/LogOut";
+import { ControlIcon, DeleteIcon, EditIcon, PersonIcon } from "@qlik/sprout-icons/react";
 import Person from "@qlik/sprout-icons/react/Person";
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { CogwheelIcon, LogoutIcon } from "../icons";
 
 export default {
   title: "Components/Menu",
@@ -24,8 +24,8 @@ export const JsxApi: StoryObj<typeof Menu.Trigger> = {
       menu={
         <>
           <Menu.GroupLabel label="User" />
-          <Menu.Item icon={<Person />} label="Profile" disabled />
-          <Menu.Item icon={<LogOut />} label="Logout" />
+          <Menu.Item icon={<PersonIcon />} label="Profile" disabled />
+          <Menu.Item icon={<LogoutIcon />} label="Logout" />
           <Menu.Item icon={null} label="Reload" />
           <Menu.Item icon={null} label="Share" />
           <Menu.Sub

@@ -1,17 +1,9 @@
-import {
-  Avatar,
-  type AvatarProps,
-  classNames,
-} from "@qlik/sprout-css-react";
-import { PersonOutlineIcon } from "@qlik/sprout-icons/react";
+import { Avatar, type AvatarProps, classNames } from "@qlik/sprout-css-react";
+import { PersonIcon } from "@qlik/sprout-icons/react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import src from "../internal/assets/image.png";
-import {
-  AvatarIconArgTypes,
-  AvatarImgArgTypes,
-  AvatarTextArgTypes,
-} from "./Avatar.argTypes";
+import { AvatarIconArgTypes, AvatarImgArgTypes, AvatarTextArgTypes } from "./Avatar.argTypes";
 
 type Story = StoryObj<AvatarProps>;
 
@@ -27,10 +19,7 @@ const parameters = {
 export const TextStory: Story = {
   name: "Text",
   render: (props: AvatarProps) => (
-    <div
-      className={classNames("flex", "border-box", "p-s", "w-fit")}
-      data-testid="wrapper"
-    >
+    <div className={classNames("flex", "border-box", "p-s", "w-fit")} data-testid="wrapper">
       <Avatar {...props} />
     </div>
   ),
@@ -43,10 +32,7 @@ export const TextStory: Story = {
 
 export const Img: Story = {
   render: (props: AvatarProps) => (
-    <div
-      className={classNames("flex", "border-box", "p-s", "w-fit")}
-      data-testid="wrapper"
-    >
+    <div className={classNames("flex", "border-box", "p-s", "w-fit")} data-testid="wrapper">
       <Avatar {...props} />
     </div>
   ),
@@ -62,15 +48,12 @@ export const Img: Story = {
 
 export const Icon: Story = {
   render: (props: AvatarProps) => (
-    <div
-      className={classNames("flex", "border-box", "p-s", "w-fit")}
-      data-testid="wrapper"
-    >
+    <div className={classNames("flex", "border-box", "p-s", "w-fit")} data-testid="wrapper">
       <Avatar {...props} />
     </div>
   ),
   args: {
-    icon: <PersonOutlineIcon />,
+    icon: <PersonIcon />,
   },
   argTypes: AvatarIconArgTypes,
   parameters,
@@ -78,13 +61,9 @@ export const Icon: Story = {
 
 export const VisualTest: Story = {
   render: () => (
-    <div
-      className={classNames("flex", "flex-col", "border-box", "p-s", "gap-m")}
-    >
+    <div className={classNames("flex", "flex-col", "border-box", "p-s", "gap-m")}>
       <h2 className={classNames("font-heading-s", "text-default")}>Text</h2>
-      <div
-        className={classNames("flex", "flex-row", "border-box", "gap-m", "p-m")}
-      >
+      <div className={classNames("flex", "flex-row", "border-box", "gap-m", "p-m")}>
         <Avatar text="OC" />
         <Avatar text="OC" bgIndex={0} />
         <Avatar text="OC" bgIndex={1} />
@@ -100,9 +79,7 @@ export const VisualTest: Story = {
       <h2 className={classNames("font-heading-s", "text-default")}>Icon</h2>
       <Avatar icon={<IconDemo />} />
       <h2 className={classNames("font-heading-s", "text-default")}>Sizes</h2>
-      <div
-        className={classNames("flex", "flex-row", "border-box", "gap-m", "p-m")}
-      >
+      <div className={classNames("flex", "flex-row", "border-box", "gap-m", "p-m")}>
         <Avatar size="xs" text="XS" />
         <Avatar size="s" text="S" />
         <Avatar text="M" />
@@ -110,9 +87,7 @@ export const VisualTest: Story = {
         <Avatar size="xl" text="XL" />
         <Avatar size="illustration" text="IL" />
       </div>
-      <div
-        className={classNames("flex", "flex-row", "border-box", "gap-m", "p-m")}
-      >
+      <div className={classNames("flex", "flex-row", "border-box", "gap-m", "p-m")}>
         <Avatar size="xs" img={{ alt: "Avatar", src }} />
         <Avatar size="s" img={{ alt: "Avatar", src }} />
         <Avatar img={{ alt: "Avatar", src }} />
@@ -120,9 +95,7 @@ export const VisualTest: Story = {
         <Avatar size="xl" img={{ alt: "Avatar", src }} />
         <Avatar size="illustration" img={{ alt: "Avatar", src }} />
       </div>
-      <div
-        className={classNames("flex", "flex-row", "border-box", "gap-m", "p-m")}
-      >
+      <div className={classNames("flex", "flex-row", "border-box", "gap-m", "p-m")}>
         <Avatar size="xs" icon={<IconDemo />} />
         <Avatar size="s" icon={<IconDemo />} />
         <Avatar icon={<IconDemo />} />
