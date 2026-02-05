@@ -7,9 +7,9 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "build:npm": "turbo run build:npm",
     "check": "pnpm check-types && pnpm lint && pnpm format:check && pnpm test",
     "check-types": "turbo run check-types",
+    "clean": "turbo run clean && pnpm clean:cache",
     "clean:cache": "rimraf */*/.turbo .turbo */*/node_modules/.cache node_modules/.cache",
     "format:check": "turbo run format:check",
     "format:write": "turbo run format:write",

@@ -4,11 +4,13 @@
     "build": {
       "dependsOn": ["^build"]
     },
-    "build:npm": {
-      "dependsOn": ["^build:npm"]
+    "clean": {
+      "dependsOn": ["^clean"]
     },
     "start": {},
-    "storybook:build": {},
+    "storybook:build": {
+      "dependsOn": ["^build"]
+    },
     "lint": {},
     "check-types": {},
     "test": {},
