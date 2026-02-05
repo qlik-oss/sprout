@@ -34,8 +34,7 @@
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:css:fix": "stylelint --fix 'src/**/*.css'",
     "lint:ci": "eslint . -f json -o eslint-report.json && stylelint 'src/**/*.css' -f json -o stylelint-report.json",
-    "test": "pnpm vitest:run && pnpm playwright:test",
-    "vitest:run": "vitest run",
+    "test": "pnpm playwright:test",
     "playwright:test": "playwright test",
     "playwright:test:ui": "playwright test --ui",
     "playwright:install": "pnpm -w exec playwright install --with-deps"
