@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Table, type TableProps } from "..";
-import { entityAllFields, makeEntity, type Entity } from "../docs/examples/entity";
+import { entityAllFields, makeEntity, type Entity } from "../tests/examples/entity";
 
 export function TableColumnSelection(props: Partial<TableProps<Entity>>) {
   const [columnSelectionState, setColumnSelectionState] = useState<string>();

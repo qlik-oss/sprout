@@ -3,7 +3,7 @@ import { useState, type CSSProperties } from "react";
 import { Menu } from "@qlik/sprout-css-react";
 import { TableHTML, type TableHTMLProps } from ".";
 import { Table } from "../TanstackTable";
-import { makePerson, personColDef } from "../docs/examples/person";
+import { makePerson, personColDef } from "../tests/examples/person";
 
 export function TableTest({
   width = 600,

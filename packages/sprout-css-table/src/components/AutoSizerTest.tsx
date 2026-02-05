@@ -1,8 +1,8 @@
 import { classNames } from "@qlik/sprout-css-react";
 import { useMemo, useState, type CSSProperties } from "react";
 
-import { makePerson, personColDef, type Person } from "../docs/examples/person";
 import { Table } from "../TanstackTable";
+import { makePerson, personColDef, type Person } from "../tests/examples/person";
 
 export function TableFillParentContainer() {
   const rows = useMemo(() => makePerson(50), []);

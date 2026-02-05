@@ -1,6 +1,5 @@
 import { expect, test } from "@playwright/experimental-ct-react";
 import { Table } from ".";
-import { makePerson, personColDef, type Person } from "./docs/examples/person";
 import {
   ControlledColumnSizingTableTest,
   ControlledRowSelectionTest,
@@ -20,6 +19,7 @@ import {
   TableWithPanelOverlay,
   UncontrolledRowSelectionTest,
 } from "./TanstackTableTest";
+import { makePerson, personColDef, type Person } from "./tests/examples/person";
 import { KEYBOARD_KEYS } from "./utils/constant";
 
 const hoveredRowBackground: string = "rgba(0, 0, 0, 0.03)";
