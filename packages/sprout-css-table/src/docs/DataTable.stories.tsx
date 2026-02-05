@@ -3,8 +3,7 @@
 import type { SortingState } from "@tanstack/react-table";
 
 import { Button, classNames, InlineEdit, Menu, Message, Select, TextField } from "@qlik/sprout-css-react";
-import { MapIcon } from "@qlik/sprout-icons/react";
-import EditOutline from "@qlik/sprout-icons/react/EditOutline";
+import { EditIcon, MapIcon } from "@qlik/sprout-icons/react";
 import Warning from "@qlik/sprout-icons/react/Warning";
 import type { StoryObj } from "@storybook/react-vite";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
@@ -455,7 +454,7 @@ export const HeaderContextMenu: StoryObj<TableProps<Person>> = {
           headerContextMenu: () => (
             <>
               <Menu.Item
-                icon={<EditOutline />}
+                icon={<EditIcon />}
                 label="Edit"
                 onClick={() => {
                   // Handle edit job area
