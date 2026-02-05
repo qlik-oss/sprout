@@ -1,6 +1,6 @@
 {
   "name": "@qlik/sprout-css-storybook",
-  "version": "7.2.7",
+  "version": "7.2.9",
   "description": "Storybook for sprout-css",
   "homepage": "https://github.com/qlik/sprout#readme",
   "bugs": {
@@ -18,17 +18,16 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@qlik/design-tokens": "workspace:*",
-    "@storybook/react-vite": "^10.1.11",
+    "@storybook/react-vite": "^10.2.3",
     "source-code-pro": "^2.42.0",
     "source-sans-pro": "^3.6.0"
   },
   "devDependencies": {
     "@qlik/tsconfig": "^0.3.1",
-    "@types/node": "^25.0.9",
+    "@types/node": "^25.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "storybook": "^10.1.11",
+    "storybook": "^10.2.3",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vite-plugin-css-injected-by-js": "^3.5.2",
