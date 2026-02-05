@@ -31,7 +31,6 @@ import {
   useInteractions,
   useMergeRefs,
 } from "@floating-ui/react";
-import type { layer } from "@qlik/sprout-css-modules";
 import { useId } from "@qlik/sprout-hooks";
 
 import { ThemeProvider } from "../ThemeProvider";
@@ -203,7 +202,13 @@ export type FloatingPrimitiveProps = {
    * @private
    * zIndex CSS variable or value to control the stacking order of the floating element.
    */
-  zIndex?: layer;
+  zIndex?:
+    | "z-stacked"
+    | "z-overlay"
+    | "z-floating"
+    | "z-context"
+    | "z-time-sensitive"
+    | "z-cursor";
 } & Omit<HTMLDivProps, "content">;
 
 export type FloatingPublicProps = Omit<
@@ -485,7 +490,7 @@ function FloatingPrimitiveBase(
           <FloatingOverlay
             // z_overlay (z-index) should be synced with Modal.module.css
             className={classNames({
-              [zIndex || "z_overlay"]: true,
+              [zIndex || "z-overlay"]: true,
             })}
             onClick={(event) => {
               event.preventDefault();

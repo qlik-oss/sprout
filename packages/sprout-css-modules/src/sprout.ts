@@ -1,29 +1,4 @@
-import type {
-  AllClasses,
-  bg,
-  border,
-  ClassNamesAPI,
-  cursor,
-  display,
-  elevation,
-  flex,
-  font,
-  grid,
-  icon,
-  justifySelf,
-  layer,
-  layout,
-  margin,
-  opacity,
-  outline,
-  overflow,
-  padding,
-  position,
-  sizing,
-  SproutClasses,
-  text,
-} from "./classNames";
-import { classNames, sproutClasses } from "./classNames";
+import { classNames, type ClassNamesAPI } from "./classNames";
 import {
   type ContainerOptions,
   type ContainerSize,
@@ -35,9 +10,6 @@ import { type Breakpoint, media, type MediaAPI, type ViewportOptions, type Viewp
 import { type BoxSizing, type BoxSizingKeys, widthObserver, type WidthObserverAPI } from "./width-observer";
 
 export type {
-  AllClasses,
-  bg,
-  border,
   BoxSizing,
   BoxSizingKeys,
   Breakpoint,
@@ -46,29 +18,10 @@ export type {
   ContainerSize,
   ContainerSizeBreakpoints,
   CreateContainerAPI,
-  cursor,
-  display,
-  elevation,
-  flex,
-  font,
-  grid,
-  icon,
-  justifySelf,
-  layer,
-  layout,
-  margin,
   MediaAPI,
-  opacity,
-  outline,
-  overflow,
-  padding,
-  position,
-  sizing,
-  SproutClasses,
-  text,
   ViewportOptions,
   ViewportSize,
   WidthObserverAPI,
 };
 
-export default { classNames, widthObserver, createContainer, media, ...sproutClasses };
+export default { classNames, widthObserver, createContainer, media };

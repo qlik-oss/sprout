@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
 import { type MouseEvent, type ReactNode, type Ref, forwardRef } from "react";
 
-import type { PossibleValues } from "../Typography";
 import { classNames } from "../classNames";
+import type { PossibleFont } from "../css";
 import type { HTMLAnchorProps } from "../htmlTypes";
 import { GotoIcon } from "../icons";
 
@@ -16,7 +16,7 @@ export type LinkProps = Omit<HTMLAnchorProps, "className"> & {
   children: ReactNode;
   isExternal?: boolean;
   withEllipsis?: boolean;
-  font?: PossibleValues["font"] | "inherit";
+  font?: PossibleFont | "inherit";
 };
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(LinkBase);
@@ -25,7 +25,7 @@ function LinkBase(
   {
     onClick,
     disabled,
-    font = "body_m",
+    font = "body-m",
     isExternal,
     href,
     target,

@@ -8,5 +8,7 @@ export type VisuallyHiddenProps = HTMLSpanProps;
  * @deprecated use sprout.sr_only classes instead
  */
 export function VisuallyHidden(props: VisuallyHiddenProps) {
-  return <span {...props} className={sprout.sr_only} aria-hidden />;
+  return (
+    <span {...props} className={sprout.classNames("sr-only")} aria-hidden />
+  );
 }

@@ -103,7 +103,7 @@ function TooltipBase(
       arrowProps={{
         className: styles.arrow,
       }}
-      zIndex="z_context"
+      zIndex="z-context"
       role="tooltip"
       className={styles.container}
       data-displayed={isDisplayed}

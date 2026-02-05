@@ -56,7 +56,6 @@ export * from "./Toast";
 export * from "./ToggleButton";
 export * from "./Tooltip";
 export * from "./Tree";
-export * from "./Typography";
 export * from "./VisuallyHidden";
 export type { UseControlReturns };
 
