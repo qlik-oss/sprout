@@ -32,6 +32,7 @@
     "format:check": "prettier --check ./** --ignore-unknown",
     "format:write": "prettier --write ./** --ignore-unknown",
     "lint": "eslint .",
+    "lint:ci": "eslint . -f json -o eslint-report.json",
     "start": "storybook dev",
     "pretest": "playwright install --with-deps",
     "test": "pnpm test:playwright",

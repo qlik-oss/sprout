@@ -1,14 +1,7 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
 import type { MouseEvent, ReactNode } from "react";
 
-import {
-  ColumnsIcon,
-  HideIcon,
-  MoreIcon,
-  ShowIcon,
-  SortAscendingIcon,
-  SortDescendingIcon,
-} from "@qlik/sprout-icons/react";
+import { ColumnsIcon, MoreIcon, ShowIcon, SortAscendingIcon, SortDescendingIcon } from "@qlik/sprout-icons/react";
 
 import { IconButton, Menu, useSproutI18n, type MenuProps } from "@qlik/sprout-css-react";
 
