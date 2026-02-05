@@ -3,9 +3,9 @@
 import { type MouseEvent, useState } from "react";
 import { fn } from "storybook/test";
 
-import { Button, Menu, classNames } from "@qlik/sprout-css-react";
 import { ControlIcon, DeleteIcon, EditIcon, PersonIcon } from "@qlik/sprout-icons/react";
 import Person from "@qlik/sprout-icons/react/Person";
+import { Button, Menu, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { CogwheelIcon, LogoutIcon } from "../../icons";
 

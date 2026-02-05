@@ -1,20 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { type CSSProperties, useState } from "react";
 
-import {
-  DndContext,
-  type DragEndEvent,
-  type UniqueIdentifier,
-  useDraggable,
-  useDroppable,
-} from "@dnd-kit/core";
-import {
-  Button,
-  type ButtonProps,
-  Dropzone,
-  type DropzoneProps,
-  classNames,
-} from "@qlik/sprout-css-react";
+import { DndContext, type DragEndEvent, type UniqueIdentifier, useDraggable, useDroppable } from "@dnd-kit/core";
+import { Button, type ButtonProps, Dropzone, type DropzoneProps, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 export default {
@@ -77,15 +65,7 @@ export const DropzoneIntegration: StoryObj<DropzoneProps> = {
       },
     };
     return (
-      <div
-        className={classNames(
-          "flex-noreset",
-          "flex-row",
-          "gap-xl",
-          "items-start",
-          "w-xl",
-        )}
-      >
+      <div className={classNames("flex-noreset", "flex-row", "gap-xl", "items-start", "w-xl")}>
         <DndContext
           onDragEnd={(args: DragEndEvent) => {
             setParent(args.over ? args.over.id : null);

@@ -7,32 +7,22 @@ import { Meta } from "@storybook/addon-docs/blocks";
 Welcome to the Sprout design system! This is the implementation of the Sprout design system built on top of React. To get started, ensure you have a React application set up and running. Once your React app is ready, you can add the following dependencies:
 
 ```bash
-pnpm i @qlik/sprout-css-react
+pnpm i @qlik/sprout-react
 ```
 
 After installing the dependencies, you can test if everything works by adding the following snippet to your `App.tsx` file:
 
 ```tsx
-import {
-  Button,
-  ThemeProvider,
-  classNames,
-} from "@qlik/sprout-css-react";
+import { Button, ThemeProvider, classNames } from "@qlik/sprout-react";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <ThemeProvider asDiv>
-      <h1 className={className("m_o", "p_0", "text_default", "font_heading_m")}>
-        Vite + React
-      </h1>
+      <h1 className={className("m_o", "p_0", "text_default", "font_heading_m")}>Vite + React</h1>
       <div className={className("flex", "col", "gap_xs")}>
-        <Button
-          variant="primary"
-          onClick={() => setCount((count) => count + 1)}
-          label={`Count is ${count}`}
-        />
+        <Button variant="primary" onClick={() => setCount((count) => count + 1)} label={`Count is ${count}`} />
         <p className={className("text_default", "font_body_m")}>
           Edit <code>src/App.tsx</code> and save to test HMR.
         </p>
@@ -66,7 +56,7 @@ Here’s an example:
 ```tsx
 import { type ReactNode } from "react";
 
-import { ThemeProvider } from "@qlik/sprout-css-react";
+import { ThemeProvider } from "@qlik/sprout-react";
 
 const MyCustomElement = ({ children }: { children: ReactNode }) => {
   return createPortal(
@@ -83,10 +73,7 @@ const MyCustomElement = ({ children }: { children: ReactNode }) => {
 Setting up Sprout CSS in Storybook is straightforward. You can use the `@qlik/sprout-css-storybook` package to simplify the process.
 
 ```jsx
-import {
-  getSproutGlobalTypes,
-  sproutCSSDecorator,
-} from "@qlik/sprout-css-storybook";
+import { getSproutGlobalTypes, sproutCSSDecorator } from "@qlik/sprout-css-storybook";
 
 export default {
   // Automatically wraps your stories with the ThemeProvider

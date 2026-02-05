@@ -1,4 +1,4 @@
-import type { GridProps } from "@qlik/sprout-css-react";
+import type { GridProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 export const GridContainerArgTypes: ArgTypes<GridProps["Container"]> = {

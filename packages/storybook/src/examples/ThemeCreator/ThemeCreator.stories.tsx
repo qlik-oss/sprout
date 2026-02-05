@@ -1,10 +1,7 @@
 /* eslint-disable no-console */
-import { classNames } from "@qlik/sprout-css-react";
+import { classNames } from "@qlik/sprout-react";
 
-import {
-  type SproutThemePartial,
-  ThemePairCreator,
-} from "./ThemePairCreator/ThemePairCreator";
+import { type SproutThemePartial, ThemePairCreator } from "./ThemePairCreator/ThemePairCreator";
 
 import "./ThemeCreator.module.css";
 

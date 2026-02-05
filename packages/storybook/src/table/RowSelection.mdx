@@ -21,7 +21,7 @@ The user can then click anywhere on the row to select it. <br />
 click the radio button to select the row.
 
 ```tsx
-import { Table } from "@qlik/sprout-css-table";
+import { Table } from "@qlik/sprout-table";
 import { rows, columns } from "./data";
 
 <Table variant="list" columns={columns} rows={rows} rowSelectionMode="single" />;
@@ -38,7 +38,7 @@ The user can then click anywhere on the row to select it, and a checkbox will ap
 click the checkbox to select the row.
 
 ```tsx
-import { Table } from "@qlik/sprout-css-table";
+import { Table } from "@qlik/sprout-table";
 import { rows, columns } from "./data";
 
 <Table variant="list" columns={columns} rows={rows} rowSelectionMode="multiple" />;
@@ -52,7 +52,7 @@ and should return a `boolean` value
 <strong>ℹ️ Note:</strong> The `rowSelectionMode` prop should be also defined
 
 ```tsx
-import { Table } from "@qlik/sprout-css-table";
+import { Table } from "@qlik/sprout-table";
 import { rows, columns } from "./data";
 
 return (

@@ -19,7 +19,7 @@ If none of them is provided an error will be thrown.
 The `field` property accept a string as a key to the data object. It is used to define the data that will be displayed in the column.
 
 ```tsx
-import { type ColumnDef } from "@qlik/sprout-css-table";
+import { type ColumnDef } from "@qlik/sprout-table";
 
 type ContentType = {
   name: string;
@@ -34,7 +34,7 @@ const columns: ColumnDef<ContentType>[] = [{ field: "name" }, { field: "descript
 The `valueGetter` property is an alternative to the `field` property. It is a function that takes a row object and returns the value to be displayed in the column.
 
 ```tsx
-import { type ColumnDef } from "@qlik/sprout-css-table";
+import { type ColumnDef } from "@qlik/sprout-table";
 
 type ContentType = {
   firstName: string;
@@ -57,7 +57,7 @@ The `valueSetter` property is used to define a function that will be useful in t
 You will receive the row object along the column definition and will need to create a new value.
 
 ```tsx
-import { type ColumnDef } from "@qlik/sprout-css-table";
+import { type ColumnDef } from "@qlik/sprout-table";
 type ContentType = {
   address: {
     street: string;
@@ -167,7 +167,7 @@ const columns: ColumnDef<ContentType>[] = [
 Note that it is possible to disable sorting for all columns by passing `disableColumnHiding=true` as Table prop
 
 ```tsx
-import { Table } from "@qlik/sprout-css-table";
+import { Table } from "@qlik/sprout-table";
 
 return <Table rows={rows} columns={columns} disableColumnHiding />;
 ```
@@ -188,7 +188,7 @@ const columns: ColumnDef<ContentType>[] = [
 It is an API that is part of the column definition.
 
 ```ts
-import { type ColumnDef, type TableCellParams } from "@qlik/sprout-css-table";
+import { type ColumnDef, type TableCellParams } from "@qlik/sprout-table";
 
 export const entityRenderCell: ColumnDef<ContentType>[] = [
   {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { IconButton, SearchHighlight, classNames } from "@qlik/sprout-css-react";
+import { IconButton, SearchHighlight, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ArrowLeftIcon, ArrowRightIcon } from "../../icons";
 

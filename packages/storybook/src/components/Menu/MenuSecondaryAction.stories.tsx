@@ -1,4 +1,4 @@
-import { Button, Menu, classNames } from "@qlik/sprout-css-react";
+import { Button, Menu, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { MenuSecondaryActionArgTypes } from "./Menu.argTypes";
@@ -18,19 +18,13 @@ export const SecondaryAction: StoryObj<typeof Menu.SecondaryAction> = {
             <Menu.Item
               label="Open story"
               onClick={() => {
-                window.location.href =
-                  "/iframe.html?path=/story/components-menu--secondary-action";
+                window.location.href = "/iframe.html?path=/story/components-menu--secondary-action";
               }}
             />
             <Menu.SecondaryAction
               {...props}
               onClick={() => {
-                window
-                  .open(
-                    "/?path=/story/components-menu--secondary-action",
-                    "_blank",
-                  )
-                  ?.focus();
+                window.open("/?path=/story/components-menu--secondary-action", "_blank")?.focus();
               }}
             />
           </Menu.Split>
@@ -39,20 +33,14 @@ export const SecondaryAction: StoryObj<typeof Menu.SecondaryAction> = {
               <Menu.Item
                 label="Open story"
                 onClick={() => {
-                  window.location.href =
-                    "/iframe.html?path=/story/components-menu--secondary-action";
+                  window.location.href = "/iframe.html?path=/story/components-menu--secondary-action";
                 }}
               />
               <span className={classNames("disclosure-target")}>
                 <Menu.SecondaryAction
                   {...props}
                   onClick={() => {
-                    window
-                      .open(
-                        "/?path=/story/components-menu--secondary-action",
-                        "_blank",
-                      )
-                      ?.focus();
+                    window.open("/?path=/story/components-menu--secondary-action", "_blank")?.focus();
                   }}
                 />
               </span>
@@ -63,20 +51,14 @@ export const SecondaryAction: StoryObj<typeof Menu.SecondaryAction> = {
               <Menu.Item
                 label="Open story"
                 onClick={() => {
-                  window.location.href =
-                    "/iframe.html?path=/story/components-menu--secondary-action";
+                  window.location.href = "/iframe.html?path=/story/components-menu--secondary-action";
                 }}
               />
               <span className={classNames("disclosure-target")}>
                 <Menu.SecondaryAction
                   {...props}
                   onClick={() => {
-                    window
-                      .open(
-                        "/?path=/story/components-menu--secondary-action",
-                        "_blank",
-                      )
-                      ?.focus();
+                    window.open("/?path=/story/components-menu--secondary-action", "_blank")?.focus();
                   }}
                 />
               </span>

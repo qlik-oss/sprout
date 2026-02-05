@@ -1,5 +1,5 @@
 import sprout from "@qlik/sprout-css-modules";
-import { Radio, RadioGroup } from "@qlik/sprout-css-react";
+import { Radio, RadioGroup } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { RadioArgTypes, RadioGroupArgTypes } from "./RadioGroup.argTypes";
@@ -16,10 +16,7 @@ export default meta;
 
 export const Playground: Story = {
   render: (args) => (
-    <div
-      className={sprout.classNames("flex", "p-m", "w-fit")}
-      data-testid="wrapper"
-    >
+    <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
       <RadioGroup {...args}>
         <Radio label="Cat" value="cat" name="test" />
         <Radio label="Dog" value="dog" name="test" />
@@ -41,10 +38,7 @@ export const Playground: Story = {
 
 export const RadioButton: StoryObj = {
   render: (args) => (
-    <div
-      className={sprout.classNames("flex", "p-m", "w-fit")}
-      data-testid="wrapper"
-    >
+    <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
       <Radio {...args} />
     </div>
   ),
@@ -61,86 +55,43 @@ export const VisualTests: Story = {
   render: () => (
     <div className={sprout.classNames("flex", "flex-row", "w-fit", "gap-3xl")}>
       <div className={sprout.classNames("flex", "flex-col")}>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio label="Default" />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio label="Hover" data-testid="hover" />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio label="Focus" data-testid="focus" />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
-          <Radio
-            label="With help text"
-            helpText="This is help text for this radio option"
-          />
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
+          <Radio label="With help text" helpText="This is help text for this radio option" />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio label="Disabled" disabled />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio label="readOnly" readOnly />
         </div>
       </div>
       <div className={sprout.classNames("flex", "flex-col")}>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio label="Checked" checked />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio label="Hover" checked data-testid="hover" />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio label="Focus" checked data-testid="focus" />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio label="Disabled" checked disabled />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio label="readOnly" readOnly checked />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
-          <Radio
-            label="Checked with help"
-            checked
-            helpText="Additional context for this option"
-          />
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
+          <Radio label="Checked with help" checked helpText="Additional context for this option" />
         </div>
       </div>
       <div className={sprout.classNames("flex", "flex-row", "w-fit")}>
@@ -166,29 +117,20 @@ export const VisualTests: Story = {
         </RadioGroup>
       </div>
       <div className={sprout.classNames("flex")}>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio
             label="Unchecked with tooltip"
             infoIconTooltip="This is some additional info about this radio option"
           />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio
             label="Unchecked with help and tooltip"
             helpText="Additional context for this option"
             infoIconTooltip="This is some additional info about this radio option"
           />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio
             readOnly
             label="Readonly unchecked with help and tooltip"
@@ -196,10 +138,7 @@ export const VisualTests: Story = {
             infoIconTooltip="This is some additional info about this radio option"
           />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio
             disabled
             label="Disabled unchecked with help and tooltip"
@@ -207,20 +146,14 @@ export const VisualTests: Story = {
             infoIconTooltip="This is some additional info about this radio option"
           />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio
             label="Checked with help"
             checked
             infoIconTooltip="This is some additional info about this radio option"
           />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio
             label="Checked with help and tooltip"
             checked
@@ -228,10 +161,7 @@ export const VisualTests: Story = {
             infoIconTooltip="This is some additional info about this radio option"
           />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio
             readOnly
             label="Readonly checked with help and tooltip"
@@ -240,10 +170,7 @@ export const VisualTests: Story = {
             infoIconTooltip="This is some additional info about this radio option"
           />
         </div>
-        <div
-          className={sprout.classNames("flex", "p-m", "w-fit")}
-          data-testid="wrapper"
-        >
+        <div className={sprout.classNames("flex", "p-m", "w-fit")} data-testid="wrapper">
           <Radio
             disabled
             label="Disabled checked with help and tooltip"

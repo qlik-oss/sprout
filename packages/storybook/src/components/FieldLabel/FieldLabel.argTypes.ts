@@ -1,4 +1,4 @@
-import type { FieldLabelProps } from "@qlik/sprout-css-react";
+import type { FieldLabelProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 export const FieldLabelArgTypes: ArgTypes<FieldLabelProps> = {
@@ -26,8 +26,7 @@ export const FieldLabelArgTypes: ArgTypes<FieldLabelProps> = {
     control: {
       type: "text",
     },
-    description:
-      "The id of the form element that this label is associated with.",
+    description: "The id of the form element that this label is associated with.",
     table: {
       type: {
         summary: "string",
@@ -36,8 +35,7 @@ export const FieldLabelArgTypes: ArgTypes<FieldLabelProps> = {
   },
   infoIconPopover: {
     control: "text",
-    description:
-      "Popover text that appears when clicking on the info icon next to the label.",
+    description: "Popover text that appears when clicking on the info icon next to the label.",
     table: {
       type: {
         summary: "ReactNode",
@@ -46,8 +44,7 @@ export const FieldLabelArgTypes: ArgTypes<FieldLabelProps> = {
   },
   infoIconTooltip: {
     control: "text",
-    description:
-      "Tooltip text that appears when hovering over the info icon next to the label.",
+    description: "Tooltip text that appears when hovering over the info icon next to the label.",
     table: {
       type: {
         summary: "ReactNode",

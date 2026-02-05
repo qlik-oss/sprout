@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { useState } from "react";
 
-import { Select, type SelectProps, classNames } from "@qlik/sprout-css-react";
+import { Select, type SelectProps, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { PaletteOutlineIcon } from "../../icons";

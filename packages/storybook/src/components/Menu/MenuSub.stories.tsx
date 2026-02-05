@@ -1,4 +1,4 @@
-import { Menu, classNames } from "@qlik/sprout-css-react";
+import { Menu, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { CogwheelIcon } from "../../icons";

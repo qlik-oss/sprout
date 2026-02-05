@@ -1,7 +1,4 @@
-import type {
-  ProgressBarProps,
-  ProgressCircularProps,
-} from "@qlik/sprout-css-react";
+import type { ProgressBarProps, ProgressCircularProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 export const ProgressBarArgTypes: ArgTypes<ProgressBarProps> = {
@@ -9,8 +6,7 @@ export const ProgressBarArgTypes: ArgTypes<ProgressBarProps> = {
     control: {
       type: "text",
     },
-    description:
-      "Accessible label describing the progress bar. **Required if no label or tooltip is provided.**",
+    description: "Accessible label describing the progress bar. **Required if no label or tooltip is provided.**",
     table: {
       type: {
         summary: "string",
@@ -21,8 +17,7 @@ export const ProgressBarArgTypes: ArgTypes<ProgressBarProps> = {
     control: {
       type: "boolean",
     },
-    description:
-      "If true, the progress bar will be contained within its parent element.",
+    description: "If true, the progress bar will be contained within its parent element.",
     table: {
       type: {
         summary: "boolean",
@@ -33,8 +28,7 @@ export const ProgressBarArgTypes: ArgTypes<ProgressBarProps> = {
     control: {
       type: "text",
     },
-    description:
-      "Label describing the progress bar. **Required if no aria-label or tooltip is provided.**",
+    description: "Label describing the progress bar. **Required if no aria-label or tooltip is provided.**",
     table: {
       type: {
         summary: "string",
@@ -47,8 +41,7 @@ export const ProgressBarArgTypes: ArgTypes<ProgressBarProps> = {
       min: 0,
       type: "number",
     },
-    description:
-      "The progress percentage (0-100). If undefined or 0, the progress bar is indetermined.",
+    description: "The progress percentage (0-100). If undefined or 0, the progress bar is indetermined.",
     table: {
       type: {
         summary: "number",
@@ -59,8 +52,7 @@ export const ProgressBarArgTypes: ArgTypes<ProgressBarProps> = {
     control: {
       type: "text",
     },
-    description:
-      "Tooltip text shown on hover. **Required if no label or aria-label is provided.**",
+    description: "Tooltip text shown on hover. **Required if no label or aria-label is provided.**",
     table: {
       type: {
         summary: "string",
@@ -74,8 +66,7 @@ export const ProgressCircularArgTypes: ArgTypes<ProgressCircularProps> = {
     control: {
       type: "text",
     },
-    description:
-      "Accessible label describing the progress circular. **Required.**",
+    description: "Accessible label describing the progress circular. **Required.**",
     table: {
       type: {
         summary: "string",
@@ -88,8 +79,7 @@ export const ProgressCircularArgTypes: ArgTypes<ProgressCircularProps> = {
       min: 0,
       type: "number",
     },
-    description:
-      "The progress percentage (0-100). If undefined, the progress circular is indetermined.",
+    description: "The progress percentage (0-100). If undefined, the progress circular is indetermined.",
     table: {
       type: {
         summary: "number",

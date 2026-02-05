@@ -11,62 +11,34 @@ The segmented control allows users to make a mutually exclusive selection from a
 The `SegmentedControl.Segment` directly inherits properties from [HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input) and is set to `type="radio"`.
 
 ```tsx
-import { SegmentedControl } from "@qlik/sprout-css-react";
+import { SegmentedControl } from "@qlik/sprout-react";
 
 // With label and icon
 <SegmentedControl.Group name="segmented-control-group">
   <SegmentedControl.Segment value="A" label="Segment" icon={<Star2 />} />
   <SegmentedControl.Segment value="B" label="Segment" icon={<Star2 />} />
-  <SegmentedControl.Segment
-    value="C"
-    label="Segment"
-    icon={<Star2 />}
-    disabled
-  />
+  <SegmentedControl.Segment value="C" label="Segment" icon={<Star2 />} disabled />
 </SegmentedControl.Group>;
 
 // Icon only
 <SegmentedControl.Group name="segmented-control-group" iconOnly>
   <SegmentedControl.Segment value="A" label="Segment" icon={<Star2 />} />
   <SegmentedControl.Segment value="B" label="Segment" icon={<Star2 />} />
-  <SegmentedControl.Segment
-    value="C"
-    label="Segment"
-    icon={<Star2 />}
-    disabled
-  />
+  <SegmentedControl.Segment value="C" label="Segment" icon={<Star2 />} disabled />
 </SegmentedControl.Group>;
 
 // Vertical layout
 <SegmentedControl.Group name="segmented-control-group" orientation="vertical">
   <SegmentedControl.Segment value="A" label="Segment" icon={<Star2 />} />
   <SegmentedControl.Segment value="B" label="Segment" icon={<Star2 />} />
-  <SegmentedControl.Segment
-    value="C"
-    label="Segment"
-    icon={<Star2 />}
-    disabled
-  />
+  <SegmentedControl.Segment value="C" label="Segment" icon={<Star2 />} disabled />
 </SegmentedControl.Group>;
 
 // Set name either on the group or on each segment
 <SegmentedControl.Group>
-  <SegmentedControl.Segment
-    value="A"
-    label="Segment A"
-    name="segmented-control-group"
-  />
-  <SegmentedControl.Segment
-    value="B"
-    label="Segment B"
-    name="segmented-control-group"
-  />
-  <SegmentedControl.Segment
-    value="C"
-    label="Segment C"
-    name="segmented-control-group"
-    disabled
-  />
+  <SegmentedControl.Segment value="A" label="Segment A" name="segmented-control-group" />
+  <SegmentedControl.Segment value="B" label="Segment B" name="segmented-control-group" />
+  <SegmentedControl.Segment value="C" label="Segment C" name="segmented-control-group" disabled />
 </SegmentedControl.Group>;
 ```
 

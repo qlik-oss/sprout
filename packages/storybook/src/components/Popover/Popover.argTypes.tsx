@@ -1,4 +1,4 @@
-import type { PopoverProps } from "@qlik/sprout-css-react";
+import type { PopoverProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 export type PopoverDemoContentProps = {
@@ -66,8 +66,7 @@ export const PopoverArgTypes: ArgTypes<Partial<PopoverProps>> = {
       "top-start",
       "top-end",
     ],
-    description:
-      "The preferred placement of the popover relative to the anchor element.",
+    description: "The preferred placement of the popover relative to the anchor element.",
     table: {
       defaultValue: { summary: "bottom-start" },
       type: { summary: "string" },
@@ -78,8 +77,7 @@ export const PopoverArgTypes: ArgTypes<Partial<PopoverProps>> = {
       type: "select",
     },
     options: [undefined, true, false, "dropdown"],
-    description:
-      "If true, the popover will update its position when the anchor element changes position.",
+    description: "If true, the popover will update its position when the anchor element changes position.",
     table: {
       defaultValue: { summary: undefined },
       type: { summary: "boolean" },
@@ -89,8 +87,7 @@ export const PopoverArgTypes: ArgTypes<Partial<PopoverProps>> = {
     control: {
       type: "object",
     },
-    description:
-      "The position of the anchor element in the viewport. Used when there is no children prop.",
+    description: "The position of the anchor element in the viewport. Used when there is no children prop.",
     table: {
       type: { summary: "{ top: number; left: number }" },
     },
@@ -100,8 +97,7 @@ export const PopoverArgTypes: ArgTypes<Partial<PopoverProps>> = {
       type: "select",
     },
     options: [undefined, true, false],
-    description:
-      "Controls the visibility of the popover. If undefined, the popover will manage its own state.",
+    description: "Controls the visibility of the popover. If undefined, the popover will manage its own state.",
     table: {
       defaultValue: { summary: undefined },
       type: { summary: "boolean" },
@@ -151,25 +147,12 @@ export const PopoverArgTypes: ArgTypes<Partial<PopoverProps>> = {
     control: {
       type: "select",
     },
-    options: [
-      undefined,
-      "reference",
-      "screen",
-      "xxs",
-      "xs",
-      "s",
-      "m",
-      "l",
-      "xl",
-      "100px",
-    ],
-    description:
-      "Sets the width of the popover. Can be a predefined size or a custom CSS value.",
+    options: [undefined, "reference", "screen", "xxs", "xs", "s", "m", "l", "xl", "100px"],
+    description: "Sets the width of the popover. Can be a predefined size or a custom CSS value.",
     table: {
       defaultValue: { summary: "fit-content" },
       type: {
-        summary:
-          ' "reference" | "screen" | "xxs" | "xs" | "s" | "m" | "l" | "xl" | string',
+        summary: ' "reference" | "screen" | "xxs" | "xs" | "s" | "m" | "l" | "xl" | string',
       },
     },
   },
@@ -177,25 +160,12 @@ export const PopoverArgTypes: ArgTypes<Partial<PopoverProps>> = {
     control: {
       type: "select",
     },
-    options: [
-      undefined,
-      "reference",
-      "screen",
-      "xxs",
-      "xs",
-      "s",
-      "m",
-      "l",
-      "xl",
-      "100px",
-    ],
-    description:
-      "Sets the minimum width of the popover. Can be a predefined size or a custom CSS value.",
+    options: [undefined, "reference", "screen", "xxs", "xs", "s", "m", "l", "xl", "100px"],
+    description: "Sets the minimum width of the popover. Can be a predefined size or a custom CSS value.",
     table: {
       defaultValue: { summary: undefined },
       type: {
-        summary:
-          ' "reference" | "screen" | "xxs" | "xs" | "s" | "m" | "l" | "xl" | string',
+        summary: ' "reference" | "screen" | "xxs" | "xs" | "s" | "m" | "l" | "xl" | string',
       },
     },
   },
@@ -203,25 +173,12 @@ export const PopoverArgTypes: ArgTypes<Partial<PopoverProps>> = {
     control: {
       type: "select",
     },
-    options: [
-      undefined,
-      "reference",
-      "screen",
-      "xxs",
-      "xs",
-      "s",
-      "m",
-      "l",
-      "xl",
-      "100px",
-    ],
-    description:
-      "Sets the maximum width of the popover. Can be a predefined size or a custom CSS value.",
+    options: [undefined, "reference", "screen", "xxs", "xs", "s", "m", "l", "xl", "100px"],
+    description: "Sets the maximum width of the popover. Can be a predefined size or a custom CSS value.",
     table: {
       defaultValue: { summary: "s" },
       type: {
-        summary:
-          ' "reference" | "screen" | "xxs" | "xs" | "s" | "m" | "l" | "xl" | string',
+        summary: ' "reference" | "screen" | "xxs" | "xs" | "s" | "m" | "l" | "xl" | string',
       },
     },
   },
@@ -250,8 +207,7 @@ export const PopoverArgTypes: ArgTypes<Partial<PopoverProps>> = {
     control: {
       type: "boolean",
     },
-    description:
-      "If true, the popover will be rendered in the DOM even when it's not open.",
+    description: "If true, the popover will be rendered in the DOM even when it's not open.",
     table: {
       defaultValue: { summary: "false" },
       type: { summary: "boolean" },
@@ -271,8 +227,7 @@ export const PopoverArgTypes: ArgTypes<Partial<PopoverProps>> = {
     control: {
       type: "boolean",
     },
-    description:
-      "If true, the popover will be able to manage popover in popover.",
+    description: "If true, the popover will be able to manage popover in popover.",
     table: {
       defaultValue: { summary: "false" },
       type: { summary: "boolean" },

@@ -2,9 +2,9 @@
 import { type JSX, createContext, useCallback, useContext, useEffect, useState } from "react";
 import { fn } from "storybook/test";
 
-import { InlineEdit, type InlineEditProps, Select, Switch, classNames } from "@qlik/sprout-css-react";
-import { Table, type TableProps } from "@qlik/sprout-css-table";
 import { AiSparklesIcon } from "@qlik/sprout-icons/react";
+import { InlineEdit, type InlineEditProps, Select, Switch, classNames } from "@qlik/sprout-react";
+import { Table, type TableProps } from "@qlik/sprout-table";
 import type { StoryObj } from "@storybook/react-vite";
 
 import { OPTIONS_WITH_GROUP } from "../Select/SelectTest";
@@ -237,16 +237,16 @@ export const VisualTestTextField: StoryObj = {
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
           <InlineEdit.TextField
             aria-label="Edit color"
-            defaultValue="custom font heading_xl"
-            font="heading_xl"
+            defaultValue="custom font heading-xl"
+            font="heading-xl"
             showEditIcon
           />
         </div>
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
           <InlineEdit.TextField
             aria-label="Edit color"
-            defaultValue="custom font script_s"
-            font="script_s"
+            defaultValue="custom font script-s"
+            font="script-s"
             view={({ children }) => (
               <span className={classNames("text-end", "font-script-s", "text-inverse", "bg-inverse")}>{children}</span>
             )}

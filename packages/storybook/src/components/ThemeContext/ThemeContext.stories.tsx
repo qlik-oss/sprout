@@ -1,4 +1,4 @@
-import { useTheme } from "@qlik/sprout-css-react";
+import { useTheme } from "@qlik/sprout-react";
 import type { StoryObj } from "@storybook/react";
 
 export default {

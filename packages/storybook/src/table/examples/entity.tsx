@@ -1,6 +1,6 @@
-import { classNames, Skeleton } from "@qlik/sprout-css-react";
+import { classNames, Skeleton } from "@qlik/sprout-react";
 
-import type { ColumnDef } from "../../../../sprout-css-table/src/props";
+import type { ColumnDef } from "../../../../sprout-table/src/props";
 import entities from "./entity.json";
 
 export type Entity = {

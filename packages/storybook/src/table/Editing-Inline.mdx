@@ -15,7 +15,7 @@ The core set of components of Sprout provides the [InlineEdit](https://effective
 For very simple use cases we expose a simple API to economize on boilerplate.
 
 ```tsx
-import { Table, TableInlineEdit } from "@qlik/sprout-css-table";
+import { Table, TableInlineEdit } from "@qlik/sprout-table";
 
 const TableInlineEditContext = TableInlineEdit.createContext<Person>();
 const InlineEditString = TableInlineEdit.getEditString<Person>(TableInlineEditContext);
@@ -56,7 +56,7 @@ function MyPersonTable({ data }: { data: Person[] }) {
 But in many cases you will need to implement your own custom editing components. In this case you can use the `InlineEdit.Primitive` component to create your own editing components and leverage the [renderCell](?path=/docs/docs-columns-column-definition--docs#rendercell) API.
 
 ```tsx
-import { TableCellParams, editUtility } from "@qlik/sprout-css-table";
+import { TableCellParams, editUtility } from "@qlik/sprout-table";
 
 function InlineEditNumber({ row, colDef, value }: TableCellParams<Person>) {
   const context = useContext(TableInlineEditContext);

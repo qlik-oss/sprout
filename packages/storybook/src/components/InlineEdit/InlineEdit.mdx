@@ -9,7 +9,7 @@ import * as Stories from "./InlineEdit.stories";
 Inline edit is a wrapper component that allows editing of content that is not in a traditional input element through the popping of a form-like UI in a popover-like UI. Use this pattern to simplify editing of simple fields.
 
 ```tsx
-import { InlineEdit, type InlineEditProps } from "@qlik/sprout-css-react";
+import { InlineEdit, type InlineEditProps } from "@qlik/sprout-react";
 ```
 
 ## Table of Contents
@@ -47,7 +47,7 @@ If you use ref you will have the root element of the InlineEdit component so you
 The primitive is meant to let you build your own InlineEdit component. It provides the basic structure and behavior of an inline edit component, allowing you to customize the content and controls as needed.
 
 ```tsx
-import { InlineEdit, classNames } from "@qlik/sprout-css-react";
+import { InlineEdit, classNames } from "@qlik/sprout-react";
 import { SparkleIcon } from "@qlik/sprout-icons/react";
 
 export type MyCustomInlineEditProps = {
@@ -55,14 +55,9 @@ export type MyCustomInlineEditProps = {
   onChange: (newValue: boolean, reason?: "cancel") => void;
 };
 
-export const MyCustomInlineEdit = ({
-  value,
-  onChange,
-}: MyCustomInlineEditProps) => {
+export const MyCustomInlineEdit = ({ value, onChange }: MyCustomInlineEditProps) => {
   return (
-    <div
-      className={classNames("flex", "border_box", "p_xl", "w_xs", "bg_weak")}
-    >
+    <div className={classNames("flex", "border_box", "p_xl", "w_xs", "bg_weak")}>
       <InlineEdit.Primitive
         onCancel={() => {
           // let the parent reset the initial value
@@ -73,48 +68,17 @@ export const MyCustomInlineEdit = ({
         }}
         // JSX.Element API: pass pre-created elements
         view={
-          <div
-            className={classNames(
-              "flex",
-              "row",
-              "gap_m",
-              "ai_center",
-              "text_default",
-            )}
-          >
+          <div className={classNames("flex", "row", "gap_m", "ai_center", "text_default")}>
             <SparkleIcon className={classNames("fill_current")} />
             <div className={classNames("flex", "col", "gap_m")}>
-              <span
-                className={classNames(
-                  "font_label_m_emphasized",
-                  "text_default",
-                )}
-              >
-                {value ? "On" : "Off"}
-              </span>
-              <span className={classNames("font_label_s", "text_weak")}>
-                AI Features
-              </span>
+              <span className={classNames("font_label_m_emphasized", "text_default")}>{value ? "On" : "Off"}</span>
+              <span className={classNames("font_label_s", "text_weak")}>AI Features</span>
             </div>
           </div>
         }
         edit={
-          <div
-            className={classNames(
-              "flex",
-              "row",
-              "bg_default",
-              "gap_m",
-              "px_m",
-              "py_xl",
-              "ai_center",
-            )}
-          >
-            <Switch
-              checked={value}
-              onChange={() => onChange(!value)}
-              label="AI Features"
-            />
+          <div className={classNames("flex", "row", "bg_default", "gap_m", "px_m", "py_xl", "ai_center")}>
+            <Switch checked={value} onChange={() => onChange(!value)} label="AI Features" />
           </div>
         }
       />
@@ -151,32 +115,17 @@ level and then using the render-function API to call it:
 ```tsx
 const AiFeaturesView = ({ value }: { value: boolean }) => {
   return (
-    <div
-      className={classNames(
-        "flex",
-        "row",
-        "gap_m",
-        "ai_center",
-        "text_default",
-      )}
-    >
+    <div className={classNames("flex", "row", "gap_m", "ai_center", "text_default")}>
       <SparkleIcon className={classNames("fill_current")} />
       <div className={classNames("flex", "col", "gap_m")}>
-        <span className={classNames("font_label_m_emphasized", "text_default")}>
-          {value ? "On" : "Off"}
-        </span>
-        <span className={classNames("font_label_s", "text_weak")}>
-          AI Features
-        </span>
+        <span className={classNames("font_label_m_emphasized", "text_default")}>{value ? "On" : "Off"}</span>
+        <span className={classNames("font_label_s", "text_weak")}>AI Features</span>
       </div>
     </div>
   );
 };
 
-export const MyCustomInlineEdit = ({
-  value,
-  onChange,
-}: MyCustomInlineEditProps) => {
+export const MyCustomInlineEdit = ({ value, onChange }: MyCustomInlineEditProps) => {
   return (
     <InlineEdit.Primitive
       onCancel={() => {
@@ -186,13 +135,7 @@ export const MyCustomInlineEdit = ({
         // submit the value to your backend or perform any action needed
       }}
       view={() => <AiFeaturesView value={value} />}
-      edit={() => (
-        <Switch
-          checked={value}
-          onChange={() => onChange(!value)}
-          label="AI Features"
-        />
-      )}
+      edit={() => <Switch checked={value} onChange={() => onChange(!value)} label="AI Features" />}
     />
   );
 };

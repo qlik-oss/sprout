@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/no-unstable-nested-components */
 
-import { Button, classNames, InlineEdit, Menu, Message, Select, TextField } from "@qlik/sprout-css-react";
 import { EditIcon, MapIcon } from "@qlik/sprout-icons/react";
 import Warning from "@qlik/sprout-icons/react/Warning";
+import { Button, classNames, InlineEdit, Menu, Message, Select, TextField } from "@qlik/sprout-react";
 import type { StoryObj } from "@storybook/react-vite";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
-import { Table, TableInlineEdit, type ColumnDef, type SortingState, type TableProps } from "@qlik/sprout-css-table";
+import { Table, TableInlineEdit, type ColumnDef, type SortingState, type TableProps } from "@qlik/sprout-table";
 import { entityAllFields, makeEntity, type Entity } from "./examples/entity";
 import { makePerson, personColDef, type Person } from "./examples/person";
 import {

@@ -1,4 +1,4 @@
-import type { ColumnDef } from "../../../../sprout-css-table/src/props";
+import type { ColumnDef } from "../../../../sprout-table/src/props";
 
 import people from "./person.json";
 

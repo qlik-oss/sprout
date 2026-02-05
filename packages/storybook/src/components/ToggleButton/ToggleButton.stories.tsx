@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { fn } from "storybook/test";
 
 import sprout from "@qlik/sprout-css-modules";
+import { BookmarkIcon, DeleteIcon, EditIcon } from "@qlik/sprout-icons/react";
 import {
   Badge,
   ButtonGroup,
@@ -10,8 +11,7 @@ import {
   ToggleButton,
   type ToggleButtonProps,
   ToggleIconButton,
-} from "@qlik/sprout-css-react";
-import { BookmarkIcon, DeleteIcon, EditIcon } from "@qlik/sprout-icons/react";
+} from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { ToggleButtonArgTypes } from "./ToggleButton.argTypes";

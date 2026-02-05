@@ -1,5 +1,5 @@
-import { Menu } from "@qlik/sprout-css-react";
 import Person from "@qlik/sprout-icons/react/Person";
+import { Menu } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { LogoutIcon } from "../../icons";

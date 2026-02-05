@@ -1,5 +1,5 @@
 import sprout from "@qlik/sprout-css-modules";
-import { FieldLabel } from "@qlik/sprout-css-react";
+import { FieldLabel } from "@qlik/sprout-react";
 import type { StoryObj } from "@storybook/react-vite";
 
 import { FieldLabelArgTypes } from "./FieldLabel.argTypes";
@@ -10,9 +10,7 @@ export default {
 };
 
 export const Playground: StoryObj<typeof FieldLabel> = {
-  render: ({ children, ...props }) => (
-    <FieldLabel {...props}>{children}</FieldLabel>
-  ),
+  render: ({ children, ...props }) => <FieldLabel {...props}>{children}</FieldLabel>,
   parameters: {
     chromatic: { disableSnapshot: true },
   },
@@ -36,11 +34,7 @@ export const Visualtests: StoryObj<typeof FieldLabel> = {
       <FieldLabel htmlFor="default" optional>
         Label
       </FieldLabel>
-      <FieldLabel
-        htmlFor="default"
-        optional
-        infoIconTooltip="My info to display"
-      >
+      <FieldLabel htmlFor="default" optional infoIconTooltip="My info to display">
         Label
       </FieldLabel>
       <FieldLabel htmlFor="default" infoIconTooltip="My info to display">
@@ -52,19 +46,10 @@ export const Visualtests: StoryObj<typeof FieldLabel> = {
       <FieldLabel htmlFor="default" disabled>
         Label
       </FieldLabel>
-      <FieldLabel
-        htmlFor="default"
-        disabled
-        infoIconTooltip="My info to display"
-      >
+      <FieldLabel htmlFor="default" disabled infoIconTooltip="My info to display">
         Label
       </FieldLabel>
-      <FieldLabel
-        htmlFor="default"
-        disabled
-        optional
-        infoIconTooltip="My info to display"
-      >
+      <FieldLabel htmlFor="default" disabled optional infoIconTooltip="My info to display">
         Label
       </FieldLabel>
       <FieldLabel htmlFor="default" disabled optional>

@@ -32,9 +32,9 @@ importers:
       '@qlik/sprout-css-modules':
         specifier: workspace:*
         version: link:../sprout-css-modules
-      '@qlik/sprout-css-react':
+      '@qlik/sprout-react':
         specifier: workspace:*
-        version: link:../sprout-css-react
+        version: link:../sprout-react
       '@qlik/sprout-icons':
         specifier: workspace:*
         version: link:../sprout-icons
@@ -82,7 +82,7 @@ importers:
         specifier: ^4.0.16
         version: 4.0.18(@types/node@25.2.0)(@vitest/browser-playwright@4.0.18)(@vitest/ui@4.0.18)(jiti@2.6.1)(jsdom@27.0.1)
 
-  packages/sprout-css-hooks:
+  packages/sprout-hooks:
     dependencies:
       '@qlik/design-tokens':
         specifier: workspace:*
@@ -237,7 +237,7 @@ importers:
         specifier: ^4.0.18
         version: 4.0.18(@types/node@25.2.0)(@vitest/browser-playwright@4.0.18)(@vitest/ui@4.0.18)(jiti@2.6.1)(jsdom@27.0.1)
 
-  packages/sprout-css-react:
+  packages/sprout-react:
     dependencies:
       '@floating-ui/react':
         specifier: 0.27.17
@@ -245,9 +245,9 @@ importers:
       '@qlik/design-tokens':
         specifier: workspace:*
         version: link:../design-tokens
-      '@qlik/sprout-css-hooks':
+      '@qlik/sprout-hooks':
         specifier: workspace:*
-        version: link:../sprout-css-hooks
+        version: link:../sprout-hooks
       '@qlik/sprout-css-modules':
         specifier: workspace:*
         version: link:../sprout-css-modules
@@ -355,14 +355,14 @@ importers:
         specifier: ^4.0.18
         version: 4.0.18(@types/node@24.10.1)(@vitest/browser-playwright@4.0.18)(@vitest/ui@4.0.18)(jiti@2.6.1)(jsdom@27.0.1)
 
-  packages/sprout-css-table:
+  packages/sprout-table:
     dependencies:
-      '@qlik/sprout-css-hooks':
+      '@qlik/sprout-hooks':
         specifier: workspace:*
-        version: link:../sprout-css-hooks
-      '@qlik/sprout-css-react':
+        version: link:../sprout-hooks
+      '@qlik/sprout-react':
         specifier: workspace:*
-        version: link:../sprout-css-react
+        version: link:../sprout-react
       '@qlik/sprout-icons':
         specifier: workspace:*
         version: link:../sprout-icons
@@ -541,21 +541,21 @@ importers:
       '@qlik/design-tokens':
         specifier: workspace:*
         version: link:../design-tokens
-      '@qlik/sprout-css-hooks':
+      '@qlik/sprout-hooks':
         specifier: workspace:*
-        version: link:../sprout-css-hooks
+        version: link:../sprout-hooks
       '@qlik/sprout-css-modules':
         specifier: workspace:*
         version: link:../sprout-css-modules
-      '@qlik/sprout-css-react':
+      '@qlik/sprout-react':
         specifier: workspace:*
-        version: link:../sprout-css-react
+        version: link:../sprout-react
       '@qlik/sprout-css-storybook':
         specifier: workspace:*
         version: link:../../tools/sprout-css-storybook
-      '@qlik/sprout-css-table':
+      '@qlik/sprout-table':
         specifier: workspace:*
-        version: link:../sprout-css-table
+        version: link:../sprout-table
       '@qlik/sprout-icons':
         specifier: workspace:*
         version: link:../sprout-icons

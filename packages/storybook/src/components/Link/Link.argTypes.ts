@@ -1,15 +1,7 @@
-import type { LinkProps } from "@qlik/sprout-css-react";
+import type { LinkProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
-const FONT_OPTIONS = [
-  "body_xxl",
-  "body_xl",
-  "body_l",
-  "body_m",
-  "body_s",
-  "body_xs",
-  "inherit",
-];
+const FONT_OPTIONS = ["body_xxl", "body_xl", "body_l", "body_m", "body_s", "body_xs", "inherit"];
 
 export const LinkArgTypes: ArgTypes<LinkProps> = {
   children: {
@@ -56,8 +48,7 @@ export const LinkArgTypes: ArgTypes<LinkProps> = {
   },
   withEllipsis: {
     control: "boolean",
-    description:
-      "Truncates the link text with an ellipsis if it overflows its container.",
+    description: "Truncates the link text with an ellipsis if it overflows its container.",
     table: {
       type: {
         summary: "boolean",

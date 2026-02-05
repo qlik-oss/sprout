@@ -11,12 +11,7 @@ The radio group allows users to make a mutually exclusive selection from a range
 ## Usage
 
 ```tsx
-import {
-  Radio,
-  RadioGroup,
-  type RadioGroupProps,
-  type RadioProps,
-} from "@qlik/sprout-css-react";
+import { Radio, RadioGroup, type RadioGroupProps, type RadioProps } from "@qlik/sprout-react";
 
 // Use the RadioGroup component to group multiple Radio components together
 <RadioGroup name="radio" label="My field" helptext="Select one of the options">
@@ -25,14 +20,7 @@ import {
 </RadioGroup>;
 
 // or just the Atom
-<Radio
-  label="Option 1"
-  readOnly
-  disabled
-  defaultChecked
-  checked
-  onChange={() => {}}
-/>;
+<Radio label="Option 1" readOnly disabled defaultChecked checked onChange={() => {}} />;
 ```
 
 ## Properties

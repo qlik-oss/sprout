@@ -1,4 +1,4 @@
-import { AlertInline } from "@qlik/sprout-css-react";
+import { AlertInline } from "@qlik/sprout-react";
 import { Canvas, Controls, Meta, Unstyled } from "@storybook/addon-docs/blocks";
 
 import * as DndStories from "../integration/dnd-kit.stories";
@@ -17,7 +17,7 @@ import * as Stories from "./Dropzone.stories";
 Dropzones indicate for a user that a drag and drop interaction can be done. Dropzones act as a target for the drag and drop operation.
 
 ```tsx
-import { Dropzone } from "@qlik/sprout-css-react";
+import { Dropzone } from "@qlik/sprout-react";
 ```
 
 This component implement the UI of the dropzone which should look like this:
@@ -36,13 +36,7 @@ Here is a demo built using dnd-kit:
 import { type CSSProperties, useState } from "react";
 
 import { DndContext, useDraggable, useDroppable } from "@dnd-kit/core";
-import {
-  Button,
-  type ButtonProps,
-  Dropzone,
-  type DropzoneProps,
-  classNames,
-} from "@qlik/sprout-css-react";
+import { Button, type ButtonProps, Dropzone, type DropzoneProps, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 function Draggable({ id, ...props }: ButtonProps) {

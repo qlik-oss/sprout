@@ -44,5 +44,5 @@ jobs:
       #   uses: chromaui/action@latest
       #   with:
       #     projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-      #     workingDir: packages/sprout-css-react
+      #     workingDir: packages/sprout-react
       #     autoAcceptChanges: "main" # 👈 Option to accept all changes on main

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { type ColorResult, TwitterPicker } from "react-color";
 
-import { IconButton, Popover } from "@qlik/sprout-css-react";
+import { IconButton, Popover } from "@qlik/sprout-react";
 
 import styles from "./ColorPicker.module.css";
 
@@ -14,9 +14,7 @@ export function ColorPicker({
   onChange?: (color: string) => void;
   colors?: Array<string>;
 }) {
-  const [selectedColor, setSelectedColor] = useState<string>(
-    defaultSelectedColor || "#fff",
-  );
+  const [selectedColor, setSelectedColor] = useState<string>(defaultSelectedColor || "#fff");
 
   const handleChangeComplete = (color: ColorResult) => {
     setSelectedColor(color.hex);
@@ -25,13 +23,7 @@ export function ColorPicker({
 
   return (
     <Popover
-      content={
-        <TwitterPicker
-          colors={colors}
-          color={selectedColor}
-          onChangeComplete={handleChangeComplete}
-        />
-      }
+      content={<TwitterPicker colors={colors} color={selectedColor} onChangeComplete={handleChangeComplete} />}
       placement="bottom-start"
     >
       <IconButton

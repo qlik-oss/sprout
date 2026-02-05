@@ -9,7 +9,7 @@ import * as Stories from "./MultiSelect.stories";
 Multi select elements are UI components that let users choose multiple options from a predefined list. Commonly found in forms, they simplify selection tasks and enhance usability by presenting choices in an organized format and allowing to filter them.
 
 ```tsx
-import { Select } from "@qlik/sprout-css-react";
+import { Select } from "@qlik/sprout-react";
 
 <Select.Multi defaultValue={["red", "orange"]} placeholder="Select a color">
   {/* This is good to have the empty value as in HTML */}
@@ -31,11 +31,7 @@ import { Select } from "@qlik/sprout-css-react";
   <Select.Divider />
   {/* Simple and efficient composition */}
   <Select.OptGroup label="Deprecated Colors">
-    <Select.Option
-      label="Chartreuse"
-      value="chartreuse"
-      description="nice color btw"
-    />
+    <Select.Option label="Chartreuse" value="chartreuse" description="nice color btw" />
     <Select.Option label="Cornsilk" value="cornsilk" />
     <Select.Option label="Gainsboro" value="pink" />
   </Select.OptGroup>

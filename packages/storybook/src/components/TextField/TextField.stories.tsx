@@ -1,5 +1,6 @@
 import { fn } from "storybook/test";
 
+import { AddIcon, CopyIcon, LinkIcon, MailIcon, NumericIcon, SubtractIcon } from "@qlik/sprout-icons/react";
 import {
   AffixWrapper,
   Button,
@@ -10,8 +11,7 @@ import {
   TextField,
   type TextFieldProps,
   classNames,
-} from "@qlik/sprout-css-react";
-import { AddIcon, CopyIcon, LinkIcon, MailIcon, NumericIcon, SubtractIcon } from "@qlik/sprout-icons/react";
+} from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { TextFieldArgTypes } from "./TextField.argTypes";

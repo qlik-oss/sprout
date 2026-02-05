@@ -1,13 +1,6 @@
 import sprout, { type AllClasses } from "@qlik/sprout-css-modules";
 
-import {
-  BOX_CLASSES,
-  CONTENT_CLASSES,
-  PROPERTY_COL_PROPS,
-  PROPERTY_ROW_PROPS,
-  PropertyValue,
-  omit,
-} from "./Content";
+import { BOX_CLASSES, CONTENT_CLASSES, PROPERTY_COL_PROPS, PROPERTY_ROW_PROPS, PropertyValue, omit } from "./Content";
 
 export default {
   title: "CSS/sprout-css-modules/spacing",
@@ -46,35 +39,15 @@ export const Padding = {
     controls: { disable: true },
   },
   render: () => (
-    <div
-      className={sprout.classNames(
-        ...BOX_CLASSES,
-        "flex-col",
-        "border-none",
-        "gap-0",
-      )}
-    >
+    <div className={sprout.classNames(...BOX_CLASSES, "flex-col", "border-none", "gap-0")}>
       {PADDING_PROPERTIES.map((property) => (
-        <div
-          key={property.name}
-          className={sprout.classNames(...PROPERTY_ROW_PROPS)}
-        >
+        <div key={property.name} className={sprout.classNames(...PROPERTY_ROW_PROPS)}>
           {property.values.map((value) => {
             const className = `${property.name}-${value}` as AllClasses;
             return (
-              <div
-                key={className}
-                className={sprout.classNames(...PROPERTY_COL_PROPS)}
-              >
+              <div key={className} className={sprout.classNames(...PROPERTY_COL_PROPS)}>
                 <PropertyValue>{className}</PropertyValue>
-                <div
-                  className={sprout.classNames(
-                    ...omit(CONTENT_CLASSES, "p-xl"),
-                    className,
-                  )}
-                >
-                  content
-                </div>
+                <div className={sprout.classNames(...omit(CONTENT_CLASSES, "p-xl"), className)}>content</div>
               </div>
             );
           })}
@@ -121,34 +94,16 @@ export const Margin = {
     controls: { disable: true },
   },
   render: () => (
-    <div
-      className={sprout.classNames(
-        ...BOX_CLASSES,
-        "flex-col",
-        "border-none",
-        "gap-0",
-      )}
-    >
+    <div className={sprout.classNames(...BOX_CLASSES, "flex-col", "border-none", "gap-0")}>
       {MARGIN_PROPERTIES.map((property) => (
-        <div
-          key={property.name}
-          className={sprout.classNames(...PROPERTY_ROW_PROPS)}
-        >
+        <div key={property.name} className={sprout.classNames(...PROPERTY_ROW_PROPS)}>
           {property.values.map((value) => (
-            <div
-              key={`${property.name}-${value}`}
-              className={sprout.classNames(...PROPERTY_COL_PROPS)}
-            >
+            <div key={`${property.name}-${value}`} className={sprout.classNames(...PROPERTY_COL_PROPS)}>
               <PropertyValue>
                 {property.name}-{value}
               </PropertyValue>
               <div className={sprout.classNames("border-default")}>
-                <div
-                  className={sprout.classNames(
-                    ...CONTENT_CLASSES,
-                    `${property.name}_${value}` as AllClasses,
-                  )}
-                >
+                <div className={sprout.classNames(...CONTENT_CLASSES, `${property.name}_${value}` as AllClasses)}>
                   content
                 </div>
               </div>

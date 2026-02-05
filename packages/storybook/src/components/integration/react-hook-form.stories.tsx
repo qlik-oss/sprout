@@ -11,7 +11,7 @@ import {
   TextField,
   Textarea,
   classNames,
-} from "@qlik/sprout-css-react";
+} from "@qlik/sprout-react";
 import type { Meta } from "@storybook/react-vite";
 
 export default {
@@ -60,28 +60,12 @@ export function FormDefaultValuesTest() {
       data-testid="form"
     >
       <div
-        className={classNames(
-          "flex",
-          "border-box",
-          "flex-col",
-          "gap-xl",
-          "justify-stretch",
-          "content-stretch",
-        )}
+        className={classNames("flex", "border-box", "flex-col", "gap-xl", "justify-stretch", "content-stretch")}
         style={{ inlineSize: "300px" }}
       >
         <TextField data-testid="name" label="name" {...register("name")} />
-        <Textarea
-          data-testid="description"
-          label="description"
-          {...register("description")}
-        />
-        <Select.Select
-          data-testid="select"
-          label="Select"
-          placeholder="Select an option"
-          {...register("job")}
-        >
+        <Textarea data-testid="description" label="description" {...register("description")} />
+        <Select.Select data-testid="select" label="Select" placeholder="Select an option" {...register("job")}>
           <Select.Option value="developer">Developer</Select.Option>
           <Select.Option value="designer">Designer</Select.Option>
           <Select.Option value="manager">Manager</Select.Option>
@@ -106,14 +90,13 @@ export type MyFormData = {
 };
 
 export function Form() {
-  const { register, handleSubmit, formState, control, watch } =
-    useForm<MyFormData>({
-      defaultValues: {
-        priceRange: [20, 80],
-        fruit: "apple",
-        vegetables: ["beans"],
-      },
-    });
+  const { register, handleSubmit, formState, control, watch } = useForm<MyFormData>({
+    defaultValues: {
+      priceRange: [20, 80],
+      fruit: "apple",
+      vegetables: ["beans"],
+    },
+  });
   const [formData, setFormData] = useState<MyFormData>();
 
   const onSubmit = handleSubmit(async (data: MyFormData) => {
@@ -153,22 +136,9 @@ export function Form() {
           data-testid="wrapper"
           id="component-testing"
         >
-          <div
-            className={classNames(
-              "flex",
-              "border-box",
-              "flex-col",
-              "gap-xl",
-              "justify-stretch",
-              "content-stretch",
-            )}
-          >
+          <div className={classNames("flex", "border-box", "flex-col", "gap-xl", "justify-stretch", "content-stretch")}>
             <TextField data-testid="name" label="name" {...register("name")} />
-            <Textarea
-              data-testid="description"
-              label="description"
-              {...register("description")}
-            />
+            <Textarea data-testid="description" label="description" {...register("description")} />
             <RadioGroup
               data-testid="color"
               options={[
@@ -179,22 +149,9 @@ export function Form() {
               label="Select a color"
               {...register("color")}
             />
-            <Checkbox
-              data-testid="terms"
-              label="I agree to the terms and conditions"
-              {...register("terms")}
-            />
-            <Checkbox
-              data-testid="newsletter"
-              label="I want to subscribe the newsletter"
-              {...register("newsletter")}
-            />
-            <Select.Select
-              data-testid="select-fruit"
-              label="Fruit"
-              placeholder="Select a fruit"
-              {...register("fruit")}
-            >
+            <Checkbox data-testid="terms" label="I agree to the terms and conditions" {...register("terms")} />
+            <Checkbox data-testid="newsletter" label="I want to subscribe the newsletter" {...register("newsletter")} />
+            <Select.Select data-testid="select-fruit" label="Fruit" placeholder="Select a fruit" {...register("fruit")}>
               <Select.Option value="apple" data-testid="select-apple">
                 Apple
               </Select.Option>
@@ -205,11 +162,7 @@ export function Form() {
                 Orange
               </Select.Option>
             </Select.Select>
-            <Switch
-              data-testid="switch-light"
-              label="Light"
-              {...register("light")}
-            />
+            <Switch data-testid="switch-light" label="Light" {...register("light")} />
             <Select.Multi
               data-testid="select-vegetables"
               label="Vegetables"
@@ -233,10 +186,7 @@ export function Form() {
             <Controller
               control={control}
               name="amount"
-              render={({
-                field: { onChange, value, disabled },
-                fieldState: { invalid, error },
-              }) => (
+              render={({ field: { onChange, value, disabled }, fieldState: { invalid, error } }) => (
                 <Slider.Single
                   label="Amount"
                   value={value}
@@ -258,15 +208,10 @@ export function Form() {
                   }
 
                   const [min, max] = value;
-                  return (
-                    min !== max || "Start and end values can't be the same"
-                  );
+                  return min !== max || "Start and end values can't be the same";
                 },
               }}
-              render={({
-                field: { onChange, value, disabled },
-                fieldState: { invalid, error },
-              }) => (
+              render={({ field: { onChange, value, disabled }, fieldState: { invalid, error } }) => (
                 <Slider.Range
                   label="Price Range"
                   value={value}

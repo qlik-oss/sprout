@@ -1,4 +1,4 @@
-import type { BadgeProps } from "@qlik/sprout-css-react";
+import type { BadgeProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 export const BadgeArgTypes: ArgTypes<BadgeProps> = {
@@ -7,8 +7,7 @@ export const BadgeArgTypes: ArgTypes<BadgeProps> = {
       type: "select",
     },
     options: ["dot", "alphanumeric"],
-    description:
-      "Select `alphanumeric` to display text inside the badge. `dot` shows a simple indicator without text.",
+    description: "Select `alphanumeric` to display text inside the badge. `dot` shows a simple indicator without text.",
     table: {
       defaultValue: { summary: "dot" },
       type: {
@@ -20,8 +19,7 @@ export const BadgeArgTypes: ArgTypes<BadgeProps> = {
     control: {
       type: "select",
     },
-    description:
-      "Color variant of the badge. When undefined, it defaults to the neutral variant.",
+    description: "Color variant of the badge. When undefined, it defaults to the neutral variant.",
     options: ["neutral", "info", "success", "warning", "danger", "selected"],
     table: {
       defaultValue: { summary: "neutral" },
@@ -35,8 +33,7 @@ export const BadgeArgTypes: ArgTypes<BadgeProps> = {
     control: {
       type: "text",
     },
-    description:
-      "Text to display inside the badge. Only applicable when variant is 'alphanumeric'.",
+    description: "Text to display inside the badge. Only applicable when variant is 'alphanumeric'.",
     table: {
       type: {
         summary: "string",

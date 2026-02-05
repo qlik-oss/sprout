@@ -1,4 +1,4 @@
-import type { DividerProps } from "@qlik/sprout-css-react";
+import type { DividerProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 export const DividerArgTypes: ArgTypes<DividerProps> = {

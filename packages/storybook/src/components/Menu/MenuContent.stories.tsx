@@ -1,5 +1,5 @@
-import { Menu, classNames } from "@qlik/sprout-css-react";
 import Person from "@qlik/sprout-icons/react/Person";
+import { Menu, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { MenuContentArgTypes } from "./Menu.argTypes";
@@ -13,9 +13,7 @@ export default meta;
 export const Content: StoryObj<typeof Menu.Content> = {
   render: (props) => (
     <div className={classNames("flex", "w-s", "gap-m")}>
-      <h2 className={classNames("font-heading-s")}>
-        Create your own menu item
-      </h2>
+      <h2 className={classNames("font-heading-s")}>Create your own menu item</h2>
 
       <button type="button">
         <Menu.Content {...props} />

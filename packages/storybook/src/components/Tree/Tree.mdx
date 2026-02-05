@@ -9,15 +9,9 @@ import * as Stories from "./Tree.stories";
 Tree views help users navigate large amounts of information by organizing content into a hierarchical structure using nested headings.In the tree view, branch nodes can be expanded or collapsed to reveal or hide their child nodes.
 
 ```jsx
-import { Tree } from "@qlik/sprout-css-react";
+import { Tree } from "@qlik/sprout-react";
 
-<Tree.TreeItem
-  id="leaf-icon"
-  path={["folder_expanded"]}
-  label="Leaf icon"
-  isLeaf
-  icon={<FileOutline />}
-/>;
+<Tree.TreeItem id="leaf-icon" path={["folder_expanded"]} label="Leaf icon" isLeaf icon={<FileOutline />} />;
 ```
 
 <Canvas of={Stories.TreeItem} />

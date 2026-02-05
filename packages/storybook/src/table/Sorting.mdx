@@ -16,7 +16,7 @@ If we want to set an initial sorting order, this can be done by passing `default
 
 ```tsx
 import { type SortingState } from "@tanstack/react-table";
-import { Table } from "@qlik/sprout-css-table";
+import { Table } from "@qlik/sprout-table";
 
 const defaultSorting: SortingState = [
   {
@@ -40,7 +40,7 @@ Use `onSortingChange` function as table prop to listen to changes in sorting sta
 ```tsx
 import { useState } from "react";
 import { type SortingState } from "@tanstack/react-table";
-import { Table } from "@qlik/sprout-css-table";
+import { Table } from "@qlik/sprout-table";
 
 function ComponentUsingTable() {
   const [sortingState, setSortingState] = useState<SortingState>();
@@ -103,7 +103,7 @@ If sorting is disabled for a column, sort actions will not be available in heade
 The `disableColumnSorting` table prop allows to disable sorting for all table columns
 
 ```tsx
-import { Table } from "@qlik/sprout-css-table";
+import { Table } from "@qlik/sprout-table";
 
 return <Table rows={rows} columns={columns} disableColumnSorting />;
 ```

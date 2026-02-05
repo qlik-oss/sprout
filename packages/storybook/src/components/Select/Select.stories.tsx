@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 import { fn } from "storybook/test";
 
-import { Select, type SelectProps, classNames } from "@qlik/sprout-css-react";
 import ChartIcon from "@qlik/sprout-icons/react/Chart";
 import TableIcon from "@qlik/sprout-icons/react/Table";
 import TextIcon from "@qlik/sprout-icons/react/Text";
+import { Select, type SelectProps, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { PaletteOutlineIcon } from "../../icons";

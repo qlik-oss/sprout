@@ -32,7 +32,7 @@ Use `onColumnSizingChange` function as table prop to listen to changes in column
 
 ```tsx
 import { useState } from "react";
-import { Table, type ColumnSizingState } from "@qlik/sprout-css-table";
+import { Table, type ColumnSizingState } from "@qlik/sprout-table";
 
 function ComponentUsingTable() {
   const [columnSizingState, setColumnSizingState] = useState<ColumnSizingState>();
@@ -59,7 +59,7 @@ The column sizing is enabled for all columns by default
 The `disableColumnResize` table prop allows to disable resizing for all table columns
 
 ```tsx
-import { Table } from "@qlik/sprout-css-table";
+import { Table } from "@qlik/sprout-table";
 
 return <Table rows={rows} columns={columns} disableColumnResize />;
 ```

@@ -8,11 +8,6 @@ export default {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { classNames, ...rest } = sprout;
 
-const classesValue = Object.keys(rest).filter(
-  (key) => !key.includes("_"),
-) as Array<AllClasses>;
-classesValue.sort();
-
 export const Playground: StoryObj<{ classNames: Array<AllClasses> }> = {
   name: "classNames",
   // eslint-disable-next-line @typescript-eslint/no-shadow
@@ -30,10 +25,8 @@ export const Playground: StoryObj<{ classNames: Array<AllClasses> }> = {
   argTypes: {
     classNames: {
       control: {
-        type: "multi-select",
+        type: "object",
       },
-      rows: 10,
-      options: classesValue,
     },
   },
 };

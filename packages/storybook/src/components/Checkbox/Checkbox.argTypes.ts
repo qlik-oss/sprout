@@ -1,4 +1,4 @@
-import type { CheckboxGroupProps, CheckboxProps } from "@qlik/sprout-css-react";
+import type { CheckboxGroupProps, CheckboxProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 import { FieldArgTypes } from "../Field.argTypes";

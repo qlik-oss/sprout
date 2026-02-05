@@ -1,11 +1,6 @@
 import type { ReactNode } from "react";
 
-import {
-  Avatar,
-  Badge,
-  Button,
-  classNames,
-} from "@qlik/sprout-css-react";
+import { Avatar, Badge, Button, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { BadgeArgTypes } from "./Badge.argTypes";
@@ -23,10 +18,7 @@ const parameters = {
 
 export const Playground: Story = {
   render: ({ ...props }) => (
-    <div
-      className={classNames("flex", "flex-row", "w-fit", "p-s")}
-      data-testid="wrapper"
-    >
+    <div className={classNames("flex", "flex-row", "w-fit", "p-s")} data-testid="wrapper">
       <Badge {...props} />
     </div>
   ),
@@ -60,10 +52,7 @@ export const WithAvatar: Story = {
  */
 export const DeprecatedTypeProp: Story = {
   render: (props) => (
-    <div
-      className={classNames("flex", "flex-row", "w-fit", "p-s")}
-      data-testid="wrapper"
-    >
+    <div className={classNames("flex", "flex-row", "w-fit", "p-s")} data-testid="wrapper">
       <Badge {...props} />
     </div>
   ),
@@ -87,26 +76,12 @@ export const DeprecatedTypeProp: Story = {
 };
 
 function H2({ children }: { children: ReactNode }) {
-  return (
-    <h2 className={classNames("p-0", "m-0", "font-heading-s", "text-default")}>
-      {children}
-    </h2>
-  );
+  return <h2 className={classNames("p-0", "m-0", "font-heading-s", "text-default")}>{children}</h2>;
 }
 
 export const VisualTest: Story = {
   render: () => (
-    <div
-      className={classNames(
-        "flex",
-        "flex-col",
-        "border-box",
-        "w-fit",
-        "p-s",
-        "gap-m",
-      )}
-      data-testid="wrapper"
-    >
+    <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s", "gap-m")} data-testid="wrapper">
       <H2>Dot</H2>
       <Badge />
       <Badge color="info" />
@@ -125,19 +100,9 @@ export const VisualTest: Story = {
 
       <H2>Text</H2>
       <Badge text="hello worlp" variant="alphanumeric" />
-      <Badge
-        text="hello worlp natural overflow"
-        variant="alphanumeric"
-        color="selected"
-      />
-      <div
-        className={classNames("flex", "flex-col", "gap-s", "overflow-hidden")}
-        style={{ inlineSize: 50 }}
-      >
-        <Badge
-          text="hello world what happens when the container shrinks ?"
-          variant="alphanumeric"
-        />
+      <Badge text="hello worlp natural overflow" variant="alphanumeric" color="selected" />
+      <div className={classNames("flex", "flex-col", "gap-s", "overflow-hidden")} style={{ inlineSize: 50 }}>
+        <Badge text="hello world what happens when the container shrinks ?" variant="alphanumeric" />
         <Badge text="hello world" variant="alphanumeric" />
       </div>
 

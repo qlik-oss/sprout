@@ -1,4 +1,4 @@
-import type { ButtonGroupProps } from "@qlik/sprout-css-react";
+import type { ButtonGroupProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 export const ButtonGroupArgTypes: ArgTypes<ButtonGroupProps> = {
@@ -15,8 +15,7 @@ export const ButtonGroupArgTypes: ArgTypes<ButtonGroupProps> = {
     control: {
       type: "boolean",
     },
-    description:
-      "If true, the button group will take the full width of its container.",
+    description: "If true, the button group will take the full width of its container.",
     table: {
       defaultValue: {
         summary: "false",

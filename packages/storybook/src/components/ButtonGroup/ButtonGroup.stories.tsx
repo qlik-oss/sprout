@@ -1,3 +1,4 @@
+import { DeleteIcon } from "@qlik/sprout-icons/react";
 import {
   Button,
   ButtonGroup,
@@ -7,8 +8,7 @@ import {
   Select,
   TextField,
   classNames,
-} from "@qlik/sprout-css-react";
-import { DeleteIcon } from "@qlik/sprout-icons/react";
+} from "@qlik/sprout-react";
 
 import type { Meta, StoryObj } from "@storybook/react-vite";
 

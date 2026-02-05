@@ -9,7 +9,7 @@ import * as Stories from "./Select.stories";
 Selects are form elements that allows a user to select an option from a list of several options.
 
 ```tsx
-import { Select } from "@qlik/sprout-css-react";
+import { Select } from "@qlik/sprout-react";
 
 <Select.Select defaultValue="red" placeholder="Select a color" size="default">
   {/* This is good to have the empty value as in HTML */}
@@ -49,7 +49,7 @@ By default, the Select is not searchable.
 In order to make it serchable, `<Select.Search />` need to be passed as first child to `<Select.Select>`.
 
 ```tsx
-import { Select } from "@qlik/sprout-css-react";
+import { Select } from "@qlik/sprout-react";
 
 <Select.Select defaultValue="red" placeholder="Select a color" size="default">
   {/* Select.Search need to be passed as first child */}
