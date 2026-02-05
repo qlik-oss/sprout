@@ -68,6 +68,7 @@ playwright-report
 blob-report
 .cache/
 __snapshots__
+test-results
 
 # report
 eslint-report.json
