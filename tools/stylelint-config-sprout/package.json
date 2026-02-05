@@ -1,6 +1,6 @@
 {
   "name": "@qlik/stylelint-config-sprout",
-  "version": "6.6.9",
+  "version": "6.6.11",
   "homepage": "https://github.com/qlik/sprout#readme",
   "bugs": {
     "url": "https://github.com/qlik/sprout/issues"
@@ -22,12 +22,11 @@
     "format:check": "prettier --check ./** --ignore-unknown",
     "format:write": "prettier --write ./** --ignore-unknown",
     "lint": "eslint .",
-    "lint:ci": "eslint . -f json -o eslint-report.json",
     "test": "node --test 'src/**/*.test.mjs'"
   },
   "dependencies": {
     "@qlik/design-tokens": "workspace:*",
-    "stylelint": "^17.0.0",
+    "stylelint": "^17.1.0",
     "stylelint-plugin-logical-css": "^1.2.3"
   },
   "devDependencies": {
@@ -36,7 +35,7 @@
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
-    "prettier": "^3.8.0",
+    "prettier": "^3.8.1",
     "stylelint-test-rule-node": "^1.0.0"
   }
 }
