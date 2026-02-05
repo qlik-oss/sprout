@@ -22,9 +22,9 @@
   ],
   "scripts": {
     "build": "pnpm run build:tsc && pnpm run copy",
-    "build-storybook": "storybook build",
     "build:tsc": "rm -rf lib && tsc -p tsconfig.build.json",
     "build:watch": "concurrently \"pnpm run build:tsc --watch\" \"pnpm run copy:watch\"",
+    "build-storybook": "storybook build",
     "check-types": "pnpm run build:tsc --noEmit",
     "clean": "rimraf playwright-report storybook-static test-results playwright/.cache lib",
     "copy": "cpx \"src/**/*.{css,json}*\" lib",
