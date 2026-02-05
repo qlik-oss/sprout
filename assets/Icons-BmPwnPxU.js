@@ -1,0 +1,1 @@
+import{j as n}from"./iframe-B4vjk2_C.js";import{A as o}from"./index-Z8VovJW6.js";const r=t=>{if(typeof t>"u")return null;const s=o[t];return n.jsx(s,{})},e=[void 0,...Object.keys(o)],f=Object.fromEntries(e.map(t=>[t,r(t)]));export{f as I,e as a};
