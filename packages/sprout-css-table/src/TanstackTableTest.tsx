@@ -1,6 +1,7 @@
 import { Button, classNames, Menu, Panel, TextField } from "@qlik/sprout-css-react";
 import { useCallback, useMemo, useState, type CSSProperties } from "react";
 import { Table, TableInlineEdit, type ColumnDef, type TableProps } from ".";
+import type { ColumnSizingState, SortingState } from "./props";
 import {
   entityAllFields,
   entityCustomSorting,
@@ -9,9 +10,8 @@ import {
   entityRenderCell,
   makeEntity,
   type Entity,
-} from "./docs/examples/entity";
-import { makePerson, personColDef, type Person } from "./docs/examples/person";
-import type { ColumnSizingState, SortingState } from "./props";
+} from "./tests/examples/entity";
+import { makePerson, personColDef, type Person } from "./tests/examples/person";
 
 const data = makePerson(20);
 

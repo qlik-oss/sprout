@@ -109,27 +109,9 @@ importers:
       '@qlik/prettier-config':
         specifier: ^0.4.33
         version: 0.4.33(prettier@3.8.1)(svelte@4.2.18)(typescript@5.9.3)
-      '@qlik/sprout-css-storybook':
-        specifier: workspace:*
-        version: link:../../tools/sprout-css-storybook
       '@qlik/tsconfig':
         specifier: ^0.3.1
         version: 0.3.1
-      '@storybook/addon-docs':
-        specifier: ^10.2.6
-        version: 10.2.6(@types/react@19.2.11)(esbuild@0.27.2)(rollup@4.57.1)(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(vite@7.3.1(@types/node@25.2.0)(jiti@2.6.1))
-      '@storybook/addon-links':
-        specifier: ^10.2.6
-        version: 10.2.6(react@18.3.1)(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@storybook/addon-themes':
-        specifier: ^10.2.6
-        version: 10.2.6(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@storybook/react':
-        specifier: ^10.2.6
-        version: 10.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3)
-      '@storybook/react-vite':
-        specifier: ^10.2.6
-        version: 10.2.6(esbuild@0.27.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.57.1)(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.0)(jiti@2.6.1))
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^6.0.2
         version: 6.0.2(@vue/compiler-sfc@3.5.27)(prettier-plugin-svelte@3.4.1(prettier@3.8.1)(svelte@4.2.18))(prettier@3.8.1)(svelte@4.2.18)
@@ -169,9 +151,6 @@ importers:
       rimraf:
         specifier: ^6.1.2
         version: 6.1.2
-      storybook:
-        specifier: ^10.2.6
-        version: 10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -397,9 +376,6 @@ importers:
       '@axe-core/playwright':
         specifier: ^4.11.0
         version: 4.11.0(playwright-core@1.58.1)
-      '@chromatic-com/storybook':
-        specifier: ^5.0.0
-        version: 5.0.0(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@eslint/eslintrc':
         specifier: ^3.3.3
         version: 3.3.3
@@ -421,36 +397,12 @@ importers:
       '@qlik/prettier-config':
         specifier: ^0.4.33
         version: 0.4.33(prettier@3.8.1)(svelte@4.2.18)(typescript@5.9.3)
-      '@qlik/sprout-css-storybook':
-        specifier: workspace:*
-        version: link:../../tools/sprout-css-storybook
       '@qlik/tsconfig':
         specifier: ^0.3.1
         version: 0.3.1
       '@release-it/conventional-changelog':
         specifier: ^10.0.4
         version: 10.0.4(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.2.1)(release-it@19.2.4(@types/node@25.2.0))
-      '@storybook/addon-a11y':
-        specifier: ^10.2.6
-        version: 10.2.6(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@storybook/addon-designs':
-        specifier: ^11.1.1
-        version: 11.1.1(@storybook/addon-docs@10.2.6(@types/react@19.2.11)(esbuild@0.27.2)(rollup@4.57.1)(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(vite@7.3.1(@types/node@25.2.0)(jiti@2.6.1)))(@types/react@19.2.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@storybook/addon-docs':
-        specifier: ^10.2.6
-        version: 10.2.6(@types/react@19.2.11)(esbuild@0.27.2)(rollup@4.57.1)(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(vite@7.3.1(@types/node@25.2.0)(jiti@2.6.1))
-      '@storybook/addon-links':
-        specifier: ^10.2.6
-        version: 10.2.6(react@18.3.1)(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@storybook/addon-themes':
-        specifier: ^10.2.6
-        version: 10.2.6(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@storybook/react':
-        specifier: ^10.2.6
-        version: 10.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3)
-      '@storybook/react-vite':
-        specifier: ^10.2.6
-        version: 10.2.6(esbuild@0.27.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.57.1)(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.0)(jiti@2.6.1))
       '@types/node':
         specifier: ^25.0.5
         version: 25.2.0
@@ -523,15 +475,6 @@ importers:
       rimraf:
         specifier: ^6.1.2
         version: 6.1.2
-      storybook:
-        specifier: ^10.2.6
-        version: 10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      storybook-addon-pseudo-states:
-        specifier: ^10.2.6
-        version: 10.2.6(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      storybook-addon-rtl:
-        specifier: ^3.0.1
-        version: 3.0.1(storybook@10.2.6(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       typescript:
         specifier: ^5.9.3
         version: 5.9.3

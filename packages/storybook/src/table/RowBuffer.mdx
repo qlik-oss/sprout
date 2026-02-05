@@ -1,0 +1,19 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Table/Docs/Rows/Row buffer" />
+
+# Table - Row buffer
+
+Customize the number of items to render above and below the viewport.
+Increasing this number will increase the amount of time it takes to render the virtualizer.
+
+It can be useful to increase and set custom value in case of rendering large tables,
+to avoid seeing slow rendering blank items at the top and bottom of the virtualizer when scrolling.
+But the bigger the number is the more it will consume resources and make the entire page slower.
+A good value should be the number of element visible in your page.
+
+```tsx
+import { Table } from "@qlik/sprout-css-table";
+
+return <Table rows={rows} columns={columns} rowBuffer={50} />;
+```

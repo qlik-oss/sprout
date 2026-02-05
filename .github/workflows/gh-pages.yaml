@@ -1,0 +1,42 @@
+name: "GH-Pages"
+on:
+  push:
+    branches:
+      - "main"
+    tags-ignore:
+      - "v*.*.*"
+
+      # This allows a subsequently queued workflow run to interrupt previous runs
+concurrency:
+  group: "${{ github.workflow }} @ ${{ github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  # Build job
+  storybook-build:
+    runs-on: ubuntu-latest
+    steps:
+      # <Not provided for brevity>
+      # At a minimum this job should upload artifacts using actions/upload-pages-artifact
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # otherwise, ci will failed to push refs
+
+      - name: Use Node.js
+        uses: ./.github/actions/setup-node
+        with:
+          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+
+      - run: |
+          pnpm install
+          pnpm build
+          pnpm run storybook:build
+          touch packages/storybook/storybook-static/.nojekyll
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: packages/storybook/storybook-static

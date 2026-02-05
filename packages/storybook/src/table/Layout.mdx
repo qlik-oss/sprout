@@ -1,0 +1,35 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+import { AlertInline, classNames } from "@qlik/sprout-css-react";
+import * as ListStories from "./ListTable.stories";
+import * as DataStories from "./DataTable.stories";
+
+<Meta title="Table/Docs/Layout" />
+
+# Table layout
+
+By default, the Table fills the space of its parent container, so that container must have intrinsic dimensions. In other words, if the container has no child elements, then it still must have non-zero dimensions.
+
+<Canvas of={ListStories.LayoutAuto} />
+
+## Flex parent container
+
+The Table can be rendered inside a `flex` container with `flex_column`. Without setting the minimum and maximum height, the Table takes as much space as it needs to display all rows.
+
+<Canvas of={ListStories.FlexParentContainer} />
+
+## Minimum and maximum height
+
+In the demo below, the Table is inside a `flex` container with `flex_column` and `min-height: 200px` and a `max-height: 400px` and adapts its height when the number of rows changes.
+
+<Canvas of={ListStories.FlexParentContainerBoundaries} />
+
+## Predefined dimensions
+
+You can also set predefined dimensions on the parent container. In the demo below, the Table is inside a container with a fixed height of `300px`.
+
+<Canvas of={ListStories.PredefinedDimensions} />
+
+## Percentage dimensions
+
+When using percentages (%) for height or width, make sure that the Table's parent container has intrinsic dimensions. Browsers adjust the element based on a percentage of its parent's size.
+If the parent has no size, the percentage will be zero.

@@ -1,7 +1,7 @@
 import { classNames } from "@qlik/sprout-css-react";
 import { useState } from "react";
 import { Table } from "..";
-import { entityAllFields, makeEntity } from "../docs/examples/entity";
+import { entityAllFields, makeEntity } from "./examples/entity";
 
 export function PaginationSpec() {
   const [data, setData] = useState(() => makeEntity(20));
@@ -12,7 +12,7 @@ export function PaginationSpec() {
     }, 100);
   };
   return (
-    <div className={classNames("w-full", "p-xl", "border_box")} style={{ blockSize: 400 }}>
+    <div className={classNames("w-full", "p-xl", "border-box")} style={{ blockSize: 400 }}>
       <Table variant="list" columns={entityAllFields} rows={data} nextPage={fetchMore} />
     </div>
   );
