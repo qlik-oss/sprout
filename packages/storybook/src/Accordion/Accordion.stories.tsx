@@ -10,8 +10,7 @@ import {
   TextField,
   classNames,
 } from "@qlik/sprout-css-react";
-import BookOutline from "@qlik/sprout-icons/react/BookOutline";
-import MoreVertical from "@qlik/sprout-icons/react/MoreVertical";
+import { FilterIcon, DocumentationIcon } from "@qlik/sprout-icons/react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import {
@@ -56,7 +55,10 @@ export const ItemPlayground: StoryObj<AccordionProps["Item"]> = {
             variant="quiet"
             size="small"
             aria-label="More actions"
-            icon={<MoreVertical height={undefined} />}
+            onClick={(e: MouseEvent) => {
+              e.stopPropagation();
+            }}
+            icon={<FilterIcon height={undefined} />}
           />
         ) : (
           props.affix
@@ -250,14 +252,14 @@ export const VisualTest: StoryObj = {
           <Accordion.Item
             header="HeaderLabel"
             width="full"
-            icon={<BookOutline />}
+            icon={<DocumentationIcon />}
           >
             <SampleParagraph />
           </Accordion.Item>
           <Accordion.Item
             header="HeaderLabel"
             width="full"
-            icon={<BookOutline />}
+            icon={<DocumentationIcon />}
             description="DescriptionLabel"
           >
             <SampleParagraph />
@@ -281,7 +283,7 @@ export const VisualTest: StoryObj = {
             header="HeaderLabel"
             width="full"
             chevronPosition="leading"
-            icon={<BookOutline />}
+            icon={<DocumentationIcon />}
           >
             <SampleParagraph />
           </Accordion.Item>
@@ -293,7 +295,7 @@ export const VisualTest: StoryObj = {
                 variant="quiet"
                 size="small"
                 aria-label="More actions"
-                icon={<MoreVertical height={undefined} />}
+                icon={<FilterIcon height={undefined} />}
               />
             }
           >
@@ -308,7 +310,7 @@ export const VisualTest: StoryObj = {
                 variant="quiet"
                 size="small"
                 aria-label="More actions"
-                icon={<MoreVertical height={undefined} />}
+                icon={<FilterIcon height={undefined} />}
               />
             }
           >
@@ -370,14 +372,14 @@ export const VisualTest: StoryObj = {
           <Accordion.Item
             header="HeaderLabel"
             width="compact"
-            icon={<BookOutline />}
+            icon={<DocumentationIcon />}
           >
             <SampleParagraph />
           </Accordion.Item>
           <Accordion.Item
             header="HeaderLabel"
             width="compact"
-            icon={<BookOutline />}
+            icon={<DocumentationIcon />}
             description="DescriptionLabel"
           >
             <SampleParagraph />
@@ -401,7 +403,7 @@ export const VisualTest: StoryObj = {
             header="HeaderLabel"
             width="compact"
             chevronPosition="leading"
-            icon={<BookOutline />}
+            icon={<DocumentationIcon />}
           >
             <SampleParagraph />
           </Accordion.Item>
@@ -413,7 +415,7 @@ export const VisualTest: StoryObj = {
                 variant="quiet"
                 size="small"
                 aria-label="More actions"
-                icon={<MoreVertical height={undefined} />}
+                icon={<FilterIcon height={undefined} />}
               />
             }
           >
@@ -428,7 +430,7 @@ export const VisualTest: StoryObj = {
                 variant="quiet"
                 size="small"
                 aria-label="More actions"
-                icon={<MoreVertical height={undefined} />}
+                icon={<FilterIcon height={undefined} />}
               />
             }
           >
@@ -495,7 +497,7 @@ export const WithAffix: StoryObj<AccordionProps["Item"]> = {
           variant="quiet"
           size="small"
           aria-label="More actions"
-          icon={<MoreVertical height={undefined} />}
+          icon={<FilterIcon height={undefined} />}
           onClick={(e: MouseEvent) => {
             e.stopPropagation();
           }}

@@ -10,7 +10,7 @@ import sprout, {
 import { Button, classNames } from "@qlik/sprout-css-react";
 import {
   AlignLeftIcon,
-  DirectionRightIcon,
+  NextIcon,
 } from "@qlik/sprout-icons/react";
 import type { StoryContext, StoryObj } from "@storybook/react-vite";
 
@@ -367,8 +367,8 @@ export const RTL: StoryObj = {
           <div
             className={classNames("flex", "flex-row", "border-box", "gap-m")}
           >
-            <DirectionRightIcon className={classNames(...styles)} />{" "}
-            DirectionRightIcon
+            <NextIcon className={classNames(...styles)} />{" "}
+            NextIcon
           </div>
           <div
             className={classNames("flex", "flex-row", "border-box", "gap-m")}

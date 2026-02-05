@@ -1,6 +1,6 @@
 import sprout, { type AllClasses } from "@qlik/sprout-css-modules";
 import { AlertInline, Badge, Button } from "@qlik/sprout-css-react";
-import BellOutline from "@qlik/sprout-icons/react/BellOutline";
+import { NotificationIcon } from "@qlik/sprout-icons/react";
 
 import { CONTENT_CLASSES, PARAGRAPH, PropertyTile, src } from "./Content";
 
@@ -296,7 +296,7 @@ export const TopRightBottonLeft = {
             key={tsize[0]}
             className={sprout.classNames("relative", "flex", "w-fit")}
           >
-            <Button icon={<BellOutline />} label={`${tsize[0]} ${tsize[1]}`} />
+            <Button icon={<NotificationIcon />} label={`${tsize[0]} ${tsize[1]}`} />
             <div className={sprout.classNames("absolute", tsize[0], tsize[1])}>
               <Badge variant="alphanumeric" color="info" text="32" />
             </div>
@@ -317,7 +317,7 @@ export const TopRightBottonLeft = {
             key={tsize[0]}
             className={sprout.classNames("relative", "flex", "w-fit")}
           >
-            <Button icon={<BellOutline />} label={`${tsize[0]} ${tsize[1]}`} />
+            <Button icon={<NotificationIcon />} label={`${tsize[0]} ${tsize[1]}`} />
             <div className={sprout.classNames("absolute", tsize[0], tsize[1])}>
               <Badge variant="alphanumeric" color="info" text="32" />
             </div>

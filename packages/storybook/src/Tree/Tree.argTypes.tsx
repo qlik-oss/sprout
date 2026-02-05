@@ -1,8 +1,4 @@
 import { Tag, type TreeProps } from "@qlik/sprout-css-react";
-import { EditChartIcon } from "@qlik/sprout-icons/react/";
-import EditListOutline from "@qlik/sprout-icons/react/EditListOutline";
-import FolderOpenOutline from "@qlik/sprout-icons/react/FolderOpenOutline";
-import FolderOutline from "@qlik/sprout-icons/react/FolderOutline";
 import type { ArgTypes } from "@storybook/react-vite";
 
 import { ICONS_MAP, ICON_OPTIONS } from "../internal/icons/Icons";
@@ -28,8 +24,7 @@ export const TreeItemArgTypes: ArgTypes<TreeProps["TreeItem"]> = {
   },
   path: {
     control: "object",
-    description:
-      "An array representing the path to the tree item, used for nesting.",
+    description: "An array representing the path to the tree item, used for nesting.",
     table: {
       type: {
         summary: "string[]",
@@ -74,8 +69,7 @@ export const TreeItemArgTypes: ArgTypes<TreeProps["TreeItem"]> = {
   },
   onExpand: {
     control: "object",
-    description:
-      "Callback function when the tree item is expanded or collapsed.",
+    description: "Callback function when the tree item is expanded or collapsed.",
     table: {
       type: {
         summary: "(id: string, expanded: boolean) => void",

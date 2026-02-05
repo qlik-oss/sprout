@@ -61,12 +61,12 @@ import { classNames } from '@qlik/sprout-css'
 
 ## Box
 
-Box exists in sprout-css but it's **deprecated**. You should rely on our [flex](/?path=/story/css-sprout-css-modules--flexbox) and [grid](/?path=/story/css-sprout-css-modules--grid) utilities instead.
+Box doesn't exist in sprout-css. You should rely on our [flex](/?path=/story/css-sprout-css-modules--flexbox) and [grid](/?path=/story/css-sprout-css-modules--grid) utilities instead.
 
 ```typescript
 import { classNames } from '@qlik/sprout-css'
 
-<div className={classNames("flex", "flex_col", "border_box")}></div>
+<div className={classNames("flex", "flex-col", "border-box")}></div>
 ```
 
 ## Grid
@@ -75,8 +75,8 @@ sprout-css provides a CSS Grid system supporting up to 16 columns and 4 rows, wi
 
 ```typescript
 import { classNames } from '@qlik/sprout-css'
-<div className={classNames("grid", "grid_cols_12", "gap_m")}>
-  <div className={classNames("col_span_2")}></div>
+<div className={classNames("grid", "grid-cols-12", "gap-m")}>
+  <div className={classNames("col-span-2")}></div>
   ...
 </div>
 ```

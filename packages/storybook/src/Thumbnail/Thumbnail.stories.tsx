@@ -1,5 +1,5 @@
 import { Thumbnail, classNames } from "@qlik/sprout-css-react";
-import PersonIcon from "@qlik/sprout-icons/react/Building";
+import { TenantIcon } from "@qlik/sprout-icons/react";
 import type { StoryObj } from "@storybook/react-vite";
 
 import src from "../internal/assets/truck.png";
@@ -16,9 +16,7 @@ export default {
 
 export const Playground: StoryObj<typeof Thumbnail> = {
   render: (props) => (
-    <Thumbnail {...props}>
-      {props.type === "icon" ? <PersonIcon /> : <img src={src} alt="avatar" />}
-    </Thumbnail>
+    <Thumbnail {...props}>{props.type === "icon" ? <TenantIcon /> : <img src={src} alt="avatar" />}</Thumbnail>
   ),
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -30,19 +28,19 @@ export const VisualTest: StoryObj<typeof Thumbnail> = {
     <div className={classNames("flex", "gap-m", "flex-col")}>
       <div className={classNames("flex", "gap-m", "flex-row")}>
         <Thumbnail size="xl" type="icon">
-          <PersonIcon />
+          <TenantIcon />
         </Thumbnail>
         <Thumbnail size="l" type="icon">
-          <PersonIcon />
+          <TenantIcon />
         </Thumbnail>
         <Thumbnail type="icon">
-          <PersonIcon />
+          <TenantIcon />
         </Thumbnail>
         <Thumbnail size="s" type="icon">
-          <PersonIcon />
+          <TenantIcon />
         </Thumbnail>
         <Thumbnail size="xs" type="icon">
-          <PersonIcon />
+          <TenantIcon />
         </Thumbnail>
       </div>
       <div className={classNames("flex", "gap-m", "flex-row")}>
