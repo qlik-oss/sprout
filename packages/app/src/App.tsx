@@ -17,9 +17,9 @@ function App() {
   const [count, setCount] = useState(0);
   const [color, setColor] = useState("red");
   return (
-    <ThemeProvider asDiv className={sprout.classNames("flex", "col", "text_default", "bg_default", "gap_m")}>
-      <h1 className={sprout.classNames("font_heading_l", "text_default")}>Vite + React</h1>
-      <div className={sprout.classNames("flex", "col", "gap_xl")}>
+    <ThemeProvider asDiv className={sprout.classNames("flex", "col", "text-default", "bg-default", "gap-m")}>
+      <h1 className={sprout.classNames("font-heading_l", "text-default")}>Vite + React</h1>
+      <div className={sprout.classNames("flex", "flex-col", "gap-xl")}>
         <h2>Accordion</h2>
         <Accordion.Container variant="default" renderContent openedDefault={0} behavior="linked">
           <Accordion.Item header="first panel" description="" value="value">

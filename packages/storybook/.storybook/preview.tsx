@@ -122,6 +122,8 @@ const preview: Preview = {
           ["Getting Started", "Design Tokens", "Components"],
           "css",
           ["Tokens", "sprout-css-modules"],
+          "Icons",
+          ["UsingIcons", "All icons"],
           "Components",
           "Table",
           ["Docs", ["Getting Started", "Columns", "Rows", "Cell", "Editing", "Sorting"], "Data", "List"],

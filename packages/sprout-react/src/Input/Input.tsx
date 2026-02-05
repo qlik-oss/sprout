@@ -57,7 +57,7 @@ const adornmentClassName = classNames(
  * Firefox has agent styles that force every lib owner to fix the height of the input based on the line-height.
  */
 function getFixedHeight(font: PossibleFont, designSize?: "default" | "small") {
-  const [type, size] = font.split("_");
+  const [type, size] = font.split("-");
   const lineHeight = `var(--sprout-${type}-font-${size}-line-height)`;
   return `calc(${lineHeight} - 2 * ${tokens.common_border_default_width} + 2 * ${designSize === "small" ? tokens.common_spacing_s : tokens.common_spacing_m})`;
 }
@@ -184,7 +184,7 @@ function InputBase(props: InputProps, ref?: Ref<HTMLInputElement>) {
               "truncate",
               styles.input,
               {
-                [`font_${safeFont}`]: !!safeFont,
+                [`font-${safeFont}`]: !!safeFont,
               },
             )}
             aria-invalid={hasError ? "true" : undefined}

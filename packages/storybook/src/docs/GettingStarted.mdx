@@ -20,10 +20,10 @@ function App() {
 
   return (
     <ThemeProvider asDiv>
-      <h1 className={className("m_o", "p_0", "text_default", "font_heading_m")}>Vite + React</h1>
-      <div className={className("flex", "col", "gap_xs")}>
+      <h1 className={classNames("m-0", "p-0", "text-default", "font-heading-m")}>Vite + React</h1>
+      <div className={className("flex", "flex-col", "gap-xs")}>
         <Button variant="primary" onClick={() => setCount((count) => count + 1)} label={`Count is ${count}`} />
-        <p className={className("text_default", "font_body_m")}>
+        <p className={className("text-default", "font-body-m")}>
           Edit <code>src/App.tsx</code> and save to test HMR.
         </p>
       </div>

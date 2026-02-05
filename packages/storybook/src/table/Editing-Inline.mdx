@@ -69,9 +69,9 @@ function InlineEditNumber({ row, colDef, value }: TableCellParams<Person>) {
   }, [value]);
 
   return (
-    <div className={classNames("px_s", "border_box", "w_full", "relative")}>
+    <div className={classNames("px-s", "border-box", "w-full", "relative")}>
       <InlineEdit.Primitive
-        view={() => <span className={classNames("text_default", "font_label_s")}>{state}</span>}
+        view={() => <span className={classNames("text-default", "font-label-s")}>{state}</span>}
         edit={() => <TextField value={state} type="number" onChange={(e) => setState(parseInt(e.target.value, 10))} />}
         onCancel={() => {
           setState(value as number);

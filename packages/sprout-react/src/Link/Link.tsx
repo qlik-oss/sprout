@@ -59,7 +59,7 @@ function LinkBase(
       href={href}
       className={classNames(style.link, {
         "font-body-s": font === "inherit",
-        [`font_${font}`]: font !== "inherit",
+        [`font-${font}`]: font !== "inherit",
         [style.link_inherit]: font === "inherit",
         [style.with_ellipsis]: !!withEllipsis,
       })}

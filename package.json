@@ -7,6 +7,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build:watch": "pnpm run --parallel build:watch",
     "check": "pnpm check-types && pnpm lint && pnpm format:check && pnpm test",
     "check-types": "turbo run check-types",
     "clean": "turbo run clean && pnpm clean:cache",
@@ -19,13 +20,14 @@
     "prepare-release": "changeset",
     "publish-packages": "changeset publish",
     "storybook:build": "pnpm --filter \"@qlik/storybook\" run storybook:build",
-    "storybook:start": "pnpm --filter \"@qlik/storybook\" run storybook:start",
+    "storybook:start": "concurrently \"pnpm run build:watch\" \"pnpm --filter @qlik/storybook run storybook:start\"",
     "test": "turbo run test"
   },
   "prettier": "@qlik/prettier-config",
   "devDependencies": {
     "@changesets/cli": "^2.29.8",
     "@qlik/prettier-config": "^0.4.33",
+    "concurrently": "^9.2.1",
     "husky": "^9.1.7",
     "prettier": "^3.8.1",
     "rimraf": "^6.1.2",

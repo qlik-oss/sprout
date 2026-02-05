@@ -197,9 +197,9 @@ export const entityRenderCell: ColumnDef<ContentType>[] = [
     width: 300,
     renderCell: ({ row, colDef, value }: TableCellParams<ContentType>) => {
       return (
-        <div className={classNames("flex", "col", "px_m")}>
-          <div className={classNames("font_label_s", "text_default")}>{row.name}</div>
-          <div className={classNames("font_label_xs", "text_weak")}>
+        <div className={classNames("flex", "flex-col", "px-m")}>
+          <div className={classNames("font-label-s", "text-default")}>{row.name}</div>
+          <div className={classNames("font-label-xs", "text-weak")}>
             {row.type} - {row.modifiedBy}
           </div>
         </div>
