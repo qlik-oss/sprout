@@ -1,3 +1,5 @@
+// side effect
+import "@qlik/design-tokens/generated/tokens/css/sprout-tokens.css";
 import type { Parameters, StoryContext, StoryFn } from "@storybook/react-vite";
 import { addons, useEffect } from "storybook/preview-api";
 import "./storybook-preview.css";
@@ -47,16 +49,13 @@ export const sproutCSSDecorator = (Story: StoryFn, context: StoryContext): Retur
   const isTouch = context.globals.touch;
   let isTouchLocal;
   try {
-    isTouchLocal = JSON.parse(localStorage.getItem(IS_TOUCH_KEY) || "{}").value?.value === 'touch';
+    isTouchLocal = JSON.parse(localStorage.getItem(IS_TOUCH_KEY) || "{}").value?.value === "touch";
   } catch (error) {
     console.warn("Could not parse isTouch from localStorage", error);
   }
 
   if (typeof isTouch === "boolean" && isTouchLocal !== isTouch) {
-    localStorage.setItem(
-      IS_TOUCH_KEY,
-      isTouch ? `{"value":{"value":"touch"}}` : `{"value":{"value":"desktop"}}`,
-    );
+    localStorage.setItem(IS_TOUCH_KEY, isTouch ? `{"value":{"value":"touch"}}` : `{"value":{"value":"desktop"}}`);
   }
 
   if (isTouch === undefined) {

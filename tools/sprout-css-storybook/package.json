@@ -18,6 +18,7 @@
     "build": "vite build"
   },
   "dependencies": {
+    "@qlik/design-tokens": "workspace:*",
     "@storybook/react-vite": "^10.2.3",
     "source-code-pro": "^2.42.0",
     "source-sans-pro": "^3.6.0"
