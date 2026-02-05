@@ -53,7 +53,7 @@ export const VisualTest: Story = {
         {...defaultProps}
         variant="info"
         link={
-          <Link href="#" isExternal font="body_s">
+          <Link href="#" isExternal font="body-s">
             Link
           </Link>
         }
@@ -68,7 +68,7 @@ export const VisualTest: Story = {
         justify="center"
         variant="info"
         link={
-          <Link href="#" isExternal font="body_s">
+          <Link href="#" isExternal font="body-s">
             Link
           </Link>
         }
@@ -97,7 +97,7 @@ export const VisualTest: Story = {
         variant="info"
         onClickDismiss={defaultProps.onClickDismiss}
         link={
-          <Link href="#" isExternal font="body_s">
+          <Link href="#" isExternal font="body-s">
             Link
           </Link>
         }
@@ -113,7 +113,7 @@ export const VisualTest: Story = {
         variant="warning"
         justify="center"
         link={
-          <Link href="#" isExternal font="body_s">
+          <Link href="#" isExternal font="body-s">
             Link
           </Link>
         }

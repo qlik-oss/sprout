@@ -26,7 +26,7 @@ export const Playground: Story = {
   args: {
     children: "Link",
     href: "#",
-    font: "heading_m",
+    font: "heading-m",
   },
   argTypes: LinkArgTypes,
 
@@ -39,104 +39,104 @@ export const VisualTest: Story = {
       <div className={classNames("flex", "flex-row", "gap-xl")}>
         <div className={classNames("flex", "flex-row", "gap-l")}>
           <div className={classNames("flex", "flex-col", "items-start", "p-s", "gap-s", "border-default")}>
-            <Link href="/" font="body_xs">
+            <Link href="/" font="body-xs">
               Default link
             </Link>
-            <Link isExternal href="/" font="body_xs">
+            <Link isExternal href="/" font="body-xs">
               Default link
             </Link>
-            <Link href="/" font="body_xs" data-state="hover">
+            <Link href="/" font="body-xs" data-state="hover">
               Hovered link
             </Link>
-            <Link href="/" font="body_xs" data-state="focusVisible">
+            <Link href="/" font="body-xs" data-state="focusVisible">
               Focus Visible link
             </Link>
-            <Link href="/" font="body_xs" disabled>
+            <Link href="/" font="body-xs" disabled>
               Disabled link
             </Link>
           </div>
           <div className={classNames("flex", "flex-col", "items-start", "p-s", "gap-s", "border-default")}>
-            <Link href="/" font="body_s">
+            <Link href="/" font="body-s">
               Default link
             </Link>
-            <Link isExternal href="/" font="body_s">
+            <Link isExternal href="/" font="body-s">
               Default link
             </Link>
-            <Link href="/" font="body_s" data-state="hover">
+            <Link href="/" font="body-s" data-state="hover">
               Hovered link
             </Link>
-            <Link href="/" font="body_s" data-state="focusVisible">
+            <Link href="/" font="body-s" data-state="focusVisible">
               Focus Visible link
             </Link>
-            <Link href="/" font="body_s" disabled>
+            <Link href="/" font="body-s" disabled>
               Disabled link
             </Link>
           </div>
           <div className={classNames("flex", "flex-col", "items-start", "p-s", "gap-s", "border-default")}>
-            <Link href="/" font="body_m">
+            <Link href="/" font="body-m">
               Default link
             </Link>
-            <Link isExternal href="/" font="body_m">
+            <Link isExternal href="/" font="body-m">
               Default link
             </Link>
-            <Link href="/" font="body_m" data-state="hover">
+            <Link href="/" font="body-m" data-state="hover">
               Hovered link
             </Link>
-            <Link href="/" font="body_m" data-state="focusVisible">
+            <Link href="/" font="body-m" data-state="focusVisible">
               Focus Visible link
             </Link>
-            <Link href="/" font="body_m" disabled>
+            <Link href="/" font="body-m" disabled>
               Disabled link
             </Link>
           </div>
           <div className={classNames("flex", "flex-col", "items-start", "p-s", "gap-s", "border-default")}>
-            <Link href="/" font="body_l">
+            <Link href="/" font="body-l">
               Default link
             </Link>
-            <Link isExternal href="/" font="body_l">
+            <Link isExternal href="/" font="body-l">
               Default link
             </Link>
-            <Link href="/" font="body_l" data-state="hover">
+            <Link href="/" font="body-l" data-state="hover">
               Hovered link
             </Link>
-            <Link href="/" font="body_l" data-state="focusVisible">
+            <Link href="/" font="body-l" data-state="focusVisible">
               Focus Visible link
             </Link>
-            <Link href="/" font="body_l" disabled>
+            <Link href="/" font="body-l" disabled>
               Disabled link
             </Link>
           </div>
           <div className={classNames("flex", "flex-col", "items-start", "p-s", "gap-s", "border-default")}>
-            <Link href="/" font="body_xl">
+            <Link href="/" font="body-xl">
               Default link
             </Link>
-            <Link isExternal href="/" font="body_xl">
+            <Link isExternal href="/" font="body-xl">
               Default link
             </Link>
-            <Link href="/" font="body_xl" data-state="hover">
+            <Link href="/" font="body-xl" data-state="hover">
               Hovered link
             </Link>
-            <Link href="/" font="body_xl" data-state="focusVisible">
+            <Link href="/" font="body-xl" data-state="focusVisible">
               Focus Visible link
             </Link>
-            <Link href="/" font="body_xl" disabled>
+            <Link href="/" font="body-xl" disabled>
               Disabled link
             </Link>
           </div>
           <div className={classNames("flex", "flex-col", "items-start", "p-s", "gap-s", "border-default")}>
-            <Link href="/" font="body_xxl">
+            <Link href="/" font="body-xxl">
               Default link
             </Link>
-            <Link isExternal href="/" font="body_xxl">
+            <Link isExternal href="/" font="body-xxl">
               Default link
             </Link>
-            <Link href="/" font="body_xxl" data-state="hover">
+            <Link href="/" font="body-xxl" data-state="hover">
               Hovered link
             </Link>
-            <Link href="/" font="body_xxl" data-state="focusVisible">
+            <Link href="/" font="body-xxl" data-state="focusVisible">
               Focus Visible link
             </Link>
-            <Link href="/" font="body_xxl" disabled>
+            <Link href="/" font="body-xxl" disabled>
               Disabled link
             </Link>
           </div>
@@ -200,13 +200,13 @@ export const VisualTest: Story = {
           </div>
           <span className={classNames("font-body-s")} style={{ whiteSpace: "nowrap" }}>
             with a{" "}
-            <Link font="body_s" href="#">
+            <Link font="body-s" href="#">
               span
             </Link>
           </span>
           <p className={classNames("font-body-m")}>
             With a{" "}
-            <Link href="#" font="body_m">
+            <Link href="#" font="body-m">
               paragraph
             </Link>
           </p>

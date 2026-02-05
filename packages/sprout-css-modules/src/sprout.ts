@@ -1,4 +1,4 @@
-import { classNames, type ClassNamesAPI } from "./classNames";
+import { classNames, type ClassNamesAPI, type SproutClassKey } from "./classNames";
 import {
   type ContainerOptions,
   type ContainerSize,
@@ -19,6 +19,7 @@ export type {
   ContainerSizeBreakpoints,
   CreateContainerAPI,
   MediaAPI,
+  SproutClassKey,
   ViewportOptions,
   ViewportSize,
   WidthObserverAPI,
