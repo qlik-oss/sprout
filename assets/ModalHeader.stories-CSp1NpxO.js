@@ -1,0 +1,11 @@
+import{j as o}from"./iframe-B4-nXs83.js";import{c as p}from"./Modal.argTypes-BepMV5Qc.js";import{M as t}from"./Modal-ty0zhNW5.js";import{c as e}from"./classNames-eIMwhIDK.js";import"./preload-helper-PPVm8Dsz.js";import"./Field.argTypes-1rEre7SB.js";import"./Icons-DeygH5Zz.js";import"./index-DD81b0jm.js";import"./Add-BPhJi-H4.js";import"./Next-BDMe8uha.js";import"./Bookmark-DcjvKNmY.js";import"./Upload-BRvcNbMW.js";import"./Text-dLWgk66T.js";import"./Close-BgZ1uSF_.js";import"./SortDescending-CKWll_c0.js";import"./Undo-DDEyeJBa.js";import"./Person-BtJ6dcuR.js";import"./Copy-DgfNcGoS.js";import"./Delete-D5Va6LI1.js";import"./Filter-DrTBmiDb.js";import"./Edit-DzJTkpRk.js";import"./Error-D7GK58M_.js";import"./GenerateWithAi-s4i5IFD7.js";import"./History-rKaZ75zu.js";import"./Search-Ci5Kqw6S.js";import"./Info-DTuI-Of7.js";import"./Subtract-5iLtEsER.js";import"./Map-D3Po8JT9.js";import"./NewTab-Bx55GzRW.js";import"./Notification-BWSivEeO.js";import"./Paste-bE7IXLRc.js";import"./Warning-BAtVE0v3.js";import"./Tenant-Y0aD2fSL.js";import"./Tooltip-BmEIvhna.js";import"./sprout-tokens-D9QRO1qB.js";import"./renderOrClone-CKYJ27w7.js";import"./useId-D71ehFqY.js";import"./sprout-SOoz1jzb.js";import"./useI18n-peGtGOOS.js";import"./Button-Cv6yFaKa.js";import"./icons-DuVV-LnW.js";import"./Button.module-C2ELNEem.js";import"./Badge-DvRPOsa9.js";import"./ProgressCircular-CVxkPa9h.js";import"./InfoTooltipPrimitive-D8jVv135.js";import"./IconButton-D-KEKYAI.js";import"./useHasOverflow-DZlgyJuB.js";import"./Divider-DdqecLrr.js";import"./Dialog-DHxW9vdp.js";import"./useControl-DdRfwf_0.js";const tr={title:"Components/Modal/Composition/Header",component:t.Header},r={render:i=>o.jsx("div",{className:e("max-w-3xl"),children:o.jsx(t.Header,{...i})}),args:{children:"Modal Header",description:"This is a description for the modal header",preventClose:!1},argTypes:p};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
+  render: props => <div className={classNames("max-w-3xl")}>
+      <Modal.Header {...props} />
+    </div>,
+  args: {
+    children: "Modal Header",
+    description: "This is a description for the modal header",
+    preventClose: false
+  },
+  argTypes: ModalHeaderArgTypes
+}`,...r.parameters?.docs?.source}}};const ir=["Header"];export{r as Header,ir as __namedExportsOrder,tr as default};

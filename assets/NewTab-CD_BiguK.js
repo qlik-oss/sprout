@@ -1,1 +1,0 @@
-import{r as a,j as r}from"./iframe-itHhOQJ8.js";const e=(h,t)=>r.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",width:16,height:16,fill:"currentColor","aria-hidden":"true",viewBox:"0 0 16 16",ref:t,...h,children:r.jsx("path",{d:"M14 13h2v1h-2v2h-1v-2h-2v-1h2v-2h1zm0-12a1 1 0 0 1 1 1v7h-1V5H2v9h7v1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 4h12V2H2z"})}),s=a.forwardRef(e);export{s as F};
