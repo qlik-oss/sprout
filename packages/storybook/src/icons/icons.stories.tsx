@@ -60,6 +60,7 @@ export const AllIcons = {
             step={1}
             marks={Marks}
             value={size}
+            valueLabelFormat={(value) => SIZES[value]}
             onChange={(value) => {
               setSize(value);
             }}
