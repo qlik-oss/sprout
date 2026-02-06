@@ -10,10 +10,38 @@ const meta: Meta = {
 
 export default meta;
 
+const SIZES: Record<number, string> = {
+  1: "s",
+  2: "m",
+  3: "l",
+  4: "xl",
+  5: "xxl",
+  6: "2xl",
+  7: "3xl",
+  8: "4xl",
+  9: "5xl",
+  10: "6xl",
+  11: "7xl",
+};
+
+const Marks: Array<{ value: keyof typeof SIZES; label: string }> = [
+  { value: 1, label: "s" },
+  { value: 2, label: "m" },
+  { value: 3, label: "l" },
+  { value: 4, label: "xl" },
+  { value: 5, label: "xxl" },
+  { value: 6, label: "2xl" },
+  { value: 7, label: "3xl" },
+  { value: 8, label: "4xl" },
+  { value: 9, label: "5xl" },
+  { value: 10, label: "6xl" },
+  { value: 11, label: "7xl" },
+];
+
 export const AllIcons = {
   render: () => {
     const [search, setSearch] = useState("");
-    const [size, setSize] = useState(16);
+    const [size, setSize] = useState(5);
     return (
       <div className={classNames("flex", "flex-col", "gap-l", "flex-wrap")}>
         <div className={classNames("flex-noreset", "w-m", "flex-row", "items-start", "p-s", "gap-s", "justify-start")}>
@@ -27,32 +55,29 @@ export const AllIcons = {
           />
           <Slider.Single
             aria-label="Icon size"
-            min={16}
-            max={48}
-            defaultValue={24}
+            min={1}
+            max={11}
+            step={1}
+            marks={Marks}
+            defaultValue={2}
             onChange={(value) => {
               setSize(value);
             }}
           />
         </div>
-        <div className={classNames("grid", "grid-cols-8", "gap-m", "w-3xl")}>
+        <div className={classNames("flex", "flex-row", "flex-wrap", "gap-m", "w-fit")}>
           {Object.entries(Icons)
-            .filter(([name, Icon]) => name.toLowerCase().includes(search.toLowerCase()))
+            .filter(([name]) => name.toLowerCase().includes(search.toLowerCase()))
             .map(([name, Icon]) => (
               <div
                 key={name}
-                className={classNames(
-                  "flex",
-                  "flex-col",
-                  "items-center",
-                  "justify-around",
-                  "gap-m",
-                  "p-m",
-                  "border-default",
-                )}
+                className={classNames("flex", "flex-col", "gap-m", "p-m", "border-default", "radius-soft")}
+                style={{ blockSize: 150, inlineSize: 150 }}
               >
-                <Icon height={size} width={size} />
-                <span className={classNames("font-label-xs", "text-default", "break-all")}>{name}</span>
+                <span className={classNames("font-script-s", "text-weak", "break-all")}>{name}</span>
+                <div className={classNames("flex", "items-center", "justify-center", "flex-1", "text-default")}>
+                  <Icon className={classNames(`size-${SIZES[size]}`)} />
+                </div>
               </div>
             ))}
         </div>
