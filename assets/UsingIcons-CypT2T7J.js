@@ -1,0 +1,1 @@
+import{j as n,M as r}from"./iframe-Dux6zP9l.js";import{useMDXComponents as s}from"./index-BCztanOQ.js";import"./preload-helper-PPVm8Dsz.js";function e(t){return n.jsx(r,{title:"Icons/Using the icons"})}function m(t={}){const{wrapper:o}={...s(),...t.components};return o?n.jsx(o,{...t,children:n.jsx(e,{...t})}):e()}export{m as default};
