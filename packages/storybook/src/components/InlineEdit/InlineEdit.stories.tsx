@@ -2,7 +2,7 @@
 import { type JSX, createContext, useCallback, useContext, useEffect, useState } from "react";
 import { fn } from "storybook/test";
 
-import { AiSparklesIcon } from "@qlik/sprout-icons/react";
+import { GenerateWithAiIcon } from "@qlik/sprout-icons/react";
 import { InlineEdit, type InlineEditProps, Select, Switch, classNames } from "@qlik/sprout-react";
 import { Table, type TableProps } from "@qlik/sprout-table";
 import type { StoryObj } from "@storybook/react-vite";
@@ -387,7 +387,7 @@ export const CustomInlineEdit: StoryObj<Omit<InlineEditProps["Primitive"], "view
                 "bg-default",
               )}
             >
-              <AiSparklesIcon className={classNames("fill-current")} />
+              <GenerateWithAiIcon className={classNames("fill-current")} />
               <div className={classNames("flex", "flex-col", "gap-m")}>
                 <span className={classNames("font-label-m-emphasized", "text-default")}>{value ? "On" : "Off"}</span>
                 <span className={classNames("font-label-s", "text-weak")}>AI Features</span>
