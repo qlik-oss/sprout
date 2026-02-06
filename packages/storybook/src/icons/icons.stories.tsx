@@ -59,7 +59,7 @@ export const AllIcons = {
             max={11}
             step={1}
             marks={Marks}
-            defaultValue={2}
+            value={size}
             onChange={(value) => {
               setSize(value);
             }}
