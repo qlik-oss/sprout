@@ -12,6 +12,10 @@ export default meta;
 
 const SIZES = ["s", "m", "l", "xl", "xxl", "2xl", "3xl", "4xl", "5xl", "6xl", "7xl"] as const;
 
+function removeTrailingIconFromName(name: string) {
+  return name.endsWith("Icon") ? name.slice(0, -4) : name;
+}
+
 export const AllIcons = {
   render: () => {
     const [search, setSearch] = useState("");
@@ -50,7 +54,9 @@ export const AllIcons = {
                 className={classNames("flex", "flex-col", "gap-m", "p-m", "border-default", "radius-soft")}
                 style={{ blockSize: 150, inlineSize: 150 }}
               >
-                <span className={classNames("font-script-s", "text-weak", "break-all")}>{name}</span>
+                <span className={classNames("font-script-s", "text-weak", "break-all")}>
+                  {removeTrailingIconFromName(name)}
+                </span>
                 <div className={classNames("flex", "items-center", "justify-center", "flex-1", "text-default")}>
                   <Icon className={classNames(`size-${size}`)} />
                 </div>
