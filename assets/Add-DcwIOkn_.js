@@ -1,1 +1,0 @@
-import{r as s,j as r}from"./iframe-CYyT-rNd.js";const e=(t,o)=>r.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",width:16,height:16,fill:"currentColor","aria-hidden":"true",viewBox:"0 0 16 16",ref:o,...t,children:r.jsx("path",{d:"M7.5 8.5H2v-1h5.5V2h1v5.5H14v1H8.5V14h-1z"})}),a=s.forwardRef(e);export{a as F};
