@@ -35,24 +35,19 @@ export const AllIcons = {
             }}
           />
         </div>
-        <div className={classNames("grid", "grid-cols-8", "gap-m", "w-3xl")}>
+        <div className={classNames("flex", "flex-row", "flex-wrap", "gap-m", "w-fit")}>
           {Object.entries(Icons)
-            .filter(([name, Icon]) => name.toLowerCase().includes(search.toLowerCase()))
+            .filter(([name]) => name.toLowerCase().includes(search.toLowerCase()))
             .map(([name, Icon]) => (
               <div
                 key={name}
-                className={classNames(
-                  "flex",
-                  "flex-col",
-                  "items-center",
-                  "justify-around",
-                  "gap-m",
-                  "p-m",
-                  "border-default",
-                )}
+                className={classNames("flex", "flex-col", "gap-m", "p-m", "border-default", "radius-soft")}
+                style={{ blockSize: 150, inlineSize: 150 }}
               >
-                <Icon height={size} width={size} />
-                <span className={classNames("font-label-xs", "text-default", "break-all")}>{name}</span>
+                <span className={classNames("font-script-s", "text-weak", "break-all")}>{name}</span>
+                <div className={classNames("flex", "items-center", "justify-center", "flex-1", "text-default")}>
+                  <Icon height={size} width={size} />
+                </div>
               </div>
             ))}
         </div>
