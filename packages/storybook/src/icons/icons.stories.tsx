@@ -27,7 +27,7 @@ const SIZES = {
 export const AllIcons = {
   render: () => {
     const [search, setSearch] = useState("");
-    const [size, setSize] = useState(1);
+    const [size, setSize] = useState(5);
     return (
       <div className={classNames("flex", "flex-col", "gap-l", "flex-wrap")}>
         <div className={classNames("flex-noreset", "w-m", "flex-row", "items-start", "p-s", "gap-s", "justify-start")}>
