@@ -1,0 +1,19 @@
+import{j as t,M as m,a as i,C as a}from"./iframe-itHhOQJ8.js";import{useMDXComponents as p}from"./index-M6OOd87p.js";import{TreeItem as o,TreeTable as s}from"./Tree.stories-BWb9KfIG.js";import"./preload-helper-PPVm8Dsz.js";import"./sprout-5bk7oM4L.js";import"./Copy-BZIqKWxc.js";import"./Edit-C4Gy6c5s.js";import"./index-B_CWJT9D.js";import"./Add-sGTd4JLT.js";import"./Next-Cf3Uq2yv.js";import"./Bookmark-B-8xOmKH.js";import"./Upload-Dc2Rb3D-.js";import"./Text-CLPV3Ayx.js";import"./Close-DeQxVhkZ.js";import"./SortDescending-BgGAHRpl.js";import"./Undo-CedmJl7g.js";import"./Person-CY2HVuRl.js";import"./Delete-BVSKNF4j.js";import"./Filter-Mkk8kKEU.js";import"./Error-CgMRcq7x.js";import"./GenerateWithAi-CzXUyJWm.js";import"./History-BANgh6BZ.js";import"./Search-Cgypvig1.js";import"./Info-CR8Ra2BB.js";import"./Subtract-BguCuCMl.js";import"./Map-BgJ3dtI2.js";import"./NewTab-CD_BiguK.js";import"./Notification-CB15fS1l.js";import"./Paste-A6OS6xze.js";import"./Warning-Wt3nbj6y.js";import"./Tenant-B8iNkMMj.js";import"./TanstackTable-Df5yoS2C.js";import"./useI18n-DI5kaiCu.js";import"./Button-D1L5V1zp.js";import"./classNames-8u_YGv6N.js";import"./icons-ByJhQmwX.js";import"./Button.module-C2ELNEem.js";import"./Badge-Fno8cZv5.js";import"./Tooltip-CsCotLcm.js";import"./sprout-tokens-D9QRO1qB.js";import"./renderOrClone-DcDxQLMY.js";import"./useId-B9bqBKq5.js";import"./ProgressCircular-DxTh7cF9.js";import"./IconButton-BFY56UPS.js";import"./Menu-BI017uJL.js";import"./useControl-tJx49zVQ.js";import"./Divider-Z7gRZlXH.js";import"./list-B1zo5gaH.js";import"./Skeleton-skQ_3lbg.js";import"./Checkbox-CJQPTyqO.js";import"./useValueControl-BoLujgBt.js";import"./HelperText-CZI4gvqv.js";import"./InfoTooltipPrimitive-BycnW3Wq.js";import"./List-BO2nz2p3.js";import"./useListGesture-BaRYVpJg.js";import"./Popover-D-VXifUT.js";import"./TextField-CrzVSwY1.js";import"./InputButton-CobW-7UY.js";import"./useFieldProps-ZapC1bKU.js";import"./useFieldAriaProps-DJiNiZ9_.js";import"./Field-BglQDcK_.js";import"./FieldLabel-k_vhoLHi.js";import"./Radio-BuXCyg8H.js";import"./Message-Bc7eA00P.js";import"./ProgressBar-BYafVDdP.js";import"./Icons-ShlI4R_X.js";import"./Tag-D6Whh4y4.js";import"./TextOverflow-ZR1lg4UG.js";import"./useHasOverflow-BPrWXac9.js";function n(e){const r={a:"a",code:"code",h1:"h1",h2:"h2",li:"li",p:"p",pre:"pre",ul:"ul",...p(),...e.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{title:"Components/Tree"}),`
+`,t.jsx(r.h1,{id:"tree",children:"Tree"}),`
+`,t.jsx(r.p,{children:"Tree views help users navigate large amounts of information by organizing content into a hierarchical structure using nested headings.In the tree view, branch nodes can be expanded or collapsed to reveal or hide their child nodes."}),`
+`,t.jsx(r.pre,{children:t.jsx(r.code,{className:"language-jsx",children:`import { Tree } from "@qlik/sprout-react";
+
+<Tree.TreeItem id="leaf-icon" path={["folder_expanded"]} label="Leaf icon" isLeaf icon={<FileOutline />} />;
+`})}),`
+`,t.jsx(i,{of:o}),`
+`,t.jsx(a,{of:o}),`
+`,t.jsx(r.h2,{id:"tree-in-a-table-list--data",children:"Tree in a Table List / Data"}),`
+`,t.jsx(i,{of:s}),`
+`,t.jsx(r.h2,{id:"accessibility",children:"Accessibility"}),`
+`,t.jsx(r.p,{children:t.jsx(r.a,{href:"https://www.w3.org/WAI/ARIA/apg/patterns/treeview/",rel:"nofollow",children:"W3/WAI/ARIA/APG Tree View"})}),`
+`,t.jsx(r.p,{children:"HTML Structure"}),`
+`,t.jsxs(r.p,{children:["The current component use a native ",t.jsx(r.code,{children:"button"})," and a ",t.jsx(r.code,{children:"IconButton"})," to manage the expand state."]}),`
+`,t.jsx(r.p,{children:"Keyboard"}),`
+`,t.jsxs(r.ul,{children:[`
+`,t.jsxs(r.li,{children:[t.jsx(r.code,{children:"Space"})," change the expand state."]}),`
+`]})]})}function Ct(e={}){const{wrapper:r}={...p(),...e.components};return r?t.jsx(r,{...e,children:t.jsx(n,{...e})}):n(e)}export{Ct as default};

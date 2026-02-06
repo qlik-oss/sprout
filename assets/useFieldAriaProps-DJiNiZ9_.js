@@ -1,0 +1,1 @@
+import"./iframe-itHhOQJ8.js";import{u as l}from"./useId-B9bqBKq5.js";function p({label:o,helpText:s,errorMessages:t}){const a=l(),i=l(),e={},r={};return o&&(e.labelId=a,r["aria-labelledby"]=a),(s||(t||[]).length>0)&&(e.helpTextId=i,r["aria-describedby"]=i),{fieldProps:e,ariaProps:r}}export{p as u};
