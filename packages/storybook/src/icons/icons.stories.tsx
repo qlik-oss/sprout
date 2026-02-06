@@ -10,7 +10,7 @@ const meta: Meta = {
 
 export default meta;
 
-const SIZES = {
+const SIZES: Record<number, string> = {
   1: "s",
   2: "m",
   3: "l",
@@ -23,6 +23,20 @@ const SIZES = {
   10: "6xl",
   11: "7xl",
 };
+
+const Marks: Array<{ value: keyof typeof SIZES; label: string }> = [
+  { value: 1, label: "s" },
+  { value: 2, label: "m" },
+  { value: 3, label: "l" },
+  { value: 4, label: "xl" },
+  { value: 5, label: "xxl" },
+  { value: 6, label: "2xl" },
+  { value: 7, label: "3xl" },
+  { value: 8, label: "4xl" },
+  { value: 9, label: "5xl" },
+  { value: 10, label: "6xl" },
+  { value: 11, label: "7xl" },
+];
 
 export const AllIcons = {
   render: () => {
@@ -44,19 +58,7 @@ export const AllIcons = {
             min={1}
             max={11}
             step={1}
-            marks={[
-              { value: 1, label: "s" },
-              { value: 2, label: "m" },
-              { value: 3, label: "l" },
-              { value: 4, label: "xl" },
-              { value: 5, label: "xxl" },
-              { value: 6, label: "2xl" },
-              { value: 7, label: "3xl" },
-              { value: 8, label: "4xl" },
-              { value: 9, label: "5xl" },
-              { value: 10, label: "6xl" },
-              { value: 11, label: "7xl" },
-            ]}
+            marks={Marks}
             defaultValue={2}
             onChange={(value) => {
               setSize(value);
@@ -74,11 +76,7 @@ export const AllIcons = {
               >
                 <span className={classNames("font-script-s", "text-weak", "break-all")}>{name}</span>
                 <div className={classNames("flex", "items-center", "justify-center", "flex-1", "text-default")}>
-                  <Icon
-                    className={classNames(`size-${SIZES[size]}`)}
-                    // height={`var(--sprout-common-sizing-${SIZES[size]})`}
-                    // width={`var(--sprout-common-sizing-${SIZES[size]})`}
-                  />
+                  <Icon className={classNames(`size-${SIZES[size]}`)} />
                 </div>
               </div>
             ))}
