@@ -1,0 +1,1 @@
+import{r as e}from"./iframe-B-fqCePV.js";function o(r){const t=e.useId();return r||t}export{o as u};

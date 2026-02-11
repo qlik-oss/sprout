@@ -1,1 +1,0 @@
-import{r as s,j as t}from"./iframe-B4-nXs83.js";import{c as o}from"./classNames-eIMwhIDK.js";const p=s.forwardRef(r);function r({children:a},e){return t.jsx("div",{ref:e,className:o("flex","flex-row","border-box","w-fit","box-shadow-default","radius-pill","bg-default","items-stretch"),children:a})}r.displayName="FloatingWrapper";export{p as F};
