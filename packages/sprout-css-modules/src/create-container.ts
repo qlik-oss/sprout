@@ -1,4 +1,5 @@
-import { classNames, type AllClasses } from "./classNames";
+import type { AllClasses } from "./classNames";
+import { classNames } from "./classNames";
 
 export type ContainerSize = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "3xl" | "4xl";
 export type ContainerSizeBreakpoints = Record<ContainerSize, number>;

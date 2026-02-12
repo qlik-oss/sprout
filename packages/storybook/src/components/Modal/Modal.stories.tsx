@@ -2,7 +2,7 @@
 import { forwardRef, useState } from "react";
 import { fn } from "storybook/test";
 
-import { ConnectIcon } from "@qlik/sprout-icons/react";
+import { useContainer } from "@qlik/sprout-react-hooks";
 import {
   Button,
   type ButtonProps,
@@ -17,7 +17,7 @@ import {
   Textarea,
   classNames,
 } from "@qlik/sprout-react";
-import { useContainer } from "@qlik/sprout-react-hooks";
+import { UnionOutlineIcon } from "@qlik/sprout-icons/react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { CommonModalArgTypes, ModalArgTypes } from "./Modal.argTypes";
@@ -40,31 +40,41 @@ const parameters = {
   },
 };
 
-const ModalStory = forwardRef<HTMLDivElement, ModalProps>(({ onClose, ...props }, ref) => {
-  const { children, headerTitle, ...rest } = props;
+const ModalStory = forwardRef<HTMLDivElement, ModalProps>(
+  ({ onClose, ...props }, ref) => {
+    const { children, headerTitle, ...rest } = props;
 
-  return (
-    <Modal
-      ref={ref}
-      headerTitle={headerTitle}
-      onClose={() => {
-        if (onClose) {
-          onClose();
-        }
-      }}
-      {...rest}
-    >
-      {children || "(Default story child)"}
-    </Modal>
-  );
-});
+    return (
+      <Modal
+        ref={ref}
+        headerTitle={headerTitle}
+        onClose={() => {
+          if (onClose) {
+            onClose();
+          }
+        }}
+        {...rest}
+      >
+        {children || "(Default story child)"}
+      </Modal>
+    );
+  },
+);
 
 ModalStory.displayName = "Modal";
 
 function GlobalContent() {
   return (
     <form>
-      <div className={classNames("flex", "flex-col", "border-box", "gap-m", "py-xl")}>
+      <div
+        className={classNames(
+          "flex",
+          "flex-col",
+          "border-box",
+          "gap-m",
+          "py-xl",
+        )}
+      >
         <TextField label="Name" id="name" />
         <div className={classNames("flex", "border-box", "py-m")}>
           <Switch label="I agree to the terms and conditions" />
@@ -105,28 +115,52 @@ function GlobalContent() {
             { label: "No cooking", value: "3" },
           ]}
         />
-        <Select.Select label="Feedback" placeholder="Select an option" defaultValue="100">
+        <Select.Select
+          label="Feedback"
+          placeholder="Select an option"
+          defaultValue="100"
+        >
           <Select.Option value="1">Please add more details</Select.Option>
-          <Select.Option value="2">I want to hire people like you</Select.Option>
+          <Select.Option value="2">
+            I want to hire people like you
+          </Select.Option>
           <Select.Option value="1">Please add more details</Select.Option>
-          <Select.Option value="2">I want to hire people like you</Select.Option>
+          <Select.Option value="2">
+            I want to hire people like you
+          </Select.Option>
           <Select.Option value="1">Please add more details</Select.Option>
-          <Select.Option value="2">I want to hire people like you</Select.Option>
+          <Select.Option value="2">
+            I want to hire people like you
+          </Select.Option>
           <Select.Option value="1">Please add more details</Select.Option>
-          <Select.Option value="2">I want to hire people like you</Select.Option>
+          <Select.Option value="2">
+            I want to hire people like you
+          </Select.Option>
           <Select.Option value="1">Please add more details</Select.Option>
-          <Select.Option value="2">I want to hire people like you</Select.Option>
+          <Select.Option value="2">
+            I want to hire people like you
+          </Select.Option>
           <Select.Option value="1">Please add more details</Select.Option>
-          <Select.Option value="2">I want to hire people like you</Select.Option>
+          <Select.Option value="2">
+            I want to hire people like you
+          </Select.Option>
           <Select.Option value="1">Please add more details</Select.Option>
-          <Select.Option value="2">I want to hire people like you</Select.Option>
+          <Select.Option value="2">
+            I want to hire people like you
+          </Select.Option>
           <Select.Option value="1">Please add more details</Select.Option>
-          <Select.Option value="2">I want to hire people like you</Select.Option>
+          <Select.Option value="2">
+            I want to hire people like you
+          </Select.Option>
           <Select.Option value="1">Please add more details</Select.Option>
           <Select.Option value="100">My best value</Select.Option>
-          <Select.Option value="2">I want to hire people like you</Select.Option>
+          <Select.Option value="2">
+            I want to hire people like you
+          </Select.Option>
           <Select.Option value="1">Please add more details</Select.Option>
-          <Select.Option value="2">I want to hire people like you</Select.Option>
+          <Select.Option value="2">
+            I want to hire people like you
+          </Select.Option>
         </Select.Select>
         <Textarea label="Comment" id="comment" />
       </div>
@@ -134,8 +168,16 @@ function GlobalContent() {
   );
 }
 
-function JustifiedButton({ container, ...rest }: ButtonProps & { container: ReturnType<typeof useContainer> }) {
-  return <Button {...rest} justified={container.get<boolean>({ xxs: true, xs: true, s: false })} />;
+function JustifiedButton({
+  container,
+  ...rest
+}: ButtonProps & { container: ReturnType<typeof useContainer> }) {
+  return (
+    <Button
+      {...rest}
+      justified={container.get<boolean>({ xxs: true, xs: true, s: false })}
+    />
+  );
 }
 
 export const Playground: Story = {
@@ -184,13 +226,24 @@ export const WithFooterActions: Story = {
         {...props}
         footerActions={
           <>
-            <JustifiedButton variant="secondary" label="Secondary action" onClick={() => {}} container={container} />
-            <JustifiedButton variant="primary" label="Primary action" onClick={() => {}} container={container} />
+            <JustifiedButton
+              variant="secondary"
+              label="Secondary action"
+              onClick={() => {}}
+              container={container}
+            />
+            <JustifiedButton
+              variant="primary"
+              label="Primary action"
+              onClick={() => {}}
+              container={container}
+            />
           </>
         }
       >
         <p className={classNames("font-body-s", "text-default")}>
-          A modal with title, a text content, an icon and both available actions (primary and secondary).
+          A modal with title, a text content, an icon and both available actions
+          (primary and secondary).
         </p>
       </ModalStory>
     );
@@ -213,14 +266,24 @@ export const FullWithMarginWithFooterActions: Story = {
         width="full-with-margin"
         footerActions={
           <>
-            <JustifiedButton variant="secondary" label="Secondary action" onClick={() => {}} container={container} />
-            <JustifiedButton variant="primary" label="Primary action" onClick={() => {}} container={container} />
+            <JustifiedButton
+              variant="secondary"
+              label="Secondary action"
+              onClick={() => {}}
+              container={container}
+            />
+            <JustifiedButton
+              variant="primary"
+              label="Primary action"
+              onClick={() => {}}
+              container={container}
+            />
           </>
         }
       >
         <p className={classNames("font-body-s", "text-default")}>
-          A &lsquo;full-with-margin&rsquo; modal with title, a text content, an icon and both available actions (primary
-          and secondary).
+          A &lsquo;full-with-margin&rsquo; modal with title, a text content, an
+          icon and both available actions (primary and secondary).
         </p>
       </ModalStory>
     );
@@ -244,8 +307,21 @@ export const WithCheckbox: Story = {
       <ModalStory
         ref={container.ref}
         {...props}
-        footerLeft={<Checkbox name="checkbox-name" label="Checkbox label" onChange={fn()} />}
-        footerActions={<JustifiedButton variant="primary" label="Create" onClick={fn()} container={container} />}
+        footerLeft={
+          <Checkbox
+            name="checkbox-name"
+            label="Checkbox label"
+            onChange={fn()}
+          />
+        }
+        footerActions={
+          <JustifiedButton
+            variant="primary"
+            label="Create"
+            onClick={fn()}
+            container={container}
+          />
+        }
       >
         <TextField label="Username" id="username" />
         <TextField label="Password" id="password" />
@@ -268,7 +344,14 @@ export const WithLeftButton: Story = {
         ref={container.ref}
         {...props}
         footerLeft={<Button label="Manage users" onClick={fn()} />}
-        footerActions={<JustifiedButton variant="primary" label="Create" onClick={fn()} container={container} />}
+        footerActions={
+          <JustifiedButton
+            variant="primary"
+            label="Create"
+            onClick={fn()}
+            container={container}
+          />
+        }
       >
         <TextField label="Username" id="username" />
         <TextField label="Password" id="password" />
@@ -283,17 +366,31 @@ export const WithLeftButton: Story = {
   parameters: { ...parameters },
 };
 
-function CompositionComponents({ width }: { width: "xs" | "s" | "m" | "l" | "xl" | "xxl" | "3xl" | "4xl" }) {
+function CompositionComponents({
+  width,
+}: {
+  width: "xs" | "s" | "m" | "l" | "xl" | "xxl" | "3xl" | "4xl";
+}) {
   const container = useContainer({ boxSizing: "border-box" });
   return (
-    <div className={classNames("flex", "gap-xl", "border-default", `w_${width}`)} ref={container.ref}>
+    <div
+      className={classNames("flex", "gap-xl", "border-default", `w_${width}`)}
+      ref={container.ref}
+    >
       <Modal.Header>ModalHeader</Modal.Header>
       <Divider />
-      <Modal.Header infoIconTooltip="This is an info tooltip">ModalHeader with infoIconTooltip</Modal.Header>
+      <Modal.Header infoIconTooltip="This is an info tooltip">
+        ModalHeader with infoIconTooltip
+      </Modal.Header>
       <Divider />
-      <Modal.Header icon={<ConnectIcon />}>ModalHeader with icon</Modal.Header>
+      <Modal.Header icon={<UnionOutlineIcon />}>
+        ModalHeader with icon
+      </Modal.Header>
       <Divider />
-      <Modal.Header icon={<ConnectIcon />} infoIconTooltip="This is an info tooltip">
+      <Modal.Header
+        icon={<UnionOutlineIcon />}
+        infoIconTooltip="This is an info tooltip"
+      >
         ModalHeader with icon and infoIconTooltip
       </Modal.Header>
       <Divider />
@@ -301,13 +398,19 @@ function CompositionComponents({ width }: { width: "xs" | "s" | "m" | "l" | "xl"
         ModalHeader with back navigation
       </Modal.Header>
       <Divider />
-      <Modal.Header labelBack="Back" onClickBack={() => {}} infoIconTooltip="This is an info tooltip">
+      <Modal.Header
+        labelBack="Back"
+        onClickBack={() => {}}
+        infoIconTooltip="This is an info tooltip"
+      >
         ModalHeader with back navigation and infoIconTooltip
       </Modal.Header>
       <Divider />
       <Modal.Header preventClose>ModalHeader with preventClose</Modal.Header>
       <Divider />
-      <Modal.Header description="Header description">ModalHeader with description</Modal.Header>
+      <Modal.Header description="Header description">
+        ModalHeader with description
+      </Modal.Header>
       <Divider />
       <Modal.Header description="Header description" preventClose>
         ModalHeader with description and preventClose
@@ -320,55 +423,97 @@ function CompositionComponents({ width }: { width: "xs" | "s" | "m" | "l" | "xl"
       <Modal.Header
         description={
           <p className={classNames("font-label-s", "text-weak")}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
           </p>
         }
       >
-        ModalHeader Overflow Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        ModalHeader Overflow Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit.
       </Modal.Header>
       <Divider />
       <Modal.Content>
         <div className={classNames("px-xxl")}>Content wrapped</div>
       </Modal.Content>
       <Divider />
-      <div className={classNames("flex", "w-full")} style={{ blockSize: "50px" }}>
+      <div
+        className={classNames("flex", "w-full")}
+        style={{ blockSize: "50px" }}
+      >
         <Modal.Content>
           <div className={classNames("px-xxl")}>
-            Overflow is detected auto in Y and add scrollbar. It is hidden in X. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            Overflow is detected auto in Y and add scrollbar. It is hidden in X.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
           </div>
         </Modal.Content>
       </div>
       <Divider />
       <Modal.Content>
-        Content wrapped with long text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        Content wrapped with long text. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam.
       </Modal.Content>
       <Divider />
       <Modal.Actions>
-        <JustifiedButton variant="primary" label="Create" container={container} />
+        <JustifiedButton
+          variant="primary"
+          label="Create"
+          container={container}
+        />
       </Modal.Actions>
       <Divider />
       <Modal.Actions left={<Checkbox label="Send invite" />}>
-        <JustifiedButton variant="primary" label="Create" container={container} />
+        <JustifiedButton
+          variant="primary"
+          label="Create"
+          container={container}
+        />
       </Modal.Actions>
       <Divider />
       <Modal.Actions metaLabel="3 licences left">
-        <JustifiedButton variant="primary" label="Create" container={container} />
+        <JustifiedButton
+          variant="primary"
+          label="Create"
+          container={container}
+        />
       </Modal.Actions>
       <Divider />
       <Modal.Actions left={<Button variant="default" label="Manage users" />}>
-        <JustifiedButton variant="primary" label="Create" container={container} />
+        <JustifiedButton
+          variant="primary"
+          label="Create"
+          container={container}
+        />
       </Modal.Actions>
       <Divider />
-      <Modal.Actions left={<Checkbox label="Send invite" />} metaLabel="3 licences left">
-        <JustifiedButton variant="primary" label="Primary action" container={container} />
+      <Modal.Actions
+        left={<Checkbox label="Send invite" />}
+        metaLabel="3 licences left"
+      >
+        <JustifiedButton
+          variant="primary"
+          label="Primary action"
+          container={container}
+        />
       </Modal.Actions>
       <Divider />
-      <Modal.Actions left={<Checkbox label="Send invite" />} metaLabel="Only 3 licences left in this workspace">
-        <JustifiedButton variant="secondary" label="Secondary action" container={container} />
-        <JustifiedButton variant="primary" label="Primary action" container={container} />
+      <Modal.Actions
+        left={<Checkbox label="Send invite" />}
+        metaLabel="Only 3 licences left in this workspace"
+      >
+        <JustifiedButton
+          variant="secondary"
+          label="Secondary action"
+          container={container}
+        />
+        <JustifiedButton
+          variant="primary"
+          label="Primary action"
+          container={container}
+        />
       </Modal.Actions>
     </div>
   );
@@ -422,7 +567,12 @@ export const ModalInModal = {
           }}
           footerLeft={<Button label="footerLeft" onClick={fn()} />}
           footerActions={
-            <JustifiedButton variant="primary" label="footerActions" onClick={fn()} container={container} />
+            <JustifiedButton
+              variant="primary"
+              label="footerActions"
+              onClick={fn()}
+              container={container}
+            />
           }
         >
           <div className={classNames("px-xxl")}>
@@ -443,7 +593,12 @@ export const ModalInModal = {
             }}
             footerLeft={<Button label="footerLeft" onClick={fn()} />}
             footerActions={
-              <JustifiedButton variant="primary" label="footerActions" onClick={fn()} container={container2} />
+              <JustifiedButton
+                variant="primary"
+                label="footerActions"
+                onClick={fn()}
+                container={container2}
+              />
             }
           >
             <GlobalContent />
@@ -472,10 +627,19 @@ export const HeightScenario: StoryObj<Pick<ModalProps, "height">> = {
         <Modal.Header>Test Modal Height</Modal.Header>
         <Modal.Content padding={false} divider="visible">
           <div
-            className={classNames("flex", "border-box", "flex-row", "grow-1", "h-full", "justify-between")}
+            className={classNames(
+              "flex",
+              "border-box",
+              "flex-row",
+              "grow-1",
+              "h-full",
+              "justify-between",
+            )}
             data-modal-content
           >
-            <div className={classNames("flex", "border-box", "px-xxl")}>left panel</div>
+            <div className={classNames("flex", "border-box", "px-xxl")}>
+              left panel
+            </div>
             <Divider orientation="vertical" />
             <div
               className={classNames(
@@ -494,7 +658,11 @@ export const HeightScenario: StoryObj<Pick<ModalProps, "height">> = {
           </div>
         </Modal.Content>
         <Modal.Actions left={<Button variant="default" label="Manage users" />}>
-          <JustifiedButton variant="primary" label="Create" container={container} />
+          <JustifiedButton
+            variant="primary"
+            label="Create"
+            container={container}
+          />
         </Modal.Actions>
       </Modal.Root>
     );

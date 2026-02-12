@@ -1,0 +1,184 @@
+.table {
+  border-spacing: 0;
+}
+
+.thead {
+  display: initial;
+  scrollbar-width: none;
+}
+
+.th {
+  min-inline-size: var(--sprout-common-sizing-xl);
+  position: relative;
+  flex: 1 1 100%;
+}
+
+.tr_interactive {
+  cursor: pointer;
+}
+
+.tr_selected {
+  background-color: var(--sprout-selected-background-color-default);
+}
+
+.tr_interactive:hover {
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.cell {
+  min-block-size: var(--sprout-common-sizing-3xl);
+  min-inline-size: var(--sprout-common-sizing-xl);
+  flex: 1 1 100%;
+  outline: none;
+}
+
+.cell:focus .cell_state {
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(-1 * var(--sprout-focus-border-default-width));
+  border-radius: var(--sprout-common-border-radius-pill);
+}
+
+.cell[aria-selected="true"] .cell_state {
+  outline: var(--sprout-selected-border-default);
+  outline-offset: calc(-1 * var(--sprout-selected-border-default-width));
+  border-radius: var(--sprout-common-border-radius-pill);
+}
+
+.cell[data-interactive="true"]:hover {
+  cursor: pointer;
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.cell_content > div {
+  min-inline-size: 0;
+}
+
+.cell_content[data-variant="number"] {
+  font: var(--sprout-data-font-tabular-s);
+}
+
+.table[data-variant="data"] {
+  border: var(--sprout-common-divider-default);
+
+  .thead {
+    background-color: var(--sprout-common-background-color-weak);
+    border-block-end: var(--sprout-common-divider-default);
+  }
+
+  [role="gridcell"] {
+    border-inline-end: var(--sprout-common-divider-default);
+    border-block-end: var(--sprout-common-divider-default);
+  }
+
+  [role="gridcell"]:nth-last-child(1) {
+    border-inline-end: none;
+  }
+
+  .tr:nth-last-child(1) [role="gridcell"] {
+    border-block-end: none;
+  }
+
+  [role="columnheader"] {
+    border-inline-end: var(--sprout-common-divider-default);
+  }
+
+  [role="columnheader"]:nth-last-child(1) {
+    border-inline-end: none;
+  }
+}
+
+.table[data-variant="list"] {
+  /* add a divider using CSS */
+  .th [data-layoutid="state-container"]::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset-inline-end: var(--sprout-common-divider-default-width);
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+    align-self: center;
+    inline-size: var(--sprout-common-divider-default-width);
+    block-size: var(--sprout-common-sizing-xl);
+    background-color: var(--sprout-common-divider-default-color);
+  }
+
+  .tbody {
+    background-color: var(--sprout-common-background-color-default);
+    border-radius: var(--sprout-common-border-radius-soft);
+    border: var(--sprout-common-border-default);
+  }
+}
+
+.th[data-variant="data"] {
+  background-color: var(--sprout-common-background-color-weak);
+}
+
+.th[data-variant="data"] hr {
+  display: none;
+}
+
+.th:hover {
+  background-color: var(--sprout-common-background-color-hover);
+}
+
+.th:focus [data-layoutid="state-container"] {
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) * -1);
+}
+
+.th[aria-sort] {
+  cursor: pointer;
+}
+
+.cell_action_wrapper {
+  inline-size: 0;
+  opacity: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/**
+ * That set of rules control when we have to display the contextual menu trigger.
+ */
+.cell_action_wrapper:has(button:focus-visible),
+.cell_action_wrapper:has(button[aria-expanded="true"]),
+.th:hover .cell_action_wrapper,
+.th:focus .cell_action_wrapper,
+.th:focus-within .cell_action_wrapper,
+.cell:hover .cell_action_wrapper,
+.cell:focus .cell_action_wrapper,
+.cell:focus-within .cell_action_wrapper {
+  visibility: visible;
+  inline-size: auto;
+  opacity: 1;
+  overflow: visible;
+}
+
+.sort_indicator__wrapper > svg {
+  min-inline-size: var(--sprout-common-sizing-xl);
+}
+
+.resizing_indicator {
+  inset-inline-start: calc(100% - var(--sprout-common-sizing-m));
+  inline-size: var(--sprout-common-sizing-m);
+  block-size: 100%;
+  background: transparent;
+  border: 0;
+}
+
+.th.line_number,
+.cell.line_number {
+  flex: 0;
+}
+
+.th.select_all,
+.cell.select_all {
+  flex: 0;
+}
+
+.row_number {
+  inline-size: calc(
+    2 * var(--sprout-common-spacing-m) + var(--sprout-common-sizing-xxl)
+  );
+}

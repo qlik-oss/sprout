@@ -1,29 +1,23 @@
-.z_stacked,
 .z-stacked {
   z-index: var(--sprout-container-layer-stacked);
 }
 
-.z_floating,
 .z-floating {
   z-index: var(--sprout-container-layer-floating);
 }
 
-.z_overlay,
 .z-overlay {
   z-index: var(--sprout-container-layer-overlay);
 }
 
-.z_context,
 .z-context {
   z-index: var(--sprout-container-layer-context);
 }
 
-.z_time_sensitive,
 .z-time-sensitive {
   z-index: var(--sprout-container-layer-time-sensitive);
 }
 
-.z_cursor,
 .z-cursor {
   z-index: var(--sprout-container-layer-cursor);
 }

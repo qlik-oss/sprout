@@ -284,7 +284,7 @@ function SelectFloatingBase(
         }}
         minWidth="reference"
         maxWidth={maxWidth || "s"}
-        minHeight={100}
+        minHeight={150}
         viewportPadding={spacingXxl}
         placementUpdate={
           placementUpdate === undefined ? "dropdown" : placementUpdate

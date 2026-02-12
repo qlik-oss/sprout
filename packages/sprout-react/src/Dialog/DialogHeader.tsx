@@ -1,6 +1,7 @@
 import { type ReactNode, useId } from "react";
 
-import Close from "@qlik/sprout-icons/react/Close";
+import { DirectionLeftIcon } from "@qlik/sprout-icons/react";
+import CrossOutline from "@qlik/sprout-icons/react/CrossOutline";
 
 import { IconButton } from "../Button";
 import { useModalContext } from "../Modal/ModalContext";
@@ -8,7 +9,6 @@ import { InfoTooltipPrimitive } from "../_InfoTooltipPrimitive";
 import { classNames } from "../classNames";
 import { useI18n } from "../hooks/useI18n";
 import type { HTMLDivProps } from "../htmlTypes";
-import { DirectionLeftIcon } from "../icons";
 
 export type DialogHeaderProps = HTMLDivProps & {
   children: ReactNode;
@@ -151,7 +151,7 @@ export function DialogHeader({
         <span className={classNames("self-start")}>
           <IconButton
             variant="quiet"
-            icon={<Close />}
+            icon={<CrossOutline />}
             onClick={onClickClose}
             label={labelClose || labelCloseDefault}
             data-testid={`${dataTestId}.close`}

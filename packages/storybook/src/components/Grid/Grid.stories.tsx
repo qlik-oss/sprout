@@ -1,5 +1,5 @@
-import { Grid, classNames } from "@qlik/sprout-react";
 import { useMedia } from "@qlik/sprout-react-hooks";
+import { Grid, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta: Meta = {

@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { fn } from "storybook/test";
 
-import { Button, Checkbox, Modal } from "@qlik/sprout-react";
 import { useContainer } from "@qlik/sprout-react-hooks";
+import { Button, Checkbox, Modal } from "@qlik/sprout-react";
 import type { Meta } from "@storybook/react";
 
 import { ModalRootArgTypes } from "./Modal.argTypes";
@@ -19,11 +19,21 @@ export const Root: Meta<typeof Modal.Root> = {
 
     return (
       <Modal.Root {...props} ref={container.ref}>
-        <Modal.Header description="Header description">Modal with composition of JSX elements</Modal.Header>
-        <Modal.Content padding>Content explicitly wrapped into ModalContent</Modal.Content>
+        <Modal.Header description="Header description">
+          Modal with composition of JSX elements
+        </Modal.Header>
+        <Modal.Content padding>
+          Content explicitly wrapped into ModalContent
+        </Modal.Content>
         <Modal.Actions
           metaLabel="3 licences left"
-          left={<Checkbox name="checkbox-name" label="Checkbox label" onChange={fn()} />}
+          left={
+            <Checkbox
+              name="checkbox-name"
+              label="Checkbox label"
+              onChange={fn()}
+            />
+          }
         >
           <Button
             variant="secondary"

@@ -4,6 +4,7 @@ import { InlineEdit } from ".";
 import { Modal } from "../Modal";
 import { getAxeReport } from "../PlaywrightUtils";
 import { KEYBOARD_KEYS } from "../Utils/keyboardKeys";
+import { InlineEditTextFieldOverflowTest } from "./InlineEditTest";
 
 test(`should InlineEdit.TextField be accessible`, async ({ mount, page }) => {
   await mount(
@@ -245,4 +246,53 @@ test("should be able to see focus state when rendered in a modal", async ({
   await view.click();
   await expect(input).toBeVisible();
   await expect(input).toBeFocused();
+});
+
+test("should close when scrolled horizontally", async ({ mount, page }) => {
+  await mount(<InlineEditTextFieldOverflowTest />);
+
+  const view = page.getByTestId("test-textfield-scroll.view");
+  const input = page.getByRole("textbox");
+  const scrollContainer = page.locator("#component-testing");
+
+  // expect overflow to be scrollable
+  await expect(scrollContainer).toHaveCSS("overflow", "auto");
+
+  // Open the textfield
+  await view.click();
+  await expect(input).toBeVisible();
+
+  // Wait for scroll listener to be attached (100ms delay in InlineEditPrimitive)
+  await page.waitForTimeout(150);
+
+  // Scroll horizontally
+  await scrollContainer.evaluate((element) => {
+    element.dispatchEvent(new Event("scroll", { bubbles: true }));
+  });
+
+  // Verify the input closes
+  await expect(input).not.toBeVisible();
+});
+
+test("should close when scrolled vertically", async ({ mount, page }) => {
+  await mount(<InlineEditTextFieldOverflowTest />);
+
+  const view = page.getByTestId("test-textfield-scroll.view");
+  const input = page.getByRole("textbox");
+  const scrollContainer = page.locator("#component-testing");
+
+  // Open the textfield
+  await view.click();
+  await expect(input).toBeVisible();
+
+  // Wait for scroll listener to be attached (100ms delay in InlineEditPrimitive)
+  await page.waitForTimeout(150);
+
+  // Scroll vertically
+  await scrollContainer.evaluate((element) => {
+    element.dispatchEvent(new Event("scroll", { bubbles: true }));
+  });
+
+  // Verify the input closes
+  await expect(input).not.toBeVisible();
 });

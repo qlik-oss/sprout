@@ -1,4 +1,3 @@
-import { DeleteIcon } from "@qlik/sprout-icons/react";
 import {
   Button,
   ButtonGroup,
@@ -9,10 +8,10 @@ import {
   TextField,
   classNames,
 } from "@qlik/sprout-react";
-
+import BinOutline from "@qlik/sprout-icons/react/BinOutline";
+import DropdownArrow from "@qlik/sprout-icons/react/DropdownArrow";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { DropdownArrow } from "../../icons";
 import { OPTIONS_WITH_GROUP } from "../Select/SelectTest";
 import { ButtonGroupArgTypes } from "./ButtonGroup.argTypes";
 
@@ -39,7 +38,17 @@ export const Playground: Story = {
 
 function H2(props: { children: string }) {
   return (
-    <h2 className={classNames("flex", "flex-row", "border-box", "font-heading-m", "text-default")}>{props.children}</h2>
+    <h2
+      className={classNames(
+        "flex",
+        "flex-row",
+        "border-box",
+        "font-heading-m",
+        "text-default",
+      )}
+    >
+      {props.children}
+    </h2>
   );
 }
 
@@ -72,14 +81,16 @@ export const VisualTest: Story = {
         <ButtonGroup fullWidth>
           <Button label="Default" />
           <TextField placeholder="Default" />
-          <IconButton label="Default" icon={<DeleteIcon />} />
+          <IconButton label="Default" icon={<BinOutline />} />
         </ButtonGroup>
       </div>
       <div className={classNames("flex", "flex-row", "border-box", "w-s")}>
         <ButtonGroup fullWidth>
           <Button label="Default" />
-          <Select.Select placeholder="Default">{OPTIONS_WITH_GROUP}</Select.Select>
-          <IconButton label="Default" icon={<DeleteIcon />} />
+          <Select.Select placeholder="Default">
+            {OPTIONS_WITH_GROUP}
+          </Select.Select>
+          <IconButton label="Default" icon={<BinOutline />} />
         </ButtonGroup>
       </div>
       <div className={classNames("flex", "flex-row", "border-box", "w-s")}>
@@ -89,38 +100,58 @@ export const VisualTest: Story = {
             {OPTIONS_WITH_GROUP}
           </Select.Multi>
 
-          <IconButton label="Default" icon={<DeleteIcon />} />
+          <IconButton label="Default" icon={<BinOutline />} />
         </ButtonGroup>
       </div>
       <H2>Split Button</H2>
       <ButtonGroup>
         <Button variant="default" label="Default" />
         <Menu.Trigger placement="bottom-end" menu={<Menu.Item label="foo" />}>
-          <IconButton variant="default" label="Default dropdown" icon={<DropdownArrow />} />
+          <IconButton
+            variant="default"
+            label="Default dropdown"
+            icon={<DropdownArrow />}
+          />
         </Menu.Trigger>
       </ButtonGroup>
       <ButtonGroup>
         <Button variant="primary" label="Default" />
         <Menu.Trigger placement="bottom-end" menu={<Menu.Item label="foo" />}>
-          <IconButton variant="primary" label="Default dropdown" icon={<DropdownArrow />} />
+          <IconButton
+            variant="primary"
+            label="Default dropdown"
+            icon={<DropdownArrow />}
+          />
         </Menu.Trigger>
       </ButtonGroup>
       <ButtonGroup>
         <Button variant="secondary" label="Default" />
         <Menu.Trigger placement="bottom-end" menu={<Menu.Item label="foo" />}>
-          <IconButton variant="secondary" label="Default dropdown" icon={<DropdownArrow />} />
+          <IconButton
+            variant="secondary"
+            label="Default dropdown"
+            icon={<DropdownArrow />}
+          />
         </Menu.Trigger>
       </ButtonGroup>
       <ButtonGroup>
         <Button variant="destructive" label="Default" />
         <Menu.Trigger placement="bottom-end" menu={<Menu.Item label="foo" />}>
-          <IconButton variant="destructive" label="Default dropdown" icon={<DropdownArrow />} />
+          <IconButton
+            variant="destructive"
+            label="Default dropdown"
+            icon={<DropdownArrow />}
+          />
         </Menu.Trigger>
       </ButtonGroup>
       <ButtonGroup>
         <Button variant="quiet" label="Default" />
         <Menu.Trigger placement="bottom-end" menu={<Menu.Item label="foo" />}>
-          <IconButton variant="quiet" label="Default dropdown" icon={<DropdownArrow />} />
+          <IconButton
+            variant="quiet"
+            label="Default dropdown"
+            icon={<DropdownArrow />}
+          />
         </Menu.Trigger>
       </ButtonGroup>
       <H2>Vertical</H2>

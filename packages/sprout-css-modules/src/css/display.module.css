@@ -9,7 +9,6 @@
   display: none;
 }
 
-.sr_only,
 .sr-only {
   border: 0;
   clip-path: inset(50%);
@@ -30,12 +29,10 @@
   display: inline;
 }
 
-.inline_block,
 .inline-block {
   display: inline-block;
 }
 
-.inline_flex,
 .inline-flex {
   display: inline-flex;
 }
@@ -44,7 +41,6 @@
   display: grid;
 }
 
-.inline_grid,
 .inline-grid {
   display: inline-grid;
 }
@@ -62,7 +58,6 @@
   justify-content: flex-start;
 }
 
-.flex_noreset,
 .flex-noreset {
   display: flex;
 }

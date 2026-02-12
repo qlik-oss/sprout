@@ -1,6 +1,9 @@
 import { useState } from "react";
 
 import { tokens } from "@qlik/design-tokens";
+import BookOutline from "@qlik/sprout-icons/react/BookOutline";
+import CogwheelOutline from "@qlik/sprout-icons/react/CogwheelOutline";
+import Star from "@qlik/sprout-icons/react/Star";
 
 import { classNames } from "../classNames";
 import { Tab } from "./Tab";
@@ -33,20 +36,20 @@ export function TabTests({
           <Tab
             aria-controls="Assets"
             title="Assets"
-            icon={<svg />}
+            icon={<BookOutline />}
             useIconButton={useIconButton}
           />
           <Tab
             aria-controls="Settings"
             title="Settings"
-            icon={<svg />}
+            icon={<CogwheelOutline />}
             useIconButton={useIconButton}
           />
           <Tab aria-controls="Focusable" title="Focusable" />
           <Tab
             aria-controls="Users"
             title="Users"
-            icon={<svg />}
+            icon={<Star />}
             disabled
             useIconButton={useIconButton}
           />
@@ -79,10 +82,14 @@ export function TabsWithTrackerTest() {
     >
       <TabsContainer defaultActiveKey="Assets">
         <TabList showTrack>
-          <Tab aria-controls="Assets" title={tabTitle} icon={<svg />} />
-          <Tab aria-controls="Settings" title="Settings" icon={<svg />} />
+          <Tab aria-controls="Assets" title={tabTitle} icon={<BookOutline />} />
+          <Tab
+            aria-controls="Settings"
+            title="Settings"
+            icon={<CogwheelOutline />}
+          />
           <Tab aria-controls="Focusable" title="Focusable" />
-          <Tab aria-controls="Users" title="Users" icon={<svg />} disabled />
+          <Tab aria-controls="Users" title="Users" icon={<Star />} disabled />
         </TabList>
         <TabPanel id="Assets">
           <p>Tab content for Assets</p>

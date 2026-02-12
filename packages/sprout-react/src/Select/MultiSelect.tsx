@@ -14,6 +14,7 @@ import {
 import { useMemo } from "react";
 
 import { useControl } from "@qlik/sprout-react-hooks";
+import sprout from "@qlik/sprout-css-modules";
 
 import { type CommonFieldProps, Field, useFieldProps } from "../Field";
 import {
@@ -23,7 +24,6 @@ import {
 import { Tag, TagGroups } from "../Tag";
 import { MultiSelectComboboxGesture } from "../Utils/gesture/MultiSelectCombobox";
 import { mergeRefs } from "../Utils/mergeRef";
-import { classNames } from "../classNames";
 import { useI18n } from "../hooks/useI18n";
 import {
   ComboboxEditable,
@@ -386,7 +386,7 @@ function MultiSelectBase(
       {!!filterControlled.value && filteredOptionsCount === 0 && (
         <div
           role="status"
-          className={classNames("p-m", "font-label-s", "text-weak")}
+          className={sprout.classNames("p-m", "font-label-s", "text-weak")}
           aria-live="polite"
         >
           {t("select.dropdown.no-results.message")}
@@ -405,7 +405,7 @@ function MultiSelectBase(
 
   const content = (
     <>
-      <span className={classNames("sr-only")}>
+      <span className={sprout.sr_only}>
         <select
           multiple
           // Don't set value when using react-hook-form register, let it manage through DOM
@@ -417,7 +417,7 @@ function MultiSelectBase(
           ref={mergeSelectRef}
           tabIndex={-1}
           aria-hidden="true"
-          className={classNames("hidden")}
+          className={sprout.hidden}
         >
           {allOptionValues.map((v) => (
             <option key={v} value={v} tabIndex={-1}>

@@ -8,8 +8,8 @@ import {
   useState,
 } from "react";
 
-import Close from "@qlik/sprout-icons/react/Close";
 import { useId } from "@qlik/sprout-react-hooks";
+import CrossOutline from "@qlik/sprout-icons/react/CrossOutline";
 
 import type { AlertInlineSeverity } from "../AlertInline";
 import { Button, type ButtonProps, IconButton } from "../Button";
@@ -253,7 +253,7 @@ function ToastBase(
               onClick={() => {
                 onCloseToast();
               }}
-              icon={<Close height={undefined} />}
+              icon={<CrossOutline height={undefined} />}
               aria-label={dismissLabel}
               data-testid={dataTestId ? `${dataTestId}-close` : undefined}
             />

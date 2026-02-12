@@ -1,6 +1,6 @@
 {
   "name": "@qlik/sprout-react",
-  "version": "6.40.0",
+  "version": "6.42.0",
   "homepage": "https://github.com/qlik/sprout#readme",
   "bugs": {
     "url": "https://github.com/qlik/sprout/issues"
@@ -10,17 +10,17 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "import": "./lib/index.js"
+      "import": "./lib/sprout-react.js"
     }
   },
-  "module": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "module": "./lib/sprout-react.js",
+  "types": "./lib/sprout-react.d.ts",
   "scripts": {
     "build": "pnpm run build:tsc",
-    "build:tsc": "tsc -p tsconfig.npm.json && pnpm run copy",
+    "build:tsc": "rm -rf lib && tsc -p tsconfig.npm.json && pnpm run copy",
     "build:watch": "concurrently \"tsc -p tsconfig.npm.json --watch\" \"pnpm run copy:watch\"",
     "check-types": "tsc --noEmit -p tsconfig.npm.json",
-    "clean": "rimraf playwright-report storybook-static test-results playwright/.cache lib",
+    "clean": "rimraf playwright-report storybook-static test-results playwright/.cache lib stylelint-report.json eslint-report.json",
     "code-connect": "figma connect",
     "code-connect:check": "figma connect publish --dry-run",
     "code-connect:publish": "figma connect publish",
@@ -34,7 +34,8 @@
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:css:fix": "stylelint --fix 'src/**/*.css'",
     "lint:ci": "eslint . -f json -o eslint-report.json && stylelint 'src/**/*.css' -f json -o stylelint-report.json",
-    "test": "pnpm playwright:test",
+    "test": "pnpm vitest:run && pnpm playwright:test",
+    "vitest:run": "vitest run",
     "playwright:test": "playwright test",
     "playwright:test:ui": "playwright test --ui",
     "playwright:install": "pnpm -w exec playwright install --with-deps"
@@ -50,12 +51,12 @@
     "@qlik/design-tokens": "workspace:*"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.11.0",
+    "@axe-core/playwright": "^4.11.1",
     "@eslint/eslintrc": "^3.3.3",
     "@eslint/js": "^9.39.2",
-    "@figma/code-connect": "^1.3.12",
-    "@playwright/experimental-ct-react": "^1.58.1",
-    "@playwright/test": "^1.58.1",
+    "@figma/code-connect": "^1.3.13",
+    "@playwright/experimental-ct-react": "^1.58.2",
+    "@playwright/test": "^1.58.2",
     "@qlik/eslint-config-sprout": "workspace:*",
     "@qlik/stylelint-config-sprout": "workspace:*",
     "@qlik/browserslist-config": "^3.0.0",
@@ -63,22 +64,22 @@
     "@qlik/tsconfig": "^0.3.1",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/node": "^24.10.1",
-    "@types/react": "^19.2.10",
+    "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.2",
+    "@vitejs/plugin-react": "^5.1.3",
     "axe-core": "^4.11.1",
     "concurrently": "^9.2.1",
     "cpx2": "^8.0.0",
     "eslint": "^9.39.2",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-storybook": "^10.2.3",
+    "eslint-plugin-storybook": "^10.2.8",
     "eslint-plugin-vitest": "^0.5.4",
     "prettier": "^3.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.71.1",
-    "rimraf": "^6.1.2",
-    "stylelint": "^17.1.0",
+    "rimraf": "6.1.2",
+    "stylelint": "^17.1.1",
     "stylelint-config-css-modules": "^4.6.0",
     "stylelint-config-standard": "^40.0.0",
     "typescript": "^5.9.3",

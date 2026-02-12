@@ -1,5 +1,16 @@
-import { BookmarkIcon, BookmarkedIcon, HistoryIcon, UploadIcon } from "@qlik/sprout-icons/react";
-import { Divider, List, ListItem, SideNav, type SideNavProps, classNames } from "@qlik/sprout-react";
+import {
+  Divider,
+  List,
+  ListItem,
+  SideNav,
+  type SideNavProps,
+  classNames,
+} from "@qlik/sprout-react";
+import CloudUploadIcon from "@qlik/sprout-icons/react/CloudUpload";
+import HistoryIcon from "@qlik/sprout-icons/react/History";
+import ShareIcon from "@qlik/sprout-icons/react/Share";
+import Star2Icon from "@qlik/sprout-icons/react/Star2";
+import UploadIcon from "@qlik/sprout-icons/react/Upload";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta: Meta = {
@@ -11,7 +22,10 @@ const UNZIED_PROPS = { width: undefined, height: undefined };
 
 export default meta;
 
-type PlaygroundArgs = { label: string } & Pick<SideNavProps["Item"], "indentation" | "isExternal" | "variant">;
+type PlaygroundArgs = { label: string } & Pick<
+  SideNavProps["Item"],
+  "indentation" | "isExternal" | "variant"
+>;
 
 export const Playground: StoryObj<PlaygroundArgs> = {
   render: ({ label, indentation, isExternal, variant }) => (
@@ -19,7 +33,12 @@ export const Playground: StoryObj<PlaygroundArgs> = {
       <SideNav.Section label="Files">
         <List gap="density-s">
           <ListItem hasPadding={false} interactive>
-            <SideNav.Link href="#upload" icon={<UploadIcon {...UNZIED_PROPS} />} label="Uploads" variant={variant} />
+            <SideNav.Link
+              href="#upload"
+              icon={<UploadIcon {...UNZIED_PROPS} />}
+              label="Uploads"
+              variant={variant}
+            />
           </ListItem>
           <ListItem hasPadding={false} interactive selected>
             <SideNav.Link
@@ -31,7 +50,12 @@ export const Playground: StoryObj<PlaygroundArgs> = {
             />
           </ListItem>
           <ListItem hasPadding={false} interactive>
-            <SideNav.Link href="#shared" icon={<BookmarkIcon {...UNZIED_PROPS} />} label="Shared" variant={variant} />
+            <SideNav.Link
+              href="#shared"
+              icon={<ShareIcon {...UNZIED_PROPS} />}
+              label="Shared"
+              variant={variant}
+            />
           </ListItem>
         </List>
       </SideNav.Section>
@@ -51,7 +75,12 @@ export const Playground: StoryObj<PlaygroundArgs> = {
             />
           </ListItem>
           <ListItem hasPadding={false} interactive>
-            <a href="#password" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+            <a
+              href="#password"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
               <SideNav.Item label={label} variant={variant} />
             </a>
           </ListItem>
@@ -90,12 +119,25 @@ export const Playground: StoryObj<PlaygroundArgs> = {
 
 export const VisualTest = {
   render: () => (
-    <div className={classNames("flex", "flex-row", "w-xl", "gap-3xl", "p-s", "border-default")}>
+    <div
+      className={classNames(
+        "flex",
+        "flex-row",
+        "w-xl",
+        "gap-3xl",
+        "p-s",
+        "border-default",
+      )}
+    >
       <SideNav.Nav>
         <SideNav.Section label="Default">
           <List gap="density-s">
             <ListItem hasPadding={false} interactive>
-              <SideNav.Link href="#upload" icon={<UploadIcon {...UNZIED_PROPS} />} label="Uploads" />
+              <SideNav.Link
+                href="#upload"
+                icon={<CloudUploadIcon {...UNZIED_PROPS} />}
+                label="Uploads"
+              />
             </ListItem>
             <ListItem hasPadding={false} interactive selected>
               <SideNav.Link
@@ -106,12 +148,17 @@ export const VisualTest = {
               />
             </ListItem>
             <ListItem hasPadding={false} interactive>
-              <SideNav.Link href="#shared" icon={<BookmarkIcon {...UNZIED_PROPS} />} label="Shared" isExternal />
+              <SideNav.Link
+                href="#shared"
+                icon={<ShareIcon {...UNZIED_PROPS} />}
+                label="Shared"
+                isExternal
+              />
             </ListItem>
             <ListItem hasPadding={false} interactive>
               <SideNav.Link
                 href="#shared"
-                icon={<BookmarkedIcon {...UNZIED_PROPS} />}
+                icon={<Star2Icon {...UNZIED_PROPS} />}
                 label="Extra long label with icon"
               />
             </ListItem>
@@ -124,7 +171,12 @@ export const VisualTest = {
               <SideNav.Link href="#profile" label="Profile" />
             </ListItem>
             <ListItem hasPadding={false} interactive>
-              <SideNav.Link href="#email" label="email" isExternal indentation={1} />
+              <SideNav.Link
+                href="#email"
+                label="email"
+                isExternal
+                indentation={1}
+              />
             </ListItem>
             <ListItem hasPadding={false} interactive>
               <a
@@ -147,7 +199,7 @@ export const VisualTest = {
                 <SideNav.Link
                   variant="compact"
                   href="#upload"
-                  icon={<UploadIcon {...UNZIED_PROPS} />}
+                  icon={<CloudUploadIcon {...UNZIED_PROPS} />}
                   label="Uploads"
                 />
               </ListItem>
@@ -164,7 +216,7 @@ export const VisualTest = {
                 <SideNav.Link
                   variant="compact"
                   href="#shared"
-                  icon={<BookmarkIcon {...UNZIED_PROPS} />}
+                  icon={<ShareIcon {...UNZIED_PROPS} />}
                   label="Shared"
                   isExternal
                 />
@@ -173,7 +225,7 @@ export const VisualTest = {
                 <SideNav.Link
                   variant="compact"
                   href="#shared"
-                  icon={<BookmarkedIcon {...UNZIED_PROPS} />}
+                  icon={<Star2Icon {...UNZIED_PROPS} />}
                   iconSize="large"
                   label="Extra long label with large icon"
                 />
@@ -187,7 +239,7 @@ export const VisualTest = {
                 <SideNav.Link
                   variant="compact"
                   href="#upload"
-                  icon={<UploadIcon {...UNZIED_PROPS} />}
+                  icon={<CloudUploadIcon {...UNZIED_PROPS} />}
                   aria-label="Uploads"
                 />
               </ListItem>
@@ -204,7 +256,7 @@ export const VisualTest = {
                 <SideNav.Link
                   variant="compact"
                   href="#shared"
-                  icon={<BookmarkIcon {...UNZIED_PROPS} />}
+                  icon={<ShareIcon {...UNZIED_PROPS} />}
                   aria-label="Shared"
                   isExternal
                 />
@@ -218,7 +270,12 @@ export const VisualTest = {
         <SideNav.Section label="Compact with more space">
           <List gap="density-s">
             <ListItem hasPadding={false} interactive>
-              <SideNav.Link variant="compact" href="#upload" icon={<UploadIcon {...UNZIED_PROPS} />} label="Uploads" />
+              <SideNav.Link
+                variant="compact"
+                href="#upload"
+                icon={<CloudUploadIcon {...UNZIED_PROPS} />}
+                label="Uploads"
+              />
             </ListItem>
             <ListItem hasPadding={false} interactive selected>
               <SideNav.Link
@@ -233,7 +290,7 @@ export const VisualTest = {
               <SideNav.Link
                 variant="compact"
                 href="#shared"
-                icon={<BookmarkIcon {...UNZIED_PROPS} />}
+                icon={<ShareIcon {...UNZIED_PROPS} />}
                 label="Shared"
                 isExternal
               />
@@ -242,7 +299,7 @@ export const VisualTest = {
               <SideNav.Link
                 variant="compact"
                 href="#shared"
-                icon={<BookmarkedIcon {...UNZIED_PROPS} />}
+                icon={<Star2Icon {...UNZIED_PROPS} />}
                 iconSize="large"
                 label="Extra long label with large icon"
               />
@@ -256,7 +313,7 @@ export const VisualTest = {
               <SideNav.Link
                 variant="compact"
                 href="#upload"
-                icon={<UploadIcon {...UNZIED_PROPS} />}
+                icon={<CloudUploadIcon {...UNZIED_PROPS} />}
                 aria-label="Uploads"
               />
             </ListItem>
@@ -273,7 +330,7 @@ export const VisualTest = {
               <SideNav.Link
                 variant="compact"
                 href="#shared"
-                icon={<BookmarkIcon {...UNZIED_PROPS} />}
+                icon={<ShareIcon {...UNZIED_PROPS} />}
                 aria-label="Shared"
                 isExternal
               />

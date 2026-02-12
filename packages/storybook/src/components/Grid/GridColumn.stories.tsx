@@ -13,7 +13,19 @@ const meta: Meta = {
 export default meta;
 
 function Item({ children }: { children: ReactNode }) {
-  return <div className={classNames("border-default", "border-box", "flex", "items-center", "p-m")}>{children}</div>;
+  return (
+    <div
+      className={classNames(
+        "border-default",
+        "border-box",
+        "flex",
+        "items-center",
+        "p-m",
+      )}
+    >
+      {children}
+    </div>
+  );
 }
 
 export const GridColumn: StoryObj<GridProps["Column"]> = {

@@ -1,5 +1,5 @@
 .menu {
-  background-color: var(--sprout-common-background-color-default);
+  background-color: var(--sprout-common-background-color-floating);
   box-shadow: var(--sprout-common-elevation-moderate);
   outline: none;
   padding: var(--sprout-common-spacing-s);

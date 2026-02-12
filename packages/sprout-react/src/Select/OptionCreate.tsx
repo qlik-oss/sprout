@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 
-import AddOutline from "@qlik/sprout-icons/react/Add";
+import AddOutline from "@qlik/sprout-icons/react/AddOutline";
 
 import { classNames } from "../classNames";
 import { useI18n } from "../hooks/useI18n";

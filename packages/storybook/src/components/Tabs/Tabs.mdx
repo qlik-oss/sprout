@@ -30,7 +30,12 @@ function MyComponent() {
     <Tabs.Container>
       <Tabs.List showTrack>
         <Tabs.Tab aria-controls="Assets" title="Assets" icon={<BookIcon />} />
-        <Tabs.Tab aria-controls="Users" title="Users" icon={<StarIcon />} disabled />
+        <Tabs.Tab
+          aria-controls="Users"
+          title="Users"
+          icon={<StarIcon />}
+          disabled
+        />
       </Tabs.List>
       <Tabs.Panel id="Assets">Tab content for Assets</Tabs.Panel>
       <Tabs.Panel id="Settings">Tab content for Settings</Tabs.Panel>

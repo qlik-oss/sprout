@@ -9,8 +9,8 @@ import {
 import { useControl } from "@qlik/sprout-react-hooks";
 
 import { type ChangeReasons, TextField, type TextFieldProps } from "../Input";
+import type { PossibleValues } from "../Typography";
 import { classNames } from "../classNames";
-import type { PossibleFont } from "../css";
 import {
   InlineEditPrimitive,
   type InlineEditPrimitiveProps,
@@ -19,16 +19,16 @@ import { Placeholder } from "./Placeholder";
 
 export type TextFieldViewProps = {
   children?: ReactNode;
-  font?: PossibleFont;
+  font?: PossibleValues["font"];
 };
 
 function TextFieldView({ children, font }: TextFieldViewProps): JSX.Element {
   return (
     <span
       className={classNames(
-        `font-${font || "label-s"}`,
-        `text-default`,
-        `text-start`,
+        `font_${font || "label_s"}`,
+        `text_default`,
+        `text_start`,
         "truncate",
       )}
       // Setting inline style to override `white-space: nowrap` in `ellipsis` class
@@ -46,7 +46,7 @@ export type InlineEditTextFieldProps = Omit<
   type?: TextFieldProps["type"];
   placeholder?: TextFieldProps["placeholder"];
   value?: TextFieldProps["value"];
-  font?: PossibleFont;
+  font?: PossibleValues["font"];
   view?: (props: TextFieldViewProps) => JSX.Element;
   defaultValue?: TextFieldProps["defaultValue"];
   onChange?: (
@@ -131,7 +131,7 @@ function InlineEditTextFieldBase(
           aria-labelledby={ariaLabelledBy}
           placeholder={placeholder}
           value={controlled.value}
-          font={font || "label-s"}
+          font={font || "label_s"}
           hasError={hasError}
           type={type}
           onChange={(e, r) => {

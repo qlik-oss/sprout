@@ -3,11 +3,13 @@
 import { type MouseEvent, useState } from "react";
 import { fn } from "storybook/test";
 
-import { ControlIcon, DeleteIcon, EditIcon, PersonIcon } from "@qlik/sprout-icons/react";
-import Person from "@qlik/sprout-icons/react/Person";
 import { Button, Menu, classNames } from "@qlik/sprout-react";
+import { CogwheelIcon, ControlIcon } from "@qlik/sprout-icons/react";
+import BinOutline from "@qlik/sprout-icons/react/BinOutline";
+import EditOutline from "@qlik/sprout-icons/react/EditOutline";
+import LogOut from "@qlik/sprout-icons/react/LogOut";
+import Person from "@qlik/sprout-icons/react/Person";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { CogwheelIcon, LogoutIcon } from "../../icons";
 
 export default {
   title: "Components/Menu",
@@ -24,8 +26,8 @@ export const JsxApi: StoryObj<typeof Menu.Trigger> = {
       menu={
         <>
           <Menu.GroupLabel label="User" />
-          <Menu.Item icon={<PersonIcon />} label="Profile" disabled />
-          <Menu.Item icon={<LogoutIcon />} label="Logout" />
+          <Menu.Item icon={<Person />} label="Profile" disabled />
+          <Menu.Item icon={<LogOut />} label="Logout" />
           <Menu.Item icon={null} label="Reload" />
           <Menu.Item icon={null} label="Share" />
           <Menu.Sub
@@ -62,12 +64,12 @@ export const JsxApi: StoryObj<typeof Menu.Trigger> = {
           />
           <Menu.Divider />
           <Menu.Item
-            icon={<EditIcon />}
+            icon={<EditOutline />}
             label="Edit"
             description="Don’t remember what we said about overflow, but this would be it."
             valueLabel="⌘ E"
           />
-          <Menu.Item icon={<DeleteIcon />} label="Delete" />
+          <Menu.Item icon={<BinOutline />} label="Delete" />
           <Menu.Divider />
           <Menu.Item icon={null} label="Cut" valueLabel="⌘ X" />
           <Menu.Item icon={null} label="Copy" valueLabel="⌘ C" />
@@ -127,11 +129,36 @@ export const MuiApi: StoryObj<typeof Menu.Contextual> = {
         onContextMenu={handleContextMenu}
         style={{ cursor: "context-menu" }}
       >
-        <div className={classNames("flex", "flex-col", "p-m", "w-full", "border-default")} data-testid="contextual">
-          <h1 className={classNames("flex", "flex-row", "border-box", "font-heading-m", "text-default")}>
-            Contextual Menu demo
+        <div
+          className={classNames(
+            "flex",
+            "flex-col",
+            "p-m",
+            "w-full",
+            "border-default",
+          )}
+          data-testid="contextual"
+        >
+          <h1
+            className={classNames(
+              "flex",
+              "flex-row",
+              "border-box",
+              "font-heading-m",
+              "text-default",
+            )}
+          >
+            Contextual Menu demo using MUI api
           </h1>
-          <p className={classNames("flex", "flex-row", "border-box", "font-body-m", "text-default")}>
+          <p
+            className={classNames(
+              "flex",
+              "flex-row",
+              "border-box",
+              "font-body-m",
+              "text-default",
+            )}
+          >
             This a paragraph with a bit of text.
           </p>
           <Button label="Menu" onClick={handleClick} />
@@ -152,7 +179,11 @@ export const MuiApi: StoryObj<typeof Menu.Contextual> = {
               setContextMenu(null);
             }
           }}
-          anchorPosition={contextMenu ? { left: contextMenu.clientX, top: contextMenu.clientY } : undefined}
+          anchorPosition={
+            contextMenu
+              ? { left: contextMenu.clientX, top: contextMenu.clientY }
+              : undefined
+          }
         />
         <Menu.Trigger
           anchorEl={anchorEl || undefined}
@@ -182,7 +213,10 @@ export const MuiApi: StoryObj<typeof Menu.Contextual> = {
 
 export const VisualTest: StoryObj<typeof Menu.Trigger> = {
   render: (props) => (
-    <div className={classNames("flex", "flex-row", "items-start")} style={{ blockSize: "650px", inlineSize: "300px" }}>
+    <div
+      className={classNames("flex", "flex-row", "items-start")}
+      style={{ blockSize: "650px", inlineSize: "300px" }}
+    >
       <Menu.Trigger
         {...props}
         menu={
@@ -199,7 +233,7 @@ export const VisualTest: StoryObj<typeof Menu.Trigger> = {
             <Menu.Item icon={<Person />} label="Disabled" disabled />
             <Menu.Divider />
             <Menu.Item
-              icon={<EditIcon />}
+              icon={<EditOutline />}
               label="Edit with a super long menu too so it should also overflow"
               description="Don’t remember what we said about overflow, but this would be it."
               valueLabel="⌘ E"
@@ -213,7 +247,11 @@ export const VisualTest: StoryObj<typeof Menu.Trigger> = {
               valueLabel="⌘ E"
             />
 
-            <Menu.Item variant="destructive" icon={<DeleteIcon />} label="Delete" />
+            <Menu.Item
+              variant="destructive"
+              icon={<BinOutline />}
+              label="Delete"
+            />
             <Menu.Divider />
             <Menu.Item icon={null} label="Cut" valueLabel="⌘ X" />
             <Menu.Item icon={null} label="Copy" valueLabel="⌘ C" />
@@ -227,7 +265,12 @@ export const VisualTest: StoryObj<typeof Menu.Trigger> = {
               <Menu.Item label="Link" selectable />
               <Menu.SecondaryAction
                 onClick={() => {
-                  window.open("/?path=/story/components-menu--secondary-action", "_blank")?.focus();
+                  window
+                    .open(
+                      "/?path=/story/components-menu--secondary-action",
+                      "_blank",
+                    )
+                    ?.focus();
                 }}
               />
             </Menu.Split>

@@ -1,8 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 import { type MouseEvent, type Ref, forwardRef } from "react";
 
-import sprout from "@qlik/sprout-css-modules";
 import { useControl } from "@qlik/sprout-react-hooks";
+import sprout from "@qlik/sprout-css-modules";
 
 import { ProgressCircular } from "../Progress";
 import type { HTMLButtonProps } from "../htmlTypes";

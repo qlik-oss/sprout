@@ -1,0 +1,57 @@
+.icon_size_s > svg,
+.icon_size_s > img {
+  inline-size: var(--sprout-common-sizing-s);
+  block-size: var(--sprout-common-sizing-s);
+}
+
+.icon_size_m > svg,
+.icon_size_m > img {
+  inline-size: var(--sprout-common-sizing-m);
+  block-size: var(--sprout-common-sizing-m);
+}
+
+.icon_size_l > svg,
+.icon_size_l > img {
+  inline-size: var(--sprout-common-sizing-l);
+  block-size: var(--sprout-common-sizing-l);
+}
+
+.icon_size_xl > svg,
+.icon_size_xl > img {
+  inline-size: var(--sprout-common-sizing-xl);
+  block-size: var(--sprout-common-sizing-xl);
+}
+
+.icon_size_xxl > svg,
+.icon_size_xxl > img {
+  inline-size: var(--sprout-common-sizing-xxl);
+  block-size: var(--sprout-common-sizing-xxl);
+}
+
+.fill_none {
+  fill: none;
+}
+
+.fill_inherit {
+  fill: inherit;
+}
+
+.fill_transparent {
+  fill: transparent;
+}
+
+.fill_current {
+  fill: currentcolor;
+}
+
+.fill_default {
+  fill: var(--sprout-common-foreground-color-default);
+}
+
+.fill_weak {
+  fill: var(--sprout-common-foreground-color-weak);
+}
+
+.fill_disabled {
+  fill: var(--sprout-common-foreground-color-disabled);
+}

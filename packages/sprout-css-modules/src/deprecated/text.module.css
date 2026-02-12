@@ -1,0 +1,111 @@
+.text_default {
+  color: var(--sprout-common-foreground-color-default);
+}
+
+.text_disabled {
+  color: var(--sprout-common-foreground-color-disabled);
+}
+
+.text_weak {
+  color: var(--sprout-common-foreground-color-weak);
+}
+
+.text_inverse {
+  color: var(--sprout-inverse-foreground-color-default);
+}
+
+.text_danger {
+  color: var(--sprout-danger-color-default);
+}
+
+.text_danger_inverse {
+  color: var(--sprout-danger-color-inverse);
+}
+
+.text_info {
+  color: var(--sprout-info-color-default);
+}
+
+.text_info_inverse {
+  color: var(--sprout-info-color-inverse);
+}
+
+.text_warning {
+  color: var(--sprout-warning-color-default);
+}
+
+.text_warning_inverse {
+  color: var(--sprout-warning-color-inverse);
+}
+
+.text_success {
+  color: var(--sprout-success-color-default);
+}
+
+.text_success_inverse {
+  color: var(--sprout-success-color-inverse);
+}
+
+.text_clip {
+  text-overflow: clip;
+}
+
+.text_ellipsis {
+  text-overflow: ellipsis;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.text_wrap {
+  text-wrap: wrap;
+}
+
+.text_nowrap {
+  text-wrap: nowrap;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_left,
+.text_start {
+  text-align: start;
+}
+
+.text_right,
+.text_end {
+  text-align: end;
+}
+
+.text_justify {
+  text-align: justify;
+}
+
+.no_underline {
+  text-decoration-line: none;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.overline {
+  text-decoration-line: overline;
+}
+
+.linethrough {
+  text-decoration-line: line-through;
+}
+
+.break_words {
+  overflow-wrap: break-word;
+}
+
+.break_all {
+  word-break: break-all;
+}

@@ -2,9 +2,16 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import sprout, { type AllClasses, type BoxSizing, type ContainerSize } from "@qlik/sprout-css-modules";
-import { AlignLeftIcon, NextIcon } from "@qlik/sprout-icons/react";
+import sprout, {
+  type AllClasses,
+  type BoxSizing,
+  type ContainerSize,
+} from "@qlik/sprout-css-modules";
 import { Button, classNames } from "@qlik/sprout-react";
+import {
+  AlignLeftIcon,
+  DirectionRightIcon,
+} from "@qlik/sprout-icons/react";
 import type { StoryContext, StoryObj } from "@storybook/react-vite";
 
 import { Item } from "./Content";
@@ -96,7 +103,8 @@ export const Responsive = {
             })}
           >
             <Item>
-              sprout.media.get can return anything even object / props &#123;data-viewport=&quot;
+              sprout.media.get can return anything even object / props
+              &#123;data-viewport=&quot;
               {sprout.media.getViewportSize()}&quot; &#125; !
             </Item>
           </div>
@@ -129,7 +137,10 @@ export const CreateContainer: StoryObj = {
     const [size, setSize] = useState<ContainerSize>("xxs");
     const prevSize = useRef<string | null>(null);
 
-    const container = useMemo(() => sprout.createContainer(size, ref.current), [size]);
+    const container = useMemo(
+      () => sprout.createContainer(size, ref.current),
+      [size],
+    );
 
     useEffect(() => {
       // box defaults to "content-box" in `sprout.widthObserver`
@@ -153,15 +164,29 @@ export const CreateContainer: StoryObj = {
     }, [container]);
 
     return (
-      <div className={sprout.classNames("flex", "border-box", "flex-col", "gap-m", "w-full")}>
+      <div
+        className={sprout.classNames(
+          "flex",
+          "border-box",
+          "flex-col",
+          "gap-m",
+          "w-full",
+        )}
+      >
         <p className={sprout.classNames("font-body-s", "text-default")}>
-          This example changes alignment and layout based on the element’s own width using <code>widthObserver</code>{" "}
-          together with <code>createContainer</code> and <code>get</code>. Drag the handle to resize or change the
-          viewport size.
+          This example changes alignment and layout based on the element’s own
+          width using <code>widthObserver</code> together with{" "}
+          <code>createContainer</code> and <code>get</code>. Drag the handle to
+          resize or change the viewport size.
         </p>
         <div
           ref={ref}
-          className={sprout.classNames("border-box", "border-default", "p-m", "w-full")}
+          className={sprout.classNames(
+            "border-box",
+            "border-default",
+            "p-m",
+            "w-full",
+          )}
           style={{ resize: "horizontal", overflow: "auto" }}
         >
           <div className={sprout.classNames("border-box", "p-m")}>
@@ -190,7 +215,13 @@ export const CreateContainer: StoryObj = {
             {Array.from({ length: 9 }).map((_, i) => (
               <div
                 key={i}
-                className={sprout.classNames("border-default", "p-s", "items-center", "justify-center", "flex")}
+                className={sprout.classNames(
+                  "border-default",
+                  "p-s",
+                  "items-center",
+                  "justify-center",
+                  "flex",
+                )}
               >
                 Item {i + 1}
               </div>
@@ -228,30 +259,58 @@ export const WidthObserver: StoryObj = {
 
     return (
       <div
-        className={sprout.classNames("flex", "border-box", "flex-col", "gap-m", "w-full")}
+        className={sprout.classNames(
+          "flex",
+          "border-box",
+          "flex-col",
+          "gap-m",
+          "w-full",
+        )}
         style={{ alignItems: "flex-start" }}
       >
         <p className={sprout.classNames("font-body-s", "text-default")}>
-          Resize the element horizontally, its own width (not the viewport) is observed via <code>ResizeObserver</code>.
+          Resize the element horizontally, its own width (not the viewport) is
+          observed via <code>ResizeObserver</code>.
         </p>
 
         <Button
-          label={boxSizing === "border-box" ? "Switch to content-box" : "Switch to border-box"}
+          label={
+            boxSizing === "border-box"
+              ? "Switch to content-box"
+              : "Switch to border-box"
+          }
           onClick={() => {
-            setBoxSizing(boxSizing === "border-box" ? "content-box" : "border-box");
+            setBoxSizing(
+              boxSizing === "border-box" ? "content-box" : "border-box",
+            );
           }}
         />
 
         <div
           ref={containerRef}
-          className={sprout.classNames("border-default", "bg-default", "p-m", "w-m")}
+          className={sprout.classNames(
+            "border-default",
+            "bg-default",
+            "p-m",
+            "w-m",
+          )}
           style={{
             resize: "horizontal",
             overflow: "auto",
           }}
         >
-          <Item>width: {typeof width === "number" ? `${Math.round(width)}px` : "—"}</Item>
-          <div className={sprout.classNames("font-label-s", "text-default", "pt-s")}>box: {boxSizing}</div>
+          <Item>
+            width: {typeof width === "number" ? `${Math.round(width)}px` : "—"}
+          </Item>
+          <div
+            className={sprout.classNames(
+              "font-label-s",
+              "text-default",
+              "pt-s",
+            )}
+          >
+            box: {boxSizing}
+          </div>
         </div>
       </div>
     );
@@ -278,20 +337,42 @@ export const RTL: StoryObj = {
     controls: false,
   },
   render: () => (
-    <div className={sprout.classNames("flex", "flex-col", "bg-default", "text-default", "gap-3xl", "w-m", "p-m")}>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "flex-col",
+        "bg-default",
+        "text-default",
+        "gap-3xl",
+        "w-m",
+        "p-m",
+      )}
+    >
       {RTL_CONFIG.map(({ dir, styles }) => (
         <div
           key={dir}
           dir={dir}
-          className={classNames("flex", "flex-col", "border-box", "border-default", "p-m", "gap-m")}
+          className={classNames(
+            "flex",
+            "flex-col",
+            "border-box",
+            "border-default",
+            "p-m",
+            "gap-m",
+          )}
         >
           <span>
             {dir} {styles.join(" ")}
           </span>
-          <div className={classNames("flex", "flex-row", "border-box", "gap-m")}>
-            <NextIcon className={classNames(...styles)} /> NextIcon
+          <div
+            className={classNames("flex", "flex-row", "border-box", "gap-m")}
+          >
+            <DirectionRightIcon className={classNames(...styles)} />{" "}
+            DirectionRightIcon
           </div>
-          <div className={classNames("flex", "flex-row", "border-box", "gap-m")}>
+          <div
+            className={classNames("flex", "flex-row", "border-box", "gap-m")}
+          >
             <AlignLeftIcon className={classNames(...styles)} />
             AlignLeftIcon
           </div>

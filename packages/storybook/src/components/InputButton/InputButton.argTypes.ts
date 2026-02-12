@@ -40,7 +40,8 @@ export const InputButtonArgTypes: ArgTypes<InputButtonProps> = {
     control: {
       type: "boolean",
     },
-    description: "See [Progress](./?path=/docs/components-progress--docs) for details.",
+    description:
+      "See [Progress](./?path=/docs/components-progress--docs) for details.",
     table: {
       type: {
         summary: "boolean",

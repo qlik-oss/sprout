@@ -1,4 +1,11 @@
-import { Checkbox, List, ListDivider, ListItem, Menu, classNames } from "@qlik/sprout-react";
+import {
+  Checkbox,
+  List,
+  ListDivider,
+  ListItem,
+  Menu,
+  classNames,
+} from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 export default {
@@ -8,7 +15,13 @@ export default {
 
 function Draft() {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -20,7 +33,13 @@ function Draft() {
 }
 function Inbox() {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -84,7 +103,10 @@ export const Default: Story = {
 
 export const VisualTest: Story = {
   render: () => (
-    <div className={classNames("flex", "flex-row", "border-box", "p-s", "gap-xl")} style={{ inlineSize: "750px" }}>
+    <div
+      className={classNames("flex", "flex-row", "border-box", "p-s", "gap-xl")}
+      style={{ inlineSize: "750px" }}
+    >
       <List gap="s">
         <ListItem onClick={() => {}}>Enabled</ListItem>
         <ListItem onClick={() => {}} data-state="hover">
@@ -117,7 +139,9 @@ export const VisualTest: Story = {
         >
           <ListItem>Menu Integration</ListItem>
         </Menu.Trigger>
-        <ListItem>Overflow Lorem ipsum dolor sit amet, consectetur adipiscing elit</ListItem>
+        <ListItem>
+          Overflow Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </ListItem>
       </List>
       <List gap="s" hasPadding={false}>
         <ListItem onClick={() => {}} data-state="hover">
@@ -197,12 +221,32 @@ export const VisualTest: Story = {
               "justify-between",
             )}
           >
-            <div className={classNames("flex", "flex-row", "border-box", "gap-m")}>
+            <div
+              className={classNames("flex", "flex-row", "border-box", "gap-m")}
+            >
               <div className={classNames("flex", "flex-col", "border-box")}>
-                <h6 className={classNames("flex", "flex-row", "border-box", "font-label-m", "text-default")}>
+                <h6
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "border-box",
+                    "font-label-m",
+                    "text-default",
+                  )}
+                >
                   Custom Item
                 </h6>
-                <p className={classNames("flex", "flex-row", "border-box", "font-body-s", "text-default")}>3 tasks</p>
+                <p
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "border-box",
+                    "font-body-s",
+                    "text-default",
+                  )}
+                >
+                  3 tasks
+                </p>
               </div>
             </div>
           </div>
@@ -218,12 +262,32 @@ export const VisualTest: Story = {
               "justify-between",
             )}
           >
-            <div className={classNames("flex", "flex-row", "border-box", "gap-m")}>
+            <div
+              className={classNames("flex", "flex-row", "border-box", "gap-m")}
+            >
               <div className={classNames("flex", "flex-col", "border-box")}>
-                <h6 className={classNames("flex", "flex-row", "border-box", "font-label-m", "text-default")}>
+                <h6
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "border-box",
+                    "font-label-m",
+                    "text-default",
+                  )}
+                >
                   Custom Item hover
                 </h6>
-                <p className={classNames("flex", "flex-row", "border-box", "font-body-s", "text-default")}>3 tasks</p>
+                <p
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "border-box",
+                    "font-body-s",
+                    "text-default",
+                  )}
+                >
+                  3 tasks
+                </p>
               </div>
             </div>
           </div>
@@ -239,12 +303,32 @@ export const VisualTest: Story = {
               "justify-between",
             )}
           >
-            <div className={classNames("flex", "flex-row", "border-box", "gap-m")}>
+            <div
+              className={classNames("flex", "flex-row", "border-box", "gap-m")}
+            >
               <div className={classNames("flex", "flex-col", "border-box")}>
-                <h6 className={classNames("flex", "flex-row", "border-box", "font-label-m", "text-default")}>
+                <h6
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "border-box",
+                    "font-label-m",
+                    "text-default",
+                  )}
+                >
                   Custom Item focus
                 </h6>
-                <p className={classNames("flex", "flex-row", "border-box", "font-body-s", "text-default")}>3 tasks</p>
+                <p
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "border-box",
+                    "font-body-s",
+                    "text-default",
+                  )}
+                >
+                  3 tasks
+                </p>
               </div>
             </div>
           </div>
@@ -260,12 +344,32 @@ export const VisualTest: Story = {
               "justify-between",
             )}
           >
-            <div className={classNames("flex", "flex-row", "border-box", "gap-m")}>
+            <div
+              className={classNames("flex", "flex-row", "border-box", "gap-m")}
+            >
               <div className={classNames("flex", "flex-col", "border-box")}>
-                <h6 className={classNames("flex", "flex-row", "border-box", "font-label-m", "text-default")}>
+                <h6
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "border-box",
+                    "font-label-m",
+                    "text-default",
+                  )}
+                >
                   Custom Item pressed
                 </h6>
-                <p className={classNames("flex", "flex-row", "border-box", "font-body-s", "text-default")}>3 tasks</p>
+                <p
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "border-box",
+                    "font-body-s",
+                    "text-default",
+                  )}
+                >
+                  3 tasks
+                </p>
               </div>
             </div>
           </div>
@@ -281,12 +385,32 @@ export const VisualTest: Story = {
               "justify-between",
             )}
           >
-            <div className={classNames("flex", "flex-row", "border-box", "gap-m")}>
+            <div
+              className={classNames("flex", "flex-row", "border-box", "gap-m")}
+            >
               <div className={classNames("flex", "flex-col", "border-box")}>
-                <h6 className={classNames("flex", "flex-row", "border-box", "font-label-m", "text-default")}>
+                <h6
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "border-box",
+                    "font-label-m",
+                    "text-default",
+                  )}
+                >
                   Custom Item selected
                 </h6>
-                <p className={classNames("flex", "flex-row", "border-box", "font-body-s", "text-default")}>2 tasks</p>
+                <p
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "border-box",
+                    "font-body-s",
+                    "text-default",
+                  )}
+                >
+                  2 tasks
+                </p>
               </div>
             </div>
           </div>

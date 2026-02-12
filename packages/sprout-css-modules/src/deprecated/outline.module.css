@@ -1,0 +1,21 @@
+.outline_none,
+.outline_none:focus {
+  outline: none;
+}
+
+.outline_focus_centered:focus {
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) / -2);
+  border-color: transparent;
+}
+
+.outline_focus_inner:focus {
+  outline: var(--sprout-focus-border-default);
+  outline-offset: calc(var(--sprout-focus-border-default-width) * -1);
+  border-color: transparent;
+}
+
+.outline_focus_offset:focus {
+  outline: var(--sprout-focus-border-default);
+  outline-offset: var(--sprout-focus-border-default-width);
+}

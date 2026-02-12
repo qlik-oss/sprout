@@ -55,9 +55,22 @@ export const Contextual: StoryObj<typeof Menu.Contextual> = {
           }
         }}
       >
-        <div className={classNames("flex", "flex-col", "p-m", "w-full", "border-default")} data-testid="contextual">
-          <h1 className={classNames("font-heading-m", "text-default")}>Main title</h1>
-          <p className={classNames("font-body-m", "text-default")}>This a paragraph with a bit of text.</p>
+        <div
+          className={classNames(
+            "flex",
+            "flex-col",
+            "p-m",
+            "w-full",
+            "border-default",
+          )}
+          data-testid="contextual"
+        >
+          <h1 className={classNames("font-heading-m", "text-default")}>
+            Main title
+          </h1>
+          <p className={classNames("font-body-m", "text-default")}>
+            This a paragraph with a bit of text.
+          </p>
           <Button label="this is a button" onClick={() => {}} />
         </div>
       </Menu.Contextual>

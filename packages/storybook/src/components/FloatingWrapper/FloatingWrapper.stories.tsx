@@ -1,4 +1,3 @@
-import { DeleteIcon } from "@qlik/sprout-icons/react";
 import {
   Button,
   FloatingWrapper,
@@ -8,6 +7,7 @@ import {
   ToggleIconButton,
   classNames,
 } from "@qlik/sprout-react";
+import BinOutline from "@qlik/sprout-icons/react/BinOutline";
 
 export default {
   title: "Components/FloatingWrapper",
@@ -30,7 +30,7 @@ export const FloatingIconButton = {
   render: () => (
     <div className={classNames("flex", "border-box", "flex-col")}>
       <FloatingWrapper>
-        <IconButton icon={<DeleteIcon />} label="label" />
+        <IconButton icon={<BinOutline />} label="label" />
       </FloatingWrapper>
     </div>
   ),
@@ -52,7 +52,7 @@ export const FloatingToggleIconButton = {
   render: () => (
     <div className={classNames("flex", "border-box", "flex-col")}>
       <FloatingWrapper>
-        <ToggleIconButton icon={<DeleteIcon />} label="label" defaultToggled />
+        <ToggleIconButton icon={<BinOutline />} label="label" defaultToggled />
       </FloatingWrapper>
     </div>
   ),
@@ -87,13 +87,17 @@ export const VisualTest = {
           <Button label="label" />
         </FloatingWrapper>
         <FloatingWrapper>
-          <IconButton icon={<DeleteIcon />} label="label" />
+          <IconButton icon={<BinOutline />} label="label" />
         </FloatingWrapper>
         <FloatingWrapper>
           <ToggleButton label="label" defaultToggled />
         </FloatingWrapper>
         <FloatingWrapper>
-          <ToggleIconButton icon={<DeleteIcon />} label="label" defaultToggled />
+          <ToggleIconButton
+            icon={<BinOutline />}
+            label="label"
+            defaultToggled
+          />
         </FloatingWrapper>
         <FloatingWrapper>
           <TextField defaultValue="value" />

@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
 import { type MouseEvent, type ReactNode, type Ref, forwardRef } from "react";
 
+import GotoIcon from "@qlik/sprout-icons/react/Goto";
+
+import type { PossibleValues } from "../Typography";
 import { classNames } from "../classNames";
-import type { PossibleFont } from "../css";
 import type { HTMLAnchorProps } from "../htmlTypes";
-import { GotoIcon } from "../icons";
 
 import style from "./Link.module.css";
 
@@ -16,7 +17,7 @@ export type LinkProps = Omit<HTMLAnchorProps, "className"> & {
   children: ReactNode;
   isExternal?: boolean;
   withEllipsis?: boolean;
-  font?: PossibleFont | "inherit";
+  font?: PossibleValues["font"] | "inherit";
 };
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(LinkBase);
@@ -25,7 +26,7 @@ function LinkBase(
   {
     onClick,
     disabled,
-    font = "body-m",
+    font = "body_m",
     isExternal,
     href,
     target,
@@ -59,7 +60,7 @@ function LinkBase(
       href={href}
       className={classNames(style.link, {
         "font-body-s": font === "inherit",
-        [`font-${font}`]: font !== "inherit",
+        [`font_${font}`]: font !== "inherit",
         [style.link_inherit]: font === "inherit",
         [style.with_ellipsis]: !!withEllipsis,
       })}

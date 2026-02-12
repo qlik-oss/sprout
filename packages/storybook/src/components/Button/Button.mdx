@@ -11,18 +11,18 @@ To use it you just have to import the Button component like this:
 
 ```jsx
 import { Button, IconButton, ButtonFloating } from "@qlik/sprout-react";
-import { Icon } from "@qlik/sprout-icons/react";
+import Star from "@qlik/sprout-icons/react/Star";
 
 <Button variant="primary" size="small" label="Click me" onClick={() => {}} />
 
-<IconButton variant="default" icon={<Icon />} label="Click me" onClick={() => {}} />
+<IconButton variant="default" icon={<Star />} label="Click me" onClick={() => {}} />
 
 <ButtonFloating>
     <Button variant="primary" size="small" label="Click me" onClick={() => {}} />
 </ButtonFloating>
 
 <ButtonFloating>
-    <IconButton variant="default" icon={<Icon />} label="Click me" onClick={() => {}} />
+    <IconButton variant="default" icon={<Star />} label="Click me" onClick={() => {}} />
 </ButtonFloating>
 ```
 

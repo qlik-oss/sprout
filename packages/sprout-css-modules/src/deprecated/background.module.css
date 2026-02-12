@@ -1,0 +1,127 @@
+.bg_transparent {
+  background: transparent;
+}
+
+.bg_default {
+  background: var(--sprout-common-background-color-default);
+}
+
+.bg_weak {
+  background: var(--sprout-common-background-color-weak);
+}
+
+.bg_moderate {
+  background: var(--sprout-common-background-color-moderate);
+}
+
+.bg_strong {
+  background: var(--sprout-common-background-color-strong);
+}
+
+.bg_enabled {
+  background: var(--sprout-common-background-color-enabled);
+}
+
+.bg_disabled {
+  background: var(--sprout-common-background-color-disabled);
+}
+
+.bg_interactive {
+  background: var(--sprout-common-background-color-enabled);
+}
+
+.bg_interactive:disabled {
+  background: var(--sprout-common-background-color-disabled);
+}
+
+.bg_interactive:hover {
+  background: var(--sprout-common-background-color-hover);
+}
+
+.bg_interactive:active {
+  background: var(--sprout-common-background-color-pressed);
+}
+
+.bg_pressed {
+  background: var(--sprout-common-background-color-pressed);
+}
+
+.bg_inverse {
+  background: var(--sprout-inverse-background-color-default);
+}
+
+.bg_danger {
+  background: var(--sprout-danger-color-default);
+}
+
+.bg_danger_weak {
+  background: var(--sprout-danger-color-weak);
+}
+
+.bg_danger_inverse {
+  background: var(--sprout-danger-color-inverse);
+}
+
+.bg_danger_toggled {
+  background: var(--sprout-danger-color-toggled);
+}
+
+.bg_danger_interactive {
+  background: var(--sprout-danger-color-default);
+}
+
+.bg_danger_interactive:hover {
+  background: var(--sprout-danger-color-hover);
+}
+
+.bg_danger_interactive:active {
+  background: var(--sprout-danger-color-pressed);
+}
+
+.bg_danger_interactive:disabled {
+  background: var(--sprout-danger-color-disabled);
+}
+
+.bg_danger_interactive:focus-visible {
+  background: var(--sprout-danger-color-focus);
+}
+
+.bg_warning {
+  background: var(--sprout-warning-color-default);
+}
+
+.bg_warning_weak {
+  background: var(--sprout-warning-color-weak);
+}
+
+.bg_warning_inverse {
+  background: var(--sprout-warning-color-inverse);
+}
+
+.bg_info {
+  background: var(--sprout-info-color-default);
+}
+
+.bg_info_weak {
+  background: var(--sprout-info-color-weak);
+}
+
+.bg_info_inverse {
+  background: var(--sprout-info-color-inverse);
+}
+
+.bg_info_interactive:disabled {
+  background: var(--sprout-common-background-color-disabled);
+}
+
+.bg_success {
+  background: var(--sprout-success-color-default);
+}
+
+.bg_success_weak {
+  background: var(--sprout-success-color-weak);
+}
+
+.bg_success_inverse {
+  background: var(--sprout-success-color-inverse);
+}

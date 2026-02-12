@@ -1,8 +1,7 @@
 .popover {
   outline: none;
-  background-color: var(--sprout-common-background-color-default);
+  background-color: var(--sprout-common-background-color-floating);
   border-radius: var(--sprout-common-border-radius-subtle);
-  border: var(--sprout-common-border-moderate);
   box-shadow: var(--sprout-common-elevation-moderate);
   box-sizing: border-box;
   color: var(--sprout-common-foreground-color-default);

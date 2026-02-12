@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+import { useContainer } from "@qlik/sprout-react-hooks";
 import {
   Button,
   Divider,
@@ -13,7 +14,6 @@ import {
   Textarea,
   classNames,
 } from "@qlik/sprout-react";
-import { useContainer } from "@qlik/sprout-react-hooks";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof Modal>;
@@ -42,16 +42,23 @@ export const Dialog: Story = {
         <Modal.Header>Dialog Variant</Modal.Header>
         <div className={classNames("px-xxl")}>
           <p className={classNames("text-default", "font-body-s")}>
-            Ex dolor velit incididunt tempor. Mollit nostrud reprehenderit id exercitation quis amet occaecat deserunt
-            aliquip ipsum amet esse. Fugiat laboris culpa et amet aliquip mollit aliquip est cillum aliquip cupidatat
-            mollit. Commodo sunt fugiat cillum occaecat exercitation voluptate eu reprehenderit ex non ad. Aute elit
-            nulla excepteur amet exercitation consequat eu culpa velit exercitation est ex est.
+            Ex dolor velit incididunt tempor. Mollit nostrud reprehenderit id
+            exercitation quis amet occaecat deserunt aliquip ipsum amet esse.
+            Fugiat laboris culpa et amet aliquip mollit aliquip est cillum
+            aliquip cupidatat mollit. Commodo sunt fugiat cillum occaecat
+            exercitation voluptate eu reprehenderit ex non ad. Aute elit nulla
+            excepteur amet exercitation consequat eu culpa velit exercitation
+            est ex est.
           </p>
           <StorybookCodeHint />
         </div>
 
         <Modal.Actions>
-          <Button variant="primary" label="Action" justified={container.get<boolean>({ xxs: true, s: false })} />
+          <Button
+            variant="primary"
+            label="Action"
+            justified={container.get<boolean>({ xxs: true, s: false })}
+          />
         </Modal.Actions>
       </Modal.Root>
     );
@@ -67,18 +74,55 @@ export const Form: Story = {
         <Modal.Header>Form Variant</Modal.Header>
         <Divider />
         <div className={classNames("px-xxl", "overflow-y-auto")}>
-          <form className={classNames("flex", "flex-col", "border-box", "gap-xxl", "py-xl")}>
-            <TextField label="Full name" id="full-name" name="fullName" placeholder="Alex Doe" required />
+          <form
+            className={classNames(
+              "flex",
+              "flex-col",
+              "border-box",
+              "gap-xxl",
+              "py-xl",
+            )}
+          >
+            <TextField
+              label="Full name"
+              id="full-name"
+              name="fullName"
+              placeholder="Alex Doe"
+              required
+            />
 
-            <TextField label="Email" id="email" name="email" type="email" placeholder="alex.doe@example.com" required />
+            <TextField
+              label="Email"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="alex.doe@example.com"
+              required
+            />
 
-            <TextField label="Company" id="company" name="company" placeholder="Acme Corp" />
+            <TextField
+              label="Company"
+              id="company"
+              name="company"
+              placeholder="Acme Corp"
+            />
 
-            <Select.Select label="Topic" placeholder="Choose a topic" defaultValue="product-feedback" name="topic">
-              <Select.Option value="product-feedback">Product feedback</Select.Option>
+            <Select.Select
+              label="Topic"
+              placeholder="Choose a topic"
+              defaultValue="product-feedback"
+              name="topic"
+            >
+              <Select.Option value="product-feedback">
+                Product feedback
+              </Select.Option>
               <Select.Option value="bug-report">Bug report</Select.Option>
-              <Select.Option value="feature-request">Feature request</Select.Option>
-              <Select.Option value="billing">Billing &amp; subscription</Select.Option>
+              <Select.Option value="feature-request">
+                Feature request
+              </Select.Option>
+              <Select.Option value="billing">
+                Billing &amp; subscription
+              </Select.Option>
               <Select.Option value="other">Other</Select.Option>
             </Select.Select>
 
@@ -98,14 +142,21 @@ export const Form: Story = {
             />
 
             <div className={classNames("flex", "border-box", "py-m")}>
-              <Switch label="Send me updates about this request" name="subscribe" />
+              <Switch
+                label="Send me updates about this request"
+                name="subscribe"
+              />
             </div>
           </form>
           <StorybookCodeHint />
         </div>
         <Divider />
         <Modal.Actions>
-          <Button variant="primary" label="Submit" justified={container.get<boolean>({ xxs: true, s: false })} />
+          <Button
+            variant="primary"
+            label="Submit"
+            justified={container.get<boolean>({ xxs: true, s: false })}
+          />
         </Modal.Actions>
       </Modal.Root>
     );
@@ -121,18 +172,55 @@ export const FormWide: Story = {
         <Modal.Header>Form (wide) Variant</Modal.Header>
         <Divider />
         <div className={classNames("px-xxl", "overflow-y-auto")}>
-          <form className={classNames("flex", "flex-col", "border-box", "gap-xxl", "py-xl")}>
-            <TextField label="Full name" id="full-name" name="fullName" placeholder="Alex Doe" required />
+          <form
+            className={classNames(
+              "flex",
+              "flex-col",
+              "border-box",
+              "gap-xxl",
+              "py-xl",
+            )}
+          >
+            <TextField
+              label="Full name"
+              id="full-name"
+              name="fullName"
+              placeholder="Alex Doe"
+              required
+            />
 
-            <TextField label="Email" id="email" name="email" type="email" placeholder="alex.doe@example.com" required />
+            <TextField
+              label="Email"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="alex.doe@example.com"
+              required
+            />
 
-            <TextField label="Company" id="company" name="company" placeholder="Acme Corp" />
+            <TextField
+              label="Company"
+              id="company"
+              name="company"
+              placeholder="Acme Corp"
+            />
 
-            <Select.Select label="Topic" placeholder="Choose a topic" defaultValue="product-feedback" name="topic">
-              <Select.Option value="product-feedback">Product feedback</Select.Option>
+            <Select.Select
+              label="Topic"
+              placeholder="Choose a topic"
+              defaultValue="product-feedback"
+              name="topic"
+            >
+              <Select.Option value="product-feedback">
+                Product feedback
+              </Select.Option>
               <Select.Option value="bug-report">Bug report</Select.Option>
-              <Select.Option value="feature-request">Feature request</Select.Option>
-              <Select.Option value="billing">Billing &amp; subscription</Select.Option>
+              <Select.Option value="feature-request">
+                Feature request
+              </Select.Option>
+              <Select.Option value="billing">
+                Billing &amp; subscription
+              </Select.Option>
               <Select.Option value="other">Other</Select.Option>
             </Select.Select>
 
@@ -152,14 +240,21 @@ export const FormWide: Story = {
             />
 
             <div className={classNames("flex", "border-box", "py-m")}>
-              <Switch label="Send me updates about this request" name="subscribe" />
+              <Switch
+                label="Send me updates about this request"
+                name="subscribe"
+              />
             </div>
           </form>
           <StorybookCodeHint />
         </div>
         <Divider />
         <Modal.Actions>
-          <Button variant="primary" label="Submit" justified={container.get<boolean>({ xxs: true, s: false })} />
+          <Button
+            variant="primary"
+            label="Submit"
+            justified={container.get<boolean>({ xxs: true, s: false })}
+          />
         </Modal.Actions>
       </Modal.Root>
     );
@@ -210,9 +305,15 @@ export const Workflow: Story = {
                   defaultValue="form-submissions"
                   name="inputType"
                 >
-                  <Select.Option value="form-submissions">Form submissions</Select.Option>
-                  <Select.Option value="file-uploads">File uploads</Select.Option>
-                  <Select.Option value="manual-entries">Manual entries</Select.Option>
+                  <Select.Option value="form-submissions">
+                    Form submissions
+                  </Select.Option>
+                  <Select.Option value="file-uploads">
+                    File uploads
+                  </Select.Option>
+                  <Select.Option value="manual-entries">
+                    Manual entries
+                  </Select.Option>
                 </Select.Select>
 
                 <Select.Select
@@ -221,23 +322,39 @@ export const Workflow: Story = {
                   defaultValue="summary-report"
                   name="outcome"
                 >
-                  <Select.Option value="summary-report">Summary report</Select.Option>
+                  <Select.Option value="summary-report">
+                    Summary report
+                  </Select.Option>
                   <Select.Option value="task-list">Task list</Select.Option>
                   <Select.Option value="export-file">Export file</Select.Option>
                 </Select.Select>
 
                 <RadioGroup label="Start mode" name="start-mode">
                   <Radio label="Manual" value="manual" name="start-mode" />
-                  <Radio label="Automatic" value="automatic" name="start-mode" />
+                  <Radio
+                    label="Automatic"
+                    value="automatic"
+                    name="start-mode"
+                  />
                 </RadioGroup>
 
-                <Select.Select label="Frequency" placeholder="Select frequency" defaultValue="ad-hoc" name="frequency">
-                  <Select.Option value="ad-hoc">Only when started manually</Select.Option>
+                <Select.Select
+                  label="Frequency"
+                  placeholder="Select frequency"
+                  defaultValue="ad-hoc"
+                  name="frequency"
+                >
+                  <Select.Option value="ad-hoc">
+                    Only when started manually
+                  </Select.Option>
                   <Select.Option value="daily">Daily</Select.Option>
                   <Select.Option value="weekly">Weekly</Select.Option>
                 </Select.Select>
 
-                <Switch label="Notify participants by email" name="notify-email" />
+                <Switch
+                  label="Notify participants by email"
+                  name="notify-email"
+                />
 
                 <Textarea
                   label="Workflow description (optional)"
@@ -249,19 +366,28 @@ export const Workflow: Story = {
               </form>
             </Grid.Column>
             <Grid.Column s="col_span_1">
-              <div className={classNames("flex-noreset", "justify-center", "h-full")}>
+              <div
+                className={classNames(
+                  "flex-noreset",
+                  "justify-center",
+                  "h-full",
+                )}
+              >
                 <Divider orientation="vertical" />
               </div>
             </Grid.Column>
             <Grid.Column s="col_span_5">
-              <h2 className={classNames("font-label-s", "text-weak")}>Workflow overview</h2>
+              <h2 className={classNames("font-label-s", "text-weak")}>
+                Workflow overview
+              </h2>
               <p className={classNames("text-default")}>
-                This workflow will collect input, apply the configured steps, and produce the selected outcome. Use this
-                view to confirm that the setup matches how your team expects the process to run.
+                This workflow will collect input, apply the configured steps,
+                and produce the selected outcome. Use this view to confirm that
+                the setup matches how your team expects the process to run.
               </p>
               <p className={classNames("font-label-s", "text-weak")}>
-                Tip: Use clear names and descriptions so others can easily understand, discover, and reuse this
-                workflow.
+                Tip: Use clear names and descriptions so others can easily
+                understand, discover, and reuse this workflow.
               </p>
             </Grid.Column>
           </Grid.Container>
@@ -270,7 +396,11 @@ export const Workflow: Story = {
         </div>
         <Divider />
         <Modal.Actions>
-          <Button variant="default" label="Back" justified={container.get<boolean>({ xxs: true, s: false })} />
+          <Button
+            variant="default"
+            label="Back"
+            justified={container.get<boolean>({ xxs: true, s: false })}
+          />
           <Button
             variant="primary"
             label="Start workflow"

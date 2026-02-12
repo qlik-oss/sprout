@@ -1,0 +1,251 @@
+.p_0 {
+  padding: 0;
+}
+
+.p_xs {
+  padding: var(--sprout-common-spacing-xs);
+}
+
+.p_s {
+  padding: var(--sprout-common-spacing-s);
+}
+
+.p_m {
+  padding: var(--sprout-common-spacing-m);
+}
+
+.p_l {
+  padding: var(--sprout-common-spacing-l);
+}
+
+.p_xl {
+  padding: var(--sprout-common-spacing-xl);
+}
+
+.p_xxl {
+  padding: var(--sprout-common-spacing-xxl);
+}
+
+.p_3xl {
+  padding: var(--sprout-common-spacing-3xl);
+}
+
+.px_0 {
+  padding-inline: 0;
+}
+
+.px_xs {
+  padding-inline: var(--sprout-common-spacing-xs);
+}
+
+.px_s {
+  padding-inline: var(--sprout-common-spacing-s);
+}
+
+.px_m {
+  padding-inline: var(--sprout-common-spacing-m);
+}
+
+.px_l {
+  padding-inline: var(--sprout-common-spacing-l);
+}
+
+.px_xl {
+  padding-inline: var(--sprout-common-spacing-xl);
+}
+
+.px_xxl {
+  padding-inline: var(--sprout-common-spacing-xxl);
+}
+
+.px_3xl {
+  padding-inline: var(--sprout-common-spacing-3xl);
+}
+
+.py_0 {
+  padding-block: 0;
+}
+
+.py_xs {
+  padding-block: var(--sprout-common-spacing-xs);
+}
+
+.py_s {
+  padding-block: var(--sprout-common-spacing-s);
+}
+
+.py_m {
+  padding-block: var(--sprout-common-spacing-m);
+}
+
+.py_l {
+  padding-block: var(--sprout-common-spacing-l);
+}
+
+.py_xl {
+  padding-block: var(--sprout-common-spacing-xl);
+}
+
+.py_xxl {
+  padding-block: var(--sprout-common-spacing-xxl);
+}
+
+.py_3xl {
+  padding-block: var(--sprout-common-spacing-3xl);
+}
+
+.py_density_xs {
+  padding-block: var(--sprout-common-density-xs);
+}
+
+.py_density_s {
+  padding-block: var(--sprout-common-density-s);
+}
+
+.py_density_m {
+  padding-block: var(--sprout-common-density-m);
+}
+
+.py_density_l {
+  padding-block: var(--sprout-common-density-l);
+}
+
+.py_density_xl {
+  padding-block: var(--sprout-common-density-xl);
+}
+
+.py_density_xxl {
+  padding-block: var(--sprout-common-density-xxl);
+}
+
+.py_density_3xl {
+  padding-block: var(--sprout-common-density-3xl);
+}
+
+.pt_0 {
+  padding-block-start: 0;
+}
+
+.pt_xs {
+  padding-block-start: var(--sprout-common-spacing-xs);
+}
+
+.pt_s {
+  padding-block-start: var(--sprout-common-spacing-s);
+}
+
+.pt_m {
+  padding-block-start: var(--sprout-common-spacing-m);
+}
+
+.pt_l {
+  padding-block-start: var(--sprout-common-spacing-l);
+}
+
+.pt_xl {
+  padding-block-start: var(--sprout-common-spacing-xl);
+}
+
+.pt_xxl {
+  padding-block-start: var(--sprout-common-spacing-xxl);
+}
+
+.pt_3xl {
+  padding-block-start: var(--sprout-common-spacing-3xl);
+}
+
+.pr_0 {
+  padding-inline-end: 0;
+}
+
+.pr_xs {
+  padding-inline-end: var(--sprout-common-spacing-xs);
+}
+
+.pr_s {
+  padding-inline-end: var(--sprout-common-spacing-s);
+}
+
+.pr_m {
+  padding-inline-end: var(--sprout-common-spacing-m);
+}
+
+.pr_l {
+  padding-inline-end: var(--sprout-common-spacing-l);
+}
+
+.pr_xl {
+  padding-inline-end: var(--sprout-common-spacing-xl);
+}
+
+.pr_xxl {
+  padding-inline-end: var(--sprout-common-spacing-xxl);
+}
+
+.pr_3xl {
+  padding-inline-end: var(--sprout-common-spacing-3xl);
+}
+
+.pb_0 {
+  padding-block-end: 0;
+}
+
+.pb_xs {
+  padding-block-end: var(--sprout-common-spacing-xs);
+}
+
+.pb_s {
+  padding-block-end: var(--sprout-common-spacing-s);
+}
+
+.pb_m {
+  padding-block-end: var(--sprout-common-spacing-m);
+}
+
+.pb_l {
+  padding-block-end: var(--sprout-common-spacing-l);
+}
+
+.pb_xl {
+  padding-block-end: var(--sprout-common-spacing-xl);
+}
+
+.pb_xxl {
+  padding-block-end: var(--sprout-common-spacing-xxl);
+}
+
+.pb_3xl {
+  padding-block-end: var(--sprout-common-spacing-3xl);
+}
+
+.pl_0 {
+  padding-inline-start: 0;
+}
+
+.pl_xs {
+  padding-inline-start: var(--sprout-common-spacing-xs);
+}
+
+.pl_s {
+  padding-inline-start: var(--sprout-common-spacing-s);
+}
+
+.pl_m {
+  padding-inline-start: var(--sprout-common-spacing-m);
+}
+
+.pl_l {
+  padding-inline-start: var(--sprout-common-spacing-l);
+}
+
+.pl_xl {
+  padding-inline-start: var(--sprout-common-spacing-xl);
+}
+
+.pl_xxl {
+  padding-inline-start: var(--sprout-common-spacing-xxl);
+}
+
+.pl_3xl {
+  padding-inline-start: var(--sprout-common-spacing-3xl);
+}

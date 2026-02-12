@@ -6,7 +6,8 @@ export const FieldArgTypes: ArgTypes<Partial<FieldProps>> = {
     control: {
       type: "boolean",
     },
-    description: "If true, the field is optional and will show an '(optional)' label next to the label.",
+    description:
+      "If true, the field is optional and will show an '(optional)' label next to the label.",
     table: {
       type: {
         summary: "boolean",
@@ -17,7 +18,8 @@ export const FieldArgTypes: ArgTypes<Partial<FieldProps>> = {
     control: {
       type: "text",
     },
-    description: "The text that describes the field. It is optional if you only want the inline input.",
+    description:
+      "The text that describes the field. It is optional if you only want the inline input.",
     table: {
       type: {
         summary: "string",
@@ -38,7 +40,8 @@ export const FieldArgTypes: ArgTypes<Partial<FieldProps>> = {
   },
   infoIconTooltip: {
     control: "text",
-    description: "Tooltip text that appears when hovering over the info icon next to the label.",
+    description:
+      "Tooltip text that appears when hovering over the info icon next to the label.",
     table: {
       type: {
         summary: "ReactNode",
@@ -47,7 +50,8 @@ export const FieldArgTypes: ArgTypes<Partial<FieldProps>> = {
   },
   infoIconPopover: {
     control: "text",
-    description: "Popover text that appears when clicking on the info icon next to the label.",
+    description:
+      "Popover text that appears when clicking on the info icon next to the label.",
     table: {
       type: {
         summary: "ReactNode",
@@ -58,7 +62,8 @@ export const FieldArgTypes: ArgTypes<Partial<FieldProps>> = {
     control: {
       type: "text",
     },
-    description: "The text that describes the field. It is optional if you only want the inline input.",
+    description:
+      "The text that describes the field. It is optional if you only want the inline input.",
     table: {
       type: {
         summary: "string",
@@ -106,7 +111,8 @@ export const CommonFieldArgTypes: ArgTypes<{
 }> = {
   readOnly: {
     control: "boolean",
-    description: "If true, the field is read only so the user will not be able to select a value.",
+    description:
+      "If true, the field is read only so the user will not be able to select a value.",
     table: {
       type: {
         summary: "boolean",

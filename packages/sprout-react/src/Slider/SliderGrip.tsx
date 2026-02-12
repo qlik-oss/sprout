@@ -8,9 +8,10 @@ import {
   useState,
 } from "react";
 
+import { SliderIcon } from "@qlik/sprout-icons/react";
+
 import type { InputProps } from "../Input";
 import { classNames } from "../classNames";
-import { SliderIcon } from "../icons";
 import type { SliderMarkProps } from "./common.types";
 
 import styles from "./Slider.module.css";

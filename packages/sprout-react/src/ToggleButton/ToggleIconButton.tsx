@@ -1,11 +1,11 @@
 import { type ReactNode, type Ref, forwardRef, isValidElement } from "react";
 
 import { useId } from "@qlik/sprout-react-hooks";
+import DropdownArrow from "@qlik/sprout-icons/react/DropdownArrow";
 
 import { Badge } from "../Badge";
 import { Tooltip, type TooltipProps } from "../Tooltip";
 import { classNames } from "../classNames";
-import { DropdownArrow } from "../icons";
 import type { ToggleButtonProps } from "./ToggleButton";
 import { useToggle } from "./hook";
 

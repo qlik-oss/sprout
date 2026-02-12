@@ -4,7 +4,8 @@ import type { ArgTypes } from "@storybook/react";
 export const TooltipArgTypes: ArgTypes<TooltipProps> = {
   anchorEl: {
     control: false,
-    description: "The element to use as a reference to set position of the floating element.",
+    description:
+      "The element to use as a reference to set position of the floating element.",
     table: {
       type: {
         summary: "HTMLElement",
@@ -61,7 +62,8 @@ export const TooltipArgTypes: ArgTypes<TooltipProps> = {
     options: ["reference", "xxs", "xs", "s", "m", "l", "xl", "100px"],
     table: {
       type: {
-        summary: "reference | xxs | xs | s | m | l | xl | CSSProperties['width']",
+        summary:
+          "reference | xxs | xs | s | m | l | xl | CSSProperties['width']",
       },
     },
   },
@@ -72,7 +74,8 @@ export const TooltipArgTypes: ArgTypes<TooltipProps> = {
     options: ["reference", "xxs", "xs", "s", "m", "l", "xl", "100px"],
     table: {
       type: {
-        summary: "reference | xxs | xs | s | m | l | xl | CSSProperties['width']",
+        summary:
+          "reference | xxs | xs | s | m | l | xl | CSSProperties['width']",
       },
     },
   },
@@ -140,7 +143,8 @@ export const TooltipArgTypes: ArgTypes<TooltipProps> = {
     control: {
       type: "boolean",
     },
-    description: "If true the floating element placement can be updated to keep it in view.",
+    description:
+      "If true the floating element placement can be updated to keep it in view.",
     table: {
       type: {
         summary: "boolean",
@@ -166,7 +170,8 @@ export const TooltipArgTypes: ArgTypes<TooltipProps> = {
     options: ["reference", "xxs", "xs", "s", "m", "l", "xl", "100px"],
     table: {
       type: {
-        summary: "reference | xxs | xs | s | m | l | xl | CSSProperties['width']",
+        summary:
+          "reference | xxs | xs | s | m | l | xl | CSSProperties['width']",
       },
     },
   },

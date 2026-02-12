@@ -1,0 +1,23 @@
+declare const dd: {
+  table: string;
+  thead: string;
+  tbody: string;
+  th: string;
+  tr: string;
+  tr_interactive: string;
+  tr_selected: string;
+  header_row: string;
+  cell: string;
+  sort_indicator__wrapper: string;
+  resizing_indicator: string;
+  cell_content: string;
+  row_number: string;
+  line_number: string;
+  select_all: string;
+  row_menu: string;
+  cell_state: string;
+  cell_menu: string;
+  cell_menu_opened: string;
+  cell_action_wrapper: string;
+};
+export default dd;

@@ -33,7 +33,12 @@ import { Button, ButtonGroup } from "@qlik/sprout-react";
 <Canvas of={BtnStories.SplitButton} />
 
 ```tsx
-import { Button, ButtonGroup, IconButton, Menu } from "@qlik/sprout-react";
+import {
+  Button,
+  ButtonGroup,
+  IconButton,
+  Menu,
+} from "@qlik/sprout-react";
 import { DropdownArrow } from "@qlik/sprout-icons/react";
 
 <ButtonGroup>
@@ -46,7 +51,11 @@ import { DropdownArrow } from "@qlik/sprout-icons/react";
       </>
     }
   >
-    <IconButton variant="primary" aria-label="Select your stuff" icon={<DropdownArrow />} />
+    <IconButton
+      variant="primary"
+      aria-label="Select your stuff"
+      icon={<DropdownArrow />}
+    />
   </Menu.Trigger>
 </ButtonGroup>;
 ```
