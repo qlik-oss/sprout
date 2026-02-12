@@ -39,6 +39,20 @@
           "$value": "{theming.common.background-color.strong}",
           "$description": "Fourth level surface color."
         },
+        "floating": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "lighten",
+                "value": "0.05",
+                "space": "lch"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{theming.common.background-color.default}",
+          "$description": "Floating surface color for popovers and raised surfaces. Inherits and lightens default background color."
+        },
         "enabled": {
           "$type": "color",
           "$value": "{theming.common.background-color.enabled}",

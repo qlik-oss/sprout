@@ -76,6 +76,7 @@ export const tokens: {
   common_background_color_default: string;
   common_background_color_disabled: string;
   common_background_color_enabled: string;
+  common_background_color_floating: string;
   common_background_color_hover: string;
   common_background_color_moderate: string;
   common_background_color_pressed: string;

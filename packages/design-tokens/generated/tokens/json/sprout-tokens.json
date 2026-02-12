@@ -34,6 +34,11 @@
     "$type": "color",
     "$description": "Fourth level surface color."
   },
+  "--sprout-common-background-color-floating": {
+    "$value": "rgb(100% 100% 100%)",
+    "$type": "color",
+    "$description": "Floating surface color for popovers and raised surfaces. Inherits and lightens default background color."
+  },
   "--sprout-common-background-color-enabled": {
     "$value": "#ffffff",
     "$type": "color",
