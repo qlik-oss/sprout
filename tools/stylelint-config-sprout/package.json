@@ -1,11 +1,11 @@
 {
   "name": "@qlik/stylelint-config-sprout",
-  "version": "6.6.11",
-  "homepage": "https://github.com/qlik/sprout#readme",
+  "version": "6.7.0",
+  "homepage": "https://github.com/qlik/sprout-kit#readme",
   "bugs": {
-    "url": "https://github.com/qlik/sprout/issues"
+    "url": "https://github.com/qlik/sprout-kit/issues"
   },
-  "repository": "https://github.com/qlik/sprout.git",
+  "repository": "https://github.com/qlik/sprout-kit.git",
   "license": "MIT",
   "sideEffects": false,
   "exports": {
@@ -26,12 +26,12 @@
   },
   "dependencies": {
     "@qlik/design-tokens": "workspace:*",
-    "stylelint": "^17.1.0",
-    "stylelint-plugin-logical-css": "^1.2.3"
+    "stylelint": "^17.2.0",
+    "stylelint-plugin-logical-css": "^1.3.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",
-    "@eslint/js": "^9.39.2",
+    "@eslint/js": "^10.0.1",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",

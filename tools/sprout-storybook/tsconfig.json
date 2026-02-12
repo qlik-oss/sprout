@@ -2,7 +2,8 @@
   "extends": "@qlik/tsconfig/recommended.json",
   "compilerOptions": {
     "declaration": true,
-    "noEmit": false
+    "noEmit": false,
+    "outDir": "lib"
   },
   "include": ["src"],
 }
