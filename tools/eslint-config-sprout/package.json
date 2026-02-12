@@ -32,8 +32,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@qlik/eslint-plugin-sprout": "workspace:*",
     "@qlik/eslint-config": "^1.4.18",
+    "@qlik/eslint-plugin-sprout": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^8.55.0",
     "eslint-plugin-react": "^7.37.5"
   },
