@@ -13,7 +13,7 @@ import {
 } from "react";
 import { useMemo } from "react";
 
-import { useControl } from "@qlik/sprout-hooks";
+import { useControl } from "@qlik/sprout-react-hooks";
 
 import { type CommonFieldProps, Field, useFieldProps } from "../Field";
 import {

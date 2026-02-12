@@ -6,7 +6,7 @@ import {
 } from "react";
 
 import type { ViewportSize } from "@qlik/sprout-css-modules";
-import { useMedia } from "@qlik/sprout-hooks";
+import { useMedia } from "@qlik/sprout-react-hooks";
 
 import { classNames } from "../classNames";
 

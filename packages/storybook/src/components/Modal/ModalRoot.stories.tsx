@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { fn } from "storybook/test";
 
-import { useContainer } from "@qlik/sprout-hooks";
 import { Button, Checkbox, Modal } from "@qlik/sprout-react";
+import { useContainer } from "@qlik/sprout-react-hooks";
 import type { Meta } from "@storybook/react";
 
 import { ModalRootArgTypes } from "./Modal.argTypes";

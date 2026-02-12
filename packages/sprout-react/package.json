@@ -44,7 +44,7 @@
   ],
   "dependencies": {
     "@floating-ui/react": "0.27.17",
-    "@qlik/sprout-hooks": "workspace:*",
+    "@qlik/sprout-react-hooks": "workspace:*",
     "@qlik/sprout-css-modules": "workspace:*",
     "@qlik/sprout-icons": "workspace:*",
     "@qlik/design-tokens": "workspace:*"

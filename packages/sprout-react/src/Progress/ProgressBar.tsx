@@ -1,4 +1,4 @@
-import { useId } from "@qlik/sprout-hooks";
+import { useId } from "@qlik/sprout-react-hooks";
 
 import { Tooltip } from "../Tooltip";
 import { classNames } from "../classNames";

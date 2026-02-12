@@ -1,4 +1,4 @@
-import { useControl } from "@qlik/sprout-hooks";
+import { useControl } from "@qlik/sprout-react-hooks";
 import type { SortingState } from "@tanstack/react-table";
 
 export const useSortState = ({

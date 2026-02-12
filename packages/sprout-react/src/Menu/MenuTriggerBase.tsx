@@ -8,7 +8,7 @@ import {
 } from "react";
 
 import { useMergeRefs } from "@floating-ui/react";
-import { useId } from "@qlik/sprout-hooks";
+import { useId } from "@qlik/sprout-react-hooks";
 
 import {
   type FloatingPrimitiveProps,

@@ -2,7 +2,7 @@
 import { type ForwardedRef, type ReactNode, forwardRef, useMemo } from "react";
 
 import { useMergeRefs } from "@floating-ui/react";
-import { useId } from "@qlik/sprout-hooks";
+import { useId } from "@qlik/sprout-react-hooks";
 
 import type { HTMLDivProps } from "../htmlTypes";
 import { ModalBackdrop } from "./ModalBackdrop";

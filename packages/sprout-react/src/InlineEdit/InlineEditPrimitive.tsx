@@ -14,9 +14,9 @@ import {
 } from "react";
 
 import { tokens } from "@qlik/design-tokens";
-import { useControl } from "@qlik/sprout-hooks";
 import Close from "@qlik/sprout-icons/react/Close";
 import Edit from "@qlik/sprout-icons/react/Edit";
+import { useControl } from "@qlik/sprout-react-hooks";
 
 import { AlertInline } from "../AlertInline";
 import { IconButton } from "../Button";

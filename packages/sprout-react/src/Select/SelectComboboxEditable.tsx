@@ -9,8 +9,8 @@ import {
 } from "react";
 
 import sprout from "@qlik/sprout-css-modules";
-import { useControl } from "@qlik/sprout-hooks";
 import { ErrorIcon } from "@qlik/sprout-icons/react";
+import { useControl } from "@qlik/sprout-react-hooks";
 
 import { InputButton } from "../InputButton";
 import { Tooltip } from "../Tooltip";

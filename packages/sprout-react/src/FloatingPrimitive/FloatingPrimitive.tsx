@@ -31,7 +31,7 @@ import {
   useInteractions,
   useMergeRefs,
 } from "@floating-ui/react";
-import { useId } from "@qlik/sprout-hooks";
+import { useId } from "@qlik/sprout-react-hooks";
 
 import { ThemeProvider } from "../ThemeProvider";
 import { useDialogGesture } from "../Utils/gesture/dialog";

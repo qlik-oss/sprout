@@ -1,5 +1,5 @@
-import { useContainer } from "@qlik/sprout-hooks";
 import { Button, Checkbox, Modal, classNames } from "@qlik/sprout-react";
+import { useContainer } from "@qlik/sprout-react-hooks";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { ModalActionsArgTypes } from "./Modal.argTypes";

@@ -6,7 +6,7 @@ import {
   forwardRef,
 } from "react";
 
-import { useControl } from "@qlik/sprout-hooks";
+import { useControl } from "@qlik/sprout-react-hooks";
 
 import { type ChangeReasons, TextField, type TextFieldProps } from "../Input";
 import { classNames } from "../classNames";

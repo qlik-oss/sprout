@@ -1,7 +1,7 @@
 import type { ChangeEvent, Ref } from "react";
 import { forwardRef, useRef } from "react";
 
-import { useId } from "@qlik/sprout-hooks";
+import { useId } from "@qlik/sprout-react-hooks";
 
 import type { FieldProps } from "../Field";
 import { HelperText } from "../HelperText";

@@ -1,6 +1,6 @@
 import { type ReactNode, type Ref, forwardRef, isValidElement } from "react";
 
-import { useId } from "@qlik/sprout-hooks";
+import { useId } from "@qlik/sprout-react-hooks";
 
 import { Badge } from "../Badge";
 import { Tooltip, type TooltipProps } from "../Tooltip";

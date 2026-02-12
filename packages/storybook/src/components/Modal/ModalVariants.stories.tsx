@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useContainer } from "@qlik/sprout-hooks";
 import {
   Button,
   Divider,
@@ -14,6 +13,7 @@ import {
   Textarea,
   classNames,
 } from "@qlik/sprout-react";
+import { useContainer } from "@qlik/sprout-react-hooks";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type Story = StoryObj<typeof Modal>;
