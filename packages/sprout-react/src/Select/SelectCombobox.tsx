@@ -9,10 +9,10 @@ import {
 } from "react";
 
 import sprout from "@qlik/sprout-css-modules";
-import ErrorIcon from "@qlik/sprout-icons/react/Error";
+import DropdownArrow from "@qlik/sprout-icons/react/DropdownArrow";
+import ErrorOutlineIcon from "@qlik/sprout-icons/react/ErrorOutline";
 
 import type { HTMLButtonProps } from "../htmlTypes";
-import { DropdownArrow } from "../icons";
 import type { SelectOptionProps } from "./SelectOption";
 import { getSelectedOption } from "./getSelectedOption";
 
@@ -167,7 +167,7 @@ function ComboboxBase(
         </span>
       )}
       {!!hasError && (
-        <ErrorIcon
+        <ErrorOutlineIcon
           data-icon="error"
           width={undefined}
           height={undefined}

@@ -1,4 +1,4 @@
-import { useControl } from "@qlik/sprout-hooks";
+import { useControl } from "@qlik/sprout-react-hooks";
 
 export type UseToggleProps = {
   toggled?: boolean;

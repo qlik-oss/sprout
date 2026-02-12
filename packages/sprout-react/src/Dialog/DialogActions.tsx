@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { useContainer } from "@qlik/sprout-hooks";
+import { useContainer } from "@qlik/sprout-react-hooks";
 
 import { Button } from "../Button";
 import { classNames } from "../classNames";

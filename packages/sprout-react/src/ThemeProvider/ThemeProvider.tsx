@@ -10,18 +10,14 @@ import {
   useState,
 } from "react";
 
+import { getTheme, themeToDataset } from "@qlik/sprout-theme-provider";
+
 import { getDeviceInputType } from "../Utils/device";
 import type { DataAttributes, HTMLDivProps } from "../htmlTypes";
-import { getTheme, themeToDataset } from "./theme";
 
 function getBodyTheme() {
   return {
     theme: document.body.dataset.qlikTheme,
-    appearance: document.body.dataset.qlikAppearance,
-    density: document.body.dataset.qlikDensity,
-    roundness: document.body.dataset.qlikRoundness,
-    sizing: document.body.dataset.qlikSizing,
-    typography: document.body.dataset.qlikTypography,
   } as ReturnType<typeof getTheme>;
 }
 
@@ -68,11 +64,17 @@ function ThemeProviderBase(
   ref?: Ref<HTMLDivElement>,
 ) {
   const [myRef, setMyRef] = useState<HTMLDivElement | null>(null);
-  const { theme: themeOpt, asDiv, onLoad, children, isTouch, ...rest } = props;
+  const {
+    theme: themeOpt,
+    asDiv,
+    onLoad,
+    children,
+    isTouch,
+    "data-qlik-theme": asDivTheme,
+    ...rest
+  } = props;
   const context = useContext(ThemeContext);
   const device = getDeviceInputType();
-
-  const globalTheme = getTheme(myRef || document.body, themeOpt);
 
   const [bodyTheme, setBodyTheme] = useState<ReturnType<typeof getTheme>>(() =>
     getBodyTheme(),
@@ -82,32 +84,33 @@ function ThemeProviderBase(
     // observe body attributes to update globalTheme accordingly
     const observer = new MutationObserver(() => {
       if (!asDiv) {
-        setBodyTheme(getBodyTheme());
+        const newBodyTheme = getBodyTheme();
+        if (newBodyTheme.theme !== bodyTheme.theme) {
+          setBodyTheme(newBodyTheme);
+        }
       }
     });
     observer.observe(document.body, {
       attributes: true,
-      attributeFilter: [
-        "data-qlik-theme",
-        "data-qlik-appearance",
-        "data-qlik-density",
-        "data-qlik-roundness",
-        "data-qlik-sizing",
-        "data-qlik-typography",
-      ],
+      attributeFilter: ["data-qlik-theme"],
     });
     return () => {
       observer.disconnect();
     };
-  }, [themeOpt, asDiv]);
+  }, [themeOpt, asDiv, bodyTheme.theme]);
 
-  const theme = useMemo(
-    () => ({
-      ...(asDiv ? globalTheme : bodyTheme),
-      theme: themeOpt || context.theme || globalTheme.theme,
-    }),
-    [globalTheme, themeOpt, context.theme, asDiv, bodyTheme],
-  );
+  const theme = useMemo(() => {
+    const parentTheme = myRef ? getTheme(myRef) : {};
+    return {
+      theme:
+        themeOpt ||
+        context.theme ||
+        asDivTheme ||
+        parentTheme.theme ||
+        bodyTheme.theme ||
+        "qlik-light",
+    };
+  }, [asDivTheme, themeOpt, context.theme, bodyTheme, myRef]);
 
   const themeIsTouch = useMemo(() => {
     return {

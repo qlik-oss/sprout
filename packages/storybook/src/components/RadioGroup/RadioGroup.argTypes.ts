@@ -54,7 +54,8 @@ export const RadioGroupArgTypes: ArgTypes<RadioGroupProps> = {
   },
   name: {
     control: "text",
-    description: "The name of the radio group, used to group the radios together.",
+    description:
+      "The name of the radio group, used to group the radios together.",
     table: {
       type: {
         summary: "string",

@@ -1,11 +1,23 @@
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 import type { MouseEvent } from "react";
 
-import { DocumentationIcon, FilterIcon } from "@qlik/sprout-icons/react";
-import { Accordion, type AccordionProps, Button, IconButton, Menu, TextField, classNames } from "@qlik/sprout-react";
+import {
+  Accordion,
+  type AccordionProps,
+  Button,
+  IconButton,
+  Menu,
+  TextField,
+  classNames,
+} from "@qlik/sprout-react";
+import BookOutline from "@qlik/sprout-icons/react/BookOutline";
+import MoreVertical from "@qlik/sprout-icons/react/MoreVertical";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { AccordionContainerArgTypes, AccordionItemArgTypes } from "./Accordion.argTypes";
+import {
+  AccordionContainerArgTypes,
+  AccordionItemArgTypes,
+} from "./Accordion.argTypes";
 
 export default {
   component: Accordion.Item,
@@ -16,13 +28,17 @@ function SampleParagraph() {
   return (
     <>
       <p className={classNames("text-default", "font-body-s")}>
-        Quisque efficitur, magna sit amet tempor malesuada, orci mauris vestibulum enim, quis gravida est urna et ipsum.
-        Nunc rutrum, magna id fermentum dignissim, magna sem volutpat risus, ut ultrices ipsum lacus vitae sapien.
-        Curabitur sodales risus ac nibh efficitur, dapibus posuere ipsum bibendum. Proin erat ipsum, tempus in aliquet
-        sed, auctor id sem. Maecenas ultrices, magna vitae pretium condimentum, ipsum lectus hendrerit est, a ultrices
-        lacus odio in mi. Phasellus accumsan diam in metus dictum ultrices. In hac habitasse platea dictumst. Curabitur
-        vestibulum vitae libero sit amet blandit. Nulla bibendum sollicitudin dolor at vehicula. Morbi quis viverra
-        velit, eget ornare velit. Praesent porttitor sagittis nulla non vehicula. u
+        Quisque efficitur, magna sit amet tempor malesuada, orci mauris
+        vestibulum enim, quis gravida est urna et ipsum. Nunc rutrum, magna id
+        fermentum dignissim, magna sem volutpat risus, ut ultrices ipsum lacus
+        vitae sapien. Curabitur sodales risus ac nibh efficitur, dapibus posuere
+        ipsum bibendum. Proin erat ipsum, tempus in aliquet sed, auctor id sem.
+        Maecenas ultrices, magna vitae pretium condimentum, ipsum lectus
+        hendrerit est, a ultrices lacus odio in mi. Phasellus accumsan diam in
+        metus dictum ultrices. In hac habitasse platea dictumst. Curabitur
+        vestibulum vitae libero sit amet blandit. Nulla bibendum sollicitudin
+        dolor at vehicula. Morbi quis viverra velit, eget ornare velit. Praesent
+        porttitor sagittis nulla non vehicula. u
       </p>
       <Button variant="primary" label="ButtonLabel" onClick={() => {}} />
       <TextField label="textfield" defaultValue="one two three" />
@@ -40,10 +56,7 @@ export const ItemPlayground: StoryObj<AccordionProps["Item"]> = {
             variant="quiet"
             size="small"
             aria-label="More actions"
-            onClick={(e: MouseEvent) => {
-              e.stopPropagation();
-            }}
-            icon={<FilterIcon height={undefined} />}
+            icon={<MoreVertical height={undefined} />}
           />
         ) : (
           props.affix
@@ -95,11 +108,17 @@ export const ContainerPlayground: StoryObj<AccordionProps["Container"]> = {
   },
 };
 
-export const AccordionItemLoopPlayground: StoryObj<AccordionProps["Container"]> = {
+export const AccordionItemLoopPlayground: StoryObj<
+  AccordionProps["Container"]
+> = {
   render: (props) => (
     <Accordion.Container {...props}>
       {["a", "b", "c"].map((panelId) => (
-        <Accordion.Item key={`panel-${panelId}`} id={`panel-${panelId}`} header={`panel ${panelId}`}>
+        <Accordion.Item
+          key={`panel-${panelId}`}
+          id={`panel-${panelId}`}
+          header={`panel ${panelId}`}
+        >
           <SampleParagraph />
         </Accordion.Item>
       ))}
@@ -140,8 +159,13 @@ export const AllOpened: StoryObj = {
 export const VisualTest: StoryObj = {
   render: () => (
     <div className={classNames("flex", "flex-col", "gap-xl")}>
-      <h2 className={classNames("font-heading-m", "text-default")}>Accordion container in default and quiet</h2>
-      <div className={classNames("flex", "flex-row", "gap-xl")} style={{ inlineSize: "50vw" }}>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Accordion container in default and quiet
+      </h2>
+      <div
+        className={classNames("flex", "flex-row", "gap-xl")}
+        style={{ inlineSize: "50vw" }}
+      >
         <Accordion.Container variant="default">
           <Accordion.Item header="HeaderLabel" openedDefault>
             <SampleParagraph />
@@ -183,9 +207,17 @@ export const VisualTest: StoryObj = {
           </Accordion.Item>
         </Accordion.Container>
       </div>
-      <h2 className={classNames("font-heading-m", "text-default")}>Accordion.Item alone in full and compact</h2>
-      <div className={classNames("flex", "flex-row", "gap-xl")} style={{ inlineSize: "50vw" }}>
-        <div className={classNames("flex", "flex-col", "gap-3xl")} style={{ inlineSize: 300 }}>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Accordion.Item alone in full and compact
+      </h2>
+      <div
+        className={classNames("flex", "flex-row", "gap-xl")}
+        style={{ inlineSize: "50vw" }}
+      >
+        <div
+          className={classNames("flex", "flex-col", "gap-3xl")}
+          style={{ inlineSize: 300 }}
+        >
           <Accordion.Item header="HeaderLabel" width="full">
             <SampleParagraph />
           </Accordion.Item>
@@ -201,7 +233,11 @@ export const VisualTest: StoryObj = {
           <Accordion.Item header="HeaderLabel" width="full" value="ValueLabel">
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="full" description="DescriptionLabel">
+          <Accordion.Item
+            header="HeaderLabel"
+            width="full"
+            description="DescriptionLabel"
+          >
             <SampleParagraph />
           </Accordion.Item>
           <Accordion.Item
@@ -211,19 +247,42 @@ export const VisualTest: StoryObj = {
           >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="full" icon={<DocumentationIcon />}>
+          <Accordion.Item
+            header="HeaderLabel"
+            width="full"
+            icon={<BookOutline />}
+          >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="full" icon={<DocumentationIcon />} description="DescriptionLabel">
+          <Accordion.Item
+            header="HeaderLabel"
+            width="full"
+            icon={<BookOutline />}
+            description="DescriptionLabel"
+          >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="full" chevronPosition="leading">
+          <Accordion.Item
+            header="HeaderLabel"
+            width="full"
+            chevronPosition="leading"
+          >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="full" chevronPosition="leading" value="ValueLabel">
+          <Accordion.Item
+            header="HeaderLabel"
+            width="full"
+            chevronPosition="leading"
+            value="ValueLabel"
+          >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="full" chevronPosition="leading" icon={<DocumentationIcon />}>
+          <Accordion.Item
+            header="HeaderLabel"
+            width="full"
+            chevronPosition="leading"
+            icon={<BookOutline />}
+          >
             <SampleParagraph />
           </Accordion.Item>
           <Accordion.Item
@@ -234,7 +293,7 @@ export const VisualTest: StoryObj = {
                 variant="quiet"
                 size="small"
                 aria-label="More actions"
-                icon={<FilterIcon height={undefined} />}
+                icon={<MoreVertical height={undefined} />}
               />
             }
           >
@@ -249,7 +308,7 @@ export const VisualTest: StoryObj = {
                 variant="quiet"
                 size="small"
                 aria-label="More actions"
-                icon={<FilterIcon height={undefined} />}
+                icon={<MoreVertical height={undefined} />}
               />
             }
           >
@@ -259,23 +318,46 @@ export const VisualTest: StoryObj = {
             <SampleParagraph />
           </Accordion.Item>
         </div>
-        <div className={classNames("flex", "flex-col", "gap-3xl")} style={{ inlineSize: 300 }}>
+        <div
+          className={classNames("flex", "flex-col", "gap-3xl")}
+          style={{ inlineSize: 300 }}
+        >
           <Accordion.Item header="HeaderLabel" width="compact">
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="compact" data-state="hover">
+          <Accordion.Item
+            header="HeaderLabel"
+            width="compact"
+            data-state="hover"
+          >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="compact" data-state="active">
+          <Accordion.Item
+            header="HeaderLabel"
+            width="compact"
+            data-state="active"
+          >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="compact" data-state="focus">
+          <Accordion.Item
+            header="HeaderLabel"
+            width="compact"
+            data-state="focus"
+          >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="compact" value="ValueLabel">
+          <Accordion.Item
+            header="HeaderLabel"
+            width="compact"
+            value="ValueLabel"
+          >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="compact" description="DescriptionLabel">
+          <Accordion.Item
+            header="HeaderLabel"
+            width="compact"
+            description="DescriptionLabel"
+          >
             <SampleParagraph />
           </Accordion.Item>
           <Accordion.Item
@@ -285,24 +367,42 @@ export const VisualTest: StoryObj = {
           >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="compact" icon={<DocumentationIcon />}>
+          <Accordion.Item
+            header="HeaderLabel"
+            width="compact"
+            icon={<BookOutline />}
+          >
             <SampleParagraph />
           </Accordion.Item>
           <Accordion.Item
             header="HeaderLabel"
             width="compact"
-            icon={<DocumentationIcon />}
+            icon={<BookOutline />}
             description="DescriptionLabel"
           >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="compact" chevronPosition="leading">
+          <Accordion.Item
+            header="HeaderLabel"
+            width="compact"
+            chevronPosition="leading"
+          >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="compact" chevronPosition="leading" value="ValueLabel">
+          <Accordion.Item
+            header="HeaderLabel"
+            width="compact"
+            chevronPosition="leading"
+            value="ValueLabel"
+          >
             <SampleParagraph />
           </Accordion.Item>
-          <Accordion.Item header="HeaderLabel" width="compact" chevronPosition="leading" icon={<DocumentationIcon />}>
+          <Accordion.Item
+            header="HeaderLabel"
+            width="compact"
+            chevronPosition="leading"
+            icon={<BookOutline />}
+          >
             <SampleParagraph />
           </Accordion.Item>
           <Accordion.Item
@@ -313,7 +413,7 @@ export const VisualTest: StoryObj = {
                 variant="quiet"
                 size="small"
                 aria-label="More actions"
-                icon={<FilterIcon height={undefined} />}
+                icon={<MoreVertical height={undefined} />}
               />
             }
           >
@@ -328,7 +428,7 @@ export const VisualTest: StoryObj = {
                 variant="quiet"
                 size="small"
                 aria-label="More actions"
-                icon={<FilterIcon height={undefined} />}
+                icon={<MoreVertical height={undefined} />}
               />
             }
           >
@@ -354,7 +454,9 @@ export const VisualTest: StoryObj = {
 export const WithAffix: StoryObj<AccordionProps["Item"]> = {
   render: (props) => (
     <div className={classNames("w-m", "p-xl")}>
-      <Accordion.Item {...props}>This accordion has a vertical menu as an affix element.</Accordion.Item>
+      <Accordion.Item {...props}>
+        This accordion has a vertical menu as an affix element.
+      </Accordion.Item>
     </div>
   ),
   args: {
@@ -393,7 +495,7 @@ export const WithAffix: StoryObj<AccordionProps["Item"]> = {
           variant="quiet"
           size="small"
           aria-label="More actions"
-          icon={<FilterIcon height={undefined} />}
+          icon={<MoreVertical height={undefined} />}
           onClick={(e: MouseEvent) => {
             e.stopPropagation();
           }}

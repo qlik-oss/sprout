@@ -5,10 +5,9 @@ import {
   forwardRef,
 } from "react";
 
+import { useMedia } from "@qlik/sprout-react-hooks";
 import type { ViewportSize } from "@qlik/sprout-css-modules";
-import { useMedia } from "@qlik/sprout-hooks";
-
-import { classNames } from "../classNames";
+import { classNames } from "@qlik/sprout-react";
 
 type ColumnClass =
   | "col_span_1"

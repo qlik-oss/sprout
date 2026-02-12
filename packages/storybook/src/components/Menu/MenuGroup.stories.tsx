@@ -1,8 +1,8 @@
-import Person from "@qlik/sprout-icons/react/Person";
 import { Menu } from "@qlik/sprout-react";
+import LogOut from "@qlik/sprout-icons/react/LogOut";
+import Person from "@qlik/sprout-icons/react/Person";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { LogoutIcon } from "../../icons";
 import { MenuGroupArgTypes } from "./Menu.argTypes";
 
 const meta: Meta<typeof Menu.Group> = {
@@ -15,7 +15,7 @@ export const Group: StoryObj<typeof Menu.Group> = {
   render: (props) => (
     <Menu.Group {...props}>
       <Menu.Item icon={<Person />} label="Profile" disabled />
-      <Menu.Item icon={<LogoutIcon />} label="Logout" />
+      <Menu.Item icon={<LogOut />} label="Logout" />
       <Menu.Item icon={null} label="Reload" />
       <Menu.Item icon={null} label="Share" />
     </Menu.Group>

@@ -1,10 +1,17 @@
 import type { ButtonProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
-import { ICONS_MAP, ICON_OPTIONS } from "../internal/icons/Icons";
+import { ICONS_MAP, ICON_OPTIONS } from "../../internal/icons/Icons";
 
 export const SIZES = [undefined, "small", "default"];
-const VARIANTS = [undefined, "default", "primary", "secondary", "destructive", "quiet"];
+const VARIANTS = [
+  undefined,
+  "default",
+  "primary",
+  "secondary",
+  "destructive",
+  "quiet",
+];
 
 export const ButtonArgTypes: ArgTypes<ButtonProps> = {
   asDropdown: {
@@ -23,7 +30,8 @@ export const ButtonArgTypes: ArgTypes<ButtonProps> = {
     control: {
       type: "object",
     },
-    description: "See [Badge](./?path=/docs/components-badge--docs) for details",
+    description:
+      "See [Badge](./?path=/docs/components-badge--docs) for details",
     table: {
       type: {
         summary: "BadgeProps",
@@ -66,7 +74,8 @@ export const ButtonArgTypes: ArgTypes<ButtonProps> = {
     control: {
       type: "boolean",
     },
-    description: "See [Progress](./?path=/docs/components-progress--docs) for details.",
+    description:
+      "See [Progress](./?path=/docs/components-progress--docs) for details.",
     table: {
       type: {
         summary: "boolean",
@@ -122,10 +131,40 @@ export const ButtonIconArgTypes: ArgTypes = {
     },
     options: ICON_OPTIONS,
     mapping: ICONS_MAP,
-    description: "Accepts a `ReactNode` and is rendered before the label. Use an icon from `@qlik/sprout-icons`",
+    description:
+      "Accepts a `ReactNode` and is rendered before the label. Use an icon from `@qlik/sprout-icons`",
     table: {
       type: {
         summary: "ReactNode",
+      },
+    },
+  },
+  tooltipPlacement: {
+    control: {
+      type: "select",
+    },
+    options: [
+      "top",
+      "top-start",
+      "top-end",
+      "right",
+      "right-start",
+      "right-end",
+      "bottom",
+      "bottom-start",
+      "bottom-end",
+      "left",
+      "left-start",
+      "left-end",
+    ],
+    description: "The placement of the tooltip relative to the button.",
+    table: {
+      defaultValue: {
+        summary: "top",
+      },
+      type: {
+        summary:
+          "top | top-start | top-end | right | right-start | right-end | bottom | bottom-start | bottom-end | left | left-start | left-end",
       },
     },
   },

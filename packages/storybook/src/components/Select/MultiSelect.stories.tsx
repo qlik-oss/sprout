@@ -1,10 +1,14 @@
 import type { ReactNode } from "react";
 import { useState } from "react";
 
-import { Select, type SelectProps, classNames } from "@qlik/sprout-react";
+import {
+  Select,
+  type SelectProps,
+  classNames,
+} from "@qlik/sprout-react";
+import PaletteOutline from "@qlik/sprout-icons/react/PaletteOutline";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { PaletteOutlineIcon } from "../../icons";
 import { getMultiSelectArgTypes } from "./MultiSelect.argTypes";
 import { OPTIONS_WITH_GROUP } from "./SelectTest";
 
@@ -32,7 +36,10 @@ export const Playground: StoryObj<StoryProps> = {
         </Select.OptGroup>
         <Select.OptGroup label="Deprecated Colors">
           <Select.Option value="chartreuse">
-            <Select.OptionStyled label="Chartreuse" description="nice color btw" />
+            <Select.OptionStyled
+              label="Chartreuse"
+              description="nice color btw"
+            />
           </Select.Option>
           <Select.Option value="cornsilk">Cornsilk</Select.Option>
           <Select.Option value="pink">Gainsboro</Select.Option>
@@ -58,11 +65,20 @@ export const UnControlled: StoryObj<StoryProps> = {
   render: ({ defaultValues, ...props }: StoryProps) => {
     return (
       <div
-        className={classNames("flex-noreset", "border-box", "p-s", "items-start")}
+        className={classNames(
+          "flex-noreset",
+          "border-box",
+          "p-s",
+          "items-start",
+        )}
         data-testid="wrapper"
         style={{ inlineSize: 300 }}
       >
-        <Select.Multi label="Uncontrolled" {...props} defaultValue={defaultValues}>
+        <Select.Multi
+          label="Uncontrolled"
+          {...props}
+          defaultValue={defaultValues}
+        >
           {/* This is good to have the empty value as in HTML */}
           <Select.Option value="">None</Select.Option>
           {OPTIONS_WITH_GROUP}
@@ -71,7 +87,10 @@ export const UnControlled: StoryObj<StoryProps> = {
           {/* Simple and efficient composition */}
           <Select.OptGroup label="Deprecated Colors">
             <Select.Option value="chartreuse">
-              <Select.OptionStyled label="Chartreuse" description="nice color btw" />
+              <Select.OptionStyled
+                label="Chartreuse"
+                description="nice color btw"
+              />
             </Select.Option>
             <Select.Option value="cornsilk">Cornsilk</Select.Option>
             <Select.Option value="pink">Gainsboro</Select.Option>
@@ -112,23 +131,38 @@ export const VisualTest: StoryObj<StoryProps> = {
             "font-body-m",
           )}
         >
-          <PaletteOutlineIcon />
-          <span className={classNames("flex", "flex-row", "gap-s", "flex-wrap")}>
+          <PaletteOutline />
+          <span
+            className={classNames("flex", "flex-row", "gap-s", "flex-wrap")}
+          >
             {values.map((value, index) => {
               const isLast = index === values.length - 1;
 
               if (isLast) {
                 return (
-                  <span key={value} className={classNames("text-default", "font-label-s")}>
+                  <span
+                    key={value}
+                    className={classNames("text-default", "font-label-s")}
+                  >
                     {selectedProps[value]?.children || value}
                   </span>
                 );
               }
 
               return (
-                <span key={value} className={classNames("flex", "flex-row", "text-default", "font-label-s")}>
+                <span
+                  key={value}
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "text-default",
+                    "font-label-s",
+                  )}
+                >
                   {selectedProps[value]?.children || value}
-                  <span className={classNames("text-default", "font-label-s")}>, </span>
+                  <span className={classNames("text-default", "font-label-s")}>
+                    ,{" "}
+                  </span>
                 </span>
               );
             })}
@@ -140,11 +174,22 @@ export const VisualTest: StoryObj<StoryProps> = {
     return (
       <>
         <div
-          className={classNames("flex-noreset", "border-box", "flex-row", "p-l", "gap-3xl", "items-start")}
+          className={classNames(
+            "flex-noreset",
+            "border-box",
+            "flex-row",
+            "p-l",
+            "gap-3xl",
+            "items-start",
+          )}
           data-testid="wrapper"
           style={{ inlineSize: 1200, blockSize: 640 }}
         >
-          <Select.Multi defaultOpen placeholder="colors" aria-label="Color selection">
+          <Select.Multi
+            defaultOpen
+            placeholder="colors"
+            aria-label="Color selection"
+          >
             {OPTIONS_WITH_GROUP}
           </Select.Multi>
 
@@ -156,7 +201,8 @@ export const VisualTest: StoryObj<StoryProps> = {
           >
             {OPTIONS_WITH_GROUP}
             <Select.Option value="sage">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, pariatur?
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+              pariatur?
             </Select.Option>
           </Select.Multi>
 
@@ -175,7 +221,10 @@ export const VisualTest: StoryObj<StoryProps> = {
               </Select.OptGroup>
               <Select.OptGroup label="Deprecated Colors">
                 <Select.Option value="chartreuse">
-                  <Select.OptionStyled label="Chartreuse" description="nice color btw" />
+                  <Select.OptionStyled
+                    label="Chartreuse"
+                    description="nice color btw"
+                  />
                 </Select.Option>
                 <Select.Option value="cornsilk">Cornsilk</Select.Option>
                 <Select.Option value="pink">Gainsboro</Select.Option>
@@ -184,20 +233,52 @@ export const VisualTest: StoryObj<StoryProps> = {
           </div>
         </div>
         <div className={classNames("flex-noreset", "flex-row", "gap-m")}>
-          <div className={classNames("flex-noreset", "border-box", "flex-col", "gap-m", "w-xxs")}>
-            <Select.Multi placeholder="colors" label="Has error" hasError errorMessages={["Error message"]}>
+          <div
+            className={classNames(
+              "flex-noreset",
+              "border-box",
+              "flex-col",
+              "gap-m",
+              "w-xxs",
+            )}
+          >
+            <Select.Multi
+              placeholder="colors"
+              label="Has error"
+              hasError
+              errorMessages={["Error message"]}
+            >
               {OPTIONS_WITH_GROUP}
             </Select.Multi>
-            <Select.Multi placeholder="colors" label="Has help" helpText="Help text">
+            <Select.Multi
+              placeholder="colors"
+              label="Has help"
+              helpText="Help text"
+            >
               {OPTIONS_WITH_GROUP}
             </Select.Multi>
-            <Select.Multi placeholder="colors" label="Is disabled" defaultValue={["blue", "red"]} disabled>
+            <Select.Multi
+              placeholder="colors"
+              label="Is disabled"
+              defaultValue={["blue", "red"]}
+              disabled
+            >
               {OPTIONS_WITH_GROUP}
             </Select.Multi>
-            <Select.Multi data-testid="hover" label="Hovered" placeholder="colors" defaultValue={["blue", "red"]}>
+            <Select.Multi
+              data-testid="hover"
+              label="Hovered"
+              placeholder="colors"
+              defaultValue={["blue", "red"]}
+            >
               {OPTIONS_WITH_GROUP}
             </Select.Multi>
-            <Select.Multi label="Read only" placeholder="colors" defaultValue={["blue", "red"]} readOnly>
+            <Select.Multi
+              label="Read only"
+              placeholder="colors"
+              defaultValue={["blue", "red"]}
+              readOnly
+            >
               {OPTIONS_WITH_GROUP}
             </Select.Multi>
           </div>
@@ -250,23 +331,38 @@ export const CustomRenderValue: StoryObj<StoryProps> = {
             "font-body-m",
           )}
         >
-          <PaletteOutlineIcon />
-          <span className={classNames("flex", "flex-row", "gap-s", "flex-wrap")}>
+          <PaletteOutline />
+          <span
+            className={classNames("flex", "flex-row", "gap-s", "flex-wrap")}
+          >
             {values.map((value, index) => {
               const isLast = index === values.length - 1;
 
               if (isLast) {
                 return (
-                  <span key={value} className={classNames("text-default", "font-label-s")}>
+                  <span
+                    key={value}
+                    className={classNames("text-default", "font-label-s")}
+                  >
                     {selectedProps[value]?.children || value}
                   </span>
                 );
               }
 
               return (
-                <span key={value} className={classNames("flex", "flex-row", "text-default", "font-label-s")}>
+                <span
+                  key={value}
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "text-default",
+                    "font-label-s",
+                  )}
+                >
                   {selectedProps[value]?.children || value}
-                  <span className={classNames("text-default", "font-label-s")}>, </span>
+                  <span className={classNames("text-default", "font-label-s")}>
+                    ,{" "}
+                  </span>
                 </span>
               );
             })}
@@ -277,11 +373,20 @@ export const CustomRenderValue: StoryObj<StoryProps> = {
     };
     return (
       <div
-        className={classNames("flex-noreset", "border-box", "p-s", "items-start")}
+        className={classNames(
+          "flex-noreset",
+          "border-box",
+          "p-s",
+          "items-start",
+        )}
         data-testid="wrapper"
         style={{ inlineSize: 300 }}
       >
-        <Select.Multi {...props} renderValue={renderCustomValue} defaultValue={defaultValues}>
+        <Select.Multi
+          {...props}
+          renderValue={renderCustomValue}
+          defaultValue={defaultValues}
+        >
           <Select.Option value="">--Please choose colors--</Select.Option>
           <Select.OptGroup label="Colors">
             <Select.Option value="red">Red</Select.Option>
@@ -290,7 +395,10 @@ export const CustomRenderValue: StoryObj<StoryProps> = {
           </Select.OptGroup>
           <Select.OptGroup label="Deprecated Colors">
             <Select.Option value="chartreuse">
-              <Select.OptionStyled label="Chartreuse" description="nice color btw" />
+              <Select.OptionStyled
+                label="Chartreuse"
+                description="nice color btw"
+              />
             </Select.Option>
             <Select.Option value="cornsilk">Cornsilk</Select.Option>
             <Select.Option value="pink">Gainsboro</Select.Option>
@@ -316,7 +424,12 @@ export const CreateOption: StoryObj<StoryProps> = {
     };
     return (
       <div
-        className={classNames("flex-noreset", "border-box", "p-s", "items-start")}
+        className={classNames(
+          "flex-noreset",
+          "border-box",
+          "p-s",
+          "items-start",
+        )}
         data-testid="wrapper"
         style={{ inlineSize: 300 }}
       >
@@ -327,7 +440,10 @@ export const CreateOption: StoryObj<StoryProps> = {
             if (!newValue) return;
             // if not, create the new option
             if (!isExistingOption(newValue)) {
-              setOptions((opts) => [...opts, { value: newValue, label: newValue }]);
+              setOptions((opts) => [
+                ...opts,
+                { value: newValue, label: newValue },
+              ]);
             }
           }}
           defaultValue={defaultValues}

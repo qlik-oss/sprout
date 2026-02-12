@@ -1,4 +1,8 @@
-import { Tooltip, type TooltipProps, classNames } from "@qlik/sprout-react";
+import {
+  Tooltip,
+  type TooltipProps,
+  classNames,
+} from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { TooltipArgTypes } from "./Tooltip.argTypes";
@@ -10,7 +14,9 @@ export default meta;
 
 const buttonClass = classNames("font-body-s", "text-default");
 
-export const Playground: StoryObj<TooltipProps & { disableContainerScroll?: boolean }> = {
+export const Playground: StoryObj<
+  TooltipProps & { disableContainerScroll?: boolean }
+> = {
   render: ({ disableContainerScroll, ...rest }) => (
     <div
       className={classNames("overflow-scroll", "border-default")}
@@ -23,7 +29,14 @@ export const Playground: StoryObj<TooltipProps & { disableContainerScroll?: bool
       }}
     >
       <div
-        className={classNames("flex", "flex-row", "grow-1", "shrink-0", "items-center", "justify-center")}
+        className={classNames(
+          "flex",
+          "flex-row",
+          "grow-1",
+          "shrink-0",
+          "items-center",
+          "justify-center",
+        )}
         style={{ inlineSize: 1000, blockSize: 300 }}
       >
         <Tooltip {...rest}>
@@ -63,7 +76,15 @@ export function VisualTest() {
   return (
     <div className={classNames("flex", "border-box", "flex-row")}>
       <div
-        className={classNames("flex", "border-box", "flex-col", "p-3xl", "justify-start", "items-center", "gap-3xl")}
+        className={classNames(
+          "flex",
+          "border-box",
+          "flex-col",
+          "p-3xl",
+          "justify-start",
+          "items-center",
+          "gap-3xl",
+        )}
         style={{ inlineSize: 300 }}
       >
         <Tooltip title="placement=top" initialOpen placement="top">
@@ -87,13 +108,30 @@ export function VisualTest() {
           </button>
         </Tooltip>
       </div>
-      <div className={classNames("flex", "border-box", "flex-col", "justify-start", "items-start", "gap-3xl")}>
-        <Tooltip title="ACCOUNT_NAME_UPPERCASE_SHOULD_WRAP_WITH" initialOpen placement="right">
+      <div
+        className={classNames(
+          "flex",
+          "border-box",
+          "flex-col",
+          "justify-start",
+          "items-start",
+          "gap-3xl",
+        )}
+      >
+        <Tooltip
+          title="ACCOUNT_NAME_UPPERCASE_SHOULD_WRAP_WITH"
+          initialOpen
+          placement="right"
+        >
           <button type="button" className={buttonClass}>
             Long text
           </button>
         </Tooltip>
-        <Tooltip title={"This\nText\nIs\nSplit\nInto\nMultiple\nLines"} initialOpen placement="bottom">
+        <Tooltip
+          title={"This\nText\nIs\nSplit\nInto\nMultiple\nLines"}
+          initialOpen
+          placement="bottom"
+        >
           <button type="button" className={buttonClass}>
             Long text with newlines
           </button>

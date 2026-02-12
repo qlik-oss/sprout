@@ -1,0 +1,143 @@
+.float_none {
+  float: none;
+}
+
+.float_left,
+.float_start {
+  float: inline-start;
+}
+
+.float_right,
+.float_end {
+  float: inline-end;
+}
+
+.clear_left,
+.clear_end {
+  clear: inline-start;
+}
+
+.clear_right,
+.clear_end {
+  clear: inline-end;
+}
+
+.clear_both {
+  clear: both;
+}
+
+.clear_none {
+  clear: none;
+}
+
+.isolate_auto {
+  isolation: auto;
+}
+
+.object_contain {
+  object-fit: contain;
+}
+
+.object_cover {
+  object-fit: cover;
+}
+
+.object_fill {
+  object-fit: fill;
+}
+
+.object_none {
+  object-fit: none;
+}
+
+.object_scale_down {
+  object-fit: scale-down;
+}
+
+.object_top {
+  object-position: top;
+}
+
+.object_top_left {
+  object-position: top left;
+}
+
+.object_top_center {
+  object-position: top center;
+}
+
+.object_top_right {
+  object-position: top right;
+}
+
+.object_center_left {
+  object-position: center left;
+}
+
+.object_center {
+  object-position: center;
+}
+
+.object_center_right {
+  object-position: center right;
+}
+
+.object_bottom {
+  object-position: bottom;
+}
+
+.object_bottom_left {
+  object-position: bottom left;
+}
+
+.object_bottom_center {
+  object-position: bottom center;
+}
+
+.object_bottom_right {
+  object-position: bottom right;
+}
+
+.object_left {
+  object-position: left;
+}
+
+.object_right {
+  object-position: right;
+}
+
+.overscroll_auto {
+  overscroll-behavior: auto;
+}
+
+.overscroll_contain {
+  overscroll-behavior: contain;
+}
+
+.overscroll_none {
+  overscroll-behavior: none;
+}
+
+.overscroll_x_auto {
+  overscroll-behavior-inline: auto;
+}
+
+.overscroll_x_contain {
+  overscroll-behavior-inline: contain;
+}
+
+.overscroll_x_none {
+  overscroll-behavior-inline: none;
+}
+
+.overscroll_y_auto {
+  overscroll-behavior-block: auto;
+}
+
+.overscroll_y_contain {
+  overscroll-behavior-block: contain;
+}
+
+.overscroll_y_none {
+  overscroll-behavior-block: none;
+}

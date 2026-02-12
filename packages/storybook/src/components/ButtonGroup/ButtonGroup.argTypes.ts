@@ -15,7 +15,8 @@ export const ButtonGroupArgTypes: ArgTypes<ButtonGroupProps> = {
     control: {
       type: "boolean",
     },
-    description: "If true, the button group will take the full width of its container.",
+    description:
+      "If true, the button group will take the full width of its container.",
     table: {
       defaultValue: {
         summary: "false",

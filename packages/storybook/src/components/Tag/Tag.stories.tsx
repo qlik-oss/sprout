@@ -28,7 +28,10 @@ const disableSnap = { chromatic: { disableSnapshot: true } };
 
 export const Playground: Story = {
   render: (props: TagProps) => (
-    <div className={classNames("flex", "border-box", "p-m", "w-fit")} data-testid="wrapper">
+    <div
+      className={classNames("flex", "border-box", "p-m", "w-fit")}
+      data-testid="wrapper"
+    >
       <Tag {...props} />
     </div>
   ),
@@ -54,7 +57,10 @@ export const GroupPlayground: Story = {
 
 export const Removable: Story = {
   render: (props: TagProps) => (
-    <div className={classNames("flex", "border-box", "p-m", "w-fit")} data-testid="wrapper">
+    <div
+      className={classNames("flex", "border-box", "p-m", "w-fit")}
+      data-testid="wrapper"
+    >
       <Tag {...props} />
     </div>
   ),
@@ -67,7 +73,10 @@ export const Removable: Story = {
 
 export const WithAvatar: Story = {
   render: (args: TagProps) => (
-    <div className={classNames("flex", "border-box", "p-m", "w-fit")} data-testid="wrapper">
+    <div
+      className={classNames("flex", "border-box", "p-m", "w-fit")}
+      data-testid="wrapper"
+    >
       <Tag {...args} avatar={<Avatar size="s" text="OC" />} />
     </div>
   ),
@@ -79,7 +88,13 @@ export const WithAvatar: Story = {
 
 function Icon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g clipPath="url(#clip0_20897_69)">
         <path
           fillRule="evenodd"
@@ -99,7 +114,10 @@ function Icon() {
 
 export const WithIcon: Story = {
   render: (args: TagProps) => (
-    <div className={classNames("flex", "border-box", "p-m", "w-fit")} data-testid="wrapper">
+    <div
+      className={classNames("flex", "border-box", "p-m", "w-fit")}
+      data-testid="wrapper"
+    >
       <Tag {...args} icon={<Icon />} />
     </div>
   ),
@@ -111,7 +129,10 @@ export const WithIcon: Story = {
 
 export const WithBadge: Story = {
   render: (args: TagProps) => (
-    <div className={classNames("flex", "border-box", "p-m", "w-fit")} data-testid="wrapper">
+    <div
+      className={classNames("flex", "border-box", "p-m", "w-fit")}
+      data-testid="wrapper"
+    >
       <Tag {...args} badge={<Badge text="14" variant="alphanumeric" />} />
     </div>
   ),
@@ -125,7 +146,9 @@ export const VisualTests: Story = {
   render: () => (
     <div className={classNames("flex", "flex-col", "gap-s")}>
       <div className={classNames("flex", "flex-col", "gap-s")}>
-        <h2 className={classNames("font-heading-m", "text-default")}>Default</h2>
+        <h2 className={classNames("font-heading-m", "text-default")}>
+          Default
+        </h2>
         <TagGroups>
           <Tag text="Tag" />
           <Tag text="Tag error" color="error" />
@@ -159,14 +182,34 @@ export const VisualTests: Story = {
         </TagGroups>
         <Tag text="With icon" icon={<Icon />} />
         <div className={classNames("flex", "flex-row", "gap-s")}>
-          <Tag text="With badge" badge={<Badge text="14" variant="alphanumeric" />} />
-          <Tag text="Apps" badge={{ text: "14", variant: "alphanumeric", color: "info" }} />
-          <Tag text="Boolean" color="success" badge={{ text: "true", variant: "alphanumeric", color: "success" }} />
+          <Tag
+            text="With badge"
+            badge={<Badge text="14" variant="alphanumeric" />}
+          />
+          <Tag
+            text="Apps"
+            badge={{ text: "14", variant: "alphanumeric", color: "info" }}
+          />
+          <Tag
+            text="Boolean"
+            color="success"
+            badge={{ text: "true", variant: "alphanumeric", color: "success" }}
+          />
         </div>
         <div className={classNames("flex", "flex-row", "gap-s", "w-xxs")}>
-          <Tag text="With badge" badge={<Badge text="14" variant="alphanumeric" />} />
-          <Tag text="Apps" badge={{ text: "14", variant: "alphanumeric", color: "info" }} />
-          <Tag text="Boolean" color="success" badge={{ text: "true", variant: "alphanumeric", color: "success" }} />
+          <Tag
+            text="With badge"
+            badge={<Badge text="14" variant="alphanumeric" />}
+          />
+          <Tag
+            text="Apps"
+            badge={{ text: "14", variant: "alphanumeric", color: "info" }}
+          />
+          <Tag
+            text="Boolean"
+            color="success"
+            badge={{ text: "true", variant: "alphanumeric", color: "success" }}
+          />
         </div>
       </div>
       <div className={classNames("flex", "flex-col", "gap-s")}>
@@ -180,10 +223,25 @@ export const VisualTests: Story = {
         </TagGroups>
         <TagGroups>
           <Tag size="s" text="onRemove" onRemove={() => {}} />
-          <Tag size="s" text="onRemove error" color="error" onRemove={() => {}} />
+          <Tag
+            size="s"
+            text="onRemove error"
+            color="error"
+            onRemove={() => {}}
+          />
           <Tag size="s" text="onRemove info" color="info" onRemove={() => {}} />
-          <Tag size="s" text="onRemove success" color="success" onRemove={() => {}} />
-          <Tag size="s" text="onRemove warning" color="warning" onRemove={() => {}} />
+          <Tag
+            size="s"
+            text="onRemove success"
+            color="success"
+            onRemove={() => {}}
+          />
+          <Tag
+            size="s"
+            text="onRemove warning"
+            color="warning"
+            onRemove={() => {}}
+          />
         </TagGroups>
         <TagGroups>
           <TagLink size="s" href="#" text="TagLink" />
@@ -194,15 +252,43 @@ export const VisualTests: Story = {
         </TagGroups>
         <TagGroups>
           <TagButton size="s" onClick={() => {}} text="TagButton" />
-          <TagButton size="s" onClick={() => {}} text="TagButton" data-testid="hover" />
-          <TagButton size="s" onClick={() => {}} text="TagButton" data-testid="active" />
-          <TagButton size="s" onClick={() => {}} text="TagButton" data-testid="focus" />
-          <TagButton size="s" onClick={() => {}} text="TagButton" aria-disabled="true" />
+          <TagButton
+            size="s"
+            onClick={() => {}}
+            text="TagButton"
+            data-testid="hover"
+          />
+          <TagButton
+            size="s"
+            onClick={() => {}}
+            text="TagButton"
+            data-testid="active"
+          />
+          <TagButton
+            size="s"
+            onClick={() => {}}
+            text="TagButton"
+            data-testid="focus"
+          />
+          <TagButton
+            size="s"
+            onClick={() => {}}
+            text="TagButton"
+            aria-disabled="true"
+          />
         </TagGroups>
         <Tag size="s" text="With icon" icon={<Icon />} />
         <div className={classNames("flex", "flex-row", "gap-s")}>
-          <Tag size="s" text="With badge" badge={<Badge text="14" variant="alphanumeric" />} />
-          <Tag size="s" text="Apps" badge={{ text: "14", variant: "alphanumeric", color: "info" }} />
+          <Tag
+            size="s"
+            text="With badge"
+            badge={<Badge text="14" variant="alphanumeric" />}
+          />
+          <Tag
+            size="s"
+            text="Apps"
+            badge={{ text: "14", variant: "alphanumeric", color: "info" }}
+          />
           <Tag
             size="s"
             text="Boolean"
@@ -211,8 +297,16 @@ export const VisualTests: Story = {
           />
         </div>
         <div className={classNames("flex", "flex-row", "gap-s", "w-xxs")}>
-          <Tag size="s" text="With badge" badge={<Badge text="14" variant="alphanumeric" />} />
-          <Tag size="s" text="Apps" badge={{ text: "14", variant: "alphanumeric", color: "info" }} />
+          <Tag
+            size="s"
+            text="With badge"
+            badge={<Badge text="14" variant="alphanumeric" />}
+          />
+          <Tag
+            size="s"
+            text="Apps"
+            badge={{ text: "14", variant: "alphanumeric", color: "info" }}
+          />
           <Tag
             size="s"
             text="Boolean"

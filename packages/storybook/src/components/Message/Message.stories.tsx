@@ -1,4 +1,9 @@
-import { Button, Divider, Message, classNames } from "@qlik/sprout-react";
+import {
+  Button,
+  Divider,
+  Message,
+  classNames,
+} from "@qlik/sprout-react";
 import type { StoryObj } from "@storybook/react-vite";
 
 type Story = StoryObj<typeof Message>;
@@ -12,12 +17,33 @@ const chromatic = { chromatic: { disableSnapshot: true } };
 
 function Illustration() {
   return (
-    <svg width="160" height="100" viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="160"
+      height="100"
+      viewBox="0 0 160 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g clipPath="url(#clip0_9048_41032)">
-        <path d="M70.538 80.151H91.017" stroke="#595959" strokeWidth="1.563" strokeLinecap="round" />
-        <path d="M60.298 87.048H101.256" stroke="#595959" strokeWidth="1.563" strokeLinecap="round" />
+        <path
+          d="M70.538 80.151H91.017"
+          stroke="#595959"
+          strokeWidth="1.563"
+          strokeLinecap="round"
+        />
+        <path
+          d="M60.298 87.048H101.256"
+          stroke="#595959"
+          strokeWidth="1.563"
+          strokeLinecap="round"
+        />
         <path d="M73.6665 68.9441H40.735H73.6665Z" fill="#595959" />
-        <path d="M73.6665 68.9441H40.735" stroke="#595959" strokeWidth="1.563" strokeLinecap="round" />
+        <path
+          d="M73.6665 68.9441H40.735"
+          stroke="#595959"
+          strokeWidth="1.563"
+          strokeLinecap="round"
+        />
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -55,12 +81,32 @@ function Illustration() {
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        <path d="M11.026 54.812L11.752 56.195L0.791012 61.948L0.769012 60.195L11.026 54.812Z" fill="#595959" />
-        <path d="M15.136 52.155L25.651 36.563" stroke="#595959" strokeWidth="1.563" />
-        <path d="M29.624 35.151L37.21 39.077V40.487L29.044 36.258L29.624 35.151Z" fill="#595959" />
-        <path d="M69.744 21.281L74.38 23.615L73.522 24.586L69.192 22.402L69.744 21.281Z" fill="#009844" />
-        <path d="M95.689 29.661L106.678 46.041" stroke="#009844" strokeWidth="1.563" />
-        <path d="M115.56 43.698L115.686 45.03L110.805 47.44L110.251 46.319L115.56 43.698Z" fill="#009844" />
+        <path
+          d="M11.026 54.812L11.752 56.195L0.791012 61.948L0.769012 60.195L11.026 54.812Z"
+          fill="#595959"
+        />
+        <path
+          d="M15.136 52.155L25.651 36.563"
+          stroke="#595959"
+          strokeWidth="1.563"
+        />
+        <path
+          d="M29.624 35.151L37.21 39.077V40.487L29.044 36.258L29.624 35.151Z"
+          fill="#595959"
+        />
+        <path
+          d="M69.744 21.281L74.38 23.615L73.522 24.586L69.192 22.402L69.744 21.281Z"
+          fill="#009844"
+        />
+        <path
+          d="M95.689 29.661L106.678 46.041"
+          stroke="#009844"
+          strokeWidth="1.563"
+        />
+        <path
+          d="M115.56 43.698L115.686 45.03L110.805 47.44L110.251 46.319L115.56 43.698Z"
+          fill="#009844"
+        />
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -93,9 +139,21 @@ function Illustration() {
           d="M96.0057 26.3548C96.4971 26.3855 97.0021 26.4748 97.5207 26.6227L97.5648 26.7943C97.9531 28.4759 96.9045 30.1539 95.2229 30.5422C93.5412 30.9304 91.8632 29.8819 91.475 28.2002L91.4506 28.0833C91.8456 27.7184 92.2538 27.4109 92.6753 27.1607C92.6302 27.4059 92.6337 27.6624 92.693 27.919C92.9259 28.928 93.9327 29.5571 94.9417 29.3242C95.9507 29.0913 96.5798 28.0845 96.3469 27.0755C96.2914 26.8352 96.1921 26.6165 96.0593 26.4259L96.0057 26.3548Z"
           fill="#009844"
         />
-        <path d="M126.963 41.755H133.105" stroke="#595959" strokeWidth="1.563" />
-        <path d="M137.765 39.647L147.382 30.424" stroke="#595959" strokeWidth="1.563" />
-        <path d="M151.658 28.618H160.417" stroke="#595959" strokeWidth="1.563" />
+        <path
+          d="M126.963 41.755H133.105"
+          stroke="#595959"
+          strokeWidth="1.563"
+        />
+        <path
+          d="M137.765 39.647L147.382 30.424"
+          stroke="#595959"
+          strokeWidth="1.563"
+        />
+        <path
+          d="M151.658 28.618H160.417"
+          stroke="#595959"
+          strokeWidth="1.563"
+        />
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -103,7 +161,11 @@ function Illustration() {
           stroke="#009844"
           strokeWidth="1.563"
         />
-        <path d="M55.003 39.303L65.828 22.927" stroke="#009844" strokeWidth="1.563" />
+        <path
+          d="M55.003 39.303L65.828 22.927"
+          stroke="#009844"
+          strokeWidth="1.563"
+        />
         <path d="M51.229 41.361H44.371" stroke="#009844" strokeWidth="1.563" />
       </g>
       <defs>
@@ -119,7 +181,8 @@ export const Playground: Story = {
   render: (props) => <Message {...props} />,
   args: {
     title: "Message title",
-    message: "Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue.",
+    message:
+      "Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue.",
     illustration: <Illustration />,
     actions: (
       <>
@@ -150,7 +213,9 @@ export const VisualTest: Story = {
       />
 
       <Divider />
-      <h2 className={classNames("font-heading-m", "text-default")}>With illustration</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        With illustration
+      </h2>
       <Message
         title="Message title"
         message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
@@ -158,11 +223,15 @@ export const VisualTest: Story = {
       />
 
       <Divider />
-      <h2 className={classNames("font-heading-m", "text-default")}>Without message</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Without message
+      </h2>
       <Message title="Message title" illustration={<Illustration />} />
 
       <Divider />
-      <h2 className={classNames("font-heading-m", "text-default")}>With actions</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        With actions
+      </h2>
       <Message
         title="Message title"
         message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
@@ -174,35 +243,44 @@ export const VisualTest: Story = {
         }
       />
       <Divider />
-      <h2 className={classNames("font-heading-m", "text-default")}>With large message</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        With large message
+      </h2>
       <Message
         title="Message title"
         message="Vivamus felis tellus quisque, convallis hac molestie efficitur. Auctor tincidunt volutpat curae sociosqu neque luctus efficitur pretium est. Non cursus leo aliquet magnis faucibus mus ac."
       />
       <Divider />
-      <h2 className={classNames("font-heading-m", "text-default")}>With large title</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        With large title
+      </h2>
       <Message
         title="So long message title that splits into two lines because it is too long"
         message="Vivamus felis tellus quisque, convallis hac molestie efficitur. Auctor tincidunt volutpat curae sociosqu neque luctus efficitur pretium est. Non cursus leo aliquet magnis faucibus mus ac."
       />
       <Divider />
-      <h2 className={classNames("font-heading-m", "text-default")}>With progress</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        With progress
+      </h2>
       <Message
         title="Message title"
         message="Vivamus felis tellus quisque, convallis hac molestie efficitur. Auctor tincidunt volutpat curae sociosqu neque luctus efficitur pretium est. Non cursus leo aliquet magnis faucibus mus ac."
         progress={{ percent: 35, label: "Loading progress" }}
       />
-      <h2 className={classNames("font-heading-m", "text-default")}>With paragraph</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        With paragraph
+      </h2>
       <Message
         title="Message title"
         message={
           <>
             <p className={classNames("font-body-s", "text-default")}>
-              This issue may be caused by a temporary server problem, a service disconnection, or an unstable internet
-              connection.
+              This issue may be caused by a temporary server problem, a service
+              disconnection, or an unstable internet connection.
             </p>
             <p className={classNames("font-body-s", "text-default")}>
-              Please try to refreshing the page, checking your connection, or clearing your browser cache.
+              Please try to refreshing the page, checking your connection, or
+              clearing your browser cache.
             </p>
           </>
         }

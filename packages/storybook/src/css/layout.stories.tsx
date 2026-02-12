@@ -1,6 +1,6 @@
 import sprout, { type AllClasses } from "@qlik/sprout-css-modules";
-import { NotificationIcon } from "@qlik/sprout-icons/react";
 import { AlertInline, Badge, Button } from "@qlik/sprout-react";
+import BellOutline from "@qlik/sprout-icons/react/BellOutline";
 
 import { CONTENT_CLASSES, PARAGRAPH, PropertyTile, src } from "./Content";
 
@@ -14,45 +14,132 @@ export const FloatAndClear = {
     controls: false,
   },
   render: () => (
-    <div className={sprout.classNames("flex", "flex-col", "bg-default", "text-default", "max-w-m", "gap-m")}>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "flex-col",
+        "bg-default",
+        "text-default",
+        "max-w-m",
+        "gap-m",
+      )}
+    >
       <PropertyTile>float-none</PropertyTile>
       <article>
         <img alt="demo" className={sprout.classNames("float-none")} src={src} />
-        <p className={sprout.classNames("p-0", "m-0", "text-justify")}>{PARAGRAPH}</p>
+        <p className={sprout.classNames("p-0", "m-0", "text-justify")}>
+          {PARAGRAPH}
+        </p>
       </article>
       <PropertyTile>float-start</PropertyTile>
       <article>
-        <img alt="demo" className={sprout.classNames("float-start")} src={src} />
-        <p className={sprout.classNames("p-0", "m-0", "text-justify")}>{PARAGRAPH}</p>
+        <img
+          alt="demo"
+          className={sprout.classNames("float-start")}
+          src={src}
+        />
+        <p className={sprout.classNames("p-0", "m-0", "text-justify")}>
+          {PARAGRAPH}
+        </p>
       </article>
       <PropertyTile>float-end</PropertyTile>
       <article>
         <img alt="demo" className={sprout.classNames("float-end")} src={src} />
-        <p className={sprout.classNames("p-0", "m-0", "text-justify")}>{PARAGRAPH}</p>
+        <p className={sprout.classNames("p-0", "m-0", "text-justify")}>
+          {PARAGRAPH}
+        </p>
       </article>
       <PropertyTile>clear-start</PropertyTile>
       <article>
-        <img alt="demo" className={sprout.classNames("float-start")} src={src} />
-        <img alt="demo" className={sprout.classNames("float-end")} height={100} src={src} />
-        <p className={sprout.classNames("p-0", "m-0", "text-justify", "clear-start")}>{PARAGRAPH}</p>
+        <img
+          alt="demo"
+          className={sprout.classNames("float-start")}
+          src={src}
+        />
+        <img
+          alt="demo"
+          className={sprout.classNames("float-end")}
+          height={100}
+          src={src}
+        />
+        <p
+          className={sprout.classNames(
+            "p-0",
+            "m-0",
+            "text-justify",
+            "clear-start",
+          )}
+        >
+          {PARAGRAPH}
+        </p>
       </article>
       <PropertyTile>clear-end</PropertyTile>
       <article>
-        <img alt="demo" className={sprout.classNames("float-start")} height={100} src={src} />
+        <img
+          alt="demo"
+          className={sprout.classNames("float-start")}
+          height={100}
+          src={src}
+        />
         <img alt="demo" className={sprout.classNames("float-end")} src={src} />
-        <p className={sprout.classNames("p-0", "m-0", "text-justify", "clear-end")}>{PARAGRAPH}</p>
+        <p
+          className={sprout.classNames(
+            "p-0",
+            "m-0",
+            "text-justify",
+            "clear-end",
+          )}
+        >
+          {PARAGRAPH}
+        </p>
       </article>
       <PropertyTile>clear-both</PropertyTile>
       <article>
-        <img alt="demo" className={sprout.classNames("float-start")} src={src} />
-        <img alt="demo" className={sprout.classNames("float-end")} height={100} src={src} />
-        <p className={sprout.classNames("p-0", "m-0", "text-justify", "clear-both")}>{PARAGRAPH}</p>
+        <img
+          alt="demo"
+          className={sprout.classNames("float-start")}
+          src={src}
+        />
+        <img
+          alt="demo"
+          className={sprout.classNames("float-end")}
+          height={100}
+          src={src}
+        />
+        <p
+          className={sprout.classNames(
+            "p-0",
+            "m-0",
+            "text-justify",
+            "clear-both",
+          )}
+        >
+          {PARAGRAPH}
+        </p>
       </article>
       <PropertyTile>clear-none</PropertyTile>
       <article>
-        <img alt="demo" className={sprout.classNames("float-start")} src={src} />
-        <img alt="demo" className={sprout.classNames("float-end")} height={100} src={src} />
-        <p className={sprout.classNames("p-0", "m-0", "text-justify", "clear-none")}>{PARAGRAPH}</p>
+        <img
+          alt="demo"
+          className={sprout.classNames("float-start")}
+          src={src}
+        />
+        <img
+          alt="demo"
+          className={sprout.classNames("float-end")}
+          height={100}
+          src={src}
+        />
+        <p
+          className={sprout.classNames(
+            "p-0",
+            "m-0",
+            "text-justify",
+            "clear-none",
+          )}
+        >
+          {PARAGRAPH}
+        </p>
       </article>
     </div>
   ),
@@ -79,9 +166,16 @@ export const TopRightBottonLeft = {
   },
   render: () => (
     <div className={sprout.classNames("flex", "flex-col", "max-w-m", "gap-m")}>
-      <div className={sprout.classNames("flex", "flex-row", "max-w-m", "gap-m")}>
+      <div
+        className={sprout.classNames("flex", "flex-row", "max-w-m", "gap-m")}
+      >
         <div
-          className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+          className={sprout.classNames(
+            "relative",
+            "flex",
+            "border-box",
+            "border-default",
+          )}
           style={{ inlineSize: 150, blockSize: 150 }}
         >
           <img
@@ -90,12 +184,26 @@ export const TopRightBottonLeft = {
             style={{ inlineSize: "30px" }}
             src={src}
           />
-          <span className={sprout.classNames("absolute", "bottom-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+          <span
+            className={sprout.classNames(
+              "absolute",
+              "bottom-0",
+              "left-0",
+              "p-xs",
+              "text-default",
+              "font-label-s",
+            )}
+          >
             inset-0
           </span>
         </div>
         <div
-          className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+          className={sprout.classNames(
+            "relative",
+            "flex",
+            "border-box",
+            "border-default",
+          )}
           style={{ inlineSize: 150, blockSize: 150 }}
         >
           <img
@@ -104,12 +212,26 @@ export const TopRightBottonLeft = {
             style={{ inlineSize: "30px" }}
             src={src}
           />
-          <span className={sprout.classNames("absolute", "bottom-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+          <span
+            className={sprout.classNames(
+              "absolute",
+              "bottom-0",
+              "left-0",
+              "p-xs",
+              "text-default",
+              "font-label-s",
+            )}
+          >
             inset-s
           </span>
         </div>
         <div
-          className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+          className={sprout.classNames(
+            "relative",
+            "flex",
+            "border-box",
+            "border-default",
+          )}
           style={{ inlineSize: 150, blockSize: 150 }}
         >
           <img
@@ -118,12 +240,26 @@ export const TopRightBottonLeft = {
             style={{ inlineSize: "30px" }}
             src={src}
           />
-          <span className={sprout.classNames("absolute", "bottom-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+          <span
+            className={sprout.classNames(
+              "absolute",
+              "bottom-0",
+              "left-0",
+              "p-xs",
+              "text-default",
+              "font-label-s",
+            )}
+          >
             inset-m
           </span>
         </div>
         <div
-          className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+          className={sprout.classNames(
+            "relative",
+            "flex",
+            "border-box",
+            "border-default",
+          )}
           style={{ inlineSize: 150, blockSize: 150 }}
         >
           <img
@@ -132,25 +268,56 @@ export const TopRightBottonLeft = {
             style={{ inlineSize: "30px" }}
             src={src}
           />
-          <span className={sprout.classNames("absolute", "bottom-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+          <span
+            className={sprout.classNames(
+              "absolute",
+              "bottom-0",
+              "left-0",
+              "p-xs",
+              "text-default",
+              "font-label-s",
+            )}
+          >
             inset-l
           </span>
         </div>
       </div>
-      <div className={sprout.classNames("flex", "flex-row", "max-w-m", "gap-xl", "p-xl")}>
+      <div
+        className={sprout.classNames(
+          "flex",
+          "flex-row",
+          "max-w-m",
+          "gap-xl",
+          "p-xl",
+        )}
+      >
         {TOP_RIGHT_NEGATIVE_SIZES.map((tsize) => (
-          <div key={tsize[0]} className={sprout.classNames("relative", "flex", "w-fit")}>
-            <Button icon={<NotificationIcon />} label={`${tsize[0]} ${tsize[1]}`} />
+          <div
+            key={tsize[0]}
+            className={sprout.classNames("relative", "flex", "w-fit")}
+          >
+            <Button icon={<BellOutline />} label={`${tsize[0]} ${tsize[1]}`} />
             <div className={sprout.classNames("absolute", tsize[0], tsize[1])}>
               <Badge variant="alphanumeric" color="info" text="32" />
             </div>
           </div>
         ))}
       </div>
-      <div className={sprout.classNames("flex", "flex-row", "max-w-m", "gap-xl", "p-xl")}>
+      <div
+        className={sprout.classNames(
+          "flex",
+          "flex-row",
+          "max-w-m",
+          "gap-xl",
+          "p-xl",
+        )}
+      >
         {BOTTOM_LEFT_NEGATIVE_SIZES.map((tsize) => (
-          <div key={tsize[0]} className={sprout.classNames("relative", "flex", "w-fit")}>
-            <Button icon={<NotificationIcon />} label={`${tsize[0]} ${tsize[1]}`} />
+          <div
+            key={tsize[0]}
+            className={sprout.classNames("relative", "flex", "w-fit")}
+          >
+            <Button icon={<BellOutline />} label={`${tsize[0]} ${tsize[1]}`} />
             <div className={sprout.classNames("absolute", tsize[0], tsize[1])}>
               <Badge variant="alphanumeric" color="info" text="32" />
             </div>
@@ -167,7 +334,16 @@ export const ObjectFit = {
     controls: false,
   },
   render: () => (
-    <div className={sprout.classNames("flex", "flex-col", "bg-default", "text-default", "max-w-m", "gap-m")}>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "flex-col",
+        "bg-default",
+        "text-default",
+        "max-w-m",
+        "gap-m",
+      )}
+    >
       <PropertyTile>object-contain</PropertyTile>
       <img
         alt="demo"
@@ -199,7 +375,11 @@ export const ObjectFit = {
       <PropertyTile>object-scale-down</PropertyTile>
       <img
         alt="demo"
-        className={sprout.classNames("object-scale-down", "border-default", "p-s")}
+        className={sprout.classNames(
+          "object-scale-down",
+          "border-default",
+          "p-s",
+        )}
         src={src}
         style={{ inlineSize: 200, blockSize: 50 }}
       />
@@ -215,83 +395,273 @@ export const ObjectPosition = {
   render: () => (
     <div className={sprout.classNames("grid", "grid-cols-3", "max-w-m")}>
       <div
-        className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+        className={sprout.classNames(
+          "relative",
+          "flex",
+          "border-box",
+          "border-default",
+        )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
-        <img alt="demo" className={sprout.classNames("object-none", "object-top-left")} src={src} />
-        <span className={sprout.classNames("absolute", "bottom-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+        <img
+          alt="demo"
+          className={sprout.classNames("object-none", "object-top-left")}
+          src={src}
+        />
+        <span
+          className={sprout.classNames(
+            "absolute",
+            "bottom-0",
+            "left-0",
+            "p-xs",
+            "text-default",
+            "font-label-s",
+          )}
+        >
           object-top-left
         </span>
       </div>
       <div
-        className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+        className={sprout.classNames(
+          "relative",
+          "flex",
+          "border-box",
+          "border-default",
+        )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
-        <img alt="demo" className={sprout.classNames("relative", "object-none", "object-top")} src={src} />
-        <span className={sprout.classNames("absolute", "bottom-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+        <img
+          alt="demo"
+          className={sprout.classNames("relative", "object-none", "object-top")}
+          src={src}
+        />
+        <span
+          className={sprout.classNames(
+            "absolute",
+            "bottom-0",
+            "left-0",
+            "p-xs",
+            "text-default",
+            "font-label-s",
+          )}
+        >
           object-top
         </span>
       </div>
       <div
-        className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+        className={sprout.classNames(
+          "relative",
+          "flex",
+          "border-box",
+          "border-default",
+        )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
-        <img alt="demo" className={sprout.classNames("relative", "object-none", "object-top-right")} src={src} />
-        <span className={sprout.classNames("absolute", "bottom-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+        <img
+          alt="demo"
+          className={sprout.classNames(
+            "relative",
+            "object-none",
+            "object-top-right",
+          )}
+          src={src}
+        />
+        <span
+          className={sprout.classNames(
+            "absolute",
+            "bottom-0",
+            "left-0",
+            "p-xs",
+            "text-default",
+            "font-label-s",
+          )}
+        >
           object-top-right
         </span>
       </div>
       <div
-        className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+        className={sprout.classNames(
+          "relative",
+          "flex",
+          "border-box",
+          "border-default",
+        )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
-        <img alt="demo" className={sprout.classNames("relative", "object-none", "object-center-left")} src={src} />
-        <span className={sprout.classNames("absolute", "bottom-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+        <img
+          alt="demo"
+          className={sprout.classNames(
+            "relative",
+            "object-none",
+            "object-center-left",
+          )}
+          src={src}
+        />
+        <span
+          className={sprout.classNames(
+            "absolute",
+            "bottom-0",
+            "left-0",
+            "p-xs",
+            "text-default",
+            "font-label-s",
+          )}
+        >
           object-center-left
         </span>
       </div>
       <div
-        className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+        className={sprout.classNames(
+          "relative",
+          "flex",
+          "border-box",
+          "border-default",
+        )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
-        <img alt="demo" className={sprout.classNames("relative", "object-none", "object-center")} src={src} />
-        <span className={sprout.classNames("absolute", "bottom-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+        <img
+          alt="demo"
+          className={sprout.classNames(
+            "relative",
+            "object-none",
+            "object-center",
+          )}
+          src={src}
+        />
+        <span
+          className={sprout.classNames(
+            "absolute",
+            "bottom-0",
+            "left-0",
+            "p-xs",
+            "text-default",
+            "font-label-s",
+          )}
+        >
           object-center
         </span>
       </div>
       <div
-        className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+        className={sprout.classNames(
+          "relative",
+          "flex",
+          "border-box",
+          "border-default",
+        )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
-        <img alt="demo" className={sprout.classNames("relative", "object-none", "object-center-right")} src={src} />
-        <span className={sprout.classNames("absolute", "bottom-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+        <img
+          alt="demo"
+          className={sprout.classNames(
+            "relative",
+            "object-none",
+            "object-center-right",
+          )}
+          src={src}
+        />
+        <span
+          className={sprout.classNames(
+            "absolute",
+            "bottom-0",
+            "left-0",
+            "p-xs",
+            "text-default",
+            "font-label-s",
+          )}
+        >
           object-center-right
         </span>
       </div>
       <div
-        className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+        className={sprout.classNames(
+          "relative",
+          "flex",
+          "border-box",
+          "border-default",
+        )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
-        <img alt="demo" className={sprout.classNames("relative", "object-none", "object-bottom-left")} src={src} />
-        <span className={sprout.classNames("absolute", "top-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+        <img
+          alt="demo"
+          className={sprout.classNames(
+            "relative",
+            "object-none",
+            "object-bottom-left",
+          )}
+          src={src}
+        />
+        <span
+          className={sprout.classNames(
+            "absolute",
+            "top-0",
+            "left-0",
+            "p-xs",
+            "text-default",
+            "font-label-s",
+          )}
+        >
           object-bottom-left
         </span>
       </div>
       <div
-        className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+        className={sprout.classNames(
+          "relative",
+          "flex",
+          "border-box",
+          "border-default",
+        )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
-        <img alt="demo" className={sprout.classNames("relative", "object-none", "object-bottom")} src={src} />
-        <span className={sprout.classNames("absolute", "top-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+        <img
+          alt="demo"
+          className={sprout.classNames(
+            "relative",
+            "object-none",
+            "object-bottom",
+          )}
+          src={src}
+        />
+        <span
+          className={sprout.classNames(
+            "absolute",
+            "top-0",
+            "left-0",
+            "p-xs",
+            "text-default",
+            "font-label-s",
+          )}
+        >
           object-bottom
         </span>
       </div>
       <div
-        className={sprout.classNames("relative", "flex", "border-box", "border-default")}
+        className={sprout.classNames(
+          "relative",
+          "flex",
+          "border-box",
+          "border-default",
+        )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
-        <img alt="demo" className={sprout.classNames("relative", "object-none", "object-bottom-right")} src={src} />
-        <span className={sprout.classNames("absolute", "top-0", "left-0", "p-xs", "text-default", "font-label-s")}>
+        <img
+          alt="demo"
+          className={sprout.classNames(
+            "relative",
+            "object-none",
+            "object-bottom-right",
+          )}
+          src={src}
+        />
+        <span
+          className={sprout.classNames(
+            "absolute",
+            "top-0",
+            "left-0",
+            "p-xs",
+            "text-default",
+            "font-label-s",
+          )}
+        >
           object-bottom-right
         </span>
       </div>
@@ -311,7 +681,17 @@ export const ZIndex = {
   },
 
   render: () => (
-    <div className={sprout.classNames("flex", "border-box", "border-default", "p-xl", "flex-col", "w-s", "gap-0")}>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "border-box",
+        "border-default",
+        "p-xl",
+        "flex-col",
+        "w-s",
+        "gap-0",
+      )}
+    >
       <div
         className={sprout.classNames(...CONTENT_CLASSES, "z-cursor")}
         style={{
@@ -376,7 +756,13 @@ export const ZIndex = {
   ),
 };
 
-const GRID_CONTENT: Array<AllClasses> = ["border-default", "items-center", "justify-center", "w-fit", "p-m"];
+const GRID_CONTENT: Array<AllClasses> = [
+  "border-default",
+  "items-center",
+  "justify-center",
+  "w-fit",
+  "p-m",
+];
 
 export const PlaceContent = {
   name: "place-content",
@@ -384,10 +770,20 @@ export const PlaceContent = {
     controls: false,
   },
   render: () => (
-    <div className={sprout.classNames("flex", "border-box", "gap-m", "flex-col", "w-full", "max-w-m")}>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "border-box",
+        "gap-m",
+        "flex-col",
+        "w-full",
+        "max-w-m",
+      )}
+    >
       <div className={sprout.classNames("flex", "border-box", "flex-col")}>
         <AlertInline severity="warning">
-          We do not provide place-content shorthand so please use content- and justify- instead
+          We do not provide place-content shorthand so please use content- and
+          justify- instead
         </AlertInline>
         <PropertyTile>content-start justify-start</PropertyTile>
         <div
@@ -505,9 +901,19 @@ export const PlaceItems = {
     controls: false,
   },
   render: () => (
-    <div className={sprout.classNames("flex", "border-box", "gap-m", "flex-col", "w-full", "max-w-m")}>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "border-box",
+        "gap-m",
+        "flex-col",
+        "w-full",
+        "max-w-m",
+      )}
+    >
       <AlertInline severity="warning">
-        We do not provide place-items shorthand so please use items- and justify- instead
+        We do not provide place-items shorthand so please use items- and
+        justify- instead
       </AlertInline>
       <PropertyTile>items-start justify-items-start</PropertyTile>
       <div

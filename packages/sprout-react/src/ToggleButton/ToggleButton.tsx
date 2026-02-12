@@ -1,9 +1,10 @@
 import { type ReactNode, type Ref, forwardRef, isValidElement } from "react";
 
+import DropdownArrow from "@qlik/sprout-icons/react/DropdownArrow";
+
 import { Badge, type BadgeProps } from "../Badge";
 import { classNames } from "../classNames";
 import type { HTMLButtonProps } from "../htmlTypes";
-import { DropdownArrow } from "../icons";
 import { type UseToggleProps, useToggle } from "./hook";
 
 import style from "../Button/Button.module.css";

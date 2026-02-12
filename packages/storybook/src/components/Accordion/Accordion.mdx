@@ -31,7 +31,12 @@ The container controls the props around opened. The only exception is openedDefa
 ```jsx
 import { Accordion } from "@qlik/sprout-react";
 
-<Accordion.Container variant="default" renderContent openedDefault={0} behavior="linked">
+<Accordion.Container
+  variant="default"
+  renderContent
+  openedDefault={0}
+  behavior="linked"
+>
   <Accordion.Item header="first panel" description="" value="value">
     <p>Content</p>
   </Accordion.Item>

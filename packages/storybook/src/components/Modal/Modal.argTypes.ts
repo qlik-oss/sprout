@@ -1,8 +1,11 @@
-import type { ModalCompositionProps, ModalProps } from "@qlik/sprout-react";
+import type {
+  ModalCompositionProps,
+  ModalProps,
+} from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
+import { ICONS_MAP, ICON_OPTIONS } from "../../internal/icons/Icons";
 import { FieldArgTypes } from "../Field.argTypes";
-import { ICONS_MAP, ICON_OPTIONS } from "../internal/icons/Icons";
 
 //#region Common Modal Props
 export const CommonModalArgTypes: ArgTypes<ModalProps> = {
@@ -33,7 +36,8 @@ export const CommonModalArgTypes: ArgTypes<ModalProps> = {
         summary: "undefined",
       },
       type: {
-        summary: "'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'full' | undefined",
+        summary:
+          "'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'full' | undefined",
       },
     },
   },
@@ -112,41 +116,46 @@ export const CommonModalArgTypes: ArgTypes<ModalProps> = {
       neq: undefined,
     },
     control: "boolean",
-    description: "If true, adds padding to the modal content area. Default is true.",
+    description:
+      "If true, adds padding to the modal content area. Default is true.",
   },
 };
 
-const CommonHeaderArgTypes: ArgTypes<Partial<ModalCompositionProps["Header"]>> = {
-  icon: {
-    control: "select",
-    options: ICON_OPTIONS,
-    mapping: ICONS_MAP,
-    description: "Icon to display next to the header title. Should not be used together with back navigation props.",
-    table: {
-      type: {
-        summary: "ReactNode",
+const CommonHeaderArgTypes: ArgTypes<Partial<ModalCompositionProps["Header"]>> =
+  {
+    icon: {
+      control: "select",
+      options: ICON_OPTIONS,
+      mapping: ICONS_MAP,
+      description:
+        "Icon to display next to the header title. Should not be used together with back navigation props.",
+      table: {
+        type: {
+          summary: "ReactNode",
+        },
       },
     },
-  },
-  labelBack: {
-    control: "text",
-    description: "Accessible label for the back button. Should not be used together with an icon",
-    table: {
-      type: {
-        summary: "string",
+    labelBack: {
+      control: "text",
+      description:
+        "Accessible label for the back button. Should not be used together with an icon",
+      table: {
+        type: {
+          summary: "string",
+        },
       },
     },
-  },
-  onClickBack: {
-    control: false,
-    description: "Function to call when the back button is clicked. Should not be used together with an icon.",
-    table: {
-      type: {
-        summary: "() => void",
+    onClickBack: {
+      control: false,
+      description:
+        "Function to call when the back button is clicked. Should not be used together with an icon.",
+      table: {
+        type: {
+          summary: "() => void",
+        },
       },
     },
-  },
-};
+  };
 
 //#endregion
 
@@ -154,7 +163,8 @@ const CommonHeaderArgTypes: ArgTypes<Partial<ModalCompositionProps["Header"]>> =
 export const ModalRootArgTypes: ArgTypes<ModalCompositionProps["Root"]> = {
   container: {
     control: "boolean",
-    description: "If true, the modal will use a responsive container that adjusts its size based on the viewport.",
+    description:
+      "If true, the modal will use a responsive container that adjusts its size based on the viewport.",
     table: {
       type: {
         summary: "boolean",
@@ -168,65 +178,66 @@ export const ModalRootArgTypes: ArgTypes<ModalCompositionProps["Root"]> = {
   ...CommonModalArgTypes,
 };
 
-export const ModalActionsArgTypes: ArgTypes<ModalCompositionProps["Actions"]> = {
-  children: {
-    control: false,
-    description: "Content to display inside the modal actions.",
-    table: {
-      type: {
-        summary: "ReactNode",
+export const ModalActionsArgTypes: ArgTypes<ModalCompositionProps["Actions"]> =
+  {
+    children: {
+      control: false,
+      description: "Content to display inside the modal actions.",
+      table: {
+        type: {
+          summary: "ReactNode",
+        },
       },
     },
-  },
-  labelClose: {
-    control: "text",
-    description: "Accessible label for the close button.",
-    table: {
-      type: {
-        summary: "string",
-      },
-      defaultValue: {
-        summary: "Cancel",
-      },
-    },
-  },
-  left: {
-    control: false,
-    description: "Left aligned content to display in the modal actions.",
-    table: {
-      type: {
-        summary: "ReactNode",
+    labelClose: {
+      control: "text",
+      description: "Accessible label for the close button.",
+      table: {
+        type: {
+          summary: "string",
+        },
+        defaultValue: {
+          summary: "Cancel",
+        },
       },
     },
-  },
-  metaLabel: {
-    control: "text",
-    description: "Meta label text to display in the modal actions.",
-    table: {
-      type: {
-        summary: "string",
+    left: {
+      control: false,
+      description: "Left aligned content to display in the modal actions.",
+      table: {
+        type: {
+          summary: "ReactNode",
+        },
       },
     },
-  },
-  onClickClose: {
-    control: false,
-    description: "Function to call when the close button is clicked.",
-    table: {
-      type: {
-        summary: "() => void",
+    metaLabel: {
+      control: "text",
+      description: "Meta label text to display in the modal actions.",
+      table: {
+        type: {
+          summary: "string",
+        },
       },
     },
-  },
-  preventClose: {
-    control: "boolean",
-    description: "Prevents the modal from being closed via the close button.",
-    table: {
-      type: {
-        summary: "boolean",
+    onClickClose: {
+      control: false,
+      description: "Function to call when the close button is clicked.",
+      table: {
+        type: {
+          summary: "() => void",
+        },
       },
     },
-  },
-};
+    preventClose: {
+      control: "boolean",
+      description: "Prevents the modal from being closed via the close button.",
+      table: {
+        type: {
+          summary: "boolean",
+        },
+      },
+    },
+  };
 
 export const ModalHeaderArgTypes: ArgTypes<ModalCompositionProps["Header"]> = {
   children: {
@@ -257,7 +268,8 @@ export const ModalHeaderArgTypes: ArgTypes<ModalCompositionProps["Header"]> = {
   infoIconTooltip: FieldArgTypes.infoIconTooltip,
   descriptionId: {
     control: "text",
-    description: "ID for the description element, used for accessibility purposes.",
+    description:
+      "ID for the description element, used for accessibility purposes.",
     table: {
       type: {
         summary: "string",
@@ -282,7 +294,8 @@ export const ModalHeaderArgTypes: ArgTypes<ModalCompositionProps["Header"]> = {
   },
   labelId: {
     control: "text",
-    description: "ID for the header title element, used for accessibility purposes.",
+    description:
+      "ID for the header title element, used for accessibility purposes.",
     table: {
       type: {
         summary: "string",
@@ -317,61 +330,65 @@ export const ModalHeaderArgTypes: ArgTypes<ModalCompositionProps["Header"]> = {
   },
 };
 
-export const ModalContentArgTypes: ArgTypes<ModalCompositionProps["Content"]> = {
-  children: CommonModalArgTypes.children,
-  padding: {
-    control: "boolean",
-    description:
-      "Deprecated: use horizontal padding (--sprout-common-spacing-xxl) on the wrapping element passed as children instead.",
-    table: {
-      type: {
-        summary: "boolean",
-      },
-      defaultValue: {
-        summary: "true",
-      },
-    },
-  },
-  overflowY: {
-    control: "select",
-    options: [undefined, "hidden", "visible", "scroll", "auto"],
-    description: "Sets the vertical overflow behavior of the modal content area.",
-    table: {
-      type: {
-        summary: "'hidden' | 'visible' | 'scroll' | 'auto'",
-      },
-      defaultValue: {
-        summary: "auto",
+export const ModalContentArgTypes: ArgTypes<ModalCompositionProps["Content"]> =
+  {
+    children: CommonModalArgTypes.children,
+    padding: {
+      control: "boolean",
+      description:
+        "Deprecated: use horizontal padding (--sprout-common-spacing-xxl) on the wrapping element passed as children instead.",
+      table: {
+        type: {
+          summary: "boolean",
+        },
+        defaultValue: {
+          summary: "true",
+        },
       },
     },
-  },
-  overflowX: {
-    control: "select",
-    options: [undefined, "hidden", "visible", "scroll", "auto"],
-    description: "Sets the horizontal overflow behavior of the modal content area.",
-    table: {
-      type: {
-        summary: "'hidden' | 'visible' | 'scroll' | 'auto'",
-      },
-      defaultValue: {
-        summary: "hidden",
-      },
-    },
-  },
-  divider: {
-    control: "select",
-    options: [undefined, "visible", "none", "auto"],
-    description: "Controls the visibility of the top and bottom dividers in the modal content area.",
-    table: {
-      type: {
-        summary: "'visible' | 'none' | 'auto'",
-      },
-      defaultValue: {
-        summary: "auto",
+    overflowY: {
+      control: "select",
+      options: [undefined, "hidden", "visible", "scroll", "auto"],
+      description:
+        "Sets the vertical overflow behavior of the modal content area.",
+      table: {
+        type: {
+          summary: "'hidden' | 'visible' | 'scroll' | 'auto'",
+        },
+        defaultValue: {
+          summary: "auto",
+        },
       },
     },
-  },
-};
+    overflowX: {
+      control: "select",
+      options: [undefined, "hidden", "visible", "scroll", "auto"],
+      description:
+        "Sets the horizontal overflow behavior of the modal content area.",
+      table: {
+        type: {
+          summary: "'hidden' | 'visible' | 'scroll' | 'auto'",
+        },
+        defaultValue: {
+          summary: "hidden",
+        },
+      },
+    },
+    divider: {
+      control: "select",
+      options: [undefined, "visible", "none", "auto"],
+      description:
+        "Controls the visibility of the top and bottom dividers in the modal content area.",
+      table: {
+        type: {
+          summary: "'visible' | 'none' | 'auto'",
+        },
+        defaultValue: {
+          summary: "auto",
+        },
+      },
+    },
+  };
 //#endregion
 
 //#region Modal API
@@ -404,7 +421,8 @@ export const ModalArgTypes: ArgTypes<ModalProps> = {
   },
   jsx: {
     control: "boolean",
-    description: "If true, allows the use of JSX elements as children for more complex structures.",
+    description:
+      "If true, allows the use of JSX elements as children for more complex structures.",
     table: {
       type: {
         summary: "boolean",

@@ -1,9 +1,9 @@
 import NewTabIcon from "@qlik/sprout-icons/react/NewTab";
 
-import { type ButtonProps, IconButton } from "../Button";
+import { type ButtonIconProps, IconButton } from "../Button";
 import { useI18n } from "../hooks/useI18n";
 
-export type MenuSecondaryActionProps = ButtonProps;
+export type MenuSecondaryActionProps = ButtonIconProps;
 
 export function MenuSecondaryAction(props: MenuSecondaryActionProps) {
   const t = useI18n();

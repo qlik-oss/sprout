@@ -17,7 +17,11 @@ import { Avatar, Badge } from "@qlik/sprout-react";
 
 <Badge variant="alphanumeric" text="1" color="info" />;
 
-<Avatar size="s" text="OC" badge={<Badge variant="alphanumeric" text="1" color="danger" />} />;
+<Avatar
+  size="s"
+  text="OC"
+  badge={<Badge variant="alphanumeric" text="1" color="danger" />}
+/>;
 ```
 
 ## Properties
@@ -35,5 +39,11 @@ Adding an aria-label to the badge will always be considered useful for screen re
 But if the value is a static number it is considered useless to add those attributes.
 
 ```tsx
-<Badge variant="alphanumeric" text="14" role="status" arial-live="polite" aria-label="14 items in your shopping cart" />
+<Badge
+  variant="alphanumeric"
+  text="14"
+  role="status"
+  arial-live="polite"
+  aria-label="14 items in your shopping cart"
+/>
 ```

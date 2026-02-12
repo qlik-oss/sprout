@@ -1,8 +1,9 @@
 import { fn } from "storybook/test";
 
 import sprout from "@qlik/sprout-css-modules";
-import { CopyIcon, PasteIcon } from "@qlik/sprout-icons/react";
 import { IconButton } from "@qlik/sprout-react";
+import Copy from "@qlik/sprout-icons/react/Copy";
+import Paste from "@qlik/sprout-icons/react/Paste";
 import type { StoryObj } from "@storybook/react";
 
 export default {
@@ -40,9 +41,16 @@ export const ProgressiveDisclosure: StoryObj<{ onClick: () => void }> = {
         className={sprout.classNames("focusable-trigger")}
       />
       <p>disclosure-target</p>
-      <div className={sprout.classNames("disclosure-target", "flex", "flex-row", "gap-s")}>
-        <IconButton label="Copy" icon={<CopyIcon height={undefined} />} />
-        <IconButton label="Paste" icon={<PasteIcon height={undefined} />} />
+      <div
+        className={sprout.classNames(
+          "disclosure-target",
+          "flex",
+          "flex-row",
+          "gap-s",
+        )}
+      >
+        <IconButton label="Copy" icon={<Copy height={undefined} />} />
+        <IconButton label="Paste" icon={<Paste height={undefined} />} />
       </div>
     </div>
   ),
@@ -77,10 +85,12 @@ export const FocusableTarget: StoryObj<{ onClick: () => void }> = {
         className={sprout.classNames("focusable-trigger")}
       />
       <p>
-        <code>focusable-target</code> goes in the parent, the container you want to take focus
+        <code>focusable-target</code> goes in the parent, the container you want
+        to take focus
       </p>
       <p>
-        <code>focusable-trigger</code> goes to either a <code>button</code> or a <code>a</code>
+        <code>focusable-trigger</code> goes to either a <code>button</code> or a{" "}
+        <code>a</code>
         that will receive focus and provide the interaction
       </p>
     </div>

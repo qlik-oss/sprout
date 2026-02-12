@@ -1,314 +1,251 @@
-.p_0,
 .p-0 {
   padding: 0;
 }
 
-.p_xs,
 .p-xs {
   padding: var(--sprout-common-spacing-xs);
 }
 
-.p_s,
 .p-s {
   padding: var(--sprout-common-spacing-s);
 }
 
-.p_m,
 .p-m {
   padding: var(--sprout-common-spacing-m);
 }
 
-.p_l,
 .p-l {
   padding: var(--sprout-common-spacing-l);
 }
 
-.p_xl,
 .p-xl {
   padding: var(--sprout-common-spacing-xl);
 }
 
-.p_xxl,
 .p-xxl {
   padding: var(--sprout-common-spacing-xxl);
 }
 
-.p_3xl,
 .p-3xl {
   padding: var(--sprout-common-spacing-3xl);
 }
 
-.px_0,
 .px-0 {
   padding-inline: 0;
 }
 
-.px_xs,
 .px-xs {
   padding-inline: var(--sprout-common-spacing-xs);
 }
 
-.px_s,
 .px-s {
   padding-inline: var(--sprout-common-spacing-s);
 }
 
-.px_m,
 .px-m {
   padding-inline: var(--sprout-common-spacing-m);
 }
 
-.px_l,
 .px-l {
   padding-inline: var(--sprout-common-spacing-l);
 }
 
-.px_xl,
 .px-xl {
   padding-inline: var(--sprout-common-spacing-xl);
 }
 
-.px_xxl,
 .px-xxl {
   padding-inline: var(--sprout-common-spacing-xxl);
 }
 
-.px_3xl,
 .px-3xl {
   padding-inline: var(--sprout-common-spacing-3xl);
 }
 
-.py_0,
 .py-0 {
   padding-block: 0;
 }
 
-.py_xs,
 .py-xs {
   padding-block: var(--sprout-common-spacing-xs);
 }
 
-.py_s,
 .py-s {
   padding-block: var(--sprout-common-spacing-s);
 }
 
-.py_m,
 .py-m {
   padding-block: var(--sprout-common-spacing-m);
 }
 
-.py_l,
 .py-l {
   padding-block: var(--sprout-common-spacing-l);
 }
 
-.py_xl,
 .py-xl {
   padding-block: var(--sprout-common-spacing-xl);
 }
 
-.py_xxl,
 .py-xxl {
   padding-block: var(--sprout-common-spacing-xxl);
 }
 
-.py_3xl,
 .py-3xl {
   padding-block: var(--sprout-common-spacing-3xl);
 }
 
-.py_density_xs,
 .py-density-xs {
   padding-block: var(--sprout-common-density-xs);
 }
 
-.py_density_s,
 .py-density-s {
   padding-block: var(--sprout-common-density-s);
 }
 
-.py_density_m,
 .py-density-m {
   padding-block: var(--sprout-common-density-m);
 }
 
-.py_density_l,
 .py-density-l {
   padding-block: var(--sprout-common-density-l);
 }
 
-.py_density_xl,
 .py-density-xl {
   padding-block: var(--sprout-common-density-xl);
 }
 
-.py_density_xxl,
 .py-density-xxl {
   padding-block: var(--sprout-common-density-xxl);
 }
 
-.py_density_3xl,
 .py-density-3xl {
   padding-block: var(--sprout-common-density-3xl);
 }
 
-.pt_0,
 .pt-0 {
   padding-block-start: 0;
 }
 
-.pt_xs,
 .pt-xs {
   padding-block-start: var(--sprout-common-spacing-xs);
 }
 
-.pt_s,
 .pt-s {
   padding-block-start: var(--sprout-common-spacing-s);
 }
 
-.pt_m,
 .pt-m {
   padding-block-start: var(--sprout-common-spacing-m);
 }
 
-.pt_l,
 .pt-l {
   padding-block-start: var(--sprout-common-spacing-l);
 }
 
-.pt_xl,
 .pt-xl {
   padding-block-start: var(--sprout-common-spacing-xl);
 }
 
-.pt_xxl,
 .pt-xxl {
   padding-block-start: var(--sprout-common-spacing-xxl);
 }
 
-.pt_3xl,
 .pt-3xl {
   padding-block-start: var(--sprout-common-spacing-3xl);
 }
 
-.pr_0,
 .pr-0 {
   padding-inline-end: 0;
 }
 
-.pr_xs,
 .pr-xs {
   padding-inline-end: var(--sprout-common-spacing-xs);
 }
 
-.pr_s,
 .pr-s {
   padding-inline-end: var(--sprout-common-spacing-s);
 }
 
-.pr_m,
 .pr-m {
   padding-inline-end: var(--sprout-common-spacing-m);
 }
 
-.pr_l,
 .pr-l {
   padding-inline-end: var(--sprout-common-spacing-l);
 }
 
-.pr_xl,
 .pr-xl {
   padding-inline-end: var(--sprout-common-spacing-xl);
 }
 
-.pr_xxl,
 .pr-xxl {
   padding-inline-end: var(--sprout-common-spacing-xxl);
 }
 
-.pr_3xl,
 .pr-3xl {
   padding-inline-end: var(--sprout-common-spacing-3xl);
 }
 
-.pb_0,
 .pb-0 {
   padding-block-end: 0;
 }
 
-.pb_xs,
 .pb-xs {
   padding-block-end: var(--sprout-common-spacing-xs);
 }
 
-.pb_s,
 .pb-s {
   padding-block-end: var(--sprout-common-spacing-s);
 }
 
-.pb_m,
 .pb-m {
   padding-block-end: var(--sprout-common-spacing-m);
 }
 
-.pb_l,
 .pb-l {
   padding-block-end: var(--sprout-common-spacing-l);
 }
 
-.pb_xl,
 .pb-xl {
   padding-block-end: var(--sprout-common-spacing-xl);
 }
 
-.pb_xxl,
 .pb-xxl {
   padding-block-end: var(--sprout-common-spacing-xxl);
 }
 
-.pb_3xl,
 .pb-3xl {
   padding-block-end: var(--sprout-common-spacing-3xl);
 }
 
-.pl_0,
 .pl-0 {
   padding-inline-start: 0;
 }
 
-.pl_xs,
 .pl-xs {
   padding-inline-start: var(--sprout-common-spacing-xs);
 }
 
-.pl_s,
 .pl-s {
   padding-inline-start: var(--sprout-common-spacing-s);
 }
 
-.pl_m,
 .pl-m {
   padding-inline-start: var(--sprout-common-spacing-m);
 }
 
-.pl_l,
 .pl-l {
   padding-inline-start: var(--sprout-common-spacing-l);
 }
 
-.pl_xl,
 .pl-xl {
   padding-inline-start: var(--sprout-common-spacing-xl);
 }
 
-.pl_xxl,
 .pl-xxl {
   padding-inline-start: var(--sprout-common-spacing-xxl);
 }
 
-.pl_3xl,
 .pl-3xl {
   padding-inline-start: var(--sprout-common-spacing-3xl);
 }

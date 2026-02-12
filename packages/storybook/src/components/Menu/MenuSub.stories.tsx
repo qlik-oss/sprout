@@ -1,7 +1,7 @@
 import { Menu, classNames } from "@qlik/sprout-react";
+import Cogwheel from "@qlik/sprout-icons/react/Cogwheel";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { CogwheelIcon } from "../../icons";
 import { MenuSubArgTypes } from "./Menu.argTypes";
 
 const meta: Meta<typeof Menu.Sub> = {
@@ -37,7 +37,7 @@ export const Sub: StoryObj<typeof Menu.Sub> = {
   ),
   argTypes: MenuSubArgTypes,
   args: {
-    icon: <CogwheelIcon />,
+    icon: <Cogwheel />,
     label: "Settings",
   },
   parameters: { chromatic: { disableSnapshot: true } },

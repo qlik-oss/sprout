@@ -1,12 +1,21 @@
+import {
+  AffixWrapper,
+  IconButton,
+  type TextFieldProps,
+} from "@qlik/sprout-react";
 import Copy from "@qlik/sprout-icons/react/Copy";
-import { AffixWrapper, IconButton, type TextFieldProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
 import { CommonFieldArgTypes, FieldArgTypes } from "../Field.argTypes";
 
 const AFFIX_ICON_BUTTON = (
   <AffixWrapper>
-    <IconButton variant="quiet" size="small" label="Copy" icon={<Copy width={undefined} height={undefined} />} />
+    <IconButton
+      variant="quiet"
+      size="small"
+      label="Copy"
+      icon={<Copy width={undefined} height={undefined} />}
+    />
   </AffixWrapper>
 );
 
@@ -17,7 +26,11 @@ export const TextFieldArgTypes: ArgTypes<TextFieldProps> = {
     control: {
       type: "select",
     },
-    options: [undefined, "simple value", "very very long value that exceeds the width of the text field"],
+    options: [
+      undefined,
+      "simple value",
+      "very very long value that exceeds the width of the text field",
+    ],
     description: "The value of the text field in controlled mode.",
   },
   defaultValue: {
@@ -72,7 +85,8 @@ export const TextFieldArgTypes: ArgTypes<TextFieldProps> = {
       type: "select",
     },
     options: ["text", "search"],
-    description: 'Type "search" adds a search icon to the left of the text field.',
+    description:
+      'Type "search" adds a search icon to the left of the text field.',
     table: {
       defaultValue: {
         summary: '"text"',

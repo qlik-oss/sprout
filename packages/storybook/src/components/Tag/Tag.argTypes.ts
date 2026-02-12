@@ -59,7 +59,8 @@ export const TagArgTypes: ArgTypes<TagProps> = {
   },
   icon: {
     control: false,
-    description: "Icon component displayed at the start of the tag, before the text.",
+    description:
+      "Icon component displayed at the start of the tag, before the text.",
     table: {
       type: {
         summary: "ReactNode",
@@ -90,7 +91,8 @@ export const TagArgTypes: ArgTypes<TagProps> = {
     control: {
       type: "text",
     },
-    description: "Custom label for the remove button. Defaults to 'remove' from i18n translations.",
+    description:
+      "Custom label for the remove button. Defaults to 'remove' from i18n translations.",
     table: {
       defaultValue: {
         summary: "'remove'",

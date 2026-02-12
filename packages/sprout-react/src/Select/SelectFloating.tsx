@@ -12,7 +12,7 @@ import {
   useState,
 } from "react";
 
-import { useControl, useId } from "@qlik/sprout-hooks";
+import { useControl, useId } from "@qlik/sprout-react-hooks";
 
 import {
   FloatingPrimitive,
@@ -284,7 +284,7 @@ function SelectFloatingBase(
         }}
         minWidth="reference"
         maxWidth={maxWidth || "s"}
-        minHeight={100}
+        minHeight={150}
         viewportPadding={spacingXxl}
         placementUpdate={
           placementUpdate === undefined ? "dropdown" : placementUpdate

@@ -1,4 +1,10 @@
-import { Breadcrumb, BreadcrumbItem, Button, Link, classNames } from "@qlik/sprout-react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  Button,
+  Link,
+  classNames,
+} from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { BreadcrumbArgTypes } from "./Breadcrumb.argTypes";
@@ -90,8 +96,18 @@ export const VisualTest: Story = {
           },
         ]}
       />
-      <div className={classNames("flex", "flex-col", "border-default", "p-m", "w-fit")}>
-        <h2 className={classNames("text-default", "font-heading-s")}>Composition using buttons (not accessible)</h2>
+      <div
+        className={classNames(
+          "flex",
+          "flex-col",
+          "border-default",
+          "p-m",
+          "w-fit",
+        )}
+      >
+        <h2 className={classNames("text-default", "font-heading-s")}>
+          Composition using buttons (not accessible)
+        </h2>
         <Breadcrumb label="Composition breadcrumb">
           <BreadcrumbItem>
             <Button variant="quiet" label="Foo" />

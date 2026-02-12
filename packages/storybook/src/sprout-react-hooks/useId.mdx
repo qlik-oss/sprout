@@ -1,0 +1,21 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="useId" />
+
+# useId
+
+The `useId` hook allows you to generate unique IDs for your React components.
+This is particularly useful for accessibility purposes, such as linking form elements with their labels.
+
+## API
+
+`useId` accept an optional id string as parameter. It returns a unique id string:
+
+```ts
+import { useId } from "@qlik/sprout-react-hooks";
+
+function MyComponent({id?: string, ...props}) {
+  const safeId = useId(id);
+  return <div id={safeId} {...props} />;
+};
+```

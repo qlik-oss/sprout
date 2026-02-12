@@ -112,11 +112,7 @@ test(`should be accessible`, async ({ mount, page }) => {
 
   // should have theme provider dataset
   const portal = page.locator('div[data-sprout-portal="true"]');
-  await expect(portal).toHaveAttribute("data-qlik-appearance", "qlik-light");
-  await expect(portal).toHaveAttribute("data-qlik-density", "comfortable");
-  await expect(portal).toHaveAttribute("data-qlik-roundness", "soft");
-  await expect(portal).toHaveAttribute("data-qlik-sizing", "mid-sized");
-  await expect(portal).toHaveAttribute("data-qlik-typography", "source-sans");
+  await expect(portal).toHaveAttribute("data-qlik-theme", "qlik-light");
 });
 
 test("should take the focus by default", async ({ mount, page }) => {
@@ -554,4 +550,52 @@ test("should modal comes after anything in the body", async ({
     );
   });
   expect(portalIsAfterAddedElement).toBe(true);
+});
+
+test("should be responsive to browser size changes", async ({
+  page,
+  mount,
+}) => {
+  await page.setViewportSize({ width: 1920, height: 1080 });
+  await page.waitForTimeout(200);
+
+  await mount(
+    <Modal.Root
+      preventInteractiveBackdrop
+      visible
+      height="xxl"
+      width="full-width-padding"
+    >
+      <Modal.Header>foo</Modal.Header>
+      <Modal.Content overflowY="hidden" overflowX="hidden">
+        <span>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, error.
+        </span>
+      </Modal.Content>
+      <Modal.Actions labelClose="bar" />
+    </Modal.Root>,
+  );
+
+  const fooText = page.locator("text=foo");
+  const barText = page.locator("text=bar");
+
+  // Verify both "foo" and "bar" are visible initially
+  await expect(fooText).toBeVisible();
+  await expect(barText).toBeVisible();
+
+  // Resize viewport to very small height - should still show header and footer
+  await page.setViewportSize({ width: 800, height: 250 });
+  await page.waitForTimeout(200);
+
+  // Both "foo" and "bar" should still be in viewport when height is small
+  const fooBox = await fooText.boundingBox();
+  const barBox = await barText.boundingBox();
+
+  expect(fooBox).not.toBeNull();
+  expect(barBox).not.toBeNull();
+
+  // Check that foo is within viewport bounds (y >= 0)
+  expect(fooBox?.y).toBeGreaterThanOrEqual(0);
+  // Check that bar is within viewport bounds (y + height <= viewport height of 250)
+  expect((barBox?.y ?? 0) + (barBox?.height ?? 0)).toBeLessThanOrEqual(250);
 });

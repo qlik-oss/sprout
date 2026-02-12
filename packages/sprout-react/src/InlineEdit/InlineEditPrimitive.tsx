@@ -14,9 +14,10 @@ import {
 } from "react";
 
 import { tokens } from "@qlik/design-tokens";
-import { useControl } from "@qlik/sprout-hooks";
-import Close from "@qlik/sprout-icons/react/Close";
-import Edit from "@qlik/sprout-icons/react/Edit";
+import { useControl } from "@qlik/sprout-react-hooks";
+import CrossOutline from "@qlik/sprout-icons/react/CrossOutline";
+import EditOutline from "@qlik/sprout-icons/react/EditOutline";
+import TickOutline from "@qlik/sprout-icons/react/TickOutline";
 
 import { AlertInline } from "../AlertInline";
 import { IconButton } from "../Button";
@@ -31,7 +32,6 @@ import { mergeRefs } from "../Utils/mergeRef";
 import { classNames } from "../classNames";
 import { useI18n } from "../hooks/useI18n";
 import type { HTMLDivProps } from "../htmlTypes";
-import { TickOutline } from "../icons";
 
 import css from "./InlineEdit.module.css";
 
@@ -145,6 +145,12 @@ function InlineEditPrimitiveBase(
     }
   }, [editControl, onCancel, onSave, blurAction]);
 
+  const onScroll = useCallback(() => {
+    if (editControl.value) {
+      onFocusLost();
+    }
+  }, [editControl, onFocusLost]);
+
   useEffect(() => {
     const viewBB = viewRef.current?.getBoundingClientRect();
     const heightOfView = Math.floor(viewBB?.height || 0);
@@ -155,10 +161,21 @@ function InlineEditPrimitiveBase(
     if (editControl.value) {
       setFocusOn("edit");
     }
+
+    // Delay adding scroll listener to avoid closing on automatic scroll
+    // when the component opens (e.g., browser scrolling to keep focus visible)
+    const timeoutId = setTimeout(() => {
+      window.addEventListener("scroll", onScroll, true);
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener("scroll", onScroll, true);
+    };
   }, [editControl.value]);
 
   const editIcon = (showEditButton || showEditIcon) && (
-    <Edit
+    <EditOutline
       className={classNames(
         "shrink-0",
         "size-xl",
@@ -291,7 +308,7 @@ function InlineEditPrimitiveBase(
                       editControl.onChange(false);
                       setFocusOn("view");
                     }}
-                    icon={<Close />}
+                    icon={<CrossOutline />}
                   />
                 </FloatingWrapper>
                 <FloatingWrapper data-target>

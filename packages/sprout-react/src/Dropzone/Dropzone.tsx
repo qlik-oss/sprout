@@ -7,7 +7,7 @@ import {
   forwardRef,
 } from "react";
 
-import { useControl } from "@qlik/sprout-hooks";
+import { useControl } from "@qlik/sprout-react-hooks";
 
 import { Button, type ButtonProps } from "../Button";
 import { classNames } from "../classNames";

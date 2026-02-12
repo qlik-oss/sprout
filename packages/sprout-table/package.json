@@ -39,9 +39,9 @@
   },
   "prettier": "@qlik/prettier-config",
   "dependencies": {
-    "@qlik/sprout-hooks": "workspace:*",
     "@qlik/sprout-icons": "workspace:*",
     "@qlik/sprout-react": "workspace:*",
+    "@qlik/sprout-react-hooks": "workspace:*",
     "@tanstack/react-table": "^8.21.3",
     "@tanstack/react-virtual": "^3.13.18"
   },

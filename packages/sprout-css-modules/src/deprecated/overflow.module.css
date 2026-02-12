@@ -1,0 +1,47 @@
+.overflow_visible {
+  overflow: visible;
+}
+
+.overflow_hidden {
+  overflow: hidden;
+}
+
+.overflow_scroll {
+  overflow: scroll;
+}
+
+.overflow_auto {
+  overflow: auto;
+}
+
+.overflow_x_visible {
+  overflow-inline: visible;
+}
+
+.overflow_x_hidden {
+  overflow-inline: hidden;
+}
+
+.overflow_x_scroll {
+  overflow-inline: scroll;
+}
+
+.overflow_x_auto {
+  overflow-inline: auto;
+}
+
+.overflow_y_visible {
+  overflow-block: visible;
+}
+
+.overflow_y_hidden {
+  overflow-block: hidden;
+}
+
+.overflow_y_scroll {
+  overflow-block: scroll;
+}
+
+.overflow_y_auto {
+  overflow-block: auto;
+}

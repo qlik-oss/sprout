@@ -4,6 +4,7 @@ import { InlineEdit } from ".";
 import { Modal } from "../Modal";
 import { getAxeReport } from "../PlaywrightUtils";
 import { Select } from "../Select";
+import { InlineEditSelectOverflowTest } from "./InlineEditTest";
 
 const OPTIONS = (
   <>
@@ -118,4 +119,51 @@ test("should be able to see focus state when rendered in a modal", async ({
   await view.click();
   await expect(combobox).toBeVisible();
   await expect(combobox).toBeFocused();
+});
+
+test("should close when scrolled horizontally", async ({ mount, page }) => {
+  await mount(<InlineEditSelectOverflowTest />);
+
+  const view = page.getByTestId("test-select-scroll.view");
+  const combobox = page.getByRole("combobox");
+  const listbox = page.getByRole("listbox");
+  const scrollContainer = page.locator("#component-testing");
+
+  // expect overflow to be scrollable
+  await expect(scrollContainer).toHaveCSS("overflow", "auto");
+
+  // Open the select
+  await view.click();
+  await expect(combobox).toBeVisible();
+  await expect(listbox).toBeVisible();
+
+  // Scroll horizontally
+  await scrollContainer.evaluate((element) => {
+    element.dispatchEvent(new Event("scroll", { bubbles: true }));
+  });
+
+  // Verify the listbox closes
+  await expect(listbox).not.toBeVisible();
+});
+
+test("should close when scrolled vertically", async ({ mount, page }) => {
+  await mount(<InlineEditSelectOverflowTest />);
+
+  const view = page.getByTestId("test-select-scroll.view");
+  const combobox = page.getByRole("combobox");
+  const listbox = page.getByRole("listbox");
+  const scrollContainer = page.locator("#component-testing");
+
+  // Open the select
+  await view.click();
+  await expect(combobox).toBeVisible();
+  await expect(listbox).toBeVisible();
+
+  // Scroll vertically
+  await scrollContainer.evaluate((element) => {
+    element.dispatchEvent(new Event("scroll", { bubbles: true }));
+  });
+
+  // Verify the listbox closes
+  await expect(listbox).not.toBeVisible();
 });

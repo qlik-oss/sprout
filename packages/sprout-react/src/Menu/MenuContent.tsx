@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 
 import sprout from "@qlik/sprout-css-modules";
+import TickOutline from "@qlik/sprout-icons/react/TickOutline";
 
 import { classNames } from "../classNames";
-import { TickOutline } from "../icons";
 import { ChevronRight } from "./MenuIcon";
 
 import style from "./Menu.module.css";

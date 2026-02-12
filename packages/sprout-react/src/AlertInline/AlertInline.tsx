@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import Close from "@qlik/sprout-icons/react/Close";
+import CrossOutline from "@qlik/sprout-icons/react/CrossOutline";
 
 import { IconButton } from "../Button";
 import { SEVERITY_ICONS } from "../Icons/SeverityIcon";
@@ -157,7 +157,7 @@ export function AlertInline({
             onClick={() => {
               onDismiss();
             }}
-            icon={<Close />}
+            icon={<CrossOutline />}
             label={labelDismiss || labelDismissDefault}
           />
         </div>

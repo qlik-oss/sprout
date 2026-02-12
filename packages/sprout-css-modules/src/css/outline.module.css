@@ -1,33 +1,24 @@
-.outline_none,
 .outline-none,
-.outline_none:focus,
 .outline-none:focus,
-.outline_none:focus-visible,
 .outline-none:focus-visible {
   outline: none;
 }
 
-.outline_focus_centered:focus,
 .outline-focus-centered:focus,
-.outline_focus_visible_centered:focus-visible,
 .outline-focus-visible-centered:focus-visible {
   outline: var(--sprout-focus-border-default);
   outline-offset: calc(var(--sprout-focus-border-default-width) / -2);
   border-color: transparent;
 }
 
-.outline_focus_inner:focus,
 .outline-focus-inner:focus,
-.outline_focus_visible_inner:focus-visible,
 .outline-focus-visible-inner:focus-visible {
   outline: var(--sprout-focus-border-default);
   outline-offset: calc(var(--sprout-focus-border-default-width) * -1);
   border-color: transparent;
 }
 
-.outline_focus_offset:focus,
 .outline-focus-offset:focus,
-.outline_focus_visible_offset:focus-visible,
 .outline-focus-visible-offset:focus-visible {
   outline: var(--sprout-focus-border-default);
   outline-offset: var(--sprout-focus-border-default-width);

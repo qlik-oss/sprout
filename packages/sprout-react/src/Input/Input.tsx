@@ -8,12 +8,12 @@ import {
 } from "react";
 
 import { tokens } from "@qlik/design-tokens";
-import ErrorIcon from "@qlik/sprout-icons/react/Error";
+import ErrorOutlineIcon from "@qlik/sprout-icons/react/ErrorOutline";
 
 import { InputButton } from "../InputButton";
+import type { PossibleValues } from "../Typography";
 import { mergeRefs } from "../Utils/mergeRef";
 import { classNames } from "../classNames";
-import type { PossibleFont } from "../css";
 import { useI18n } from "../hooks/useI18n";
 import { useValueControl } from "../hooks/useValueControl";
 import type { HTMLInputProps } from "../htmlTypes";
@@ -25,7 +25,7 @@ import styles from "./Input.module.css";
 export type ChangeReasons = "clear";
 
 export type InputProps = Omit<HTMLInputProps, "onChange"> & {
-  font?: PossibleFont;
+  font?: PossibleValues["font"];
   labelClear?: string;
   leftAffix?: AffixProps | ReactNode;
   leftIcon?: ReactNode;
@@ -56,8 +56,11 @@ const adornmentClassName = classNames(
 /**
  * Firefox has agent styles that force every lib owner to fix the height of the input based on the line-height.
  */
-function getFixedHeight(font: PossibleFont, designSize?: "default" | "small") {
-  const [type, size] = font.split("-");
+function getFixedHeight(
+  font: PossibleValues["font"],
+  designSize?: "default" | "small",
+) {
+  const [type, size] = font.split("_");
   const lineHeight = `var(--sprout-${type}-font-${size}-line-height)`;
   return `calc(${lineHeight} - 2 * ${tokens.common_border_default_width} + 2 * ${designSize === "small" ? tokens.common_spacing_s : tokens.common_spacing_m})`;
 }
@@ -89,8 +92,8 @@ function InputBase(props: InputProps, ref?: Ref<HTMLInputElement>) {
   const t = useI18n();
   const internalRef = useRef<HTMLInputElement>(null);
   const labelClearDefault = t("input.clear");
-  const safeFont: PossibleFont =
-    designSize === "small" && !font ? "label-xs" : font || "label-s";
+  const safeFont =
+    designSize === "small" && !font ? "label_xs" : font || "label_s";
   const height = getFixedHeight(safeFont, designSize);
 
   const controlled = useValueControl<InputProps>({
@@ -184,7 +187,7 @@ function InputBase(props: InputProps, ref?: Ref<HTMLInputElement>) {
               "truncate",
               styles.input,
               {
-                [`font-${safeFont}`]: !!safeFont,
+                [`font_${safeFont}`]: !!safeFont,
               },
             )}
             aria-invalid={hasError ? "true" : undefined}
@@ -198,7 +201,7 @@ function InputBase(props: InputProps, ref?: Ref<HTMLInputElement>) {
           ) : null}
         </div>
         {hasError ? (
-          <ErrorIcon
+          <ErrorOutlineIcon
             data-icon="error"
             data-testid="input-error-icon"
             width={undefined}

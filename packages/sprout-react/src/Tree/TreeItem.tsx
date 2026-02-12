@@ -88,7 +88,7 @@ export function TreeItem({
 
   let safeIcon = icon;
   if (displayFolderIcon) {
-    safeIcon = safeExpanded ? <FolderOpen /> : <FolderClosed />;
+    safeIcon = safeExpanded ? <FolderOpenOutline /> : <FolderOutline />;
   }
 
   return (

@@ -1,7 +1,10 @@
-import type { TabsCompositionProps, TabsProps } from "@qlik/sprout-react";
+import type {
+  TabsCompositionProps,
+  TabsProps,
+} from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
-import { ICONS_MAP, ICON_OPTIONS } from "../internal/icons/Icons";
+import { ICONS_MAP, ICON_OPTIONS } from "../../internal/icons/Icons";
 
 export const TabsArgTypes: ArgTypes<TabsProps> = {
   defaultActiveKey: {
@@ -14,14 +17,16 @@ export const TabsArgTypes: ArgTypes<TabsProps> = {
   activeKey: {
     control: { type: "select" },
     options: [undefined, "assets-panel", "settings-panel", "users-panel"],
-    description: "The active tab key. Use with `onSelect` for controlled usage.",
+    description:
+      "The active tab key. Use with `onSelect` for controlled usage.",
     table: {
       type: { summary: "string" },
     },
   },
   onSelect: {
     control: false,
-    description: "Callback fired when a tab is selected. Use with `activeKey` for controlled usage.",
+    description:
+      "Callback fired when a tab is selected. Use with `activeKey` for controlled usage.",
     table: {
       type: { summary: "(event: any, key: string) => void" },
     },
@@ -91,7 +96,8 @@ export const TabsCompositionArgTypes: ArgTypes<TabsCompositionArgTypesProps> = {
   activeKey: {
     control: { type: "select" },
     options: [undefined, "Assets", "Settings", "Focusable", "Users"],
-    description: "The active tab key. Use with `onSelect` for controlled usage.",
+    description:
+      "The active tab key. Use with `onSelect` for controlled usage.",
     table: {
       type: { summary: "string" },
       subcategory: "Tabs.Container",
@@ -99,7 +105,8 @@ export const TabsCompositionArgTypes: ArgTypes<TabsCompositionArgTypesProps> = {
   },
   onSelect: {
     control: false,
-    description: "Callback fired when a tab is selected. Use with `activeKey` for controlled usage.",
+    description:
+      "Callback fired when a tab is selected. Use with `activeKey` for controlled usage.",
     table: {
       type: { summary: "(event: any, key: string) => void" },
       subcategory: "Tabs.Container",
@@ -139,7 +146,8 @@ export const TabsCompositionArgTypes: ArgTypes<TabsCompositionArgTypesProps> = {
   },
   "aria-controls": {
     control: { type: "text" },
-    description: "The id of the associated `Tab.Panel`. Used for accessibility.",
+    description:
+      "The id of the associated `Tab.Panel`. Used for accessibility.",
     table: {
       type: { summary: "string" },
       subcategory: "Tabs.Tab",
@@ -191,7 +199,8 @@ export const TabsCompositionArgTypes: ArgTypes<TabsCompositionArgTypesProps> = {
   },
   id: {
     control: { type: "text" },
-    description: "The id of the tab panel. Should match the `aria-controls` of the associated `Tab`.",
+    description:
+      "The id of the tab panel. Should match the `aria-controls` of the associated `Tab`.",
     table: {
       type: { summary: "string" },
       subcategory: "Tabs.Panel",
@@ -199,7 +208,8 @@ export const TabsCompositionArgTypes: ArgTypes<TabsCompositionArgTypesProps> = {
   },
   renderIf: {
     control: { type: "boolean" },
-    description: "Whether the panel should unmount when hidden. If false, the panel remains in the DOM but hidden.",
+    description:
+      "Whether the panel should unmount when hidden. If false, the panel remains in the DOM but hidden.",
     table: {
       type: { summary: "boolean" },
       defaultValue: { summary: "false" },

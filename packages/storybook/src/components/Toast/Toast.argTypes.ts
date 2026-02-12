@@ -18,7 +18,14 @@ export const ToastArgTypes: ArgTypes<ToastArgs> = {
     control: {
       type: "select",
     },
-    options: ["top-start", "top", "top-end", "bottom-start", "bottom", "bottom-end"],
+    options: [
+      "top-start",
+      "top",
+      "top-end",
+      "bottom-start",
+      "bottom",
+      "bottom-end",
+    ],
     table: { subcategory: "Toast.Container" },
   },
   action: {

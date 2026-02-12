@@ -1,0 +1,163 @@
+.inset_0 {
+  inset-block: 0;
+  inset-inline: 0;
+}
+
+.inset_s {
+  inset-block: var(--sprout-common-sizing-s);
+  inset-inline: var(--sprout-common-sizing-s);
+}
+
+.inset_m {
+  inset-block: var(--sprout-common-sizing-m);
+  inset-inline: var(--sprout-common-sizing-m);
+}
+
+.inset_l {
+  inset-block: var(--sprout-common-sizing-l);
+  inset-inline: var(--sprout-common-sizing-l);
+}
+
+.top_0 {
+  inset-block-start: 0;
+}
+
+.top_s {
+  inset-block-start: var(--sprout-common-sizing-s);
+}
+
+._top_s {
+  inset-block-start: calc(var(--sprout-common-sizing-s) * -1);
+}
+
+.top_m {
+  inset-block-start: var(--sprout-common-sizing-m);
+}
+
+._top_m {
+  inset-block-start: calc(var(--sprout-common-sizing-m) * -1);
+}
+
+.top_l {
+  inset-block-start: var(--sprout-common-sizing-l);
+}
+
+._top_l {
+  inset-block-start: calc(var(--sprout-common-sizing-l) * -1);
+}
+
+.top_xl {
+  inset-block-start: var(--sprout-common-sizing-xl);
+}
+
+._top_xl {
+  inset-block-start: calc(var(--sprout-common-sizing-xl) * -1);
+}
+
+.bottom_0 {
+  inset-block-end: 0;
+}
+
+.bottom_s {
+  inset-block-end: var(--sprout-common-sizing-s);
+}
+
+._bottom_s {
+  inset-block-end: calc(var(--sprout-common-sizing-s) * -1);
+}
+
+.bottom_m {
+  inset-block-end: var(--sprout-common-sizing-m);
+}
+
+._bottom_m {
+  inset-block-end: calc(var(--sprout-common-sizing-m) * -1);
+}
+
+.bottom_l {
+  inset-block-end: var(--sprout-common-sizing-l);
+}
+
+._bottom_l {
+  inset-block-end: calc(var(--sprout-common-sizing-l) * -1);
+}
+
+.bottom_xl {
+  inset-block-end: var(--sprout-common-sizing-xl);
+}
+
+._bottom_xl {
+  inset-block-end: calc(var(--sprout-common-sizing-xl) * -1);
+}
+
+.left_0 {
+  inset-inline-start: 0;
+}
+
+.left_s {
+  inset-inline-start: var(--sprout-common-sizing-s);
+}
+
+._left_s {
+  inset-inline-start: calc(var(--sprout-common-sizing-s) * -1);
+}
+
+.left_m {
+  inset-inline-start: var(--sprout-common-sizing-m);
+}
+
+._left_m {
+  inset-inline-start: calc(var(--sprout-common-sizing-m) * -1);
+}
+
+.left_l {
+  inset-inline-start: var(--sprout-common-sizing-l);
+}
+
+._left_l {
+  inset-inline-start: calc(var(--sprout-common-sizing-l) * -1);
+}
+
+.left_xl {
+  inset-inline-start: var(--sprout-common-sizing-xl);
+}
+
+._left_xl {
+  inset-inline-start: calc(var(--sprout-common-sizing-xl) * -1);
+}
+
+.right_0 {
+  inset-inline-end: 0;
+}
+
+.right_s {
+  inset-inline-end: var(--sprout-common-sizing-s);
+}
+
+._right_s {
+  inset-inline-end: calc(var(--sprout-common-sizing-s) * -1);
+}
+
+.right_m {
+  inset-inline-end: var(--sprout-common-sizing-m);
+}
+
+._right_m {
+  inset-inline-end: calc(var(--sprout-common-sizing-m) * -1);
+}
+
+.right_l {
+  inset-inline-end: var(--sprout-common-sizing-l);
+}
+
+._right_l {
+  inset-inline-end: calc(var(--sprout-common-sizing-l) * -1);
+}
+
+.right_xl {
+  inset-inline-end: var(--sprout-common-sizing-xl);
+}
+
+._right_xl {
+  inset-inline-end: calc(var(--sprout-common-sizing-xl) * -1);
+}

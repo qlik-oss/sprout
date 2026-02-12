@@ -71,7 +71,8 @@ export const AccordionItemArgTypes: ArgTypes<AccordionProps["Item"]> = {
     control: {
       type: "boolean",
     },
-    description: "Initial opened state of the accordion item. Works only with behavior=isolated.",
+    description:
+      "Initial opened state of the accordion item. Works only with behavior=isolated.",
     table: {
       type: {
         summary: "boolean",
@@ -134,81 +135,84 @@ export const AccordionItemArgTypes: ArgTypes<AccordionProps["Item"]> = {
   },
 };
 
-export const AccordionContainerArgTypes: ArgTypes<AccordionProps["Container"]> = {
-  variant: {
-    description: "Sets the visual style of the accordion.",
-    control: {
-      type: "radio",
-    },
-    options: ["default", "quiet"],
-    table: {
-      defaultValue: {
-        summary: "default",
+export const AccordionContainerArgTypes: ArgTypes<AccordionProps["Container"]> =
+  {
+    variant: {
+      description: "Sets the visual style of the accordion.",
+      control: {
+        type: "radio",
       },
-      type: {
-        summary: "default | quiet",
-      },
-    },
-  },
-  behavior: {
-    control: {
-      type: "radio",
-    },
-    description:
-      "Controls the behavior of the accordion items. 'linked' means only one item can be opened at a time, 'isolated' allows multiple items to be opened simultaneously.",
-    options: ["linked", "isolated"],
-    table: {
-      defaultValue: {
-        summary: "linked",
-      },
-      type: {
-        summary: "linked | isolated",
+      options: ["default", "quiet"],
+      table: {
+        defaultValue: {
+          summary: "default",
+        },
+        type: {
+          summary: "default | quiet",
+        },
       },
     },
-  },
-  openedDefault: {
-    control: {
-      type: "number",
-    },
-    description: "Initial opened state of an accordion item.",
-    table: {
-      type: {
-        summary: "number",
+    behavior: {
+      control: {
+        type: "radio",
+      },
+      description:
+        "Controls the behavior of the accordion items. 'linked' means only one item can be opened at a time, 'isolated' allows multiple items to be opened simultaneously.",
+      options: ["linked", "isolated"],
+      table: {
+        defaultValue: {
+          summary: "linked",
+        },
+        type: {
+          summary: "linked | isolated",
+        },
       },
     },
-  },
-  headerLevel: {
-    control: {
-      type: "select",
-    },
-    options: [2, 3, 4, 5, 6, undefined],
-    description:
-      "Specifies the heading level used for the header. Renders as an `<h2>` if `headerLevel={2}`, or a `<span>` if not set.",
-    table: {
-      type: {
-        summary: "2 | 3 | 4 | 5 | 6 | undefined",
+    openedDefault: {
+      control: {
+        type: "number",
+      },
+      description: "Initial opened state of an accordion item.",
+      table: {
+        type: {
+          summary: "number",
+        },
       },
     },
-  },
-  renderContent: {
-    control: {
-      type: "boolean",
-    },
-    description: "You can control if the content rendered when `opened={false}`",
-    table: {
-      type: {
-        summary: "boolean",
+    headerLevel: {
+      control: {
+        type: "select",
+      },
+      options: [2, 3, 4, 5, 6, undefined],
+      description:
+        "Specifies the heading level used for the header. Renders as an `<h2>` if `headerLevel={2}`, or a `<span>` if not set.",
+      table: {
+        type: {
+          summary: "2 | 3 | 4 | 5 | 6 | undefined",
+        },
       },
     },
-  },
+    renderContent: {
+      control: {
+        type: "boolean",
+      },
+      description:
+        "You can control if the content rendered when `opened={false}`",
+      table: {
+        type: {
+          summary: "boolean",
+        },
+      },
+    },
 
-  children: {
-    control: false,
-    description: "The Accordion.Item[] to be rendered within the container and controlled by it.",
-    table: {
-      type: {
-        summary: "ReactElement[] | ReactElement",
+    children: {
+      control: false,
+      description:
+        "The Accordion.Item[] to be rendered within the container and controlled by it.",
+      table: {
+        type: {
+          summary: "ReactElement[] | ReactElement",
+        },
       },
     },
-  },
-};
+  };
