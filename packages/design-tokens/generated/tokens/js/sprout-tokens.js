@@ -295,6 +295,10 @@ export const tokens = {
    * Type: color
    */
   common_background_color_enabled: "var(--sprout-common-background-color-enabled, #ffffff)",
+  /** Floating surface color for popovers and raised surfaces. Inherits and lightens default background color.
+   * Type: color
+   */
+  common_background_color_floating: "var(--sprout-common-background-color-floating, rgb(100% 100% 100%))",
   /** Hover background color for interactive elements
    * Type: color
    */

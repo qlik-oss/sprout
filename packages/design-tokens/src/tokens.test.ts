@@ -16,6 +16,6 @@ describe("tokens.css", () => {
     expect(tokensContent).toBeDefined();
     // count the number of lines
     const lines = tokensContent.split("\n");
-    expect(lines.length).toBe(1230); // Ensure we have no new tokens or token removed
+    expect(lines.length).toBe(1212); // Ensure we have no new tokens or token removed
   });
 });

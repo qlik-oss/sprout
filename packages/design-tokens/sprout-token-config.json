@@ -21,133 +21,62 @@
   },
   "theme": [
     {
-      "id": "appearance-qlik-light",
+      "id": "core",
+      "name": "core",
+      "group": "core",
+      "selectedTokenSets": {
+        "semantic/core": "enabled"
+      }
+    },
+    {
+      "id": "theme-qlik-light",
       "name": "qlik-light",
-      "group": "appearance",
+      "group": "theme",
       "selectedTokenSets": {
         "palette/core": "source",
         "qlik/appearance/core": "source",
         "qlik/appearance/qlik-light": "source",
+        "qlik/density/comfortable": "source",
+        "qlik/roundness/soft": "source",
+        "qlik/typography/core": "source",
+        "qlik/typography/source-sans": "source",
+        "theming/appearance": "source",
+        "theming/density": "source",
+        "theming/sizing": "source",
+        "theming/roundness": "source",
+        "theming/typography": "source",
+        "semantic/roundness": "enabled",
         "semantic/appearance": "enabled",
-        "theming/appearance": "source"
+        "semantic/sizing": "enabled",
+        "semantic/density": "enabled",
+        "semantic/typography": "enabled",
+        "semantic/core": "enabled"
       }
     },
     {
-      "id": "appearance-qlik-dark",
+      "id": "theme-qlik-dark",
       "name": "qlik-dark",
-      "group": "appearance",
+      "group": "theme",
       "selectedTokenSets": {
         "palette/core": "source",
         "qlik/appearance/core": "source",
         "qlik/appearance/qlik-dark": "source",
-        "semantic/appearance": "enabled",
-        "theming/appearance": "source"
-      }
-    },
-    {
-      "name": "mid-sized",
-      "selectedTokenSets": {
-        "semantic/sizing": "enabled",
-        "theming/sizing": "source"
-      },
-      "group": "sizing"
-    },
-    {
-      "name": "dense",
-      "selectedTokenSets": {
-        "palette/core": "source",
-        "qlik/density/dense": "source",
-        "semantic/density": "enabled",
-        "theming/density": "source"
-      },
-      "group": "density"
-    },
-    {
-      "name": "comfortable",
-      "selectedTokenSets": {
-        "palette/core": "source",
         "qlik/density/comfortable": "source",
-        "theming/density": "source",
-        "semantic/density": "enabled"
-      },
-      "group": "density"
-    },
-    {
-      "name": "spacious",
-      "selectedTokenSets": {
-        "palette/core": "source",
-        "qlik/density/spacious": "source",
-        "theming/density": "source",
-        "semantic/density": "enabled"
-      },
-      "group": "density"
-    },
-    {
-      "name": "sharp",
-      "selectedTokenSets": {
-        "palette/core": "source",
-        "qlik/density/comfortable": "source",
-        "theming/density": "source",
-        "semantic/density": "source",
-        "qlik/roundness/sharp": "source",
-        "theming/roundness": "source",
-        "semantic/roundness": "enabled"
-      },
-      "group": "roundness"
-    },
-    {
-      "name": "soft",
-      "selectedTokenSets": {
-        "palette/core": "source",
-        "qlik/density/comfortable": "source",
-        "theming/density": "source",
-        "semantic/density": "source",
         "qlik/roundness/soft": "source",
-        "theming/roundness": "source",
-        "semantic/roundness": "enabled"
-      },
-      "group": "roundness"
-    },
-    {
-      "name": "rounded",
-      "selectedTokenSets": {
-        "palette/core": "source",
-        "qlik/density/comfortable": "source",
-        "theming/density": "source",
-        "semantic/density": "source",
-        "qlik/roundness/rounded": "source",
-        "theming/roundness": "source",
-        "semantic/roundness": "enabled"
-      },
-      "group": "roundness"
-    },
-    {
-      "name": "source-sans",
-      "selectedTokenSets": {
         "qlik/typography/core": "source",
         "qlik/typography/source-sans": "source",
+        "theming/appearance": "source",
+        "theming/density": "source",
+        "theming/sizing": "source",
+        "theming/roundness": "source",
         "theming/typography": "source",
-        "semantic/typography": "enabled"
-      },
-      "group": "typography"
-    },
-    {
-      "name": "inter",
-      "selectedTokenSets": {
-        "qlik/typography/core": "source",
-        "qlik/typography/inter": "source",
-        "theming/typography": "source",
-        "semantic/typography": "enabled"
-      },
-      "group": "typography"
-    },
-    {
-      "name": "core",
-      "$figmaStyleReferences": {},
-      "selectedTokenSets": {
+        "semantic/roundness": "enabled",
+        "semantic/appearance": "enabled",
+        "semantic/sizing": "enabled",
+        "semantic/density": "enabled",
+        "semantic/typography": "enabled",
         "semantic/core": "enabled"
-      },
-      "group": "core"
+      }
     }
   ]
 }
