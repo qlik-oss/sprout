@@ -5,6 +5,5 @@
   "fixed": [],
   "linked": [],
   "access": "public",
-  "baseBranch": "main",
-  "updateInternalDependencies": "none"
+  "baseBranch": "main"
 }
