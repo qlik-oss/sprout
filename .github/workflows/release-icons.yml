@@ -30,6 +30,7 @@ jobs:
 
       - run: pnpm install
       - run: |
+          echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ~/.npmrc
           cd packages/sprout-icons
           npm publish
         env:
