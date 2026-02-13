@@ -11,6 +11,7 @@
     "@qlik/sprout-hooks",
     "@qlik/sprout-react",
     "@qlik/sprout-table",
-    "@qlik/storybook"
+    "@qlik/storybook",
+    "@qlik/test-app"
   ]
 }
