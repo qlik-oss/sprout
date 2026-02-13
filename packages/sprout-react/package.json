@@ -1,6 +1,7 @@
 {
   "name": "@qlik/sprout-react",
   "version": "6.40.0",
+  "private": true,
   "homepage": "https://github.com/qlik/sprout#readme",
   "bugs": {
     "url": "https://github.com/qlik/sprout/issues"

@@ -28,10 +28,10 @@ jobs:
         with:
           npm-token: ${{ secrets.NPM_CI_TOKEN }}
 
-      - run: pnpm install
-      - run: |
-          echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ~/.npmrc
-          cd packages/sprout-icons
-          npm publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_CI_TOKEN }}
+      # - run: pnpm install
+      # - run: |
+      #     echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ~/.npmrc
+      #     cd packages/sprout-icons
+      #     npm publish
+      #   env:
+      #     NPM_TOKEN: ${{ secrets.NPM_CI_TOKEN }}
