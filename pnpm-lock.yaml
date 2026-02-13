@@ -14,6 +14,9 @@ importers:
       '@qlik/prettier-config':
         specifier: ^0.4.33
         version: 0.4.33(prettier@3.8.1)(svelte@4.2.18)(typescript@5.9.3)
+      '@trivago/prettier-plugin-sort-imports':
+        specifier: ^6.0.2
+        version: 6.0.2(@vue/compiler-sfc@3.5.27)(prettier-plugin-svelte@3.4.1(prettier@3.8.1)(svelte@4.2.18))(prettier@3.8.1)(svelte@4.2.18)
       concurrently:
         specifier: ^9.2.1
         version: 9.2.1
