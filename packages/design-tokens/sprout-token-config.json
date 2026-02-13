@@ -21,6 +21,14 @@
   },
   "theme": [
     {
+      "id": "core",
+      "name": "core",
+      "group": "core",
+      "selectedTokenSets": {
+        "semantic/core": "enabled"
+      }
+    },
+    {
       "id": "theme-qlik-light",
       "name": "qlik-light",
       "group": "theme",

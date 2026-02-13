@@ -1,6 +1,6 @@
 # Design Tokens
 
-This is a repository stores the single source of truth for tokens `/tokens` and the generated output in all the following formats: css, js, json
+This is a repository stores the single source of truth for tokens `/tokens` and the generated output in all the following formats: css, js, json.
 
 ---
 

@@ -1,4 +1,35 @@
-# @qlik/sprout-css-storybook
+# @qlik/sprout-storybook
+
+## 7.3.0
+
+### Minor Changes
+
+- 728d248: feat: update design-tokens
+
+### Patch Changes
+
+- 5328fb1: chore: update npm dependencies
+
+## 7.2.10
+
+### Patch Changes
+
+- 7c52fd0: chore: update npm dependencies
+- 1c6193f: fix: build using tsc instead of vite
+- 726e734: fix: add missing design-tokens package
+- 9de9acf: chore: update deps
+
+## 7.2.9
+
+### Patch Changes
+
+- 0f95ab1: docs: update license to MIT
+
+## 7.2.8
+
+### Patch Changes
+
+- 906e787: chore: update npm dependencies
 
 ## 7.2.7
 

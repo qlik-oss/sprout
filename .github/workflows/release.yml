@@ -27,7 +27,9 @@ jobs:
         with:
           npm-token: ${{ secrets.NPM_CI_TOKEN }}
 
-      - run: pnpm install
+      - run: |
+          pnpm install
+          pnpm build
 
       - name: Create Release Pull Request or Publish to Qlik GitHub Packages npm registry
         id: changesets

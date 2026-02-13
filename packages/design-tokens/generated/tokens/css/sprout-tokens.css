@@ -1,3 +1,15 @@
+:root {
+  --sprout-container-breakpoint-s: 640px; /* Viewport width breakpoint token for small layouts */
+  --sprout-container-breakpoint-m: 1024px; /* Viewport width breakpoint token for medium-wide layouts */
+  --sprout-container-breakpoint-l: 1600px; /* Viewport width breakpoint token for wide layouts */
+  --sprout-container-layer-stacked: 1000; /* Use for stacked items. Must be dismissable. */
+  --sprout-container-layer-floating: 1100; /* Must be in a fixed position related to its container. All stacked and default content beneath it must be reachable through scroll/pan interactions or it must be dimissible. */
+  --sprout-container-layer-overlay: 1300; /* Must be related to a sub-task. Must be accompanied with a curtain. */
+  --sprout-container-layer-context: 1350; /* Must be triggered through right-click/long press. Must be dismissible through clicking outside the area. */
+  --sprout-container-layer-time-sensitive: 1400; /* Must be related to something that happened in the system at that exact moment that is useful for the user to know. Must be dismissible or time-based. */
+  --sprout-container-layer-cursor: 1500; /* Must be user-triggered and related to the cursors/pointers current position. Must be dismissible with escape key. */
+}
+
 [data-qlik-theme="qlik-dark"] {
   --sprout-common-border-default: 1px solid rgb(100% 100% 100% / 0.15); /* Baseline border style for general contours and structural outlines. Used for neutral objects when no special state (focus, hover, disabled) is active. */
   --sprout-common-border-weak: 1px solid rgb(100% 100% 100% / 0.1); /* Applied to disabled states (buttons, text fields) or secondary surfaces where contrast should be reduced. */
@@ -124,6 +136,9 @@
   --sprout-common-background-color-weak: #262626; /* Second level surface color. */
   --sprout-common-background-color-moderate: #1a1a1a; /* Third level surface color. */
   --sprout-common-background-color-strong: #0e0e0e; /* Fourth level surface color. */
+  --sprout-common-background-color-floating: rgb(
+    23.413% 23.413% 23.413%
+  ); /* Floating surface color for popovers and raised surfaces. Inherits and lightens default background color. */
   --sprout-common-background-color-enabled: rgb(
     100% 100% 100% / 0.08
   ); /* Default background color for enabled interactive elements */
@@ -677,6 +692,9 @@
   --sprout-common-background-color-weak: #fafafa; /* Second level surface color. */
   --sprout-common-background-color-moderate: #f2f2f2; /* Third level surface color. */
   --sprout-common-background-color-strong: #e6e6e6; /* Fourth level surface color. */
+  --sprout-common-background-color-floating: rgb(
+    100% 100% 100%
+  ); /* Floating surface color for popovers and raised surfaces. Inherits and lightens default background color. */
   --sprout-common-background-color-enabled: #ffffff; /* Default background color for enabled interactive elements */
   --sprout-common-background-color-hover: rgb(0% 0% 0% / 0.03); /* Hover background color for interactive elements */
   --sprout-common-background-color-pressed: rgb(

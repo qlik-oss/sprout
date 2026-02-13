@@ -1,34 +1,38 @@
 {
-  "name": "@qlik/sprout-css-storybook",
-  "version": "7.2.9",
+  "name": "@qlik/sprout-storybook",
+  "version": "7.3.0",
+  "private": true,
   "description": "Storybook for sprout-css",
-  "homepage": "https://github.com/qlik/sprout#readme",
+  "homepage": "https://github.com/qlik/sprout-kit#readme",
   "bugs": {
-    "url": "https://github.com/qlik/sprout/issues"
+    "url": "https://github.com/qlik/sprout-kit/issues"
   },
-  "repository": "https://github.com/qlik/sprout.git",
+  "repository": "https://github.com/qlik/sprout-kit.git",
   "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/sprout-css-storybook.js"
+      "import": "./lib/sprout-css-storybook.js"
     }
   },
   "scripts": {
-    "build": "vite build"
+    "build": "pnpm run build:ts && pnpm run copy",
+    "build:ts": "tsc",
+    "copy": "cpx src/*.css lib/"
   },
   "dependencies": {
     "@qlik/design-tokens": "workspace:*",
-    "@storybook/react-vite": "^10.2.3",
+    "@storybook/react-vite": "^10.2.8",
     "source-code-pro": "^2.42.0",
     "source-sans-pro": "^3.6.0"
   },
   "devDependencies": {
     "@qlik/tsconfig": "^0.3.1",
-    "@types/node": "^25.1.0",
+    "@types/node": "^25.2.3",
+    "cpx2": "^8.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "storybook": "^10.2.3",
+    "storybook": "^10.2.8",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vite-plugin-css-injected-by-js": "^3.5.2",

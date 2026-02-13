@@ -1,5 +1,33 @@
 # @qlik/stylelint-config-sprout
 
+## 6.7.0
+
+### Minor Changes
+
+- 728d248: feat: update design-tokens
+
+### Patch Changes
+
+- 5328fb1: chore: update npm dependencies
+
+## 6.6.12
+
+### Patch Changes
+
+- 7c52fd0: chore: update npm dependencies
+
+## 6.6.11
+
+### Patch Changes
+
+- 0f95ab1: docs: update license to MIT
+
+## 6.6.10
+
+### Patch Changes
+
+- 906e787: chore: update npm dependencies
+
 ## 6.6.9
 
 ### Patch Changes

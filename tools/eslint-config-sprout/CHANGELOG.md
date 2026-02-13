@@ -1,5 +1,46 @@
 # @qlik/eslint-config-sprout
 
+## 1.0.5
+
+### Patch Changes
+
+- 5328fb1: chore: update npm dependencies
+- Updated dependencies [5328fb1]
+- Updated dependencies [81db710]
+  - @qlik/eslint-plugin-sprout@1.1.0
+
+## 1.0.4
+
+### Patch Changes
+
+- 7c52fd0: chore: update npm dependencies
+- 9de9acf: chore: update deps
+- Updated dependencies [7c52fd0]
+- Updated dependencies [9de9acf]
+  - @qlik/eslint-plugin-sprout@1.0.3
+
+## 1.0.3
+
+### Patch Changes
+
+- 0f95ab1: docs: update license to MIT
+- Updated dependencies [0f95ab1]
+  - @qlik/eslint-plugin-sprout@1.0.2
+
+## 1.0.2
+
+### Patch Changes
+
+- 906e787: chore: update npm dependencies
+- Updated dependencies [906e787]
+  - @qlik/eslint-plugin-sprout@1.0.1
+
+## 1.0.1
+
+### Patch Changes
+
+- a685c7b: fix: add missing types
+
 ## 1.0.0
 
 ### Major Changes

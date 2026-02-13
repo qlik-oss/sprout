@@ -1,6 +1,6 @@
 {
   "name": "@qlik/design-tokens",
-  "version": "0.16.29",
+  "version": "1.0.0",
   "description": "Design tokens for Qlik UI's",
   "license": "MIT",
   "type": "module",

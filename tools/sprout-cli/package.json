@@ -1,6 +1,6 @@
 {
   "name": "@qlik/sprout-cli",
-  "version": "0.16.29",
+  "version": "1.0.0",
   "description": "CLI tools for Qlik Design System Sprout",
   "license": "MIT",
   "type": "module",
@@ -18,12 +18,12 @@
   "dependencies": {
     "@tokens-studio/sd-transforms": "^2.0.3",
     "commander": "^14.0.3",
-    "style-dictionary": "^5.1.1"
+    "style-dictionary": "^5.3.0"
   },
   "devDependencies": {
     "@commander-js/extra-typings": "^14.0.0",
     "@qlik/tsconfig": "^0.3.1",
-    "@types/node": "^25.2.0",
+    "@types/node": "^25.2.3",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   },

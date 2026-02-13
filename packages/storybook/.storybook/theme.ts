@@ -1,7 +1,7 @@
 import { create } from "storybook/theming";
 
-import darkModeLogo from "./sprout-css-dark.png";
-import logo from "./sprout-css.png";
+import darkModeLogo from "./sprout-dark.png";
+import logo from "./sprout-light.png";
 
 export const LOCAL_STORAGE_KEY = "sprout-storybook-theme";
 

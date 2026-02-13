@@ -6,6 +6,7 @@ sprout-common-background-color-default, "#ffffff", First level surface color.
 sprout-common-background-color-weak, "#fafafa", Second level surface color.
 sprout-common-background-color-moderate, "#f2f2f2", Third level surface color.
 sprout-common-background-color-strong, "#e6e6e6", Fourth level surface color.
+sprout-common-background-color-floating, "rgb(100% 100% 100%)", Floating surface color for popovers and raised surfaces. Inherits and lightens default background color.
 sprout-common-background-color-enabled, "#ffffff", Default background color for enabled interactive elements
 sprout-common-background-color-hover, "rgb(0% 0% 0% / 0.03)", Hover background color for interactive elements
 sprout-common-background-color-pressed, "rgb(0% 0% 0% / 0.05)", Pressed background color for interactive elements
