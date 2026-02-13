@@ -1,6 +1,7 @@
 {
   "name": "@qlik/sprout-table",
   "version": "0.15.1",
+  "private": true,
   "homepage": "https://github.com/qlik/sprout#readme",
   "bugs": {
     "url": "https://github.com/qlik/sprout/issues"

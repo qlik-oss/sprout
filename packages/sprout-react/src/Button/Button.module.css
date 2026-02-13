@@ -14,7 +14,8 @@
   padding: var(--sprout-common-spacing-m);
 }
 
-.button [data-type="icon"] {
+.button [data-type="icon"],
+.button [data-type="icon"] > svg {
   inline-size: var(--sprout-common-sizing-xl);
   block-size: var(--sprout-common-sizing-xl);
 }
@@ -28,6 +29,8 @@
   inline-size: 100%;
 }
 
+/* dropdown */
+/* stylelint-disable-next-line no-descending-specificity */
 .button > span > svg {
   fill: currentcolor;
   inline-size: var(--sprout-common-sizing-xl);
@@ -261,7 +264,8 @@
   gap: var(--sprout-common-spacing-s);
 }
 
-.button[data-size="small"] [data-type="icon"] {
+.button[data-size="small"] [data-type="icon"],
+.button[data-size="small"] [data-type="icon"] > svg {
   inline-size: var(--sprout-common-sizing-l);
   block-size: var(--sprout-common-sizing-l);
 }

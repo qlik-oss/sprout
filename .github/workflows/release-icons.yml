@@ -1,0 +1,37 @@
+name: Release Icons
+
+on:
+  push:
+    branches:
+      - main
+      - jmfrancois/chore/release-icons
+  workflow_dispatch:
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Git Config
+        run: |
+          git config user.name "github-action"
+          git config user.email "github-action@noreply.github.com"
+
+      - name: Use Node.js
+        uses: ./.github/actions/setup-node
+        with:
+          npm-token: ${{ secrets.NPM_CI_TOKEN }}
+
+      # - run: pnpm install
+      # - run: |
+      #     echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ~/.npmrc
+      #     cd packages/sprout-icons
+      #     npm publish
+      #   env:
+      #     NPM_TOKEN: ${{ secrets.NPM_CI_TOKEN }}
