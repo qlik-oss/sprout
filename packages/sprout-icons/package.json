@@ -2,6 +2,11 @@
   "name": "@qlik/sprout-icons",
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "svg",
+    "react",
+    "vue"
+  ],
   "scripts": {
     "build": "rimraf ./react ./vue ./raw ./optimized && svgo -f ./svg -o ./optimized --pretty --indent=2 && node ./scripts/build-icon-pkg.mjs esm"
   },
