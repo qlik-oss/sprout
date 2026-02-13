@@ -10,7 +10,6 @@
     "@qlik/sprout-css-modules",
     "@qlik/sprout-hooks",
     "@qlik/sprout-react",
-    "@qlik/sprout-react-hooks",
     "@qlik/sprout-table",
     "@qlik/storybook"
   ]
