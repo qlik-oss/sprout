@@ -1,0 +1,19 @@
+name: "Download Icons"
+description: "Download and setup icons"
+author: "Qlik"
+
+inputs:
+  figma-token:
+    description: "Figma API token for authentication"
+    required: true
+    type: string
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set NPM Token
+      shell: bash
+      working-directory: .github/actions/download-icons
+      run: node fetch.js
+      env:
+        FIGMA_TOKEN: ${{ inputs.figma-token }}

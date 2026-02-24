@@ -77,3 +77,7 @@ test-results
 eslint-report.json
 stylelint-report.json
 oss-sync.mjs
+
+# icons
+auto-generated-icons
+auto-generated-optimized-icons
