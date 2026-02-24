@@ -1,0 +1,60 @@
+name: "Icons"
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  deployments: read
+  pull-requests: write
+
+# This allows a subsequently queued workflow run to interrupt previous runs
+concurrency:
+  group: "ci @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    environment: protected
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # otherwise, ci will failed to push refs
+
+      - name: Use Node.js
+        uses: ./.github/actions/setup-node
+        with:
+          npm-token: ${{ secrets.NPM_CI_TOKEN }}
+
+      - name: Use Icons
+        uses: ./.github/actions/download-icons
+        with:
+          figma-token: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+
+      - name: Generate changeset & PR body
+        id: get-pr-body
+        run: |
+          cp auto-generated-optimized-icons/* ./packages/sprout-icons/svg/
+          git add ./packages/sprout-icons/svg/
+          while read STATUS ADDR
+          do
+            icon=`basename $ADDR .svg`
+            size=`basename $(dirname $ADDR)`
+            semver=`sed 's/A/minor/;s/D/major/;s/M/patch/' <<< $STATUS`
+            verb=`sed 's/A/added/;s/D/removed/;s/M/changed/' <<< $STATUS`
+            echo -e "---\n'@talend/icons': $semver\n---\n\n$verb icon \`$icon\` in size \`$size\`" > .changeset/$icon-$size-$semver.md
+          done < <(git diff --name-status HEAD ./packages/sprout-icons/svg/**/*.svg)
+          git add .changeset
+          body=$(git diff --name-only HEAD .changeset/*.md | xargs -L1 sed -n '5p')
+          body="${body//$'\n'/'%0A'}"
+          echo ::set-output name=body::$body
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 #v7.0.11
+        with:
+          commit-message: "chore(icons): from Figma"
+          title: "chore(icons): from Figma"
+          body: ${{ steps.get-pr-body.outputs.body }}
+          branch: ci/icons
+          token: ${{ secrets.GITHUB_TOKEN }}
