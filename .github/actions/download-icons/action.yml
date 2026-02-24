@@ -13,6 +13,6 @@ runs:
   steps:
     - name: Set NPM Token
       shell: bash
-      run: node .github/actions/download-icons/fetch.js
+      run: node .github/actions/download-icons/fetch.mjs
       env:
         FIGMA_TOKEN: ${{ inputs.figma-token }}
