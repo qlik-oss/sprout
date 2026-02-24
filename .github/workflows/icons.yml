@@ -26,6 +26,9 @@ jobs:
         with:
           npm-token: ${{ secrets.NPM_CI_TOKEN }}
 
+      - name: install dependencies
+        run: pnpm install
+
       - name: Use Icons
         uses: ./.github/actions/download-icons
         with:
