@@ -78,8 +78,8 @@
     "eslint-plugin-testing-library": "^7.15.4",
     "glob": "^13.0.0",
     "prettier": "^3.8.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "rimraf": "^6.1.2",
     "typescript": "^5.9.3"
   },
