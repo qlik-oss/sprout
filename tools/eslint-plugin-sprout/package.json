@@ -27,11 +27,11 @@
     "@eslint/js": "^10.0.1",
     "@qlik/eslint-config": "^1.4.18",
     "@qlik/tsconfig": "^0.3.1",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.0",
     "prettier": "^3.8.1",
     "vitest": "^4.0.18"
   },
   "peerDependencies": {
-    "eslint": "^9.35.0"
+    "eslint": "^9.35.0 || ^10.0.0"
   }
 }
