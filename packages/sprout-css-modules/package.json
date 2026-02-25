@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",
-    "@eslint/js": "^9.39.2",
+    "@eslint/js": "^10.0.0",
     "@qlik/eslint-config-sprout": "workspace:*",
     "@qlik/prettier-config": "^0.4.33",
     "@qlik/stylelint-config-sprout": "workspace:*",
@@ -55,7 +55,7 @@
     "@vitest/browser-playwright": "^4.0.18",
     "@vitest/ui": "^4.0.18",
     "concurrently": "^9.2.1",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.0",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-vitest": "^0.5.4",
     "jsdom": "^27.0.1",
