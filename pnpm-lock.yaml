@@ -176,8 +176,8 @@ importers:
         specifier: ^7.3.1
         version: 7.3.1(@types/node@25.2.3)(jiti@2.6.1)
       vite-plugin-css-injected-by-js:
-        specifier: ^3.5.2
-        version: 3.5.2(vite@7.3.1(@types/node@25.2.3)(jiti@2.6.1))
+        specifier: ^4.0.0
+        version: 4.0.1(vite@7.3.1(@types/node@25.2.3)(jiti@2.6.1))
       vite-plugin-mkcert:
         specifier: ^1.17.9
         version: 1.17.9(vite@7.3.1(@types/node@25.2.3)(jiti@2.6.1))
@@ -834,8 +834,8 @@ importers:
         specifier: ^7.3.1
         version: 7.3.1(@types/node@25.2.3)(jiti@2.6.1)
       vite-plugin-css-injected-by-js:
-        specifier: ^3.5.2
-        version: 3.5.2(vite@7.3.1(@types/node@25.2.3)(jiti@2.6.1))
+        specifier: ^4.0.0
+        version: 4.0.1(vite@7.3.1(@types/node@25.2.3)(jiti@2.6.1))
       vite-plugin-dts:
         specifier: ^4.5.4
         version: 4.5.4(@types/node@25.2.3)(rollup@4.57.1)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.3)(jiti@2.6.1))
@@ -3613,6 +3613,7 @@ packages:
   basic-ftp@5.1.0:
     resolution: {integrity: sha512-RkaJzeJKDbaDWTIPiJwubyljaEPwpVWkm9Rt5h9Nd6h7tEXTJ3VB4qxdZBioV7JO5yLUaOKwz7vDOzlncUsegw==}
     engines: {node: '>=10.0.0'}
+    deprecated: Security vulnerability fixed in 5.2.0, please upgrade
 
   before-after-hook@4.0.0:
     resolution: {integrity: sha512-q6tR3RPqIB1pMiTRMFcZwuG5T8vwp+vUvEG0vuI6B+Rikh5BfPp2fQ82c925FOs+b0lcFQ8CFrL+KbilfZFhOQ==}
@@ -7050,8 +7051,8 @@ packages:
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
-  vite-plugin-css-injected-by-js@3.5.2:
-    resolution: {integrity: sha512-2MpU/Y+SCZyWUB6ua3HbJCrgnF0KACAsmzOQt1UvRVJCGF6S8xdA3ZUhWcWdM9ivG4I5az8PnQmwwrkC2CAQrQ==}
+  vite-plugin-css-injected-by-js@4.0.1:
+    resolution: {integrity: sha512-WfyRojojQyAO/KzWf+efcXpTPv6zJPXaRmr9EYq5a4v5I3PWCR7kR01hiri2lW6+rHm3a57kpwsf+iahIJi1Qw==}
     peerDependencies:
       vite: '>2.0.0-0'
 
@@ -14695,7 +14696,7 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-plugin-css-injected-by-js@3.5.2(vite@7.3.1(@types/node@25.2.3)(jiti@2.6.1)):
+  vite-plugin-css-injected-by-js@4.0.1(vite@7.3.1(@types/node@25.2.3)(jiti@2.6.1)):
     dependencies:
       vite: 7.3.1(@types/node@25.2.3)(jiti@2.6.1)
 
