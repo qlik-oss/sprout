@@ -44,7 +44,7 @@
     "extends @qlik/browserslist-config"
   ],
   "dependencies": {
-    "@floating-ui/react": "0.27.17",
+    "@floating-ui/react": "0.27.18",
     "@qlik/sprout-hooks": "workspace:*",
     "@qlik/sprout-css-modules": "workspace:*",
     "@qlik/sprout-icons": "workspace:*",
