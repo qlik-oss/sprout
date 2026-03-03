@@ -1,5 +1,23 @@
 # @qlik/stylelint-config-sprout
 
+## 6.7.3
+
+### Patch Changes
+
+- 70d4ea3: chore: update npm dependencies
+
+## 6.7.2
+
+### Patch Changes
+
+- af568d4: chore: update npm dependencies
+
+## 6.7.1
+
+### Patch Changes
+
+- 26db7e8: chore: update npm dependencies
+
 ## 6.7.0
 
 ### Minor Changes

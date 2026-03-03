@@ -55,6 +55,23 @@ async function getIcons(/* _style */) {
   );
 }
 
+function assertNoCaseInsensitiveCollisions(icons, pkg) {
+  const byNormalizedName = new Map();
+
+  for (const icon of icons) {
+    const normalized = icon.componentName.toLowerCase();
+    const existing = byNormalizedName.get(normalized);
+
+    if (existing) {
+      throw new Error(
+        `Case-insensitive icon name collision for ${pkg}: "${existing.componentName}" (${existing.sourceName}) and "${icon.componentName}" (${icon.sourceName}) generate the same output filename on case-insensitive filesystems.`,
+      );
+    }
+
+    byNormalizedName.set(normalized, icon);
+  }
+}
+
 function exportAll(icons, format, includeExtension = true) {
   return icons
     .map(({ componentName }) => {
@@ -75,6 +92,8 @@ async function ensureWrite(file, text) {
 async function buildIcons(pkg, style, format) {
   const outDir = `./${pkg}`;
   const icons = await getIcons(style);
+
+  assertNoCaseInsensitiveCollisions(icons, pkg);
 
   await Promise.all(
     icons.flatMap(async ({ componentName, svg }) => {

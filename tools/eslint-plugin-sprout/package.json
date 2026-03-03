@@ -1,6 +1,6 @@
 {
   "name": "@qlik/eslint-plugin-sprout",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "homepage": "https://github.com/qlik/sprout-kit#readme",
   "bugs": {
     "url": "https://github.com/qlik/sprout-kit/issues"
@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@qlik/eslint-config": "^1.4.18",
+    "@qlik/eslint-config": "^1.4.21",
     "@qlik/tsconfig": "^0.3.1",
     "eslint": "^9.39.2",
     "prettier": "^3.8.1",

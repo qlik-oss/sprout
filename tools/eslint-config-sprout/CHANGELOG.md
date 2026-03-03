@@ -1,5 +1,21 @@
 # @qlik/eslint-config-sprout
 
+## 1.0.7
+
+### Patch Changes
+
+- 70d4ea3: chore: update npm dependencies
+- Updated dependencies [70d4ea3]
+  - @qlik/eslint-plugin-sprout@1.1.2
+
+## 1.0.6
+
+### Patch Changes
+
+- af568d4: chore: update npm dependencies
+- Updated dependencies [af568d4]
+  - @qlik/eslint-plugin-sprout@1.1.1
+
 ## 1.0.5
 
 ### Patch Changes

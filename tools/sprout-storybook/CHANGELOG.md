@@ -1,5 +1,17 @@
 # @qlik/sprout-storybook
 
+## 7.3.2
+
+### Patch Changes
+
+- 70d4ea3: chore: update npm dependencies
+
+## 7.3.1
+
+### Patch Changes
+
+- af568d4: chore: update npm dependencies
+
 ## 7.3.0
 
 ### Minor Changes
