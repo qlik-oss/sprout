@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { Select } from ".";
 import { Modal } from "../Modal";
@@ -129,6 +129,58 @@ export function MultiSelectWithFilterProps() {
         }}
       >
         {OPTIONS_WITH_GROUP}
+      </MultiSelect>
+    </div>
+  );
+}
+
+const OPTIONS = [
+  { value: "red", label: "Red" },
+  { value: "green", label: "Green" },
+  { value: "blue", label: "Blue" },
+  { value: "yellow", label: "Yellow" },
+  { value: "purple", label: "Purple" },
+  { value: "pink", label: "Pink" },
+  { value: "brown", label: "Brown" },
+  { value: "black", label: "Black" },
+  { value: "white", label: "White" },
+  { value: "gray", label: "Gray" },
+  { value: "cyan", label: "Cyan" },
+];
+let multiSelectWithOnFilterChangePropRenderCount = 0;
+export function MultiSelectWithOnFilterChangeProp() {
+  multiSelectWithOnFilterChangePropRenderCount++;
+  const [options, setOptions] =
+    useState<Array<{ value: string; label: string }>>(OPTIONS);
+  const fetchOptions = useCallback(
+    (inputEvent: React.ChangeEvent<HTMLInputElement>) => {
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+      if (inputEvent.target.value === undefined) {
+        return;
+      }
+      setOptions([
+        { value: "orange", label: "Orange" },
+        { value: "magenta", label: "Magenta" },
+      ]);
+    },
+    [],
+  );
+  return (
+    <div
+      data-testid="render-count"
+      data-render-count={multiSelectWithOnFilterChangePropRenderCount}
+    >
+      <MultiSelect
+        label="color"
+        placeholder="Please select colors"
+        data-testid="my_multiselect"
+        onFilterChange={fetchOptions}
+      >
+        {options.map((opt) => (
+          <Select.Option key={opt.value} value={opt.value}>
+            {opt.label}
+          </Select.Option>
+        ))}
       </MultiSelect>
     </div>
   );

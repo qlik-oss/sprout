@@ -7,7 +7,7 @@ import {
   useRef,
 } from "react";
 
-import { useId } from "@qlik/sprout-hooks";
+import { useId } from "@qlik/sprout-react-hooks";
 
 import { HelperText } from "../HelperText";
 import { InfoTooltipPrimitive } from "../_InfoTooltipPrimitive";

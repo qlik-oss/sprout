@@ -2,10 +2,23 @@
 import { useEffect, useState } from "react";
 import { fn } from "storybook/test";
 
-import { AlertInline, Button, List, ListItem, Menu, Popover, type PopoverProps, classNames } from "@qlik/sprout-react";
+import {
+  AlertInline,
+  Button,
+  List,
+  ListItem,
+  Menu,
+  Popover,
+  type PopoverProps,
+  classNames,
+} from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { PopoverArgTypes, PopoverDemoContentArgTypes, type PopoverDemoContentProps } from "./Popover.argTypes";
+import {
+  PopoverArgTypes,
+  PopoverDemoContentArgTypes,
+  type PopoverDemoContentProps,
+} from "./Popover.argTypes";
 
 type Story = StoryObj<PopoverProps>;
 
@@ -26,9 +39,22 @@ const chromatic = {
 };
 
 export const Playground: StoryObj<PopoverProps & PopoverDemoContentProps> = {
-  render: ({ demoContainerHeight, demoContainerWidth, demoContentHeight, demoContentWidth, content, ...props }) => (
+  render: ({
+    demoContainerHeight,
+    demoContainerWidth,
+    demoContentHeight,
+    demoContentWidth,
+    content,
+    ...props
+  }) => (
     <div
-      className={classNames("flex", "border-box", "flex-col", "items-center", "justify-center")}
+      className={classNames(
+        "flex",
+        "border-box",
+        "flex-col",
+        "items-center",
+        "justify-center",
+      )}
       style={{ inlineSize: demoContainerWidth, blockSize: demoContainerHeight }}
     >
       <Popover
@@ -71,7 +97,10 @@ export const Playground: StoryObj<PopoverProps & PopoverDemoContentProps> = {
 
 export const CustomDropdown: Story = {
   render: (props) => (
-    <div className={classNames("flex", "flex-col", "p-xl", "gap-xl")} style={{ inlineSize: "400px" }}>
+    <div
+      className={classNames("flex", "flex-col", "p-xl", "gap-xl")}
+      style={{ inlineSize: "400px" }}
+    >
       <Popover
         {...props}
         minWidth="reference"
@@ -98,7 +127,10 @@ export const AnchorAPI: Story = {
     const [state, setState] = useState<HTMLButtonElement | undefined>();
     const [open, setOpen] = useState(false);
     return (
-      <div className={classNames("flex", "flex-col", "gap-xl")} style={{ inlineSize: "400px" }}>
+      <div
+        className={classNames("flex", "flex-col", "gap-xl")}
+        style={{ inlineSize: "400px" }}
+      >
         <Button
           label="My trigger"
           ref={(e: HTMLButtonElement) => {
@@ -129,10 +161,15 @@ export const AnchorAPI: Story = {
 
 export const AnchorPositionAPI: Story = {
   render: (props) => {
-    const [clickPos, setClickPos] = useState<PopoverProps["anchorPosition"] | undefined>();
+    const [clickPos, setClickPos] = useState<
+      PopoverProps["anchorPosition"] | undefined
+    >();
     const [open, setOpen] = useState(false);
     return (
-      <div className={classNames("flex", "flex-col", "gap-xl")} style={{ inlineSize: "400px" }}>
+      <div
+        className={classNames("flex", "flex-col", "gap-xl")}
+        style={{ inlineSize: "400px" }}
+      >
         <Menu.Trigger
           menu={
             <Menu.Item
@@ -157,14 +194,34 @@ export const AnchorPositionAPI: Story = {
           onOpenChange={setOpen}
           content={
             <form
-              className={classNames("flex", "flex-col", "gap-m", "items-start", "bg-default")}
+              className={classNames(
+                "flex",
+                "flex-col",
+                "gap-m",
+                "items-start",
+                "bg-default",
+              )}
               onSubmit={(e) => {
                 e.preventDefault();
               }}
             >
-              <h2 className={classNames("flex", "text-default", "font-heading-s")}>Delete confirmation</h2>
-              <AlertInline severity="warning">This action can&apos;t be reverted</AlertInline>
-              <div className={classNames("flex", "flex-col", "gap-m", "w-full", "items-end")}>
+              <h2
+                className={classNames("flex", "text-default", "font-heading-s")}
+              >
+                Delete confirmation
+              </h2>
+              <AlertInline severity="warning">
+                This action can&apos;t be reverted
+              </AlertInline>
+              <div
+                className={classNames(
+                  "flex",
+                  "flex-col",
+                  "gap-m",
+                  "w-full",
+                  "items-end",
+                )}
+              >
                 <Button variant="primary" label="Yes" type="submit" />
               </div>
             </form>
@@ -185,7 +242,14 @@ export const AnchorPositionAPI: Story = {
 export const Nested: Story = {
   render: () => (
     <div
-      className={classNames("flex", "flex-col", "gap-xl", "p-xl", "items-center", "justify-center")}
+      className={classNames(
+        "flex",
+        "flex-col",
+        "gap-xl",
+        "p-xl",
+        "items-center",
+        "justify-center",
+      )}
       style={{ inlineSize: "400px", blockSize: "300px" }}
     >
       <Popover
@@ -220,28 +284,60 @@ export const VisualTest: Story = {
 
     return (
       <div
-        className={classNames("flex", "flex-row", "p-xl", "items-center", "justify-between", "w-full")}
+        className={classNames(
+          "flex",
+          "flex-row",
+          "p-xl",
+          "items-center",
+          "justify-between",
+          "w-full",
+        )}
         style={{ blockSize: "100vh" }}
       >
-        <div className={classNames("flex", "flex-row", "justify-end")} style={{ inlineSize: "35%" }}>
-          <Popover initialOpen placement="left" content={<p className={bodySClass}>placeholder</p>}>
+        <div
+          className={classNames("flex", "flex-row", "justify-end")}
+          style={{ inlineSize: "35%" }}
+        >
+          <Popover
+            initialOpen
+            placement="left"
+            content={<p className={bodySClass}>placeholder</p>}
+          >
             <Button label="left" />
           </Popover>
         </div>
 
         <div
-          className={classNames("flex", "flex-col", "self-center", "gap-3xl", "items-center")}
+          className={classNames(
+            "flex",
+            "flex-col",
+            "self-center",
+            "gap-3xl",
+            "items-center",
+          )}
           style={{ inlineSize: "30%" }}
         >
-          <Popover initialOpen placement="top" content={<p className={bodySClass}>placeholder</p>}>
+          <Popover
+            initialOpen
+            placement="top"
+            content={<p className={bodySClass}>placeholder</p>}
+          >
             <Button label="top" />
           </Popover>
-          <Popover initialOpen placement="bottom" content={<p className={bodySClass}>placeholder</p>}>
+          <Popover
+            initialOpen
+            placement="bottom"
+            content={<p className={bodySClass}>placeholder</p>}
+          >
             <Button label="bottom" />
           </Popover>
         </div>
         <div style={{ inlineSize: "35%" }}>
-          <Popover initialOpen placement="right" content={<p className={bodySClass}>placeholder</p>}>
+          <Popover
+            initialOpen
+            placement="right"
+            content={<p className={bodySClass}>placeholder</p>}
+          >
             <Button label="right" />
           </Popover>
         </div>
@@ -252,7 +348,13 @@ export const VisualTest: Story = {
             placement="top"
             initialOpen
             content={
-              <Popover content="Nested content" p="xl" placement="left" open={showNested} onOpenChange={setShowNested}>
+              <Popover
+                content="Nested content"
+                p="xl"
+                placement="left"
+                open={showNested}
+                onOpenChange={setShowNested}
+              >
                 <button type="button" className={bodySClass}>
                   Nested reference
                 </button>

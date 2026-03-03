@@ -23,7 +23,8 @@ export const ToggleButtonArgTypes: ArgTypes<ToggleButtonProps> = {
     control: {
       type: "boolean",
     },
-    description: "Controls the toggle state. Setting this prop will make the button controlled.",
+    description:
+      "Controls the toggle state. Setting this prop will make the button controlled.",
     table: {
       type: {
         summary: "boolean",

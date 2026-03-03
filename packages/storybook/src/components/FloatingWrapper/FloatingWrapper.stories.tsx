@@ -1,4 +1,3 @@
-import { DeleteIcon } from "@qlik/sprout-icons/react";
 import {
   Button,
   FloatingWrapper,
@@ -8,6 +7,7 @@ import {
   ToggleIconButton,
   classNames,
 } from "@qlik/sprout-react";
+import { DeleteIcon } from "@qlik/sprout-icons/react";
 
 export default {
   title: "Components/FloatingWrapper",
@@ -93,7 +93,11 @@ export const VisualTest = {
           <ToggleButton label="label" defaultToggled />
         </FloatingWrapper>
         <FloatingWrapper>
-          <ToggleIconButton icon={<DeleteIcon />} label="label" defaultToggled />
+          <ToggleIconButton
+            icon={<DeleteIcon />}
+            label="label"
+            defaultToggled
+          />
         </FloatingWrapper>
         <FloatingWrapper>
           <TextField defaultValue="value" />

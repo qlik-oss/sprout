@@ -101,22 +101,41 @@ class MediaConstructor implements MediaAPI {
   size?: ViewportSize;
   listeners: Array<() => void> = [];
   _listeners: Array<(viewportSize: ViewportSize) => void> = [];
+  _tentative: number;
 
   constructor() {
+    this._tentative = 1;
     this.listeners = [];
     const internals = getInternals();
     this.breakpoints = internals.breakpoints;
     this.queries = internals.queries;
     // add on load event to wait for CSS
     if (Number.isNaN(this.breakpoints.s)) {
-      window.addEventListener("load", () => {
+      const intervalId = setInterval(() => {
+        this._tentative += 1;
         const loadedInternals = getInternals();
         this.breakpoints = loadedInternals.breakpoints;
         this.queries = loadedInternals.queries;
-        this._listeners.forEach((listener) => {
-          listener(this.getViewportSize());
-        });
-      });
+        if (!Number.isNaN(this.breakpoints.s)) {
+          clearInterval(intervalId);
+          this._listeners.forEach((listener) => {
+            listener(this.getViewportSize());
+          });
+        } else if (this._tentative > 10) {
+          clearInterval(intervalId);
+          this.breakpoints = {
+            s: 640,
+            m: 1024,
+            l: 1600,
+          };
+          this.queries = {
+            s: `(max-width: ${this.breakpoints.s - 0.02}px)`,
+            m: `(min-width: ${this.breakpoints.s}px) and (max-width: ${this.breakpoints.m - 0.02}px)`,
+            l: `(min-width: ${this.breakpoints.m}px) and (max-width: ${this.breakpoints.l - 0.02}px)`,
+            xl: `(min-width: ${this.breakpoints.l}px)`,
+          };
+        }
+      }, 200);
     }
   }
 

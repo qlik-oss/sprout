@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/experimental-ct-react";
+import type { Locator } from "@playwright/test";
 
 import { getAxeReport } from "../PlaywrightUtils";
 import { KEYBOARD_KEYS } from "../Utils/keyboardKeys";
@@ -8,6 +9,10 @@ import {
   RangeSliderTest,
   SingleSliderTest,
 } from "./SliderTest";
+
+function getOutputForSlider(slider: Locator) {
+  return slider.locator("xpath=..").locator("output");
+}
 
 test("Slider.Single should be accessible", async ({ mount, page }) => {
   await mount(<SingleSliderTest defaultValue={50} />);
@@ -263,4 +268,49 @@ test("Slider.Range should support controlled usage", async ({
   expect(await slider2.getAttribute("aria-valuenow")).toBe("78");
 
   await expect(page.getByTestId("value")).toHaveText("22 - 78");
+});
+
+test("Slider.Range should merge overlapping value labels (horizontal)", async ({
+  mount,
+  page,
+}) => {
+  const mounted = await mount(
+    <div style={{ inlineSize: 320 }}>
+      <RangeSliderTest value={[49, 50]} />
+    </div>,
+  );
+
+  const component = mounted.getByTestId("wrapper");
+  const [slider1, slider2] = await component.getByRole("slider").all();
+  await expect(slider1).toHaveAttribute("aria-valuenow", "49");
+  await expect(slider2).toHaveAttribute("aria-valuenow", "50");
+
+  const output1 = getOutputForSlider(slider1);
+  const output2 = getOutputForSlider(slider2);
+
+  await expect(output1).toHaveText("49 - 50");
+  await expect(output2).toBeHidden();
+});
+
+test("Slider.Range should merge overlapping value labels (vertical)", async ({
+  mount,
+  page,
+}) => {
+  const mounted = await mount(
+    <div style={{ blockSize: 320 }}>
+      <RangeSliderTest value={[49, 50]} orientation="vertical" />
+    </div>,
+  );
+
+  const component = mounted.getByTestId("wrapper");
+  const [slider1, slider2] = await component.getByRole("slider").all();
+  await expect(slider1).toHaveAttribute("aria-valuenow", "49");
+  await expect(slider2).toHaveAttribute("aria-valuenow", "50");
+
+  const output1 = getOutputForSlider(slider1);
+  const output2 = getOutputForSlider(slider2);
+
+  // Vertical merged label uses a newline and reverses order (end at top)
+  await expect(output1).toHaveText(/50\s+49/);
+  await expect(output2).toBeHidden();
 });

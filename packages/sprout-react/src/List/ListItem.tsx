@@ -1,6 +1,6 @@
 import { type Ref, forwardRef, useContext } from "react";
 
-import { useId } from "@qlik/sprout-hooks";
+import { useId } from "@qlik/sprout-react-hooks";
 
 import { classNames } from "../classNames";
 import type { HTMLLiProps } from "../htmlTypes";

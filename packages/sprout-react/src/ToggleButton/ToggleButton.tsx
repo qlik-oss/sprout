@@ -2,8 +2,8 @@ import { type ReactNode, type Ref, forwardRef, isValidElement } from "react";
 
 import { Badge, type BadgeProps } from "../Badge";
 import { classNames } from "../classNames";
+import { DropdownArrow } from "../glyphs";
 import type { HTMLButtonProps } from "../htmlTypes";
-import { DropdownArrow } from "../icons";
 import { type UseToggleProps, useToggle } from "./hook";
 
 import style from "../Button/Button.module.css";

@@ -28,7 +28,8 @@ const CommonArgTypes: ArgTypes<SliderProps["Single"]> = {
     control: {
       type: "text",
     },
-    description: "Supplementary text displayed below the slider for guidance. Ignored if errorMessages are present.",
+    description:
+      "Supplementary text displayed below the slider for guidance. Ignored if errorMessages are present.",
     table: {
       type: {
         summary: "string",
@@ -192,7 +193,12 @@ const CommonArgTypes: ArgTypes<SliderProps["Single"]> = {
   },
   valueLabelFormat: {
     control: { type: "select" },
-    options: ["undefined", "Percentage (%)", "Currency ($)", "Temperature (°C)"],
+    options: [
+      "undefined",
+      "Percentage (%)",
+      "Currency ($)",
+      "Temperature (°C)",
+    ],
     mapping: {
       undefined,
       "Percentage (%)": (value: number) => `${value}%`,
@@ -244,7 +250,8 @@ export const SliderSingleArgTypes: ArgTypes<SliderProps["Single"]> = {
   },
   onChange: {
     control: false,
-    description: "Callback fired when the slider value changes. Receives the new value and the triggering event.",
+    description:
+      "Callback fired when the slider value changes. Receives the new value and the triggering event.",
     table: {
       type: {
         summary: "(value: number, event: Event) => void",
@@ -253,7 +260,8 @@ export const SliderSingleArgTypes: ArgTypes<SliderProps["Single"]> = {
   },
   onChangeCommitted: {
     control: false,
-    description: "Callback function that is fired when the `pointerup` is triggered.",
+    description:
+      "Callback function that is fired when the `pointerup` is triggered.",
     table: {
       type: {
         summary: "(value: number, event: Event) => void",
@@ -311,13 +319,15 @@ export const SliderRangeArgTypes: ArgTypes<SliderProps["Range"]> = {
       "Callback fired when either grip value changes. Receives a `number[]` (only the first two values will be used), the triggering event, and the index of the active grip.",
     table: {
       type: {
-        summary: "(value: number[], event: Event, activeGripIndex: number) => void",
+        summary:
+          "(value: number[], event: Event, activeGripIndex: number) => void",
       },
     },
   },
   onChangeCommitted: {
     control: false,
-    description: "Callback function that is fired when the `pointerup` is triggered.",
+    description:
+      "Callback function that is fired when the `pointerup` is triggered.",
     table: {
       type: {
         summary: "((value: number[], event: Event) => void",

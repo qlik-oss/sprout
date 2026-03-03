@@ -1,5 +1,5 @@
-import Person from "@qlik/sprout-icons/react/Person";
 import { Menu, classNames } from "@qlik/sprout-react";
+import { PersonIcon } from "@qlik/sprout-icons/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { MenuItemArgTypes } from "./Menu.argTypes";
@@ -18,7 +18,7 @@ export const Item: StoryObj<typeof Menu.Item> = {
   ),
   argTypes: MenuItemArgTypes,
   args: {
-    icon: <Person />,
+    icon: <PersonIcon />,
     label: "Profile",
     description: "Optional secondary text for the menu item.",
     valueLabel: "⌘ P",

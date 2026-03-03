@@ -10,6 +10,5 @@ test("should Portal apply theme", async ({ mount, page }) => {
   );
   const el = page.getByTestId("test-element");
   const parent = el.locator("..");
-  await expect(parent).toHaveAttribute("data-qlik-appearance", "qlik-light");
-  await expect(parent).toHaveAttribute("data-qlik-density", "comfortable");
+  await expect(parent).toHaveAttribute("data-qlik-theme", "qlik-light");
 });

@@ -237,16 +237,16 @@ export const VisualTestTextField: StoryObj = {
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
           <InlineEdit.TextField
             aria-label="Edit color"
-            defaultValue="custom font heading-xl"
-            font="heading-xl"
+            defaultValue="custom font heading_xl"
+            font="heading_xl"
             showEditIcon
           />
         </div>
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
           <InlineEdit.TextField
             aria-label="Edit color"
-            defaultValue="custom font script-s"
-            font="script-s"
+            defaultValue="custom font script_s"
+            font="script_s"
             view={({ children }) => (
               <span className={classNames("text-end", "font-script-s", "text-inverse", "bg-inverse")}>{children}</span>
             )}
@@ -422,6 +422,15 @@ type Person = {
   firstName: string;
   lastName: string;
   bio: string;
+  role: string;
+};
+
+const ROLES = {
+  ADMIN:
+    "Administrator with extended system permissions that allows managing users, settings, and content across the platform.",
+  EDITOR: "Editor",
+  USER: "User",
+  VIEWER: "Viewer",
 };
 
 const data: Array<Person> = [
@@ -430,62 +439,121 @@ const data: Array<Person> = [
     firstName: "John",
     lastName: "Doe",
     bio: "Lorem ipsum dolor sit amet.",
+    role: ROLES.ADMIN,
   },
   {
     uuid: "2",
     firstName: "Jane",
     lastName: "Smith",
     bio: "Consectetur adipiscing elit.",
+    role: ROLES.EDITOR,
   },
   {
     uuid: "3",
     firstName: "Alice",
     lastName: "Johnson",
     bio: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    role: ROLES.USER,
   },
   {
     uuid: "4",
     firstName: "Bob",
     lastName: "Brown",
     bio: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    role: ROLES.VIEWER,
   },
   {
     uuid: "5",
     firstName: "Charlie",
     lastName: "Davis",
     bio: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur.",
+    role: ROLES.USER,
   },
   {
     uuid: "6",
     firstName: "Eve",
     lastName: "Wilson",
     bio: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    role: ROLES.ADMIN,
   },
   {
     uuid: "7",
     firstName: "Frank",
     lastName: "Garcia",
     bio: "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin.",
+    role: ROLES.USER,
   },
   {
     uuid: "8",
     firstName: "Grace",
     lastName: "Martinez",
     bio: "Integer in mauris eu nibh. Nullam mollis. Etiam vel erat sed augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi lacinia molestie dui.",
+    role: ROLES.EDITOR,
   },
   {
     uuid: "9",
     firstName: "Hank",
     lastName: "Lopez",
     bio: "Praesent id justo in neque elementum ultrices. Fusce fermentum. Donec ut mauris eget massa tempor convallis. Nulla facilisi.",
+    role: ROLES.VIEWER,
   },
   {
     uuid: "10",
     firstName: "Ivy",
     lastName: "Hernandez",
     bio: "Sed lectus. Integer euismod lacus luctus magna, non interdum quam sodales ut. Sed lectus. Integer euismod lacus luctus magna, non interdum quam sodales ut.",
+    role: ROLES.USER,
   },
 ];
+
+const ROLE_OPTIONS = [
+  <Select.Option key="admin" value={ROLES.ADMIN}>
+    {ROLES.ADMIN}
+  </Select.Option>,
+  <Select.Option key="editor" value={ROLES.EDITOR}>
+    {ROLES.EDITOR}
+  </Select.Option>,
+  <Select.Option key="user" value={ROLES.USER}>
+    {ROLES.USER}
+  </Select.Option>,
+  <Select.Option key="viewer" value={ROLES.VIEWER}>
+    {ROLES.VIEWER}
+  </Select.Option>,
+];
+
+function EditSelectCell({ row, attr, label }: { row: Person; attr: keyof Person; label: string }): JSX.Element {
+  const context = useContext(TableInlineEditContext);
+  const [state, setState] = useState<string>(row[attr] as string);
+  useEffect(() => {
+    setState(row[attr] as string);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [row[attr]]);
+  return (
+    <div className={classNames("px-s", "w-full", "h-full", "whitespace-nowrap", "overflow-hidden")}>
+      <InlineEdit.Select
+        value={state}
+        onChange={(e, reason) => {
+          if (reason === "cancel") {
+            setState(row[attr] as string);
+            return;
+          }
+          setState(e.target.value);
+        }}
+        onSave={() => {
+          context.onRowChange({ ...row, [attr]: state });
+        }}
+        aria-label={label}
+        onSubmit={() => {
+          // eslint-disable-next-line no-console
+          console.log("submit", state);
+          context.onRowChange({ ...row, [attr]: state });
+        }}
+      >
+        {ROLE_OPTIONS}
+      </InlineEdit.Select>
+    </div>
+  );
+}
 
 const TableInlineEditContext = createContext<{
   onRowChange: (row: Person) => void;
@@ -564,6 +632,13 @@ export const InlineEditTable: StoryObj<TableProps<Person>> = {
         headerName: "Last Name",
         renderCell: ({ row, colDef }) => {
           return <EditCell row={row} attr="lastName" label={colDef.headerName} />;
+        },
+      },
+      {
+        field: "role",
+        headerName: "Role",
+        renderCell: ({ row, colDef }) => {
+          return <EditSelectCell row={row} attr="role" label={colDef.headerName} />;
         },
       },
       {

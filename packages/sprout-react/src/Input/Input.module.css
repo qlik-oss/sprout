@@ -1,5 +1,5 @@
-/* support dark mode of input */
-[data-qlik-appearance$="dark"] .input {
+/* stylelint-disable selector-no-qualifying-type */
+[data-qlik-theme$="dark"] .input {
   color-scheme: dark;
 }
 

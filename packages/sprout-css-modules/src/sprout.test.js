@@ -1,16 +1,16 @@
 import { expect, test } from "vitest";
-import flex from "./flex.module.css";
+import flex from "./css/flex.module.css";
 import sprout from "./sprout.js";
 
 test("sprout export all the classes from css modules + className function", () => {
   expect(sprout.classNames).toBeDefined();
-  expect(flex.row).toBe("row");
-  expect(sprout.row).toBe("row");
-  expect(sprout.classNames("row", "border_box")).toBe("row border_box");
+  expect(flex["flex-row"]).toBe("flex-row");
+  expect(sprout["flex-row"]).toBe("flex-row");
+  expect(sprout.classNames("flex-row", "border_box")).toBe("flex-row border_box");
   expect(
     sprout.classNames({
-      row: true,
+      "flex-row": true,
       border_box: true,
     }),
-  ).toBe("row border_box");
+  ).toBe("flex-row border_box");
 });

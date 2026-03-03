@@ -1,6 +1,6 @@
 {
   "name": "@qlik/eslint-config-sprout",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "homepage": "https://github.com/qlik/sprout-kit#readme",
   "bugs": {
     "url": "https://github.com/qlik/sprout-kit/issues"
@@ -25,16 +25,16 @@
   "main": "./src/index.mjs",
   "types": "./src/index.d.ts",
   "scripts": {
-    "format:check": "prettier --check ./** --ignore-unknown",
-    "format:write": "prettier --write ./** --ignore-unknown",
+    "format:check": "prettier --check . --ignore-unknown",
+    "format:write": "prettier --write . --ignore-unknown",
     "lint": "eslint .",
     "lint:ci": "eslint . -f json -o eslint-report.json",
     "test": "vitest run"
   },
   "dependencies": {
-    "@qlik/eslint-config": "^1.4.18",
+    "@qlik/eslint-config": "^1.4.21",
     "@qlik/eslint-plugin-sprout": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^8.55.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
     "eslint-plugin-react": "^7.37.5"
   },
   "devDependencies": {

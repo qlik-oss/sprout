@@ -34,7 +34,15 @@ export const Vertical: Story = {
 
 export const Horizontal: Story = {
   render: (props) => (
-    <div className={sprout.classNames("flex", "w-xxs", "gap-m", "text-default", "font-body-s")}>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "w-xxs",
+        "gap-m",
+        "text-default",
+        "font-body-s",
+      )}
+    >
       Foo
       <Divider {...props} />
       Bar
@@ -51,7 +59,15 @@ export const Horizontal: Story = {
 
 export const VisualTest: Story = {
   render: () => (
-    <div className={sprout.classNames("flex", "gap-xl", "w-s", "text-default", "font-body-s")}>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "gap-xl",
+        "w-s",
+        "text-default",
+        "font-body-s",
+      )}
+    >
       <div className={sprout.classNames("flex", "flex-row", "gap-m")}>
         <Button label="Copy" />
         <Button label="Paste" />
@@ -67,14 +83,36 @@ export const VisualTest: Story = {
 
       <div
         style={{ blockSize: "300px" }}
-        className={sprout.classNames("flex", "gap-m", "w-full", "items-center", "flex-row")}
+        className={sprout.classNames(
+          "flex",
+          "gap-m",
+          "w-full",
+          "items-center",
+          "flex-row",
+        )}
       >
-        <div className={sprout.classNames("flex", "justify-center", "items-center", "w-s")}>
-          Flexbox container with Divider that takes the full height of it's parent
+        <div
+          className={sprout.classNames(
+            "flex",
+            "justify-center",
+            "items-center",
+            "w-s",
+          )}
+        >
+          Flexbox container with Divider that takes the full height of it's
+          parent
         </div>
         <Divider orientation="vertical" height="100%" />
-        <div className={sprout.classNames("flex", "justify-center", "items-center", "w-s")}>
-          Flexbox container with Divider that takes the full height of it's parent
+        <div
+          className={sprout.classNames(
+            "flex",
+            "justify-center",
+            "items-center",
+            "w-s",
+          )}
+        >
+          Flexbox container with Divider that takes the full height of it's
+          parent
         </div>
       </div>
     </div>

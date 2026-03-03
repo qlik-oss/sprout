@@ -3,7 +3,11 @@ import type { ArgTypes } from "@storybook/react-vite";
 
 import { CommonFieldArgTypes, FieldArgTypes } from "../Field.argTypes";
 
-export const getSelectArgTypes = ({ options }: { options: Array<string> }): ArgTypes<SelectProps["Select"]> => ({
+export const getSelectArgTypes = ({
+  options,
+}: {
+  options: Array<string>;
+}): ArgTypes<SelectProps["Select"]> => ({
   ...FieldArgTypes,
   ...CommonFieldArgTypes,
   size: {
@@ -31,7 +35,8 @@ export const getSelectArgTypes = ({ options }: { options: Array<string> }): ArgT
     table: { type: { summary: "string" } },
   },
   onChange: {
-    description: "The function that will be called when the value of the field changes.",
+    description:
+      "The function that will be called when the value of the field changes.",
     table: {
       type: {
         summary: "(e: ChangeEvent) => void",
@@ -39,7 +44,8 @@ export const getSelectArgTypes = ({ options }: { options: Array<string> }): ArgT
     },
   },
   renderValue: {
-    description: "The function that will be called to render the value of the field if any.",
+    description:
+      "The function that will be called to render the value of the field if any.",
     table: {
       type: {
         summary: "(value: string, selectedProps?: OptionProps) => ReactNode;",
@@ -47,7 +53,8 @@ export const getSelectArgTypes = ({ options }: { options: Array<string> }): ArgT
     },
   },
   selectedValueDisplay: {
-    description: "Defines how the selected value is displayed in the closed select field.",
+    description:
+      "Defines how the selected value is displayed in the closed select field.",
     control: { type: "select" },
     options: ["full", "label"],
     table: {
@@ -60,7 +67,8 @@ export const getSelectArgTypes = ({ options }: { options: Array<string> }): ArgT
     },
   },
   children: {
-    description: "The options of the field. They are used to populate the field.",
+    description:
+      "The options of the field. They are used to populate the field.",
     table: {
       type: {
         summary: "ReactNode",

@@ -4,6 +4,10 @@ import { InlineEdit } from ".";
 import { Modal } from "../Modal";
 import { getAxeReport } from "../PlaywrightUtils";
 import { KEYBOARD_KEYS } from "../Utils/keyboardKeys";
+import {
+  InlineEditHorizontalRowTest,
+  InlineEditTextFieldOverflowTest,
+} from "./InlineEditTest";
 
 test(`should InlineEdit.TextField be accessible`, async ({ mount, page }) => {
   await mount(
@@ -243,6 +247,108 @@ test("should be able to see focus state when rendered in a modal", async ({
   const input = page.getByRole("textbox");
 
   await view.click();
+  await expect(input).toBeVisible();
+  await expect(input).toBeFocused();
+});
+
+test("should close when scrolled horizontally", async ({ mount, page }) => {
+  await mount(<InlineEditTextFieldOverflowTest />);
+
+  const view = page.getByTestId("test-textfield-scroll.view");
+  const input = page.getByRole("textbox");
+  const scrollContainer = page.locator("#component-testing");
+
+  // expect overflow to be scrollable
+  await expect(scrollContainer).toHaveCSS("overflow", "auto");
+
+  // Open the textfield
+  await view.click();
+  await expect(input).toBeVisible();
+
+  // Wait for scroll listener to be attached (100ms delay in InlineEditPrimitive)
+  await page.waitForTimeout(150);
+
+  // Scroll horizontally
+  await scrollContainer.evaluate((element) => {
+    element.dispatchEvent(new Event("scroll", { bubbles: true }));
+  });
+
+  // Verify the input closes
+  await expect(input).not.toBeVisible();
+});
+
+test("should close when scrolled vertically", async ({ mount, page }) => {
+  await mount(<InlineEditTextFieldOverflowTest />);
+
+  const view = page.getByTestId("test-textfield-scroll.view");
+  const input = page.getByRole("textbox");
+  const scrollContainer = page.locator("#component-testing");
+
+  // Open the textfield
+  await view.click();
+  await expect(input).toBeVisible();
+
+  // Wait for scroll listener to be attached (100ms delay in InlineEditPrimitive)
+  await page.waitForTimeout(150);
+
+  // Scroll vertically
+  await scrollContainer.evaluate((element) => {
+    element.dispatchEvent(new Event("scroll", { bubbles: true }));
+  });
+
+  // Verify the input closes
+  await expect(input).not.toBeVisible();
+});
+
+test("should scroll field into view when clicking on barely visible field", async ({
+  mount,
+  page,
+}) => {
+  await mount(<InlineEditHorizontalRowTest />);
+
+  const field1View = page.getByTestId("inline-edit-field-1.view");
+  const scrollContainer = page.locator("#component-testing");
+
+  await scrollContainer.evaluate((el) => {
+    const element = el as HTMLElement;
+    element.scrollLeft = element.scrollWidth;
+  });
+
+  // Verify the field 1 text is not in viewport
+  const field1Span = field1View.locator("span").first();
+  await expect(field1Span).not.toBeInViewport();
+
+  // click on the very end of the field 1 which should be barely visible
+  await page.mouse.click(20, 60);
+  // expect the field 1 to be scrolled into view
+  await expect(field1Span).toBeInViewport();
+});
+
+test("should not close when reaching end of container with long content", async ({
+  mount,
+  page,
+}) => {
+  await mount(<InlineEditTextFieldOverflowTest />);
+
+  const view = page.getByTestId("test-textfield-scroll.view");
+  const input = page.getByRole("textbox");
+  await view.click();
+  await expect(input).toBeVisible();
+  await expect(input).toBeFocused();
+
+  // Wait for scroll listener to be attached (100ms delay in InlineEditPrimitive)
+  await page.waitForTimeout(150);
+
+  await input.fill(
+    "this is a very long value that should force horizontal scrolling inside the text field component",
+  );
+
+  await input.evaluate((element) => {
+    const inputElement = element as HTMLInputElement;
+    inputElement.scrollLeft = inputElement.scrollWidth;
+    inputElement.dispatchEvent(new Event("scroll", { bubbles: true }));
+  });
+
   await expect(input).toBeVisible();
   await expect(input).toBeFocused();
 });

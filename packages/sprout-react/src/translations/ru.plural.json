@@ -1,1 +1,12 @@
-{}
+{
+  "table.column.visibility-form.footer.label": {
+    "value": {
+      "one": "Отображается {{count}}/{{total}} столбцов",
+      "few": "Отображаются {{count}}/{{total}} столбцов",
+      "many": "Отображаются {{count}}/{{total}} столбцов",
+      "other": "Отображаются {{count}}/{{total}} столбцов"
+    },
+    "comment": "This is displayed in the footer of the visbility form column filter for every table.",
+    "version": "6jngMitmNOFAih7NlTOsxw=="
+  }
+}

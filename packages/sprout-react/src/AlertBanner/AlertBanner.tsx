@@ -1,7 +1,7 @@
 import { type ReactNode, type Ref, forwardRef } from "react";
 
 import { tokens } from "@qlik/design-tokens";
-import Close from "@qlik/sprout-icons/react/Close";
+import { CloseIcon } from "@qlik/sprout-icons/react";
 
 import { IconButton } from "../Button";
 import { SEVERITY_ICONS } from "../Icons/SeverityIcon";
@@ -164,7 +164,7 @@ function AlertBannerBase(
                 onClickDismiss();
               }}
               label={dismissLabel || dismissLabelDefault}
-              icon={<Close />}
+              icon={<CloseIcon />}
             />
           </span>
         ) : null}

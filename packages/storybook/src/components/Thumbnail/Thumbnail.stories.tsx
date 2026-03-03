@@ -1,8 +1,8 @@
-import { TenantIcon } from "@qlik/sprout-icons/react";
 import { Thumbnail, classNames } from "@qlik/sprout-react";
+import { TenantIcon } from "@qlik/sprout-icons/react";
 import type { StoryObj } from "@storybook/react-vite";
 
-import src from "../internal/assets/truck.png";
+import src from "../../internal/assets/truck.png";
 import { ThumbnailArgTypes } from "./Thumbnail.argTypes";
 
 export default {
@@ -16,7 +16,9 @@ export default {
 
 export const Playground: StoryObj<typeof Thumbnail> = {
   render: (props) => (
-    <Thumbnail {...props}>{props.type === "icon" ? <TenantIcon /> : <img src={src} alt="avatar" />}</Thumbnail>
+    <Thumbnail {...props}>
+      {props.type === "icon" ? <TenantIcon /> : <img src={src} alt="avatar" />}
+    </Thumbnail>
   ),
   parameters: {
     chromatic: { disableSnapshot: true },

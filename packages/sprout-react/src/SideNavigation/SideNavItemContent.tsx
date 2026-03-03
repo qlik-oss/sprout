@@ -3,8 +3,8 @@ import { type ReactNode, type Ref, forwardRef } from "react";
 import { tokens } from "@qlik/design-tokens";
 import sprout from "@qlik/sprout-css-modules";
 
+import { GotoIcon } from "../Icons/GotoIcon";
 import type { HTMLDivProps } from "../htmlTypes";
-import { GotoIcon } from "../icons";
 
 import style from "./SideNavigation.module.css";
 

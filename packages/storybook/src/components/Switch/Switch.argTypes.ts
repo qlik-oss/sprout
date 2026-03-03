@@ -32,7 +32,8 @@ export const SwitchArgTypes: ArgTypes<SwitchProps> = {
   infoIconTooltip: {
     if: { arg: "label", truthy: true },
     control: "text",
-    description: "Tooltip text that appears when hovering over the info icon next to the label.",
+    description:
+      "Tooltip text that appears when hovering over the info icon next to the label.",
     table: {
       type: {
         summary: "string",
@@ -54,7 +55,8 @@ export const SwitchArgTypes: ArgTypes<SwitchProps> = {
   },
   "aria-label": {
     control: "text",
-    description: "Accessible label for the switch, required if label is not provided",
+    description:
+      "Accessible label for the switch, required if label is not provided",
     table: {
       type: {
         summary: "string",
@@ -63,7 +65,8 @@ export const SwitchArgTypes: ArgTypes<SwitchProps> = {
   },
   "aria-labelledby": {
     control: "text",
-    description: "ID of an element that labels the switch, required if label is not provided",
+    description:
+      "ID of an element that labels the switch, required if label is not provided",
     table: {
       type: {
         summary: "string",

@@ -1,7 +1,7 @@
 import type { DropzoneProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
-import { ICONS_MAP, ICON_OPTIONS } from "../internal/icons/Icons";
+import { ICONS_MAP, ICON_OPTIONS } from "../../internal/icons/Icons";
 
 export const DropzoneArgTypes: ArgTypes<DropzoneProps> = {
   disabled: {
@@ -92,7 +92,8 @@ export const DropzoneArgTypes: ArgTypes<DropzoneProps> = {
   },
   onDragOver: {
     control: false,
-    description: "Callback function when a drag event occurs over the dropzone.",
+    description:
+      "Callback function when a drag event occurs over the dropzone.",
     table: {
       type: {
         summary: "(event: DragEvent) => void",

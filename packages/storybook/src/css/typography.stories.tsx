@@ -335,6 +335,158 @@ export const TextOverflow = {
   ),
 };
 
+export const WhiteSpace = {
+  name: "white-space",
+  render: () => {
+    const text = `
+      But ere she from the church-door stepped She smiled and told us why: 'It
+      was a wicked woman's curse,' Quoth she, 'and what care I?' She smiled, and
+      smiled, and passed it off Ere from the door she stept—
+    `;
+
+    return (
+      <div
+        className={sprout.classNames(
+          "flex",
+          "border-box",
+          "gap-m",
+          "p-m",
+          "flex-col",
+          "w-m",
+          "text-default",
+          "bg-default",
+        )}
+      >
+        <span className={sprout.classNames("font-heading-m")}>
+          whitespace-normal
+        </span>
+        <div
+          className={sprout.classNames(
+            "w-xxs",
+            "whitespace-normal",
+            "border-weak",
+            "p-m",
+          )}
+        >
+          {text}
+        </div>
+
+        <span className={sprout.classNames("font-heading-m")}>
+          whitespace-pre
+        </span>
+        <div
+          className={sprout.classNames(
+            "w-xxs",
+            "whitespace-pre",
+            "border-weak",
+            "p-m",
+          )}
+        >
+          {text}
+        </div>
+
+        <span className={sprout.classNames("font-heading-m")}>
+          whitespace-pre-wrap
+        </span>
+        <div
+          className={sprout.classNames(
+            "w-xxs",
+            "whitespace-pre-wrap",
+            "border-weak",
+            "p-m",
+          )}
+        >
+          {text}
+        </div>
+
+        <span className={sprout.classNames("font-heading-m")}>
+          whitespace-pre-line
+        </span>
+        <div
+          className={sprout.classNames(
+            "w-xxs",
+            "whitespace-pre-line",
+            "border-weak",
+            "p-m",
+          )}
+        >
+          {text}
+        </div>
+
+        <span className={sprout.classNames("font-heading-m")}>
+          whitespace-nowrap
+        </span>
+        <div
+          className={sprout.classNames(
+            "w-xxs",
+            "whitespace-nowrap",
+            "border-weak",
+            "p-m",
+          )}
+        >
+          {text}
+        </div>
+
+        <span className={sprout.classNames("font-heading-m")}>
+          whitespace-wrap
+        </span>
+        <div
+          className={sprout.classNames(
+            "w-xxs",
+            "whitespace-wrap",
+            "border-weak",
+            "p-m",
+          )}
+        >
+          {text}
+        </div>
+
+        <span className={sprout.classNames("font-heading-m")}>
+          whitespace-break-spaces
+        </span>
+        <div
+          className={sprout.classNames(
+            "w-xxs",
+            "whitespace-break-spaces",
+            "border-weak",
+            "p-m",
+          )}
+        >
+          {text}
+        </div>
+
+        <span className={sprout.classNames("font-heading-m")}>
+          whitespace-collapse
+        </span>
+        <div
+          className={sprout.classNames(
+            "w-xxs",
+            "whitespace-collapse",
+            "border-weak",
+            "p-m",
+          )}
+        >
+          {text}
+        </div>
+
+        <span className={sprout.classNames("font-heading-m")}>
+          whitespace-preserve-nowrap
+        </span>
+        <div
+          className={sprout.classNames(
+            "w-xxs",
+            "whitespace-preserve-nowrap",
+            "border-weak",
+            "p-m",
+          )}
+        >
+          {text}
+        </div>
+      </div>
+    );
+  },
+};
+
 export const Color = {
   name: "color",
   render: () => (

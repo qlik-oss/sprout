@@ -9,14 +9,14 @@ import {
 } from "react";
 
 import sprout from "@qlik/sprout-css-modules";
-import { useControl } from "@qlik/sprout-hooks";
 import { ErrorIcon } from "@qlik/sprout-icons/react";
+import { useControl } from "@qlik/sprout-react-hooks";
 
 import { InputButton } from "../InputButton";
 import { Tooltip } from "../Tooltip";
+import { DropdownArrow } from "../glyphs";
 import { useI18n } from "../hooks/useI18n";
 import type { HTMLInputProps } from "../htmlTypes";
-import { DropdownArrow } from "../icons";
 import type { SelectOptionProps } from "./SelectOption";
 import { getSelectedOptions } from "./getSelectedOption";
 

@@ -13,17 +13,29 @@ pnpm i @qlik/sprout-react
 After installing the dependencies, you can test if everything works by adding the following snippet to your `App.tsx` file:
 
 ```tsx
-import { Button, ThemeProvider, classNames } from "@qlik/sprout-react";
+import {
+  Button,
+  ThemeProvider,
+  classNames,
+} from "@qlik/sprout-react";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <ThemeProvider asDiv>
-      <h1 className={classNames("m-0", "p-0", "text-default", "font-heading-m")}>Vite + React</h1>
-      <div className={className("flex", "flex-col", "gap-xs")}>
-        <Button variant="primary" onClick={() => setCount((count) => count + 1)} label={`Count is ${count}`} />
-        <p className={className("text-default", "font-body-m")}>
+      <h1
+        className={classNames("m-0", "p-0", "text-default", "font-heading-m")}
+      >
+        Vite + React
+      </h1>
+      <div className={classNames("flex", "flex-col", "gap-xs")}>
+        <Button
+          variant="primary"
+          onClick={() => setCount((count) => count + 1)}
+          label={`Count is ${count}`}
+        />
+        <p className={classNames("text-default", "font-body-m")}>
           Edit <code>src/App.tsx</code> and save to test HMR.
         </p>
       </div>
@@ -40,7 +52,7 @@ This component is optional but highly useful in the following scenarios:
 
 - When using React components that rely on [portals](https://react.dev/reference/react-dom/createPortal).
 - When building a React application.
-- When setting up a Storybook instance (though we recommend using `@qlik/sprout-storybook` for this purpose).
+- When setting up a Storybook instance (though we recommend using `@qlik/sprout-css-storybook` for this purpose).
 
 ### API Highlights
 
@@ -70,10 +82,13 @@ const MyCustomElement = ({ children }: { children: ReactNode }) => {
 
 ## Storybook Setup
 
-Setting up Sprout CSS in Storybook is straightforward. You can use the `@qlik/sprout-storybook` package to simplify the process.
+Setting up Sprout CSS in Storybook is straightforward. You can use the `@qlik/sprout-css-storybook` package to simplify the process.
 
 ```jsx
-import { getSproutGlobalTypes, sproutCSSDecorator } from "@qlik/sprout-storybook";
+import {
+  getSproutGlobalTypes,
+  sproutCSSDecorator,
+} from "@qlik/sprout-css-storybook";
 
 export default {
   // Automatically wraps your stories with the ThemeProvider
@@ -87,4 +102,4 @@ export default {
 
 ### Final Notes
 
-Sprout CSS is designed to make your development experience smoother while ensuring a consistent and polished design system. If you encounter any issues or have suggestions, feel free to reach out or contribute to the project. Happy coding!
+Sprout is designed to make your development experience smoother while ensuring a consistent and polished design system. If you encounter any issues or have suggestions, feel free to reach out or contribute to the project. Happy coding!

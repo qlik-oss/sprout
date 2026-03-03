@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/experimental-ct-react";
-import Delete from "@qlik/sprout-icons/react/Delete";
+import { DeleteIcon } from "@qlik/sprout-icons/react";
 
 import { ButtonGroup } from "../ButtonGroup";
 import { getAxeReport } from "../PlaywrightUtils";
@@ -8,11 +8,15 @@ import { ToggleIconButton } from "./ToggleIconButton";
 test("should be accessible", async ({ page, mount }) => {
   const content = await mount(
     <div id="component-testing">
-      <ToggleIconButton id="foo" label="Default" icon={<Delete />} />
-      <ToggleIconButton label="Toggled" toggled icon={<Delete />} />
+      <ToggleIconButton id="foo" label="Default" icon={<DeleteIcon />} />
+      <ToggleIconButton label="Toggled" toggled icon={<DeleteIcon />} />
       <ButtonGroup>
-        <ToggleIconButton label="InGroup" icon={<Delete />} />
-        <ToggleIconButton label="InGroup toggled" toggled icon={<Delete />} />
+        <ToggleIconButton label="InGroup" icon={<DeleteIcon />} />
+        <ToggleIconButton
+          label="InGroup toggled"
+          toggled
+          icon={<DeleteIcon />}
+        />
       </ButtonGroup>
     </div>,
   );

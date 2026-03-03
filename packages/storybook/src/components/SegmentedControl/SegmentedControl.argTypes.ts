@@ -1,9 +1,11 @@
 import type { SegmentedControlProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
-import { ICONS_MAP, ICON_OPTIONS } from "../internal/icons/Icons";
+import { ICONS_MAP, ICON_OPTIONS } from "../../internal/icons/Icons";
 
-export const SegmentedControlGroupArgTypes: ArgTypes<SegmentedControlProps["Group"]> = {
+export const SegmentedControlGroupArgTypes: ArgTypes<
+  SegmentedControlProps["Group"]
+> = {
   label: {
     control: {
       type: "text",
@@ -22,7 +24,8 @@ export const SegmentedControlGroupArgTypes: ArgTypes<SegmentedControlProps["Grou
   },
   name: {
     control: "text",
-    description: "Must be set on each Segment or once on Group to link the segments together.",
+    description:
+      "Must be set on each Segment or once on Group to link the segments together.",
     table: { type: { summary: "string" } },
   },
   iconOnly: { control: "boolean", table: { type: { summary: "boolean" } } },
@@ -31,7 +34,8 @@ export const SegmentedControlGroupArgTypes: ArgTypes<SegmentedControlProps["Grou
       type: "select",
     },
     options: ["horizontal", "vertical"],
-    description: "Sets the orientation of the segmented control. Vertical orientation is limited to icon only. ",
+    description:
+      "Sets the orientation of the segmented control. Vertical orientation is limited to icon only. ",
 
     table: {
       defaultValue: { summary: "horizontal" },
@@ -42,7 +46,9 @@ export const SegmentedControlGroupArgTypes: ArgTypes<SegmentedControlProps["Grou
   },
 };
 
-export const SegmentedControlSegmentArgTypes: ArgTypes<SegmentedControlProps["Segment"]> = {
+export const SegmentedControlSegmentArgTypes: ArgTypes<
+  SegmentedControlProps["Segment"]
+> = {
   disabled: { control: "boolean", table: { type: { summary: "boolean" } } },
   label: { control: "text", table: { type: { summary: "string" } } },
   value: { control: "text", table: { type: { summary: "string" } } },
@@ -52,7 +58,8 @@ export const SegmentedControlSegmentArgTypes: ArgTypes<SegmentedControlProps["Se
     },
     options: ICON_OPTIONS,
     mapping: ICONS_MAP,
-    description: "Accepts a `ReactNode` and is rendered before the label. Use an icon from `@qlik/sprout-icons`",
+    description:
+      "Accepts a `ReactNode` and is rendered before the label. Use an icon from `@qlik/sprout-icons`",
     table: {
       type: {
         summary: "ReactNode",
@@ -61,7 +68,8 @@ export const SegmentedControlSegmentArgTypes: ArgTypes<SegmentedControlProps["Se
   },
   name: {
     control: "text",
-    description: "Must be set on each Segment or once on Group to link the segments together.",
+    description:
+      "Must be set on each Segment or once on Group to link the segments together.",
     table: { type: { summary: "string" } },
   },
 };

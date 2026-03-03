@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 import sprout, { type AllClasses } from "@qlik/sprout-css-modules";
 
-import src from "../components/internal/assets/image.png";
+import src from "../internal/assets/image.png";
 
 export const BOX_CLASSES: Array<AllClasses> = ["flex", "border-box"];
 
@@ -48,18 +48,39 @@ export const CONTENT_PROPS_TOKEN: Array<AllClasses> = CONTENT_CLASSES.filter(
   (c) => !c.startsWith("border") || c === "border-box",
 );
 
-export const PROPERTY_ROW_PROPS: Array<AllClasses> = ["flex", "flex-row", "border-box", "gap-xl"];
-export const PROPERTY_COL_PROPS: Array<AllClasses> = ["flex", "flex-col", "border-box", "items_start"];
+export const PROPERTY_ROW_PROPS: Array<AllClasses> = [
+  "flex",
+  "flex-row",
+  "border-box",
+  "gap-xl",
+];
+export const PROPERTY_COL_PROPS: Array<AllClasses> = [
+  "flex",
+  "flex-col",
+  "border-box",
+  "items_start",
+];
 
 export function PropertyTile({ children }: { children: ReactNode }) {
-  return <h2 className={sprout.classNames("font-heading-l", "text-default", "py-l")}>{children}</h2>;
+  return (
+    <h2 className={sprout.classNames("font-heading-l", "text-default", "py-l")}>
+      {children}
+    </h2>
+  );
 }
 
 export function PropertyValue({ children }: { children: ReactNode }) {
-  return <h3 className={sprout.classNames("font-label-m", "text-default", "py-m")}>{children}</h3>;
+  return (
+    <h3 className={sprout.classNames("font-label-m", "text-default", "py-m")}>
+      {children}
+    </h3>
+  );
 }
 
-export function omit(arr: Array<AllClasses>, ...values: Array<AllClasses>): Array<AllClasses> {
+export function omit(
+  arr: Array<AllClasses>,
+  ...values: Array<AllClasses>
+): Array<AllClasses> {
   return arr.filter((item) => !values.includes(item));
 }
 

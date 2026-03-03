@@ -4,27 +4,7 @@ import type { ArgTypes } from "@storybook/react-vite";
 import { FieldArgTypes } from "../Field.argTypes";
 
 export const RadioGroupArgTypes: ArgTypes<RadioGroupProps> = {
-  errorMessages: {
-    control: {
-      labels: {
-        first: "One error message",
-        second: "Two error messages",
-      },
-      type: "select",
-    },
-    description:
-      "The error messages that will be shown if the field is marked as error. Note when errorMessages is set, the helpText is ignored.",
-    mapping: {
-      "one msg": ["Error message 1"],
-      "two msg": ["Error message 1", "Error message 2"],
-    },
-    options: [undefined, "one msg", "two msg"],
-    table: {
-      type: {
-        summary: "string[]",
-      },
-    },
-  },
+  ...FieldArgTypes,
   helpText: {
     control: "text",
     description: "Help text displayed below the radio group.",
@@ -54,7 +34,8 @@ export const RadioGroupArgTypes: ArgTypes<RadioGroupProps> = {
   },
   name: {
     control: "text",
-    description: "The name of the radio group, used to group the radios together.",
+    description:
+      "The name of the radio group, used to group the radios together.",
     table: {
       type: {
         summary: "string",

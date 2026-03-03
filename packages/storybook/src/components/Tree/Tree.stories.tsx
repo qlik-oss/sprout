@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { type ReactNode, createContext, useContext, useMemo, useState } from "react";
 
 import sprout from "@qlik/sprout-css-modules";
@@ -432,6 +433,7 @@ function TreeCell({ row }: Pick<TableCellParams<TreeNode>, "row">) {
   const context = useContext(TreeContext);
   const safeExpanded = !!context.expanded[row.id];
   return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
       className={classNames("flex", "flex-row", "w-full", "pl-l", "pr-l", "items-center", "overflow-hidden")}
       onClick={() => {

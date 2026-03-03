@@ -1,1 +1,10 @@
-{}
+{
+  "table.column.visibility-form.footer.label": {
+    "value": {
+      "one": "{{count}}/{{total}} sütun görünüyor",
+      "other": "{{count}}/{{total}} sütun görünüyor"
+    },
+    "comment": "This is displayed in the footer of the visbility form column filter for every table.",
+    "version": "6jngMitmNOFAih7NlTOsxw=="
+  }
+}

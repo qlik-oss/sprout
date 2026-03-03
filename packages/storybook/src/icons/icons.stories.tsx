@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import * as Icons from "@qlik/sprout-icons/react";
-import { classNames, TextField } from "@qlik/sprout-react";
-import type { Meta } from "@storybook/react";
 import { useState } from "react";
+
+import { TextField, classNames } from "@qlik/sprout-react";
+import * as Icons from "@qlik/sprout-icons/react";
+import type { Meta } from "@storybook/react";
 
 const meta: Meta = {
   title: "Icons",
@@ -19,7 +20,17 @@ export const AllIcons = {
     const [search, setSearch] = useState("");
     return (
       <div className={classNames("flex", "flex-col", "gap-l", "flex-wrap")}>
-        <div className={classNames("flex-noreset", "w-m", "flex-row", "items-start", "p-s", "gap-s", "justify-start")}>
+        <div
+          className={classNames(
+            "flex-noreset",
+            "w-s",
+            "flex-row",
+            "items-start",
+            "p-s",
+            "gap-s",
+            "justify-start",
+          )}
+        >
           <TextField
             placeholder="Search icons..."
             value={search}
@@ -29,19 +40,50 @@ export const AllIcons = {
             aria-label="Search icons"
           />
         </div>
-        <div className={classNames("flex", "flex-row", "flex-wrap", "gap-m", "w-fit")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "flex-wrap",
+            "gap-m",
+            "w-fit",
+          )}
+        >
           {Object.entries(Icons)
-            .filter(([name]) => name.toLowerCase().includes(search.toLowerCase()))
+            .filter(([name]) =>
+              name.toLowerCase().includes(search.toLowerCase()),
+            )
             .map(([name, Icon]) => (
               <div
                 key={name}
-                className={classNames("flex", "flex-col", "gap-m", "p-m", "border-default", "radius-soft")}
+                className={classNames(
+                  "flex",
+                  "flex-col",
+                  "gap-m",
+                  "p-m",
+                  "border-default",
+                  "radius-soft",
+                )}
                 style={{ blockSize: 150, inlineSize: 150 }}
               >
-                <span className={classNames("font-script-s", "text-weak", "break-all")}>
+                <span
+                  className={classNames(
+                    "font-script-s",
+                    "text-weak",
+                    "break-all",
+                  )}
+                >
                   {removeTrailingIconFromName(name)}
                 </span>
-                <div className={classNames("flex", "items-center", "justify-center", "flex-1", "text-default")}>
+                <div
+                  className={classNames(
+                    "flex",
+                    "items-center",
+                    "justify-center",
+                    "flex-1",
+                    "text-default",
+                  )}
+                >
                   <Icon />
                 </div>
               </div>

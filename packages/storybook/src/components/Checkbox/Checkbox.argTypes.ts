@@ -1,4 +1,7 @@
-import type { CheckboxGroupProps, CheckboxProps } from "@qlik/sprout-react";
+import type {
+  CheckboxGroupProps,
+  CheckboxProps,
+} from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
 import { FieldArgTypes } from "../Field.argTypes";
@@ -52,7 +55,8 @@ export const CheckboxArgTypes: ArgTypes<CheckboxProps> = {
     control: {
       type: "boolean",
     },
-    description: "If true, the checkbox is in an indeterminate state (controlled).",
+    description:
+      "If true, the checkbox is in an indeterminate state (controlled).",
     table: {
       type: {
         summary: "boolean",

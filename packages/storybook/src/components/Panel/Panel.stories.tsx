@@ -29,7 +29,19 @@ export const Playground: StoryObj<typeof Panel.Primitive> = {
       control: {
         type: "select",
       },
-      options: [undefined, false, true, "s", "m", "l", "xl", "xxl", "2xl", "3xl", "4xl"],
+      options: [
+        undefined,
+        false,
+        true,
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl",
+        "2xl",
+        "3xl",
+        "4xl",
+      ],
     },
     "aria-label": {
       control: {
@@ -80,17 +92,40 @@ export const Playground: StoryObj<typeof Panel.Primitive> = {
   },
   render: ({ overlay, ...props }) => (
     <div
-      className={classNames("flex", "flex-row", "border-box", "p-l", "border-default")}
+      className={classNames(
+        "flex",
+        "flex-row",
+        "border-box",
+        "p-l",
+        "border-default",
+      )}
       style={{ inlineSize: "100%", blockSize: "300px" }}
     >
       <Panel.Container overlay={overlay}>
-        <div className={classNames("flex", "flex-row", "border-box", "text-default")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "text-default",
+          )}
+        >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec dui nec nunc ultricies tincidunt. Nullam
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
+            dui nec nunc ultricies tincidunt. Nullam
           </p>
         </div>
         <Panel.Left {...props}>
-          <div className={classNames("flex", "flex-row", "border-box", "p-s", "font-body-m", "text-default")}>
+          <div
+            className={classNames(
+              "flex",
+              "flex-row",
+              "border-box",
+              "p-s",
+              "font-body-m",
+              "text-default",
+            )}
+          >
             Panel content
           </div>
         </Panel.Left>
@@ -107,37 +142,75 @@ export const Playground: StoryObj<typeof Panel.Primitive> = {
 export const Drawer: StoryObj<typeof Panel.Primitive> = {
   render: () => {
     const [drawerLeft, setDrawerLeft] = useState<"closed" | "opened">("closed");
-    const [drawerRight, setDrawerRight] = useState<"closed" | "opened">("closed");
+    const [drawerRight, setDrawerRight] = useState<"closed" | "opened">(
+      "closed",
+    );
     return (
       <div
-        className={classNames("flex", "flex-row", "border-box", "p-l", "border-default")}
+        className={classNames(
+          "flex",
+          "flex-row",
+          "border-box",
+          "p-l",
+          "border-default",
+        )}
         style={{ inlineSize: "100%", blockSize: "300px" }}
       >
         <Panel.Container overlay>
-          <div className={classNames("flex", "flex-col", "border-box", "items-start", "gap-s")}>
+          <div
+            className={classNames(
+              "flex",
+              "flex-col",
+              "border-box",
+              "items-start",
+              "gap-s",
+            )}
+          >
             <p className={classNames("text-default")}>
               This is a container that can have a drawer.{" "}
               <Button
                 label="Toggle left drawer"
                 onClick={() => {
-                  setDrawerLeft((prev) => (prev === "closed" ? "opened" : "closed"));
+                  setDrawerLeft((prev) =>
+                    prev === "closed" ? "opened" : "closed",
+                  );
                 }}
               />
               <Button
                 label="Toggle right drawer"
                 onClick={() => {
-                  setDrawerRight((prev) => (prev === "closed" ? "opened" : "closed"));
+                  setDrawerRight((prev) =>
+                    prev === "closed" ? "opened" : "closed",
+                  );
                 }}
               />
             </p>
           </div>
           <Panel.Left data-drawer={drawerLeft} aria-label="Left drawer">
-            <div className={classNames("flex", "flex-row", "border-box", "p-s", "font-body-m", "text-default")}>
+            <div
+              className={classNames(
+                "flex",
+                "flex-row",
+                "border-box",
+                "p-s",
+                "font-body-m",
+                "text-default",
+              )}
+            >
               Panel content
             </div>
           </Panel.Left>
           <Panel.Right data-drawer={drawerRight} aria-label="Right drawer">
-            <div className={classNames("flex", "flex-row", "border-box", "p-s", "font-body-m", "text-default")}>
+            <div
+              className={classNames(
+                "flex",
+                "flex-row",
+                "border-box",
+                "p-s",
+                "font-body-m",
+                "text-default",
+              )}
+            >
               Panel content
             </div>
           </Panel.Right>
@@ -166,18 +239,29 @@ const CONTENT = (
       "overflow-y-auto",
     )}
   >
-    Haec subinde Constantius audiens et quaedam referente Thalassio doctus, quem eum odisse iam conpererat lege communi,
-    scribens ad Caesarem blandius adiumenta paulatim illi subtraxit, sollicitari se simulans ne, uti est militare otium
-    fere tumultuosum, in eius perniciem conspiraret, solisque scholis iussit esse contentum palatinis et protectorum cum
-    Scutariis et Gentilibus, et mandabat Domitiano, ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum,
-    quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+    Haec subinde Constantius audiens et quaedam referente Thalassio doctus, quem
+    eum odisse iam conpererat lege communi, scribens ad Caesarem blandius
+    adiumenta paulatim illi subtraxit, sollicitari se simulans ne, uti est
+    militare otium fere tumultuosum, in eius perniciem conspiraret, solisque
+    scholis iussit esse contentum palatinis et protectorum cum Scutariis et
+    Gentilibus, et mandabat Domitiano, ex comite largitionum, praefecto ut cum
+    in Syriam venerit, Gallum, quem crebro acciverat, ad Italiam properare
+    blande hortaretur et verecunde.
   </div>
 );
 
 function DemoPanelContent({ children }: { children: ReactNode }) {
   return (
     <div
-      className={classNames("flex", "flex-row", "border-box", "p-s", "justify-center", "font-body-m", "text-default")}
+      className={classNames(
+        "flex",
+        "flex-row",
+        "border-box",
+        "p-s",
+        "justify-center",
+        "font-body-m",
+        "text-default",
+      )}
     >
       {children}
     </div>
@@ -189,15 +273,41 @@ const ROW_HEIGHT = "130px";
 export const VisualTest = {
   render: () => (
     <div
-      className={classNames("flex", "flex-col", "border-box", "font-body-m", "text-default", "p-m", "gap-s")}
+      className={classNames(
+        "flex",
+        "flex-col",
+        "border-box",
+        "font-body-m",
+        "text-default",
+        "p-m",
+        "gap-s",
+      )}
       style={{ inlineSize: "100vw" }}
     >
-      <h2 className={classNames("font-heading-m", "text-default")}>Panel.Top</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Panel.Top
+      </h2>
       <div
-        className={classNames("flex", "flex-row", "border-box", "w-xxl", "gap-3xl", "flex-nowrap", "grow")}
+        className={classNames(
+          "flex",
+          "flex-row",
+          "border-box",
+          "w-xxl",
+          "gap-3xl",
+          "flex-nowrap",
+          "grow",
+        )}
         style={{ blockSize: ROW_HEIGHT }}
       >
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container>
             {CONTENT}
             <Panel.Top>
@@ -206,7 +316,15 @@ export const VisualTest = {
           </Panel.Container>
         </div>
 
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container>
             {CONTENT}
             <Panel.Top resizable>
@@ -215,7 +333,15 @@ export const VisualTest = {
           </Panel.Container>
         </div>
 
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container overlay>
             {CONTENT}
             <Panel.Top>
@@ -224,7 +350,15 @@ export const VisualTest = {
           </Panel.Container>
         </div>
 
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container overlay>
             {CONTENT}
             <Panel.Top resizable>
@@ -234,12 +368,30 @@ export const VisualTest = {
         </div>
       </div>
 
-      <h2 className={classNames("font-heading-m", "text-default")}>Panel.Left</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Panel.Left
+      </h2>
       <div
-        className={classNames("flex", "flex-row", "border-box", "w-xxl", "gap-3xl", "flex-nowrap", "grow")}
+        className={classNames(
+          "flex",
+          "flex-row",
+          "border-box",
+          "w-xxl",
+          "gap-3xl",
+          "flex-nowrap",
+          "grow",
+        )}
         style={{ blockSize: ROW_HEIGHT }}
       >
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container>
             {CONTENT}
             <Panel.Left>
@@ -248,7 +400,15 @@ export const VisualTest = {
           </Panel.Container>
         </div>
 
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container>
             {CONTENT}
             <Panel.Left resizable>
@@ -257,7 +417,15 @@ export const VisualTest = {
           </Panel.Container>
         </div>
 
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container overlay>
             {CONTENT}
             <Panel.Left>
@@ -266,7 +434,15 @@ export const VisualTest = {
           </Panel.Container>
         </div>
 
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container overlay>
             {CONTENT}
             <Panel.Left resizable>
@@ -276,12 +452,30 @@ export const VisualTest = {
         </div>
       </div>
 
-      <h2 className={classNames("font-heading-m", "text-default")}>Panel.Bottom</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Panel.Bottom
+      </h2>
       <div
-        className={classNames("flex", "flex-row", "border-box", "w-xxl", "gap-3xl", "flex-nowrap", "grow")}
+        className={classNames(
+          "flex",
+          "flex-row",
+          "border-box",
+          "w-xxl",
+          "gap-3xl",
+          "flex-nowrap",
+          "grow",
+        )}
         style={{ blockSize: ROW_HEIGHT }}
       >
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container>
             {CONTENT}
             <Panel.Bottom>
@@ -290,7 +484,15 @@ export const VisualTest = {
           </Panel.Container>
         </div>
 
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container>
             {CONTENT}
             <Panel.Bottom resizable>
@@ -299,7 +501,15 @@ export const VisualTest = {
           </Panel.Container>
         </div>
 
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container overlay>
             {CONTENT}
             <Panel.Bottom>
@@ -308,7 +518,15 @@ export const VisualTest = {
           </Panel.Container>
         </div>
 
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container overlay>
             {CONTENT}
             <Panel.Bottom resizable>
@@ -318,12 +536,30 @@ export const VisualTest = {
         </div>
       </div>
 
-      <h2 className={classNames("font-heading-m", "text-default")}>Panel.Right</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Panel.Right
+      </h2>
       <div
-        className={classNames("flex", "flex-row", "border-box", "w-xxl", "gap-3xl", "flex-nowrap", "grow")}
+        className={classNames(
+          "flex",
+          "flex-row",
+          "border-box",
+          "w-xxl",
+          "gap-3xl",
+          "flex-nowrap",
+          "grow",
+        )}
         style={{ blockSize: ROW_HEIGHT }}
       >
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container>
             {CONTENT}
             <Panel.Right>
@@ -332,7 +568,15 @@ export const VisualTest = {
           </Panel.Container>
         </div>
 
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container>
             {CONTENT}
             <Panel.Right resizable>
@@ -341,7 +585,15 @@ export const VisualTest = {
           </Panel.Container>
         </div>
 
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container overlay>
             {CONTENT}
             <Panel.Right>
@@ -350,7 +602,15 @@ export const VisualTest = {
           </Panel.Container>
         </div>
 
-        <div className={classNames("flex", "flex-row", "border-box", "border-default", "grow")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "border-default",
+            "grow",
+          )}
+        >
           <Panel.Container overlay>
             {CONTENT}
             <Panel.Right resizable>

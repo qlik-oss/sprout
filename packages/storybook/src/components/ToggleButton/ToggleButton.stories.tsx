@@ -3,15 +3,19 @@ import { useRef, useState } from "react";
 import { fn } from "storybook/test";
 
 import sprout from "@qlik/sprout-css-modules";
-import { BookmarkIcon, DeleteIcon, EditIcon } from "@qlik/sprout-icons/react";
+import { Badge, ButtonGroup, classNames } from "@qlik/sprout-react";
 import {
-  Badge,
-  ButtonGroup,
-  classNames,
   ToggleButton,
   type ToggleButtonProps,
   ToggleIconButton,
 } from "@qlik/sprout-react";
+import {
+  BookmarkIcon,
+  DeleteIcon,
+  DocumentationIcon,
+  EditIcon,
+  FavoritedIcon,
+} from "@qlik/sprout-icons/react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { ToggleButtonArgTypes } from "./ToggleButton.argTypes";
@@ -74,7 +78,14 @@ export const Controlled: Story = {
       }
       setToggled(e);
     };
-    return <ToggleButton ref={ref} label="Controlled" toggled={toggled} onChange={handleChange} />;
+    return (
+      <ToggleButton
+        ref={ref}
+        label="Controlled"
+        toggled={toggled}
+        onChange={handleChange}
+      />
+    );
   },
   args: {
     onChange: fn(),
@@ -97,14 +108,42 @@ export const ToggleIconButtonPlayground: Story = {
 };
 
 function H2({ children }: { children: string }) {
-  return <h2 className={classNames("flex", "flex-row", "border-box", "font-heading-m", "text-default")}>{children}</h2>;
+  return (
+    <h2
+      className={classNames(
+        "flex",
+        "flex-row",
+        "border-box",
+        "font-heading-m",
+        "text-default",
+      )}
+    >
+      {children}
+    </h2>
+  );
 }
 
 export const VisualTest: Story = {
   render: () => (
-    <div className={sprout.classNames("flex", "border-box", "flex-col", "gap-l", "w-s")}>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "border-box",
+        "flex-col",
+        "gap-l",
+        "w-s",
+      )}
+    >
       <H2>States</H2>
-      <div className={sprout.classNames("flex", "border-box", "gap-s", "w-full", "flex-row")}>
+      <div
+        className={sprout.classNames(
+          "flex",
+          "border-box",
+          "gap-s",
+          "w-full",
+          "flex-row",
+        )}
+      >
         <ToggleButton label="Default" />
         <ToggleButton label="Hover" data-testid="hover" />
         <ToggleButton label="Active" data-testid="active" />
@@ -112,16 +151,44 @@ export const VisualTest: Story = {
         <ToggleButton label="Toggle" toggled />
         <ToggleButton label="Dropdown" asDropdown />
       </div>
-      <div className={sprout.classNames("flex", "border-box", "gap-s", "w-full", "flex-row")}>
+      <div
+        className={sprout.classNames(
+          "flex",
+          "border-box",
+          "gap-s",
+          "w-full",
+          "flex-row",
+        )}
+      >
         <ToggleButton icon={<DeleteIcon />} label="Default" />
         <ToggleButton icon={<DeleteIcon />} label="Hover" data-testid="hover" />
-        <ToggleButton icon={<DeleteIcon />} label="Active" data-testid="active" />
-        <ToggleButton icon={<DeleteIcon />} label="Focus" data-testid="focused" />
+        <ToggleButton
+          icon={<DeleteIcon />}
+          label="Active"
+          data-testid="active"
+        />
+        <ToggleButton
+          icon={<DeleteIcon />}
+          label="Focus"
+          data-testid="focused"
+        />
         <ToggleButton icon={<DeleteIcon />} label="Toggle" toggled />
         <ToggleButton icon={<DeleteIcon />} label="Dropdown" asDropdown />
       </div>
-      <div className={sprout.classNames("flex", "border-box", "gap-s", "w-full", "flex-row")}>
-        <ToggleIconButton size="small" icon={<DeleteIcon height={undefined} width={undefined} />} label="Default" />
+      <div
+        className={sprout.classNames(
+          "flex",
+          "border-box",
+          "gap-s",
+          "w-full",
+          "flex-row",
+        )}
+      >
+        <ToggleIconButton
+          size="small"
+          icon={<DeleteIcon height={undefined} width={undefined} />}
+          label="Default"
+        />
         <ToggleIconButton
           size="small"
           icon={<DeleteIcon height={undefined} width={undefined} />}
@@ -154,13 +221,44 @@ export const VisualTest: Story = {
         />
       </div>
       <H2>With Badge</H2>
-      <div className={sprout.classNames("flex", "border-box", "gap-s", "w-full", "flex-row")}>
-        <ToggleButton label="Default" badge={<Badge text="1" variant="alphanumeric" />} />
-        <ToggleButton label="Hover" data-testid="hover" badge={<Badge text="1" variant="alphanumeric" />} />
-        <ToggleButton label="Active" data-testid="active" badge={<Badge text="1" variant="alphanumeric" />} />
-        <ToggleButton label="Focus" data-testid="focused" badge={<Badge text="1" variant="alphanumeric" />} />
-        <ToggleButton label="Toggle" toggled badge={<Badge text="1" variant="alphanumeric" />} />
-        <ToggleButton label="Dropdown" asDropdown badge={<Badge text="1" variant="alphanumeric" />} />
+      <div
+        className={sprout.classNames(
+          "flex",
+          "border-box",
+          "gap-s",
+          "w-full",
+          "flex-row",
+        )}
+      >
+        <ToggleButton
+          label="Default"
+          badge={<Badge text="1" variant="alphanumeric" />}
+        />
+        <ToggleButton
+          label="Hover"
+          data-testid="hover"
+          badge={<Badge text="1" variant="alphanumeric" />}
+        />
+        <ToggleButton
+          label="Active"
+          data-testid="active"
+          badge={<Badge text="1" variant="alphanumeric" />}
+        />
+        <ToggleButton
+          label="Focus"
+          data-testid="focused"
+          badge={<Badge text="1" variant="alphanumeric" />}
+        />
+        <ToggleButton
+          label="Toggle"
+          toggled
+          badge={<Badge text="1" variant="alphanumeric" />}
+        />
+        <ToggleButton
+          label="Dropdown"
+          asDropdown
+          badge={<Badge text="1" variant="alphanumeric" />}
+        />
       </div>
       <H2>Inside ButtonGroup</H2>
       <ButtonGroup>
@@ -174,14 +272,35 @@ export const VisualTest: Story = {
       <H2>ToggleIconButton</H2>
       <ButtonGroup>
         <ToggleIconButton label="Default" icon={<DeleteIcon />} />
-        <ToggleIconButton label="Hover" icon={<BookmarkIcon />} data-testid="hover" />
-        <ToggleIconButton label="Active" icon={<EditIcon />} data-testid="active" />
-        <ToggleIconButton label="Focus" icon={<BookmarkIcon />} data-testid="focused" />
+        <ToggleIconButton
+          label="Hover"
+          icon={<DocumentationIcon />}
+          data-testid="hover"
+        />
+        <ToggleIconButton
+          label="Active"
+          icon={<EditIcon />}
+          data-testid="active"
+        />
+        <ToggleIconButton
+          label="Focus"
+          icon={<BookmarkIcon />}
+          data-testid="focused"
+        />
         <ToggleIconButton label="Toggle" icon={<BookmarkIcon />} toggled />
-        <ToggleIconButton label="Dropdown" icon={<BookmarkIcon />} toggled asDropdown />
+        <ToggleIconButton
+          label="Dropdown"
+          icon={<FavoritedIcon />}
+          toggled
+          asDropdown
+        />
       </ButtonGroup>
       <ButtonGroup>
-        <ToggleIconButton label="Default" badge={<Badge text="1" variant="alphanumeric" />} icon={<DeleteIcon />} />
+        <ToggleIconButton
+          label="Default"
+          badge={<Badge text="1" variant="alphanumeric" />}
+          icon={<DeleteIcon />}
+        />
         <ToggleIconButton
           label="Hover"
           badge={<Badge text="1" variant="alphanumeric" />}
@@ -203,13 +322,13 @@ export const VisualTest: Story = {
         <ToggleIconButton
           label="Toggle"
           badge={<Badge text="1" variant="alphanumeric" />}
-          icon={<BookmarkIcon />}
+          icon={<FavoritedIcon />}
           toggled
         />
         <ToggleIconButton
           label="Toggle"
           badge={<Badge text="1" variant="alphanumeric" />}
-          icon={<BookmarkIcon />}
+          icon={<FavoritedIcon />}
           asDropdown
         />
       </ButtonGroup>

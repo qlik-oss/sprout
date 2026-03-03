@@ -45,24 +45,46 @@ const transform = {
 async function getIcons(/* _style */) {
   const files = await fs.readdir(`./${OPTIMIZED_IMG_FOLDER}`);
   return Promise.all(
-    files.map(async (file) => ({
-      svg: await fs.readFile(join(OPTIMIZED_IMG_FOLDER, file), "utf8"),
-      sourceName: file,
-      componentName: `${camelcase(file.replace(/\.svg$/, ""), {
-        pascalCase: true,
-      })}`,
-    })),
+    files.map(async (file) => {
+      const sourceBaseName = file.replace(/\.svg$/, "");
+
+      return {
+        svg: await fs.readFile(join(OPTIMIZED_IMG_FOLDER, file), "utf8"),
+        sourceName: file,
+        moduleName: sourceBaseName.replaceAll("_", "-"),
+        componentName: `${camelcase(sourceBaseName, {
+          pascalCase: true,
+        })}`,
+      };
+    }),
   );
+}
+
+function assertNoCaseInsensitiveCollisions(icons, pkg) {
+  const byNormalizedModuleName = new Map();
+
+  for (const icon of icons) {
+    const normalizedModuleName = icon.moduleName.toLowerCase();
+    const existing = byNormalizedModuleName.get(normalizedModuleName);
+
+    if (existing) {
+      throw new Error(
+        `Case-insensitive icon module collision for ${pkg}: "${existing.moduleName}" (${existing.sourceName}) and "${icon.moduleName}" (${icon.sourceName}) generate the same output filename on case-insensitive filesystems.`,
+      );
+    }
+
+    byNormalizedModuleName.set(normalizedModuleName, icon);
+  }
 }
 
 function exportAll(icons, format, includeExtension = true) {
   return icons
-    .map(({ componentName }) => {
+    .map(({ componentName, moduleName }) => {
       const extension = includeExtension ? ".js" : "";
       if (format === "esm") {
-        return `export { default as ${componentName}Icon } from './${componentName}${extension}'`;
+        return `export { default as ${componentName}Icon } from './${moduleName}${extension}'`;
       }
-      return `module.exports.${componentName}Icon = require("./${componentName}${extension}")`;
+      return `module.exports.${componentName}Icon = require("./${moduleName}${extension}")`;
     })
     .join("\n");
 }
@@ -76,8 +98,10 @@ async function buildIcons(pkg, style, format) {
   const outDir = `./${pkg}`;
   const icons = await getIcons(style);
 
+  assertNoCaseInsensitiveCollisions(icons, pkg);
+
   await Promise.all(
-    icons.flatMap(async ({ componentName, svg }) => {
+    icons.flatMap(async ({ componentName, moduleName, svg }) => {
       const content = await transform[pkg](svg, componentName, format);
       const types =
         pkg === "react"
@@ -85,8 +109,8 @@ async function buildIcons(pkg, style, format) {
           : `import type { FunctionalComponent, HTMLAttributes, VNodeProps } from 'vue';\ndeclare const ${componentName}: FunctionalComponent<HTMLAttributes & VNodeProps>;\nexport default ${componentName};\n`;
 
       return [
-        ensureWrite(`${outDir}/${componentName}.js`, content),
-        ...(types ? [ensureWrite(`${outDir}/${componentName}.d.ts`, types)] : []),
+        ensureWrite(`${outDir}/${moduleName}.js`, content),
+        ...(types ? [ensureWrite(`${outDir}/${moduleName}.d.ts`, types)] : []),
       ];
     }),
   );

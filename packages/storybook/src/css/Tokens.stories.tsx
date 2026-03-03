@@ -93,7 +93,7 @@ function getTokens() {
       const name = key.replaceAll("_", "-");
       buff.push({
         name,
-        defaultVariant: sproutTokens[key as keyof typeof sproutTokens].$value,
+        defaultVariant: sproutTokens[key as keyof typeof sproutTokens].$value as string,
         dimension: sproutTokens[key as keyof typeof sproutTokens].$type,
         semantic: getSemantic(name),
         usage: getUsage(name),

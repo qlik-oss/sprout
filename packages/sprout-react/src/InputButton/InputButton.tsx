@@ -2,7 +2,7 @@
 import { type MouseEvent, type Ref, forwardRef } from "react";
 
 import sprout from "@qlik/sprout-css-modules";
-import { useControl } from "@qlik/sprout-hooks";
+import { useControl } from "@qlik/sprout-react-hooks";
 
 import { ProgressCircular } from "../Progress";
 import type { HTMLButtonProps } from "../htmlTypes";

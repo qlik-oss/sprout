@@ -9,10 +9,10 @@ import {
 } from "react";
 
 import sprout from "@qlik/sprout-css-modules";
-import ErrorIcon from "@qlik/sprout-icons/react/Error";
+import { ErrorIcon } from "@qlik/sprout-icons/react";
 
+import { DropdownArrow } from "../glyphs";
 import type { HTMLButtonProps } from "../htmlTypes";
-import { DropdownArrow } from "../icons";
 import type { SelectOptionProps } from "./SelectOption";
 import { getSelectedOption } from "./getSelectedOption";
 

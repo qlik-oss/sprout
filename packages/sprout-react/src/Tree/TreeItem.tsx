@@ -1,8 +1,7 @@
 import type { ReactNode } from "react";
 
 import { tokens } from "@qlik/design-tokens";
-import FolderClosed from "@qlik/sprout-icons/react/FolderClosed";
-import FolderOpen from "@qlik/sprout-icons/react/FolderOpen";
+import { FolderClosedIcon, FolderOpenIcon } from "@qlik/sprout-icons/react";
 
 import { IconButton } from "../Button";
 import { classNames } from "../classNames";
@@ -88,7 +87,7 @@ export function TreeItem({
 
   let safeIcon = icon;
   if (displayFolderIcon) {
-    safeIcon = safeExpanded ? <FolderOpen /> : <FolderClosed />;
+    safeIcon = safeExpanded ? <FolderOpenIcon /> : <FolderClosedIcon />;
   }
 
   return (

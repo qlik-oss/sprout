@@ -29,9 +29,7 @@
   inline-size: 100%;
 }
 
-/* dropdown */
-/* stylelint-disable-next-line no-descending-specificity */
-.button > span > svg {
+.button svg[data-dropdown="true"] {
   fill: currentcolor;
   inline-size: var(--sprout-common-sizing-xl);
   block-size: var(--sprout-common-sizing-xl);

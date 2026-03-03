@@ -55,9 +55,14 @@ export type MyCustomInlineEditProps = {
   onChange: (newValue: boolean, reason?: "cancel") => void;
 };
 
-export const MyCustomInlineEdit = ({ value, onChange }: MyCustomInlineEditProps) => {
+export const MyCustomInlineEdit = ({
+  value,
+  onChange,
+}: MyCustomInlineEditProps) => {
   return (
-    <div className={classNames("flex", "border_box", "p_xl", "w_xs", "bg_weak")}>
+    <div
+      className={classNames("flex", "border_box", "p_xl", "w_xs", "bg_weak")}
+    >
       <InlineEdit.Primitive
         onCancel={() => {
           // let the parent reset the initial value
@@ -68,17 +73,48 @@ export const MyCustomInlineEdit = ({ value, onChange }: MyCustomInlineEditProps)
         }}
         // JSX.Element API: pass pre-created elements
         view={
-          <div className={classNames("flex", "flex-row", "gap-m", "ai-center", "text-default")}>
-            <SparkleIcon className={classNames("fill-current")} />
-            <div className={classNames("flex", "flex-col", "gap-m")}>
-              <span className={classNames("font-label-m-emphasized", "text-default")}>{value ? "On" : "Off"}</span>
-              <span className={classNames("font-label-s", "text-weak")}>AI Features</span>
+          <div
+            className={classNames(
+              "flex",
+              "row",
+              "gap_m",
+              "ai_center",
+              "text_default",
+            )}
+          >
+            <SparkleIcon className={classNames("fill_current")} />
+            <div className={classNames("flex", "col", "gap_m")}>
+              <span
+                className={classNames(
+                  "font_label_m_emphasized",
+                  "text_default",
+                )}
+              >
+                {value ? "On" : "Off"}
+              </span>
+              <span className={classNames("font_label_s", "text_weak")}>
+                AI Features
+              </span>
             </div>
           </div>
         }
         edit={
-          <div className={classNames("flex", "flex-row", "bg-default", "gap-m", "px-m", "py-xl", "ai-center")}>
-            <Switch checked={value} onChange={() => onChange(!value)} label="AI Features" />
+          <div
+            className={classNames(
+              "flex",
+              "row",
+              "bg_default",
+              "gap_m",
+              "px_m",
+              "py_xl",
+              "ai_center",
+            )}
+          >
+            <Switch
+              checked={value}
+              onChange={() => onChange(!value)}
+              label="AI Features"
+            />
           </div>
         }
       />
@@ -115,17 +151,32 @@ level and then using the render-function API to call it:
 ```tsx
 const AiFeaturesView = ({ value }: { value: boolean }) => {
   return (
-    <div className={classNames("flex", "flex-row", "gap-m", "ai-center", "text-default")}>
-      <SparkleIcon className={classNames("fill-current")} />
-      <div className={classNames("flex", "flex-col", "gap-m")}>
-        <span className={classNames("font-label-m-emphasized", "text-default")}>{value ? "On" : "Off"}</span>
-        <span className={classNames("font-label-s", "text-weak")}>AI Features</span>
+    <div
+      className={classNames(
+        "flex",
+        "row",
+        "gap_m",
+        "ai_center",
+        "text_default",
+      )}
+    >
+      <SparkleIcon className={classNames("fill_current")} />
+      <div className={classNames("flex", "col", "gap_m")}>
+        <span className={classNames("font_label_m_emphasized", "text_default")}>
+          {value ? "On" : "Off"}
+        </span>
+        <span className={classNames("font_label_s", "text_weak")}>
+          AI Features
+        </span>
       </div>
     </div>
   );
 };
 
-export const MyCustomInlineEdit = ({ value, onChange }: MyCustomInlineEditProps) => {
+export const MyCustomInlineEdit = ({
+  value,
+  onChange,
+}: MyCustomInlineEditProps) => {
   return (
     <InlineEdit.Primitive
       onCancel={() => {
@@ -135,7 +186,13 @@ export const MyCustomInlineEdit = ({ value, onChange }: MyCustomInlineEditProps)
         // submit the value to your backend or perform any action needed
       }}
       view={() => <AiFeaturesView value={value} />}
-      edit={() => <Switch checked={value} onChange={() => onChange(!value)} label="AI Features" />}
+      edit={() => (
+        <Switch
+          checked={value}
+          onChange={() => onChange(!value)}
+          label="AI Features"
+        />
+      )}
     />
   );
 };

@@ -42,8 +42,8 @@
   content: " ";
   block-size: 100%;
   min-block-size: var(--sprout-common-sizing-3xl);
-  inline-size: var(--sprout-common-border-extra-strong-width);
-  background-color: var(--sprout-common-border-extra-strong-color);
+  inline-size: var(--sprout-common-border-default-width);
+  background-color: var(--sprout-common-border-default-color);
 }
 
 .stepper[data-orientation="horizontal"] {
@@ -68,10 +68,10 @@
 
 .stepper[data-orientation="horizontal"] .line::before {
   content: " ";
-  block-size: var(--sprout-common-border-extra-strong-width);
+  block-size: var(--sprout-common-border-default-width);
   inline-size: 100%;
   min-inline-size: var(--sprout-common-sizing-3xl);
-  background-color: var(--sprout-common-border-extra-strong-color);
+  background-color: var(--sprout-common-border-default-color);
 }
 
 .stepper[data-orientation="horizontal"] > li:last-child {
