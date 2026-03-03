@@ -1,8 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/no-unstable-nested-components */
 
-import { EditIcon, MapIcon } from "@qlik/sprout-icons/react";
-import Warning from "@qlik/sprout-icons/react/Warning";
+import { EditIcon, MapIcon, WarningIcon } from "@qlik/sprout-icons/react";
 import { Button, classNames, InlineEdit, Menu, Message, Select, TextField } from "@qlik/sprout-react";
 import type { StoryObj } from "@storybook/react-vite";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
@@ -709,7 +708,7 @@ export const StatusIconColumn: StoryObj<TableProps<Person>> = {
         headerName: "Last Name",
         headerDescription: "String",
         flex: 1,
-        statusIcon: <Warning />,
+        statusIcon: <WarningIcon />,
       },
       {
         field: "age",
@@ -762,7 +761,7 @@ export const FlexColumns: StoryObj<TableProps<Person>> = {
         headerName: "Last Name",
         headerDescription: "String",
         flex: 1,
-        statusIcon: <Warning />,
+        statusIcon: <WarningIcon />,
       },
       {
         field: "age",

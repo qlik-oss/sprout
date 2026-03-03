@@ -8,7 +8,7 @@ import {
 } from "react";
 
 import { tokens } from "@qlik/design-tokens";
-import ErrorOutlineIcon from "@qlik/sprout-icons/react/Error";
+import { ErrorIcon } from "@qlik/sprout-icons/react";
 
 import { InputButton } from "../InputButton";
 import type { PossibleValues } from "../Typography";
@@ -201,7 +201,7 @@ function InputBase(props: InputProps, ref?: Ref<HTMLInputElement>) {
           ) : null}
         </div>
         {hasError ? (
-          <ErrorOutlineIcon
+          <ErrorIcon
             data-icon="error"
             data-testid="input-error-icon"
             width={undefined}

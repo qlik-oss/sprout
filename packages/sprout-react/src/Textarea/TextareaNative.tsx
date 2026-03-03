@@ -2,7 +2,7 @@
 import { type FocusEvent, type Ref, forwardRef } from "react";
 
 import sprout from "@qlik/sprout-css-modules";
-import ErrorIcon from "@qlik/sprout-icons/react/Error";
+import { ErrorIcon } from "@qlik/sprout-icons/react";
 
 import type { HTMLTextareaProps } from "../htmlTypes";
 
