@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-import type { UseControlReturns } from "@qlik/sprout-hooks";
+import type { UseControlReturns } from "@qlik/sprout-react-hooks";
 
 type TabsInternalContextProps =
   | (UseControlReturns<string> & {

@@ -5,7 +5,7 @@ import {
   useContainer as useContainerBase,
   useControl as useControlPrimitive,
   useId as useIdBase,
-} from "@qlik/sprout-hooks";
+} from "@qlik/sprout-react-hooks";
 
 import { useI18n } from "./hooks/useI18n";
 
@@ -66,18 +66,18 @@ export const useSproutI18n = useI18n;
 
 /**
  * @deprecated
- * import { useControl } from '@qlik/sprout-hooks'; instead
+ * import { useControl } from '@qlik/sprout-react-hooks'; instead
  */
 export const useControl = useControlPrimitive;
 
 /**
  * @deprecated
- * import { useId } from '@qlik/sprout-hooks'; instead.
+ * import { useId } from '@qlik/sprout-react-hooks'; instead.
  */
 export const useId = useIdBase;
 
 /**
  * @deprecated
- * import { useContainer } from '@qlik/sprout-hooks'; instead.
+ * import { useContainer } from '@qlik/sprout-react-hooks'; instead.
  */
 export const useContainer = useContainerBase;

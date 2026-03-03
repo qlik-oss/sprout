@@ -10,8 +10,7 @@ import {
 
 test(`should ThemeProvider read global`, async ({ mount }) => {
   const component = await mount(<ThemeProviderGlobal />);
-  await expect(component).toHaveAttribute("data-qlik-appearance", "qlik-light");
-  await expect(component).toHaveAttribute("data-qlik-density", "comfortable");
+  await expect(component).toHaveAttribute("data-qlik-theme", "qlik-light");
 });
 
 test(`should ThemeProvider cascade`, async ({ mount, page }) => {
@@ -25,26 +24,14 @@ test(`should ThemeProvider cascade`, async ({ mount, page }) => {
     ),
   ).toBe(false);
   // test global
-  await expect(root).toHaveAttribute("data-qlik-appearance", "qlik-light");
-  await expect(nested).toHaveAttribute("data-qlik-appearance", "qlik-light");
-  // test context
-  await expect(root).toHaveAttribute("data-qlik-density", "dense");
-  await expect(nested).toHaveAttribute("data-qlik-density", "dense");
-  // test props
-  await expect(root).toHaveAttribute("data-qlik-roundness", "soft");
-  await expect(nested).toHaveAttribute("data-qlik-roundness", "rounded");
-  // test DEFAULT_THEME
-  await expect(root).toHaveAttribute("data-qlik-sizing", "mid-sized");
-  await expect(nested).toHaveAttribute("data-qlik-sizing", "mid-sized");
+  await expect(root).toHaveAttribute("data-qlik-theme", "qlik-light");
+  await expect(nested).toHaveAttribute("data-qlik-theme", "qlik-light");
 });
 
 test("should ThemeProvider work with manual setup", async ({ mount, page }) => {
   await mount(<ThemeProviderWithManualSetup />);
   const deep = await page.getByTestId("deep");
-  await expect(deep).toHaveAttribute("data-qlik-appearance", "qlik-dark");
-  await expect(deep).toHaveAttribute("data-qlik-density", "dense");
-  await expect(deep).toHaveAttribute("data-qlik-sizing", "foo");
-  await expect(deep).toHaveAttribute("data-qlik-typography", "source-sans");
+  await expect(deep).toHaveAttribute("data-qlik-theme", "qlik-dark");
 });
 
 test(`should ThemeProvider expose isTouch in context`, async ({
@@ -60,7 +47,7 @@ test(`should ThemeProvider expose isTouch in context`, async ({
 
 test("should ThemeProvider watch body changes", async ({ mount, page }) => {
   await mount(<ThemeProviderWatchBody />);
-  const button = page.getByTestId("theme-appearance");
+  const button = page.getByTestId("theme");
 
   // initial theme
   await expect(button).toHaveText("qlik-light");

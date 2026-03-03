@@ -1,23 +1,25 @@
 import type { ReactNode } from "react";
 
 import { tokens } from "@qlik/design-tokens";
-import ErrorIcon from "@qlik/sprout-icons/react/Error";
-import Info from "@qlik/sprout-icons/react/Info";
-import Success from "@qlik/sprout-icons/react/Success";
-import Warning from "@qlik/sprout-icons/react/Warning";
+import {
+  ErrorIcon,
+  InfoIcon,
+  SuccessIcon,
+  WarningIcon,
+} from "@qlik/sprout-icons/react";
 
 export type SeverityValue = "info" | "warning" | "error" | "success";
 
 export const SEVERITY_ICONS: Record<SeverityValue, ReactNode> = {
   info: (
-    <Info
+    <InfoIcon
       width={undefined}
       height={undefined}
       style={{ fill: tokens.info_color_default }}
     />
   ),
   warning: (
-    <Warning
+    <WarningIcon
       width={undefined}
       height={undefined}
       style={{ fill: tokens.warning_color_default }}
@@ -31,7 +33,7 @@ export const SEVERITY_ICONS: Record<SeverityValue, ReactNode> = {
     />
   ),
   success: (
-    <Success
+    <SuccessIcon
       width={undefined}
       height={undefined}
       style={{ fill: tokens.success_color_default }}

@@ -23,7 +23,9 @@
 }
 
 /* ensure children interactive elements receive this to let them on top of the button.item-interactive and let other elements under it */
+/* stylelint-disable-next-line selector-no-qualifying-type */
 .focusable-target button:not(.focusable-trigger),
+/* stylelint-disable-next-line selector-no-qualifying-type */
 .focusable-target a:not(.focusable-trigger),
 .focusable-target input,
 .focusable-target select,

@@ -257,6 +257,34 @@ test('secondary action should have "open in new tab" icon and label', async ({
   const tooltip = page.getByRole("tooltip");
   await expect(tooltip).toBeVisible();
   await expect(tooltip).toHaveText("Opens in a new tab");
+  await expect(tooltip).toHaveAttribute("data-placement", "top");
+});
+
+test("secondary action should display tooltip on the right when set to right", async ({
+  mount,
+  page,
+}) => {
+  await mount(
+    <Menu.Trigger
+      menu={
+        <Menu.Split>
+          <Menu.Item label="Open source" />
+          <Menu.SecondaryAction tooltipPlacement="right" />
+        </Menu.Split>
+      }
+    >
+      <Button label="Open Menu" />
+    </Menu.Trigger>,
+  );
+  const btn = page.getByRole("button");
+  await btn.click();
+  const menu = page.getByRole("menu");
+  const allMenuItems = await menu.getByRole("menuitem").all();
+
+  await allMenuItems[1].hover();
+  const tooltip = page.getByRole("tooltip");
+  await expect(tooltip).toBeVisible();
+  await expect(tooltip).toHaveAttribute("data-placement", "right");
 });
 
 test("submenu should open on hover", async ({ mount, page }) => {

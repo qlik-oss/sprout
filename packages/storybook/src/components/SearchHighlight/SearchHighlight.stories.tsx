@@ -1,7 +1,12 @@
 import { useState } from "react";
 
-import { IconButton, SearchHighlight, classNames } from "@qlik/sprout-react";
+import {
+  IconButton,
+  SearchHighlight,
+  classNames,
+} from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
+
 import { ArrowLeftIcon, ArrowRightIcon } from "../../icons";
 
 type Story = StoryObj<typeof SearchHighlight>;
@@ -59,7 +64,9 @@ export const WithNavigation = {
 
     return (
       <div className={classNames("flex", "flex-col", "gap-m")}>
-        <div className={classNames("flex", "flex-row", "gap-xs", "items-center")}>
+        <div
+          className={classNames("flex", "flex-row", "gap-xs", "items-center")}
+        >
           <IconButton
             variant="quiet"
             size="small"
@@ -69,7 +76,9 @@ export const WithNavigation = {
             disabled={activeIndex === 0}
           />
           <span className={classNames("font-body-s", "text-default")}>
-            {totalMatches > 0 ? `${activeIndex + 1} of ${totalMatches}` : "No matches"}
+            {totalMatches > 0
+              ? `${activeIndex + 1} of ${totalMatches}`
+              : "No matches"}
           </span>
           <IconButton
             variant="quiet"
@@ -81,9 +90,14 @@ export const WithNavigation = {
           />
         </div>
         <p>
-          <SearchHighlight query="test" activeIndex={activeIndex} onMatchCount={setTotalMatches}>
-            This is a test string with multiple test occurrences for test purposes. Each test word is highlighted, and
-            you can navigate between test matches using the buttons above.
+          <SearchHighlight
+            query="test"
+            activeIndex={activeIndex}
+            onMatchCount={setTotalMatches}
+          >
+            This is a test string with multiple test occurrences for test
+            purposes. Each test word is highlighted, and you can navigate
+            between test matches using the buttons above.
           </SearchHighlight>
         </p>
       </div>
@@ -100,9 +114,12 @@ export const VisualTest = {
           This is a search result with activeIndex.
         </SearchHighlight>
         <SearchHighlight query="test" activeIndex={1}>
-          This is a test string with multiple test occurrences for test purposes with activeIndex set to 1
+          This is a test string with multiple test occurrences for test purposes
+          with activeIndex set to 1
         </SearchHighlight>
-        <SearchHighlight query="WORD">This word is matched regardless of case: Word, word, WORD</SearchHighlight>
+        <SearchHighlight query="WORD">
+          This word is matched regardless of case: Word, word, WORD
+        </SearchHighlight>
         <SearchHighlight query="Word" caseSensitive>
           Only Word is matched, not word or WORD
         </SearchHighlight>

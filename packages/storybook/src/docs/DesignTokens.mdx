@@ -34,28 +34,19 @@ The philosophy behind tokens is to avoid relying on specific values and instead 
 
 This doesn’t mean you shouldn’t test these values. Storybook provides an excellent way to test the changes supported by Sprout.
 
-You can also use our [Tailwind CSS](https://tailwindcss.com/) classNames, which are implemented using [sprout-css-modules](?path=/docs/css-sprout-css-modules--docs). All class names follow the Tailwind CSS naming convention. Here’s an example:
+You can also use our [sprout-css-modules](?path=/docs/css-sprout-css-modules--docs) classNames. Here’s an example:
 
 ```jsx
 import { classNames } from "@qlik/sprout-react";
 
 function MyComponent() {
-  return <div className={classNames("flex", "bg_default", "text_default")}>Hello world</div>;
+  return (
+    <div className={classNames("flex", "bg-default", "text-default")}>
+      Hello world
+    </div>
+  );
 }
 ```
-
-## Tokens Customization
-
-By customizing token values, you can make significant changes to the design. Our tokens are organized into different dimensions:
-
-- **Appearance**: Covers all colors and is the first step in customization.
-- **Roundness**: Helps adjust the UI to be more rounded or sharper.
-- **Typography**: Allows you to specify where your fonts are located.
-- **Density**: Focuses on accessibility and should generally not be changed.
-
-These tokens are considered a public API, enabling integrations to provide new values and make the UI look different.
-
-We will provide multiple examples in the future to help developers test their UI with "extreme" configurations.
 
 ## Tokens Data Table
 

@@ -11,7 +11,13 @@ Tree views help users navigate large amounts of information by organizing conten
 ```jsx
 import { Tree } from "@qlik/sprout-react";
 
-<Tree.TreeItem id="leaf-icon" path={["folder_expanded"]} label="Leaf icon" isLeaf icon={<FileOutline />} />;
+<Tree.TreeItem
+  id="leaf-icon"
+  path={["folder_expanded"]}
+  label="Leaf icon"
+  isLeaf
+  icon={<FileOutline />}
+/>;
 ```
 
 <Canvas of={Stories.TreeItem} />

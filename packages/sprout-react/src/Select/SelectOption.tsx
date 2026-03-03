@@ -7,8 +7,8 @@ import {
   useState,
 } from "react";
 
+import { useId } from "@qlik/sprout-react-hooks";
 import sprout from "@qlik/sprout-css-modules";
-import { useId } from "@qlik/sprout-hooks";
 
 import { Menu, type MenuProps } from "../Menu";
 import { MenuContentPrimitive } from "../Menu/MenuContent";

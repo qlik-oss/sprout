@@ -1,1 +1,9 @@
-{}
+{
+  "table.column.visibility-form.footer.label": {
+    "value": {
+      "other": "{{count}}/{{total}} 열이 표시됨"
+    },
+    "comment": "This is displayed in the footer of the visbility form column filter for every table.",
+    "version": "6jngMitmNOFAih7NlTOsxw=="
+  }
+}

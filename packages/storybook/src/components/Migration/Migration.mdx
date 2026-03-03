@@ -1,0 +1,179 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Migration/From MUI" />
+
+# Migration from MUI to Sprout CSS React
+
+[Metrics dashboard](https://qlikinternal.us.qlikcloud.com/sense/app/10f1d425-8e89-421b-8480-30bbea5be4bb/sheet/nEbpM/)
+
+This guide outlines how to migrate components and styling from **MUI** to **Sprout CSS React**.  
+We’ll start with global practices, followed by component-specific guidance.
+
+## sx props
+
+Restyling a component is a violation, you must consider each Sprout component as a Lego brick that you can't change anything, even adding margin. This is the only way to guarantee consistency and ownership of those components. Overrides makes update impossible.
+
+The different technics to work with sprout components:
+
+### Solution 1: Wrap the component
+
+Instead of adding margin to a "button" you can do wrap it and add the margin on this wrapper:
+
+```typescript
+<span className={classNames('m_xs')}><Button onClick={} label="label"/></span>
+```
+
+### Warning: MarginLeft, PaddingRight, and other physical properties brakes RTL support
+
+First you should rely on `classNames` all the time even for small layouting.
+
+This example is wrong as it breaks RTL. Also the spacing are incorrect, you should always rely on the spacing and density [tokens](https://internal.qlik.dev/design/sprout/design-tokens/list-of-all-tokens/#spacing)
+
+```typescript
+<Box
+  sx={{
+    paddingLeft: 1,
+    paddingRight: 1,
+    marginBottom: "2px",
+  }}
+>...</Box>
+```
+
+This kind of layout should be done by using our
+[padding](/?path=/story/css-sprout-css-modules--typography) and margin utility classes
+which are named using left/right top/bottom but internally are using logical properties:
+
+```typescript
+<div className={classNames("flex", "border_box", "flex_row", "pl_xs", "pr_xs", "mb_xs")}>...</div>
+```
+
+An other important point if the design has 1px, it's incorrect and you should request for an update. You should never need 1px in spacing.
+
+## Typography
+
+You can rely on our classNames for [typography](/?path=/story/css-sprout-css-modules--typography):
+
+```typescript
+import { classNames } from '@qlik/sprout-css'
+
+<h1 className={classNames("font_heading_m", "text_default")}>my title</h1>
+```
+
+## Box
+
+Box exists in sprout-css but it's **deprecated**. You should rely on our [flex](/?path=/story/css-sprout-css-modules--flexbox) and [grid](/?path=/story/css-sprout-css-modules--grid) utilities instead.
+
+```typescript
+import { classNames } from '@qlik/sprout-css'
+
+<div className={classNames("flex", "flex_col", "border_box")}></div>
+```
+
+## Grid
+
+sprout-css provides a CSS Grid system supporting up to 16 columns and 4 rows, with responsive grids coming soon.
+
+```typescript
+import { classNames } from '@qlik/sprout-css'
+<div className={classNames("grid", "grid_cols_12", "gap_m")}>
+  <div className={classNames("col_span_2")}></div>
+  ...
+</div>
+```
+
+## Accordion
+
+- [storybook](/docs/components-accordion--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/accordion/)
+
+## AlertInline
+
+- [storybook](/docs/components-alertinline--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/alert-in-line/)
+
+## Avatar
+
+- [storybook](/docs/components-avatar--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/avatar/)
+
+## Breadcrumbs
+
+- [storybook](/docs/components-breadcrumb--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/breadcrumb/)
+
+## Button
+
+- [storybook](/docs/components-button--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/button/)
+
+To improve consistency you can't have a right icon.
+
+## Checkbox
+
+- [storybook](/docs/components-checkbox--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/checkbox/)
+
+## Chip
+
+- [storybook](/docs/components-tag--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/tag/)
+
+## Progress
+
+- [storybook](/docs/components-progress--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/progress-indicators/)
+
+## Dialog
+
+- [storybook](/docs/components-modal--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/modal/)
+
+## Divider
+
+- [storybook](/docs/components-divider--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/divider/)
+
+## FormControl
+
+TBD
+
+## FormHelperText
+
+TBD
+
+## FormLabel
+
+TBD
+
+## List && ListItem
+
+- [storybook](/docs/components-list--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/list/)
+
+## Select
+
+Simple selection:
+
+- [storybook](/docs/components-select--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/select/)
+- [virtualized version](https://github.com/qlik-trial/sprout-css-virtual)
+
+Multiple selection:
+
+- [storybook](/docs/components-multiselect--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/multi-select/)
+
+## Skeleton
+
+- [storybook](/docs/components-skeleton--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/skeleton/)
+
+## TextField
+
+- [storybook](/docs/components-textfield--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/text-field/)
+
+## Tooltip
+
+- [storybook](/docs/components-tooltip--docs)
+- [devportal](https://internal.qlik.dev/design/sprout/components/tooltip/)

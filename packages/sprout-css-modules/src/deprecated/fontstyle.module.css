@@ -1,0 +1,9 @@
+.italic {
+  font-style: italic;
+}
+
+[lang^="zh"] .italic,
+[lang="ja"] .italic,
+[lang="ko"] .italic {
+  font-style: normal;
+}

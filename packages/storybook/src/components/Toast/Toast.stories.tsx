@@ -2,7 +2,13 @@ import { useState } from "react";
 import { fn } from "storybook/test";
 
 import sprout from "@qlik/sprout-css-modules";
-import { Button, Link, Toast, type ToastProps, classNames } from "@qlik/sprout-react";
+import {
+  Button,
+  Link,
+  Toast,
+  type ToastProps,
+  classNames,
+} from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { ToastArgTypes, type ToastArgs } from "./Toast.argTypes";
@@ -39,12 +45,22 @@ export const Playground: StoryObj<ToastArgs> = {
       },
     ]);
     return (
-      <div className={sprout.classNames("flex", "border-box", "items-start", "w-full")} style={{ blockSize: "300px" }}>
+      <div
+        className={sprout.classNames(
+          "flex",
+          "border-box",
+          "items-start",
+          "w-full",
+        )}
+        style={{ blockSize: "300px" }}
+      >
         <Button
           onClick={() => {
             const newToast = { ...args, id: Math.random().toString() };
             newToast.onClose = () => {
-              setToast((current) => current.filter((t) => t.id !== newToast.id));
+              setToast((current) =>
+                current.filter((t) => t.id !== newToast.id),
+              );
             };
             setToast([...toast, newToast]);
           }}
@@ -90,7 +106,15 @@ export const ProblematicContent = {
     },
   },
   render: () => (
-    <div className={sprout.classNames("flex", "border-box", "flex-col", "gap-l", "w-fit")}>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "border-box",
+        "flex-col",
+        "gap-l",
+        "w-fit",
+      )}
+    >
       <Toast.Container placement="top-start">
         <Toast.Content
           severity="error"
@@ -173,11 +197,26 @@ export const Responsive = {
     },
   },
   render: () => (
-    <div className={sprout.classNames("flex", "border-box", "flex-col", "gap-l", "w-fit")}>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "border-box",
+        "flex-col",
+        "gap-l",
+        "w-fit",
+      )}
+    >
       <Toast.Container placement="top">
         <Toast.Content message="You will find it here" />
-        <Toast.Content message="You will find it here" title="Document created" />
-        <Toast.Content message="You will find it here" onClose={() => {}} title="Document created" />
+        <Toast.Content
+          message="You will find it here"
+          title="Document created"
+        />
+        <Toast.Content
+          message="You will find it here"
+          onClose={() => {}}
+          title="Document created"
+        />
         <Toast.Content
           title="Document created"
           message="You will find it here"
@@ -208,11 +247,23 @@ export const VisualTest = {
     },
   },
   render: () => (
-    <div className={sprout.classNames("flex", "border-box", "flex-col", "gap-l", "w-fit")}>
+    <div
+      className={sprout.classNames(
+        "flex",
+        "border-box",
+        "flex-col",
+        "gap-l",
+        "w-fit",
+      )}
+    >
       <Toast.Container placement="top-start">
         <Toast.Content message="Copied to clipboard" />
         <Toast.Content message="Copied to clipboard" onClose={() => {}} />
-        <Toast.Content message="You will find it in your drafts folder" onClose={() => {}} title="Document created " />
+        <Toast.Content
+          message="You will find it in your drafts folder"
+          onClose={() => {}}
+          title="Document created "
+        />
         <Toast.Content
           message="You will find it in your drafts folder and this long message should wrap and not overflow the container. It can only be three rows before it ellipsis. Let's make sure it does not overflow the container and that it wraps correctly."
           onClose={() => {}}
@@ -227,7 +278,11 @@ export const VisualTest = {
       </Toast.Container>
       <Toast.Container placement="top">
         <Toast.Content severity="info" message="Copied to clipboard" />
-        <Toast.Content severity="info" message="Copied to clipboard" onClose={() => {}} />
+        <Toast.Content
+          severity="info"
+          message="Copied to clipboard"
+          onClose={() => {}}
+        />
         <Toast.Content
           severity="info"
           message="You will find it in your drafts folder"
@@ -250,7 +305,11 @@ export const VisualTest = {
       </Toast.Container>
       <Toast.Container placement="top-end">
         <Toast.Content severity="success" message="Copied to clipboard" />
-        <Toast.Content severity="success" message="Copied to clipboard" onClose={() => {}} />
+        <Toast.Content
+          severity="success"
+          message="Copied to clipboard"
+          onClose={() => {}}
+        />
         <Toast.Content
           severity="success"
           message="You will find it in your drafts folder"
@@ -272,8 +331,15 @@ export const VisualTest = {
         />
       </Toast.Container>
       <Toast.Container placement="bottom">
-        <Toast.Content severity="warning" message={<div>Copied to clipboard</div>} />
-        <Toast.Content severity="warning" message={<div>Copied to clipboard</div>} onClose={() => {}} />
+        <Toast.Content
+          severity="warning"
+          message={<div>Copied to clipboard</div>}
+        />
+        <Toast.Content
+          severity="warning"
+          message={<div>Copied to clipboard</div>}
+          onClose={() => {}}
+        />
         <Toast.Content
           severity="warning"
           message={<div>You will find it in your drafts folder</div>}
@@ -295,8 +361,15 @@ export const VisualTest = {
         />
       </Toast.Container>
       <Toast.Container placement="bottom-end">
-        <Toast.Content severity="error" message={<div>Copied to clipboard</div>} />
-        <Toast.Content severity="error" message={<div>Copied to clipboard</div>} onClose={() => {}} />
+        <Toast.Content
+          severity="error"
+          message={<div>Copied to clipboard</div>}
+        />
+        <Toast.Content
+          severity="error"
+          message={<div>Copied to clipboard</div>}
+          onClose={() => {}}
+        />
         <Toast.Content
           severity="error"
           message={<div>You will find it in your drafts folder</div>}
@@ -324,7 +397,12 @@ export const VisualTest = {
           action={{ label: "Dismiss" }}
         />
         <Toast.Content
-          message={<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. </div>}
+          message={
+            <div>
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem
+              ipsum dolor sit amet.{" "}
+            </div>
+          }
           onClose={() => {}}
         />
         <Toast.Content
@@ -333,12 +411,15 @@ export const VisualTest = {
               <ul className={classNames("pl-xl", "m-0")}>
                 <li>Do not respect the guideline so trigger a11y issue.</li>
                 <li>In this toast container we have a list with two items.</li>
-                <li>When the message is higher than 3 rows, an overflow will occcur.</li>
+                <li>
+                  When the message is higher than 3 rows, an overflow will
+                  occcur.
+                </li>
               </ul>
 
               <p>
                 Here&apos;s a{" "}
-                <Link font="body-xs" href="#/foo">
+                <Link font="body_xs" href="#/foo">
                   link
                 </Link>{" "}
                 that goes nowhere

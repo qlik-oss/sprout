@@ -6,7 +6,8 @@ export const AlertInlineArgTypes: ArgTypes<AlertInlineProps> = {
     control: {
       type: "text",
     },
-    description: "Content of the alert inline. `message` prop has been deprecated.",
+    description:
+      "Content of the alert inline. `message` prop has been deprecated.",
     table: {
       type: { summary: "ReactNode" },
     },

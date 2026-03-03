@@ -1,29 +1,23 @@
-.box_shadow_none,
 .box-shadow-none {
   box-shadow: none;
 }
 
-.box_shadow_transparent,
 .box-shadow-transparent {
   box-shadow: 0 0 0 0 transparent;
 }
 
-.box_shadow_default,
 .box-shadow-default {
   box-shadow: var(--sprout-common-elevation-default);
 }
 
-.box_shadow_weak,
 .box-shadow-weak {
   box-shadow: var(--sprout-common-elevation-weak);
 }
 
-.box_shadow_moderate,
 .box-shadow-moderate {
   box-shadow: var(--sprout-common-elevation-moderate);
 }
 
-.box_shadow_strong,
 .box-shadow-strong {
   box-shadow: var(--sprout-common-elevation-strong);
 }

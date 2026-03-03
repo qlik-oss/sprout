@@ -15,7 +15,8 @@ It decrease the size of your bundle as we reuse the same CSS over and over again
 // First usage, framework agnostic
 import sprout from "@qlik/sprout-css-modules";
 
-sprout.classNames("flex, bg-default", "text-default") === `${sprout.flex} ${sprout.bg_default} ${sprout.text_default}`;
+sprout.classNames("flex, bg-default", "text-default") ===
+  `${sprout.flex} ${sprout.bg_default} ${sprout.text_default}`;
 ```
 
 The main function is `classNames` which rely on [classnames](https://www.npmjs.com/package/classnames) with a small difference in it's definition to provide a better experience with sprout.
@@ -42,7 +43,11 @@ The second usage is when you already rely on `@qlik/sprout-react` you don't need
 import { classNames } from "@qlik/sprout-react";
 
 function MyComponent() {
-  return <div className={classNames("flex", "bg-default", "text-default")}>Hello world</div>;
+  return (
+    <div className={classNames("flex", "bg-default", "text-default")}>
+      Hello world
+    </div>
+  );
 }
 ```
 
@@ -55,7 +60,9 @@ They provide shorthand replacements for `<Box>` and `getBoxProps`.
 {
   "className-box": {
     "prefix": "classNames",
-    "body": ["className={classNames(\"flex\", \"border-box\", \"flex-row\"$1)}"],
+    "body": [
+      "className={classNames(\"flex\", \"border-box\", \"flex-row\"$1)}"
+    ],
     "description": "add classNames={classNames(\"flex\", \"flex-row\", \"border-box\"$1)}"
   }
 }

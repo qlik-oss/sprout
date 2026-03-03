@@ -8,7 +8,7 @@ import {
 } from "react";
 
 import { useMergeRefs } from "@floating-ui/react";
-import { useId } from "@qlik/sprout-hooks";
+import { useId } from "@qlik/sprout-react-hooks";
 
 import {
   type FloatingPrimitiveProps,
@@ -26,7 +26,7 @@ export type MenuTriggerBaseProps = {
   menu: ReactNode;
 } & Omit<
   FloatingPrimitiveProps,
-  "focus" | "initialOpen" | "content" | "className" | "minWidth" | "maxWidth"
+  "focus" | "initialOpen" | "content" | "className" | "minWidth"
 >;
 
 function getAllItems(element: HTMLElement) {
@@ -70,6 +70,7 @@ function TriggerBase(
     onOpenChange,
     placement,
     children,
+    maxWidth = "xs",
     ...props
   }: MenuTriggerBaseProps,
   parentRef?: Ref<HTMLDivElement>,
@@ -171,7 +172,7 @@ function TriggerBase(
       placementUpdate
       role="menu"
       minWidth="reference"
-      maxWidth="xs"
+      maxWidth={maxWidth}
       className={style.menu}
       content={menu}
       {...props}

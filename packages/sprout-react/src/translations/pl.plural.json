@@ -1,1 +1,12 @@
-{}
+{
+  "table.column.visibility-form.footer.label": {
+    "value": {
+      "one": "Widoczna {{count}}/{{total}} kolumny",
+      "few": "Widoczne {{count}}/{{total}} kolumn",
+      "many": "Widocznych {{count}}/{{total}} kolumn",
+      "other": "Widoczne {{count}}/{{total}} kolumn"
+    },
+    "comment": "This is displayed in the footer of the visbility form column filter for every table.",
+    "version": "6jngMitmNOFAih7NlTOsxw=="
+  }
+}

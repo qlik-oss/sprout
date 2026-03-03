@@ -1,10 +1,23 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { type JSX, createContext, useCallback, useContext, useEffect, useState } from "react";
+import {
+  type JSX,
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { fn } from "storybook/test";
 
+import {
+  InlineEdit,
+  type InlineEditProps,
+  Select,
+  Switch,
+  classNames,
+} from "@qlik/sprout-react";
+import { Table, type TableProps } from "@qlik/sprout-css-table";
 import { GenerateWithAiIcon } from "@qlik/sprout-icons/react";
-import { InlineEdit, type InlineEditProps, Select, Switch, classNames } from "@qlik/sprout-react";
-import { Table, type TableProps } from "@qlik/sprout-table";
 import type { StoryObj } from "@storybook/react-vite";
 
 import { OPTIONS_WITH_GROUP } from "../Select/SelectTest";
@@ -122,7 +135,16 @@ export const VisualTestTextField: StoryObj = {
   },
   render: () => (
     <div className={classNames("flex", "border-box", "flex-col", "gap-3xl")}>
-      <h2 className={classNames("flex", "border-box", "font-heading-m", "text-default")}>InlineEdit.TextField</h2>
+      <h2
+        className={classNames(
+          "flex",
+          "border-box",
+          "font-heading-m",
+          "text-default",
+        )}
+      >
+        InlineEdit.TextField
+      </h2>
       <div
         className={classNames(
           "flex",
@@ -136,10 +158,18 @@ export const VisualTestTextField: StoryObj = {
         )}
       >
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
-          <InlineEdit.TextField aria-label="Edit color" defaultValue="" placeholder="placeholder" />
+          <InlineEdit.TextField
+            aria-label="Edit color"
+            defaultValue=""
+            placeholder="placeholder"
+          />
         </div>
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
-          <InlineEdit.TextField aria-label="Edit color" defaultValue="default value" showEditIcon />
+          <InlineEdit.TextField
+            aria-label="Edit color"
+            defaultValue="default value"
+            showEditIcon
+          />
         </div>
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
           <InlineEdit.TextField
@@ -150,23 +180,57 @@ export const VisualTestTextField: StoryObj = {
           />
         </div>
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
-          <InlineEdit.TextField aria-label="Edit color" defaultValue="Hover" data-testid="hovered" />
+          <InlineEdit.TextField
+            aria-label="Edit color"
+            defaultValue="Hover"
+            data-testid="hovered"
+          />
         </div>
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
-          <InlineEdit.TextField aria-label="Edit color" defaultValue="Focus" data-testid="focused" />
+          <InlineEdit.TextField
+            aria-label="Edit color"
+            defaultValue="Focus"
+            data-testid="focused"
+          />
         </div>
-        <div className={classNames("flex", "border-box", "p-m")} style={{ inlineSize: "100px" }}>
-          <InlineEdit.TextField aria-label="Edit color" defaultValue="Default with overflow" />
+        <div
+          className={classNames("flex", "border-box", "p-m")}
+          style={{ inlineSize: "100px" }}
+        >
+          <InlineEdit.TextField
+            aria-label="Edit color"
+            defaultValue="Default with overflow"
+          />
         </div>
       </div>
-      <h2 className={classNames("flex", "border-box", "font-heading-m", "text-default")}>
+      <h2
+        className={classNames(
+          "flex",
+          "border-box",
+          "font-heading-m",
+          "text-default",
+        )}
+      >
         InlineEdit.TextField editMode
       </h2>
       <div
-        className={classNames("flex", "border-box", "flex-row", "gap-xl", "p-m", "items-center", "justify-start")}
+        className={classNames(
+          "flex",
+          "border-box",
+          "flex-row",
+          "gap-xl",
+          "p-m",
+          "items-center",
+          "justify-start",
+        )}
         style={{ inlineSize: "500px" }}
       >
-        <InlineEdit.TextField aria-label="Edit color" defaultValue="Edit" showEditIcon isEditingDefault />
+        <InlineEdit.TextField
+          aria-label="Edit color"
+          defaultValue="Edit"
+          showEditIcon
+          isEditingDefault
+        />
         <InlineEdit.TextField
           aria-label="Edit color"
           defaultValue="Edit + showFormButtons"
@@ -175,11 +239,26 @@ export const VisualTestTextField: StoryObj = {
         />
       </div>
 
-      <h2 className={classNames("flex", "border-box", "font-heading-m", "text-default")}>
+      <h2
+        className={classNames(
+          "flex",
+          "border-box",
+          "font-heading-m",
+          "text-default",
+        )}
+      >
         InlineEdit.TextField editMode vs view mode
       </h2>
       <div
-        className={classNames("flex", "border-box", "flex-row", "gap-xl", "p-m", "items-center", "justify-start")}
+        className={classNames(
+          "flex",
+          "border-box",
+          "flex-row",
+          "gap-xl",
+          "p-m",
+          "items-center",
+          "justify-start",
+        )}
         style={{ inlineSize: "500px" }}
       >
         <InlineEdit.TextField
@@ -187,23 +266,52 @@ export const VisualTestTextField: StoryObj = {
           defaultValue="Should not     trim   spaces.   WYSIWYG"
           isEditing
         />
-        <InlineEdit.TextField aria-label="Edit color" defaultValue="Should not     trim   spaces.   WYSIWYG" />
+        <InlineEdit.TextField
+          aria-label="Edit color"
+          defaultValue="Should not     trim   spaces.   WYSIWYG"
+        />
       </div>
 
-      <h2 className={classNames("flex", "border-box", "font-heading-m", "text-default")}>
+      <h2
+        className={classNames(
+          "flex",
+          "border-box",
+          "font-heading-m",
+          "text-default",
+        )}
+      >
         InlineEdit.TextField editMode + error
       </h2>
       <div
-        className={classNames("flex", "border-box", "flex-row", "gap-xl", "p-m", "items-start", "justify-start")}
+        className={classNames(
+          "flex",
+          "border-box",
+          "flex-row",
+          "gap-xl",
+          "p-m",
+          "items-start",
+          "justify-start",
+        )}
         style={{
           inlineSize: "1000px",
           blockSize: "150px",
         }}
       >
-        <div className={classNames("flex", "border-box", "grow", "shrink-0")} style={{ flexBasis: 1 }}>
-          <InlineEdit.TextField aria-label="Edit color" defaultValue="Edit + Error" hasError isEditingDefault />
+        <div
+          className={classNames("flex", "border-box", "grow", "shrink-0")}
+          style={{ flexBasis: 1 }}
+        >
+          <InlineEdit.TextField
+            aria-label="Edit color"
+            defaultValue="Edit + Error"
+            hasError
+            isEditingDefault
+          />
         </div>
-        <div className={classNames("flex", "border-box", "grow", "shrink-0")} style={{ flexBasis: 1 }}>
+        <div
+          className={classNames("flex", "border-box", "grow", "shrink-0")}
+          style={{ flexBasis: 1 }}
+        >
           <InlineEdit.TextField
             aria-label="Edit color"
             defaultValue="Error + showFormButtons"
@@ -212,7 +320,10 @@ export const VisualTestTextField: StoryObj = {
             isEditingDefault
           />
         </div>
-        <div className={classNames("flex", "border-box", "grow", "shrink-0")} style={{ flexBasis: 1 }}>
+        <div
+          className={classNames("flex", "border-box", "grow", "shrink-0")}
+          style={{ flexBasis: 1 }}
+        >
           <InlineEdit.TextField
             aria-label="Edit color"
             defaultValue="Error + errorMessages"
@@ -221,7 +332,10 @@ export const VisualTestTextField: StoryObj = {
             errorMessages={errorMessages}
           />
         </div>
-        <div className={classNames("flex", "border-box", "grow", "shrink-0")} style={{ flexBasis: 1 }}>
+        <div
+          className={classNames("flex", "border-box", "grow", "shrink-0")}
+          style={{ flexBasis: 1 }}
+        >
           <InlineEdit.TextField
             aria-label="Edit color"
             defaultValue="Error + errorMessages + showFormButtons"
@@ -232,23 +346,51 @@ export const VisualTestTextField: StoryObj = {
           />
         </div>
       </div>
-      <h2 className={classNames("flex", "border-box", "font-heading-m", "text-default")}>InlineEdit.TextField font</h2>
-      <div className={classNames("flex", "border-box", "flex-row", "gap-xl", "p-m", "items-center", "justify-start")}>
+      <h2
+        className={classNames(
+          "flex",
+          "border-box",
+          "font-heading-m",
+          "text-default",
+        )}
+      >
+        InlineEdit.TextField font
+      </h2>
+      <div
+        className={classNames(
+          "flex",
+          "border-box",
+          "flex-row",
+          "gap-xl",
+          "p-m",
+          "items-center",
+          "justify-start",
+        )}
+      >
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
           <InlineEdit.TextField
             aria-label="Edit color"
-            defaultValue="custom font heading-xl"
-            font="heading-xl"
+            defaultValue="custom font heading_xl"
+            font="heading_xl"
             showEditIcon
           />
         </div>
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
           <InlineEdit.TextField
             aria-label="Edit color"
-            defaultValue="custom font script-s"
-            font="script-s"
+            defaultValue="custom font script_s"
+            font="script_s"
             view={({ children }) => (
-              <span className={classNames("text-end", "font-script-s", "text-inverse", "bg-inverse")}>{children}</span>
+              <span
+                className={classNames(
+                  "text-end",
+                  "font-script-s",
+                  "text-inverse",
+                  "bg-inverse",
+                )}
+              >
+                {children}
+              </span>
             )}
             showEditIcon
           />
@@ -261,31 +403,79 @@ export const VisualTestTextField: StoryObj = {
 export const VisualTestSelect: StoryObj = {
   parameters: {
     pseudo: {
-      hover: ['[data-testid="hovered.view"][role="button"]', '[data-testid="focused"] [role="button"]'],
+      hover: [
+        '[data-testid="hovered.view"][role="button"]',
+        '[data-testid="focused"] [role="button"]',
+      ],
       active: '[data-testid="actived"]',
-      focusVisible: ['[data-testid="focused"] > role="button"', '[data-testid="focused.edit"] [role="combobox"]'],
+      focusVisible: [
+        '[data-testid="focused"] > role="button"',
+        '[data-testid="focused.edit"] [role="combobox"]',
+      ],
     },
   },
   render: () => (
     <div className={classNames("flex", "border-box", "flex-col", "gap-3xl")}>
-      <h2 className={classNames("flex", "border-box", "font-heading-m", "text-default")}>InlineEdit.Select</h2>
+      <h2
+        className={classNames(
+          "flex",
+          "border-box",
+          "font-heading-m",
+          "text-default",
+        )}
+      >
+        InlineEdit.Select
+      </h2>
       <div className={classNames("flex", "border-box", "flex-col", "gap-xxl")}>
         <div className={classNames("w-xxs", "flex", "flex-col", "gap-xl")}>
-          <InlineEdit.Select aria-label="Edit color" defaultValue="default" showEditIcon>
+          <InlineEdit.Select
+            aria-label="Edit color"
+            defaultValue="default"
+            showEditIcon
+          >
             {OPTIONS}
           </InlineEdit.Select>
-          <InlineEdit.Select aria-label="Edit color" defaultValue="hovered" showEditIcon data-testid="hovered">
+          <InlineEdit.Select
+            aria-label="Edit color"
+            defaultValue="hovered"
+            showEditIcon
+            data-testid="hovered"
+          >
             {OPTIONS}
           </InlineEdit.Select>
-          <InlineEdit.Select aria-label="Edit color" defaultValue="focused" showEditIcon data-testid="focused">
+          <InlineEdit.Select
+            aria-label="Edit color"
+            defaultValue="focused"
+            showEditIcon
+            data-testid="focused"
+          >
             {OPTIONS}
           </InlineEdit.Select>
         </div>
-        <div className={classNames("w-l", "flex", "flex-row", "gap-xxl", "items-start")} style={{ blockSize: "250px" }}>
-          <InlineEdit.Select aria-label="Edit color" defaultValue="editing" showEditIcon isEditingDefault>
+        <div
+          className={classNames(
+            "w-l",
+            "flex",
+            "flex-row",
+            "gap-xxl",
+            "items-start",
+          )}
+          style={{ blockSize: "250px" }}
+        >
+          <InlineEdit.Select
+            aria-label="Edit color"
+            defaultValue="editing"
+            showEditIcon
+            isEditingDefault
+          >
             {OPTIONS}
           </InlineEdit.Select>
-          <InlineEdit.Select aria-label="Edit color" defaultValue="hasError" hasError isEditingDefault>
+          <InlineEdit.Select
+            aria-label="Edit color"
+            defaultValue="hasError"
+            hasError
+            isEditingDefault
+          >
             {OPTIONS}
           </InlineEdit.Select>
           <InlineEdit.Select
@@ -314,10 +504,31 @@ export const VisualTestMultiSelect: StoryObj = {
   },
   render: () => (
     <div className={classNames("flex", "border-box", "flex-col", "gap-3xl")}>
-      <h2 className={classNames("flex", "border-box", "font-heading-m", "text-default")}>InlineEdit.MultiSelect</h2>
-      <div className={classNames("flex", "border-box", "flex-col", "gap-xxl", "items-start")}>
+      <h2
+        className={classNames(
+          "flex",
+          "border-box",
+          "font-heading-m",
+          "text-default",
+        )}
+      >
+        InlineEdit.MultiSelect
+      </h2>
+      <div
+        className={classNames(
+          "flex",
+          "border-box",
+          "flex-col",
+          "gap-xxl",
+          "items-start",
+        )}
+      >
         <div className={classNames("w-xxs", "flex", "gap-xl")}>
-          <InlineEdit.MultiSelect aria-label="Edit colors" defaultValue={["default"]} showEditIcon>
+          <InlineEdit.MultiSelect
+            aria-label="Edit colors"
+            defaultValue={["default"]}
+            showEditIcon
+          >
             {OPTIONS}
           </InlineEdit.MultiSelect>
           <InlineEdit.MultiSelect
@@ -338,13 +549,29 @@ export const VisualTestMultiSelect: StoryObj = {
           </InlineEdit.MultiSelect>
         </div>
         <div
-          className={classNames("w-xl", "flex", "flex-row", "gap-xxl", "items-start")}
+          className={classNames(
+            "w-xl",
+            "flex",
+            "flex-row",
+            "gap-xxl",
+            "items-start",
+          )}
           style={{ blockSize: "250px" }}
         >
-          <InlineEdit.MultiSelect aria-label="Edit colors" defaultValue={["editing"]} showEditIcon isEditingDefault>
+          <InlineEdit.MultiSelect
+            aria-label="Edit colors"
+            defaultValue={["editing"]}
+            showEditIcon
+            isEditingDefault
+          >
             {OPTIONS}
           </InlineEdit.MultiSelect>
-          <InlineEdit.MultiSelect aria-label="Edit colors" defaultValue={["hasError"]} hasError isEditingDefault>
+          <InlineEdit.MultiSelect
+            aria-label="Edit colors"
+            defaultValue={["hasError"]}
+            hasError
+            isEditingDefault
+          >
             {OPTIONS}
           </InlineEdit.MultiSelect>
           <InlineEdit.MultiSelect
@@ -362,12 +589,16 @@ export const VisualTestMultiSelect: StoryObj = {
   ),
 };
 
-export const CustomInlineEdit: StoryObj<Omit<InlineEditProps["Primitive"], "view" | "edit">> = {
+export const CustomInlineEdit: StoryObj<
+  Omit<InlineEditProps["Primitive"], "view" | "edit">
+> = {
   render: (props) => {
     const [value, setValue] = useState(true);
     const [initialValue, setInitialValue] = useState(true);
     return (
-      <div className={classNames("flex", "border-box", "p-xl", "w-xs", "bg-weak")}>
+      <div
+        className={classNames("flex", "border-box", "p-xl", "w-xs", "bg-weak")}
+      >
         <InlineEdit.Primitive
           onCancel={() => {
             setValue(initialValue);
@@ -389,13 +620,32 @@ export const CustomInlineEdit: StoryObj<Omit<InlineEditProps["Primitive"], "view
             >
               <GenerateWithAiIcon className={classNames("fill-current")} />
               <div className={classNames("flex", "flex-col", "gap-m")}>
-                <span className={classNames("font-label-m-emphasized", "text-default")}>{value ? "On" : "Off"}</span>
-                <span className={classNames("font-label-s", "text-weak")}>AI Features</span>
+                <span
+                  className={classNames(
+                    "font-label-m-emphasized",
+                    "text-default",
+                  )}
+                >
+                  {value ? "On" : "Off"}
+                </span>
+                <span className={classNames("font-label-s", "text-weak")}>
+                  AI Features
+                </span>
               </div>
             </div>
           }
           edit={
-            <div className={classNames("flex", "flex-row", "bg-default", "gap-m", "px-m", "py-xl", "items-center")}>
+            <div
+              className={classNames(
+                "flex",
+                "flex-row",
+                "bg-default",
+                "gap-m",
+                "px-m",
+                "py-xl",
+                "items-center",
+              )}
+            >
               <Switch
                 checked={value}
                 onChange={() => {
@@ -422,6 +672,15 @@ type Person = {
   firstName: string;
   lastName: string;
   bio: string;
+  role: string;
+};
+
+const ROLES = {
+  ADMIN:
+    "Administrator with extended system permissions that allows managing users, settings, and content across the platform.",
+  EDITOR: "Editor",
+  USER: "User",
+  VIEWER: "Viewer",
 };
 
 const data: Array<Person> = [
@@ -430,68 +689,151 @@ const data: Array<Person> = [
     firstName: "John",
     lastName: "Doe",
     bio: "Lorem ipsum dolor sit amet.",
+    role: ROLES.ADMIN,
   },
   {
     uuid: "2",
     firstName: "Jane",
     lastName: "Smith",
     bio: "Consectetur adipiscing elit.",
+    role: ROLES.EDITOR,
   },
   {
     uuid: "3",
     firstName: "Alice",
     lastName: "Johnson",
     bio: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    role: ROLES.USER,
   },
   {
     uuid: "4",
     firstName: "Bob",
     lastName: "Brown",
     bio: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    role: ROLES.VIEWER,
   },
   {
     uuid: "5",
     firstName: "Charlie",
     lastName: "Davis",
     bio: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur.",
+    role: ROLES.USER,
   },
   {
     uuid: "6",
     firstName: "Eve",
     lastName: "Wilson",
     bio: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    role: ROLES.ADMIN,
   },
   {
     uuid: "7",
     firstName: "Frank",
     lastName: "Garcia",
     bio: "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin.",
+    role: ROLES.USER,
   },
   {
     uuid: "8",
     firstName: "Grace",
     lastName: "Martinez",
     bio: "Integer in mauris eu nibh. Nullam mollis. Etiam vel erat sed augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi lacinia molestie dui.",
+    role: ROLES.EDITOR,
   },
   {
     uuid: "9",
     firstName: "Hank",
     lastName: "Lopez",
     bio: "Praesent id justo in neque elementum ultrices. Fusce fermentum. Donec ut mauris eget massa tempor convallis. Nulla facilisi.",
+    role: ROLES.VIEWER,
   },
   {
     uuid: "10",
     firstName: "Ivy",
     lastName: "Hernandez",
     bio: "Sed lectus. Integer euismod lacus luctus magna, non interdum quam sodales ut. Sed lectus. Integer euismod lacus luctus magna, non interdum quam sodales ut.",
+    role: ROLES.USER,
   },
 ];
+
+const ROLE_OPTIONS = [
+  <Select.Option key="admin" value={ROLES.ADMIN}>
+    {ROLES.ADMIN}
+  </Select.Option>,
+  <Select.Option key="editor" value={ROLES.EDITOR}>
+    {ROLES.EDITOR}
+  </Select.Option>,
+  <Select.Option key="user" value={ROLES.USER}>
+    {ROLES.USER}
+  </Select.Option>,
+  <Select.Option key="viewer" value={ROLES.VIEWER}>
+    {ROLES.VIEWER}
+  </Select.Option>,
+];
+
+function EditSelectCell({
+  row,
+  attr,
+  label,
+}: {
+  row: Person;
+  attr: keyof Person;
+  label: string;
+}): JSX.Element {
+  const context = useContext(TableInlineEditContext);
+  const [state, setState] = useState<string>(row[attr] as string);
+  useEffect(() => {
+    setState(row[attr] as string);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [row[attr]]);
+  return (
+    <div
+      className={classNames(
+        "px-s",
+        "w-full",
+        "h-full",
+        "whitespace-nowrap",
+        "overflow-hidden",
+      )}
+    >
+      <InlineEdit.Select
+        value={state}
+        onChange={(e, reason) => {
+          if (reason === "cancel") {
+            setState(row[attr] as string);
+            return;
+          }
+          setState(e.target.value);
+        }}
+        onSave={() => {
+          context.onRowChange({ ...row, [attr]: state });
+        }}
+        aria-label={label}
+        onSubmit={() => {
+          // eslint-disable-next-line no-console
+          console.log("submit", state);
+          context.onRowChange({ ...row, [attr]: state });
+        }}
+      >
+        {ROLE_OPTIONS}
+      </InlineEdit.Select>
+    </div>
+  );
+}
 
 const TableInlineEditContext = createContext<{
   onRowChange: (row: Person) => void;
 }>({ onRowChange: () => {} });
 
-function EditCell({ row, attr, label }: { row: Person; attr: keyof Person; label: string }): JSX.Element {
+function EditCell({
+  row,
+  attr,
+  label,
+}: {
+  row: Person;
+  attr: keyof Person;
+  label: string;
+}): JSX.Element {
   const context = useContext(TableInlineEditContext);
   const [state, setState] = useState<string>(row[attr] as string);
   useEffect(() => {
@@ -532,7 +874,9 @@ export const InlineEditTable: StoryObj<TableProps<Person>> = {
     const [rows, setRows] = useState<Array<Person>>(data);
     const onRowChange = useCallback(
       () => (row: Person) => {
-        setRows((prevRows) => prevRows.map((r) => (r.uuid === row.uuid ? { ...r, ...row } : r)));
+        setRows((prevRows) =>
+          prevRows.map((r) => (r.uuid === row.uuid ? { ...r, ...row } : r)),
+        );
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
       [rows],
@@ -543,7 +887,10 @@ export const InlineEditTable: StoryObj<TableProps<Person>> = {
           onRowChange,
         }}
       >
-        <div className={classNames("w-full", "p-xl", "border-box")} style={{ blockSize: 300 }}>
+        <div
+          className={classNames("w-full", "p-xl", "border-box")}
+          style={{ blockSize: 300 }}
+        >
           <Table {...props} rows={rows} getRowId={(row) => row.uuid} />
         </div>
       </TableInlineEditContext.Provider>
@@ -556,14 +903,27 @@ export const InlineEditTable: StoryObj<TableProps<Person>> = {
         field: "firstName",
         headerName: "First Name",
         renderCell: ({ row, colDef }) => {
-          return <EditCell row={row} attr="firstName" label={colDef.headerName} />;
+          return (
+            <EditCell row={row} attr="firstName" label={colDef.headerName} />
+          );
         },
       },
       {
         field: "lastName",
         headerName: "Last Name",
         renderCell: ({ row, colDef }) => {
-          return <EditCell row={row} attr="lastName" label={colDef.headerName} />;
+          return (
+            <EditCell row={row} attr="lastName" label={colDef.headerName} />
+          );
+        },
+      },
+      {
+        field: "role",
+        headerName: "Role",
+        renderCell: ({ row, colDef }) => {
+          return (
+            <EditSelectCell row={row} attr="role" label={colDef.headerName} />
+          );
         },
       },
       {

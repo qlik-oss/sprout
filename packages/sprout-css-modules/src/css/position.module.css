@@ -18,206 +18,166 @@
   position: sticky;
 }
 
-.inset_0,
 .inset-0 {
   inset-block: 0;
   inset-inline: 0;
 }
 
-.inset_s,
 .inset-s {
   inset-block: var(--sprout-common-sizing-s);
   inset-inline: var(--sprout-common-sizing-s);
 }
 
-.inset_m,
 .inset-m {
   inset-block: var(--sprout-common-sizing-m);
   inset-inline: var(--sprout-common-sizing-m);
 }
 
-.inset_l,
 .inset-l {
   inset-block: var(--sprout-common-sizing-l);
   inset-inline: var(--sprout-common-sizing-l);
 }
 
-.top_0,
 .top-0 {
   inset-block-start: 0;
 }
 
-.top_s,
 .top-s {
   inset-block-start: var(--sprout-common-sizing-s);
 }
 
-._top_s,
 .-top-s {
   inset-block-start: calc(var(--sprout-common-sizing-s) * -1);
 }
 
-.top_m,
 .top-m {
   inset-block-start: var(--sprout-common-sizing-m);
 }
 
-._top_m,
 .-top-m {
   inset-block-start: calc(var(--sprout-common-sizing-m) * -1);
 }
 
-.top_l,
 .top-l {
   inset-block-start: var(--sprout-common-sizing-l);
 }
 
-._top_l,
 .-top-l {
   inset-block-start: calc(var(--sprout-common-sizing-l) * -1);
 }
 
-.top_xl,
 .top-xl {
   inset-block-start: var(--sprout-common-sizing-xl);
 }
 
-._top_xl,
 .-top-xl {
   inset-block-start: calc(var(--sprout-common-sizing-xl) * -1);
 }
 
-.bottom_0,
 .bottom-0 {
   inset-block-end: 0;
 }
 
-.bottom_s,
 .bottom-s {
   inset-block-end: var(--sprout-common-sizing-s);
 }
 
-._bottom_s,
 .-bottom-s {
   inset-block-end: calc(var(--sprout-common-sizing-s) * -1);
 }
 
-.bottom_m,
 .bottom-m {
   inset-block-end: var(--sprout-common-sizing-m);
 }
 
-._bottom_m,
 .-bottom-m {
   inset-block-end: calc(var(--sprout-common-sizing-m) * -1);
 }
 
-.bottom_l,
 .bottom-l {
   inset-block-end: var(--sprout-common-sizing-l);
 }
 
-._bottom_l,
 .-bottom-l {
   inset-block-end: calc(var(--sprout-common-sizing-l) * -1);
 }
 
-.bottom_xl,
 .bottom-xl {
   inset-block-end: var(--sprout-common-sizing-xl);
 }
 
-._bottom_xl,
 .-bottom-xl {
   inset-block-end: calc(var(--sprout-common-sizing-xl) * -1);
 }
 
-.left_0,
 .left-0 {
   inset-inline-start: 0;
 }
 
-.left_s,
 .left-s {
   inset-inline-start: var(--sprout-common-sizing-s);
 }
 
-._left_s,
 .-left-s {
   inset-inline-start: calc(var(--sprout-common-sizing-s) * -1);
 }
 
-.left_m,
 .left-m {
   inset-inline-start: var(--sprout-common-sizing-m);
 }
 
-._left_m,
 .-left-m {
   inset-inline-start: calc(var(--sprout-common-sizing-m) * -1);
 }
 
-.left_l,
 .left-l {
   inset-inline-start: var(--sprout-common-sizing-l);
 }
 
-._left_l,
 .-left-l {
   inset-inline-start: calc(var(--sprout-common-sizing-l) * -1);
 }
 
-.left_xl,
 .left-xl {
   inset-inline-start: var(--sprout-common-sizing-xl);
 }
 
-._left_xl,
 .-left-xl {
   inset-inline-start: calc(var(--sprout-common-sizing-xl) * -1);
 }
 
-.right_0,
 .right-0 {
   inset-inline-end: 0;
 }
 
-.right_s,
 .right-s {
   inset-inline-end: var(--sprout-common-sizing-s);
 }
 
-._right_s,
 .-right-s {
   inset-inline-end: calc(var(--sprout-common-sizing-s) * -1);
 }
 
-.right_m,
 .right-m {
   inset-inline-end: var(--sprout-common-sizing-m);
 }
 
-._right_m,
 .-right-m {
   inset-inline-end: calc(var(--sprout-common-sizing-m) * -1);
 }
 
-.right_l,
 .right-l {
   inset-inline-end: var(--sprout-common-sizing-l);
 }
 
-._right_l,
 .-right-l {
   inset-inline-end: calc(var(--sprout-common-sizing-l) * -1);
 }
 
-.right_xl,
 .right-xl {
   inset-inline-end: var(--sprout-common-sizing-xl);
 }
 
-._right_xl,
 .-right-xl {
   inset-inline-end: calc(var(--sprout-common-sizing-xl) * -1);
 }

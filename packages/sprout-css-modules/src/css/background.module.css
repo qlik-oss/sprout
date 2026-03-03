@@ -1,164 +1,131 @@
-.bg_transparent,
 .bg-transparent {
   background: transparent;
 }
 
-.bg_default,
 .bg-default {
   background: var(--sprout-common-background-color-default);
 }
 
-.bg_weak,
 .bg-weak {
   background: var(--sprout-common-background-color-weak);
 }
 
-.bg_moderate,
 .bg-moderate {
   background: var(--sprout-common-background-color-moderate);
 }
 
-.bg_strong,
 .bg-strong {
   background: var(--sprout-common-background-color-strong);
 }
 
-.bg_enabled,
 .bg-enabled {
   background: var(--sprout-common-background-color-enabled);
 }
 
-.bg_disabled,
 .bg-disabled {
   background: var(--sprout-common-background-color-disabled);
 }
 
-.bg_interactive,
 .bg-interactive {
   background: var(--sprout-common-background-color-enabled);
 }
 
-.bg_interactive:disabled,
 .bg-interactive:disabled {
   background: var(--sprout-common-background-color-disabled);
 }
 
-.bg_interactive:hover,
 .bg-interactive:hover {
   background: var(--sprout-common-background-color-hover);
 }
 
-.bg_interactive:active,
 .bg-interactive:active {
   background: var(--sprout-common-background-color-pressed);
 }
 
-.bg_interactive[aria-pressed="true"],
 .bg-interactive[aria-pressed="true"] {
   background: var(--sprout-common-background-color-toggled);
 }
 
-.bg_pressed,
 .bg-pressed {
   background: var(--sprout-common-background-color-pressed);
 }
 
-.bg_inverse,
 .bg-inverse {
   background: var(--sprout-inverse-background-color-default);
 }
 
-.bg_danger,
 .bg-danger {
   background: var(--sprout-danger-color-default);
 }
 
-.bg_danger_weak,
 .bg-danger-weak {
   background: var(--sprout-danger-color-weak);
 }
 
-.bg_danger_inverse,
 .bg-danger-inverse {
   background: var(--sprout-danger-color-inverse);
 }
 
-.bg_danger_toggled,
 .bg-danger-toggled {
   background: var(--sprout-danger-color-toggled);
 }
 
-.bg_danger_interactive,
 .bg-danger-interactive {
   background: var(--sprout-danger-color-default);
 }
 
-.bg_danger_interactive:hover,
 .bg-danger-interactive:hover {
   background: var(--sprout-danger-color-hover);
 }
 
-.bg_danger_interactive:active,
 .bg-danger-interactive:active {
   background: var(--sprout-danger-color-pressed);
 }
 
-.bg_danger_interactive:disabled,
 .bg-danger-interactive:disabled {
   background: var(--sprout-danger-color-disabled);
 }
 
-.bg_danger_interactive:focus-visible,
 .bg-danger-interactive:focus-visible {
   background: var(--sprout-danger-color-focus);
 }
 
-.bg_warning,
 .bg-warning {
   background: var(--sprout-warning-color-default);
 }
 
-.bg_warning_weak,
 .bg-warning-weak {
   background: var(--sprout-warning-color-weak);
 }
 
-.bg_warning_inverse,
 .bg-warning-inverse {
   background: var(--sprout-warning-color-inverse);
 }
 
-.bg_info,
 .bg-info {
   background: var(--sprout-info-color-default);
 }
 
-.bg_info_weak,
 .bg-info-weak {
   background: var(--sprout-info-color-weak);
 }
 
-.bg_info_inverse,
 .bg-info-inverse {
   background: var(--sprout-info-color-inverse);
 }
 
-.bg_info_interactive:disabled,
 .bg-info-interactive:disabled {
   background: var(--sprout-common-background-color-disabled);
 }
 
-.bg_success,
 .bg-success {
   background: var(--sprout-success-color-default);
 }
 
-.bg_success_weak,
 .bg-success-weak {
   background: var(--sprout-success-color-weak);
 }
 
-.bg_success_inverse,
 .bg-success-inverse {
   background: var(--sprout-success-color-inverse);
 }

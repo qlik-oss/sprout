@@ -7,6 +7,7 @@ import {
   MultiSelectTest,
   MultiSelectWithCreateOption,
   MultiSelectWithFilterProps,
+  MultiSelectWithOnFilterChangeProp,
   OptionTick,
   WithCustomDataTestId,
   WithoutNoValueOption,
@@ -620,7 +621,10 @@ test("when hovering non truncated selected tag, tooltip should not be visible", 
   await expect(tooltip).not.toBeVisible();
 });
 
-test("should support onFilterChange", async ({ mount, page }) => {
+test("should support onFilterChange and filterValue", async ({
+  mount,
+  page,
+}) => {
   await mount(<MultiSelectWithFilterProps />);
 
   const combobox = page.getByRole("combobox");
@@ -637,6 +641,41 @@ test("should support onFilterChange", async ({ mount, page }) => {
   expect(options.length).toBe(2);
   await expect(options[0]).toHaveText("Orange");
   await expect(options[1]).toHaveText("Coral");
+});
+
+test("should support onFilterChange", async ({ mount, page }) => {
+  await mount(<MultiSelectWithOnFilterChangeProp />);
+
+  const combobox = page.getByRole("combobox");
+  await combobox.focus();
+
+  // Search for "ge"
+  await page.keyboard.type("ge");
+
+  // Check Orange and Coral are visible
+  const options = await page.getByRole("option").all();
+  expect(options.length).toBe(2);
+  await expect(options[0]).toHaveText("Orange");
+  await expect(options[1]).toHaveText("Magenta");
+
+  // Select the first option
+  await options[0].click();
+
+  // Click outside to close the list
+  await page.mouse.click(300, 50);
+
+  // Check the value is set
+  const tag = page.getByTestId("my_multiselect.combobox.tag.orange");
+  await expect(tag).toBeVisible();
+  await expect(tag).toHaveText("Orange");
+
+  // The form should render initially and potentially once more for validation,
+  // but should NOT continuously re-render in a loop
+  // A reasonable threshold is less than 100 renders
+  const renderCountElement = page.getByTestId("render-count");
+  const renderCount =
+    await renderCountElement.getAttribute("data-render-count");
+  expect(Number(renderCount)).toBeLessThan(100);
 });
 
 test("should support OptionCreate", async ({ mount, page }) => {
@@ -667,7 +706,7 @@ test("should support OptionCreate", async ({ mount, page }) => {
   await expect(tag).toHaveText("ora");
 });
 
-test("when open other elements should not be interactable", async ({
+test("when open other elements should not be interactive", async ({
   mount,
   page,
 }) => {

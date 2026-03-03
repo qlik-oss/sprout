@@ -3,20 +3,6 @@ import { type ReactNode, useEffect, useState } from "react";
 import { sql } from "@codemirror/lang-sql";
 import { tags as t } from "@lezer/highlight";
 import {
-  AddIcon,
-  CommentCodeIcon,
-  DatabaseIcon,
-  DebugIcon,
-  FolderClosedIcon,
-  HistoryIcon,
-  IndentDecreaseIcon,
-  IndentIncreaseIcon,
-  LockIcon,
-  RedoIcon,
-  RunIcon,
-  UndoIcon,
-} from "@qlik/sprout-icons/react";
-import {
   Accordion,
   Avatar,
   Badge,
@@ -37,10 +23,23 @@ import {
   ToggleButton,
   classNames,
 } from "@qlik/sprout-react";
-
+import {
+  AddIcon,
+  CommentCodeIcon,
+  DatabaseExportIcon,
+  DatabaseImportIcon,
+  DebugIcon,
+  FolderClosedIcon,
+  HistoryIcon,
+  IndentDecreaseIcon,
+  IndentIncreaseIcon,
+  LockIcon,
+  RedoIcon,
+  RunScriptIcon,
+  UndoIcon,
+} from "@qlik/sprout-icons/react";
 import { createTheme } from "@uiw/codemirror-themes";
 import CodeMirror from "@uiw/react-codemirror";
-import { DropdownArrow } from "../icons";
 
 export default {
   title: "Examples/DataLoaderEditor",
@@ -114,11 +113,27 @@ const sproutTheme = createTheme({
   ],
 });
 
-function DataSourceItem({ icon, label, badge }: { icon: ReactNode; label: string; badge?: BadgeProps }) {
+function DataSourceItem({
+  icon,
+  label,
+  badge,
+}: {
+  icon: ReactNode;
+  label: string;
+  badge?: BadgeProps;
+}) {
   return (
     <ListItem hasPadding={false}>
-      <div className={classNames("flex", "flex-row", "border-box", "gap-m", "items-center")}>
-        <IconButton variant="quiet" aria-label="open" icon={<DropdownArrow />} />
+      <div
+        className={classNames(
+          "flex",
+          "flex-row",
+          "border-box",
+          "gap-m",
+          "items-center",
+        )}
+      >
+        <IconButton variant="quiet" aria-label="open" asDropdown />
         <Thumbnail size="s" type="icon">
           {icon}
         </Thumbnail>
@@ -144,47 +159,129 @@ export function Default() {
   }, []);
 
   return (
-    <div className={classNames("flex", "flex-col", "border-box", "size-full", "bg-default")}>
+    <div
+      className={classNames(
+        "flex",
+        "flex-col",
+        "border-box",
+        "size-full",
+        "bg-default",
+      )}
+    >
       <div
-        className={classNames("flex", "flex-row", "border-box", "items-center", "gap-m", "border-default")}
+        className={classNames(
+          "flex",
+          "flex-row",
+          "border-box",
+          "items-center",
+          "gap-m",
+          "border-default",
+        )}
         data-frame="75"
         style={{
-          padding: "calc(var(--sprout-common-spacing-m) - var(--sprout-common-border-default-width))",
+          padding:
+            "calc(var(--sprout-common-spacing-m) - var(--sprout-common-border-default-width))",
         }}
       >
         <div
-          className={classNames("flex", "flex-row", "border-box", "gap-m", "items-center", "w-full")}
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "gap-m",
+            "items-center",
+            "w-full",
+          )}
           data-frame="77"
         >
           <ButtonGroup>
-            <ToggleButton label="Input" icon={<DatabaseIcon />} toggled />
+            <ToggleButton label="Input" icon={<DatabaseImportIcon />} toggled />
             <ToggleButton label="History" icon={<HistoryIcon />} />
-            <ToggleButton label="Output" icon={<DatabaseIcon />} />
+            <ToggleButton label="Output" icon={<DatabaseExportIcon />} />
           </ButtonGroup>
-          <div className={classNames("flex", "flex-row", "border-box", "items-center", "grow")} data-frame="84">
-            <IconButton label="Label" variant="quiet" icon={<CommentCodeIcon />} />
-            <IconButton label="Label" variant="quiet" icon={<IndentIncreaseIcon />} />
-            <IconButton label="Label" variant="quiet" icon={<IndentDecreaseIcon />} />
+          <div
+            className={classNames(
+              "flex",
+              "flex-row",
+              "border-box",
+              "items-center",
+              "grow",
+            )}
+            data-frame="84"
+          >
+            <IconButton
+              label="Label"
+              variant="quiet"
+              icon={<CommentCodeIcon />}
+            />
+            <IconButton
+              label="Label"
+              variant="quiet"
+              icon={<IndentIncreaseIcon />}
+            />
+            <IconButton
+              label="Label"
+              variant="quiet"
+              icon={<IndentDecreaseIcon />}
+            />
           </div>
-          <div className={classNames("flex", "flex-row", "border-box", "gap-m", "items-center")} data-frame="83">
-            <Avatar size="s" text="OP" badge={<Badge variant="alphanumeric" text="1" color="success" />} />
-            <div className={classNames("flex", "flex-row", "border-box", "items-center", "justify-end")}>
+          <div
+            className={classNames(
+              "flex",
+              "flex-row",
+              "border-box",
+              "gap-m",
+              "items-center",
+            )}
+            data-frame="83"
+          >
+            <Avatar
+              size="s"
+              text="OP"
+              badge={<Badge variant="alphanumeric" text="1" color="success" />}
+            />
+            <div
+              className={classNames(
+                "flex",
+                "flex-row",
+                "border-box",
+                "items-center",
+                "justify-end",
+              )}
+            >
               No script changes
             </div>
-            <Button variant="primary" label="Run script" icon={<RunIcon />} />
+            <Button
+              variant="primary"
+              label="Run script"
+              icon={<RunScriptIcon />}
+            />
           </div>
         </div>
       </div>
       {/* Panel should help to avoid the calc on height */}
       <div
-        className={classNames("flex", "flex-row", "border-box", "items-start", "w-full")}
+        className={classNames(
+          "flex",
+          "flex-row",
+          "border-box",
+          "items-start",
+          "w-full",
+        )}
         data-frame="Content and panels"
         style={{
           blockSize: "calc(100vh - 48px - 40px)",
         }}
       >
         <div
-          className={classNames("flex", "flex-row", "border-box", "h-full", "border-b-default", "border-r-default")}
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "h-full",
+            "border-b-default",
+            "border-r-default",
+          )}
           data-frame="68"
         >
           <div
@@ -198,24 +295,58 @@ export function Default() {
             <Accordion.Container variant="default" openedDefault={1}>
               <Accordion.Item header="Catalog">Hello Catalog</Accordion.Item>
               <Accordion.Item header="Sources">
-                <form className={classNames("flex", "flex-row", "border-box", "gap-m", "p-m", "border-b-weak")}>
+                <form
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "border-box",
+                    "gap-m",
+                    "p-m",
+                    "border-b-weak",
+                  )}
+                >
                   <TextField type="search" placeholder="Search sources" />
                 </form>
                 <List>
-                  <DataSourceItem icon={<FolderClosedIcon />} label="Cloud data files" />
-                  <DataSourceItem icon={<Snowflake />} label="My Snowflake db" />
+                  <DataSourceItem
+                    icon={<FolderClosedIcon />}
+                    label="Cloud data files"
+                  />
+                  <DataSourceItem
+                    icon={<Snowflake />}
+                    label="My Snowflake db"
+                  />
                 </List>
               </Accordion.Item>
             </Accordion.Container>
           </div>
         </div>
         <div
-          className={classNames("flex", "flex-col", "border-box", "h-full", "grow", "border-b-default")}
+          className={classNames(
+            "flex",
+            "flex-col",
+            "border-box",
+            "h-full",
+            "grow",
+            "border-b-default",
+          )}
           data-frame="70"
         >
-          <div className={classNames("flex", "flex-row", "border-box", "h-full")} data-frame="Content area">
+          <div
+            className={classNames("flex", "flex-row", "border-box", "h-full")}
+            data-frame="Content area"
+          >
             {/* avoir row number as it will be part of the editor */}
-            <div className={classNames("flex", "flex-col", "border-box", "items-start", "w-full")} data-frame="80">
+            <div
+              className={classNames(
+                "flex",
+                "flex-col",
+                "border-box",
+                "items-start",
+                "w-full",
+              )}
+              data-frame="80"
+            >
               <div
                 className={classNames(
                   "flex",
@@ -232,13 +363,22 @@ export function Default() {
                 <TabsContainer defaultActiveKey="Main" size="s">
                   <TabList showTrack>
                     <Tab aria-controls="Main" title="Main" />
-                    <Tab aria-controls="Auto-generated section" title="Auto-generated section" icon={<LockIcon />} />
+                    <Tab
+                      aria-controls="Auto-generated section"
+                      title="Auto-generated section"
+                      icon={<LockIcon />}
+                    />
                   </TabList>
                   <TabPanel id="lorem">Lorem</TabPanel>
                   <TabPanel id="ipsum">Ipsum</TabPanel>
-                  {/* addIcon one tab panel per tab */}
+                  {/* add one tab panel per tab */}
                 </TabsContainer>
-                <IconButton aria-label="Create a new loader" size="small" variant="quiet" icon={<AddIcon />} />
+                <IconButton
+                  aria-label="Create a new loader"
+                  size="small"
+                  variant="quiet"
+                  icon={<AddIcon />}
+                />
                 <div
                   className={classNames(
                     "flex",
@@ -256,11 +396,29 @@ export function Default() {
                   <div className={classNames("flex", "border-box", "w-fit")}>
                     <TextField type="search" placeholder="Search script" />
                   </div>
-                  <IconButton label="Undo" size="small" variant="quiet" icon={<UndoIcon />} />
-                  <IconButton label="Redo" size="small" variant="quiet" icon={<RedoIcon />} />
+                  <IconButton
+                    label="Undo"
+                    size="small"
+                    variant="quiet"
+                    icon={<UndoIcon />}
+                  />
+                  <IconButton
+                    label="Redo"
+                    size="small"
+                    variant="quiet"
+                    icon={<RedoIcon />}
+                  />
                 </div>
               </div>
-              <div className={classNames("flex", "flex-row", "border-box", "h-full", "w-full")}>
+              <div
+                className={classNames(
+                  "flex",
+                  "flex-row",
+                  "border-box",
+                  "h-full",
+                  "w-full",
+                )}
+              >
                 <CodeMirror
                   theme={sproutTheme}
                   value={code}
@@ -290,11 +448,17 @@ export function Default() {
         )}
         data-frame="46 footer"
       >
-        <span className={classNames("font-label-s-emphasized", "text-weak")}>Last run:</span>
-        <span className={classNames("font-label-s", "text-weak")}>2 days ago</span>
+        <span className={classNames("font-label-s-emphasized", "text-weak")}>
+          Last run:
+        </span>
+        <span className={classNames("font-label-s", "text-weak")}>
+          2 days ago
+        </span>
         <ToggleButton size="small" label="Debug" icon={<DebugIcon />} />
       </div>
-      <Toast.Container placement="bottom">{toast ? <Toast.Content {...toast} /> : null}</Toast.Container>
+      <Toast.Container placement="bottom">
+        {toast ? <Toast.Content {...toast} /> : null}
+      </Toast.Container>
     </div>
   );
 }
@@ -326,7 +490,13 @@ SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;
 
 function Snowflake() {
   return (
-    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 12 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <mask
         id="mask0_3997_614"
         style={{ maskType: "luminance" }}

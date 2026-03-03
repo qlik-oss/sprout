@@ -2,7 +2,7 @@
 import type { CSSProperties, KeyboardEvent, Ref } from "react";
 import { forwardRef } from "react";
 
-import { useControl } from "@qlik/sprout-hooks";
+import { useControl } from "@qlik/sprout-react-hooks";
 
 import type { HTMLDivProps } from "../htmlTypes";
 import type { DialogAction, DialogProps, DialogState } from "./DialogState";

@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 
-import AddOutline from "@qlik/sprout-icons/react/Add";
+import { AddIcon } from "@qlik/sprout-icons/react";
 
 import { classNames } from "../classNames";
 import { useI18n } from "../hooks/useI18n";
@@ -38,7 +38,7 @@ export function OptionCreate({ label, isValid, ...props }: OptionCreateProps) {
       value={context.queryFilter}
     >
       <div className={classNames("flex-noreset", "items-center", "gap-m")}>
-        <AddOutline />
+        <AddIcon />
         <span
           className={classNames("truncate")}
           title={context.queryFilter || ""}

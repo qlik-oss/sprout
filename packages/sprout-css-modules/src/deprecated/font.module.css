@@ -1,0 +1,95 @@
+.font_heading_xs {
+  font: var(--sprout-heading-font-xs);
+}
+
+.font_heading_s {
+  font: var(--sprout-heading-font-s);
+}
+
+.font_heading_m {
+  font: var(--sprout-heading-font-m);
+}
+
+.font_heading_l {
+  font: var(--sprout-heading-font-l);
+}
+
+.font_heading_xl {
+  font: var(--sprout-heading-font-xl);
+}
+
+.font_heading_xxl {
+  font: var(--sprout-heading-font-xxl);
+}
+
+.font_body_xs {
+  font: var(--sprout-body-font-xs);
+}
+
+.font_body_s {
+  font: var(--sprout-body-font-s);
+}
+
+.font_body_m {
+  font: var(--sprout-body-font-m);
+}
+
+.font_body_l {
+  font: var(--sprout-body-font-l);
+}
+
+.font_body_xl {
+  font: var(--sprout-body-font-xl);
+}
+
+.font_body_xxl {
+  font: var(--sprout-body-font-xxl);
+}
+
+.font_label_xs {
+  font: var(--sprout-label-font-xs);
+}
+
+.font_label_xs_emphasized {
+  font: var(--sprout-label-font-xs-emphasized);
+}
+
+.font_label_s {
+  font: var(--sprout-label-font-s);
+}
+
+.font_label_s_emphasized {
+  font: var(--sprout-label-font-s-emphasized);
+}
+
+.font_label_m {
+  font: var(--sprout-label-font-m);
+}
+
+.font_label_m_emphasized {
+  font: var(--sprout-label-font-m-emphasized);
+}
+
+.font_label_l {
+  font: var(--sprout-label-font-l);
+}
+
+.font_label_l_emphasized {
+  font: var(--sprout-label-font-l-emphasized);
+}
+
+.font_script_s {
+  font: var(--sprout-script-font-s);
+}
+
+.font_script_s_emphasized {
+  font: var(--sprout-script-font-s-emphasized);
+}
+
+.font_script_m {
+  font: var(--sprout-script-font-m);
+}
+
+.font_script_m_emphasized {
+  font: var(--sprout-script-font-m-emphasized);
+}

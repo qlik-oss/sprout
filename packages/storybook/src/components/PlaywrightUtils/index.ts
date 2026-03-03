@@ -1,7 +1,7 @@
 import type { AxeResults } from "axe-core";
+import type { Page } from "playwright-core";
 
-import AxeBuilder from "@axe-core/playwright";
-import type { Page } from "@playwright/test";
+import { AxeBuilder } from "@axe-core/playwright";
 
 export async function getAxeReport(page: Page): Promise<AxeResults> {
   return new AxeBuilder({ page })

@@ -3,8 +3,8 @@ import { type ReactNode, type Ref, forwardRef } from "react";
 import { Badge, type BadgeProps } from "../Badge";
 import { ProgressCircular } from "../Progress";
 import { classNames } from "../classNames";
+import { DropdownArrow } from "../glyphs";
 import type { HTMLButtonProps } from "../htmlTypes";
-import { DropdownArrow } from "../icons";
 
 import style from "./Button.module.css";
 

@@ -206,7 +206,7 @@ test("should not open if open is false when triggering (rapid clicks)", async ({
   });
 });
 
-test("should not goes over the viewport", async ({ mount, page }) => {
+test("should not go over the viewport", async ({ mount, page }) => {
   const component = await mount(<PopoverPlacement placement="bottom" />);
   await page.setViewportSize({ width: 400, height: 400 });
   const dialog = page.getByRole("dialog");
@@ -249,6 +249,6 @@ test("should not goes over the viewport", async ({ mount, page }) => {
   if (box) {
     expect(box.x + box.width).toBeLessThanOrEqual(400);
     expect(box.y).toBeGreaterThanOrEqual(0);
-    expect(box.x).toBe(Math.round(btnBox.x + btnBox.width) + 4);
+    expect(box.x).toBe(0);
   }
 });

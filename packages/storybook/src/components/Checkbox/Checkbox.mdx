@@ -13,7 +13,14 @@ Checkboxes are form elements that allows a user to select one or multiple option
 ```jsx
 import { Checkbox, CheckboxGroup } from "@qlik/sprout-react";
 
-<Checkbox name="myfield" label="Label" helpText="help me" checked disabled onChange={() => {}} />;
+<Checkbox
+  name="myfield"
+  label="Label"
+  helpText="help me"
+  checked
+  disabled
+  onChange={() => {}}
+/>;
 
 <CheckboxGroup label="Select options">
   <Checkbox name="option1" label="Option 1" />

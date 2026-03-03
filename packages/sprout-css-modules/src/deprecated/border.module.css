@@ -1,0 +1,216 @@
+.border_none {
+  border: none;
+}
+
+.border_default {
+  border: var(--sprout-common-border-default);
+}
+
+.border_weak {
+  border: var(--sprout-common-border-weak);
+}
+
+.border_moderate {
+  border: var(--sprout-common-border-moderate);
+}
+
+.border_strong {
+  border: var(--sprout-common-border-strong);
+}
+
+.border_extra_strong {
+  border: var(--sprout-common-border-extra-strong);
+}
+
+.border_solid {
+  border-style: solid;
+}
+
+.border_dashed {
+  border-style: dashed;
+}
+
+.border_dotted {
+  border-style: dotted;
+}
+
+.border_width_0 {
+  border-width: 0;
+}
+
+.border_width_default {
+  border-width: var(--sprout-common-border-default-width);
+}
+
+.border_width_strong {
+  border-width: var(--sprout-common-border-strong-width);
+}
+
+.border_t_none {
+  border-block-start: none;
+}
+
+.border_t_default {
+  border-block-start: var(--sprout-common-border-default);
+}
+
+.border_t_weak {
+  border-block-start: var(--sprout-common-border-weak);
+}
+
+.border_t_moderate {
+  border-block-start: var(--sprout-common-border-moderate);
+}
+
+.border_t_strong {
+  border-block-start: var(--sprout-common-border-strong);
+}
+
+.border_t_extra_strong {
+  border-block-start: var(--sprout-common-border-extra-strong);
+}
+
+.border_r_none {
+  border-inline-end: none;
+}
+
+.border_r_default {
+  border-inline-end: var(--sprout-common-border-default);
+}
+
+.border_r_weak {
+  border-inline-end: var(--sprout-common-border-weak);
+}
+
+.border_r_moderate {
+  border-inline-end: var(--sprout-common-border-moderate);
+}
+
+.border_r_strong {
+  border-inline-end: var(--sprout-common-border-strong);
+}
+
+.border_r_extra_strong {
+  border-inline-end: var(--sprout-common-border-extra-strong);
+}
+
+.border_b_none {
+  border-block-end: none;
+}
+
+.border_b_default {
+  border-block-end: var(--sprout-common-border-default);
+}
+
+.border_b_weak {
+  border-block-end: var(--sprout-common-border-weak);
+}
+
+.border_b_moderate {
+  border-block-end: var(--sprout-common-border-moderate);
+}
+
+.border_b_strong {
+  border-block-end: var(--sprout-common-border-strong);
+}
+
+.border_b_extra_strong {
+  border-block-end: var(--sprout-common-border-extra-strong);
+}
+
+.border_l_none {
+  border-inline-start: none;
+}
+
+.border_l_default {
+  border-inline-start: var(--sprout-common-border-default);
+}
+
+.border_l_weak {
+  border-inline-start: var(--sprout-common-border-weak);
+}
+
+.border_l_moderate {
+  border-inline-start: var(--sprout-common-border-moderate);
+}
+
+.border_l_strong {
+  border-inline-start: var(--sprout-common-border-strong);
+}
+
+.border_l_extra_strong {
+  border-inline-start: var(--sprout-common-border-extra-strong);
+}
+
+.radius_subtle {
+  border-radius: var(--sprout-common-border-radius-subtle);
+}
+
+.radius_soft {
+  border-radius: var(--sprout-common-border-radius-soft);
+}
+
+.radius_cushiony {
+  border-radius: var(--sprout-common-border-radius-cushiony);
+}
+
+.radius_pill {
+  border-radius: var(--sprout-common-border-radius-pill);
+}
+
+.radius_round {
+  border-radius: var(--sprout-common-border-radius-round);
+}
+
+.radius_nested_subtle_xs {
+  border-radius: var(--sprout-common-nested-border-radius-subtle-xs);
+}
+
+.radius_nested_soft_xs {
+  border-radius: var(--sprout-common-nested-border-radius-soft-xs);
+}
+
+.radius_nested_soft_s {
+  border-radius: var(--sprout-common-nested-border-radius-soft-s);
+}
+
+.radius_nested_cushiony_xs {
+  border-radius: var(--sprout-common-nested-border-radius-cushiony-xs);
+}
+
+.radius_nested_cushiony_s {
+  border-radius: var(--sprout-common-nested-border-radius-cushiony-s);
+}
+
+.radius_nested_cushiony_m {
+  border-radius: var(--sprout-common-nested-border-radius-cushiony-m);
+}
+
+.radius_twice_soft_xs {
+  border-radius: var(--sprout-common-twice-nested-border-radius-soft-s-xs);
+}
+
+.radius_twice_cushiony_s_xs {
+  border-radius: var(--sprout-common-twice-nested-border-radius-cushiony-s-xs);
+}
+
+.radius_twice_cushiony_m_s {
+  border-radius: var(--sprout-common-twice-nested-border-radius-cushiony-m-s);
+}
+
+.border_info {
+  border-color: var(--sprout-info-color-default);
+}
+
+.border_warning {
+  border-color: var(--sprout-warning-color-default);
+}
+
+.border_error,
+.border_danger {
+  border-color: var(--sprout-danger-color-default);
+}
+
+.border_success {
+  border-color: var(--sprout-success-color-default);
+}

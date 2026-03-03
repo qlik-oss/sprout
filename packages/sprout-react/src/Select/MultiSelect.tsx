@@ -13,7 +13,8 @@ import {
 } from "react";
 import { useMemo } from "react";
 
-import { useControl } from "@qlik/sprout-hooks";
+import { useControl } from "@qlik/sprout-react-hooks";
+import sprout from "@qlik/sprout-css-modules";
 
 import { type CommonFieldProps, Field, useFieldProps } from "../Field";
 import {
@@ -23,7 +24,6 @@ import {
 import { Tag, TagGroups } from "../Tag";
 import { MultiSelectComboboxGesture } from "../Utils/gesture/MultiSelectCombobox";
 import { mergeRefs } from "../Utils/mergeRef";
-import { classNames } from "../classNames";
 import { useI18n } from "../hooks/useI18n";
 import {
   ComboboxEditable,
@@ -273,15 +273,7 @@ function MultiSelectBase(
 
   useEffect(() => {
     gestureRef.current.setIsIOpen(isOpen);
-
-    if (!isOpen) {
-      filterControlled.onChange({
-        target: {
-          value: "",
-        },
-      });
-    }
-  }, [isOpen, filterControlled]);
+  }, [isOpen]);
 
   useEffect(() => {
     if (isOpen && refsFloating.current) {
@@ -386,7 +378,7 @@ function MultiSelectBase(
       {!!filterControlled.value && filteredOptionsCount === 0 && (
         <div
           role="status"
-          className={classNames("p-m", "font-label-s", "text-weak")}
+          className={sprout.classNames("p-m", "font-label-s", "text-weak")}
           aria-live="polite"
         >
           {t("select.dropdown.no-results.message")}
@@ -405,7 +397,7 @@ function MultiSelectBase(
 
   const content = (
     <>
-      <span className={classNames("sr-only")}>
+      <span className={sprout.sr_only}>
         <select
           multiple
           // Don't set value when using react-hook-form register, let it manage through DOM
@@ -417,7 +409,7 @@ function MultiSelectBase(
           ref={mergeSelectRef}
           tabIndex={-1}
           aria-hidden="true"
-          className={classNames("hidden")}
+          className={sprout.hidden}
         >
           {allOptionValues.map((v) => (
             <option key={v} value={v} tabIndex={-1}>
@@ -477,7 +469,18 @@ function MultiSelectBase(
         role="listbox"
         initialOpen={defaultOpen}
         open={isOpen}
-        onOpenChange={setIsOpen}
+        onOpenChange={(o) => {
+          setIsOpen(o);
+
+          //Before closing the list, we clear the filter
+          if (!o) {
+            filterControlled.onChange({
+              target: {
+                value: undefined,
+              },
+            });
+          }
+        }}
         anchorEl={refsReference.current || undefined}
         forceMount
         minWidth="reference"
@@ -507,7 +510,7 @@ function MultiSelectBase(
               );
               filterControlled.onChange({
                 target: {
-                  value: "",
+                  value: undefined,
                 },
               });
             }

@@ -15,7 +15,11 @@ import { SideNav } from "@qlik/sprout-react";
   <SideNav.Section label="Default">
     <List gap="s">
       <ListItem hasPadding={false} interactive>
-        <SideNav.Link href="#upload" icon={<CloudUploadIcon {...UNZIED_PROPS} />} label="Uploads" />
+        <SideNav.Link
+          href="#upload"
+          icon={<CloudUploadIcon {...UNZIED_PROPS} />}
+          label="Uploads"
+        />
       </ListItem>
     </List>
   </SideNav.Section>
@@ -30,7 +34,12 @@ and this property doesn't appear in the source code panel
 ## API
 
 ```typescript
-import { HTMLAnchorProps, HTMLDivProps, type HTMLNavProps, type HTMLSectionProps } from "../htmlTypes";
+import {
+  HTMLAnchorProps,
+  HTMLDivProps,
+  type HTMLNavProps,
+  type HTMLSectionProps,
+} from "../htmlTypes";
 
 type SideNavProps = {
   Nav: {

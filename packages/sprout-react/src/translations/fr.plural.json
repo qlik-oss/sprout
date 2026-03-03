@@ -1,1 +1,11 @@
-{}
+{
+  "table.column.visibility-form.footer.label": {
+    "value": {
+      "one": "{{count}}/{{total}} colonne visible",
+      "many": "{{count}}/{{total}} colonnes visibles",
+      "other": "{{count}}/{{total}} colonnes visibles"
+    },
+    "comment": "This is displayed in the footer of the visbility form column filter for every table.",
+    "version": "6jngMitmNOFAih7NlTOsxw=="
+  }
+}

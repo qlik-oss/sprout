@@ -1,1 +1,9 @@
-{}
+{
+  "table.column.visibility-form.footer.label": {
+    "value": {
+      "other": "{{count}}/{{total}} 列を表示"
+    },
+    "comment": "This is displayed in the footer of the visbility form column filter for every table.",
+    "version": "6jngMitmNOFAih7NlTOsxw=="
+  }
+}

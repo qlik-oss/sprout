@@ -1,0 +1,155 @@
+import { Box } from "@qlik/sprout-react";
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./Box.stories";
+
+<Meta title="Components/Box" />
+
+# Box (deprecated)
+
+Largely inspired from [MUI Box](https://mui.com/system/react-box/]) this component provide a quick way to get some layout sorted out.
+
+Box has some **drawbacks** as it takes quite a lot of runtime. It has to check lots of props to be able to build the className.
+Like Github we would like to [Migrate away from Box](https://github.com/primer/react/blob/main/contributor-docs/migration-from-box.md).
+You should consider to use the [sprout-css-modules](?path=/docs/utils-sprout-css-modules--docs) directly for **performance** reasons but also for readability.
+
+As any other utility this component doesn't comes from Figma but it is using all our tokens.
+
+```typescript
+import { Box } from "@qlik/sprout-react";
+
+
+function MyComponent() {
+    return <Box border="default" />
+}
+```
+
+## Component Props
+
+In terms of API it provides quick access to every [flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) css properties.
+By default it uses the following styles:
+
+```css
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+```
+
+```typescript
+type Spacing = "0" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "3xl";
+type Border =
+  | "none"
+  | "default"
+  | "weak"
+  | "moderate"
+  | "strong"
+  | "extra-strong";
+type Align = "center" | "stretch" | "start" | "end";
+type Justify = Align | "between" | "around" | "evenly";
+
+export type BoxPropsOnly = {
+  // flex properties
+  direction?: "row" | "col";
+  boxSizing?: "border-box" | "content-box";
+  alignContent?: Align;
+  alignItems?: Align;
+  alignSelf?: Align;
+  gap?: Spacing;
+  columnGap?: Spacing;
+  rowGap?: Spacing;
+  wrap?: "wrap" | "nowrap" | "wrap-reverse";
+  justify?: Justify;
+
+  // border properties
+  border?: Border;
+  borderTop?: Border;
+  borderRight?: Border;
+  borderBottom?: Border;
+  borderLeft?: Border;
+  borderWidth?: "0" | "default" | "strong";
+
+  // inline styles
+  width?:
+    | ["xxs", "xs", "s", "m", "l", "xl", "xxl", "3xl", "4xl"]
+    | CSSProperties["width"];
+  maxWidth?:
+    | ["xxs", "xs", "s", "m", "l", "xl", "xxl", "3xl", "4xl"]
+    | CSSProperties["maxWidth"];
+  minWidth?:
+    | ["xxs", "xs", "s", "m", "l", "xl", "xxl", "3xl", "4xl"]
+    | CSSProperties["minWidth"];
+  height?: CSSProperties["height"];
+  minHeight?: CSSProperties["minHeight"];
+  maxHeight?: CSSProperties["maxHeight"];
+  shrink?: CSSProperties["flexShrink"];
+  basis?: CSSProperties["flexBasis"];
+  grow?: boolean | CSSProperties["flexGrow"];
+
+  // padding properties
+  p?: Spacing;
+  px?: Spacing;
+  py?: Spacing;
+  pt?: Spacing;
+  pr?: Spacing;
+  pb?: Spacing;
+  pl?: Spacing;
+
+  // bgColor properties
+  bgColor?:
+    | "transparent"
+    | "default"
+    | "weak"
+    | "moderate"
+    | "strong"
+    | "extra-strong"
+    | "enabled"
+    | "disabled"
+    | "inverse"
+    | "interactive";
+
+  // boxShadow properties
+  boxShadow?: "none" | "default" | "weak" | "moderate" | "strong";
+
+  typography?: TypographyProps;
+};
+```
+
+## getBoxProps (deprecated)
+
+We are preparing a move away from Box for performance reason. For now only `getBoxProps` api is deprecated.
+
+```tsx
+import { classNames, getBoxProps } from "@qlik/sprout-react";
+
+function MyComponent() {
+  // @deprecated
+  return (
+    <h2
+      {...getBoxProps({ typography: { font: "heading_s", color: "default" } })}
+    >
+      Hello world
+    </h2>
+  );
+  // do this instead
+  return (
+    <h2
+      className={classNames(
+        "flex",
+        "row",
+        "border_box",
+        "font_heading_s",
+        "text_default",
+      )}
+    >
+      Hello world
+    </h2>
+  );
+}
+```
+
+## Demo
+
+<Canvas of={Stories.VisualTest} />

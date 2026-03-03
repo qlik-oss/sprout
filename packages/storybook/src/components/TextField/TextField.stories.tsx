@@ -1,6 +1,5 @@
 import { fn } from "storybook/test";
 
-import { AddIcon, CopyIcon, LinkIcon, MailIcon, NumericIcon, SubtractIcon } from "@qlik/sprout-icons/react";
 import {
   AffixWrapper,
   Button,
@@ -12,6 +11,15 @@ import {
   type TextFieldProps,
   classNames,
 } from "@qlik/sprout-react";
+import {
+  AddIcon,
+  CopyIcon,
+  GlobeIcon,
+  LinkIcon,
+  MailIcon,
+  NumericIcon,
+  SubtractIcon,
+} from "@qlik/sprout-icons/react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { TextFieldArgTypes } from "./TextField.argTypes";
@@ -24,13 +32,23 @@ export default {
 } as Meta;
 
 const errorMessages = ["Error message 1"];
-const longErrorMessage = ["A very very very very very very very very long error message"];
+const longErrorMessage = [
+  "A very very very very very very very very long error message",
+];
 const longHelpText = "A very very very very very very very very long help text";
 
 export const Overview: StoryObj<typeof TextField> = {
   render: (props: Partial<TextFieldProps>) => (
-    <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s")}>
-      <TextField id="input1" label="Default" helpText="help me" placeholder="Give me a value" {...props} />
+    <div
+      className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s")}
+    >
+      <TextField
+        id="input1"
+        label="Default"
+        helpText="help me"
+        placeholder="Give me a value"
+        {...props}
+      />
       <TextField
         id="input-hover"
         label="Hover"
@@ -39,10 +57,28 @@ export const Overview: StoryObj<typeof TextField> = {
         {...props}
         data-testid="hover"
       />
-      <TextField id="input-focus" label="Focus" placeholder="Focus" {...props} data-testid="focus" />
+      <TextField
+        id="input-focus"
+        label="Focus"
+        placeholder="Focus"
+        {...props}
+        data-testid="focus"
+      />
 
-      <TextField id="input-disabled" label="Disabled" placeholder="Disabled Input" disabled {...props} />
-      <TextField id="input-readonly" label="Readonly" placeholder="Readonly Input" readOnly {...props} />
+      <TextField
+        id="input-disabled"
+        label="Disabled"
+        placeholder="Disabled Input"
+        disabled
+        {...props}
+      />
+      <TextField
+        id="input-readonly"
+        label="Readonly"
+        placeholder="Readonly Input"
+        readOnly
+        {...props}
+      />
       <TextField
         id="input-error-message"
         label="Error"
@@ -50,8 +86,19 @@ export const Overview: StoryObj<typeof TextField> = {
         errorMessages={errorMessages}
         {...props}
       />
-      <TextField id="input-error" label="Error" placeholder="Input in error" hasError {...props} />
-      <TextField id="input-error" label="MaxCharacterCount" placeholder="Input has counter" maxCharacterCount={10} />
+      <TextField
+        id="input-error"
+        label="Error"
+        placeholder="Input in error"
+        hasError
+        {...props}
+      />
+      <TextField
+        id="input-error"
+        label="MaxCharacterCount"
+        placeholder="Input has counter"
+        maxCharacterCount={10}
+      />
     </div>
   ),
 
@@ -70,7 +117,16 @@ export const Overview: StoryObj<typeof TextField> = {
 
 export const Playground: StoryObj<typeof TextField> = {
   render: (props: TextFieldProps) => (
-    <span className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s", "gap-s")}>
+    <span
+      className={classNames(
+        "flex",
+        "flex-col",
+        "border-box",
+        "w-fit",
+        "p-s",
+        "gap-s",
+      )}
+    >
       <TextField {...props} />
     </span>
   ),
@@ -89,10 +145,33 @@ export const Playground: StoryObj<typeof TextField> = {
 };
 
 export const Adornment: StoryObj<typeof TextField> = {
-  render: ({ leftAdornment = "Left", rightAdornment = "Right", ...props }: Partial<TextFieldProps>) => (
-    <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s", "gap-m")}>
-      <TextField id="left-adornment" label="Left adornment" {...props} leftAdornment={leftAdornment} />
-      <TextField id="right-adornment" label="Right adornment" {...props} rightAdornment={rightAdornment} />
+  render: ({
+    leftAdornment = "Left",
+    rightAdornment = "Right",
+    ...props
+  }: Partial<TextFieldProps>) => (
+    <div
+      className={classNames(
+        "flex",
+        "flex-col",
+        "border-box",
+        "w-fit",
+        "p-s",
+        "gap-m",
+      )}
+    >
+      <TextField
+        id="left-adornment"
+        label="Left adornment"
+        {...props}
+        leftAdornment={leftAdornment}
+      />
+      <TextField
+        id="right-adornment"
+        label="Right adornment"
+        {...props}
+        rightAdornment={rightAdornment}
+      />
       <TextField
         id="adornment"
         label="Both adornment"
@@ -109,7 +188,9 @@ export const Adornment: StoryObj<typeof TextField> = {
 
 export const Affix: StoryObj<typeof TextField> = {
   render: ({ ...props }: Partial<TextFieldProps>) => (
-    <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s")}>
+    <div
+      className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s")}
+    >
       <TextField
         label="Phone number"
         defaultValue="737 00 00 00"
@@ -160,7 +241,9 @@ export const Affix: StoryObj<typeof TextField> = {
           </div>
         }
       />
-      <h2 className={classNames("font-heading-m", "text-default")}>Previous deprecated Design</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Previous deprecated Design
+      </h2>
       <Field label="Left me" htmlFor="left-affix">
         <ButtonGroup fullWidth>
           <Button label="Left" onClick={fn()} />
@@ -191,7 +274,9 @@ export const Affix: StoryObj<typeof TextField> = {
 
 export const Search: StoryObj<typeof TextField> = {
   render: (props: TextFieldProps) => (
-    <div className={classNames("flex", "flex-row", "border-box", "w-fit", "p-s")}>
+    <div
+      className={classNames("flex", "flex-row", "border-box", "w-fit", "p-s")}
+    >
       <TextField type="search" {...props} />
     </div>
   ),
@@ -221,12 +306,33 @@ const LEFT_AFFIX_DEPRECATED = {
 
 export const VisualTest: StoryObj<typeof TextField> = {
   render: () => (
-    <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s")} style={{ inlineSize: 600 }}>
+    <div
+      className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s")}
+      style={{ inlineSize: 600 }}
+    >
       <h2 className={classNames("font-heading-m", "text-default")}>States</h2>
       <div className={classNames("flex", "flex-row", "gap-m", "w-full")}>
-        <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s", "gap-l")}>
-          <TextField label="Default" helpText="help me" placeholder="Give me a value" />
-          <TextField label="Hover" helpText="help me" placeholder="Give me a value" data-testid="hover" />
+        <div
+          className={classNames(
+            "flex",
+            "flex-col",
+            "border-box",
+            "w-fit",
+            "p-s",
+            "gap-l",
+          )}
+        >
+          <TextField
+            label="Default"
+            helpText="help me"
+            placeholder="Give me a value"
+          />
+          <TextField
+            label="Hover"
+            helpText="help me"
+            placeholder="Give me a value"
+            data-testid="hover"
+          />
           <TextField label="Focus" placeholder="Focus" data-testid="focus" />
           <TextField label="Disabled" placeholder="Disabled Input" disabled />
           <TextField label="Readonly" placeholder="Readonly Input" readOnly />
@@ -266,8 +372,22 @@ export const VisualTest: StoryObj<typeof TextField> = {
             errorMessages={longErrorMessage}
           />
         </div>
-        <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s", "gap-l")}>
-          <TextField designSize="small" label="Default" helpText="help me" placeholder="Give me a value" />
+        <div
+          className={classNames(
+            "flex",
+            "flex-col",
+            "border-box",
+            "w-fit",
+            "p-s",
+            "gap-l",
+          )}
+        >
+          <TextField
+            designSize="small"
+            label="Default"
+            helpText="help me"
+            placeholder="Give me a value"
+          />
           <TextField
             designSize="small"
             label="Hover"
@@ -275,9 +395,24 @@ export const VisualTest: StoryObj<typeof TextField> = {
             placeholder="Give me a value"
             data-testid="hover"
           />
-          <TextField designSize="small" label="Focus" placeholder="Focus" data-testid="focus" />
-          <TextField designSize="small" label="Disabled" placeholder="Disabled Input" disabled />
-          <TextField designSize="small" label="Readonly" placeholder="Readonly Input" readOnly />
+          <TextField
+            designSize="small"
+            label="Focus"
+            placeholder="Focus"
+            data-testid="focus"
+          />
+          <TextField
+            designSize="small"
+            label="Disabled"
+            placeholder="Disabled Input"
+            disabled
+          />
+          <TextField
+            designSize="small"
+            label="Readonly"
+            placeholder="Readonly Input"
+            readOnly
+          />
           <TextField
             designSize="small"
             label="Really long placeholder should ellipsis"
@@ -290,7 +425,12 @@ export const VisualTest: StoryObj<typeof TextField> = {
             placeholder="Input in error with message"
             errorMessages={errorMessages}
           />
-          <TextField designSize="small" label="Error" placeholder="Input in error" hasError />
+          <TextField
+            designSize="small"
+            label="Error"
+            placeholder="Input in error"
+            hasError
+          />
           <TextField
             designSize="small"
             id="input-counter"
@@ -319,19 +459,76 @@ export const VisualTest: StoryObj<typeof TextField> = {
           />
         </div>
       </div>
-      <h2 className={classNames("font-heading-m", "text-default")}>Adornment</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Adornment
+      </h2>
       <div className={classNames("flex", "flex-row", "gap-m", "w-full")}>
-        <div className={classNames("flex", "flex-row", "border-box", "w-fit", "p-s")}>
-          <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s")}>
-            <TextField id="left-adornment" label="Left adornment" leftAdornment="left" />
-            <TextField id="right-adornment" label="Right adornment" rightAdornment="right" />
-            <TextField id="adornment" label="Both adornment" leftAdornment="left" rightAdornment="right" />
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "w-fit",
+            "p-s",
+          )}
+        >
+          <div
+            className={classNames(
+              "flex",
+              "flex-col",
+              "border-box",
+              "w-fit",
+              "p-s",
+            )}
+          >
+            <TextField
+              id="left-adornment"
+              label="Left adornment"
+              leftAdornment="left"
+            />
+            <TextField
+              id="right-adornment"
+              label="Right adornment"
+              rightAdornment="right"
+            />
+            <TextField
+              id="adornment"
+              label="Both adornment"
+              leftAdornment="left"
+              rightAdornment="right"
+            />
           </div>
         </div>
-        <div className={classNames("flex", "flex-row", "border-box", "w-fit", "p-s")}>
-          <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s")}>
-            <TextField designSize="small" id="small-left-adornment" label="Left adornment" leftAdornment="left" />
-            <TextField designSize="small" id="small-right-adornment" label="Right adornment" rightAdornment="right" />
+        <div
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "w-fit",
+            "p-s",
+          )}
+        >
+          <div
+            className={classNames(
+              "flex",
+              "flex-col",
+              "border-box",
+              "w-fit",
+              "p-s",
+            )}
+          >
+            <TextField
+              designSize="small"
+              id="small-left-adornment"
+              label="Left adornment"
+              leftAdornment="left"
+            />
+            <TextField
+              designSize="small"
+              id="small-right-adornment"
+              label="Right adornment"
+              rightAdornment="right"
+            />
             <TextField
               designSize="small"
               id="small-adornment"
@@ -343,8 +540,18 @@ export const VisualTest: StoryObj<typeof TextField> = {
         </div>
       </div>
       <div className={classNames("flex", "flex-row", "gap-m", "w-full")}>
-        <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s")}>
-          <h2 className={classNames("font-heading-m", "text-default")}>Affix</h2>
+        <div
+          className={classNames(
+            "flex",
+            "flex-col",
+            "border-box",
+            "w-fit",
+            "p-s",
+          )}
+        >
+          <h2 className={classNames("font-heading-m", "text-default")}>
+            Affix
+          </h2>
           <TextField
             label="Phone number"
             defaultValue="737 00 00 00"
@@ -400,16 +607,46 @@ export const VisualTest: StoryObj<typeof TextField> = {
             rightAffix={<Tag size="s" text="right" />}
           />
         </div>
-        <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s", "gap-m")}>
-          <h2 className={classNames("font-heading-m", "text-default")}>Inline TextField: no label/helpText</h2>
+        <div
+          className={classNames(
+            "flex",
+            "flex-col",
+            "border-box",
+            "w-fit",
+            "p-s",
+            "gap-m",
+          )}
+        >
+          <h2 className={classNames("font-heading-m", "text-default")}>
+            Inline TextField: no label/helpText
+          </h2>
           <TextField defaultValue="value" aria-label="label" />
-          <TextField defaultValue="with useField property" aria-label="inline property" useField />
+          <TextField
+            defaultValue="with useField property"
+            aria-label="inline property"
+            useField
+          />
         </div>
       </div>
-      <h2 className={classNames("font-heading-m", "text-default")}>Depreacted ButtonGroup</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Depreacted ButtonGroup
+      </h2>
       <div className={classNames("flex", "flex-row", "gap-m", "w-full")}>
-        <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s", "gap-m")}>
-          <TextField label="Affix" leftAffix={LEFT_AFFIX_DEPRECATED} rightAffix={RIGHT_AFFIX_DEPRECATED} />
+        <div
+          className={classNames(
+            "flex",
+            "flex-col",
+            "border-box",
+            "w-fit",
+            "p-s",
+            "gap-m",
+          )}
+        >
+          <TextField
+            label="Affix"
+            leftAffix={LEFT_AFFIX_DEPRECATED}
+            rightAffix={RIGHT_AFFIX_DEPRECATED}
+          />
           <Field label="Left me" htmlFor="left-affix">
             <ButtonGroup fullWidth>
               <Button label="Left" onClick={fn()} />
@@ -434,24 +671,56 @@ export const VisualTest: StoryObj<typeof TextField> = {
 
       <h2 className={classNames("font-heading-m", "text-default")}>Search</h2>
       <div className={classNames("flex", "flex-row", "gap-m", "w-full")}>
-        <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s", "gap-m")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-col",
+            "border-box",
+            "w-fit",
+            "p-s",
+            "gap-m",
+          )}
+        >
           <TextField type="search" label="Search" />
           <TextField type="search" label="Search" value="Search string" />
         </div>
-        <div className={classNames("flex", "flex-col", "border-box", "w-fit", "p-s", "gap-m")}>
+        <div
+          className={classNames(
+            "flex",
+            "flex-col",
+            "border-box",
+            "w-fit",
+            "p-s",
+            "gap-m",
+          )}
+        >
           <TextField designSize="small" type="search" label="Search" />
-          <TextField designSize="small" type="search" label="Search" value="Search string" />
+          <TextField
+            designSize="small"
+            type="search"
+            label="Search"
+            value="Search string"
+          />
         </div>
       </div>
 
-      <h2 className={classNames("font-heading-m", "text-default")}>Input types</h2>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Input types
+      </h2>
       <div className={classNames("flex", "flex-col", "gap-m", "w-m")}>
         <div className={classNames("flex", "flex-row", "border-box", "gap-m")}>
           <TextField
             label="number"
             type="number"
             leftAffix={
-              <span className={classNames("pl-s", "flex", "items-center", "text-default")}>
+              <span
+                className={classNames(
+                  "pl-s",
+                  "flex",
+                  "items-center",
+                  "text-default",
+                )}
+              >
                 <NumericIcon />
               </span>
             }
@@ -463,8 +732,15 @@ export const VisualTest: StoryObj<typeof TextField> = {
             label="url"
             type="url"
             leftAffix={
-              <span className={classNames("pl-s", "flex", "items-center", "text-default")}>
-                <LinkIcon />
+              <span
+                className={classNames(
+                  "pl-s",
+                  "flex",
+                  "items-center",
+                  "text-default",
+                )}
+              >
+                <GlobeIcon />
               </span>
             }
           />
@@ -483,7 +759,14 @@ export const VisualTest: StoryObj<typeof TextField> = {
             label="email"
             type="email"
             leftAffix={
-              <span className={classNames("pl-s", "flex", "items-center", "text-default")}>
+              <span
+                className={classNames(
+                  "pl-s",
+                  "flex",
+                  "items-center",
+                  "text-default",
+                )}
+              >
                 <MailIcon />
               </span>
             }
@@ -514,7 +797,8 @@ export const VisualTest: StoryObj<typeof TextField> = {
       </div>
 
       <h2 className={classNames("font-heading-m", "text-default")}>
-        Input types <code>designSize=&quot;small&quot;</code> doesn&apos;t support prefix and suffix
+        Input types <code>designSize=&quot;small&quot;</code> doesn&apos;t
+        support prefix and suffix
       </h2>
       <div className={classNames("flex", "flex-col", "gap-m", "w-m")}>
         <div className={classNames("flex", "flex-row", "border-box", "gap-m")}>
@@ -534,7 +818,11 @@ export const VisualTest: StoryObj<typeof TextField> = {
           <TextField designSize="small" label="week" type="week" />
         </div>
         <div className={classNames("flex", "flex-row", "border-box", "gap-m")}>
-          <TextField designSize="small" label="datetime-local" type="datetime-local" />
+          <TextField
+            designSize="small"
+            label="datetime-local"
+            type="datetime-local"
+          />
           <TextField designSize="small" label="password" type="password" />
         </div>
       </div>

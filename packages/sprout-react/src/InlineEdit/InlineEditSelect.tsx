@@ -7,7 +7,7 @@ import {
   useState,
 } from "react";
 
-import { useControl } from "@qlik/sprout-hooks";
+import { useControl } from "@qlik/sprout-react-hooks";
 
 import type { ChangeReasons } from "../Input";
 import { Select, type SelectProps } from "../Select";

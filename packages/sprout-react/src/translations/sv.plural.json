@@ -1,1 +1,10 @@
-{}
+{
+  "table.column.visibility-form.footer.label": {
+    "value": {
+      "one": "{{count}}/{{total}} kolumn synlig",
+      "other": "{{count}}/{{total}} kolumner synliga"
+    },
+    "comment": "This is displayed in the footer of the visbility form column filter for every table.",
+    "version": "6jngMitmNOFAih7NlTOsxw=="
+  }
+}

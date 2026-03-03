@@ -14,9 +14,8 @@ import {
 } from "react";
 
 import { tokens } from "@qlik/design-tokens";
-import { useControl } from "@qlik/sprout-hooks";
-import Close from "@qlik/sprout-icons/react/Close";
-import Edit from "@qlik/sprout-icons/react/Edit";
+import { useControl } from "@qlik/sprout-react-hooks";
+import { CloseIcon, EditIcon } from "@qlik/sprout-icons/react";
 
 import { AlertInline } from "../AlertInline";
 import { IconButton } from "../Button";
@@ -25,13 +24,13 @@ import {
   type FloatingPrimitiveProps,
 } from "../FloatingPrimitive";
 import { FloatingWrapper } from "../FloatingWrapper";
+import { TickOutline } from "../Icons/TickOutline";
 import { FOCUSABLE_ELEMENT_SELECTOR } from "../Utils/focus";
 import { KEYBOARD_KEYS } from "../Utils/keyboardKeys";
 import { mergeRefs } from "../Utils/mergeRef";
 import { classNames } from "../classNames";
 import { useI18n } from "../hooks/useI18n";
 import type { HTMLDivProps } from "../htmlTypes";
-import { TickOutline } from "../icons";
 
 import css from "./InlineEdit.module.css";
 
@@ -145,6 +144,25 @@ function InlineEditPrimitiveBase(
     }
   }, [editControl, onCancel, onSave, blurAction]);
 
+  const onScroll = useCallback(
+    (event: Event) => {
+      if (!editControl.value) {
+        return;
+      }
+
+      const scrollTarget = event.target;
+      const isScrollFromEditForm =
+        scrollTarget instanceof Node && formRef.current?.contains(scrollTarget);
+
+      if (isScrollFromEditForm) {
+        return;
+      }
+
+      onFocusLost();
+    },
+    [editControl, onFocusLost],
+  );
+
   useEffect(() => {
     const viewBB = viewRef.current?.getBoundingClientRect();
     const heightOfView = Math.floor(viewBB?.height || 0);
@@ -155,10 +173,21 @@ function InlineEditPrimitiveBase(
     if (editControl.value) {
       setFocusOn("edit");
     }
+
+    // Delay adding scroll listener to avoid closing on automatic scroll
+    // when the component opens (e.g., browser scrolling to keep focus visible)
+    const timeoutId = setTimeout(() => {
+      window.addEventListener("scroll", onScroll, true);
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener("scroll", onScroll, true);
+    };
   }, [editControl.value]);
 
   const editIcon = (showEditButton || showEditIcon) && (
-    <Edit
+    <EditIcon
       className={classNames(
         "shrink-0",
         "size-xl",
@@ -291,7 +320,7 @@ function InlineEditPrimitiveBase(
                       editControl.onChange(false);
                       setFocusOn("view");
                     }}
-                    icon={<Close />}
+                    icon={<CloseIcon />}
                   />
                 </FloatingWrapper>
                 <FloatingWrapper data-target>
@@ -354,6 +383,26 @@ function InlineEditPrimitiveBase(
             if (!editControl.value) {
               e.stopPropagation();
               e.preventDefault();
+
+              // Scroll into view before opening edit mode to avoid triggering the scroll listener and closing the edit immediately
+              const rect = viewRef.current?.getBoundingClientRect();
+              const isInViewport =
+                rect &&
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <=
+                  (window.innerHeight ||
+                    document.documentElement.clientHeight) &&
+                rect.right <=
+                  (window.innerWidth || document.documentElement.clientWidth);
+
+              if (!isInViewport) {
+                viewRef.current?.scrollIntoView({
+                  behavior: "auto",
+                  block: "nearest",
+                  inline: "nearest",
+                });
+              }
               editControl.onChange(true);
             }
           }}

@@ -35,7 +35,12 @@ This wrapper component for the buttons that turns any number of ToggleButton chi
 ```tsx
 <ButtonGroup>
   {["One", "Two", "Three"].map((label) => (
-    <ToggleButton key={label} label={label} toggled={toggled === label} onChange={() => setToggled(label)} />
+    <ToggleButton
+      key={label}
+      label={label}
+      toggled={toggled === label}
+      onChange={() => setToggled(label)}
+    />
   ))}
 </ButtonGroup>
 ```

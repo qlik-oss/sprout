@@ -1,4 +1,4 @@
-import { useId } from "@qlik/sprout-hooks";
+import { useId } from "@qlik/sprout-react-hooks";
 
 import type { FieldProps } from "../Field";
 import { useFieldAriaProps } from "../hooks/useFieldAriaProps";

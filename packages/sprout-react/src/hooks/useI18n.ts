@@ -38,9 +38,11 @@ export type TranslationSlot = {
 
 export type TranslationPluralSlot = {
   value: {
-    zero: string;
-    one: string;
+    zero?: string;
+    one?: string;
     other: string;
+    many?: string;
+    few?: string;
   };
   comment: string;
 };

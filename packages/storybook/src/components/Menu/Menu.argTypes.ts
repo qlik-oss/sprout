@@ -1,8 +1,8 @@
 import type { MenuProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react";
 
+import { ICONS_MAP, ICON_OPTIONS } from "../../internal/icons/Icons";
 import { ButtonArgTypes, ButtonIconArgTypes } from "../Button/Button.argTypes";
-import { ICONS_MAP, ICON_OPTIONS } from "../internal/icons/Icons";
 
 export const MenuContentArgTypes: ArgTypes<MenuProps["Content"]> = {
   label: {
@@ -25,7 +25,8 @@ export const MenuContentArgTypes: ArgTypes<MenuProps["Content"]> = {
   },
   valueLabel: {
     control: "text",
-    description: "Optional value label displayed on the opposite side of the main label.",
+    description:
+      "Optional value label displayed on the opposite side of the main label.",
     table: {
       type: {
         summary: "string",
@@ -56,7 +57,8 @@ export const MenuContentArgTypes: ArgTypes<MenuProps["Content"]> = {
   },
   selectable: {
     control: "boolean",
-    description: "If true, the menu content will display a selection indicator (e.g., a checkmark) when selected.",
+    description:
+      "If true, the menu content will display a selection indicator (e.g., a checkmark) when selected.",
     table: {
       type: {
         summary: "boolean",
@@ -66,7 +68,8 @@ export const MenuContentArgTypes: ArgTypes<MenuProps["Content"]> = {
   selected: {
     if: { arg: "selectable", truthy: true },
     control: "boolean",
-    description: "If true, the menu content will be marked as selected. Only relevant if `selectable` is true.",
+    description:
+      "If true, the menu content will be marked as selected. Only relevant if `selectable` is true.",
     table: {
       type: {
         summary: "boolean",
@@ -104,7 +107,8 @@ export const MenuContextualArgTypes: ArgTypes<MenuProps["Contextual"]> = {
   },
   closeOnRightClickOutside: {
     control: "boolean",
-    description: "If true, the menu will close when a right-click is detected outside of the menu.",
+    description:
+      "If true, the menu will close when a right-click is detected outside of the menu.",
     table: {
       type: {
         summary: "boolean",
@@ -156,7 +160,8 @@ export const MenuContextualArgTypes: ArgTypes<MenuProps["Contextual"]> = {
 export const MenuGroupArgTypes: ArgTypes<MenuProps["Group"]> = {
   label: {
     control: "text",
-    description: "The label for the menu group. Renders a `Menu.GroupLabel` internally.",
+    description:
+      "The label for the menu group. Renders a `Menu.GroupLabel` internally.",
     table: {
       type: {
         summary: "string",
@@ -177,7 +182,8 @@ export const MenuGroupArgTypes: ArgTypes<MenuProps["Group"]> = {
 export const MenuGroupLabelArgTypes: ArgTypes<MenuProps["GroupLabel"]> = {
   label: {
     control: "text",
-    description: "The text label for the menu group. Rendered inside a `Menu.Group`.",
+    description:
+      "The text label for the menu group. Rendered inside a `Menu.Group`.",
     table: {
       type: {
         summary: "string",
@@ -207,7 +213,8 @@ export const MenuItemArgTypes: ArgTypes<MenuProps["Item"]> = {
   },
   valueLabel: {
     control: "text",
-    description: "Optional value label displayed on the opposite side of the main label.",
+    description:
+      "Optional value label displayed on the opposite side of the main label.",
     table: {
       type: {
         summary: "string",
@@ -242,7 +249,8 @@ export const MenuItemArgTypes: ArgTypes<MenuProps["Item"]> = {
   },
   selectable: {
     control: "boolean",
-    description: "If true, the menu item will display a selection indicator (e.g., a checkmark) when selected.",
+    description:
+      "If true, the menu item will display a selection indicator (e.g., a checkmark) when selected.",
     table: {
       type: {
         summary: "boolean",
@@ -252,7 +260,8 @@ export const MenuItemArgTypes: ArgTypes<MenuProps["Item"]> = {
   selected: {
     if: { arg: "selectable", truthy: true },
     control: "boolean",
-    description: "If true, the menu item will be marked as selected. Only relevant if `selectable` is true.",
+    description:
+      "If true, the menu item will be marked as selected. Only relevant if `selectable` is true.",
     table: {
       type: {
         summary: "boolean",
@@ -273,7 +282,8 @@ export const MenuItemArgTypes: ArgTypes<MenuProps["Item"]> = {
 export const MenuSubArgTypes: ArgTypes<MenuProps["Sub"]> = {
   "data-testid": {
     control: "text",
-    description: "Test ID applied to the submenu's floating menu (the popover element).",
+    description:
+      "Test ID applied to the submenu's floating menu (the popover element).",
     table: {
       type: {
         summary: "string",
@@ -282,7 +292,8 @@ export const MenuSubArgTypes: ArgTypes<MenuProps["Sub"]> = {
   },
   "data-testid-submenu": {
     control: "text",
-    description: "Test ID applied to the submenu trigger item (the nested Menu.Item).",
+    description:
+      "Test ID applied to the submenu trigger item (the nested Menu.Item).",
     table: {
       type: {
         summary: "string",
@@ -300,7 +311,8 @@ export const MenuSubArgTypes: ArgTypes<MenuProps["Sub"]> = {
   },
   disabled: {
     control: "boolean",
-    description: "If true, the submenu trigger will be disabled and not interactive.",
+    description:
+      "If true, the submenu trigger will be disabled and not interactive.",
     table: {
       type: {
         summary: "boolean",
@@ -340,7 +352,8 @@ export const MenuSubArgTypes: ArgTypes<MenuProps["Sub"]> = {
   },
   valueLabel: {
     control: "text",
-    description: "Optional value label displayed on the opposite side of the main label.",
+    description:
+      "Optional value label displayed on the opposite side of the main label.",
     table: {
       type: {
         summary: "string",
@@ -353,7 +366,8 @@ export const MenuSubArgTypes: ArgTypes<MenuProps["Sub"]> = {
     },
     options: ICON_OPTIONS,
     mapping: ICONS_MAP,
-    description: "Optional icon to display alongside the submenu trigger label.",
+    description:
+      "Optional icon to display alongside the submenu trigger label.",
     table: {
       type: {
         summary: "ReactNode",
@@ -362,7 +376,8 @@ export const MenuSubArgTypes: ArgTypes<MenuProps["Sub"]> = {
   },
   selectable: {
     control: "boolean",
-    description: "If true, the submenu trigger will display a selection indicator (e.g., a checkmark) when selected.",
+    description:
+      "If true, the submenu trigger will display a selection indicator (e.g., a checkmark) when selected.",
     table: {
       type: {
         summary: "boolean",
@@ -372,7 +387,8 @@ export const MenuSubArgTypes: ArgTypes<MenuProps["Sub"]> = {
   selected: {
     if: { arg: "selectable", truthy: true },
     control: "boolean",
-    description: "If true, the submenu trigger will be marked as selected. Only relevant if `selectable` is true.",
+    description:
+      "If true, the submenu trigger will be marked as selected. Only relevant if `selectable` is true.",
     table: {
       type: {
         summary: "boolean",
@@ -411,7 +427,8 @@ export const MenuTriggerArgTypes: ArgTypes<MenuProps["Trigger"]> = {
   },
   closeOnRightClickOutside: {
     control: "boolean",
-    description: "If true, the menu will close when a right-click is detected outside of the menu.",
+    description:
+      "If true, the menu will close when a right-click is detected outside of the menu.",
     table: {
       type: {
         summary: "boolean",
@@ -475,7 +492,9 @@ export const MenuTriggerArgTypes: ArgTypes<MenuProps["Trigger"]> = {
   },
 };
 
-export const MenuSecondaryActionArgTypes: ArgTypes<MenuProps["SecondaryAction"]> = {
+export const MenuSecondaryActionArgTypes: ArgTypes<
+  MenuProps["SecondaryAction"]
+> = {
   ...ButtonIconArgTypes,
   ...ButtonArgTypes,
 };

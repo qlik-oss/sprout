@@ -1,11 +1,18 @@
 import type { AvatarProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
-import { ICONS_MAP, ICON_OPTIONS } from "../internal/icons/Icons";
+import { ICONS_MAP, ICON_OPTIONS } from "../../internal/icons/Icons";
 
 type AvatarArgTypes = ArgTypes<AvatarProps>;
 
-const AVATAR_SIZES: Array<AvatarProps["size"]> = ["xs", "s", "m", "l", "xl", "illustration"];
+const AVATAR_SIZES: Array<AvatarProps["size"]> = [
+  "xs",
+  "s",
+  "m",
+  "l",
+  "xl",
+  "illustration",
+];
 const size: AvatarArgTypes["size"] = {
   control: {
     type: "select",
@@ -39,7 +46,8 @@ export const AvatarTextArgTypes: AvatarArgTypes = {
     control: {
       type: "text",
     },
-    description: "Text to display inside the avatar. Only the first two characters will be shown.",
+    description:
+      "Text to display inside the avatar. Only the first two characters will be shown.",
   },
 };
 
@@ -52,7 +60,8 @@ export const AvatarIconArgTypes: AvatarArgTypes = {
     },
     options: ICON_OPTIONS,
     mapping: ICONS_MAP,
-    description: "Accepts a `ReactElement`. Use an icon from `@qlik/sprout-icons`",
+    description:
+      "Accepts a `ReactElement`. Use an icon from `@qlik/sprout-icons`",
     table: {
       type: {
         summary: "ReactElement",
@@ -67,7 +76,8 @@ export const AvatarImgArgTypes: AvatarArgTypes = {
     control: {
       type: "object",
     },
-    description: "Accepts props and attributes for an `img` tag. Excluded `className`, `style`, and `color`.",
+    description:
+      "Accepts props and attributes for an `img` tag. Excluded `className`, `style`, and `color`.",
     table: {
       type: {
         summary: "HTMLImageElement",

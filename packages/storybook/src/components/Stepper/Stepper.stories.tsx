@@ -10,8 +10,8 @@ export default {
 
 const LOREM = (
   <div className={classNames("font-label-s", "text-default", "max-w-xs")}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
   </div>
 );
 
@@ -64,8 +64,18 @@ export const Playground: Story = {
 
 export function VisualTest() {
   return (
-    <div className={classNames("flex", "flex-col", "border-box", "p-xl", "gap-xxl")}>
-      <h2 className={classNames("font-heading-m", "text-default")}>Horizontal stretch</h2>
+    <div
+      className={classNames(
+        "flex",
+        "flex-col",
+        "border-box",
+        "p-xl",
+        "gap-xxl",
+      )}
+    >
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Horizontal stretch
+      </h2>
 
       <div
         className={classNames("flex", "flex-row", "border-box")}
@@ -80,49 +90,153 @@ export function VisualTest() {
         </Stepper.Container>
       </div>
 
-      <h2 className={classNames("font-heading-m", "text-default")}>Horizontal fit</h2>
-      <div className={classNames("flex", "flex-row", "border-box", "w-fit", "h-fit")}>
-        <Stepper.Container currentStepIndex={1} orientation="horizontal" currentStepError>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Horizontal fit
+      </h2>
+      <div
+        className={classNames(
+          "flex",
+          "flex-row",
+          "border-box",
+          "w-fit",
+          "h-fit",
+        )}
+      >
+        <Stepper.Container
+          currentStepIndex={1}
+          orientation="horizontal"
+          currentStepError
+        >
           <Stepper.Step text="First" onClick={() => {}} />
           <Stepper.Step text="Second" />
           <Stepper.Step text="Third" />
           <Stepper.Step text="Last" />
         </Stepper.Container>
       </div>
-      <h2 className={classNames("font-heading-m", "text-default")}>Horizontal overflow</h2>
-      <div className={classNames("flex", "flex-row", "border-box", "h-fit")} style={{ inlineSize: "300px" }}>
-        <Stepper.Container currentStepIndex={1} orientation="horizontal" currentStepError>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Horizontal overflow
+      </h2>
+      <div
+        className={classNames("flex", "flex-row", "border-box", "h-fit")}
+        style={{ inlineSize: "300px" }}
+      >
+        <Stepper.Container
+          currentStepIndex={1}
+          orientation="horizontal"
+          currentStepError
+        >
           <Stepper.Step text="First" onClick={() => {}} />
           <Stepper.Step text="Second" />
           <Stepper.Step text="Third" />
           <Stepper.Step text="Last" />
         </Stepper.Container>
       </div>
-      <h2 className={classNames("font-heading-m", "text-default")}>Horizontal step interactive states</h2>
-      <div className={classNames("flex", "flex-col", "border-box", "h-fit")} style={{ inlineSize: "800px" }}>
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        Horizontal step interactive states
+      </h2>
+      <div
+        className={classNames("flex", "flex-col", "border-box", "h-fit")}
+        style={{ inlineSize: "800px" }}
+      >
         <Stepper.Container orientation="horizontal">
-          <Stepper.Step semantic="active" text="Active State" onClick={() => {}} />
-          <Stepper.Step semantic="active" text="Active State Hover" data-testid="hover" onClick={() => {}} />
-          <Stepper.Step semantic="active" text="Active State Active" data-testid="active" onClick={() => {}} />
-          <Stepper.Step semantic="active" text="Active State Focused" data-testid="focus" onClick={() => {}} />
+          <Stepper.Step
+            semantic="active"
+            text="Active State"
+            onClick={() => {}}
+          />
+          <Stepper.Step
+            semantic="active"
+            text="Active State Hover"
+            data-testid="hover"
+            onClick={() => {}}
+          />
+          <Stepper.Step
+            semantic="active"
+            text="Active State Active"
+            data-testid="active"
+            onClick={() => {}}
+          />
+          <Stepper.Step
+            semantic="active"
+            text="Active State Focused"
+            data-testid="focus"
+            onClick={() => {}}
+          />
         </Stepper.Container>
         <Stepper.Container orientation="horizontal">
-          <Stepper.Step semantic="completed" text="Completed State" onClick={() => {}} />
-          <Stepper.Step semantic="completed" text="Completed State Hover" data-testid="hover" onClick={() => {}} />
-          <Stepper.Step semantic="completed" text="Completed state Active" data-testid="active" onClick={() => {}} />
-          <Stepper.Step semantic="completed" text="Completed State Focused" data-testid="focus" onClick={() => {}} />
+          <Stepper.Step
+            semantic="completed"
+            text="Completed State"
+            onClick={() => {}}
+          />
+          <Stepper.Step
+            semantic="completed"
+            text="Completed State Hover"
+            data-testid="hover"
+            onClick={() => {}}
+          />
+          <Stepper.Step
+            semantic="completed"
+            text="Completed state Active"
+            data-testid="active"
+            onClick={() => {}}
+          />
+          <Stepper.Step
+            semantic="completed"
+            text="Completed State Focused"
+            data-testid="focus"
+            onClick={() => {}}
+          />
         </Stepper.Container>
         <Stepper.Container orientation="horizontal">
-          <Stepper.Step semantic="error" text="Error State" onClick={() => {}} />
-          <Stepper.Step semantic="error" text="Error State Hover" data-testid="hover" onClick={() => {}} />
-          <Stepper.Step semantic="error" text="Error State Active" data-testid="active" onClick={() => {}} />
-          <Stepper.Step semantic="error" text="Error State Focused" data-testid="focus" onClick={() => {}} />
+          <Stepper.Step
+            semantic="error"
+            text="Error State"
+            onClick={() => {}}
+          />
+          <Stepper.Step
+            semantic="error"
+            text="Error State Hover"
+            data-testid="hover"
+            onClick={() => {}}
+          />
+          <Stepper.Step
+            semantic="error"
+            text="Error State Active"
+            data-testid="active"
+            onClick={() => {}}
+          />
+          <Stepper.Step
+            semantic="error"
+            text="Error State Focused"
+            data-testid="focus"
+            onClick={() => {}}
+          />
         </Stepper.Container>
         <Stepper.Container orientation="horizontal">
-          <Stepper.Step semantic="inactive" text="Inactive State" onClick={() => {}} />
-          <Stepper.Step semantic="inactive" text="Inactive State Hover" data-testid="hover" onClick={() => {}} />
-          <Stepper.Step semantic="inactive" text="Inactive State Active" data-testid="active" onClick={() => {}} />
-          <Stepper.Step semantic="inactive" text="Inactive State Focused" data-testid="focus" onClick={() => {}} />
+          <Stepper.Step
+            semantic="inactive"
+            text="Inactive State"
+            onClick={() => {}}
+          />
+          <Stepper.Step
+            semantic="inactive"
+            text="Inactive State Hover"
+            data-testid="hover"
+            onClick={() => {}}
+          />
+          <Stepper.Step
+            semantic="inactive"
+            text="Inactive State Active"
+            data-testid="active"
+            onClick={() => {}}
+          />
+          <Stepper.Step
+            semantic="inactive"
+            text="Inactive State Focused"
+            data-testid="focus"
+            onClick={() => {}}
+          />
         </Stepper.Container>
         <Stepper.Container orientation="horizontal">
           <Stepper.Step text="progress" state="progress" />
@@ -141,7 +255,11 @@ export function VisualTest() {
             {LOREM}
           </Stepper.Step>
         </Stepper.Container>
-        <Stepper.Container orientation="vertical" currentStepIndex={1} currentStepError>
+        <Stepper.Container
+          orientation="vertical"
+          currentStepIndex={1}
+          currentStepError
+        >
           <Stepper.Step text="First" onClick={() => {}}>
             {LOREM}
           </Stepper.Step>
@@ -150,12 +268,22 @@ export function VisualTest() {
           <Stepper.Step text="Last">{LOREM}</Stepper.Step>
         </Stepper.Container>
         <Stepper.Container orientation="vertical" stateLess>
-          <Stepper.Step number="1" semantic="completed" text="stateLess container" onClick={() => {}}>
+          <Stepper.Step
+            number="1"
+            semantic="completed"
+            text="stateLess container"
+            onClick={() => {}}
+          >
             {LOREM}
           </Stepper.Step>
           <Stepper.Step number="2" text="Second" semantic="active" />
           <Stepper.Step number="3" text="Third" semantic="error" />
-          <Stepper.Step number="4" text="Last no children" semantic="inactive" isLast />
+          <Stepper.Step
+            number="4"
+            text="Last no children"
+            semantic="inactive"
+            isLast
+          />
         </Stepper.Container>
       </div>
     </div>

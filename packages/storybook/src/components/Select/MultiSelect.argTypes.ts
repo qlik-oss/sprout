@@ -11,7 +11,9 @@ type MultiSelectArgTypes = {
 
 export const getMultiSelectArgTypes = ({
   options,
-}: MultiSelectArgTypes): ArgTypes<SelectProps["Multi"] & { defaultValues: Array<string> }> => ({
+}: MultiSelectArgTypes): ArgTypes<
+  SelectProps["Multi"] & { defaultValues: Array<string> }
+> => ({
   ...FieldArgTypes,
   ...CommonFieldArgTypes,
   defaultValue: {
@@ -32,7 +34,8 @@ export const getMultiSelectArgTypes = ({
     table: { type: { summary: "string[]" } },
   },
   onChange: {
-    description: "The function that will be called when the value of the field changes.",
+    description:
+      "The function that will be called when the value of the field changes.",
     table: {
       type: {
         summary: "(e: ChangeEvent) => void",
@@ -40,7 +43,8 @@ export const getMultiSelectArgTypes = ({
     },
   },
   renderValue: {
-    description: "The function that will be called to render the value of the field if any.",
+    description:
+      "The function that will be called to render the value of the field if any.",
     table: {
       type: {
         summary: "(value: string, selectedProps?: OptionProps) => ReactNode;",
@@ -48,7 +52,8 @@ export const getMultiSelectArgTypes = ({
     },
   },
   children: {
-    description: "The options of the field. They are used to populate the field.",
+    description:
+      "The options of the field. They are used to populate the field.",
     table: {
       type: {
         summary: "ReactNode",

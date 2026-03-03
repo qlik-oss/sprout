@@ -1,6 +1,6 @@
 import { type ReactNode, type Ref, forwardRef } from "react";
 
-import { useControl, useId } from "@qlik/sprout-hooks";
+import { useControl, useId } from "@qlik/sprout-react-hooks";
 
 import { classNames } from "../classNames";
 import type { HTMLDivProps } from "../htmlTypes";
