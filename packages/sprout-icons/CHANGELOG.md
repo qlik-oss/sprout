@@ -1,5 +1,11 @@
 # @qlik/sprout-icons
 
+## 0.0.3
+
+### Patch Changes
+
+- b118fdf: fix: support dataset and data set icons
+
 ## 0.0.2
 
 ### Patch Changes
