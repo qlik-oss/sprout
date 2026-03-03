@@ -1,7 +1,8 @@
 import baseConfig, { plugin } from "./index.mjs";
 
 const nextRules = {
-  "plugin/use-logical-properties-and-values": [true, { severity: "warning" }],
+  "logical-css/require-logical-properties": [true, { severity: "warning" }],
+  "logical-css/require-logical-keywords": [true, { severity: "warning" }],
   "declaration-property-value-disallowed-list": {
     transition: ["/all/"],
   },

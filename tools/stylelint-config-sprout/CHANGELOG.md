@@ -1,5 +1,11 @@
 # @qlik/stylelint-config-sprout
 
+## 6.7.4
+
+### Patch Changes
+
+- b87278e: fix: align config
+
 ## 6.7.3
 
 ### Patch Changes
