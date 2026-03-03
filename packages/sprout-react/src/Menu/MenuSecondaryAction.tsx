@@ -1,4 +1,4 @@
-import NewTabIcon from "@qlik/sprout-icons/react/NewTab";
+import { NewTabIcon } from "@qlik/sprout-icons/react";
 
 import { type ButtonIconProps, IconButton } from "../Button";
 import { useI18n } from "../hooks/useI18n";
