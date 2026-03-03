@@ -1,5 +1,5 @@
-import qlik from "@qlik/eslint-config";
 import sproutPlugin from "@qlik/eslint-plugin-sprout";
+import qlik from "@qlik/eslint-config";
 import eslintReactPlugin from "eslint-plugin-react";
 import base from "./index.mjs";
 
