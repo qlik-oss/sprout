@@ -1,5 +1,6 @@
 src/**/*.map
 src/**/*.js
 src/**/*.d.ts
+!src/**/*.css.d.ts
 src/utility/__screenshots__/
 src/css/__screenshots__/
