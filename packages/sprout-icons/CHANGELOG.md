@@ -1,5 +1,11 @@
 # @qlik/sprout-icons
 
+## 0.0.4
+
+### Patch Changes
+
+- 7d934fe: chore(icons): from Figma
+
 ## 0.0.3
 
 ### Patch Changes
