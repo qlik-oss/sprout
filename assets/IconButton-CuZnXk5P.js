@@ -1,0 +1,1 @@
+import{r as i,j as r}from"./iframe-lMEil1TA.js";import{B as e}from"./Button-B3VC5XuI.js";import{T as f}from"./Tooltip-wsnfK-o5.js";const x=i.forwardRef(m);function m({label:t,"aria-label":o,tooltipPlacement:s="top",...a},n){return t?r.jsx(f,{placement:s,title:t,ref:n,children:r.jsx(e,{"aria-label":o||t,...a})}):r.jsx(e,{"aria-label":o,...a,ref:n})}export{x as I};
