@@ -57,7 +57,7 @@
     "@types/react-dom": "^19.2.3",
     "axe-core": "^4.11.1",
     "cpx2": "^8.0.0",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.0",
     "eslint-plugin-storybook": "^10.2.6",
     "glob": "^13.0.0",
     "prettier": "^3.8.1",
