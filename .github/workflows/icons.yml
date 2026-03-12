@@ -60,4 +60,7 @@ jobs:
           title: "chore(icons): from Figma"
           body: ${{ steps.get-pr-body.outputs.body }}
           branch: ci/icons
-          token: ${{ secrets.GITHUB_TOKEN }}
+          delete-branch: true
+          token: ${{ secrets.GH_ACCESS_TOKEN }}
+          committer: svc-pipeline <svc_pipeline@qlik.com>
+          author: svc-pipeline <svc_pipeline@qlik.com>
