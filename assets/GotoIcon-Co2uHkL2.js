@@ -1,1 +1,0 @@
-import{r as s,j as o}from"./iframe-s7Iwh0oT.js";import{C as a}from"./common-bQH3ZR03.js";function e(r,t){return o.jsx("svg",{...a,ref:t,...r,children:o.jsx("path",{d:"M9 1v1H2v12h12V7h1v7a1 1 0 0 1-.883.993L14 15H2a1 1 0 0 1-.993-.883L1 14V2a1 1 0 0 1 .883-.993L2 1zm7-1v5h-1V1.706l-4.5 4.501-.707-.707L14.292 1H11V0z"})})}const f=s.forwardRef(e);export{f as G};
