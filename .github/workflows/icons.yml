@@ -42,15 +42,14 @@ jobs:
           while read STATUS ADDR
           do
             icon=`basename $ADDR .svg`
-            size=`basename $(dirname $ADDR)`
             semver=`sed 's/A/minor/;s/D/major/;s/M/patch/' <<< $STATUS`
             verb=`sed 's/A/added/;s/D/removed/;s/M/changed/' <<< $STATUS`
-            echo -e "---\n'@talend/icons': $semver\n---\n\n$verb icon \`$icon\` in size \`$size\`" > .changeset/$icon-$size-$semver.md
-          done < <(git diff --name-status HEAD ./packages/sprout-icons/svg/**/*.svg)
+            echo -e "---\n'@qlik/sprout-icons': $semver\n---\n\n$verb icon \`$icon\`" > .changeset/$icon-$semver.md
+          done < <(git diff --name-status HEAD ./packages/sprout-icons/svg/*.svg)
           git add .changeset
           body=$(git diff --name-only HEAD .changeset/*.md | xargs -L1 sed -n '5p')
           body="${body//$'\n'/'%0A'}"
-          echo ::set-output name=body::$body
+          echo "body=$body" >> $GITHUB_OUTPUT
 
       - name: Create Pull Request
         id: cpr
@@ -60,7 +59,6 @@ jobs:
           title: "chore(icons): from Figma"
           body: ${{ steps.get-pr-body.outputs.body }}
           branch: ci/icons
-          delete-branch: true
           token: ${{ secrets.GH_ACCESS_TOKEN }}
           committer: svc-pipeline <svc_pipeline@qlik.com>
           author: svc-pipeline <svc_pipeline@qlik.com>

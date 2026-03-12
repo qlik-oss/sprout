@@ -3,7 +3,7 @@
 # (ignores references in configuration, workflow, and hook files)
 
 # Get list of staged files excluding .github and .husky
-STAGED_FILES=$(git diff --cached --name-only | grep -v "^\\.github/" | grep -v "^\\.husky/")
+STAGED_FILES=$(git diff --cached --name-only | grep -v "^\\.github/" | grep -v "^\\.husky/" || true)
 
 # Check for @qlik-trial in those files
 if [ -n "$STAGED_FILES" ]; then
