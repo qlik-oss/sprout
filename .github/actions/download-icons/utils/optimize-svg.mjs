@@ -112,7 +112,6 @@ function simplifySVG(inputFilePath, outputFilePath) {
         params: {
           overrides: {
             cleanupIds: false,
-            removeViewBox: false,
           },
         },
       },
@@ -184,7 +183,7 @@ function simplifySVG(inputFilePath, outputFilePath) {
   // Write the simplified SVG to the output file
   if ("data" in result) {
     fs.writeFileSync(outputFilePath, result.data, "utf8");
-    console.log(`Simplified SVG saved to ${outputFilePath}`);
+    console.log(`SVG saved to ${outputFilePath}`);
   } else {
     console.error("Error optimizing SVG:", result);
   }

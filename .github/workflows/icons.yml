@@ -46,6 +46,9 @@ jobs:
             semver=`sed 's/A/minor/;s/D/minor/;s/M/patch/' <<< $STATUS`
             verb=`sed 's/A/added/;s/D/removed/;s/M/changed/' <<< $STATUS`
             echo -e "---\n'@qlik/sprout-icons': $semver\n---\n\n$verb icon \`$icon\`" > .changeset/$icon-$semver.md
+          rm ./packages/sprout-icons/metadata.json
+          mv icons-metadata.json ./packages/sprout-icons/metadata.json
+          git add ./packages/sprout-icons/metadata.json
           done < <(git diff --cached --name-status HEAD -- 'packages/sprout-icons/svg/*.svg')
           git add .changeset
           body=$(git diff --name-only HEAD .changeset/*.md | xargs -L1 sed -n '5p')
