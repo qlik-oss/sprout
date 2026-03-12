@@ -1,11 +1,66 @@
+import "dotenv/config";
 import * as Figma from "figma-api";
 import * as fs from "fs";
+import { cleanString } from "./utils/cleanString.mjs";
 import { compareAllSvgs } from "./utils/compare.mjs";
 import { downloadFrameImages } from "./utils/download.mjs";
 import { optimizeAllSVGsInFolder } from "./utils/optimize-svg.mjs";
 
 const INTERIM_DIRECTORY = "auto-generated-icons";
 const TARGET_DIRECTORY = "auto-generated-optimized-icons";
+const METADATA_FILE = "icons-metadata.json";
+const MAX_NETWORK_RETRIES = 4;
+const BASE_BACKOFF_MS = 500;
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function isRetryableNetworkError(error) {
+  const retryableCodes = new Set([
+    "ECONNRESET",
+    "ECONNREFUSED",
+    "EPIPE",
+    "ETIMEDOUT",
+    "ENOTFOUND",
+    "EAI_AGAIN",
+    "ECONNABORTED",
+  ]);
+
+  const code = error?.code;
+  if (code && retryableCodes.has(code)) {
+    return true;
+  }
+
+  const message = String(error?.message || "");
+  return /socket hang up|network|timed out/i.test(message);
+}
+
+async function withNetworkRetry(taskName, fn) {
+  let lastError;
+
+  for (let attempt = 0; attempt <= MAX_NETWORK_RETRIES; attempt++) {
+    try {
+      return await fn();
+    } catch (error) {
+      lastError = error;
+      const retryable = isRetryableNetworkError(error);
+      const hasRemainingAttempts = attempt < MAX_NETWORK_RETRIES;
+
+      if (!retryable || !hasRemainingAttempts) {
+        throw error;
+      }
+
+      const backoffMs = BASE_BACKOFF_MS * 2 ** attempt;
+      console.warn(
+        `${taskName} failed (attempt ${attempt + 1}/${MAX_NETWORK_RETRIES + 1}): ${error.message}. Retrying in ${backoffMs}ms...`,
+      );
+      await sleep(backoffMs);
+    }
+  }
+
+  throw lastError;
+}
 
 function createFolder(directory) {
   if (!fs.existsSync(directory)) {
@@ -36,6 +91,24 @@ function findCardFrames(node) {
   return cardFrames;
 }
 
+function getIconInfo(node) {
+  const name = node.node.name || "";
+  const filename = cleanString(name);
+  const category = node.category || "";
+  const description = node.meta.description?.trim?.() || "";
+  if (description) {
+    console.log("description: ", description);
+  }
+  const tags = description ? description.split(",").map((t) => t.trim()) : [];
+
+  return {
+    name,
+    filename,
+    category,
+    tags,
+  };
+}
+
 async function main() {
   createFolder(INTERIM_DIRECTORY);
 
@@ -49,7 +122,7 @@ async function main() {
   });
 
   const fileKey = process.env.FIGMA_FILE_ID || "GQZX9DHncxo9fRYV4cOaWV"; //Sprout Icons file
-  const file = await api.getFile(fileKey);
+  const file = await withNetworkRetry("getFile", () => api.getFile(fileKey));
   const page = file.document.children.find((child) => child.name === "Icons [EXPORT]");
 
   // eslint-disable-next-line no-console
@@ -100,24 +173,20 @@ async function main() {
   });
 
   componentNodeInfos.forEach((nodeInfo) => {
-    //if (getVisibility(node) === "public") {
     publicComponents.push(nodeInfo.node);
-    // } else {
-    //   privateComponents.push(node);
-    // }
   });
 
   if (publicComponents.length > 0) {
     // eslint-disable-next-line no-console
     console.log(`Downloading ${publicComponents.length} icons`);
     await downloadFrameImages(publicComponents, ctx);
+    // generate metadata file for icons
+    const iconMetadata = JSON.stringify(componentNodeInfos.map(getIconInfo), null, 2);
+    await fs.promises.writeFile(METADATA_FILE, iconMetadata, "utf8");
   } else {
     // eslint-disable-next-line no-console
     console.warn("No icons found — check page/frame names match the Figma file structure.");
   }
-  // if (privateComponents.length > 0) {
-  //   await downloadFrameImages(privateComponents, ctx, 'private');
-  // }
 
   //Optimize SVGs
   optimizeAllSVGsInFolder(INTERIM_DIRECTORY, TARGET_DIRECTORY);

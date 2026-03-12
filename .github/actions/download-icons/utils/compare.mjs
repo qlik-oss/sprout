@@ -35,6 +35,7 @@ async function comparePngs(pngPath1, pngPath2, diffPath) {
 
 // Main function to compare two SVGs
 async function compareSvgs(svgPath1, svgPath2) {
+  const iconName = svgPath1.replace(/.*\/(.*)\.svg/, "$1");
   const pngPath1 = "output1.png";
   const pngPath2 = "output2.png";
   const diffPath = "diff.png";
@@ -48,13 +49,13 @@ async function compareSvgs(svgPath1, svgPath2) {
 
   if (numDiffPixels === 0) {
     // eslint-disable-next-line no-console
-    console.log("The SVGs are identical.");
+    console.log(`Comparing ${iconName}: SVGs are identical.`);
   } else if (numDiffPixels < 24) {
-    console.warn(`The SVGs differ by ${numDiffPixels} pixels, deemed acceptable. Please check manually.`);
-  } else {
-    throw new Error(
-      `The Icon ${svgPath1.replace(/.*\/(.*)\.svg/, "$1")} differ by ${numDiffPixels} pixels. See diff.png for details.`,
+    console.warn(
+      `Comparing ${iconName}: The SVGs differ by ${numDiffPixels} pixels, deemed acceptable. Please check manually.`,
     );
+  } else {
+    throw new Error(`The Icon ${iconName} differ by ${numDiffPixels} pixels. See diff.png for details.`);
   }
 
   return Promise.resolve();
@@ -78,7 +79,6 @@ export async function compareAllSvgs(dir1, dir2) {
     if (fs.existsSync(file2)) {
       // eslint-disable-next-line no-console
 
-      console.log(`Comparing ${file2.split("/")[1].replace(".svg", "")}`);
       await compareSvgs(file1, file2);
     } else {
       // eslint-disable-next-line no-console

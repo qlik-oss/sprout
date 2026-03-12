@@ -4,6 +4,34 @@ import * as https from "https";
 import { pipeline } from "stream/promises";
 import { cleanString } from "./cleanString.mjs";
 
+const MAX_NETWORK_RETRIES = 4;
+const BASE_BACKOFF_MS = 500;
+const REQUEST_TIMEOUT_MS = 30_000;
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function isRetryableNetworkError(error) {
+  const retryableCodes = new Set([
+    "ECONNRESET",
+    "ECONNREFUSED",
+    "EPIPE",
+    "ETIMEDOUT",
+    "ENOTFOUND",
+    "EAI_AGAIN",
+    "ECONNABORTED",
+  ]);
+
+  const code = error?.code;
+  if (code && retryableCodes.has(code)) {
+    return true;
+  }
+
+  const message = String(error?.message || "");
+  return /socket hang up|network|timed out/i.test(message);
+}
+
 function downloadWithRedirects(uri, filename, redirectsLeft = 5) {
   return new Promise((resolve, reject) => {
     const parsedUrl = new URL(uri);
@@ -39,11 +67,42 @@ function downloadWithRedirects(uri, filename, redirectsLeft = 5) {
     });
 
     req.on("error", reject);
+    req.setTimeout(REQUEST_TIMEOUT_MS, () => {
+      req.destroy(new Error(`Request timed out after ${REQUEST_TIMEOUT_MS}ms for ${uri}`));
+    });
   });
 }
 
+async function downloadWithRetry(uri, filename) {
+  let lastError;
+
+  for (let attempt = 0; attempt <= MAX_NETWORK_RETRIES; attempt++) {
+    try {
+      await downloadWithRedirects(uri, filename);
+      return;
+    } catch (error) {
+      lastError = error;
+
+      const retryable = isRetryableNetworkError(error);
+      const hasRemainingAttempts = attempt < MAX_NETWORK_RETRIES;
+
+      if (!retryable || !hasRemainingAttempts) {
+        throw error;
+      }
+
+      const backoffMs = BASE_BACKOFF_MS * 2 ** attempt;
+      console.warn(
+        `Download failed for ${uri} (attempt ${attempt + 1}/${MAX_NETWORK_RETRIES + 1}): ${error.message}. Retrying in ${backoffMs}ms...`,
+      );
+      await sleep(backoffMs);
+    }
+  }
+
+  throw lastError;
+}
+
 export function download(uri, filename) {
-  return downloadWithRedirects(uri, filename);
+  return downloadWithRetry(uri, filename);
 }
 
 export async function downloadFrameImages(imageFrames, ctx) {
@@ -60,11 +119,36 @@ export async function downloadFrameImages(imageFrames, ctx) {
   }
 
   // Ask Figma to generate the images
-  const imgs = await ctx.api.getImage(ctx.fileKey, {
-    ids: imageFrames.map((n) => n.id).join(","),
-    scale: 1,
-    format: "svg",
-  });
+  let imgs;
+  let getImageError;
+  for (let attempt = 0; attempt <= MAX_NETWORK_RETRIES; attempt++) {
+    try {
+      imgs = await ctx.api.getImage(ctx.fileKey, {
+        ids: imageFrames.map((n) => n.id).join(","),
+        scale: 1,
+        format: "svg",
+      });
+      break;
+    } catch (error) {
+      getImageError = error;
+      const retryable = isRetryableNetworkError(error);
+      const hasRemainingAttempts = attempt < MAX_NETWORK_RETRIES;
+
+      if (!retryable || !hasRemainingAttempts) {
+        throw error;
+      }
+
+      const backoffMs = BASE_BACKOFF_MS * 2 ** attempt;
+      console.warn(
+        `getImage failed (attempt ${attempt + 1}/${MAX_NETWORK_RETRIES + 1}): ${error.message}. Retrying in ${backoffMs}ms...`,
+      );
+      await sleep(backoffMs);
+    }
+  }
+
+  if (!imgs) {
+    throw getImageError || new Error("Failed to fetch image URLs from Figma");
+  }
 
   // eslint-disable-next-line no-console
   console.log(`Downloading ${imageFrames.length} images`);
