@@ -39,14 +39,14 @@ jobs:
         run: |
           rm -rf ./packages/sprout-icons/svg/*
           cp auto-generated-optimized-icons/* ./packages/sprout-icons/svg/
-          git add ./packages/sprout-icons/svg/
+          git add -A ./packages/sprout-icons/svg/
           while read STATUS ADDR
           do
             icon=`basename $ADDR .svg`
             semver=`sed 's/A/minor/;s/D/major/;s/M/patch/' <<< $STATUS`
             verb=`sed 's/A/added/;s/D/removed/;s/M/changed/' <<< $STATUS`
             echo -e "---\n'@qlik/sprout-icons': $semver\n---\n\n$verb icon \`$icon\`" > .changeset/$icon-$semver.md
-          done < <(git diff --name-status HEAD -- packages/sprout-icons/svg/*.svg)
+          done < <(git diff --cached --name-status HEAD -- 'packages/sprout-icons/svg/*.svg')
           git add .changeset
           body=$(git diff --name-only HEAD .changeset/*.md | xargs -L1 sed -n '5p')
           {
