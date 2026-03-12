@@ -43,7 +43,7 @@ jobs:
           while read STATUS ADDR
           do
             icon=`basename $ADDR .svg`
-            semver=`sed 's/A/minor/;s/D/major/;s/M/patch/' <<< $STATUS`
+            semver=`sed 's/A/minor/;s/D/minor/;s/M/patch/' <<< $STATUS`
             verb=`sed 's/A/added/;s/D/removed/;s/M/changed/' <<< $STATUS`
             echo -e "---\n'@qlik/sprout-icons': $semver\n---\n\n$verb icon \`$icon\`" > .changeset/$icon-$semver.md
           done < <(git diff --cached --name-status HEAD -- 'packages/sprout-icons/svg/*.svg')

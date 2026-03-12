@@ -1,5 +1,5 @@
 ---
-'@qlik/sprout-icons': major
+"@qlik/sprout-icons": minor
 ---
 
 removed icon `public_space`
