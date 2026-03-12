@@ -37,6 +37,7 @@ jobs:
       - name: Generate changeset & PR body
         id: get-pr-body
         run: |
+          rm -rf ./packages/sprout-icons/svg/*
           cp auto-generated-optimized-icons/* ./packages/sprout-icons/svg/
           git add ./packages/sprout-icons/svg/
           while read STATUS ADDR
