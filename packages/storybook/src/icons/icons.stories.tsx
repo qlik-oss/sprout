@@ -29,7 +29,13 @@ function AllIconsStoryContent() {
   const [search, setSearch] = useState("");
   const [showImport, setShowImport] = useState(false);
 
-  const filteredIcons = Object.entries(Icons).filter(([name]) => name.toLowerCase().includes(search.toLowerCase()));
+  const filteredIcons = Object.entries(Icons).filter(([name]) => {
+    const nameMatch = name.toLowerCase().includes(search.toLowerCase());
+    const metadata = metadataByName[name];
+    const tagMatch = metadata.tags.some((tag) => tag.toLowerCase().includes(search.toLowerCase()));
+    const categoryMatch = metadata.category.toLowerCase().includes(search.toLowerCase());
+    return nameMatch || tagMatch || categoryMatch;
+  });
 
   return (
     <div

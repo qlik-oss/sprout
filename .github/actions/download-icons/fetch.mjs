@@ -99,7 +99,12 @@ function getIconInfo(node) {
   if (description) {
     console.log("description: ", description);
   }
-  const tags = description ? description.split(",").map((t) => t.trim()) : [];
+  const tags = description
+    ? description
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean)
+    : [];
 
   return {
     name,

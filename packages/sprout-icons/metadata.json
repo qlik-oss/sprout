@@ -69,7 +69,7 @@
     "name": "Attach",
     "filename": "attach",
     "category": "",
-    "tags": ["core", "attachment", "add", ""]
+    "tags": ["core", "attachment", "add"]
   },
   {
     "name": "Bookmark",
@@ -231,7 +231,7 @@
     "name": "Embed",
     "filename": "embed",
     "category": "",
-    "tags": ["format", ""]
+    "tags": ["format"]
   },
   {
     "name": "Explain",
@@ -405,25 +405,25 @@
     "name": "Right join",
     "filename": "right_join",
     "category": "Joins",
-    "tags": ["boolean", ""]
+    "tags": ["boolean"]
   },
   {
     "name": "Right inner join",
     "filename": "right_inner_join",
     "category": "Joins",
-    "tags": ["boolean", ""]
+    "tags": ["boolean"]
   },
   {
     "name": "Left join",
     "filename": "left_join",
     "category": "Joins",
-    "tags": ["boolean", ""]
+    "tags": ["boolean"]
   },
   {
     "name": "Left inner join",
     "filename": "left_inner_join",
     "category": "Joins",
-    "tags": ["boolean", ""]
+    "tags": ["boolean"]
   },
   {
     "name": "Lasso tool",
@@ -939,7 +939,7 @@
     "name": "Step in",
     "filename": "step_in",
     "category": "State controls",
-    "tags": ["controls", ""]
+    "tags": ["controls"]
   },
   {
     "name": "Stepped in",
@@ -1293,31 +1293,31 @@
     "name": "Pie chart donut",
     "filename": "pie_chart_donut",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Combo chart",
     "filename": "combo_chart",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Waterfall chart",
     "filename": "waterfall_chart",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Scatter chart",
     "filename": "scatter_chart",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Line chart area",
     "filename": "line_chart_area",
     "category": "Charts",
-    "tags": ["data plot", "visualization", ""]
+    "tags": ["data plot", "visualization"]
   },
   {
     "name": "Chart",
@@ -1335,79 +1335,79 @@
     "name": "Grid chart",
     "filename": "grid_chart",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Marimekko chart",
     "filename": "marimekko_chart",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Bullet chart",
     "filename": "bullet_chart",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Bars stacked horizontal",
     "filename": "bars_stacked_horizontal",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Bars grouped",
     "filename": "bars_grouped",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Bars stacked",
     "filename": "bars_stacked",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Bars grouped horizontal",
     "filename": "bars_grouped_horizontal",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Bars butterfly",
     "filename": "bars_butterfly",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Gauge chart",
     "filename": "gauge_chart",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Edit chart",
     "filename": "edit_chart",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Histogram",
     "filename": "histogram",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Distribution plot",
     "filename": "distribution_plot",
     "category": "Charts",
-    "tags": ["visualization", ""]
+    "tags": ["visualization"]
   },
   {
     "name": "Box plot",
     "filename": "box_plot",
     "category": "Charts",
-    "tags": ["statistics", "distribution", "quartiles", "median", "data", "visualization", ""]
+    "tags": ["statistics", "distribution", "quartiles", "median", "data", "visualization"]
   },
   {
     "name": "Slider",
