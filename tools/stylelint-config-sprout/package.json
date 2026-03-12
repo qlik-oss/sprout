@@ -30,12 +30,12 @@
     "stylelint-plugin-logical-css": "^2.0.2"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.4",
+    "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^10.0.1",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "prettier": "^3.8.1",
-    "stylelint-test-rule-node": "^1.0.0"
+    "stylelint-test-rule-node": "^1.1.0"
   }
 }

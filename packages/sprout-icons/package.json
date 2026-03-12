@@ -10,22 +10,21 @@
   "scripts": {
     "build": "rimraf ./react ./vue ./raw ./optimized && svgo -f ./svg -o ./optimized --pretty --indent=2 && node ./scripts/build-icon-pkg.mjs esm"
   },
-  "dependencies": {},
   "devDependencies": {
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
-    "@swc/core": "^1.15.11",
+    "@swc/core": "^1.15.18",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@vue/compiler-dom": "^3.5.27",
+    "@vue/compiler-dom": "^3.5.30",
     "@xmldom/xmldom": "^0.9.8",
     "camelcase": "^9.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "rimraf": "^6.1.2",
-    "svgo": "^4.0.0",
+    "rimraf": "^6.1.3",
+    "svgo": "^4.0.1",
     "typescript": "^5.9.3",
-    "vue": "^3.5.27"
+    "vue": "^3.5.30"
   },
   "peerDependencies": {
     "react": ">= 18.0.0",
