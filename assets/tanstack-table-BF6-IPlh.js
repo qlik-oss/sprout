@@ -1,0 +1,3 @@
+import{j as t,M as r}from"./iframe-ZO3EpHUh.js";import{useMDXComponents as a}from"./index-BuQoUgKa.js";import"./preload-helper-PPVm8Dsz.js";function o(e){const n={a:"a",p:"p",...a(),...e.components};return t.jsxs(t.Fragment,{children:[t.jsx(r,{title:"Integration/tanstack/react-table"}),`
+`,t.jsx(n.p,{children:"We have created a dedicated package for the integration of TanStack Table with Sprout CSS."}),`
+`,t.jsxs(n.p,{children:["You can find the storybook ",t.jsx(n.a,{href:"https://main--6842f988225121ca9692a5cf.chromatic.com/",rel:"nofollow",children:"@qlik/sprout-table"})]})]})}function l(e={}){const{wrapper:n}={...a(),...e.components};return n?t.jsx(n,{...e,children:t.jsx(o,{...e})}):o(e)}export{l as default};
