@@ -5,8 +5,8 @@ import {
   forwardRef,
 } from "react";
 
-import { useMedia } from "@qlik/sprout-react-hooks";
 import type { ViewportSize } from "@qlik/sprout-css-modules";
+import { useMedia } from "@qlik/sprout-react-hooks";
 
 import { classNames } from "../classNames";
 

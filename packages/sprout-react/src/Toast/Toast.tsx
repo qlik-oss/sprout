@@ -8,8 +8,8 @@ import {
   useState,
 } from "react";
 
-import { useId } from "@qlik/sprout-react-hooks";
 import { CloseIcon } from "@qlik/sprout-icons/react";
+import { useId } from "@qlik/sprout-react-hooks";
 
 import type { AlertInlineSeverity } from "../AlertInline";
 import { Button, type ButtonProps, IconButton } from "../Button";
