@@ -7,15 +7,13 @@ import {
   useState,
 } from "react";
 
-import sprout from "@qlik/sprout-css-modules";
 import { useId } from "@qlik/sprout-react-hooks";
 
 import { Menu, type MenuProps } from "../Menu";
+import { menuStyle } from "../Menu/MenuClassName";
 import { MenuContentPrimitive } from "../Menu/MenuContent";
 import type { HTMLButtonProps } from "../htmlTypes";
 import { SelectContext, isValueSelected } from "./SelectContext";
-
-import menuStyle from "../Menu/Menu.module.css";
 
 export type SelectOptionProps = {
   children: ReactNode;
@@ -66,20 +64,7 @@ function OptionBase(
           setDisplay(true);
         }
       }}
-      className={sprout.classNames(
-        "cursor-pointer",
-        "bg-transparent",
-        "font-label-s",
-        "text-default",
-        "flex-noreset",
-        "w-full",
-        "border-none",
-        "radius-subtle",
-        "m-0",
-        "p-0",
-        "outline-none",
-        menuStyle.menuitem,
-      )}
+      className={menuStyle.menuitem}
       role="option"
       style={{ minInlineSize: "120px" }}
       tabIndex={-1}

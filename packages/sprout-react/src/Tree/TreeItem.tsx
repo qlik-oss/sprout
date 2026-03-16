@@ -57,6 +57,20 @@ function DropRight() {
   );
 }
 
+/**
+ * The `Tree.TreeItem` component renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param id - Unique identifier for this tree item (required).
+ * @param label - The visible label text (required).
+ * @param path - Array of ancestor ids representing the path to this item.
+ * @param isLeaf - If true, the item has no children and shows no expand toggle.
+ * @param disabled - If true, the item is disabled.
+ * @param nesting - The nesting depth level.
+ * @param expanded - Controlled expanded state.
+ * @param onExpand - Callback when the item is expanded or collapsed.
+ * @param icon - Optional icon to display.
+ * @param children - Child tree items.
+ * @param displayFolderIcon - @deprecated Use `icon` instead.
+ */
 export function TreeItem({
   id,
   children,

@@ -50,6 +50,10 @@
   background: var(--sprout-common-background-color-pressed);
 }
 
+.bg-floating {
+  background: var(--sprout-common-background-color-floating);
+}
+
 .bg-inverse {
   background: var(--sprout-inverse-background-color-default);
 }
@@ -128,4 +132,12 @@
 
 .bg-success-inverse {
   background: var(--sprout-success-color-inverse);
+}
+
+.bg-selected-default {
+  background: var(--sprout-selected-background-color-default);
+}
+
+.bg-selected {
+  background: var(--sprout-selected-color-default);
 }

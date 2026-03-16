@@ -16,6 +16,15 @@ export type ToggleIconButtonProps = ToggleButtonProps & {
   icon: ReactNode;
 };
 
+/**
+ * The ToggleIconButton component renders an icon-only toggle button with tooltip support. It accepts all ToggleButton props plus the following:
+ * @param icon - The icon to display inside the button (required).
+ * @param label - The accessible label also used as the tooltip text.
+ * @param placement - Tooltip placement relative to the button.
+ * @param toggled - Controlled toggled state.
+ * @param defaultToggled - Default toggled state.
+ * @param onChange - Callback when the toggled state changes.
+ */
 export const ToggleIconButton = forwardRef(BaseToggleIconButton);
 
 function BaseToggleIconButton(

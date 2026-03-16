@@ -82,6 +82,23 @@ function TabsPrimitive({
 
 TabsPrimitive.displayName = "Tabs";
 
+/**
+ * The Tabs component supports the following props and sub-components:
+ *
+ * Props API:
+ * @param tabs - Array of tab items, each with `title`, `aria-controls?`, `panel`, and optional `icon`, `badge`, `disabled`.
+ * @param showTrack - If true, shows a visual track behind the tabs.
+ * @param activeKey - Controlled active tab key.
+ * @param defaultActiveKey - The default active tab key.
+ * @param onSelect - Callback when the active tab changes.
+ * @param size - Tab size (`s` or `m`).
+ *
+ * Composition API sub-components:
+ * - `Tabs.Container` — Root container. Accepts `activeKey`, `defaultActiveKey`, `onSelect`, `size`, `height`.
+ * - `Tabs.List` — Tab button list. Accepts `showTrack`.
+ * - `Tabs.Tab` — Individual tab button. Requires `aria-controls` and `title`.
+ * - `Tabs.Panel` — Tab content panel. Requires `id` matching a tab's `aria-controls`.
+ */
 export const Tabs = Object.assign(TabsPrimitive, {
   Container: TabsContainer,
   List: TabList,

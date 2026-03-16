@@ -28,6 +28,18 @@ export type ButtonProps = Omit<HTMLButtonProps, "label"> & {
   icon?: ReactNode;
 };
 
+/**
+ * The Button component accepts all the native button props outside of `label`, and also supports the following custom props:
+ * @param variant - the variant of the button, can be primary, secondary, quiet, default or destructive. destructive is deprecated, use the dedicated `destructive` prop instead.
+ * @param destructive - whether the button is destructive, applies to variant primary and secondary.
+ * @param badge - the badge props, renders a badge on the top right corner of the button.
+ * @param asDropdown - whether the button is a dropdown, renders a dropdown arrow on the right side of the button.
+ * @param justified - whether the button is justified, makes the button take the full width of its container.
+ * @param size - the size of the button, can be small or default.
+ * @param label - the label of the button, rendered as the content of the button.
+ * @param loading - whether the button is in loading state, renders a loader on top of the button and disables it.
+ * @param icon - the icon of the button, rendered on the left side of the label.
+ */
 export const Button = forwardRef(BaseButton);
 
 function BaseButton(

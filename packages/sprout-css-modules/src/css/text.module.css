@@ -46,6 +46,14 @@
   color: var(--sprout-success-color-inverse);
 }
 
+.text-selected {
+  color: var(--sprout-selected-color-default);
+}
+
+.text-selected-inverse {
+  color: var(--sprout-selected-color-inverse);
+}
+
 .text-clip {
   text-overflow: clip;
 }

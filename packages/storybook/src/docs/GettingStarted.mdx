@@ -1,20 +1,28 @@
+import { Tabs, classNames } from "@qlik/sprout-react";
 import { Meta } from "@storybook/addon-docs/blocks";
 
-<Meta title="Docs/Getting Started" />
+<Meta title="Getting Started" />
 
 # Getting Started
 
 Welcome to the Sprout design system! This is the implementation of the Sprout design system built on top of React. To get started, ensure you have a React application set up and running. Once your React app is ready, you can add the following dependencies:
 
 ```bash
-pnpm i @qlik/sprout-react
+pnpm install @qlik/design-tokens @qlik/sprout-icons @qlik/sprout-react
 ```
 
 After installing the dependencies, you can test if everything works by adding the following snippet to your `App.tsx` file:
 
 ```tsx
+// qlik theme depends on the following fonts
+import "source-code-pro/source-code-pro.css";
+import "source-sans-pro/source-sans-pro.css";
+
+// theme's tokens must be setup at the app level (only once in the entire application)
+import "@qlik/design-tokens/generated/tokens/css/sprout-tokens.css";
 import {
   Button,
+  // ThemeProvider is responsible to activate the theme using data-qlik-theme attribute and forwarding the theme to react's portals
   ThemeProvider,
   classNames,
 } from "@qlik/sprout-react";

@@ -21,6 +21,11 @@ function getSelectedItems(ref: HTMLElement): NodeList {
   );
 }
 
+/**
+ * The `Tabs.List` component renders the list of tab buttons.
+ * @param children - `Tabs.Tab` elements.
+ * @param showTrack - If true, shows a visual track / underline behind the tabs.
+ */
 export function TabList({ showTrack, children }: TabListProps) {
   const ref = useRef<HTMLDivElement>(null);
   const context = useContext(TabsInternalContext);

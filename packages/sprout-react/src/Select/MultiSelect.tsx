@@ -13,14 +13,15 @@ import {
 } from "react";
 import { useMemo } from "react";
 
-import sprout from "@qlik/sprout-css-modules";
 import { useControl } from "@qlik/sprout-react-hooks";
+import sprout from "@qlik/sprout-css-modules";
 
 import { type CommonFieldProps, Field, useFieldProps } from "../Field";
 import {
   FloatingPrimitive,
   type FloatingPublicProps,
 } from "../FloatingPrimitive";
+import { menuStyle } from "../Menu/MenuClassName";
 import { Tag, TagGroups } from "../Tag";
 import { MultiSelectComboboxGesture } from "../Utils/gesture/MultiSelectCombobox";
 import { mergeRefs } from "../Utils/mergeRef";
@@ -38,8 +39,6 @@ import {
   getSelectedItems,
 } from "./SelectUtils";
 import { getSelectedValueString } from "./getSelectedOption";
-
-import menuStyle from "../Menu/Menu.module.css";
 
 const noOpOnChange = () => {};
 
@@ -111,6 +110,29 @@ export type MultiSelectProps = {
     isError?: boolean;
   } & Pick<FloatingPublicProps, "disableScrollLock" | "hideBackdrop">;
 
+/**
+ * The `Select.Multi` component supports the following props:
+ * @param name - The name attribute for the underlying select element.
+ * @param disabled - If true, the multi-select is disabled.
+ * @param placeholder - Placeholder text when no values are selected.
+ * @param id - The id for the input element.
+ * @param value - The controlled array of selected values.
+ * @param defaultValue - The default array of selected values.
+ * @param onChange - Callback when the selection changes.
+ * @param filterValue - The controlled filter input value.
+ * @param onFilterChange - Callback when the filter input value changes.
+ * @param children - Option elements to render.
+ * @param defaultOpen - If true, the dropdown is open by default.
+ * @param open - Controlled open state.
+ * @param onOpenChange - Callback when the open state changes.
+ * @param hasError - If true, displays the select in an error state.
+ * @param renderValue - Custom render function for the selected values display.
+ * @param labelClear - Label for the clear button.
+ * @param readOnly - If true, the select is read-only.
+ * @param disableScrollLock - If true, scrolling is not locked when the dropdown is open.
+ * @param hideBackdrop - If true, no backdrop overlay is rendered.
+ * @param isError - @deprecated Use `errorMessages` instead.
+ */
 export const MultiSelect = forwardRef<HTMLSelectElement, MultiSelectProps>(
   MultiSelectBase,
 );

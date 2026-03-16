@@ -59,6 +59,14 @@ export function themeToProps(
  * The ThemeProvider is coupled to the distribution of the CSS file which olds the tokens.
  * It is responsible to setup the correct data-attributes on element to make style applied.
  */
+/**
+ * The ThemeProvider component renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param theme - The theme name to apply (e.g. `qlik-light` or `qlik-dark`).
+ * @param isTouch - Optional opt-in to enforce touch optimizations. Inferred automatically if not set.
+ * @param asDiv - If false, renders as a non-div container.
+ * @param onLoad - Callback called when the theme is loaded.
+ * @param children - Content to render inside the themed container.
+ */
 export const ThemeProvider = forwardRef<HTMLDivElement, ThemeProviderProps>(
   ThemeProviderBase,
 );

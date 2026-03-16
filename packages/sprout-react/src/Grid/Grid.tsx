@@ -5,8 +5,8 @@ import {
   forwardRef,
 } from "react";
 
-import type { ViewportSize } from "@qlik/sprout-css-modules";
 import { useMedia } from "@qlik/sprout-react-hooks";
+import type { ViewportSize } from "@qlik/sprout-css-modules";
 
 import { classNames } from "../classNames";
 
@@ -37,6 +37,12 @@ type ContainerProps = ComponentPropsWithoutRef<"div"> & {
   margin?: "responsive" | "none";
 };
 
+/**
+ * The Grid.Container component accepts all the native div props and also supports the following custom props:
+ * @param gap - the gap between grid columns, can be responsive or none. Defaults to responsive.
+ * @param margin - the outer horizontal margin, can be responsive or none. Defaults to none.
+ * @param children - the Grid.Column elements to render inside the container.
+ */
 function Container(
   {
     children,
@@ -79,6 +85,14 @@ function Container(
   );
 }
 
+/**
+ * The Grid.Column component accepts all the native div props and also supports the following custom props:
+ * @param s - the column span class at the small viewport breakpoint (e.g. col_span_6).
+ * @param m - the column span class at the medium viewport breakpoint.
+ * @param l - the column span class at the large viewport breakpoint.
+ * @param xl - the column span class at the extra-large viewport breakpoint.
+ * @param children - the content rendered inside the column.
+ */
 function Column(
   { s, m, l, xl, className, children, ...props }: ColumnProps,
   ref: ForwardedRef<HTMLDivElement>,

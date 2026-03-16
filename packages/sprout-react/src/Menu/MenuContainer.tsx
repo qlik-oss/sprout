@@ -6,8 +6,7 @@ import {
 } from "react";
 
 import type { HTMLDivProps } from "../htmlTypes";
-
-import style from "./Menu.module.css";
+import { menuStyle } from "./MenuClassName";
 
 /**
  * @deprecated Use FloatingPrimitive/Popover instead.
@@ -18,6 +17,9 @@ export type MenuContainerProps = HTMLDivProps & {
 };
 /**
  * @deprecated Use FloatingPrimitive/Popover instead.
+ * The Menu.Container component accepts all the native div props and also supports the following custom props:
+ * @param children - the menu content to render inside the container.
+ * @param style - additional inline styles for the container.
  */
 export const MenuContainer = forwardRef<HTMLDivElement, MenuContainerProps>(
   MenuContainerBase,
@@ -28,7 +30,7 @@ function MenuContainerBase(
   ref?: Ref<HTMLDivElement>,
 ) {
   return (
-    <div className={style.menu} ref={ref} {...props}>
+    <div className={menuStyle.menu} ref={ref} {...props}>
       {children}
     </div>
   );

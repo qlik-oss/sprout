@@ -8,8 +8,8 @@ import {
   useState,
 } from "react";
 
-import { CloseIcon } from "@qlik/sprout-icons/react";
 import { useId } from "@qlik/sprout-react-hooks";
+import { CloseIcon } from "@qlik/sprout-icons/react";
 
 import type { AlertInlineSeverity } from "../AlertInline";
 import { Button, type ButtonProps, IconButton } from "../Button";
@@ -37,6 +37,14 @@ const TOAST_CLASS: Record<AlertInlineSeverity, string> = {
   error: style.toast_error,
   success: style.toast_success,
 };
+/**
+ * The `Toast.Content` component renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param message - The main message to display (required).
+ * @param title - Optional title displayed above the message.
+ * @param severity - The severity level (`info`, `warning`, `error`, `success`).
+ * @param action - Optional action button configuration.
+ * @param onClose - Callback when the toast is dismissed.
+ */
 export const Toast = forwardRef<HTMLDivElement, ToastProps>(ToastBase);
 
 function ToastBase(

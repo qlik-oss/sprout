@@ -33,6 +33,14 @@ export type ProgressBarProps = {
 ) &
   HTMLDivProps;
 
+/**
+ * The ProgressBar component renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param percent - The progress percentage (0–100).
+ * @param label - Visible text label (required if `aria-label` and `tooltip` are not provided).
+ * @param aria-label - Accessible label (required if `label` and `tooltip` are not provided).
+ * @param tooltip - Tooltip label (required if `label` and `aria-label` are not provided).
+ * @param contained - If true, renders the progress bar in a contained style.
+ */
 export function ProgressBar({
   percent,
   label,

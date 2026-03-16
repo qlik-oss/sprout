@@ -17,6 +17,15 @@ export type SideNavItemContentProps = {
   isExternal?: boolean;
 } & HTMLDivProps;
 
+/**
+ * The `SideNav.Item` component renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param variant - If `compact`, applies compact layout.
+ * @param icon - Optional icon displayed before the label.
+ * @param iconSize - Icon size variant (`large` or default).
+ * @param label - The text label of the navigation item.
+ * @param indentation - Indentation level of the item.
+ * @param isExternal - If true, shows an external link indicator.
+ */
 export const SideNavItemContent = forwardRef<
   HTMLDivElement,
   SideNavItemContentProps

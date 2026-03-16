@@ -26,6 +26,15 @@ type WithChildren = {
 
 export type TabsContainerProps = TabsProviderProps & WithChildren;
 
+/**
+ * The `Tabs.Container` composition API root renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param defaultActiveKey - The key of the tab active by default.
+ * @param activeKey - Controlled active tab key.
+ * @param onSelect - Callback when the active tab changes.
+ * @param size - Tab size (`s` or `m`).
+ * @param height - If `100%`, the container fills its parent height.
+ * @param children - Tab list and panel content.
+ */
 export function TabsContainer({
   children,
   size,

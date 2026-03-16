@@ -5,6 +5,7 @@ import {
   isValidElement,
 } from "react";
 
+import { classNames } from "../classNames";
 import { renderOrClone } from "../renderOrClone";
 import type { StepProps } from "./Step";
 
@@ -18,6 +19,14 @@ export type StepperContainerProps = {
   stateLess?: boolean;
 };
 
+/**
+ * The `Stepper.Container` component renders the stepper wrapper and manages step numbering and state.
+ * @param children - `Stepper.Step` elements.
+ * @param orientation - Layout direction of the stepper (`horizontal` or `vertical`).
+ * @param currentStepIndex - Zero-based index of the currently active step.
+ * @param currentStepError - If true, marks the current step as having an error.
+ * @param stateLess - If true, steps are rendered as-is without computed state.
+ */
 export function StepperContainer({
   children,
   orientation,
@@ -29,7 +38,25 @@ export function StepperContainer({
   const count = Children.count(children);
 
   return (
-    <ol className={styles.stepper} {...props} data-orientation={orientation}>
+    <ol
+      className={classNames(
+        "flex-noreset",
+        "w-full",
+        "border-box",
+        "p-s",
+        "m-0",
+        "justify-between",
+        styles.stepper,
+        {
+          "flex-col": orientation === "vertical",
+          "flex-row": orientation !== "horizontal",
+          "overflow-y-auto": orientation === "vertical",
+          "overflow-x-auto": orientation === "horizontal",
+        },
+      )}
+      {...props}
+      data-orientation={orientation}
+    >
       {stateLess
         ? children
         : Children.map(children, (child, index) => {

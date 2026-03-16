@@ -1,10 +1,36 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { type ReactNode, createContext, useContext, useMemo, useState } from "react";
+import {
+  type ReactNode,
+  createContext,
+  useContext,
+  useMemo,
+  useState,
+} from "react";
 
 import sprout from "@qlik/sprout-css-modules";
-import { CopyIcon, EditIcon, FileIcon, FolderClosedIcon, InfoIcon } from "@qlik/sprout-icons/react";
-import { Badge, Checkbox, IconButton, List, Tag, Tooltip, Tree, type TreeProps, classNames } from "@qlik/sprout-react";
-import { type ColumnDef, Table, type TableCellParams } from "@qlik/sprout-table";
+import {
+  Badge,
+  Checkbox,
+  IconButton,
+  List,
+  Tag,
+  Tooltip,
+  Tree,
+  type TreeProps,
+  classNames,
+} from "@qlik/sprout-react";
+import {
+  type ColumnDef,
+  Table,
+  type TableCellParams,
+} from "@qlik/sprout-table";
+import {
+  CopyIcon,
+  EditIcon,
+  FileIcon,
+  FolderClosedIcon,
+  InfoIcon,
+} from "@qlik/sprout-icons/react";
 import type { StoryObj } from "@storybook/react-vite";
 
 import { TreeItemArgTypes } from "./Tree.argTypes";
@@ -25,15 +51,32 @@ export const TreeItem: StoryObj<TreeProps["TreeItem"]> = {
 export const Playground = {
   render: () => (
     <div>
-      <h1 className={sprout.classNames("text-default", "font-heading-m")}>TreeItem alone</h1>
+      <h1 className={sprout.classNames("text-default", "font-heading-m")}>
+        TreeItem alone
+      </h1>
       <Tree.TreeItem id="simple" label="Simple" />
       <Tree.TreeItem id="simple" label="Simple" disabled />
       <Tree.TreeItem id="expanded" label="Expanded" expanded />
-      <Tree.TreeItem id="expanded-child" path={["expanded"]} label="Expanded child" />
+      <Tree.TreeItem
+        id="expanded-child"
+        path={["expanded"]}
+        label="Expanded child"
+      />
       <Tree.TreeItem id="folder" label="folder" icon={<FolderClosedIcon />} />
-      <Tree.TreeItem id="folder_expanded" label="folder expanded" displayFolderIcon expanded />
+      <Tree.TreeItem
+        id="folder_expanded"
+        label="folder expanded"
+        displayFolderIcon
+        expanded
+      />
       <Tree.TreeItem id="leaf" path={["folder_expanded"]} label="Leaf" isLeaf />
-      <Tree.TreeItem id="leaf-icon" path={["folder_expanded"]} label="Leaf icon" isLeaf icon={<FileIcon />} />
+      <Tree.TreeItem
+        id="leaf-icon"
+        path={["folder_expanded"]}
+        label="Leaf icon"
+        isLeaf
+        icon={<FileIcon />}
+      />
       <List hasPadding={false}>
         <List.Item interactive>
           <Tree.TreeItem id="context_simple" label="Simple" />
@@ -45,13 +88,27 @@ export const Playground = {
           <Tree.TreeItem id="context_folder" label="folder" displayFolderIcon />
         </List.Item>
         <List.Item interactive>
-          <Tree.TreeItem id="context_folder_child" path={["context_folder"]} label="child" isLeaf />
+          <Tree.TreeItem
+            id="context_folder_child"
+            path={["context_folder"]}
+            label="child"
+            isLeaf
+          />
         </List.Item>
         <List.Item interactive>
-          <Tree.TreeItem id="context_folder_expanded" label="folder expanded" displayFolderIcon />
+          <Tree.TreeItem
+            id="context_folder_expanded"
+            label="folder expanded"
+            displayFolderIcon
+          />
         </List.Item>
         <List.Item interactive>
-          <Tree.TreeItem id="context_leaf" path={["context_folder_expanded"]} label="Leaf" isLeaf />
+          <Tree.TreeItem
+            id="context_leaf"
+            path={["context_folder_expanded"]}
+            label="Leaf"
+            isLeaf
+          />
         </List.Item>
         <List.Item interactive>
           <Tree.TreeItem
@@ -112,7 +169,15 @@ const data: Array<TreeNode> = [
     id: "folder2",
     label: "Empty folder",
     children: (
-      <div className={classNames("flex", "flex-row", "items-center", "justify-end", "w-full")}>
+      <div
+        className={classNames(
+          "flex",
+          "flex-row",
+          "items-center",
+          "justify-end",
+          "w-full",
+        )}
+      >
         <IconButton variant="quiet" icon={<CopyIcon />} aria-label="Copy" />
         <IconButton variant="quiet" icon={<EditIcon />} aria-label="Edit" />
       </div>
@@ -157,7 +222,8 @@ const data: Array<TreeNode> = [
   },
   {
     id: "item7",
-    label: "a-cron-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long (V2)",
+    label:
+      "a-cron-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long (V2)",
     isLeaf: true,
   },
 ];
@@ -193,7 +259,9 @@ function computeNodeSelectionState(
   }
 
   // Step 2: Walk up tree to compute folders
-  const sortedNodes = [...data].sort((a, b) => (b.path?.length ?? 0) - (a.path?.length ?? 0));
+  const sortedNodes = [...data].sort(
+    (a, b) => (b.path?.length ?? 0) - (a.path?.length ?? 0),
+  );
 
   for (const node of sortedNodes) {
     if (node.isLeaf) continue;
@@ -219,7 +287,14 @@ function computeNodeSelectionState(
   return stateMap;
 }
 
-function MyListItem({ id, label, onCheck, isLeaf, path, children }: MyListItemProps) {
+function MyListItem({
+  id,
+  label,
+  onCheck,
+  isLeaf,
+  path,
+  children,
+}: MyListItemProps) {
   const context = useContext(TreeContext);
   let safeVisible = true; // Default to true, can be adjusted based on context
   const indeterminate = context.selected[id] === "partial";
@@ -241,7 +316,17 @@ function MyListItem({ id, label, onCheck, isLeaf, path, children }: MyListItemPr
       }}
       selected={safeSelected}
     >
-      <div className={classNames("flex", "flex-row", "w-full", "pl-l", "pr-l", "items-center", "overflow-hidden")}>
+      <div
+        className={classNames(
+          "flex",
+          "flex-row",
+          "w-full",
+          "pl-l",
+          "pr-l",
+          "items-center",
+          "overflow-hidden",
+        )}
+      >
         <div className={classNames("flex", "w-fit")}>
           <Checkbox
             aria-label={label}
@@ -325,12 +410,23 @@ export const WithCheckbox = {
     chromatic: { disableSnapshot: true },
   },
   render: () => {
-    const [treeSelected, setTreeSelected] = useState<TreeContextType["selected"]>({ item4: true });
-    const [treeExpanded, setTreeExpanded] = useState<TreeContextType["expanded"]>({});
+    const [treeSelected, setTreeSelected] = useState<
+      TreeContextType["selected"]
+    >({ item4: true });
+    const [treeExpanded, setTreeExpanded] = useState<
+      TreeContextType["expanded"]
+    >({});
 
     const onCheck = (e: { id: string; checked: boolean }) => {
-      const selectedNodesIds = Object.keys(treeSelected).filter((key) => treeSelected[key] === true);
-      const newSelectedIds = updateSelectedNodeIds(data, selectedNodesIds, e.id, e.checked);
+      const selectedNodesIds = Object.keys(treeSelected).filter(
+        (key) => treeSelected[key] === true,
+      );
+      const newSelectedIds = updateSelectedNodeIds(
+        data,
+        selectedNodesIds,
+        e.id,
+        e.checked,
+      );
       const newState = computeNodeSelectionState(data, newSelectedIds);
       setTreeSelected(newState);
     };
@@ -342,7 +438,9 @@ export const WithCheckbox = {
     return (
       <div className={classNames("flex", "w-m")}>
         <List hasPadding={false}>
-          <TreeContext.Provider value={{ expanded: treeExpanded, selected: treeSelected, onExpand }}>
+          <TreeContext.Provider
+            value={{ expanded: treeExpanded, selected: treeSelected, onExpand }}
+          >
             {data.map((item) => (
               <MyListItem
                 key={item.id}
@@ -365,16 +463,19 @@ export const WithCheckbox = {
 const dataWithLongNames: Array<TreeNode> = [
   {
     id: "folder1",
-    label: "FirstFolderWithAReallyLongNameThatExceedsTheLimitAtSomePoint with 1 folder and 2 files",
+    label:
+      "FirstFolderWithAReallyLongNameThatExceedsTheLimitAtSomePoint with 1 folder and 2 files",
   },
   {
     id: "folder1.1",
-    label: "SecondFolderWithAReallyLongNameThatExceedsTheLimitAtSomePoint with 1 files and 1 folder",
+    label:
+      "SecondFolderWithAReallyLongNameThatExceedsTheLimitAtSomePoint with 1 files and 1 folder",
     path: ["folder1"],
   },
   {
     id: "folder1.1.1",
-    label: "ThirdFolderWithAReallyLongNameThatExceedsTheLimitAtSomePoint without files",
+    label:
+      "ThirdFolderWithAReallyLongNameThatExceedsTheLimitAtSomePoint without files",
     path: ["folder1", "folder1.1"],
   },
   {
@@ -394,13 +495,27 @@ export const WithCheckboxAndLongNames = {
     chromatic: { disableSnapshot: true },
   },
   render: () => {
-    const [treeSelected, setTreeSelected] = useState<TreeContextType["selected"]>({});
-    const [treeExpanded, setTreeExpanded] = useState<TreeContextType["expanded"]>({ folder1: true, "folder1.1": true });
+    const [treeSelected, setTreeSelected] = useState<
+      TreeContextType["selected"]
+    >({});
+    const [treeExpanded, setTreeExpanded] = useState<
+      TreeContextType["expanded"]
+    >({ folder1: true, "folder1.1": true });
 
     const onCheck = (e: { id: string; checked: boolean }) => {
-      const selectedNodesIds = Object.keys(treeSelected).filter((key) => treeSelected[key] === true);
-      const newSelectedIds = updateSelectedNodeIds(dataWithLongNames, selectedNodesIds, e.id, e.checked);
-      const newState = computeNodeSelectionState(dataWithLongNames, newSelectedIds);
+      const selectedNodesIds = Object.keys(treeSelected).filter(
+        (key) => treeSelected[key] === true,
+      );
+      const newSelectedIds = updateSelectedNodeIds(
+        dataWithLongNames,
+        selectedNodesIds,
+        e.id,
+        e.checked,
+      );
+      const newState = computeNodeSelectionState(
+        dataWithLongNames,
+        newSelectedIds,
+      );
       setTreeSelected(newState);
     };
 
@@ -409,9 +524,13 @@ export const WithCheckboxAndLongNames = {
     };
 
     return (
-      <div className={classNames("flex", "w-m", "border-weak", "overflow-auto")}>
+      <div
+        className={classNames("flex", "w-m", "border-weak", "overflow-auto")}
+      >
         <List hasPadding={false}>
-          <TreeContext.Provider value={{ expanded: treeExpanded, selected: treeSelected, onExpand }}>
+          <TreeContext.Provider
+            value={{ expanded: treeExpanded, selected: treeSelected, onExpand }}
+          >
             {dataWithLongNames.map((item) => (
               <MyListItem
                 key={item.id}
@@ -435,7 +554,15 @@ function TreeCell({ row }: Pick<TableCellParams<TreeNode>, "row">) {
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
-      className={classNames("flex", "flex-row", "w-full", "pl-l", "pr-l", "items-center", "overflow-hidden")}
+      className={classNames(
+        "flex",
+        "flex-row",
+        "w-full",
+        "pl-l",
+        "pr-l",
+        "items-center",
+        "overflow-hidden",
+      )}
       onClick={() => {
         context.onExpand?.(row.id, !safeExpanded);
       }}
@@ -474,7 +601,9 @@ export const TreeTable = {
     chromatic: { disableSnapshot: true },
   },
   render: () => {
-    const [treeExpanded, setTreeExpanded] = useState<TreeContextType["expanded"]>({});
+    const [treeExpanded, setTreeExpanded] = useState<
+      TreeContextType["expanded"]
+    >({});
     const filteredData = useMemo(() => {
       return data.filter((item) => {
         if (!item.path) return true;
@@ -492,7 +621,12 @@ export const TreeTable = {
             },
           }}
         >
-          <Table variant="list" rows={filteredData} columns={columns} rowHeight={40} />
+          <Table
+            variant="list"
+            rows={filteredData}
+            columns={columns}
+            rowHeight={40}
+          />
         </TreeContext.Provider>
         <pre>{JSON.stringify(treeExpanded, null, 2)}</pre>
       </div>

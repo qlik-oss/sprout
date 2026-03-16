@@ -6,6 +6,10 @@ export type FloatingWrapperProps = {
   children: ReactNode;
 };
 
+/**
+ * The FloatingWrapper component supports the following props:
+ * @param children - the elements to render inside the floating pill-shaped container.
+ */
 export const FloatingWrapper = forwardRef<HTMLDivElement, FloatingWrapperProps>(
   FloatingWrapperBase,
 );

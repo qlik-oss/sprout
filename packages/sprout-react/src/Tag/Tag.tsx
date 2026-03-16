@@ -32,6 +32,17 @@ export type TagCoreProps = {
 
 export type TagProps = Omit<HTMLSpanProps, "children"> & TagCoreProps;
 
+/**
+ * The Tag component renders onto a `span` HTML element. It accepts all `HTMLSpanElement` attributes except `children`, plus the following:
+ * @param text - The text content of the tag (truncated to 25 characters by default).
+ * @param onRemove - Callback when the remove button is clicked.
+ * @param avatar - Optional avatar content.
+ * @param icon - Optional icon displayed before the text.
+ * @param badge - Optional badge to display on the tag.
+ * @param removeLabel - Accessible label for the remove button.
+ * @param size - Size of the tag (`s` or default).
+ * @param color - Semantic color variant (`error`, `info`, `success`, `warning`).
+ */
 export const Tag = forwardRef<HTMLSpanElement, TagProps>(TagBase);
 
 function TagBase(

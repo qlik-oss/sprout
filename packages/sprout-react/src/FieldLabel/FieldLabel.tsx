@@ -15,6 +15,15 @@ export type FieldLabelProps = Omit<HTMLLabelProps, "label"> & {
   disabled?: boolean;
 };
 
+/**
+ * The FieldLabel component accepts all the native label props outside of `label`, and also supports the following custom props:
+ * @param label - the label text rendered inside the element.
+ * @param optional - whether the associated field is optional, renders an optional indicator.
+ * @param htmlFor - the id of the form control this label is associated with.
+ * @param infoIconTooltip - content for an info tooltip icon shown next to the label.
+ * @param infoIconPopover - content for an info popover icon shown next to the label.
+ * @param disabled - whether the label is in a disabled state.
+ */
 export function FieldLabel({
   children,
   label,

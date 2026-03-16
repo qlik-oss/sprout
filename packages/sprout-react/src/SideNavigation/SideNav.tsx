@@ -9,6 +9,10 @@ export type SideNavProps = {
   variant?: "compact";
 } & HTMLDivProps;
 
+/**
+ * The `SideNav.Nav` component renders onto a `nav` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param variant - If `compact`, applies compact spacing styles.
+ */
 export const SideNav = forwardRef<HTMLDivElement, SideNavProps>(SideNavBase);
 
 function SideNavBase(

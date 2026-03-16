@@ -20,6 +20,18 @@ import {
 import { SelectSearch } from "./SelectSearch";
 import type { ChangeEvent } from "./SelectUtils";
 
+/**
+ * The Select component supports the following sub-components:
+ * - `Select.Select` — Single-select dropdown with Field layout integration.
+ * - `Select.Multi` — Multi-select dropdown with filtering support.
+ * - `Select.Option` — An option item.
+ * - `Select.OptGroup` — A group of options with a label.
+ * - `Select.Combobox` — Editable combobox input.
+ * - `Select.Search` — Search input for filtering options.
+ * - `Select.Listbox` — Listbox container for options.
+ * - `Select.Divider` — Visual divider between options.
+ * - `Select.Context` — Context for composing custom select UIs.
+ */
 export const Select = {
   Select: SelectBase,
   Context: SelectContext,

@@ -36,6 +36,25 @@ export type SingleSliderProps = {
 } & CommonSliderProps &
   PickedFieldProps;
 
+/**
+ * The `Slider.Single` component renders a single-value range slider with Field layout integration.
+ * @param value - The controlled value.
+ * @param defaultValue - The default value.
+ * @param name - The name attribute for the hidden input.
+ * @param onChange - Callback when the slider value changes during interaction.
+ * @param onChangeCommitted - Callback when the user finishes sliding.
+ * @param min - Minimum value. Defaults to 0.
+ * @param max - Maximum value. Defaults to 100.
+ * @param step - Step interval between values.
+ * @param orientation - Slider orientation (`horizontal` or `vertical`).
+ * @param marks - Whether to show mark indicators along the track.
+ * @param markLabels - Whether to show labels for marks.
+ * @param hasError - If true, displays the slider in an error state.
+ * @param disabled - If true, the slider is disabled.
+ * @param label - Visible label for the slider.
+ * @param helpText - Helper text displayed below the slider.
+ * @param errorMessages - Error messages to display.
+ */
 export const SingleSlider = forwardRef<HTMLDivElement, SingleSliderProps>(
   SingleSliderBase,
 );

@@ -36,6 +36,16 @@ export type InlineEditSelectProps = Omit<
   errorMessages?: SelectProps["Select"]["errorMessages"];
 };
 
+/**
+ * The InlineEdit.Select component provides an inline-editable single select and supports the following custom props:
+ * @param value - the controlled value of the select.
+ * @param defaultValue - the uncontrolled default value of the select.
+ * @param placeholder - placeholder text shown when no value is selected.
+ * @param children - the option elements to render inside the select.
+ * @param onChange - callback fired when the selected value changes.
+ * @param hasError - whether the field is in an error state.
+ * @param errorMessages - array of error messages displayed below the field.
+ */
 export const InlineEditSelect = forwardRef<
   HTMLDivElement,
   InlineEditSelectProps

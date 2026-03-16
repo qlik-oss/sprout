@@ -1,0 +1,54 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as TokenStories from "./Tokens.stories";
+
+<Meta title="Design Tokens/Introduction" />
+
+# Design Tokens
+
+In [Sprout](https://internal.qlik.dev/design/sprout/), we use [design tokens](https://internal.qlik.dev/design/sprout/design-tokens/).
+
+We implement tokens using [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*). You can also read the article on [Using CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) for more details.
+
+## Source
+
+The tokens are managed outside of this repository in the package `@qlik/design-tokens`.
+
+## IDE Extensions / Developer Experience
+
+If you are using VSCode, we recommend trying the [CSS Variable Autocomplete](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables) extension. It provides autocompletion for CSS variables, making it easier to work with design tokens.
+
+## How to Use
+
+If you’ve followed the steps in the Getting Started guide, you’ve already used the `ThemeProvider`. This means you can now reference tokens directly using native CSS syntax like this:
+
+```css
+.foo {
+  color: var(--sprout-common-foreground-color-default);
+  padding: var(--sprout-common-spacing-s);
+  width: var(--sprout-common-sizing-3xl);
+}
+```
+
+The philosophy behind tokens is to avoid relying on specific values and instead trust the semantic meaning of the tokens. As a frontend developer, your code should work seamlessly with different values, even if you don’t control them.
+
+This doesn’t mean you shouldn’t test these values. Storybook provides an excellent way to test the changes supported by Sprout.
+
+You can also use our [sprout-css-modules](?path=/docs/css-sprout-css-modules--docs) classNames. Here’s an example:
+
+```jsx
+import { classNames } from "@qlik/sprout-react";
+
+function MyComponent() {
+  return (
+    <div className={classNames("flex", "bg-default", "text-default")}>
+      Hello world
+    </div>
+  );
+}
+```
+
+## Tokens Data Table
+
+<Controls of={TokenStories.DataTable} />
+<Canvas of={TokenStories.DataTable} />

@@ -51,6 +51,13 @@ export type ProgressCircularProps = Omit<
   variant?: "default" | "destructive";
 };
 
+/**
+ * The ProgressCircular component supports the following props:
+ * @param size - The size of the circular progress (`s`, `m`, `l`). Defaults to `m`.
+ * @param percent - The progress percentage (0–100). If not provided, renders as indeterminate.
+ * @param variant - The visual variant (`default`, `destructive`). Defaults to `default`.
+ * @param aria-label - Accessible label for the progress indicator.
+ */
 export function ProgressCircular({
   size = "m",
   percent,

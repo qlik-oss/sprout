@@ -1,3 +1,4 @@
+/* stylelint-disable logical-css/require-logical-properties */
 .overflow_visible {
   overflow: visible;
 }
@@ -15,33 +16,69 @@
 }
 
 .overflow_x_visible {
-  overflow-inline: visible;
+  overflow-x: visible;
 }
 
 .overflow_x_hidden {
-  overflow-inline: hidden;
+  overflow-x: hidden;
 }
 
 .overflow_x_scroll {
-  overflow-inline: scroll;
+  overflow-x: scroll;
 }
 
 .overflow_x_auto {
-  overflow-inline: auto;
+  overflow-x: auto;
 }
 
 .overflow_y_visible {
-  overflow-block: visible;
+  overflow-y: visible;
 }
 
 .overflow_y_hidden {
-  overflow-block: hidden;
+  overflow-y: hidden;
 }
 
 .overflow_y_scroll {
-  overflow-block: scroll;
+  overflow-y: scroll;
 }
 
 .overflow_y_auto {
-  overflow-block: auto;
+  overflow-y: auto;
+}
+
+@supports (overflow-inline: auto) {
+  .overflow_x_visible {
+    overflow-inline: visible;
+  }
+
+  .overflow_x_hidden {
+    overflow-inline: hidden;
+  }
+
+  .overflow_x_scroll {
+    overflow-inline: scroll;
+  }
+
+  .overflow_x_auto {
+    overflow-inline: auto;
+  }
+}
+
+@supports (overflow-block: auto) {
+  .overflow_y_visible {
+    overflow-block: visible;
+  }
+
+  .overflow_y_hidden {
+    overflow-block: hidden;
+  }
+
+  .overflow_y_scroll {
+    overflow-block: scroll;
+  }
+
+  .overflow_y_auto {
+    overflow-block: auto;
+  }
 }

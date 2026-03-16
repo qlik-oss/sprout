@@ -31,6 +31,18 @@ const WARMUP_CACHE: {
   hovered: false,
 };
 
+/**
+ * The Tooltip component supports the following props:
+ * @param title - The tooltip content (required).
+ * @param children - The trigger element.
+ * @param id - Custom id for the tooltip element.
+ * @param open - Controlled open state.
+ * @param onOpenChange - Callback when the open state changes.
+ * @param placement - Placement of the tooltip relative to the trigger.
+ * @param hoverDelay - Delay before the tooltip opens on hover.
+ * @param initialOpen - If true, the tooltip is open by default.
+ * @param isDisplayedForTesting - @deprecated Use `initialOpen` instead.
+ */
 export const Tooltip = forwardRef<HTMLButtonElement, TooltipProps>(TooltipBase);
 
 function TooltipBase(

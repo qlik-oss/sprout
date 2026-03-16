@@ -11,6 +11,8 @@ type Default = {
   "text-info-inverse": string;
   "text-success": string;
   "text-success-inverse": string;
+  "text-selected": string;
+  "text-selected-inverse": string;
   "text-center": string;
   "text-left": string;
   "text-right": string;

@@ -40,6 +40,16 @@ export type InlineEditMultiSelectProps = Omit<
   errorMessages?: SelectProps["Multi"]["errorMessages"];
 };
 
+/**
+ * The InlineEdit.MultiSelect component provides an inline-editable multi-select and supports the following custom props:
+ * @param value - the controlled value array of the multi-select.
+ * @param defaultValue - the uncontrolled default value array.
+ * @param placeholder - placeholder text shown when no values are selected.
+ * @param children - the option elements to render inside the multi-select.
+ * @param onChange - callback fired when the selected values change.
+ * @param hasError - whether the field is in an error state.
+ * @param errorMessages - array of error messages displayed below the field.
+ */
 export const InlineEditMultiSelect = forwardRef<
   HTMLDivElement,
   InlineEditMultiSelectProps

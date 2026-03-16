@@ -7,6 +7,10 @@ export type PanelContainerProps = HTMLDivProps & {
   overlay?: boolean | "s" | "m" | "l" | "xl" | "xxl" | "2xl" | "3xl" | "4xl";
 };
 
+/**
+ * The `Panel.Container` component renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param overlay - If provided, displays the container as an overlay with the given size (`true`, `s`, `m`, `l`, `xl`, `xxl`, `3xl`, `4xl`).
+ */
 export function PanelContainer({
   children,
   overlay,

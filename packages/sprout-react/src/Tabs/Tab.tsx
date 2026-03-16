@@ -19,6 +19,15 @@ export type TabProps = Omit<
   useIconButton?: boolean;
 } & DataAttributes;
 
+/**
+ * The `Tabs.Tab` component renders onto a `button` HTML element. It accepts all `HTMLButtonElement` attributes except `onClick`, `type`, and `children`, plus the following:
+ * @param aria-controls - The id of the panel this tab controls (required).
+ * @param title - The visible tab label.
+ * @param icon - Optional icon displayed inside the tab.
+ * @param badge - Optional badge content displayed inside the tab.
+ * @param disabled - If true, the tab is disabled.
+ * @param useIconButton - If true, renders the tab as an icon-only button.
+ */
 export function Tab({ icon, badge, title, useIconButton, ...props }: TabProps) {
   const context = useContext(TabsInternalContext);
   const isSmall = context?.size === "s";

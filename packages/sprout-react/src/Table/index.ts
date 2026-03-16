@@ -58,6 +58,29 @@ type TableType = {
   Message: typeof Message;
 };
 
+/**
+ * The Table component supports the following sub-components:
+ * - `Table.Table` — Main wrapper. Requires `variant` (`list` or `data`).
+ * - `Table.Head` — Table head section.
+ * - `Table.Body` — Table body section.
+ * - `Table.HeaderRow` — Row within the table head.
+ * - `Table.Header` — Column header cell with sort, filter, and resize capabilities.
+ * - `Table.HeaderContent` — Custom content for a header cell.
+ * - `Table.Row` — A data row.
+ * - `Table.Cell` — A data cell.
+ * - `Table.CellContent` — Cell content container.
+ * - `Table.CellActionWrapper` — Wrapper for contextual cell actions.
+ * - `Table.ContextualIconButton` — Icon button revealed on row hover.
+ * - `Table.SupportCell` — System cell (for selection or row numbers).
+ * - `Table.RowNumber` — Row number display cell.
+ * - `Table.Selection` — Selection checkbox cell.
+ * - `Table.ColumnVisibilityMenu` — Menu to control column visibility.
+ * - `Table.HeaderMenuButton` — Trigger button for the header action menu.
+ * - `Table.HeaderMenuContent` — Content of the header action menu.
+ * - `Table.Message` — Empty state message.
+ * - `Table.DataHeader` — @deprecated Use `Table.Header` instead.
+ * - `Table.ListHeader` — @deprecated Use `Table.Header` instead.
+ */
 export const Table: TableType = {
   Table: TableBase,
   Head: TableHead,

@@ -10,6 +10,11 @@ export type SideNavSectionProps = {
   level?: "h2" | "h3" | "h4" | "h5" | "h6";
 } & HTMLSectionProps;
 
+/**
+ * The `SideNav.Section` component renders onto a `section` HTML element. It accepts all `HTMLSectionElement` attributes plus the following:
+ * @param label - Optional visible label for the section.
+ * @param level - Heading level for the section label (`h2` through `h6`). Defaults to `h2`.
+ */
 export const SideNavSection = forwardRef<HTMLDivElement, SideNavSectionProps>(
   SideNavSectionBase,
 );

@@ -3,6 +3,5 @@ declare const classes: {
   indicator: string;
   stepper: string;
   line: string;
-  text: string;
 };
 export default classes;

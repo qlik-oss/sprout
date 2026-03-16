@@ -45,6 +45,14 @@ type VerticalProps = {
 export type GroupProps = CommonGroupControlProps &
   (HorizontalProps | VerticalProps);
 
+/**
+ * The `SegmentedControl.Group` component renders onto a `div` HTML element. It accepts all Field props plus the following:
+ * @param name - The name attribute shared across all Segment inputs within this group.
+ * @param iconOnly - If true, only icons are displayed (no labels) in the segments.
+ * @param label - Optional visible label for the group using the Field layout.
+ * @param justified - If true, segments stretch to fill the full width (horizontal only).
+ * @param orientation - Layout direction of the segments (`horizontal` or `vertical`). Defaults to `horizontal`.
+ */
 export const Group = forwardRef<HTMLDivElement, GroupProps>(GroupBase);
 
 function GroupBase(props: GroupProps, ref?: Ref<HTMLDivElement>) {

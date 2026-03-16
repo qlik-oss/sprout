@@ -27,6 +27,12 @@ export type DividerProps =
       width?: never;
     } & DividerHTMLProps);
 
+/**
+ * The Divider component accepts all the native hr props and also supports the following custom props:
+ * @param orientation - the separator orientation, can be horizontal or vertical. Defaults to horizontal.
+ * @param width - the width of the divider when horizontal, can be auto or 100%. Defaults to 100%.
+ * @param height - the height of the divider when vertical, can be auto or 100%. Defaults to auto.
+ */
 export const Divider = forwardRef<HTMLHRElement, DividerProps>(DividerBase);
 
 function DividerBase(props: DividerProps, ref?: Ref<HTMLHRElement>) {

@@ -16,6 +16,15 @@ export type ListItemProps = HTMLLiProps & {
   onClick?: () => void;
 };
 
+/**
+ * The ListItem component accepts all the native li props and also supports the following custom props:
+ * @param selected - whether the list item is selected.
+ * @param disabled - whether the list item is disabled and non-interactive.
+ * @param interactive - whether the list item renders an interactive button inside.
+ * @param hasPadding - whether the list item has internal padding.
+ * @param onClick - callback fired when the interactive item is clicked.
+ * @param children - the content of the list item.
+ */
 export const ListItem = forwardRef<HTMLLIElement, ListItemProps>(ListItemBase);
 
 function ListItemBase(
