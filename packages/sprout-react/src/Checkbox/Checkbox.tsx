@@ -30,6 +30,13 @@ export type CheckboxProps = CheckboxNativeProps & {
   infoIconTooltip?: ReactNode;
 };
 
+/**
+ * The Checkbox component accepts all the native input props outside of `value`, `type`, `prefix` and `ref`, and also supports the following custom props:
+ * @param label - the visible label text rendered next to the checkbox.
+ * @param helpText - secondary helper text rendered below the label.
+ * @param indeterminate - whether the checkbox is in an indeterminate state.
+ * @param infoIconTooltip - content for an info tooltip icon shown next to the label.
+ */
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   CheckboxBase,
 );

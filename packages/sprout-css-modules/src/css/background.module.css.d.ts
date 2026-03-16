@@ -7,6 +7,7 @@ type Css = {
   "bg-enabled": string;
   "bg-disabled": string;
   "bg-pressed": string;
+  "bg-floating": string;
   "bg-inverse": string;
   "bg-interactive": string;
   "bg-danger": string;
@@ -23,6 +24,9 @@ type Css = {
   "bg-success": string;
   "bg-success-weak": string;
   "bg-success-inverse": string;
+
+  "bg-selected": string;
+  "bg-selected-default": string;
 };
 
 const classes: Css;

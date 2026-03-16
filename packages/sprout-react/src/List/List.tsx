@@ -29,6 +29,13 @@ function getSelectedItems(ref: HTMLElement): NodeList {
   );
 }
 
+/**
+ * The List component accepts all the native ul props and also supports the following custom props:
+ * @param gap - CSS gap between list items.
+ * @param hasPadding - whether list items have padding. Passed as context to all ListItem children.
+ * @param useGesture - whether to enable keyboard arrow navigation between items.
+ * @param dense - @deprecated this option has been removed from the design spec.
+ */
 export const List = Object.assign(ListBase, {
   Item: ListItem,
 });

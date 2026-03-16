@@ -29,6 +29,15 @@ function getSelectedItems(ref: HTMLElement): NodeList {
   return ref.querySelectorAll(`.${style.header}`);
 }
 
+/**
+ * The AccordionContainer component accepts all the native div props and also supports the following custom props:
+ * @param children - the accordion items to render inside the container.
+ * @param headerLevel - the heading level tag used for all item headers (e.g. 2 for h2). Defaults to a span otherwise.
+ * @param behavior - controls whether items are linked (only one open at a time) or isolated (independently toggled). Defaults to "linked".
+ * @param openedDefault - the index of the item that is open by default.
+ * @param renderContent - whether to keep item content in the DOM when it is closed.
+ * @param variant - the visual style of the accordion, can be default or quiet.
+ */
 export function AccordionContainer({
   behavior = "linked",
   headerLevel,

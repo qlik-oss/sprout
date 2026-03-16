@@ -104,7 +104,9 @@ function getKey(props: TypographyProps): PossibleValues["font"] | undefined {
 }
 
 /**
- * @deprecated please use classNames from sprout instead
+ * Returns a CSS className string for the given typography configuration.
+ * @param props - Typography props: either `font` (with optional `color` and `ellipsis`), or the deprecated `family`/`size`/`emphasized` combination.
+ * @deprecated Use classNames from `@qlik/sprout-css-modules` instead.
  */
 export function getTypographyClassName(props: TypographyProps): string {
   if (props.font) {

@@ -20,6 +20,18 @@ export type ToggleButtonProps = Omit<
   asDropdown?: boolean;
 } & UseToggleProps;
 
+/**
+ * The ToggleButton component renders onto a `button` HTML element. It accepts all `HTMLButtonElement` attributes except `type`, `onClick`, and `onChange`, plus the following:
+ * @param label - The visible button label.
+ * @param variant - Visual style variant (`quiet` or default).
+ * @param badge - Optional badge content.
+ * @param size - Button size (`small` or `default`).
+ * @param icon - Optional icon to display inside the button.
+ * @param asDropdown - If true, renders a dropdown arrow indicator.
+ * @param toggled - Controlled toggled state.
+ * @param defaultToggled - Default toggled state.
+ * @param onChange - Callback when the toggled state changes.
+ */
 export const ToggleButton = forwardRef(BaseToggleButton);
 
 function BaseToggleButton(

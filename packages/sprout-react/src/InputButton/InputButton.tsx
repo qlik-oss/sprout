@@ -24,6 +24,15 @@ export type InputButtonProps = Omit<
   ) => void | Promise<any>;
 };
 
+/**
+ * The InputButton component accepts all the native button props outside of `type`, `onClick` and `size`, and also supports the following custom props:
+ * @param onClick - required click handler, can return a Promise to show a loading state automatically.
+ * @param aria-label - accessible label for the button.
+ * @param size - the size of the button, can be xs or s.
+ * @param loading - controlled loading state that shows a spinner and disables the button.
+ * @param initialLoading - uncontrolled initial loading state.
+ * @param onLoadingChange - callback fired when the loading state changes.
+ */
 export const InputButton = forwardRef<HTMLButtonElement, InputButtonProps>(
   InputButtonBase,
 );

@@ -534,6 +534,16 @@ export const Color = {
       <span className={sprout.classNames("bg-success", "text-success-inverse")}>
         text-success-inverse
       </span>
+      <span
+        className={sprout.classNames("bg-selected-default", "text-selected")}
+      >
+        text-selected
+      </span>
+      <span
+        className={sprout.classNames("bg-selected", "text-selected-inverse")}
+      >
+        text-selected-inverse
+      </span>
     </div>
   ),
 };

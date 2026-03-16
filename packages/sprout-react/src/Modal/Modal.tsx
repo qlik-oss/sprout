@@ -52,12 +52,50 @@ export type ModalCompositionProps = {
 // Modal props API component
 const ModalBaseForwarded = forwardRef<HTMLDivElement, ModalProps>(ModalBase);
 // Modal composition API root component
+/**
+ * The `Modal.Root` composition API root renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param defaultVisible - Whether the modal is visible by default.
+ * @param visible - Controlled visibility state.
+ * @param onClose - Callback when the modal is closed.
+ * @param preventEscaping - If true, pressing Escape will not close the modal.
+ * @param preventInteractiveBackdrop - If true, clicking the backdrop will not close the modal.
+ * @param preventFocus - If true, focus will not be trapped inside the modal.
+ * @param variant - The modal variant (`dialog`, `form`, `form-wide`, `workflow`).
+ * @param height - The height of the modal.
+ * @param children - Content of the modal.
+ */
 const ModalRoot = forwardRef<HTMLDivElement, ModalCompositionProps["Root"]>(
   (props, ref) => <ModalBaseForwarded jsx {...props} ref={ref} />,
 );
 ModalRoot.displayName = "Modal.Root";
 
 // Replaces the deprecated ModalComposition.tsx
+/**
+ * The Modal component renders onto a `div` HTML element. It accepts the following props:
+ * @param defaultVisible - Whether the modal is visible by default.
+ * @param visible - Controlled visibility state.
+ * @param onClose - Callback when the modal is closed.
+ * @param preventEscaping - If true, pressing Escape will not close the modal.
+ * @param preventInteractiveBackdrop - If true, clicking the backdrop will not close the modal.
+ * @param preventFocus - If true, focus will not be trapped inside the modal.
+ * @param variant - The modal variant (`dialog`, `form`, `form-wide`, `workflow`).
+ * @param height - The height of the modal.
+ * @param headerTitle - Title to display in the modal header.
+ * @param headerDescription - Description to display in the modal header.
+ * @param headerLabelClose - Label for the close button in the header.
+ * @param headerInfoIconTooltip - Tooltip for the header info icon.
+ * @param headerIcon - Icon to display in the modal header.
+ * @param headerOnClickBack - Callback for the back button in the header.
+ * @param headerLabelBack - Label for the back button in the header.
+ * @param footerMetaLabel - Meta label in the footer.
+ * @param footerLeft - Content on the left side of the footer.
+ * @param footerActions - Action content in the footer.
+ * @param footerLabelClose - Label for the close button in the footer.
+ * @param children - Content of the modal.
+ * @param width - @deprecated Use `variant` instead.
+ * @param labelClose - @deprecated Use `headerLabelClose` and `footerLabelClose` instead.
+ * @param contentPadding - @deprecated Use horizontal padding on the wrapping element instead.
+ */
 export const Modal = Object.assign(ModalBaseForwarded, {
   Root: ModalRoot,
   Content: (props: ModalCompositionProps["Content"]) => (

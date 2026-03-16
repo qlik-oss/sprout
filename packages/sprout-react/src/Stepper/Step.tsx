@@ -22,6 +22,15 @@ export type StepProps = {
   isLast?: boolean;
 } & HTMLDivProps;
 
+/**
+ * The `Stepper.Step` component renders onto an `li` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param text - The label text for this step.
+ * @param semantic - Visual status indicator for this step (`completed`, `active`, `inactive`, `error`).
+ * @param state - The step display state (`default` or `progress`).
+ * @param number - The step number shown in the indicator (controlled by `Stepper.Container`).
+ * @param children - Additional content inside the step.
+ * @param isLast - Whether this is the last step in the sequence (controlled by `Stepper.Container`).
+ */
 export const Step = forwardRef<HTMLLIElement, StepProps>(StepBase);
 Step.displayName = "Stepper.Step";
 
@@ -32,9 +41,22 @@ function StepBase(
   const safeSemantic = semantic || "inactive";
   const safeState = state || "default";
   return (
-    <li aria-current={safeSemantic === "active" ? "step" : false} ref={ref}>
+    <li
+      className={classNames("flex-noreset", "border-box")}
+      aria-current={safeSemantic === "active" ? "step" : false}
+      ref={ref}
+    >
       <div
-        className={styles.step}
+        className={classNames(
+          "flex-noreset",
+          "items-center",
+          "grow-0",
+          "shrink-1",
+          "basis-auto",
+          "gap-m",
+          "p-s",
+          styles.step,
+        )}
         data-semantic={semantic}
         {...rest}
         role={rest.onClick ? "button" : undefined}
@@ -82,7 +104,16 @@ function StepBase(
             {safeSemantic === "error" && SEVERITY_ICONS["error"]}
           </span>
         )}
-        <span className={styles.text}>{text}</span>
+        <span
+          className={classNames(
+            "inline-flex",
+            "shrink-1",
+            "font-label-s-emphasized",
+            "text-default",
+          )}
+        >
+          {text}
+        </span>
       </div>
       {!isLast && !children ? <StepLine /> : null}
       {children ? <StepDivider>{children}</StepDivider> : null}

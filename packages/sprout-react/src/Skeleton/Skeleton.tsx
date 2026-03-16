@@ -20,6 +20,12 @@ export type SkeletonProps = HTMLSpanProps & {
   height?: CSSProperties["height"];
 };
 
+/**
+ * The Skeleton component renders onto a `span` HTML element. It accepts all `HTMLSpanElement` attributes plus the following:
+ * @param variant - The shape variant of the skeleton (`text`, `circle`, `rectangle`, `Button`, `IconButton`, `Input`, `InputField`).
+ * @param width - The width of the skeleton element.
+ * @param height - The height of the skeleton element.
+ */
 export const Skeleton = forwardRef<HTMLSpanElement, SkeletonProps>(
   SkeletonBase,
 );

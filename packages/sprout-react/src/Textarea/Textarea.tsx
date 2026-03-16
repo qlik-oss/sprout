@@ -6,6 +6,13 @@ import { TextareaNative, type TextareaNativeProps } from "./TextareaNative";
 
 export type TextareaProps = TextareaNativeProps & CommonFieldProps;
 
+/**
+ * The Textarea component renders onto a `textarea` HTML element with Field layout integration. It accepts all `HTMLTextAreaElement` attributes plus the following:
+ * @param resizable - Whether the textarea can be resized. Can be `true`, `false`, `horizontal`, or `vertical`.
+ * @param disabled - If true, the textarea is disabled.
+ * @param readOnly - If true, the textarea is read-only.
+ * @param hasError - If true, displays the textarea in an error state.
+ */
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   TextareaBase,
 );

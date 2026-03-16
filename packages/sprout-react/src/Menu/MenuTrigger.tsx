@@ -6,6 +6,11 @@ import { MenuTriggerBase, type MenuTriggerBaseProps } from "./MenuTriggerBase";
 export type MenuTriggerProps = Pick<MenuRendererProps, "menu"> &
   MenuTriggerBaseProps;
 
+/**
+ * The Menu.Trigger component wraps any element or button and opens a floating menu on interaction. It supports the following custom props:
+ * @param menu - the menu ReactNode to render in the floating dropdown.
+ * @param defaultOpen - whether the menu is open by default (uncontrolled).
+ */
 export const MenuTrigger = forwardRef<HTMLDivElement, MenuTriggerProps>(
   TriggerBase,
 );

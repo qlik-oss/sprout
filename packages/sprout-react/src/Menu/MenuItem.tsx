@@ -1,13 +1,11 @@
 import { type Ref, forwardRef, useContext } from "react";
 
 import { useListItem, useMergeRefs } from "@floating-ui/react";
-import sprout from "@qlik/sprout-css-modules";
 
 import type { HTMLButtonProps } from "../htmlTypes";
+import { menuStyle } from "./MenuClassName";
 import { MenuContent, type MenuContentProps } from "./MenuContent";
 import { MenuContext } from "./MenuContext";
-
-import menuStyle from "./Menu.module.css";
 
 type MenuItemVariant = "default" | "destructive";
 
@@ -17,6 +15,19 @@ export type MenuItemProps = HTMLButtonProps &
     variant?: MenuItemVariant;
   };
 
+/**
+ * The Menu.Item component accepts all the native button props and also supports the following custom props:
+ * @param label - the primary text label of the menu item.
+ * @param description - secondary descriptive text shown below the label.
+ * @param icon - an icon rendered at the start of the menu item.
+ * @param valueLabel - a value string rendered at the end of the menu item.
+ * @param selectable - whether the item can be checked/selected.
+ * @param selected - whether the item is currently selected.
+ * @param isNested - whether this is a nested (child) menu item.
+ * @param variant - the visual variant, can be default or destructive.
+ * @param disabled - whether the menu item is disabled.
+ * @param children - additional content rendered inside the menu item.
+ */
 export const MenuItem = forwardRef<HTMLButtonElement, MenuItemProps>(
   MenuItemBase,
 );
@@ -52,20 +63,7 @@ function MenuItemBase(
       ref={useMergeRefs([item.ref, forwardedRef])}
       aria-haspopup={isNested ? "menu" : undefined}
       type="button"
-      className={sprout.classNames(
-        "cursor-pointer",
-        "bg-transparent",
-        "text-default",
-        "font-label-s",
-        "flex-noreset",
-        "w-full",
-        "border-none",
-        "radius-subtle",
-        "m-0",
-        "p-0",
-        "outline-none",
-        menuStyle.menuitem,
-      )}
+      className={menuStyle.menuitem}
       style={{ minInlineSize: "120px" }}
       tabIndex={isActive ? 0 : -1}
       role={selectable ? "menuitemcheckbox" : "menuitem"}

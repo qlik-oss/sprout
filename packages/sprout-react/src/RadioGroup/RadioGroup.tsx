@@ -15,6 +15,13 @@ export type RadioGroupProps = Omit<FieldProps, "id" | "children"> & {
   children?: ReactNode;
 };
 
+/**
+ * The RadioGroup component renders a group of Radio inputs using the Field layout. It accepts all Field props except `id` and `children`, plus the following:
+ * @param name - The name attribute shared by all radio inputs in the group.
+ * @param id - The id for the group's input element.
+ * @param children - Radio inputs to render inside the group.
+ * @param options - @deprecated Use `children` instead.
+ */
 export const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
   RadioGroupBase,
 );

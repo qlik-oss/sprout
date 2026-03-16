@@ -17,6 +17,13 @@ export type RadioProps = Omit<HTMLInputProps, "type" | "prefix"> &
     infoIconTooltip?: ReactNode;
   };
 
+/**
+ * The Radio component renders onto an `input` HTML element. It accepts all `HTMLInputElement` attributes plus the following:
+ * @param label - The visible text label for the radio button.
+ * @param helpText - Optional helper text displayed below the label.
+ * @param id - The id for the input element.
+ * @param infoIconTooltip - Tooltip content for the info icon.
+ */
 export const Radio = forwardRef<HTMLInputElement, RadioProps>(RadioBase);
 
 function RadioBase(props: RadioProps, ref?: Ref<HTMLInputElement>) {

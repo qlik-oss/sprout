@@ -17,6 +17,11 @@ export type ToastContainerProps = {
     | "bottom-start";
 } & HTMLDivProps;
 
+/**
+ * The `Toast.Container` component renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param placement - Position of the toast container (`top`, `bottom`, `top-start`, `top-end`, `bottom-start`, `bottom-end`).
+ * @param children - Toast content items.
+ */
 export const ToastContainer = forwardRef<HTMLDivElement, ToastContainerProps>(
   ToastContainerBase,
 );

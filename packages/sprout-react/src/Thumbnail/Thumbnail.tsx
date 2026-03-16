@@ -11,6 +11,12 @@ export type ThumbnailProps = {
   children?: ReactNode;
 } & HTMLDivProps;
 
+/**
+ * The Thumbnail component renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param type - The content type of the thumbnail (`icon` or `img`).
+ * @param size - The size of the thumbnail (`xs`, `s`, `l`, `xl`).
+ * @param children - The icon or image to render inside the thumbnail.
+ */
 export function Thumbnail({ size, type, children, ...props }: ThumbnailProps) {
   return (
     <div

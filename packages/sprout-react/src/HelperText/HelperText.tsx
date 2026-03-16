@@ -12,6 +12,13 @@ export type HelperTextProps = Omit<HTMLDivProps, "children"> & {
   disabled?: boolean;
 };
 
+/**
+ * The HelperText component accepts all the native div props outside of `children`, and also supports the following custom props:
+ * @param helpText - the helper text content to display.
+ * @param isError - whether the helper text is displaying an error state.
+ * @param variant - the visual style, can be default or quiet.
+ * @param disabled - whether the helper text is in a disabled state.
+ */
 export function HelperText({
   disabled,
   isError,

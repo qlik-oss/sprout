@@ -18,8 +18,7 @@ import {
 import { useMenuGesture } from "../Utils/gesture/menu";
 import { useOpenControl } from "../hooks/useOpenControl";
 import { renderOrClone } from "../renderOrClone";
-
-import style from "./Menu.module.css";
+import { menuStyle } from "./MenuClassName";
 
 export type MenuTriggerBaseProps = {
   defaultOpen?: FloatingPrimitiveProps["initialOpen"];
@@ -173,7 +172,7 @@ function TriggerBase(
       role="menu"
       minWidth="reference"
       maxWidth={maxWidth}
-      className={style.menu}
+      className={menuStyle.menu}
       content={menu}
       {...props}
     >

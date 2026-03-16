@@ -17,6 +17,15 @@ export type AvatarProps = Omit<HTMLSpanProps, "size"> & {
 
 const AVATAR_MODULO = 8;
 
+/**
+ * The Avatar component accepts all the native span props outside of `size`, and also supports the following custom props:
+ * @param size - the size of the avatar, can be xs, s, m, l, xl or illustration. Defaults to m.
+ * @param text - text used to generate initials rendered inside the avatar.
+ * @param icon - a React element rendered as the avatar icon.
+ * @param img - props for the underlying img element when the avatar shows an image.
+ * @param badge - a badge element rendered as an overlay on the avatar.
+ * @param bgIndex - index used to pick a background color from the avatar palette.
+ */
 export function Avatar({
   size = "m",
   text,

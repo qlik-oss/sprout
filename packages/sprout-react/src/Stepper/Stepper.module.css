@@ -1,29 +1,5 @@
 .stepper {
-  inline-size: 100%;
-  display: flex;
-  box-sizing: border-box;
   list-style-type: none;
-  padding: var(--sprout-common-spacing-s);
-  justify-content: space-between;
-  margin: 0;
-}
-
-.stepper > li {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-.line {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.stepper[data-orientation="vertical"] {
-  flex-direction: column;
-  overflow-block: auto;
 }
 
 .stepper[data-orientation="vertical"] > li {
@@ -47,10 +23,8 @@
 }
 
 .stepper[data-orientation="horizontal"] {
-  overflow-inline: auto;
   inline-size: 100%;
   align-items: center;
-  flex-direction: row;
 }
 
 .stepper[data-orientation="horizontal"] > li {
@@ -92,14 +66,9 @@
 }
 
 .step {
-  display: flex;
-  align-items: center;
-  flex: 0 1 auto;
-  gap: var(--sprout-common-spacing-m);
   background-color: transparent;
   border: none;
   border-radius: var(--sprout-common-border-radius-soft);
-  padding: var(--sprout-common-spacing-s);
 }
 
 .step[role="button"] {
@@ -140,11 +109,4 @@
 .step [data-surface="progress-circular"] {
   inline-size: var(--sprout-common-sizing-xxl);
   block-size: var(--sprout-common-sizing-xxl);
-}
-
-.text {
-  display: inline-flex;
-  flex-shrink: 1;
-  font: var(--sprout-label-font-s-emphasized);
-  color: var(--sprout-common-foreground-color-default);
 }

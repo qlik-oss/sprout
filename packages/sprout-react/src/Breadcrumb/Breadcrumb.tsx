@@ -14,6 +14,10 @@ export type BreadCrumbProps = HTMLNavProps & {
   label?: string;
 };
 
+/**
+ * The BreadcrumbItem component accepts all the native li props and also supports the following custom props:
+ * @param children - the content of the breadcrumb item, typically a Link or plain text for the current page.
+ */
 export function BreadcrumbItem({
   children,
   ...props
@@ -37,6 +41,12 @@ export function BreadcrumbItem({
 }
 BreadcrumbItem.displayName = "BreadcrumbItem";
 
+/**
+ * The Breadcrumb component accepts all the native nav props and also supports the following custom props:
+ * @param label - the accessible label for the nav landmark (maps to aria-label).
+ * @param items - an array of link props used to render breadcrumb entries declaratively.
+ * @param children - breadcrumb entries rendered as children using BreadcrumbItem components.
+ */
 export const Breadcrumb = forwardRef<HTMLElement, BreadCrumbProps>(
   BreadcrumbBase,
 );

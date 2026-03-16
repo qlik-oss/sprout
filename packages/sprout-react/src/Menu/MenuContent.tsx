@@ -1,12 +1,9 @@
 import type { ReactNode } from "react";
 
-import sprout from "@qlik/sprout-css-modules";
-
 import { TickOutline } from "../Icons/TickOutline";
 import { classNames } from "../classNames";
+import { menuStyle } from "./MenuClassName";
 import { ChevronRight } from "./MenuIcon";
-
-import style from "./Menu.module.css";
 
 export type MenuContentProps = {
   label?: string;
@@ -31,6 +28,18 @@ function NotSelected() {
   return <svg width="16" height="16" viewBox="0 0 16 16" style={NO_SHRINK} />;
 }
 
+/**
+ * The MenuContent component is standalone content layout for a menu item. It supports the following props:
+ * @param label - the primary text label.
+ * @param description - secondary descriptive text shown below the label.
+ * @param icon - an icon rendered at the start.
+ * @param valueLabel - a value string rendered at the end.
+ * @param isNested - whether this is a nested item.
+ * @param selectable - whether the item shows a checked/unchecked indicator.
+ * @param selected - whether the item is currently selected.
+ * @param disabled - whether the item is disabled.
+ * @param children - additional content rendered inside.
+ */
 export function MenuContent({
   isNested,
   label,
@@ -44,7 +53,7 @@ export function MenuContent({
 }: MenuContentProps) {
   return (
     <div
-      className={sprout.classNames(
+      className={classNames(
         "flex",
         "border-box",
         "gap-m",
@@ -63,16 +72,12 @@ export function MenuContent({
       {selectable && !selected ? <NotSelected /> : null}
       {selectable && selected ? (
         <TickOutline
-          className={sprout.classNames(
-            "shrink-0",
-            "fill-default",
-            "self-start",
-          )}
+          className={classNames("shrink-0", "fill-default", "self-start")}
         />
       ) : null}
       {!label && (
         <div
-          className={sprout.classNames(
+          className={classNames(
             "overflow-hidden",
             "grow-0",
             "break-words",
@@ -118,7 +123,7 @@ export function MenuContentPrimitive({
 }: MenuContentPrimitiveProps) {
   return (
     <div
-      className={sprout.classNames(
+      className={classNames(
         "overflow-hidden",
         "flex",
         "gap-m",
@@ -128,12 +133,12 @@ export function MenuContentPrimitive({
       )}
     >
       {icon !== undefined && (
-        <span data-part="icon" className={style.menu_icon}>
+        <span data-part="icon" className={menuStyle.menu_icon}>
           {icon}
         </span>
       )}
       <div
-        className={sprout.classNames(
+        className={classNames(
           "overflow-hidden",
           "flex",
           "border-box",
@@ -143,41 +148,20 @@ export function MenuContentPrimitive({
           "w-full",
         )}
       >
-        <span
-          data-part="label"
-          className={sprout.classNames(
-            "font-label-s",
-            "text-start",
-            "w-full",
-            "break-words",
-            style.menu_content_label,
-          )}
-        >
+        <span data-part="label" className={menuStyle.menu_content_label}>
           {/* Add space after label to split label and description texts for search algorithm */}
           {label}{" "}
         </span>
         {description ? (
           <span
             data-part="description"
-            className={sprout.classNames(
-              "font-label-xs",
-              "text-start",
-              "break-words",
-              "w-full",
-              style.menu_content_description,
-              {
-                "text-weak": !disabled,
-                "text-disabled": !!disabled,
-              },
-            )}
+            className={menuStyle.menu_content_description(disabled)}
           >
             {description}
           </span>
         ) : null}
       </div>
-      <div
-        className={sprout.classNames("font-label-xs", "self-start", "shrink-0")}
-      >
+      <div className={classNames("font-label-xs", "self-start", "shrink-0")}>
         {valueLabel}
       </div>
     </div>

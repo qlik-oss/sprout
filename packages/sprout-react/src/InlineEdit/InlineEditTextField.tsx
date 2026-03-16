@@ -57,6 +57,18 @@ export type InlineEditTextFieldProps = Omit<
   errorMessages?: TextFieldProps["errorMessages"];
 };
 
+/**
+ * The InlineEdit.TextField component provides an inline-editable text field and supports the following custom props:
+ * @param value - the controlled value of the text field.
+ * @param defaultValue - the uncontrolled default value of the text field.
+ * @param placeholder - placeholder text shown when the field is empty.
+ * @param type - the input type of the text field.
+ * @param font - the font style applied to the text field.
+ * @param view - a custom render function for the view (read-only) mode.
+ * @param onChange - callback fired when the value changes, with an optional change reason.
+ * @param hasError - whether the field is in an error state.
+ * @param errorMessages - array of error messages displayed below the field.
+ */
 export const InlineEditTextField = forwardRef<
   HTMLDivElement,
   InlineEditTextFieldProps

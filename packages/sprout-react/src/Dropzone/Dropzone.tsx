@@ -31,6 +31,19 @@ export type DropzoneProps = {
   width?: CSSProperties["width"];
 } & HTMLDivProps;
 
+/**
+ * The Dropzone component accepts all the native div props and also supports the following custom props:
+ * @param icon - an icon element rendered at the top of the dropzone.
+ * @param title - the title text or element rendered inside the dropzone.
+ * @param description - descriptive text or element rendered below the title.
+ * @param button - props for the primary action button inside the dropzone.
+ * @param secondaryButton - props for an optional secondary action button.
+ * @param disabled - whether the dropzone is disabled.
+ * @param status - the controlled drag status, can be dragging or hover.
+ * @param statusDefault - the uncontrolled default drag status.
+ * @param onStatusChange - callback fired when the drag status changes.
+ * @param width - CSS width of the dropzone container.
+ */
 export const Dropzone = forwardRef<HTMLDivElement, DropzoneProps>(DropzoneBase);
 
 function DropzoneBase(

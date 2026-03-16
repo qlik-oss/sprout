@@ -8,6 +8,7 @@ import {
   FloatingTreePrimitive,
   useFloatingContext,
 } from "../FloatingPrimitive";
+import { menuStyle } from "./MenuClassName";
 import { MenuRenderer, type MenuRendererProps } from "./MenuRenderer";
 
 import style from "./Menu.module.css";
@@ -22,6 +23,13 @@ export type MenuContextualProps = {
   "placement" | "content" | "initialOpen" | "onOpenChange"
 >;
 
+/**
+ * The Menu.Contextual component shows a context menu (right-click or custom trigger) over arbitrary content. It supports the following custom props:
+ * @param menu - the menu items ReactNode or array shown in the floating context menu.
+ * @param children - the content that triggers the context menu.
+ * @param wrapperClassName - additional CSS class applied to the wrapper element.
+ * @param onOpenChange - callback fired when the menu open state changes.
+ */
 export function MenuContextual({
   closeOnRightClickOutside = true,
   onClick,
@@ -138,7 +146,7 @@ export function MenuContextual({
         content={menu ? <MenuRenderer menu={menu} /> : null}
         width="fit-content"
         maxWidth="s"
-        className={style.menu}
+        className={menuStyle.menu}
         {...props}
       />
     </>

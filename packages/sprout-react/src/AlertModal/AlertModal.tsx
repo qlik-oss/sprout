@@ -53,6 +53,15 @@ const ICON_BY_VARIANT: Record<NormalizedVariant, ReactNode> = {
   information: SEVERITY_ICONS.info,
 };
 
+/**
+ * The AlertModal component supports the following custom props:
+ * @param title - the title text displayed at the top of the modal.
+ * @param variant - the severity variant, can be information, warning or error. The positive and destructive values are deprecated, use information and error instead.
+ * @param children - additional content rendered in the modal body.
+ * @param details - a details section rendered below the main content.
+ * @param footerRight - the footer action buttons (required).
+ * @param footerLeft - @deprecated renders alongside `footerRight`. Will be removed in a future release.
+ */
 export const AlertModal = forwardRef<HTMLDivElement, AlertModalProps>(
   AlertModalBase,
 );

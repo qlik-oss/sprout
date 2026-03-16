@@ -65,6 +65,21 @@ function getFixedHeight(
   return `calc(${lineHeight} - 2 * ${tokens.common_border_default_width} + 2 * ${designSize === "small" ? tokens.common_spacing_s : tokens.common_spacing_m})`;
 }
 
+/**
+ * The Input component accepts all the native input props outside of `onChange`, and also supports the following custom props:
+ * @param onChange - change handler that receives the native event plus an optional `reason` (e.g. "clear").
+ * @param font - the font style applied to the input text.
+ * @param designSize - the size variant of the input, can be default or small.
+ * @param hasError - whether the input is in an error state.
+ * @param disabled - whether the input is disabled.
+ * @param readOnly - whether the input is read-only.
+ * @param labelClear - accessible label for the clear button.
+ * @param leftIcon - an icon rendered inside the input on the left.
+ * @param leftAffix - an affix (text or element) displayed to the left inside the input.
+ * @param rightAffix - an affix (text or element) displayed to the right inside the input.
+ * @param leftAdornment - a decorative element rendered outside the input on the left.
+ * @param rightAdornment - a decorative element rendered outside the input on the right.
+ */
 export const Input = forwardRef<HTMLInputElement, InputProps>(InputBase);
 
 function InputBase(props: InputProps, ref?: Ref<HTMLInputElement>) {

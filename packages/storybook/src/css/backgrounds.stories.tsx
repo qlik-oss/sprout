@@ -72,6 +72,16 @@ export const Background = {
         >
           bg-inverse
         </div>
+        <div
+          className={sprout.classNames(
+            ...CONTENT_CLASSES.filter((c) => c !== "border-moderate"),
+            "bg-floating",
+            "box-shadow-strong",
+            "border-none",
+          )}
+        >
+          bg-floating
+        </div>
       </div>
       <div
         className={sprout.classNames(
@@ -207,6 +217,34 @@ export const Background = {
           )}
         >
           bg-success-inverse (text-success)
+        </div>
+      </div>
+      <div
+        className={sprout.classNames(
+          "flex",
+          "border-box",
+          "flex-row",
+          "gap-xl",
+          "py-xl",
+        )}
+      >
+        <div
+          className={sprout.classNames(
+            ...CONTENT_CLASSES,
+            "bg-selected",
+            "text-selected-inverse",
+          )}
+        >
+          bg-selected (text-selected-inverse)
+        </div>
+        <div
+          className={sprout.classNames(
+            ...CONTENT_CLASSES,
+            "bg-selected-default",
+            "text-selected",
+          )}
+        >
+          bg-selected-default (text-selected)
         </div>
       </div>
     </div>

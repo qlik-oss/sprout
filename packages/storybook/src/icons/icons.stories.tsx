@@ -1,9 +1,17 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from "react";
 
-import { TextField, classNames } from "@qlik/sprout-react";
+import {
+  Checkbox,
+  List,
+  ListItem,
+  Tag,
+  TextField,
+  classNames,
+} from "@qlik/sprout-react";
 import * as Icons from "@qlik/sprout-icons/react";
 import type { Meta } from "@storybook/react";
+
+import iconsMetadata from "./metadata.json";
 
 const meta: Meta = {
   title: "Icons",
@@ -11,85 +19,173 @@ const meta: Meta = {
 
 export default meta;
 
-function removeTrailingIconFromName(name: string) {
-  return name.endsWith("Icon") ? name.slice(0, -4) : name;
-}
+const metadataByName = iconsMetadata.reduce<
+  Record<string, (typeof iconsMetadata)[number]>
+>((acc, metadata) => {
+  // transformation_flow -> TransformationFlow
+  const name = metadata.filename
+    .split("_")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join("");
+  acc[`${name}Icon`] = metadata;
+  return acc;
+}, {});
 
-export const AllIcons = {
-  render: () => {
-    const [search, setSearch] = useState("");
-    return (
-      <div className={classNames("flex", "flex-col", "gap-l", "flex-wrap")}>
-        <div
-          className={classNames(
-            "flex-noreset",
-            "w-s",
-            "flex-row",
-            "items-start",
-            "p-s",
-            "gap-s",
-            "justify-start",
-          )}
-        >
-          <TextField
-            placeholder="Search icons..."
-            value={search}
-            onChange={(e) => {
-              setSearch(e.target.value);
-            }}
-            aria-label="Search icons"
-          />
-        </div>
-        <div
-          className={classNames(
-            "flex",
-            "flex-row",
-            "flex-wrap",
-            "gap-m",
-            "w-fit",
-          )}
-        >
-          {Object.entries(Icons)
-            .filter(([name]) =>
-              name.toLowerCase().includes(search.toLowerCase()),
-            )
-            .map(([name, Icon]) => (
+function AllIconsStoryContent() {
+  const [search, setSearch] = useState("");
+  const [showImport, setShowImport] = useState(false);
+
+  const filteredIcons = Object.entries(Icons).filter(([name]) => {
+    const nameMatch = name.toLowerCase().includes(search.toLowerCase());
+    const metadata = metadataByName[name];
+    const tagMatch = metadata.tags.some((tag) =>
+      tag.toLowerCase().includes(search.toLowerCase()),
+    );
+    const categoryMatch = metadata.category
+      .toLowerCase()
+      .includes(search.toLowerCase());
+    return nameMatch || tagMatch || categoryMatch;
+  });
+
+  return (
+    <div
+      className={classNames(
+        "flex",
+        "flex-col",
+        "border-box",
+        "gap-l",
+        "p-xl",
+        "w-xl",
+        "h-screen",
+        "overflow-y-hidden",
+      )}
+    >
+      <div
+        className={classNames(
+          "flex",
+          "flex-row",
+          "border-box",
+          "items-center",
+          "w-full",
+          "gap-m",
+        )}
+      >
+        <TextField
+          placeholder="Search icons..."
+          value={search}
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
+          aria-label="Search icons"
+        />
+        <Checkbox
+          label="Copy using import"
+          checked={showImport}
+          onChange={(e) => {
+            setShowImport(e.target.checked);
+          }}
+        />
+      </div>
+      <div className={classNames("flex-1", "overflow-y-auto")}>
+        <List gap="xs" hasPadding={false}>
+          {filteredIcons.map(([name, Icon]) => (
+            <ListItem
+              key={name}
+              onClick={() => {
+                void navigator.clipboard.writeText(
+                  showImport
+                    ? `import { ${name} } from '@qlik/sprout-icons/react';`
+                    : name,
+                );
+              }}
+              aria-label={`Copy icon name: ${name}`}
+            >
               <div
-                key={name}
                 className={classNames(
                   "flex",
-                  "flex-col",
-                  "gap-m",
+                  "flex-row",
+                  "flex-1",
+                  "border-box",
+                  "items-center",
+                  "justify-between",
+                  "w-full",
+                  "gap-l",
                   "p-m",
-                  "border-default",
-                  "radius-soft",
                 )}
-                style={{ blockSize: 150, inlineSize: 150 }}
               >
-                <span
-                  className={classNames(
-                    "font-script-s",
-                    "text-weak",
-                    "break-all",
-                  )}
-                >
-                  {removeTrailingIconFromName(name)}
-                </span>
                 <div
                   className={classNames(
                     "flex",
                     "items-center",
                     "justify-center",
-                    "flex-1",
                     "text-default",
                   )}
                 >
                   <Icon />
                 </div>
+                <div
+                  className={classNames(
+                    "flex",
+                    "flex-col",
+                    "flex-1",
+                    "shrink-0",
+                  )}
+                >
+                  <span
+                    className={classNames(
+                      "font-body-s",
+                      "text-default",
+                      "break-all",
+                    )}
+                  >
+                    {name}
+                  </span>
+                  <span
+                    className={classNames(
+                      "font-body-s",
+                      "text-weak",
+                      "break-all",
+                    )}
+                  >
+                    {metadataByName[name].category}
+                  </span>
+                </div>
+                <div
+                  className={classNames(
+                    "flex",
+                    "flex-row",
+                    "flex-1",
+                    "gap-s",
+                    "justify-start",
+                    "flex-wrap",
+                  )}
+                >
+                  {metadataByName[name].tags.map((tag) => (
+                    <Tag key={tag} text={tag} size="s" />
+                  ))}
+                </div>
               </div>
-            ))}
-        </div>
+            </ListItem>
+          ))}
+
+          {filteredIcons.length === 0 ? (
+            <ListItem>
+              <span className={classNames("font-body-s", "text-subtle")}>
+                No icons found
+              </span>
+            </ListItem>
+          ) : null}
+        </List>
       </div>
-    );
+    </div>
+  );
+}
+AllIconsStoryContent.displayName = "AllIconsStoryContent";
+
+export const AllIcons = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    layout: "fullscreen",
   },
+  render: () => <AllIconsStoryContent />,
 };

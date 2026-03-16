@@ -57,6 +57,24 @@ export type InlineEditPrimitiveProps = {
   "data-testid"?: string;
 } & Omit<HTMLDivProps, "onChange" | "defaultValue">;
 
+/**
+ * The InlineEdit.Primitive component accepts all the native div props outside of `onChange` and `defaultValue`, and also supports the following custom props:
+ * @param view - the element or render function shown in view (read-only) mode.
+ * @param edit - the element or render function shown in edit mode.
+ * @param showEditIcon - whether to show an edit icon button in view mode.
+ * @param showEditButton - @deprecated use `showEditIcon` instead.
+ * @param showFormButtons - whether to show save and cancel form buttons in edit mode.
+ * @param editFocusSelector - a CSS selector used to focus an element when entering edit mode.
+ * @param editOffsetX - horizontal offset of the edit overlay from the view element.
+ * @param editOffsetY - vertical offset of the edit overlay from the view element.
+ * @param blurAction - the action triggered when focus leaves the editor, can be cancel or save. Defaults to cancel.
+ * @param onSave - callback fired when the user saves the edit.
+ * @param onCancel - callback fired when the user cancels the edit.
+ * @param isEditing - controlled editing state.
+ * @param isEditingDefault - uncontrolled default editing state.
+ * @param onEdit - callback fired when the editing state changes.
+ * @param errorMessages - array of error messages displayed below the editor.
+ */
 export const InlineEditPrimitive = forwardRef<
   HTMLDivElement,
   InlineEditPrimitiveProps

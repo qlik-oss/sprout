@@ -1,3 +1,4 @@
+/* stylelint-disable logical-css/require-logical-properties */
 .overflow-visible {
   overflow: visible;
 }
@@ -15,42 +16,34 @@
 }
 
 .overflow-x-visible {
-  /* stylelint-disable-next-line plugin/use-logical-properties-and-values */
   overflow-x: visible;
 }
 
 .overflow-x-hidden {
-  /* stylelint-disable-next-line plugin/use-logical-properties-and-values */
   overflow-x: hidden;
 }
 
 .overflow-x-scroll {
-  /* stylelint-disable-next-line plugin/use-logical-properties-and-values */
   overflow-x: scroll;
 }
 
 .overflow-x-auto {
-  /* stylelint-disable-next-line plugin/use-logical-properties-and-values */
   overflow-x: auto;
 }
 
 .overflow-y-visible {
-  /* stylelint-disable-next-line plugin/use-logical-properties-and-values */
   overflow-y: visible;
 }
 
 .overflow-y-hidden {
-  /* stylelint-disable-next-line plugin/use-logical-properties-and-values */
   overflow-y: hidden;
 }
 
 .overflow-y-scroll {
-  /* stylelint-disable-next-line plugin/use-logical-properties-and-values */
   overflow-y: scroll;
 }
 
 .overflow-y-auto {
-  /* stylelint-disable-next-line plugin/use-logical-properties-and-values */
   overflow-y: auto;
 }
 

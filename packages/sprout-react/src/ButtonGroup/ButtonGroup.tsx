@@ -8,6 +8,12 @@ export type ButtonGroupProps = HTMLDivProps & {
   fullWidth?: boolean;
 };
 
+/**
+ * The ButtonGroup component accepts all the native div props and also supports the following custom props:
+ * @param orientation - the layout direction of the buttons, can be horizontal or vertical. Defaults to horizontal.
+ * @param fullWidth - whether the group stretches to fill its container width.
+ * @param children - the Button elements to render inside the group.
+ */
 export function ButtonGroup({
   orientation,
   fullWidth,

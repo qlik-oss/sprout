@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
 import { type MouseEvent, type ReactNode, type Ref, forwardRef } from "react";
 
-import { GotoIcon } from "../Icons/GotoIcon";
+import { OpenInNewWindowIcon } from "@qlik/sprout-icons/react";
+
 import type { PossibleValues } from "../Typography";
 import { classNames } from "../classNames";
 import type { HTMLAnchorProps } from "../htmlTypes";
@@ -19,6 +20,15 @@ export type LinkProps = Omit<HTMLAnchorProps, "className"> & {
   font?: PossibleValues["font"] | "inherit";
 };
 
+/**
+ * The Link component accepts all the native anchor props outside of `className`, and also supports the following custom props:
+ * @param children - the content of the link.
+ * @param disabled - whether the link is disabled.
+ * @param isExternal - whether clicking opens a new tab, also renders an external link icon.
+ * @param withEllipsis - whether to truncate long link text with an ellipsis.
+ * @param font - the font style applied to the link text. Defaults to body_m.
+ * @param label - @deprecated use `children` instead.
+ */
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(LinkBase);
 
 function LinkBase(
@@ -75,7 +85,7 @@ function LinkBase(
         {children || label}
         {isExternal ? (
           <span className={style.link__external}>
-            <GotoIcon width={undefined} height={undefined} />
+            <OpenInNewWindowIcon />
           </span>
         ) : null}
       </span>

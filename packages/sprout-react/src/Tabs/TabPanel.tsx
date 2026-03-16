@@ -13,6 +13,12 @@ export type TabPanelPropTypes = Omit<HTMLDivProps, "id"> & {
   id: string;
 };
 
+/**
+ * The `Tabs.Panel` component renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param id - The id that matches the `aria-controls` of the associated `Tabs.Tab` (required).
+ * @param children - Panel content.
+ * @param renderIf - If false, the panel content is not rendered even when visible.
+ */
 export function TabPanel({ children, id, renderIf }: TabPanelPropTypes) {
   const [focusable, setFocusable] = useState(true);
   const context = useContext(TabsInternalContext);

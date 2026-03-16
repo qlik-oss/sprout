@@ -36,6 +36,19 @@ const crossSize = {
   size: 0,
 };
 
+/**
+ * The `Panel.Primitive` component renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param placement - The side of the container this panel is placed on; affects the border used.
+ * @param resizable - If true, the panel can be resized by the user.
+ * @param showResizeHandle - If true, the resize handle is visible.
+ * @param overlay - If provided, displays the panel as an overlay with the given size.
+ * @param onResize - Callback called when the panel is resized.
+ * @param minWidth - Minimum width of the panel.
+ * @param maxWidth - Maximum width of the panel.
+ * @param minHeight - Minimum height of the panel.
+ * @param maxHeight - Maximum height of the panel.
+ * @param initialSize - Initial size of the panel in pixels.
+ */
 export function PanelPrimitive({
   resizable,
   showResizeHandle,

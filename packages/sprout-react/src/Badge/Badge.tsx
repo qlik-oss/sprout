@@ -92,6 +92,14 @@ function isLegacyProps(
   return "type" in props;
 }
 
+/**
+ * The Badge component accepts all the native span props outside of `type`, `color` and `text`, and also supports the following custom props:
+ * @param variant - the style of the badge, can be dot or alphanumeric. Defaults to dot when omitted.
+ * @param text - the text content for alphanumeric badges.
+ * @param charLimit - maximum character count shown for alphanumeric badges.
+ * @param color - the color of the badge, can be info, success, warning, danger, selected or neutral.
+ * @param type - @deprecated use `variant` instead.
+ */
 export function Badge(props: BadgeProps) {
   // eslint-disable-next-line react/destructuring-assignment
   const isOneCharText = props.text !== undefined && props.text.length === 1;

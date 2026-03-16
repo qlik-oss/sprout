@@ -40,6 +40,24 @@ export type AccordionItemProps = AccordionItemCommonPropsType &
     "header" | "description" | "value" | "icon" | "chevronPosition" | "affix"
   >;
 
+/**
+ * The AccordionItem component accepts all the native div props and also supports the following custom props:
+ * @param header - the header text displayed on the accordion toggle button.
+ * @param description - a secondary description text displayed below the header.
+ * @param icon - an icon rendered at the start of the header.
+ * @param affix - additional content rendered at the end of the header.
+ * @param value - a value string displayed in the header (e.g. a count or label).
+ * @param chevronPosition - position of the expand/collapse chevron, can be leading or trailing.
+ * @param variant - the visual style of the item, can be default or quiet.
+ * @param children - the content rendered inside the accordion panel when opened.
+ * @param headerLevel - the heading level tag used for the header (e.g. 2 for h2). Defaults to a span otherwise.
+ * @param renderContent - whether to keep the panel content in the DOM when closed.
+ * @param opened - controlled open state of the accordion item.
+ * @param openedDefault - uncontrolled default open state of the accordion item.
+ * @param width - whether the item takes full width or fits its content. Should never be used inside an AccordionContainer.
+ * @param disabled - whether the accordion item is disabled.
+ * @param onToggleOpened - callback fired when the accordion item is toggled.
+ */
 export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
   AccordionItemBase,
 );

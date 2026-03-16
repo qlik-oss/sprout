@@ -24,6 +24,16 @@ type AlertBannerOnlyProps = {
 export type AlertBannerProps = Omit<HTMLDivProps, "content" | "title"> &
   AlertBannerOnlyProps;
 
+/**
+ * The AlertBanner component accepts all the native div props outside of `content` and `title`, and also supports the following custom props:
+ * @param content - the main content of the banner.
+ * @param variant - the severity variant, can be error, warning, success or info.
+ * @param action - an action element rendered inside the banner.
+ * @param link - a link element rendered inside the banner.
+ * @param onClickDismiss - callback fired when the dismiss button is clicked.
+ * @param dismissLabel - accessible label for the dismiss button.
+ * @param justify - set to "center" to center-align the banner content.
+ */
 export const AlertBanner = forwardRef<HTMLDivElement, AlertBannerProps>(
   AlertBannerBase,
 );

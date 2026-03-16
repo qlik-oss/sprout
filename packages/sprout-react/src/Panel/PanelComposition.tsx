@@ -3,6 +3,15 @@ import { PanelContainer, type PanelContainerProps } from "./PanelContainer";
 
 type PlacedPanelProps = Omit<PanelPrimitiveProps, "placement">;
 
+/**
+ * The Panel component supports the following sub-components:
+ * - `Panel.Container` — Wrapping container for panel primitives. Accepts `overlay` for overlay display modes.
+ * - `Panel.Primitive` — Base panel with full control over `placement`, `resizable`, `showResizeHandle`, `overlay`, `onResize`, and dimension constraints.
+ * - `Panel.Left` — Panel.Primitive pre-configured with `placement="left"`.
+ * - `Panel.Right` — Panel.Primitive pre-configured with `placement="right"`.
+ * - `Panel.Top` — Panel.Primitive pre-configured with `placement="top"`.
+ * - `Panel.Bottom` — Panel.Primitive pre-configured with `placement="bottom"`.
+ */
 export const Panel = {
   Container: PanelContainer,
   Primitive: PanelPrimitive,

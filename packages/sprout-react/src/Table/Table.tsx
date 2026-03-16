@@ -23,6 +23,14 @@ const containerFlex = classNames(
   "flex-nowrap",
 );
 
+/**
+ * The `Table.Table` component renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param variant - The table style (`list` or `data`).
+ * @param width - Total table width in pixels.
+ * @param height - Table height in pixels.
+ * @param contentHeight - Content area height in pixels.
+ * @param overflowY - Vertical overflow behavior.
+ */
 export const Table = forwardRef<HTMLDivElement, TableProps>(TableBase);
 
 function TableBase(

@@ -30,6 +30,15 @@ export type SwitchProps = BaseSwitchProps &
       }
   );
 
+/**
+ * The Switch component renders onto an `input` HTML element. It accepts all `HTMLInputElement` attributes except `value`, `type`, and `prefix`, plus the following:
+ * @param label - Visible text label (required if `aria-label` and `aria-labelledby` are not provided).
+ * @param aria-label - Accessible label (required if `label` and `aria-labelledby` are not provided).
+ * @param aria-labelledby - ID referencing an external label element (required if `label` and `aria-label` are not provided).
+ * @param onChange - Callback when the switch is toggled.
+ * @param helpText - Helper text displayed below the switch.
+ * @param infoIconTooltip - Tooltip content for the info icon.
+ */
 export const Switch = forwardRef<HTMLInputElement, SwitchProps>(SwitchBase);
 
 function SwitchBase(props: SwitchProps, ref?: Ref<HTMLInputElement>) {

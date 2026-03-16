@@ -19,6 +19,7 @@ import {
   type FloatingPrimitiveProps,
   type FloatingPublicProps,
 } from "../FloatingPrimitive";
+import { menuStyle } from "../Menu/MenuClassName";
 import { SelectComboboxGesture } from "../Utils/gesture/SelectCombobox";
 import { mergeRefs } from "../Utils/mergeRef";
 import { classNames } from "../classNames";
@@ -29,8 +30,6 @@ import { SelectContext } from "./SelectContext";
 import { SelectSearch } from "./SelectSearch";
 import { type ChangeEvent, getAllItems, getSelectedItems } from "./SelectUtils";
 import { useTypeahead } from "./useTypeahead";
-
-import menuStyle from "../Menu/Menu.module.css";
 
 const spacingXxl = getTokenInt("--sprout-common-spacing-xxl") || 24;
 

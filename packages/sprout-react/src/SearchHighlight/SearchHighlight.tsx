@@ -69,15 +69,13 @@ export type SearchHighlightProps = Omit<HTMLSpanProps, "children"> & {
 };
 
 /**
- * SearchHighlight component for emphasizing search matches within text.
- * Automatically splits text and wraps matching substrings in styled spans.
- *
- * @example
- * ```tsx
- * <SearchHighlight query="search" activeIndex={0} onMatchCount={(count) => setTotal(count)}>
- *   This is a search result
- * </SearchHighlight>
- * ```
+ * The SearchHighlight component accepts all the native span props outside of `children`, and also supports the following custom props:
+ * Automatically splits text and wraps matching substrings in highlighted spans.
+ * @param query - the search string to highlight within the text content.
+ * @param children - the plain text content to search within.
+ * @param caseSensitive - whether the search is case-sensitive. Defaults to false.
+ * @param activeIndex - the 0-based index of the currently active match to highlight differently.
+ * @param onMatchCount - callback fired with the total number of matches found.
  */
 export function SearchHighlight(props: SearchHighlightProps) {
   const {

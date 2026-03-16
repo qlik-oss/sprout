@@ -19,6 +19,23 @@ export type FieldProps = Partial<Omit<FieldLabelProps, "id">> &
     currentCount?: number;
   } & HTMLDivProps;
 
+/**
+ * The Field component accepts all the native div props and also supports the following custom props:
+ * @param children - the form control element (e.g. Input, Select) rendered inside the field.
+ * @param label - the label text rendered above the control.
+ * @param optional - whether the field is optional, renders an optional indicator next to the label.
+ * @param htmlFor - the id of the control this label is associated with.
+ * @param infoIconTooltip - content for an info tooltip icon shown next to the label.
+ * @param infoIconPopover - content for an info popover shown next to the label.
+ * @param disabled - whether the field is disabled.
+ * @param helpText - helper text rendered below the control.
+ * @param isError - whether the field is in an error state.
+ * @param errorMessages - array of error message strings rendered below the control.
+ * @param labelId - override the id of the label element.
+ * @param helpTextId - override the id of the helper text element.
+ * @param maxCharacterCount - maximum character count shown in the character counter.
+ * @param currentCount - current character count shown in the character counter.
+ */
 export const Field = forwardRef<HTMLDivElement, FieldProps>(FieldBase);
 
 function FieldBase(

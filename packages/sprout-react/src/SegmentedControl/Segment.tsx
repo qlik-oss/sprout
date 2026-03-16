@@ -14,6 +14,11 @@ export type SegmentProps = Omit<HTMLInputProps, "type" | "prefix"> & {
   label: string;
 };
 
+/**
+ * The `SegmentedControl.Segment` component renders onto an `input` HTML element. It accepts all `HTMLInputElement` attributes except `type` and `prefix`, plus the following:
+ * @param label - The visible text label for this segment.
+ * @param icon - Optional icon to display inside the segment.
+ */
 export const Segment = forwardRef<HTMLInputElement, SegmentProps>(SegmentBase);
 
 function SegmentBase(props: SegmentProps, ref?: Ref<HTMLInputElement>) {

@@ -8,6 +8,17 @@ import { classNames } from "../classNames";
 import { useI18n } from "../hooks/useI18n";
 import type { AlertInlineProps } from "./AlertInline.types";
 
+/**
+ * The AlertInline component accepts all the native div props and also supports the following custom props:
+ * @param severity - the severity level of the alert, can be info, warning, error or success.
+ * @param title - the title text displayed at the top of the alert.
+ * @param children - the content of the alert.
+ * @param message - @deprecated use `children` instead.
+ * @param layout - the layout direction, can be horizontal or vertical.
+ * @param actionBar - action elements rendered at the bottom of the alert.
+ * @param labelDismiss - accessible label for the dismiss button.
+ * @param onDismiss - callback fired when the alert is dismissed.
+ */
 export function AlertInline({
   layout = "vertical",
   severity,

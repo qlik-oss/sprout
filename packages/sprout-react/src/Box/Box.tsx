@@ -27,6 +27,11 @@ export type BoxProps = BoxPropsOnly &
 /**
  * @deprecated Box is deprecated, you must use classNames instead like so:
  * <div className={classNames('flex', 'flex_row', 'border_box')}></div>
+ *
+ * The Box component accepts all the native div props and also supports the following layout shorthand props:
+ * @param typography - applies typography styles via the Typography component.
+ * @param style - additional inline styles merged with the computed Box styles.
+ * @param className - additional CSS classes merged with the computed Box classes.
  */
 export const Box = forwardRef<HTMLDivElement, BoxProps>(BoxBase);
 

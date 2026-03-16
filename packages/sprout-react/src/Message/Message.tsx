@@ -16,6 +16,14 @@ export type MessageProps = HTMLDivProps & {
   "data-testid"?: string;
 };
 
+/**
+ * The Message component renders onto a `div` HTML element. It accepts all `HTMLDivElement` attributes plus the following:
+ * @param title - The title to display.
+ * @param message - Optional description content.
+ * @param illustration - Optional illustration content to display.
+ * @param actions - Optional action content (e.g. buttons).
+ * @param progress - Optional progress bar configuration.
+ */
 export function Message({
   title,
   message,

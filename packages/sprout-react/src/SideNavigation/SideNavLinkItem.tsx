@@ -13,6 +13,15 @@ export type SideNavLinkItemProps = HTMLAnchorProps &
     "variant" | "icon" | "iconSize" | "label" | "indentation" | "isExternal"
   >;
 
+/**
+ * The `SideNav.Link` component renders onto an `a` HTML element. It accepts all `HTMLAnchorElement` attributes plus the following:
+ * @param variant - If `compact`, applies compact layout.
+ * @param icon - Optional icon displayed before the label.
+ * @param iconSize - Icon size variant (`large` or default).
+ * @param label - The text label of the link item.
+ * @param indentation - Indentation level of the item.
+ * @param isExternal - If true, shows an external link indicator.
+ */
 export const SideNavLinkItem = forwardRef<
   HTMLAnchorElement,
   SideNavLinkItemProps
