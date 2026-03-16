@@ -6,12 +6,5 @@
   "linked": [],
   "access": "public",
   "baseBranch": "main",
-  "ignore": [
-    "@qlik/sprout-css-modules",
-    "@qlik/sprout-react-hooks",
-    "@qlik/sprout-react",
-    "@qlik/sprout-table",
-    "@qlik/storybook",
-    "@qlik/test-app"
-  ]
+  "ignore": ["@qlik/sprout-table", "@qlik/storybook", "@qlik/test-app"]
 }
