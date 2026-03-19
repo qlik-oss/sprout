@@ -42,13 +42,13 @@ jobs:
           git add -A ./packages/sprout-icons/svg/
           while read STATUS ADDR
           do
-            icon=`basename $ADDR .svg`
-            semver=`sed 's/A/minor/;s/D/minor/;s/M/patch/' <<< $STATUS`
-            verb=`sed 's/A/added/;s/D/removed/;s/M/changed/' <<< $STATUS`
+            icon=$(basename "$ADDR" .svg)
+            semver=$(sed 's/A/minor/;s/D/minor/;s/M/patch/' <<< "$STATUS")
+            verb=$(sed 's/A/added/;s/D/removed/;s/M/changed/' <<< "$STATUS")
             echo -e "---\n'@qlik/sprout-icons': $semver\n---\n\n$verb icon \`$icon\`" > .changeset/$icon-$semver.md
           done < <(git diff --cached --name-status HEAD -- 'packages/sprout-icons/svg/*.svg')
           git add .changeset
-          body=$(git diff --name-only HEAD .changeset/*.md | xargs -L1 sed -n '5p')
+          body=$(git diff --cached --name-only .changeset/*.md 2>/dev/null | xargs -r -L1 sed -n '5p' 2>/dev/null || true)
           {
             echo "body<<EOF"
             echo "$body"
