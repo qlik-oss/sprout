@@ -33,9 +33,21 @@ jobs:
         with:
           npm-token: ${{ secrets.NPM_CI_TOKEN }}
 
-      - run: |
-          pnpm install
-          pnpm build
+      - name: has changeset file
+        id: changesetfiles
+        run: |
+          count=$(find .changeset -name "*.md" -type f | wc -l)
+          echo "count=$count" >> $GITHUB_OUTPUT
+          if [ $count -gt 0 ]; then
+            echo "Found $count md file(s)"
+            find .changeset -name "*.md" -type f
+          else
+            echo "No md files found"
+          fi
+
+      - run: pnpm install
+      - run: pnpm build
+        if: steps.changesetfiles.outputs.count == 1
 
       - name: Create Release Pull Request or Publish to Qlik GitHub Packages npm registry
         id: changesets
