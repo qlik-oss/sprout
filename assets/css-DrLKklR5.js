@@ -1,0 +1,11 @@
+import"./components-DxKiYndf.js";import"./react-sE-G6KV_.js";import"./sprout-DH_pwd-g.js";import"./lib-Btq7eDYl.js";import{t as e}from"./jsx-runtime-BtS28q-4.js";import"./react-dom-1IKd54jX.js";import{s as t}from"./iframe-URhFfzNK.js";import{n}from"./lib-EjdzwnHJ.js";import"./lib-kOH7agXw.js";import"./Tokens.stories-CCxPtoYc.js";var r=e();function i(e){let i={a:`a`,h1:`h1`,li:`li`,p:`p`,ul:`ul`,...n(),...e.components};return(0,r.jsxs)(r.Fragment,{children:[(0,r.jsxs)(i.p,{children:[(0,r.jsx)(t,{title:`CSS`}),`;`]}),`
+`,(0,r.jsx)(i.h1,{id:`css`,children:`CSS`}),`
+`,(0,r.jsxs)(i.p,{children:[`Before continuing, please read the page `,(0,r.jsx)(i.a,{href:`https://internal.qlik.dev/design/sprout/design-tokens/about-design-tokens/`,rel:`nofollow`,children:`About design tokens`}),` to understand the core concepts of Sprout Design System tokens.
+You will also find the great documentation page `,(0,r.jsx)(i.a,{href:`https://internal.qlik.dev/design/sprout/design-tokens/list-of-all-tokens/`,rel:`nofollow`,children:`list of all tokens`}),`.`]}),`
+`,(0,r.jsx)(i.p,{children:`Our implementation provide two levels of possible usage. The first one or low level is using raw css relying on CSS Variables listed below.
+The second one is using css modules with a great API inspired by tailwindcss.`}),`
+`,(0,r.jsxs)(i.ul,{children:[`
+`,(0,r.jsxs)(i.li,{children:[(0,r.jsx)(i.a,{href:`?path=/story/css-tokens--data-table`,children:`All tokens as CSS Variables`}),` to use in raw CSS`]}),`
+`,(0,r.jsxs)(i.li,{children:[(0,r.jsx)(i.a,{href:`?path=/docs/css-sprout-css-modules--docs`,children:`@qlik/sprout-css-modules`}),` to use in any framework inspired by tailwindcss`]}),`
+`,(0,r.jsxs)(i.li,{children:[(0,r.jsx)(i.a,{href:`?path=/docs/css-sprout-css-modules--docs#qlik-trialsprout-react-classnames`,children:`@qlik/sprout-react`}),` classNames to use in React`]}),`
+`]})]})}function a(e={}){let{wrapper:t}={...n(),...e.components};return t?(0,r.jsx)(t,{...e,children:(0,r.jsx)(i,{...e})}):i(e)}export{a as default};
