@@ -1,0 +1,8 @@
+import"./components-DxKiYndf.js";import"./react-sE-G6KV_.js";import"./sprout-DH_pwd-g.js";import"./lib-Btq7eDYl.js";import{t as e}from"./jsx-runtime-BtS28q-4.js";import"./react-dom-1IKd54jX.js";import{i as t,n,s as r}from"./iframe-DaKWDHAC.js";import{n as i}from"./lib-EjdzwnHJ.js";import"./lib-BpZznhwW.js";import"./entity-C4CjlXQ9.js";import"./ListTable.stories-DjoEIQPe.js";import{ColumnSelection as a}from"./DataTable.stories-BT0y_mD9.js";var o=e();function s(e){let s={code:`code`,h1:`h1`,h2:`h2`,p:`p`,...i(),...e.components};return(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)(r,{title:`Table/Docs/Columns/column selection`}),`
+`,(0,o.jsx)(s.h1,{id:`column-selection`,children:`Column selection`}),`
+`,(0,o.jsx)(s.p,{children:`Column selection allows users to select one or more columns in a table. This can be useful for various purposes, such as highlighting important data or enabling actions on selected columns.`}),`
+`,(0,o.jsx)(s.h2,{id:`enabling-column-selection`,children:`Enabling column selection`}),`
+`,(0,o.jsxs)(s.p,{children:[`To enable column selection, you need to set the `,(0,o.jsx)(s.code,{children:`columnSelectionMode`}),` prop on the `,(0,o.jsx)(s.code,{children:`Table`}),` component. This prop can take two values: `,(0,o.jsx)(s.code,{children:`single`}),` or `,(0,o.jsx)(s.code,{children:`multiple`}),`.
+Then you can push your controlled state into it. To make it easier to use with typescript both states can be pushed but only one will be used:`]}),`
+`,(0,o.jsx)(t,{of:a}),`
+`,(0,o.jsx)(n,{of:a})]})}function c(e={}){let{wrapper:t}={...i(),...e.components};return t?(0,o.jsx)(t,{...e,children:(0,o.jsx)(s,{...e})}):s(e)}export{c as default};
