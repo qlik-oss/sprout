@@ -1,5 +1,18 @@
 # @qlik/sprout-icons
 
+## 0.2.0
+
+### Minor Changes
+
+- 33e5054: added icon `ai`
+- 33e5054: added icon `data_type`
+
+### Patch Changes
+
+- 95593f8: changed icon `filter`
+- 95593f8: changed icon `measure`
+- 95593f8: changed icon `step_in`
+
 ## 0.1.0
 
 ### Minor Changes
