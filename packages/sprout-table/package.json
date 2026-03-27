@@ -40,7 +40,7 @@
   },
   "prettier": "@qlik/prettier-config",
   "dependencies": {
-    "@qlik/sprout-icons": "workspace:*",
+    "@qlik/sprout-icons": "0.2.2",
     "@qlik/sprout-react": "workspace:*",
     "@qlik/sprout-react-hooks": "workspace:*",
     "@tanstack/react-table": "^8.21.3",

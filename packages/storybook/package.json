@@ -23,7 +23,7 @@
     "@lezer/highlight": "^1.2.3",
     "@qlik/design-tokens": "workspace:*",
     "@qlik/sprout-css-modules": "workspace:*",
-    "@qlik/sprout-icons": "workspace:*",
+    "@qlik/sprout-icons": "0.2.2",
     "@qlik/sprout-react": "workspace:*",
     "@qlik/sprout-react-hooks": "workspace:*",
     "@qlik/sprout-storybook": "workspace:*",
