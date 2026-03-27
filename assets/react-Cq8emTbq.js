@@ -1,1 +1,0 @@
-import"./react-sE-G6KV_.js";import{t as e}from"./lib-EjdzwnHJ.js";export{e as MDXProvider};

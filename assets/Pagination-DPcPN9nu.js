@@ -1,8 +1,0 @@
-import"./components-DxKiYndf.js";import"./react-sE-G6KV_.js";import"./sprout-DH_pwd-g.js";import"./lib-Btq7eDYl.js";import{t as e}from"./jsx-runtime-BtS28q-4.js";import"./react-dom-1IKd54jX.js";import{i as t,n,s as r}from"./iframe-B5xoaqtW.js";import{n as i}from"./lib-EjdzwnHJ.js";import"./lib-BqyORzYB.js";import"./entity-BW1wQ0_F.js";import{Pagination as a}from"./ListTable.stories-UKG8RqLs.js";import"./DataTable.stories-DAkgWAkZ.js";var o=e();function s(e){let s={h2:`h2`,p:`p`,...i(),...e.components};return(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)(r,{title:`Table/Docs/Pagination`}),`
-`,(0,o.jsx)(s.h2,{id:`pagination`,children:`Pagination`}),`
-`,(0,o.jsx)(s.p,{children:`Pagination is a technique used to divide large datasets into smaller, more manageable chunks or pages.
-In the context of the table component, pagination allows users to navigate through large sets of data without overwhelming the interface or causing performance issues.`}),`
-`,(0,o.jsx)(s.p,{children:`In the current implementation, pagination is achieved through a combination using infinite scrolling and traditional pagination controls on touch devices, ensuring a smooth user experience across different devices.
-On a touch enabled device, a "Load more" button will appear at the bottom of the table to allow users to load additional rows manually. Otherwise, as the user scrolls down the table, more rows will be automatically loaded when they reach the bottom of the current view.`}),`
-`,(0,o.jsx)(n,{of:a}),`
-`,(0,o.jsx)(t,{of:a})]})}function c(e={}){let{wrapper:t}={...i(),...e.components};return t?(0,o.jsx)(t,{...e,children:(0,o.jsx)(s,{...e})}):s(e)}export{c as default};

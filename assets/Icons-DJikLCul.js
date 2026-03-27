@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-BtS28q-4.js";import{st as t}from"./iframe-B5xoaqtW.js";var n=e(),r=e=>{if(e===void 0)return null;let r=t[e];return(0,n.jsx)(r,{})},i=[void 0,...Object.keys(t)],a=Object.fromEntries(i.map(e=>[e,r(e)]));export{i as n,a as t};
