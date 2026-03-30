@@ -92,7 +92,7 @@ function RadioBase(props: RadioProps, ref?: Ref<HTMLInputElement>) {
                     "p-xs",
                     {
                       "text-disabled": !!disabled,
-                    },
+                    }
                   )}
                 >
                   <InfoTooltipPrimitive

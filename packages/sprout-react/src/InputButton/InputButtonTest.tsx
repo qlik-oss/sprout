@@ -10,7 +10,7 @@ export function InputButtonTest({
       onMouseDown={(event) => {
         onMouseDown(
           (event.target as Element).attributes.getNamedItem("type")?.value ||
-            "unknown",
+            "unknown"
         );
       }}
     />

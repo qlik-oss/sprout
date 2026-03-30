@@ -26,7 +26,7 @@ export function Flex() {
         "border-none",
         "font-label-s",
         "text-default",
-        "bg-default",
+        "bg-default"
       )}
     >
       <div className={sprout.classNames(...PROPERTY_ROW_PROPS)}>
@@ -35,7 +35,7 @@ export function Flex() {
           <div
             className={sprout.classNames(
               ...omit(CONTAINER_CLASSES, "flex-row"),
-              "flex-row",
+              "flex-row"
             )}
           >
             <div className={sprout.classNames(...CONTENT_CLASSES)}>1</div>
@@ -48,7 +48,7 @@ export function Flex() {
           <div
             className={sprout.classNames(
               ...omit(CONTAINER_CLASSES, "flex-row"),
-              "flex-row-reverse",
+              "flex-row-reverse"
             )}
           >
             <div className={sprout.classNames(...CONTENT_CLASSES)}>1</div>
@@ -61,7 +61,7 @@ export function Flex() {
           <div
             className={sprout.classNames(
               ...omit(CONTAINER_CLASSES, "flex-row"),
-              "flex-col",
+              "flex-col"
             )}
           >
             <div className={sprout.classNames(...CONTENT_CLASSES)}>1</div>
@@ -74,7 +74,7 @@ export function Flex() {
           <div
             className={sprout.classNames(
               ...omit(CONTAINER_CLASSES, "flex-row"),
-              "flex-col-reverse",
+              "flex-col-reverse"
             )}
           >
             <div className={sprout.classNames(...CONTENT_CLASSES)}>1</div>
@@ -101,7 +101,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "w-xxs",
-              "flex-wrap",
+              "flex-wrap"
             )}
           >
             <div className={sprout.classNames(...CONTENT_CLASSES)}>1</div>
@@ -118,7 +118,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "w-xxs",
-              "flex-wrap-reverse",
+              "flex-wrap-reverse"
             )}
           >
             <div className={sprout.classNames(...CONTENT_CLASSES)}>1</div>
@@ -145,7 +145,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "w-s",
-              "justify-end",
+              "justify-end"
             )}
           >
             <div className={sprout.classNames(...CONTENT_CLASSES)}>1</div>
@@ -159,7 +159,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "w-s",
-              "justify-center",
+              "justify-center"
             )}
           >
             <div className={sprout.classNames(...CONTENT_CLASSES)}>1</div>
@@ -173,7 +173,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "w-s",
-              "justify-between",
+              "justify-between"
             )}
           >
             <div className={sprout.classNames(...CONTENT_CLASSES)}>1</div>
@@ -187,7 +187,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "w-s",
-              "justify-around",
+              "justify-around"
             )}
           >
             <div className={sprout.classNames(...CONTENT_CLASSES)}>1</div>
@@ -201,7 +201,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "w-s",
-              "justify-evenly",
+              "justify-evenly"
             )}
           >
             <div className={sprout.classNames(...CONTENT_CLASSES)}>1</div>
@@ -300,7 +300,7 @@ export function Flex() {
               "bg-inverse",
               "font-body-s",
               "text-inverse",
-              "items-baseline",
+              "items-baseline"
             )}
           >
             <div
@@ -312,7 +312,7 @@ export function Flex() {
                 "font-body-s",
                 "text-default",
                 "pt-xs",
-                "pb-l",
+                "pb-l"
               )}
             >
               <h1 className={sprout.font_body_s}>Text text</h1>
@@ -326,7 +326,7 @@ export function Flex() {
                 "font-body-s",
                 "text-default",
                 "pt-m",
-                "pb-l",
+                "pb-l"
               )}
             >
               <p className={sprout.font_body_s}>Text text</p>
@@ -340,7 +340,7 @@ export function Flex() {
                 "font-body-s",
                 "text-default",
                 "pt-xl",
-                "pb-xs",
+                "pb-xs"
               )}
             >
               <h2 className={sprout.font_body_s}>Text text</h2>
@@ -356,7 +356,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "content-start",
-              "flex-wrap",
+              "flex-wrap"
             )}
             style={{ blockSize: "250px", inlineSize: "200px" }}
           >
@@ -383,7 +383,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "flex-wrap",
-              "content-end",
+              "content-end"
             )}
             style={{ blockSize: "250px", inlineSize: "200px" }}
           >
@@ -410,7 +410,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "flex-wrap",
-              "content-center",
+              "content-center"
             )}
             style={{ blockSize: "250px", inlineSize: "200px" }}
           >
@@ -437,7 +437,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "flex-wrap",
-              "content-stretch",
+              "content-stretch"
             )}
             style={{ blockSize: "250px", inlineSize: "200px" }}
           >
@@ -464,7 +464,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "flex-wrap",
-              "content-between",
+              "content-between"
             )}
             style={{ blockSize: "250px", inlineSize: "200px" }}
           >
@@ -491,7 +491,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "flex-wrap",
-              "content-around",
+              "content-around"
             )}
             style={{ blockSize: "250px", inlineSize: "200px" }}
           >
@@ -518,7 +518,7 @@ export function Flex() {
             className={sprout.classNames(
               ...CONTAINER_CLASSES,
               "flex-wrap",
-              "content-evenly",
+              "content-evenly"
             )}
             style={{ blockSize: "250px", inlineSize: "200px" }}
           >
@@ -551,7 +551,7 @@ export function Flex() {
                 "flex-row",
                 "items-start",
                 "flex-wrap",
-                "gap-s",
+                "gap-s"
               )}
               style={{ inlineSize: 200 }}
             >
@@ -570,7 +570,7 @@ export function Flex() {
                 "flex-wrap",
 
                 "gap-y-xl",
-                "gap-x-s",
+                "gap-x-s"
               )}
               style={{ inlineSize: 200 }}
             >
@@ -642,7 +642,7 @@ export function Flex() {
               className={sprout.classNames(
                 ...CONTAINER_CLASSES,
                 "flex-row",
-                "items-start",
+                "items-start"
               )}
               style={{ blockSize: "250px" }}
             >
@@ -664,7 +664,7 @@ export function Flex() {
               <div
                 className={sprout.classNames(
                   ...CONTENT_CLASSES,
-                  "self-stretch",
+                  "self-stretch"
                 )}
               >
                 self-stretch
@@ -683,7 +683,7 @@ export function Flex() {
                   ...CONTAINER_CLASSES,
                   "flex-col",
                   "w-fit",
-                  "overflow-visible",
+                  "overflow-visible"
                 )}
               >
                 <div
@@ -691,7 +691,7 @@ export function Flex() {
                     ...CONTENT_CLASSES,
                     "justify-start",
                     "shrink-0",
-                    "overflow-auto",
+                    "overflow-auto"
                   )}
                   style={{ inlineSize: "80px" }}
                 >
@@ -702,7 +702,7 @@ export function Flex() {
                       "border-box",
                       "flex-row",
                       "shrink-0",
-                      "grow",
+                      "grow"
                     )}
                   >
                     overflow_auto Lorem ipsum dolor sit amet, consectetur
@@ -714,7 +714,7 @@ export function Flex() {
                     ...CONTENT_CLASSES,
                     "overflow-hidden",
                     "justify-start",
-                    "shrink-0",
+                    "shrink-0"
                   )}
                   style={{ inlineSize: "80px" }}
                 >
@@ -726,7 +726,7 @@ export function Flex() {
                       "flex-row",
                       "shrink-0",
                       "grow",
-                      "items-center",
+                      "items-center"
                     )}
                   >
                     overflow_hidden Lorem ipsum dolor sit amet, consectetur
@@ -738,7 +738,7 @@ export function Flex() {
                     ...CONTENT_CLASSES,
                     "justify-start",
                     "overflow-scroll",
-                    "shrink-0",
+                    "shrink-0"
                   )}
                   style={{ inlineSize: "80px" }}
                 >
@@ -749,7 +749,7 @@ export function Flex() {
                       "border-box",
                       "flex-row",
                       "shrink-0",
-                      "grow",
+                      "grow"
                     )}
                   >
                     overflow-scroll Lorem ipsum dolor sit amet, consectetur
@@ -761,7 +761,7 @@ export function Flex() {
                     ...CONTENT_CLASSES,
                     "justify-start",
                     "overflow-visible",
-                    "shrink-0",
+                    "shrink-0"
                   )}
                   style={{ inlineSize: "80px" }}
                 >
@@ -774,7 +774,7 @@ export function Flex() {
                       "shrink-0",
                       "grow",
                       "text-default",
-                      "font-body-m",
+                      "font-body-m"
                     )}
                   >
                     overflow-visible Lorem ipsum dolor sit amet, consectetur
@@ -792,7 +792,7 @@ export function Flex() {
                   ...CONTAINER_CLASSES,
                   "flex-col",
                   "w-fit",
-                  "overflow-x-visible",
+                  "overflow-x-visible"
                 )}
               >
                 <div
@@ -800,7 +800,7 @@ export function Flex() {
                     ...CONTENT_CLASSES,
                     "overflow-x-auto",
                     "justify-start",
-                    "shrink-0",
+                    "shrink-0"
                   )}
                   style={{ inlineSize: "80px" }}
                 >
@@ -809,7 +809,7 @@ export function Flex() {
                       "flex",
                       "border-box",
                       "shrink-0",
-                      "grow",
+                      "grow"
                     )}
                   >
                     overflow-x-auto
@@ -820,7 +820,7 @@ export function Flex() {
                     ...CONTENT_CLASSES,
                     "overflow-x-hidden",
                     "justify-start",
-                    "shrink-0",
+                    "shrink-0"
                   )}
                   style={{ inlineSize: "80px" }}
                 >
@@ -830,7 +830,7 @@ export function Flex() {
                       "border-box",
                       "shrink-0",
                       "grow",
-                      "items-center",
+                      "items-center"
                     )}
                   >
                     overflow-x-hidden
@@ -841,7 +841,7 @@ export function Flex() {
                     ...CONTENT_CLASSES,
                     "overflow-x-scroll",
                     "justify-start",
-                    "shrink-0",
+                    "shrink-0"
                   )}
                   style={{ inlineSize: "80px" }}
                 >
@@ -850,7 +850,7 @@ export function Flex() {
                       "flex",
                       "border-box",
                       "shrink-0",
-                      "grow",
+                      "grow"
                     )}
                   >
                     overflow-x-scroll
@@ -861,7 +861,7 @@ export function Flex() {
                     ...CONTENT_CLASSES,
                     "overflow-x-visible",
                     "justify-start",
-                    "shrink-0",
+                    "shrink-0"
                   )}
                   style={{ inlineSize: "80px" }}
                 >
@@ -870,7 +870,7 @@ export function Flex() {
                       "shrink-0",
                       "grow",
                       "text-default",
-                      "font-body-m",
+                      "font-body-m"
                     )}
                   >
                     overflow-x-visible
@@ -886,7 +886,7 @@ export function Flex() {
                 className={sprout.classNames(
                   ...CONTAINER_CLASSES,
                   "flex-row",
-                  "w-fit",
+                  "w-fit"
                 )}
               >
                 <div
@@ -894,7 +894,7 @@ export function Flex() {
                     ...CONTENT_CLASSES,
                     "overflow-y-auto",
                     "justify-start",
-                    "shrink-0",
+                    "shrink-0"
                   )}
                   style={{ inlineSize: "110px", blockSize: "80px" }}
                 >
@@ -911,7 +911,7 @@ export function Flex() {
                     ...CONTENT_CLASSES,
                     "overflow-y-hidden",
                     "justify-start",
-                    "shrink-0",
+                    "shrink-0"
                   )}
                   style={{ inlineSize: "110px", blockSize: "80px" }}
                 >
@@ -919,7 +919,7 @@ export function Flex() {
                     className={sprout.classNames(
                       "flex",
                       "border-box",
-                      "items-center",
+                      "items-center"
                     )}
                     style={{ blockSize: "200px" }}
                   >
@@ -932,7 +932,7 @@ export function Flex() {
                     ...CONTENT_CLASSES,
                     "overflow-y-scroll",
                     "justify-start",
-                    "shrink-0",
+                    "shrink-0"
                   )}
                   style={{ inlineSize: "110px", blockSize: "80px" }}
                 >
@@ -949,7 +949,7 @@ export function Flex() {
                     ...CONTENT_CLASSES,
                     "overflow-y-visible",
                     "justify-start",
-                    "shrink-0",
+                    "shrink-0"
                   )}
                   style={{ inlineSize: "110px", blockSize: "80px" }}
                 >
@@ -959,7 +959,7 @@ export function Flex() {
                       "border-box",
                       "items-center",
                       "font-body-m",
-                      "text-default",
+                      "text-default"
                     )}
                     style={{ blockSize: "200px" }}
                   >
@@ -988,7 +988,7 @@ export const Grid = {
         "flex-col",
         "bg-default",
         "text-default",
-        "max-w-xl",
+        "max-w-xl"
       )}
     >
       <PropertyTile>grid grid-cols-</PropertyTile>
@@ -1001,7 +1001,7 @@ export const Grid = {
             "gap-m",
             "p-m",
             "border-box",
-            "w-full",
+            "w-full"
           )}
         >
           {Array.from({ length: index + 1 }).map((__, jndex) => (
@@ -1021,7 +1021,7 @@ export const Grid = {
           "gap-m",
           "p-m",
           "border-box",
-          "w-full",
+          "w-full"
         )}
       >
         {Array.from({ length: 16 }).map((_, jndex) => (
@@ -1043,7 +1043,7 @@ export const Grid = {
             "bg-weak",
             "p-s",
             "flex",
-            "items-center",
+            "items-center"
           )}
         >
           01
@@ -1053,7 +1053,7 @@ export const Grid = {
             "bg-weak",
             "p-s",
             "flex",
-            "items-center",
+            "items-center"
           )}
         >
           02
@@ -1063,7 +1063,7 @@ export const Grid = {
             "bg-weak",
             "p-s",
             "flex",
-            "items-center",
+            "items-center"
           )}
         >
           03
@@ -1073,7 +1073,7 @@ export const Grid = {
             "bg-weak",
             "p-s",
             "flex",
-            "items-center",
+            "items-center"
           )}
         >
           04
@@ -1083,7 +1083,7 @@ export const Grid = {
             "bg-weak",
             "p-s",
             "flex",
-            "items-center",
+            "items-center"
           )}
         >
           05
@@ -1093,7 +1093,7 @@ export const Grid = {
             "bg-weak",
             "p-s",
             "flex",
-            "items-center",
+            "items-center"
           )}
         >
           06
@@ -1107,7 +1107,7 @@ export const Grid = {
             className={sprout.classNames(
               ...GRID_CONTENT_CLASSES,
               "col-start-1",
-              `col-span-${index + 1}` as AllClasses,
+              `col-span-${index + 1}` as AllClasses
             )}
           >
             {`col-span-${index + 1}`}
@@ -1120,7 +1120,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-2",
             "col-start-1",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-2
@@ -1134,7 +1134,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-3",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-3
@@ -1143,7 +1143,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-15",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-15
@@ -1152,7 +1152,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-4",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-4
@@ -1161,7 +1161,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-14",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-14
@@ -1170,7 +1170,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-5",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-5
@@ -1179,7 +1179,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-13",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-13
@@ -1188,7 +1188,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-6",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-6
@@ -1197,7 +1197,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-12",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-12
@@ -1206,7 +1206,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-7",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-7
@@ -1215,7 +1215,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-11",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-11
@@ -1224,7 +1224,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-8",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-8
@@ -1233,7 +1233,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-10",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-10
@@ -1242,7 +1242,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-9",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-9
@@ -1251,7 +1251,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-9",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-9
@@ -1261,7 +1261,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-8",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-8
@@ -1270,7 +1270,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-10",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-10
@@ -1279,7 +1279,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-7",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-7
@@ -1288,7 +1288,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-11",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-11
@@ -1297,7 +1297,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-6",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-6
@@ -1306,7 +1306,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-12",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-12
@@ -1315,7 +1315,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-5",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-5
@@ -1324,7 +1324,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-13",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-13
@@ -1333,7 +1333,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-4",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-4
@@ -1342,7 +1342,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-14",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-14
@@ -1351,7 +1351,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-3",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-3
@@ -1360,7 +1360,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-15",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-15
@@ -1369,7 +1369,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-2",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-2
@@ -1378,7 +1378,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-end-16",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-end-16
@@ -1387,7 +1387,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-start-1",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           col-start-1
@@ -1396,7 +1396,7 @@ export const Grid = {
           className={sprout.classNames(
             "-col-end-1",
             "col-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           -col-end-1
@@ -1408,7 +1408,7 @@ export const Grid = {
           "grid",
           "grid-cols-8",
           "grid-rows-4",
-          "gap-m",
+          "gap-m"
         )}
       >
         <div
@@ -1416,7 +1416,7 @@ export const Grid = {
             "row-start-1",
             "row-end-1",
             "row-span-1",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           row-start-1
@@ -1426,7 +1426,7 @@ export const Grid = {
             "row-start-2",
             "col-start-2",
             "row-span-1",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           row-start-2
@@ -1436,7 +1436,7 @@ export const Grid = {
             "row-start-3",
             "col-start-3",
             "row-span-1",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           row-start-3
@@ -1446,7 +1446,7 @@ export const Grid = {
             "row-start-4",
             "col-start-4",
             "row-span-1",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           row-start-4
@@ -1457,7 +1457,7 @@ export const Grid = {
             "row-end-1",
             "row-span-1",
             "col-start-8",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           row-end-1
@@ -1468,7 +1468,7 @@ export const Grid = {
             "row-end-2",
             "row-span-1",
             "col-start-7",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           row-end-2
@@ -1479,7 +1479,7 @@ export const Grid = {
             "row-end-3",
             "row-span-1",
             "col-start-6",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           row-end-3
@@ -1490,7 +1490,7 @@ export const Grid = {
             "row-end-4",
             "row-span-1",
             "col-start-5",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           row-end-4
@@ -1502,7 +1502,7 @@ export const Grid = {
           "grid",
           "grid-flow-col",
           "grid-rows-4",
-          "gap-m",
+          "gap-m"
         )}
       >
         {Array.from({ length: 10 }).map((_, index) => (
@@ -1521,7 +1521,7 @@ export const Grid = {
           "grid-flow-dense",
           "grid-cols-3",
           "grid-rows-3",
-          "gap-m",
+          "gap-m"
         )}
       >
         <div
@@ -1557,7 +1557,7 @@ export const Grid = {
           "grid-flow-row-dense",
           "grid-cols-3",
           "grid-rows-3",
-          "gap-m",
+          "gap-m"
         )}
       >
         <div
@@ -1593,7 +1593,7 @@ export const Grid = {
           "grid-flow-col-dense",
           "grid-cols-3",
           "grid-rows-3",
-          "gap-m",
+          "gap-m"
         )}
       >
         <div
@@ -1628,7 +1628,7 @@ export const Grid = {
           "grid",
           "grid-flow-col",
           "grid-rows-4",
-          "gap-m",
+          "gap-m"
         )}
       >
         <div className={sprout.classNames(...GRID_CONTENT_CLASSES)}>01</div>
@@ -1641,14 +1641,14 @@ export const Grid = {
             "row-span-3",
             "grid",
             "grid_rows_subgrid",
-            "gap-m",
+            "gap-m"
           )}
         >
           <div
             className={sprout.classNames(
               ...GRID_CONTENT_CLASSES,
               "row-start-2",
-              "bg-strong",
+              "bg-strong"
             )}
           >
             06
@@ -1674,14 +1674,14 @@ export const Grid = {
             "col-span-3",
             "grid",
             "grid_cols_subgrid",
-            "gap-m",
+            "gap-m"
           )}
         >
           <div
             className={sprout.classNames(
               "col-start-2",
               "bg-strong",
-              ...GRID_CONTENT_CLASSES,
+              ...GRID_CONTENT_CLASSES
             )}
           >
             06
@@ -1695,7 +1695,7 @@ export const Grid = {
           "grid",
           "grid-flow-col",
           "grid-rows-3",
-          "gap-m",
+          "gap-m"
         )}
       >
         <div
@@ -1712,7 +1712,7 @@ export const Grid = {
           className={sprout.classNames(
             "col-span-2",
             "row-span-2",
-            ...GRID_CONTENT_CLASSES,
+            ...GRID_CONTENT_CLASSES
           )}
         >
           03

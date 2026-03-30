@@ -103,7 +103,7 @@ export const VisualTest: Story = {
         "border-box",
         "w-fit",
         "p-s",
-        "gap-m",
+        "gap-m"
       )}
       data-testid="wrapper"
     >

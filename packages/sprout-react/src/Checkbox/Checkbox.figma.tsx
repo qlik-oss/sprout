@@ -29,5 +29,5 @@ figma.connect(
       }),
     },
     example: (props) => <Checkbox {...props} />,
-  },
+  }
 );

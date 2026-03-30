@@ -29,7 +29,7 @@ export function VisualTest(props: Partial<TextareaProps>) {
         "border-box",
         "w-fit",
         "p-s",
-        "w-xs",
+        "w-xs"
       )}
     >
       <Textarea

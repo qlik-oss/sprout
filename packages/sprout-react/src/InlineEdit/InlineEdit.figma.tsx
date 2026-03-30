@@ -22,5 +22,5 @@ figma.connect(
         showEditIcon={props.showEditIcon}
       />
     ),
-  },
+  }
 );

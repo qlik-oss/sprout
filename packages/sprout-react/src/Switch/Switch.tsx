@@ -113,7 +113,7 @@ function SwitchBase(props: SwitchProps, ref?: Ref<HTMLInputElement>) {
               styles.label_wrapper,
               {
                 "text-disabled": !!disabled,
-              },
+              }
             )}
           >
             <span
@@ -121,7 +121,7 @@ function SwitchBase(props: SwitchProps, ref?: Ref<HTMLInputElement>) {
                 "flex",
                 "flex-row",
                 "gap-s",
-                "items-center",
+                "items-center"
               )}
             >
               <TextOverflow

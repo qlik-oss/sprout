@@ -66,7 +66,7 @@ export function FormDefaultValuesTest() {
           "flex-col",
           "gap-xl",
           "justify-stretch",
-          "content-stretch",
+          "content-stretch"
         )}
         style={{ inlineSize: "300px" }}
       >
@@ -160,7 +160,7 @@ export function Form() {
               "flex-col",
               "gap-xl",
               "justify-stretch",
-              "content-stretch",
+              "content-stretch"
             )}
           >
             <TextField data-testid="name" label="name" {...register("name")} />

@@ -61,7 +61,7 @@ export function DialogContent({
             "overflow-x-scroll": overflowX === "scroll",
             "overflow-y-hidden": overflowY === "hidden",
             "overflow-x-hidden": overflowX === "hidden",
-          },
+          }
         )}
         data-testid="modal.content"
         role={overflowY === "auto" ? "region" : undefined}

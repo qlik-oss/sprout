@@ -1,7 +1,9 @@
 import type { TypographyTokenModuleTokens } from "../../token-module";
 import type { FontTokens, StringToken } from "../../token-set";
 
-export function createFontScaleTokens(tokens: TypographyTokenModuleTokens): FontTokens {
+export function createFontScaleTokens(
+  tokens: TypographyTokenModuleTokens
+): FontTokens {
   const fontScaleToken: StringToken = {
     value: "1",
     type: "number",

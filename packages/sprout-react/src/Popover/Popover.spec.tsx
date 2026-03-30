@@ -15,7 +15,7 @@ test("should render open", async ({ mount, page }) => {
       content={<p>This is the place where the popover content will appear.</p>}
     >
       <button type="button">left</button>
-    </Popover>,
+    </Popover>
   );
   const component = page.getByRole("dialog");
   await expect(component).toBeVisible();
@@ -28,7 +28,7 @@ test(`should be accessible`, async ({ mount, page }) => {
       content={<p>This is the place where the popover content will appear.</p>}
     >
       <button type="button">left</button>
-    </Popover>,
+    </Popover>
   );
 
   const btn = page.getByRole("button");
@@ -73,7 +73,7 @@ test("should handle focus", async ({ mount, page }) => {
           focusable content
         </button>
       </Popover>
-    </div>,
+    </div>
   );
 
   const nofocusableBtn = page.getByTestId("nofocusable");
@@ -127,7 +127,7 @@ test("should focus on the first item when re-opening a custom dropdown", async (
       }
     >
       <Button label="My trigger" asDropdown />
-    </Popover>,
+    </Popover>
   );
 
   const popover = page.getByRole("dialog");
@@ -187,7 +187,7 @@ test("should not open if open is false when triggering (rapid clicks)", async ({
       }
     >
       <Button label="My trigger" id="trigger-button" />
-    </Popover>,
+    </Popover>
   );
 
   const triggerButton = page.getByRole("button");
@@ -225,7 +225,7 @@ test("should not go over the viewport", async ({ mount, page }) => {
 
   // now check with placementUpdate=dropdown it should goes down (mainAxis)
   await component.update(
-    <PopoverPlacement placement="top" placementUpdate="dropdown" />,
+    <PopoverPlacement placement="top" placementUpdate="dropdown" />
   );
   box = await dialog.boundingBox();
   expect(box).toBeDefined();
@@ -242,13 +242,13 @@ test("should not go over the viewport", async ({ mount, page }) => {
       placementUpdate
       demoContentHeight={500}
       viewportPadding={20}
-    />,
+    />
   );
   box = await dialog.boundingBox();
   expect(box).toBeDefined();
   if (box) {
     expect(box.x + box.width).toBeLessThanOrEqual(400);
+    expect(box.y + box.height).toBeLessThanOrEqual(400);
     expect(box.y).toBeGreaterThanOrEqual(0);
-    expect(box.x).toBe(0);
   }
 });

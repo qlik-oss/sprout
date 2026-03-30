@@ -21,7 +21,7 @@ export function TooltipSimpleTest() {
         "p-s",
         "items-start",
         "justify-start",
-        "border-default",
+        "border-default"
       )}
       style={{ inlineSize: "200px", blockSize: "200px" }}
     >
@@ -42,7 +42,7 @@ export function TooltipOverflowTest({ title }: { title?: string }) {
         "p-s",
         "items-center",
         "justify-center",
-        "border-default",
+        "border-default"
       )}
       style={{
         inlineSize: tokens.container_sizing_xxs,
@@ -84,7 +84,7 @@ export function ControlledClickTooltip() {
         "justify-center",
         "items-center",
         "w-s",
-        "mt-3xl",
+        "mt-3xl"
       )}
     >
       <Tooltip title="This should be visible if open is true" open={open}>
@@ -120,7 +120,7 @@ export function MultipleTooltipsTest() {
         "border-box",
         "p-s",
         "items-start",
-        "gap-m",
+        "gap-m"
       )}
       style={{ inlineSize: "200px", blockSize: "200px" }}
     >

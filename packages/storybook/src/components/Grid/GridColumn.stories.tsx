@@ -20,7 +20,7 @@ function Item({ children }: { children: ReactNode }) {
         "border-box",
         "flex",
         "items-center",
-        "p-m",
+        "p-m"
       )}
     >
       {children}

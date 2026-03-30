@@ -44,7 +44,7 @@ export function AnchorPositionAPI() {
               "flex-col",
               "gap-m",
               "items-start",
-              "bg-default",
+              "bg-default"
             )}
             onSubmit={(e) => {
               e.preventDefault();
@@ -64,7 +64,7 @@ export function AnchorPositionAPI() {
                 "flex-col",
                 "gap-m",
                 "w-full",
-                "items-end",
+                "items-end"
               )}
             >
               <Button variant="primary" label="Yes" type="submit" />

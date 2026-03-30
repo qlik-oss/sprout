@@ -15,7 +15,7 @@ export function Message({ children, ...props }: MessageProps) {
         "justify-center",
         "items-center",
         "size-full",
-        "bg-weak",
+        "bg-weak"
       )}
       {...props}
     >

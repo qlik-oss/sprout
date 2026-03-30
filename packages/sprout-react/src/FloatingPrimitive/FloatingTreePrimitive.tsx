@@ -20,7 +20,7 @@ export const FloatingTreePrimitive = forwardRef<
 
 function FloatingTreePrimitiveBase(
   { onCloseAll, ...props }: FloatingTreePrimitiveProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const context = useFloatingContext({ tree: true, onCloseAll });
   if (context.Provider) {

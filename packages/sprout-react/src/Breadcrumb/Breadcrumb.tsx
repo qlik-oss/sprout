@@ -31,7 +31,7 @@ export function BreadcrumbItem({
           "border-box",
           "gap-m",
           "items-center",
-          "flex-nowrap",
+          "flex-nowrap"
         )}
       >
         {children}
@@ -48,7 +48,7 @@ BreadcrumbItem.displayName = "BreadcrumbItem";
  * @param children - breadcrumb entries rendered as children using BreadcrumbItem components.
  */
 export const Breadcrumb = forwardRef<HTMLElement, BreadCrumbProps>(
-  BreadcrumbBase,
+  BreadcrumbBase
 );
 
 function getIdFromLabel(label: string) {
@@ -57,7 +57,7 @@ function getIdFromLabel(label: string) {
 
 function BreadcrumbBase(
   { label, items, children, ...rest }: BreadCrumbProps,
-  ref?: Ref<HTMLElement>,
+  ref?: Ref<HTMLElement>
 ) {
   const buildEntries = () => {
     if (!items) {
@@ -82,7 +82,7 @@ function BreadcrumbBase(
             </Link>
           </BreadcrumbItem>
         );
-      },
+      }
     );
   };
 
@@ -99,7 +99,7 @@ function BreadcrumbBase(
           "flex-row",
           "border-box",
           "justify-start",
-          "items-center",
+          "items-center"
         )}
       >
         {buildEntries()}

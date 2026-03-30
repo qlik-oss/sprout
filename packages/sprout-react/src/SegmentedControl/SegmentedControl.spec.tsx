@@ -57,7 +57,7 @@ test("SegmentedControl should be accessible", async ({ mount, page }) => {
   await page.keyboard.up("Shift");
   await expect(favorited).not.toBeFocused();
   const isBodyFocused = favorited.evaluate(
-    () => document.body === document.activeElement,
+    () => document.body === document.activeElement
   );
   expect(isBodyFocused).toBeTruthy();
 

@@ -58,7 +58,7 @@ export function DialogHeader({
         "p-xl",
         "pl-xxl",
         "shrink-0",
-        "items-center",
+        "items-center"
       )}
       data-testid={dataTestId}
       {...props}
@@ -69,7 +69,7 @@ export function DialogHeader({
           "flex-col",
           "justify-center",
           "gap-s",
-          "overflow-hidden",
+          "overflow-hidden"
         )}
         data-testid={`${dataTestId}.title`}
       >
@@ -79,7 +79,7 @@ export function DialogHeader({
             "flex-row",
             "items-center",
             "gap-m",
-            "flex-wrap",
+            "flex-wrap"
           )}
         >
           <span
@@ -92,7 +92,7 @@ export function DialogHeader({
                   "pr-m",
                   "flex",
                   "items-center",
-                  "justify-center",
+                  "justify-center"
                 )}
               >
                 {icon}
@@ -115,7 +115,7 @@ export function DialogHeader({
                 className={classNames(
                   "text-default",
                   "font-label-m-emphasized",
-                  "break-words",
+                  "break-words"
                 )}
                 id={labelIdDefault}
               >

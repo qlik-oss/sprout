@@ -119,6 +119,11 @@
           "$value": "{theming.script.font.m}",
           "$description": "Medium default code"
         },
+        "xs": {
+          "$type": "typography",
+          "$value": "{theming.script.font.xs}",
+          "$description": "Extra small default code"
+        },
         "s": {
           "$type": "typography",
           "$value": "{theming.script.font.s}",
@@ -133,6 +138,11 @@
           "$type": "typography",
           "$value": "{theming.script.font.s-emphasized}",
           "$description": "Small emphasized code"
+        },
+        "xs-emphasized": {
+          "$type": "typography",
+          "$value": "{theming.script.font.xs-emphasized}",
+          "$description": "Extra small emphasized code"
         }
       }
     },

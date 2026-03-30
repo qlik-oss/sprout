@@ -9,7 +9,7 @@ export default {
 const { classNames, ...rest } = sprout;
 
 const classesValue = Object.keys(rest).filter(
-  (key) => !key.includes("_"),
+  (key) => !key.includes("_")
 ) as Array<AllClasses>;
 classesValue.sort();
 

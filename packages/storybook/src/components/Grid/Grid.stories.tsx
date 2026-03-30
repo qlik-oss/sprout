@@ -44,7 +44,7 @@ export const ResponsiveStyles: StoryObj = {
                 s: ["border_dashed", "p_m"],
                 m: ["border_default", "p_l"],
               },
-              classNames("items-center", "flex", "border-box"),
+              classNames("items-center", "flex", "border-box")
             )}
           >
             <span>{index + 1}</span>

@@ -1,13 +1,19 @@
 // side effect
+import { addons, useEffect } from "storybook/preview-api";
+
 import "@qlik/design-tokens/generated/tokens/css/sprout-tokens.css";
 import type { Parameters, StoryContext, StoryFn } from "@storybook/react-vite";
-import { addons, useEffect } from "storybook/preview-api";
-import "./storybook-preview.css";
+
 import { getTheme, themeToDataset } from "./theme";
+
+import "./storybook-preview.css";
 
 const IS_TOUCH_KEY = "localstorageservice.deviceType";
 
-export const sproutCSSDecorator = (Story: StoryFn, context: StoryContext): ReturnType<StoryFn> => {
+export const sproutCSSDecorator = (
+  Story: StoryFn,
+  context: StoryContext
+): ReturnType<StoryFn> => {
   const theme = getTheme(document.body);
 
   // try to detect dark mode from different storybook addons
@@ -38,13 +44,18 @@ export const sproutCSSDecorator = (Story: StoryFn, context: StoryContext): Retur
   const isTouch = context.globals.touch;
   let isTouchLocal;
   try {
-    isTouchLocal = JSON.parse(localStorage.getItem(IS_TOUCH_KEY) || "{}").value?.value === "touch";
+    isTouchLocal =
+      JSON.parse(localStorage.getItem(IS_TOUCH_KEY) || "{}").value?.value ===
+      "touch";
   } catch (error) {
     console.warn("Could not parse isTouch from localStorage", error);
   }
 
   if (typeof isTouch === "boolean" && isTouchLocal !== isTouch) {
-    localStorage.setItem(IS_TOUCH_KEY, isTouch ? `{"value":{"value":"touch"}}` : `{"value":{"value":"desktop"}}`);
+    localStorage.setItem(
+      IS_TOUCH_KEY,
+      isTouch ? `{"value":{"value":"touch"}}` : `{"value":{"value":"desktop"}}`
+    );
   }
 
   if (isTouch === undefined) {
@@ -54,11 +65,15 @@ export const sproutCSSDecorator = (Story: StoryFn, context: StoryContext): Retur
   return Story({}, context);
 };
 
-export function getSproutIntialGlobals(opts?: any): Parameters["initialGlobals"] {
+export function getSproutIntialGlobals(
+  opts?: any
+): Parameters["initialGlobals"] {
   return {};
 }
 
-const isTouchDevice = window.matchMedia ? window.matchMedia("(any-pointer: coarse)").matches : false;
+const isTouchDevice = window.matchMedia
+  ? window.matchMedia("(any-pointer: coarse)").matches
+  : false;
 
 export function getSproutGlobalTypes(opts?: any) {
   const obj: Parameters["globals"] = {
@@ -68,7 +83,9 @@ export function getSproutGlobalTypes(opts?: any) {
         title: `Touch (${isTouchDevice})`,
         items: [
           { value: undefined, title: `Touch (${isTouchDevice})` },
-          isTouchDevice ? { value: false, title: "Touch (false)" } : { value: true, title: "Touch (true)" },
+          isTouchDevice
+            ? { value: false, title: "Touch (false)" }
+            : { value: true, title: "Touch (true)" },
         ],
         dynamicTitle: true,
       },

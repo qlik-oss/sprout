@@ -27,7 +27,7 @@ export function useFieldProps<
     disabled?: boolean;
   },
 >(
-  props: T,
+  props: T
 ): {
   fieldProps: CommonFieldProps & { htmlFor?: string };
   inputProps: Omit<T, keyof CommonFieldProps> & {

@@ -6,7 +6,7 @@ import { CheckboxGroupInForm, ControlledCheckboxTest } from "./CheckboxTest";
 
 test(`should Checkbox be accessible`, async ({ mount, page }) => {
   const component = await mount(
-    <Checkbox indeterminate label="Label" helpText="helpText" />,
+    <Checkbox indeterminate label="Label" helpText="helpText" />
   );
 
   let checkbox = page.getByRole("checkbox");
@@ -23,7 +23,7 @@ test(`should Checkbox be accessible`, async ({ mount, page }) => {
 
   // same with mouse
   await component.update(
-    <Checkbox indeterminate label="Label" helpText="helpText" />,
+    <Checkbox indeterminate label="Label" helpText="helpText" />
   );
   checkbox = page.getByRole("checkbox");
   await expect(checkbox).toBeVisible();
@@ -76,7 +76,7 @@ test("should CheckboxGroup be accessible", async ({ mount, page }) => {
         <Checkbox label="option 1" />
         <Checkbox label="option 2" />
       </CheckboxGroup>
-    </div>,
+    </div>
   );
   const accessibilityScanResults = await getAxeReport(page);
   expect(accessibilityScanResults.violations).toEqual([]);
@@ -161,7 +161,7 @@ test("should render info icon with tooltip when infoIconTooltip prop is provided
       label="Label"
       helpText="This is some help text for this checkbox"
       infoIconTooltip={tooltipText}
-    />,
+    />
   );
 
   const checkbox = page.getByRole("checkbox");

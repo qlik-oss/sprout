@@ -5,7 +5,7 @@ import { mergeRefs } from "./Utils/mergeRef";
 
 export type SproutGeneratorFunction<T extends ReactNode, P, R = unknown> = (
   props: P,
-  ref?: R,
+  ref?: R
 ) => T;
 
 export type ChildOrGenerator<T extends ReactNode, P, R = unknown> =
@@ -19,7 +19,7 @@ export type ChildOrGenerator<T extends ReactNode, P, R = unknown> =
 function mergeProps<T extends ReactNode>(
   child: T,
   nextProps: Record<string, unknown> & { ref?: Ref<HTMLElement> },
-  nextRef?: Ref<HTMLElement> | undefined,
+  nextRef?: Ref<HTMLElement> | undefined
 ) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let props: Record<string, any> & { ref?: Ref<HTMLElement> } = {};
@@ -63,7 +63,7 @@ function mergeProps<T extends ReactNode>(
       }
       return acc;
     },
-    { ...nextProps },
+    { ...nextProps }
   );
 
   const toMergeRef = [nextRef, refProps, nextPropsRef];
@@ -84,7 +84,7 @@ function mergeProps<T extends ReactNode>(
  * infer it is a generator function
  */
 function isGeneratorFunction<T extends ReactNode, P, R = unknown>(
-  element: ChildOrGenerator<T, P, R>,
+  element: ChildOrGenerator<T, P, R>
 ): element is SproutGeneratorFunction<T, P, R> {
   return typeof element === "function";
 }
@@ -92,7 +92,7 @@ function isGeneratorFunction<T extends ReactNode, P, R = unknown>(
 export function renderOrClone<T extends ReactNode, P, R = Ref<unknown>>(
   children: ChildOrGenerator<T, P, R>,
   props: P,
-  ref?: R,
+  ref?: R
 ) {
   if (isGeneratorFunction(children)) {
     return children(props, ref);

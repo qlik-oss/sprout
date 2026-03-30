@@ -47,7 +47,7 @@ export function FieldLabel({
         {
           "text-default": !disabled,
           "text-disabled": !!disabled,
-        },
+        }
       )}
     >
       {children}

@@ -11,7 +11,7 @@ const COMMON_PROPS: Partial<SVGProps<SVGSVGElement>> = {
 
 function DropdownArrowBase(
   props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
 ) {
   return (
     <svg {...COMMON_PROPS} ref={ref} {...props}>
@@ -24,7 +24,7 @@ export { DropdownArrow };
 
 function LogoutIconBase(
   props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
 ) {
   return (
     <svg {...COMMON_PROPS} ref={ref} {...props}>
@@ -37,7 +37,7 @@ export const LogoutIcon = forwardRef(LogoutIconBase);
 
 function PersonIconBase(
   props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
 ) {
   return (
     <svg {...COMMON_PROPS} ref={ref} {...props}>
@@ -50,7 +50,7 @@ export const PersonIcon = forwardRef(PersonIconBase);
 
 function CogwheelIconBase(
   props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
 ) {
   return (
     <svg {...COMMON_PROPS} ref={ref} {...props}>
@@ -63,7 +63,7 @@ export const CogwheelIcon = forwardRef(CogwheelIconBase);
 
 function ArrowLeftIconBase(
   props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
 ) {
   return (
     <svg {...COMMON_PROPS} ref={ref} {...props}>
@@ -76,7 +76,7 @@ export const ArrowLeftIcon = forwardRef(ArrowLeftIconBase);
 
 function ArrowRightIconBase(
   props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
 ) {
   return (
     <svg {...COMMON_PROPS} ref={ref} {...props}>
@@ -89,7 +89,7 @@ export const ArrowRightIcon = forwardRef(ArrowRightIconBase);
 
 function PaletteOutlineIconBase(
   props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
 ) {
   return (
     <svg {...COMMON_PROPS} ref={ref} {...props}>

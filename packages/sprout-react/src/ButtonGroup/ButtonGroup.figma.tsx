@@ -17,5 +17,5 @@ figma.connect(
     example: (props) => (
       <ButtonGroup orientation={props.orientation}>{props.buttons}</ButtonGroup>
     ),
-  },
+  }
 );

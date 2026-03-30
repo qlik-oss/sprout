@@ -6,34 +6,64 @@ import * as Stories from "./Stepper.stories";
 
 # Stepper
 
-The stepper component is a navigation element that guides users through a multi-step process. It is typically used in forms, wizards, or other processes that require sequential steps.
+Stepper guides users through ordered steps in a process, such as setup flows and multi-step forms.
 
-```jsx
+## Table of Contents
+
+- [Usage](#usage)
+- [Properties](#properties)
+  - [Stepper.Container](#steppercontainer)
+  - [Stepper.Step](#stepperstep)
+- [State ownership](#state-ownership)
+- [Accessibility](#accessibility)
+
+---
+
+## Usage
+
+```tsx
 import { Stepper } from "@qlik/sprout-react";
 
-// Step semantic controlled by the container
-<Stepper.Container {...args} currentStepIndex={1} currentStepError={false} orientation={orientation}>
-  {/* add onClick to a step will make it interactive */}
+// Step state is computed by the container.
+<Stepper.Container
+  orientation="horizontal"
+  currentStepIndex={1}
+  currentStepError={false}
+>
   <Stepper.Step text="Completed" onClick={() => {}} />
   <Stepper.Step text="Active" />
   <Stepper.Step text="Inactive" />
-  <Stepper.Step text="Inactive" />
+  <Stepper.Step text="Last" />
 </Stepper.Container>
 
+// ---------- OR ----------
 
-// full control of each step semantic
-<Stepper.Container orientation={orientation}>
-  {/* add onClick to a step will make it interactive */}
-  <Stepper.Step semantic="completed" text="Completed" onClick={() => {}} />
-  <Stepper.Step semantic="active" text="Active" />
-  <Stepper.Step semantic="error" text="Error" />
-  <Stepper.Step semantic="inactive" text="Inactive" />
+// Full manual control of each step when stateLess is enabled.
+<Stepper.Container orientation="vertical" stateLess>
+  <Stepper.Step number="1" semantic="completed" text="Completed" />
+  <Stepper.Step number="2" semantic="active" text="Active" />
+  <Stepper.Step number="3" semantic="error" text="Error" />
+  <Stepper.Step number="4" semantic="inactive" text="Inactive" isLast />
 </Stepper.Container>
 
 ```
 
-<Canvas of={Stories.Playground} sourceState="shown" />
+## Properties
+
+### Stepper.Container
+
+<Canvas of={Stories.Playground} />
 <Controls of={Stories.Playground} />
+
+### Stepper.Step
+
+<Canvas of={Stories.StepPlayground} />
+<Controls of={Stories.StepPlayground} />
+
+## State ownership
+
+- When `stateLess` is not enabled, `Stepper.Container` computes `number`, `semantic`, and `isLast` for each `Stepper.Step`.
+- When `stateLess` is enabled, `Stepper.Step` values are used as provided for full manual control.
 
 ## Accessibility
 

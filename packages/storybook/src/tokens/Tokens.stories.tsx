@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/no-array-index-key */
 import {
   Children,
@@ -24,7 +23,7 @@ import {
   type ColumnDef,
   Table,
   type TableCellParams,
-} from "@qlik/sprout-table";
+} from "@qlik/sprout-react-table";
 
 export default {
   title: "Design Tokens/All Tokens",
@@ -114,7 +113,7 @@ function getTokens() {
 }
 
 const ToastContext = createContext<(props: ToastProps["Content"]) => void>(
-  () => {},
+  () => {}
 );
 
 function ToastContainerStory({ children }: { children: ReactNode }) {
@@ -127,7 +126,7 @@ function ToastContainerStory({ children }: { children: ReactNode }) {
         setToasts((current) => current.filter((t) => t["data-id"] !== id));
       }, 3000);
     },
-    [setToasts],
+    [setToasts]
   );
   return (
     <ToastContext.Provider value={addToast}>
@@ -183,7 +182,7 @@ function CSSToken({
         "overflow-hidden",
         {
           "px-m": wrap === "sprout",
-        },
+        }
       )}
       style={{ cursor: "copy", textWrap: "nowrap" }}
     >
@@ -234,8 +233,8 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
     if (ref.current) {
       setValue(
         getComputedStyle(ref.current).getPropertyValue(
-          ref.current.dataset.key || "color",
-        ),
+          ref.current.dataset.key || "color"
+        )
       );
     }
   }, []);
@@ -249,7 +248,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
           "items-center",
           "bg-default",
           "p-s",
-          "h-full",
+          "h-full"
         )}
       >
         <div
@@ -273,7 +272,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
           "items-center",
           "bg-default",
           "p-s",
-          "h-full",
+          "h-full"
         )}
       >
         <div
@@ -301,7 +300,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
           {
             "bg-default": row.semantic !== "inverse",
             "bg-inverse": row.semantic === "inverse",
-          },
+          }
         )}
       >
         <div
@@ -310,7 +309,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
             "flex-row",
             "border-box",
             "font-label-s",
-            "radius-round",
+            "radius-round"
           )}
           ref={ref}
           data-key="color"
@@ -323,7 +322,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
   }
   if (
     ["background-color", "color", "border-color", "divider-color"].includes(
-      row.usage,
+      row.usage
     )
   ) {
     return (
@@ -342,7 +341,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
             "bg-inverse": row.semantic === "inverse",
             "text-inverse": row.semantic === "inverse",
             "text-default": row.semantic !== "inverse",
-          },
+          }
         )}
       >
         <div
@@ -351,7 +350,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
             "flex-row",
             "border-box",
             "radius-round",
-            "border-default",
+            "border-default"
           )}
           ref={ref}
           data-key="background-color"
@@ -379,7 +378,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
             "text-inverse": row.semantic === "inverse",
             "bg-default": row.semantic !== "inverse",
             "text-default": row.semantic !== "inverse",
-          },
+          }
         )}
       >
         <div
@@ -392,7 +391,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
             "radius-subtle",
             "w-fit",
             "bg-default",
-            "font-label-xs",
+            "font-label-xs"
           )}
           style={{
             boxShadow: `var(${row.name})`,
@@ -420,7 +419,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
             "text-inverse": row.semantic === "inverse",
             "bg-default": row.semantic !== "inverse",
             "text-default": row.semantic !== "inverse",
-          },
+          }
         )}
       >
         <div
@@ -433,7 +432,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
             "radius-subtle",
             "bg-default",
             "text-nowrap",
-            "w-fit",
+            "w-fit"
           )}
           style={{ font: `var(${row.name})` }}
         >
@@ -452,7 +451,7 @@ function TokenValueCellRenderer({ colDef, row }: TableCellParams<TokenData>) {
         "h-full",
         "bg-default",
         "text-default",
-        "p-s",
+        "p-s"
       )}
     >
       {colDef.field ? row[colDef.field] : null}
@@ -514,7 +513,7 @@ export const DataTable = {
             !usage || token.usage.toLowerCase() === (usage || "").toLowerCase();
 
           return matchName && matchDimension && matchSemantic && matchUsage;
-        }),
+        })
       );
     }, [name, dimension, semantic, usage]);
 
@@ -527,9 +526,9 @@ export const DataTable = {
             row.dimension,
             row.semantic,
             row.defaultVariant,
-          ].some((v) => v?.toLowerCase().includes(searchTerm.toLowerCase())),
+          ].some((v) => v?.toLowerCase().includes(searchTerm.toLowerCase()))
         ),
-      [rowData, searchTerm],
+      [rowData, searchTerm]
     );
 
     return (
@@ -541,7 +540,7 @@ export const DataTable = {
             "border-box",
             "h-screen",
             "overflow-hidden",
-            "p-l",
+            "p-l"
           )}
         >
           <div
@@ -550,7 +549,7 @@ export const DataTable = {
               "flex-col",
               "gap-m",
               "border-box",
-              "size-full",
+              "size-full"
             )}
           >
             <div className={classNames("flex", "items-center", "w-s")}>

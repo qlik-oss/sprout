@@ -1,14 +1,26 @@
 import type { AllClasses } from "./classNames";
 import { classNames } from "./classNames";
 
-export type ContainerSize = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "3xl" | "4xl";
+export type ContainerSize =
+  | "xxs"
+  | "xs"
+  | "s"
+  | "m"
+  | "l"
+  | "xl"
+  | "xxl"
+  | "3xl"
+  | "4xl";
 export type ContainerSizeBreakpoints = Record<ContainerSize, number>;
 export type ContainerOptions<T> = Partial<Record<ContainerSize, T>>;
 export type CreateContainerAPI = (
   containerSize: ContainerSize,
-  element?: Element | null,
+  element?: Element | null
 ) => {
-  classNames: (options: ContainerOptions<Array<AllClasses> | AllClasses>, className?: string) => string;
+  classNames: (
+    options: ContainerOptions<Array<AllClasses> | AllClasses>,
+    className?: string
+  ) => string;
   get: <T>(options: ContainerOptions<T>) => T;
   match: (width: number, element?: Element | null) => ContainerSize;
 };
@@ -68,32 +80,124 @@ export type CreateContainerAPI = (
  */
 export const createContainer: CreateContainerAPI = (size, element) => {
   const container = {
-    get<T>({ xxs, xs, s, m, l, xl, xxl, "3xl": threeXl, "4xl": fourXl }: ContainerOptions<T>): T {
+    get<T>({
+      xxs,
+      xs,
+      s,
+      m,
+      l,
+      xl,
+      xxl,
+      "3xl": threeXl,
+      "4xl": fourXl,
+    }: ContainerOptions<T>): T {
       switch (size) {
         case "xxs":
-          return (xxs ?? xs ?? s ?? m ?? l ?? xl ?? xxl ?? threeXl ?? fourXl) as T;
+          return (xxs ??
+            xs ??
+            s ??
+            m ??
+            l ??
+            xl ??
+            xxl ??
+            threeXl ??
+            fourXl) as T;
         case "xs":
-          return (xs ?? xxs ?? s ?? m ?? l ?? xl ?? xxl ?? threeXl ?? fourXl) as T;
+          return (xs ??
+            xxs ??
+            s ??
+            m ??
+            l ??
+            xl ??
+            xxl ??
+            threeXl ??
+            fourXl) as T;
         case "s":
-          return (s ?? xs ?? xxs ?? m ?? l ?? xl ?? xxl ?? threeXl ?? fourXl) as T;
+          return (s ??
+            xs ??
+            xxs ??
+            m ??
+            l ??
+            xl ??
+            xxl ??
+            threeXl ??
+            fourXl) as T;
         case "m":
-          return (m ?? s ?? xs ?? xxs ?? l ?? xl ?? xxl ?? threeXl ?? fourXl) as T;
+          return (m ??
+            s ??
+            xs ??
+            xxs ??
+            l ??
+            xl ??
+            xxl ??
+            threeXl ??
+            fourXl) as T;
         case "l":
-          return (l ?? m ?? s ?? xs ?? xxs ?? xl ?? xxl ?? threeXl ?? fourXl) as T;
+          return (l ??
+            m ??
+            s ??
+            xs ??
+            xxs ??
+            xl ??
+            xxl ??
+            threeXl ??
+            fourXl) as T;
         case "xl":
-          return (xl ?? l ?? m ?? s ?? xs ?? xxs ?? xxl ?? threeXl ?? fourXl) as T;
+          return (xl ??
+            l ??
+            m ??
+            s ??
+            xs ??
+            xxs ??
+            xxl ??
+            threeXl ??
+            fourXl) as T;
         case "xxl":
-          return (xxl ?? xl ?? l ?? m ?? s ?? xs ?? xxs ?? threeXl ?? fourXl) as T;
+          return (xxl ??
+            xl ??
+            l ??
+            m ??
+            s ??
+            xs ??
+            xxs ??
+            threeXl ??
+            fourXl) as T;
         case "3xl":
-          return (threeXl ?? xxl ?? xl ?? l ?? m ?? s ?? xs ?? xxs ?? fourXl) as T;
+          return (threeXl ??
+            xxl ??
+            xl ??
+            l ??
+            m ??
+            s ??
+            xs ??
+            xxs ??
+            fourXl) as T;
         case "4xl":
         default:
-          return (fourXl ?? threeXl ?? xxl ?? xl ?? l ?? m ?? s ?? xs ?? xxs) as T;
+          return (fourXl ??
+            threeXl ??
+            xxl ??
+            xl ??
+            l ??
+            m ??
+            s ??
+            xs ??
+            xxs) as T;
       }
     },
     classNames(
-      { xxs, xs, s, m, l, xl, xxl, "3xl": threeXl, "4xl": fourXl }: ContainerOptions<Array<AllClasses> | AllClasses>,
-      className?: string,
+      {
+        xxs,
+        xs,
+        s,
+        m,
+        l,
+        xl,
+        xxl,
+        "3xl": threeXl,
+        "4xl": fourXl,
+      }: ContainerOptions<Array<AllClasses> | AllClasses>,
+      className?: string
     ) {
       const safeArgs = {
         xxs: normalizeArg(xxs),
@@ -107,27 +211,68 @@ export const createContainer: CreateContainerAPI = (size, element) => {
         "4xl": normalizeArg(fourXl),
       };
       return container.get<string>({
-        xxs: safeArgs.xxs ? classNames(...safeArgs.xxs, { [className || ""]: !!className }) : "",
-        xs: safeArgs.xs ? classNames(...safeArgs.xs, { [className || ""]: !!className }) : "",
-        s: safeArgs.s ? classNames(...safeArgs.s, { [className || ""]: !!className }) : "",
-        m: safeArgs.m ? classNames(...safeArgs.m, { [className || ""]: !!className }) : "",
-        l: safeArgs.l ? classNames(...safeArgs.l, { [className || ""]: !!className }) : "",
-        xl: safeArgs.xl ? classNames(...safeArgs.xl, { [className || ""]: !!className }) : "",
-        xxl: safeArgs.xxl ? classNames(...safeArgs.xxl, { [className || ""]: !!className }) : "",
-        "3xl": safeArgs["3xl"] ? classNames(...safeArgs["3xl"], { [className || ""]: !!className }) : "",
-        "4xl": safeArgs["4xl"] ? classNames(...safeArgs["4xl"], { [className || ""]: !!className }) : "",
+        xxs: safeArgs.xxs
+          ? classNames(...safeArgs.xxs, { [className || ""]: !!className })
+          : "",
+        xs: safeArgs.xs
+          ? classNames(...safeArgs.xs, { [className || ""]: !!className })
+          : "",
+        s: safeArgs.s
+          ? classNames(...safeArgs.s, { [className || ""]: !!className })
+          : "",
+        m: safeArgs.m
+          ? classNames(...safeArgs.m, { [className || ""]: !!className })
+          : "",
+        l: safeArgs.l
+          ? classNames(...safeArgs.l, { [className || ""]: !!className })
+          : "",
+        xl: safeArgs.xl
+          ? classNames(...safeArgs.xl, { [className || ""]: !!className })
+          : "",
+        xxl: safeArgs.xxl
+          ? classNames(...safeArgs.xxl, { [className || ""]: !!className })
+          : "",
+        "3xl": safeArgs["3xl"]
+          ? classNames(...safeArgs["3xl"], { [className || ""]: !!className })
+          : "",
+        "4xl": safeArgs["4xl"]
+          ? classNames(...safeArgs["4xl"], { [className || ""]: !!className })
+          : "",
       });
     },
   };
 
   return {
     classNames(
-      { xxs, xs, s, m, l, xl, xxl, "3xl": threeXl, "4xl": fourXl }: ContainerOptions<Array<AllClasses> | AllClasses>,
-      className?: string,
+      {
+        xxs,
+        xs,
+        s,
+        m,
+        l,
+        xl,
+        xxl,
+        "3xl": threeXl,
+        "4xl": fourXl,
+      }: ContainerOptions<Array<AllClasses> | AllClasses>,
+      className?: string
     ) {
-      return container.classNames({ xxs, xs, s, m, l, xl, xxl, "3xl": threeXl, "4xl": fourXl }, className);
+      return container.classNames(
+        { xxs, xs, s, m, l, xl, xxl, "3xl": threeXl, "4xl": fourXl },
+        className
+      );
     },
-    get<U>({ xxs, xs, s, m, l, xl, xxl, "3xl": threeXl, "4xl": fourXl }: ContainerOptions<U>): U {
+    get<U>({
+      xxs,
+      xs,
+      s,
+      m,
+      l,
+      xl,
+      xxl,
+      "3xl": threeXl,
+      "4xl": fourXl,
+    }: ContainerOptions<U>): U {
       return container.get<U>({
         xxs,
         xs,
@@ -174,7 +319,10 @@ function getContainerTokens(el?: Element | null): ContainerSizeBreakpoints {
   };
 }
 
-function getContainerSize(width: number, widths: ContainerSizeBreakpoints): ContainerSize {
+function getContainerSize(
+  width: number,
+  widths: ContainerSizeBreakpoints
+): ContainerSize {
   if (width < widths.xs) return "xxs";
   if (width < widths.s) return "xs";
   if (width < widths.m) return "s";

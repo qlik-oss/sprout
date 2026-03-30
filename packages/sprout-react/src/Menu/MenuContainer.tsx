@@ -22,12 +22,12 @@ export type MenuContainerProps = HTMLDivProps & {
  * @param style - additional inline styles for the container.
  */
 export const MenuContainer = forwardRef<HTMLDivElement, MenuContainerProps>(
-  MenuContainerBase,
+  MenuContainerBase
 );
 
 function MenuContainerBase(
   { children, ...props }: MenuContainerProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   return (
     <div className={menuStyle.menu} ref={ref} {...props}>

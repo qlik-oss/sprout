@@ -14,12 +14,12 @@ export type TextareaProps = TextareaNativeProps & CommonFieldProps;
  * @param hasError - If true, displays the textarea in an error state.
  */
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  TextareaBase,
+  TextareaBase
 );
 
 function TextareaBase(
   { ...props }: TextareaProps,
-  ref?: Ref<HTMLTextAreaElement>,
+  ref?: Ref<HTMLTextAreaElement>
 ) {
   const { fieldProps, useField, inputProps } = useFieldProps(props);
   const controlled = useValueControl<TextareaNativeProps>({

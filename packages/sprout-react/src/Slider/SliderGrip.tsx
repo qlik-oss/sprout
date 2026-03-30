@@ -29,7 +29,7 @@ type SliderGripProps = {
 } & InputProps;
 
 export const SliderGrip = forwardRef<HTMLInputElement, SliderGripProps>(
-  SliderGripBase,
+  SliderGripBase
 );
 
 function SliderGripBase(
@@ -49,7 +49,7 @@ function SliderGripBase(
     valueLabelFormat,
     ...rest
   }: SliderGripProps,
-  ref?: Ref<HTMLInputElement>,
+  ref?: Ref<HTMLInputElement>
 ) {
   const gripIndex = index ?? 0;
   const isVertical = orientation === "vertical";
@@ -117,7 +117,7 @@ function SliderGripBase(
         "items-center",
         "justify-center",
         "box-shadow-default",
-        styles.slider_grip,
+        styles.slider_grip
       )}
       style={
         isVertical
@@ -138,7 +138,7 @@ function SliderGripBase(
           {
             hidden: !!overlappingGrips && gripIndex === 1,
             "text-disabled": !!rest.disabled,
-          },
+          }
         )}
         style={labelStyle}
         ref={labelRef}
@@ -162,7 +162,7 @@ function SliderGripBase(
           "sr-only",
           "w-full",
           "h-full",
-          styles.slider_input,
+          styles.slider_input
         )}
         type="range"
         ref={ref}

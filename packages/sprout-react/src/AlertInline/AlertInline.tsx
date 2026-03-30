@@ -13,7 +13,7 @@ import type { AlertInlineProps } from "./AlertInline.types";
  * @param severity - the severity level of the alert, can be info, warning, error or success.
  * @param title - the title text displayed at the top of the alert.
  * @param children - the content of the alert.
- * @param message - @deprecated use `children` instead.
+ * @param message - deprecated, use children instead. The content of the alert.
  * @param layout - the layout direction, can be horizontal or vertical.
  * @param actionBar - action elements rendered at the bottom of the alert.
  * @param labelDismiss - accessible label for the dismiss button.
@@ -73,7 +73,7 @@ export function AlertInline({
           border_warning: severity === "warning",
           border_error: severity === "error",
           border_success: severity === "success",
-        },
+        }
       )}
     >
       <div
@@ -86,7 +86,7 @@ export function AlertInline({
           "items-center",
           {
             "self-center": !isContentWrapping && !title,
-          },
+          }
         )}
       >
         {SEVERITY_ICONS[severity || "info"]}
@@ -104,7 +104,7 @@ export function AlertInline({
             "flex-row": layout === "horizontal",
             "gap-xl": layout === "horizontal",
             "gap-m": layout === "vertical",
-          },
+          }
         )}
       >
         <div
@@ -118,7 +118,7 @@ export function AlertInline({
                 "font-label-s-emphasized",
                 "text-default",
                 "text-wrap",
-                "break-words",
+                "break-words"
               )}
             >
               {title}
@@ -134,7 +134,7 @@ export function AlertInline({
                 "flex",
                 {
                   "mb-s": layout === "vertical" && !!actionBar,
-                },
+                }
               )}
               ref={contentRef}
             >
@@ -149,7 +149,7 @@ export function AlertInline({
                 "flex",
                 "gap-xl",
                 "flex-row",
-                "items-center",
+                "items-center"
               )}
             >
               {actionBar}

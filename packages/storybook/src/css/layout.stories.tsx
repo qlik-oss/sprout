@@ -21,7 +21,7 @@ export const FloatAndClear = {
         "bg-default",
         "text-default",
         "max-w-m",
-        "gap-m",
+        "gap-m"
       )}
     >
       <PropertyTile>float-none</PropertyTile>
@@ -67,7 +67,7 @@ export const FloatAndClear = {
             "p-0",
             "m-0",
             "text-justify",
-            "clear-start",
+            "clear-start"
           )}
         >
           {PARAGRAPH}
@@ -87,7 +87,7 @@ export const FloatAndClear = {
             "p-0",
             "m-0",
             "text-justify",
-            "clear-end",
+            "clear-end"
           )}
         >
           {PARAGRAPH}
@@ -111,7 +111,7 @@ export const FloatAndClear = {
             "p-0",
             "m-0",
             "text-justify",
-            "clear-both",
+            "clear-both"
           )}
         >
           {PARAGRAPH}
@@ -135,7 +135,7 @@ export const FloatAndClear = {
             "p-0",
             "m-0",
             "text-justify",
-            "clear-none",
+            "clear-none"
           )}
         >
           {PARAGRAPH}
@@ -174,7 +174,7 @@ export const TopRightBottonLeft = {
             "relative",
             "flex",
             "border-box",
-            "border-default",
+            "border-default"
           )}
           style={{ inlineSize: 150, blockSize: 150 }}
         >
@@ -191,7 +191,7 @@ export const TopRightBottonLeft = {
               "left-0",
               "p-xs",
               "text-default",
-              "font-label-s",
+              "font-label-s"
             )}
           >
             inset-0
@@ -202,7 +202,7 @@ export const TopRightBottonLeft = {
             "relative",
             "flex",
             "border-box",
-            "border-default",
+            "border-default"
           )}
           style={{ inlineSize: 150, blockSize: 150 }}
         >
@@ -219,7 +219,7 @@ export const TopRightBottonLeft = {
               "left-0",
               "p-xs",
               "text-default",
-              "font-label-s",
+              "font-label-s"
             )}
           >
             inset-s
@@ -230,7 +230,7 @@ export const TopRightBottonLeft = {
             "relative",
             "flex",
             "border-box",
-            "border-default",
+            "border-default"
           )}
           style={{ inlineSize: 150, blockSize: 150 }}
         >
@@ -247,7 +247,7 @@ export const TopRightBottonLeft = {
               "left-0",
               "p-xs",
               "text-default",
-              "font-label-s",
+              "font-label-s"
             )}
           >
             inset-m
@@ -258,7 +258,7 @@ export const TopRightBottonLeft = {
             "relative",
             "flex",
             "border-box",
-            "border-default",
+            "border-default"
           )}
           style={{ inlineSize: 150, blockSize: 150 }}
         >
@@ -275,7 +275,7 @@ export const TopRightBottonLeft = {
               "left-0",
               "p-xs",
               "text-default",
-              "font-label-s",
+              "font-label-s"
             )}
           >
             inset-l
@@ -288,7 +288,7 @@ export const TopRightBottonLeft = {
           "flex-row",
           "max-w-m",
           "gap-xl",
-          "p-xl",
+          "p-xl"
         )}
       >
         {TOP_RIGHT_NEGATIVE_SIZES.map((tsize) => (
@@ -312,7 +312,7 @@ export const TopRightBottonLeft = {
           "flex-row",
           "max-w-m",
           "gap-xl",
-          "p-xl",
+          "p-xl"
         )}
       >
         {BOTTOM_LEFT_NEGATIVE_SIZES.map((tsize) => (
@@ -347,7 +347,7 @@ export const ObjectFit = {
         "bg-default",
         "text-default",
         "max-w-m",
-        "gap-m",
+        "gap-m"
       )}
     >
       <PropertyTile>object-contain</PropertyTile>
@@ -384,7 +384,7 @@ export const ObjectFit = {
         className={sprout.classNames(
           "object-scale-down",
           "border-default",
-          "p-s",
+          "p-s"
         )}
         src={src}
         style={{ inlineSize: 200, blockSize: 50 }}
@@ -405,7 +405,7 @@ export const ObjectPosition = {
           "relative",
           "flex",
           "border-box",
-          "border-default",
+          "border-default"
         )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
@@ -421,7 +421,7 @@ export const ObjectPosition = {
             "left-0",
             "p-xs",
             "text-default",
-            "font-label-s",
+            "font-label-s"
           )}
         >
           object-top-left
@@ -432,7 +432,7 @@ export const ObjectPosition = {
           "relative",
           "flex",
           "border-box",
-          "border-default",
+          "border-default"
         )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
@@ -448,7 +448,7 @@ export const ObjectPosition = {
             "left-0",
             "p-xs",
             "text-default",
-            "font-label-s",
+            "font-label-s"
           )}
         >
           object-top
@@ -459,7 +459,7 @@ export const ObjectPosition = {
           "relative",
           "flex",
           "border-box",
-          "border-default",
+          "border-default"
         )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
@@ -468,7 +468,7 @@ export const ObjectPosition = {
           className={sprout.classNames(
             "relative",
             "object-none",
-            "object-top-right",
+            "object-top-right"
           )}
           src={src}
         />
@@ -479,7 +479,7 @@ export const ObjectPosition = {
             "left-0",
             "p-xs",
             "text-default",
-            "font-label-s",
+            "font-label-s"
           )}
         >
           object-top-right
@@ -490,7 +490,7 @@ export const ObjectPosition = {
           "relative",
           "flex",
           "border-box",
-          "border-default",
+          "border-default"
         )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
@@ -499,7 +499,7 @@ export const ObjectPosition = {
           className={sprout.classNames(
             "relative",
             "object-none",
-            "object-center-left",
+            "object-center-left"
           )}
           src={src}
         />
@@ -510,7 +510,7 @@ export const ObjectPosition = {
             "left-0",
             "p-xs",
             "text-default",
-            "font-label-s",
+            "font-label-s"
           )}
         >
           object-center-left
@@ -521,7 +521,7 @@ export const ObjectPosition = {
           "relative",
           "flex",
           "border-box",
-          "border-default",
+          "border-default"
         )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
@@ -530,7 +530,7 @@ export const ObjectPosition = {
           className={sprout.classNames(
             "relative",
             "object-none",
-            "object-center",
+            "object-center"
           )}
           src={src}
         />
@@ -541,7 +541,7 @@ export const ObjectPosition = {
             "left-0",
             "p-xs",
             "text-default",
-            "font-label-s",
+            "font-label-s"
           )}
         >
           object-center
@@ -552,7 +552,7 @@ export const ObjectPosition = {
           "relative",
           "flex",
           "border-box",
-          "border-default",
+          "border-default"
         )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
@@ -561,7 +561,7 @@ export const ObjectPosition = {
           className={sprout.classNames(
             "relative",
             "object-none",
-            "object-center-right",
+            "object-center-right"
           )}
           src={src}
         />
@@ -572,7 +572,7 @@ export const ObjectPosition = {
             "left-0",
             "p-xs",
             "text-default",
-            "font-label-s",
+            "font-label-s"
           )}
         >
           object-center-right
@@ -583,7 +583,7 @@ export const ObjectPosition = {
           "relative",
           "flex",
           "border-box",
-          "border-default",
+          "border-default"
         )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
@@ -592,7 +592,7 @@ export const ObjectPosition = {
           className={sprout.classNames(
             "relative",
             "object-none",
-            "object-bottom-left",
+            "object-bottom-left"
           )}
           src={src}
         />
@@ -603,7 +603,7 @@ export const ObjectPosition = {
             "left-0",
             "p-xs",
             "text-default",
-            "font-label-s",
+            "font-label-s"
           )}
         >
           object-bottom-left
@@ -614,7 +614,7 @@ export const ObjectPosition = {
           "relative",
           "flex",
           "border-box",
-          "border-default",
+          "border-default"
         )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
@@ -623,7 +623,7 @@ export const ObjectPosition = {
           className={sprout.classNames(
             "relative",
             "object-none",
-            "object-bottom",
+            "object-bottom"
           )}
           src={src}
         />
@@ -634,7 +634,7 @@ export const ObjectPosition = {
             "left-0",
             "p-xs",
             "text-default",
-            "font-label-s",
+            "font-label-s"
           )}
         >
           object-bottom
@@ -645,7 +645,7 @@ export const ObjectPosition = {
           "relative",
           "flex",
           "border-box",
-          "border-default",
+          "border-default"
         )}
         style={{ inlineSize: 150, blockSize: 150 }}
       >
@@ -654,7 +654,7 @@ export const ObjectPosition = {
           className={sprout.classNames(
             "relative",
             "object-none",
-            "object-bottom-right",
+            "object-bottom-right"
           )}
           src={src}
         />
@@ -665,7 +665,7 @@ export const ObjectPosition = {
             "left-0",
             "p-xs",
             "text-default",
-            "font-label-s",
+            "font-label-s"
           )}
         >
           object-bottom-right
@@ -695,7 +695,7 @@ export const ZIndex = {
         "p-xl",
         "flex-col",
         "w-s",
-        "gap-0",
+        "gap-0"
       )}
     >
       <div
@@ -783,7 +783,7 @@ export const PlaceContent = {
         "gap-m",
         "flex-col",
         "w-full",
-        "max-w-m",
+        "max-w-m"
       )}
     >
       <div className={sprout.classNames("flex", "border-box", "flex-col")}>
@@ -799,7 +799,7 @@ export const PlaceContent = {
             "content-start",
             "justify-start",
             "gap-s",
-            "border-default",
+            "border-default"
           )}
           style={{
             blockSize: 200,
@@ -820,7 +820,7 @@ export const PlaceContent = {
             "content-center",
             "justify-center",
             "gap-s",
-            "border-default",
+            "border-default"
           )}
           style={{
             blockSize: 200,
@@ -841,7 +841,7 @@ export const PlaceContent = {
             "content-end",
             "justify-end",
             "gap-s",
-            "border-default",
+            "border-default"
           )}
           style={{
             blockSize: 200,
@@ -862,7 +862,7 @@ export const PlaceContent = {
             "content-between",
             "justify-between",
             "gap-s",
-            "border-default",
+            "border-default"
           )}
           style={{
             blockSize: 200,
@@ -883,7 +883,7 @@ export const PlaceContent = {
             "content-around",
             "justify-around",
             "gap-s",
-            "border-default",
+            "border-default"
           )}
           style={{
             blockSize: 200,
@@ -914,7 +914,7 @@ export const PlaceItems = {
         "gap-m",
         "flex-col",
         "w-full",
-        "max-w-m",
+        "max-w-m"
       )}
     >
       <AlertInline severity="warning">
@@ -930,7 +930,7 @@ export const PlaceItems = {
           "justify-items-start",
           "auto-rows-auto",
           "gap-s",
-          "border-default",
+          "border-default"
         )}
         style={{ blockSize: 200, inlineSize: 200 }}
       >
@@ -948,7 +948,7 @@ export const PlaceItems = {
           "justify-items-end",
           "auto-rows-auto",
           "gap-s",
-          "border-default",
+          "border-default"
         )}
         style={{ blockSize: 200, inlineSize: 200 }}
       >
@@ -966,7 +966,7 @@ export const PlaceItems = {
           "justify-items-center",
           "auto-rows-auto",
           "gap-s",
-          "border-default",
+          "border-default"
         )}
         style={{ blockSize: 200, inlineSize: 200 }}
       >
@@ -984,7 +984,7 @@ export const PlaceItems = {
           "justify-items-stretch",
           "auto-rows-auto",
           "gap-s",
-          "border-default",
+          "border-default"
         )}
         style={{ blockSize: 200, inlineSize: 200 }}
       >

@@ -38,7 +38,7 @@ export type InputProps = Omit<HTMLInputProps, "onChange"> & {
   designSize?: "default" | "small";
   onChange?: (
     ev: Parameters<ChangeEventHandler<HTMLInputElement>>[0],
-    reason?: ChangeReasons,
+    reason?: ChangeReasons
   ) => void;
 };
 
@@ -50,7 +50,7 @@ const adornmentClassName = classNames(
   "flex",
   "justify-center",
   "items-center",
-  "self-center",
+  "self-center"
 );
 
 /**
@@ -58,7 +58,7 @@ const adornmentClassName = classNames(
  */
 function getFixedHeight(
   font: PossibleValues["font"],
-  designSize?: "default" | "small",
+  designSize?: "default" | "small"
 ) {
   const [type, size] = font.split("_");
   const lineHeight = `var(--sprout-${type}-font-${size}-line-height)`;
@@ -147,7 +147,7 @@ function InputBase(props: InputProps, ref?: Ref<HTMLInputElement>) {
           [styles.field_error]: !!hasError,
           [styles.field_disabled]: disabled,
           [styles.small]: designSize === "small",
-        },
+        }
       )}
     >
       {leftAffix ? <Affix affix={leftAffix} /> : null}
@@ -159,7 +159,7 @@ function InputBase(props: InputProps, ref?: Ref<HTMLInputElement>) {
           {
             "gap-m": designSize !== "small",
             "gap-s": designSize === "small",
-          },
+          }
         )}
       >
         <div
@@ -170,7 +170,7 @@ function InputBase(props: InputProps, ref?: Ref<HTMLInputElement>) {
             "pr-s",
             "items-center",
             "gap-m",
-            "text-default",
+            "text-default"
           )}
         >
           {leftAdornment ? (
@@ -203,7 +203,7 @@ function InputBase(props: InputProps, ref?: Ref<HTMLInputElement>) {
               styles.input,
               {
                 [`font_${safeFont}`]: !!safeFont,
-              },
+              }
             )}
             aria-invalid={hasError ? "true" : undefined}
             data-size={designSize}
@@ -238,7 +238,7 @@ function InputBase(props: InputProps, ref?: Ref<HTMLInputElement>) {
                     value: "",
                   },
                 } as ChangeEvent<HTMLInputElement>,
-                "clear",
+                "clear"
               );
             }
           }}

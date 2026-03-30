@@ -102,7 +102,7 @@ export const VisualTest: Story = {
           "flex-col",
           "border-default",
           "p-m",
-          "w-fit",
+          "w-fit"
         )}
       >
         <h2 className={classNames("text-default", "font-heading-s")}>

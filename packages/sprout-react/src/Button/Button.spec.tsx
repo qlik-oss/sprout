@@ -27,7 +27,7 @@ Object.values(ButtonSize).forEach((size) => {
           loading
           onClick={() => {}}
         />
-      </div>,
+      </div>
     );
     const component = page.getByRole("button");
     await expect(component).toBeVisible();
@@ -58,7 +58,7 @@ test("should add title when label is too long", async ({ mount, page }) => {
       }}
     >
       <Button label={label} onClick={() => {}} />
-    </div>,
+    </div>
   );
   const component = page.getByRole("button");
   await expect(component).toHaveAttribute("title", label);

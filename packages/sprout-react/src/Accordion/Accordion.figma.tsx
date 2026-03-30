@@ -13,7 +13,7 @@ figma.connect(
     example: ({ children }) => (
       <Accordion.Container>{children}</Accordion.Container>
     ),
-  },
+  }
 );
 figma.connect(
   Accordion.Item,
@@ -60,5 +60,5 @@ figma.connect(
         {content}
       </Accordion.Item>
     ),
-  },
+  }
 );

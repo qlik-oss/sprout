@@ -12,5 +12,5 @@ figma.connect(
       maxCount: 100,
     },
     example: (props) => <CharacterCount {...props} />,
-  },
+  }
 );

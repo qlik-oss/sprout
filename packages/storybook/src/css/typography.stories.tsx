@@ -13,7 +13,7 @@ export const font = {
         "border-box",
         "gap-m",
         "flex-col",
-        "w-m",
+        "w-m"
       )}
     >
       <div
@@ -69,7 +69,7 @@ export const font = {
         <span
           className={sprout.classNames(
             "font-label-l-emphasized",
-            "text-default",
+            "text-default"
           )}
         >
           font-label-l-emphasized
@@ -80,7 +80,7 @@ export const font = {
         <span
           className={sprout.classNames(
             "font-label-m-emphasized",
-            "text-default",
+            "text-default"
           )}
         >
           font-label-m-emphasized
@@ -91,7 +91,7 @@ export const font = {
         <span
           className={sprout.classNames(
             "font-label-s-emphasized",
-            "text-default",
+            "text-default"
           )}
         >
           font-label-s-emphasized
@@ -102,7 +102,7 @@ export const font = {
         <span
           className={sprout.classNames(
             "font-label-xs-emphasized",
-            "text-default",
+            "text-default"
           )}
         >
           font-label-xs-emphasized
@@ -117,7 +117,7 @@ export const font = {
         <span
           className={sprout.classNames(
             "font-script-s-emphasized",
-            "text-default",
+            "text-default"
           )}
         >
           font-script-s-emphasized
@@ -128,7 +128,7 @@ export const font = {
         <span
           className={sprout.classNames(
             "font-script-m-emphasized",
-            "text-default",
+            "text-default"
           )}
         >
           font-script-m-emphasized
@@ -154,7 +154,7 @@ export const font = {
             "bg-transparent",
             "text-start",
             "p-0",
-            "m-0",
+            "m-0"
           )}
         >
           text-disabled
@@ -163,7 +163,7 @@ export const font = {
           className={sprout.classNames(
             "bg-inverse",
             "font-body-s",
-            "text-inverse",
+            "text-inverse"
           )}
         >
           text-inverse
@@ -175,7 +175,7 @@ export const font = {
           "border-box",
           "gap-m",
           "flex-col",
-          "overflow-hidden",
+          "overflow-hidden"
         )}
         style={{ inlineSize: 180 }}
       >
@@ -183,7 +183,7 @@ export const font = {
           className={sprout.classNames(
             "font-body-s",
             "text-default",
-            "truncate",
+            "truncate"
           )}
         >
           truncate option make my text overflow
@@ -204,7 +204,7 @@ export const FontStyle = {
         "flex-col",
         "w-m",
         "text-default",
-        "bg-default",
+        "bg-default"
       )}
     >
       <span className={sprout.classNames("font-body-m")}>
@@ -246,7 +246,7 @@ export const TextAlign = {
         "w-m",
         "text-default",
         "bg-default",
-        "max-w-s",
+        "max-w-s"
       )}
     >
       <h1 className={sprout.classNames("p-0", "m-0", "font-heading-m")}>
@@ -290,7 +290,7 @@ export const TextOverflow = {
         "w-m",
         "text-default",
         "bg-default",
-        "max-w-s",
+        "max-w-s"
       )}
     >
       <h1 className={sprout.classNames("p-0", "m-0", "font-heading-m")}>
@@ -311,7 +311,7 @@ export const TextOverflow = {
           "overflow-hidden",
           "border-default",
           "py-m",
-          "text-ellipsis",
+          "text-ellipsis"
         )}
       >
         The longest word in any of the major English language dictionaries is{" "}
@@ -354,7 +354,7 @@ export const WhiteSpace = {
           "flex-col",
           "w-m",
           "text-default",
-          "bg-default",
+          "bg-default"
         )}
       >
         <span className={sprout.classNames("font-heading-m")}>
@@ -365,7 +365,7 @@ export const WhiteSpace = {
             "w-xxs",
             "whitespace-normal",
             "border-weak",
-            "p-m",
+            "p-m"
           )}
         >
           {text}
@@ -379,7 +379,7 @@ export const WhiteSpace = {
             "w-xxs",
             "whitespace-pre",
             "border-weak",
-            "p-m",
+            "p-m"
           )}
         >
           {text}
@@ -393,7 +393,7 @@ export const WhiteSpace = {
             "w-xxs",
             "whitespace-pre-wrap",
             "border-weak",
-            "p-m",
+            "p-m"
           )}
         >
           {text}
@@ -407,7 +407,7 @@ export const WhiteSpace = {
             "w-xxs",
             "whitespace-pre-line",
             "border-weak",
-            "p-m",
+            "p-m"
           )}
         >
           {text}
@@ -421,7 +421,7 @@ export const WhiteSpace = {
             "w-xxs",
             "whitespace-nowrap",
             "border-weak",
-            "p-m",
+            "p-m"
           )}
         >
           {text}
@@ -435,7 +435,7 @@ export const WhiteSpace = {
             "w-xxs",
             "whitespace-wrap",
             "border-weak",
-            "p-m",
+            "p-m"
           )}
         >
           {text}
@@ -449,7 +449,7 @@ export const WhiteSpace = {
             "w-xxs",
             "whitespace-break-spaces",
             "border-weak",
-            "p-m",
+            "p-m"
           )}
         >
           {text}
@@ -463,7 +463,7 @@ export const WhiteSpace = {
             "w-xxs",
             "whitespace-collapse",
             "border-weak",
-            "p-m",
+            "p-m"
           )}
         >
           {text}
@@ -477,7 +477,7 @@ export const WhiteSpace = {
             "w-xxs",
             "whitespace-preserve-nowrap",
             "border-weak",
-            "p-m",
+            "p-m"
           )}
         >
           {text}
@@ -496,7 +496,7 @@ export const Color = {
         "border-box",
         "gap-m",
         "flex-col",
-        "w-m",
+        "w-m"
       )}
     >
       <span className={sprout.classNames("text-default")}>text-default</span>
@@ -510,7 +510,7 @@ export const Color = {
           "text-start",
           "p-0",
           "m-0",
-          "text-disabled",
+          "text-disabled"
         )}
       >
         text-disabled

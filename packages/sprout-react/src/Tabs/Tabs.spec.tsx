@@ -9,7 +9,7 @@ const Sizes: Array<TabsContainerProps["size"]> = ["s", "m"];
 async function expectTabWidth(
   page: Page,
   size: TabsContainerProps["size"],
-  retry = 0,
+  retry = 0
 ): Promise<boolean> {
   if (retry >= 10) {
     return false;
@@ -57,7 +57,7 @@ test(`should change tab if I click on it`, async ({ mount, page }) => {
   // check the displayed panel
   await expect(page.getByRole("tabpanel")).toBeVisible();
   expect(await page.getByRole("tabpanel").textContent()).toContain(
-    "Tab content for Assets",
+    "Tab content for Assets"
   );
   const tab = page.getByRole("tab", { name: "Settings" });
   await tab.click();
@@ -68,7 +68,7 @@ test(`should change tab if I click on it`, async ({ mount, page }) => {
 
   await expect(page.getByRole("tab", { name: "Settings" })).toHaveAttribute(
     "aria-selected",
-    "true",
+    "true"
   );
 });
 
@@ -104,7 +104,7 @@ test(`should be usable with keyboard`, async ({ mount, page }) => {
   await page.keyboard.press("Space");
   await expect(panel).toBeVisible();
   await expect(panel).toContainText(
-    "This panel content has some focusable elements",
+    "This panel content has some focusable elements"
   );
   await expect(focusable).toHaveAttribute("aria-selected", "true");
 
@@ -112,7 +112,7 @@ test(`should be usable with keyboard`, async ({ mount, page }) => {
   await expect(panel).toHaveAttribute("tabindex", "-1");
   await page.keyboard.press("Tab");
   await expect(
-    page.getByRole("button", { name: "Focusable button" }),
+    page.getByRole("button", { name: "Focusable button" })
   ).toBeFocused();
   await assets.click();
   await expect(panel).toHaveText("Tab content for Assets");
@@ -153,12 +153,12 @@ test("should respect the wrappers height", async ({ mount, page }) => {
           ))}
         </Tabs.Panel>
       </Tabs.Container>
-    </div>,
+    </div>
   );
 
   const navElement = page.getByRole("navigation");
   const navHeight = await navElement.evaluate(
-    (element) => window.getComputedStyle(element).height,
+    (element) => window.getComputedStyle(element).height
   );
   expect(navHeight).toBe("500px");
 });

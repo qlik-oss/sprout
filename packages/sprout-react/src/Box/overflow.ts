@@ -52,7 +52,7 @@ export function getOverflowProps<
     },
     {
       [className || ""]: !!className,
-    },
+    }
   );
   const newClassName = classNames(cond);
   return { className: newClassName, ...rest };

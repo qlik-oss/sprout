@@ -7,7 +7,7 @@ test(`should Toast text be accessible`, async ({ mount, page }) => {
   await mount(
     <Thumbnail type="icon" id="component-testing">
       <svg data-testid="icon" />
-    </Thumbnail>,
+    </Thumbnail>
   );
 
   const accessibilityScanResults = await getAxeReport(page);

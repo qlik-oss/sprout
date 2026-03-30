@@ -32,7 +32,7 @@ export function ButtonGroup({
           "flex-col": orientation === "vertical",
           "w-full": !!fullWidth,
           "w-fit": !fullWidth,
-        },
+        }
       )}
       role="group"
       data-variant={orientation || "horizontal"}

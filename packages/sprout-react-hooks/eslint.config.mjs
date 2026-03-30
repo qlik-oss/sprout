@@ -1,5 +1,6 @@
-import qlik from "@qlik/eslint-config";
 import storybook from "eslint-plugin-storybook";
+
+import qlik from "@qlik/eslint-config";
 
 export default [
   ...qlik.configs.esm,
@@ -19,7 +20,7 @@ export default [
       "**/playwright",
       "**/playwright-report",
       "**/storybook-static",
-      "**/.prettierignore",
+
       "**/.storybook",
       "**/test-results",
       "playwright.config.ts",

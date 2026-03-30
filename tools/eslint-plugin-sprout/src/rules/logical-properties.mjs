@@ -1,4 +1,5 @@
-const camelToKebab = (str) => str.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`);
+const camelToKebab = (str) =>
+  str.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`);
 
 const baseMap = new Map([
   // spacing
@@ -114,8 +115,13 @@ function handleJSXAttribute(context) {
     for (const prop of objExpr.properties) {
       if (prop && prop.type === "Property" && !prop.method && !prop.shorthand) {
         let keyName = null;
-        if (prop.key.type === "Identifier" && !prop.computed) keyName = prop.key.name;
-        else if (prop.key.type === "Literal" && typeof prop.key.value === "string") keyName = prop.key.value;
+        if (prop.key.type === "Identifier" && !prop.computed)
+          keyName = prop.key.name;
+        else if (
+          prop.key.type === "Literal" &&
+          typeof prop.key.value === "string"
+        )
+          keyName = prop.key.value;
 
         if (keyName) {
           const logicalName = mapPropName(keyName, ignored);
@@ -128,7 +134,12 @@ function handleJSXAttribute(context) {
   }
 
   function checkJSXStyleAttribute(node) {
-    if (node.name && node.name.name === "style" && node.value && node.value.type === "JSXExpressionContainer") {
+    if (
+      node.name &&
+      node.name.name === "style" &&
+      node.value &&
+      node.value.type === "JSXExpressionContainer"
+    ) {
       const expr = node.value.expression;
       if (expr && expr.type === "ObjectExpression") {
         checkStyleObject(expr);
@@ -142,14 +153,16 @@ function handleJSXAttribute(context) {
 export default {
   meta: {
     docs: {
-      description: "Enforce CSS logical properties in inline JSX style for better internationalization support",
+      description:
+        "Enforce CSS logical properties in inline JSX style for better internationalization support",
       category: "Build",
       recommended: true,
     },
     fixable: "code",
     schema: [],
     messages: {
-      useLogicalProp: "Use logical property '{{logical}}' instead of physical property '{{physical}}'.",
+      useLogicalProp:
+        "Use logical property '{{logical}}' instead of physical property '{{physical}}'.",
     },
   },
   create(context) {

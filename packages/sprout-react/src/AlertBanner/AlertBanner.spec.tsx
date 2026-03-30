@@ -12,7 +12,7 @@ test(`should be accessible`, async ({ mount, page }) => {
       variant="info"
       onClickDismiss={() => {}}
       action={<Button label="Action" />}
-    />,
+    />
   );
   await expect(component).toBeVisible();
 
@@ -35,7 +35,7 @@ test("should support role and aria-live props", async ({ mount }) => {
       aria-live="assertive"
       onClickDismiss={() => {}}
       action={<Button label="Action" />}
-    />,
+    />
   );
   await expect(component).toHaveAttribute("role", "alert");
   await expect(component).toHaveAttribute("aria-live", "assertive");

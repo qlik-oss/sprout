@@ -33,18 +33,18 @@ test("should Textarea be accessible", async ({ mount, page }) => {
 
 test("should map properties to native attributes", async ({ mount, page }) => {
   const component = await mount(
-    <TextareaTest disabled label="Label" helpText="helpText" />,
+    <TextareaTest disabled label="Label" helpText="helpText" />
   );
   const textbox = page.getByRole("textbox");
   await expect(textbox).toBeDisabled();
 
   await component.update(
-    <TextareaTest readOnly label="Label" helpText="helpText" />,
+    <TextareaTest readOnly label="Label" helpText="helpText" />
   );
   await expect(textbox).toHaveAttribute("readonly");
 
   await component.update(
-    <TextareaTest hasError label="Label" helpText="helpText" />,
+    <TextareaTest hasError label="Label" helpText="helpText" />
   );
   await expect(textbox).toHaveAttribute("aria-invalid", "true");
 });
@@ -58,7 +58,7 @@ test("should support resizable property", async ({ mount, page }) => {
         resizable
         defaultValue="text demo"
       />
-    </div>,
+    </div>
   );
   const textbox = page.getByRole("textbox");
   await expect(textbox).toHaveCSS("resize", "none");
@@ -102,7 +102,7 @@ test("should show character count when maxCharacterCount property is set", async
         maxCharacterCount={9}
         resizable
       />
-    </div>,
+    </div>
   );
   const textbox = page.getByRole("textbox");
   await textbox.focus();

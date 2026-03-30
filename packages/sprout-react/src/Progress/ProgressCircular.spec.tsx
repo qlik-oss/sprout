@@ -18,7 +18,7 @@ test(`should be accessible without percent`, async ({ page, mount }) => {
 
 test(`should be accessible with percent`, async ({ page, mount }) => {
   const component = await mount(
-    <ProgressCircular id="component-testing" percent={30} />,
+    <ProgressCircular id="component-testing" percent={30} />
   );
   await expect(component).toBeVisible();
 

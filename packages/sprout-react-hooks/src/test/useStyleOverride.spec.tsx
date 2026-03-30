@@ -2,7 +2,9 @@ import { expect, test } from "@playwright/experimental-ct-react";
 
 import { UseStyleOverrideTest } from "./UseStyleOverrideTest";
 
-test("should override styles using useStyleOverride hook", async ({ mount }) => {
+test("should override styles using useStyleOverride hook", async ({
+  mount,
+}) => {
   const content = await mount(<UseStyleOverrideTest />);
   await expect(content).toBeVisible();
   await expect(content).toHaveText("useStyleOverride hook");

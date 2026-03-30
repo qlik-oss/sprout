@@ -112,21 +112,6 @@ function Icon() {
   );
 }
 
-export const WithIcon: Story = {
-  render: (args: TagProps) => (
-    <div
-      className={classNames("flex", "border-box", "p-m", "w-fit")}
-      data-testid="wrapper"
-    >
-      <Tag {...args} icon={<Icon />} />
-    </div>
-  ),
-  args: {
-    text: "ABCD-1234-EFGH-5678",
-  },
-  parameters: disableSnap,
-};
-
 export const WithBadge: Story = {
   render: (args: TagProps) => (
     <div

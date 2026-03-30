@@ -374,7 +374,7 @@ export const VisualTest = {
           "p-l",
           "gap-xl",
           "w-xs",
-          "items-start",
+          "items-start"
         )}
       >
         <Select.Select label="Option children overflow" defaultValue="overflow">
@@ -423,7 +423,7 @@ export const VisualTest = {
           "p-l",
           "gap-xl",
           "w-full",
-          "items-start",
+          "items-start"
         )}
         style={{ blockSize: "200px" }}
       >
@@ -497,7 +497,7 @@ export const VisualTest = {
           "p-l",
           "gap-xl",
           "w-full",
-          "items-start",
+          "items-start"
         )}
         style={{ blockSize: "380px" }}
       >

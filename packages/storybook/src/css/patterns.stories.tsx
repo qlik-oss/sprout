@@ -30,7 +30,7 @@ export const ProgressiveDisclosure: StoryObj<{ onClick: () => void }> = {
         "border-default",
         "p-xs",
         "w-m",
-        "bg-interactive",
+        "bg-interactive"
       )}
     >
       <button
@@ -45,11 +45,11 @@ export const ProgressiveDisclosure: StoryObj<{ onClick: () => void }> = {
           "disclosure-target",
           "flex",
           "flex-row",
-          "gap-s",
+          "gap-s"
         )}
       >
-        <IconButton label="Copy" icon={<CopyIcon height={undefined} />} />
-        <IconButton label="Paste" icon={<PasteIcon height={undefined} />} />
+        <IconButton label="Copy" icon={<CopyIcon />} />
+        <IconButton label="Paste" icon={<PasteIcon />} />
       </div>
     </div>
   ),
@@ -74,7 +74,7 @@ export const FocusableTarget: StoryObj<{ onClick: () => void }> = {
         "p-xs",
         "w-m",
         "bg-interactive",
-        "focusable-target",
+        "focusable-target"
       )}
     >
       <button

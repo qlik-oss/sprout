@@ -24,7 +24,7 @@ export const Width = {
           "flex-col",
           "gap-m",
           "w-m",
-          "overflow-visible",
+          "overflow-visible"
         )}
       >
         <h1
@@ -32,7 +32,7 @@ export const Width = {
             "flex",
             "border-box",
             "font-heading-m",
-            "text-default",
+            "text-default"
           )}
         >
           Container
@@ -94,7 +94,7 @@ export const MinWidth = {
         "gap-m",
         "w-m",
         "h-fit",
-        "overflow-visible",
+        "overflow-visible"
       )}
     >
       <div className={sprout.classNames(...CONTENT_CLASSES, "min-w-0")}>
@@ -125,7 +125,7 @@ export const MaxWidth = {
         "gap-m",
         "w-full",
         "h-fit",
-        "p-m",
+        "p-m"
       )}
     >
       <div
@@ -136,7 +136,7 @@ export const MaxWidth = {
           "overflow-visible",
           "py-m",
           "text-default",
-          "max-w-0",
+          "max-w-0"
         )}
       >
         max-w-0
@@ -189,7 +189,7 @@ export const Height = {
           "items-start",
           "gap-m",
           "w-m",
-          "h-screen",
+          "h-screen"
         )}
       >
         <div className={sprout.classNames(...CONTENT_CLASSES, "h-0")}>
@@ -226,14 +226,14 @@ export const Height = {
           "flex-col",
           "items-start",
           "gap-m",
-          "w-m",
+          "w-m"
         )}
       >
         <div
           className={sprout.classNames(
             ...CONTENT_CLASSES,
             "overflow-visible",
-            "size-0",
+            "size-0"
           )}
         >
           size-0
@@ -334,7 +334,7 @@ export const MinHeight = {
         "items-start",
         "gap-m",
         "w-m",
-        "h-fit",
+        "h-fit"
       )}
     >
       <div className={sprout.classNames(...CONTENT_CLASSES, "min-h-0")}>

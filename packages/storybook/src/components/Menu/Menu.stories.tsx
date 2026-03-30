@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 import { type MouseEvent, useState } from "react";
 import { fn } from "storybook/test";
@@ -138,7 +137,7 @@ export const MuiApi: StoryObj<typeof Menu.Contextual> = {
             "flex-col",
             "p-m",
             "w-full",
-            "border-default",
+            "border-default"
           )}
           data-testid="contextual"
         >
@@ -148,7 +147,7 @@ export const MuiApi: StoryObj<typeof Menu.Contextual> = {
               "flex-row",
               "border-box",
               "font-heading-m",
-              "text-default",
+              "text-default"
             )}
           >
             Contextual Menu demo using MUI api
@@ -159,7 +158,7 @@ export const MuiApi: StoryObj<typeof Menu.Contextual> = {
               "flex-row",
               "border-box",
               "font-body-m",
-              "text-default",
+              "text-default"
             )}
           >
             This a paragraph with a bit of text.
@@ -271,7 +270,7 @@ export const VisualTest: StoryObj<typeof Menu.Trigger> = {
                   window
                     .open(
                       "/?path=/story/components-menu--secondary-action",
-                      "_blank",
+                      "_blank"
                     )
                     ?.focus();
                 }}

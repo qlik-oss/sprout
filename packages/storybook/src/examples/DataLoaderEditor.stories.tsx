@@ -130,7 +130,7 @@ function DataSourceItem({
           "flex-row",
           "border-box",
           "gap-m",
-          "items-center",
+          "items-center"
         )}
       >
         <IconButton variant="quiet" aria-label="open" asDropdown />
@@ -165,7 +165,7 @@ export function Default() {
         "flex-col",
         "border-box",
         "size-full",
-        "bg-default",
+        "bg-default"
       )}
     >
       <div
@@ -175,7 +175,7 @@ export function Default() {
           "border-box",
           "items-center",
           "gap-m",
-          "border-default",
+          "border-default"
         )}
         data-frame="75"
         style={{
@@ -190,7 +190,7 @@ export function Default() {
             "border-box",
             "gap-m",
             "items-center",
-            "w-full",
+            "w-full"
           )}
           data-frame="77"
         >
@@ -205,7 +205,7 @@ export function Default() {
               "flex-row",
               "border-box",
               "items-center",
-              "grow",
+              "grow"
             )}
             data-frame="84"
           >
@@ -231,7 +231,7 @@ export function Default() {
               "flex-row",
               "border-box",
               "gap-m",
-              "items-center",
+              "items-center"
             )}
             data-frame="83"
           >
@@ -246,7 +246,7 @@ export function Default() {
                 "flex-row",
                 "border-box",
                 "items-center",
-                "justify-end",
+                "justify-end"
               )}
             >
               No script changes
@@ -266,7 +266,7 @@ export function Default() {
           "flex-row",
           "border-box",
           "items-start",
-          "w-full",
+          "w-full"
         )}
         data-frame="Content and panels"
         style={{
@@ -280,7 +280,7 @@ export function Default() {
             "border-box",
             "h-full",
             "border-b-default",
-            "border-r-default",
+            "border-r-default"
           )}
           data-frame="68"
         >
@@ -302,7 +302,7 @@ export function Default() {
                     "border-box",
                     "gap-m",
                     "p-m",
-                    "border-b-weak",
+                    "border-b-weak"
                   )}
                 >
                   <TextField type="search" placeholder="Search sources" />
@@ -328,7 +328,7 @@ export function Default() {
             "border-box",
             "h-full",
             "grow",
-            "border-b-default",
+            "border-b-default"
           )}
           data-frame="70"
         >
@@ -343,7 +343,7 @@ export function Default() {
                 "flex-col",
                 "border-box",
                 "items-start",
-                "w-full",
+                "w-full"
               )}
               data-frame="80"
             >
@@ -356,7 +356,7 @@ export function Default() {
                   "border-b-default",
                   "w-full",
                   "pb-xs",
-                  "pt-xs",
+                  "pt-xs"
                 )}
                 data-frame="71"
               >
@@ -389,7 +389,7 @@ export function Default() {
                     "flex-row",
                     "gap-m",
                     "px-m",
-                    "justify-end",
+                    "justify-end"
                   )}
                   data-frame="76"
                 >
@@ -416,7 +416,7 @@ export function Default() {
                   "flex-row",
                   "border-box",
                   "h-full",
-                  "w-full",
+                  "w-full"
                 )}
               >
                 <CodeMirror
@@ -444,7 +444,7 @@ export function Default() {
           "gap-m",
           "p-m",
           "w-full",
-          "bg-weak",
+          "bg-weak"
         )}
         data-frame="46 footer"
       >

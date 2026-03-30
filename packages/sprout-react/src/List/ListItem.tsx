@@ -6,7 +6,7 @@ import { classNames } from "../classNames";
 import type { HTMLLiProps } from "../htmlTypes";
 import { ListContext } from "./ListContext";
 
-import styles from "./List.module.css";
+import stylesheet from "./List.module.css";
 
 export type ListItemProps = HTMLLiProps & {
   hasPadding?: boolean;
@@ -27,6 +27,13 @@ export type ListItemProps = HTMLLiProps & {
  */
 export const ListItem = forwardRef<HTMLLIElement, ListItemProps>(ListItemBase);
 
+const itemPadding = classNames("py-density-m", "pr-m", "pl-xl");
+const itemSelected = classNames(
+  "relative",
+  "bg-selected-default",
+  stylesheet.item_selected
+);
+
 function ListItemBase(
   {
     id,
@@ -38,7 +45,7 @@ function ListItemBase(
     hasPadding,
     ...props
   }: ListItemProps,
-  ref?: Ref<HTMLLIElement>,
+  ref?: Ref<HTMLLIElement>
 ) {
   const safeId = useId(id);
   const context = useContext(ListContext);
@@ -52,9 +59,14 @@ function ListItemBase(
     }
   }
 
-  let tabIndex = 0;
-  if (context?.useGesture) {
-    tabIndex = selected ? 0 : -1;
+  let tabIndex;
+  if (!disabled) {
+    tabIndex = 0;
+  }
+  if (interactive && !disabled) {
+    if (context?.useGesture) {
+      tabIndex = selected ? 0 : -1;
+    }
   }
 
   return (
@@ -63,19 +75,50 @@ function ListItemBase(
       id={safeId}
       ref={ref}
       data-selected={selected}
-      className={classNames(styles.item, {
-        [styles.item_selected]: !!selected,
-        [styles.item_disabled]: !!disabled,
-        [styles.item_padding]: !!safeHasPadding,
-        [styles.item_interactive]: !!interactive,
-      })}
+      className={classNames(
+        "m-0",
+        "flex-noreset",
+        "border-box",
+        "flex-row",
+        "items-center",
+        "gap-m",
+        "relative",
+        "radius-subtle",
+        "font-label-s",
+        "text-default",
+        "focusable-target",
+        stylesheet.item,
+        {
+          [itemSelected]: !!selected,
+          "text-disabled": !!disabled,
+          [itemPadding]: !!safeHasPadding,
+          "bg-interactive": !!interactive,
+          [stylesheet.item_interactive]: !!interactive,
+        }
+      )}
     >
+      {selected ? (
+        <div
+          role="presentation"
+          className={classNames(
+            "absolute",
+            "left-0",
+            "bg-selected",
+            "border-box",
+            stylesheet.item_selected_indicator
+          )}
+        />
+      ) : null}
       {children}
       {onClick ? (
         <button
           type="button"
           onClick={onClick}
-          className={classNames("outline-none", styles.item_interactive)}
+          className={classNames(
+            "outline-none",
+            "focusable-trigger",
+            stylesheet.item_interactive
+          )}
           disabled={disabled}
           aria-labelledby={safeId}
           tabIndex={tabIndex}

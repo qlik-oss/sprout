@@ -120,7 +120,7 @@ export function getPaddingProps<
     },
     {
       [className || ""]: !!className,
-    },
+    }
   );
 
   const newClassName = classNames(cond);

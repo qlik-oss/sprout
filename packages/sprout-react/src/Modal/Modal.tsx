@@ -65,7 +65,7 @@ const ModalBaseForwarded = forwardRef<HTMLDivElement, ModalProps>(ModalBase);
  * @param children - Content of the modal.
  */
 const ModalRoot = forwardRef<HTMLDivElement, ModalCompositionProps["Root"]>(
-  (props, ref) => <ModalBaseForwarded jsx {...props} ref={ref} />,
+  (props, ref) => <ModalBaseForwarded jsx {...props} ref={ref} />
 );
 ModalRoot.displayName = "Modal.Root";
 
@@ -92,9 +92,9 @@ ModalRoot.displayName = "Modal.Root";
  * @param footerActions - Action content in the footer.
  * @param footerLabelClose - Label for the close button in the footer.
  * @param children - Content of the modal.
- * @param width - @deprecated Use `variant` instead.
- * @param labelClose - @deprecated Use `headerLabelClose` and `footerLabelClose` instead.
- * @param contentPadding - @deprecated Use horizontal padding on the wrapping element instead.
+ * @param width - deprecated Use `variant` instead.
+ * @param labelClose - deprecated Use `headerLabelClose` and `footerLabelClose` instead.
+ * @param contentPadding - deprecated Use horizontal padding on the wrapping element instead.
  */
 export const Modal = Object.assign(ModalBaseForwarded, {
   Root: ModalRoot,
@@ -154,7 +154,7 @@ function ModalBase(props: ModalProps, ref?: ForwardedRef<HTMLDivElement>) {
       labelId: ariaLabelledby || labelId,
       descId: ariaDescribedby || descId,
     }),
-    [labelId, descId, ariaLabelledby, ariaDescribedby],
+    [labelId, descId, ariaLabelledby, ariaDescribedby]
   );
 
   return (

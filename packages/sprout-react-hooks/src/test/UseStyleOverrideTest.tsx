@@ -6,7 +6,7 @@ export function UseStyleOverrideTest() {
       common_background_color_default: "#007ACC",
       common_foreground_color_default: "#FFFFFF",
     },
-    '[data-testid="use-style-override"]',
+    '[data-testid="use-style-override"]'
   );
   return (
     <div

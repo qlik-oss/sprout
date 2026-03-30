@@ -23,7 +23,7 @@ export function useFloatingContext(
   args: {
     onCloseAll?: () => void;
     tree?: boolean;
-  } = DEFAULT_ARGS,
+  } = DEFAULT_ARGS
 ) {
   const tree = useFloatingTree();
   const nodeId = useFloatingNodeId();

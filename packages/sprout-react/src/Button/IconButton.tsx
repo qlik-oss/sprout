@@ -8,7 +8,7 @@ export type ButtonIconProps = ButtonProps & {
 };
 
 export const IconButton = forwardRef<HTMLButtonElement, ButtonIconProps>(
-  ButtonIconBase,
+  ButtonIconBase
 );
 
 function ButtonIconBase(
@@ -18,7 +18,7 @@ function ButtonIconBase(
     tooltipPlacement = "top",
     ...props
   }: ButtonIconProps,
-  ref?: Ref<HTMLButtonElement>,
+  ref?: Ref<HTMLButtonElement>
 ) {
   if (!label) {
     return <Button aria-label={ariaLabel} {...props} ref={ref} />;

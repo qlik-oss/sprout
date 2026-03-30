@@ -25,7 +25,7 @@ function ModalBase(props: ModalBaseProps, ref?: Ref<HTMLDivElement>) {
 ModalBase.displayName = "ModalBase";
 
 const ModalBaseForwarded = forwardRef<HTMLDivElement, ModalBaseProps>(
-  ModalBase,
+  ModalBase
 );
 
 /**

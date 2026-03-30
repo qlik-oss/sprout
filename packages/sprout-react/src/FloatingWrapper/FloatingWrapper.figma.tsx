@@ -11,5 +11,5 @@ figma.connect(
       children: figma.children("*"),
     },
     example: ({ children }) => <FloatingWrapper>{children}</FloatingWrapper>,
-  },
+  }
 );

@@ -10,7 +10,11 @@ Then you can add it to your `.stylelintrc.js`:
 
 ```javascript
 module.exports = {
-  extends: ["stylelint-config-standard", "stylelint-config-css-modules", "@qlik/stylelint-config-sprout"],
+  extends: [
+    "stylelint-config-standard",
+    "stylelint-config-css-modules",
+    "@qlik/stylelint-config-sprout",
+  ],
   //...
 };
 ```

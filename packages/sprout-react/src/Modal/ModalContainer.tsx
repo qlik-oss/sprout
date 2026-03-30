@@ -36,7 +36,7 @@ export type ModalContainerProps = {
 } & Omit<DialogPropsType, "aria-modal" | "hide" | "style" | "className">;
 
 export const ModalContainer = forwardRef<HTMLDivElement, ModalContainerProps>(
-  ModalContainerBase,
+  ModalContainerBase
 );
 
 const heightMap = {
@@ -52,7 +52,7 @@ const heightMap = {
 
 function ModalContainerBase(
   props: ModalContainerProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ): ReactElement {
   const {
     visible,

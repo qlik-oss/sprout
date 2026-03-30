@@ -5,7 +5,7 @@
         "xs": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.secondary}",
             "fontWeight": "{qlik.common.font-weight.emphasized}",
             "lineHeight": "{qlik.typography.line-height.heading}",
             "fontSize": "{qlik.typography.font-size.xs}",
@@ -20,7 +20,7 @@
         "s": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.secondary}",
             "fontWeight": "{qlik.common.font-weight.emphasized}",
             "lineHeight": "{qlik.typography.line-height.heading}",
             "fontSize": "{qlik.typography.font-size.m}",
@@ -35,7 +35,7 @@
         "m": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.secondary}",
             "fontWeight": "{qlik.common.font-weight.emphasized}",
             "lineHeight": "{qlik.typography.line-height.heading}",
             "fontSize": "{qlik.typography.font-size.l}",
@@ -50,7 +50,7 @@
         "l": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.secondary}",
             "fontWeight": "{qlik.common.font-weight.emphasized}",
             "lineHeight": "{qlik.typography.line-height.heading}",
             "fontSize": "{qlik.typography.font-size.xl}",
@@ -65,7 +65,7 @@
         "xl": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.secondary}",
             "fontWeight": "{qlik.common.font-weight.emphasized}",
             "lineHeight": "{qlik.typography.line-height.heading}",
             "fontSize": "{qlik.typography.font-size.3xl}",
@@ -80,7 +80,7 @@
         "xxl": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.secondary}",
             "fontWeight": "{qlik.common.font-weight.emphasized}",
             "lineHeight": "{qlik.typography.line-height.heading}",
             "fontSize": "{qlik.typography.font-size.4xl}",
@@ -99,7 +99,7 @@
         "xs": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.default}",
             "lineHeight": "{qlik.typography.line-height.body}",
             "fontSize": "{qlik.typography.font-size.xs}",
@@ -114,7 +114,7 @@
         "s": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.default}",
             "lineHeight": "{qlik.typography.line-height.body}",
             "fontSize": "{qlik.typography.font-size.s}",
@@ -129,7 +129,7 @@
         "m": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.default}",
             "lineHeight": "{qlik.typography.line-height.body}",
             "fontSize": "{qlik.typography.font-size.m}",
@@ -144,7 +144,7 @@
         "l": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.default}",
             "lineHeight": "{qlik.typography.line-height.body}",
             "fontSize": "{qlik.typography.font-size.l}",
@@ -159,7 +159,7 @@
         "xl": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.default}",
             "lineHeight": "{qlik.typography.line-height.body}",
             "fontSize": "{qlik.typography.font-size.xl}",
@@ -174,7 +174,7 @@
         "xxl": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.default}",
             "lineHeight": "{qlik.typography.line-height.body}",
             "fontSize": "{qlik.typography.font-size.xxl}",
@@ -193,7 +193,7 @@
         "xs": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.default}",
             "lineHeight": "16px",
             "fontSize": "{qlik.typography.font-size.xs}",
@@ -208,7 +208,7 @@
         "xs-emphasized": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.emphasized}",
             "lineHeight": "16px",
             "fontSize": "{qlik.typography.font-size.xs}",
@@ -223,7 +223,7 @@
         "s": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.default}",
             "lineHeight": "16px",
             "fontSize": "{qlik.typography.font-size.s}",
@@ -238,7 +238,7 @@
         "s-emphasized": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.emphasized}",
             "lineHeight": "16px",
             "fontSize": "{qlik.typography.font-size.s}",
@@ -253,7 +253,7 @@
         "m": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.default}",
             "lineHeight": "20px",
             "fontSize": "{qlik.typography.font-size.m}",
@@ -268,7 +268,7 @@
         "m-emphasized": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.emphasized}",
             "lineHeight": "20px",
             "fontSize": "{qlik.typography.font-size.m}",
@@ -283,7 +283,7 @@
         "l": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.default}",
             "lineHeight": "24px",
             "fontSize": "{qlik.typography.font-size.l}",
@@ -298,7 +298,7 @@
         "l-emphasized": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{qlik.common.font-family.default}",
+            "fontFamily": "{qlik.common.font-family.primary}",
             "fontWeight": "{qlik.common.font-weight.emphasized}",
             "lineHeight": "24px",
             "fontSize": "{qlik.typography.font-size.l}",
@@ -328,6 +328,21 @@
             "textDecoration": ""
           },
           "$description": "Medium default code"
+        },
+        "xs": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.code.font-family.default}",
+            "fontWeight": "{qlik.code.font-weight.default}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.xs}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Extra small default code"
         },
         "s": {
           "$type": "typography",
@@ -373,6 +388,21 @@
             "textDecoration": ""
           },
           "$description": "Small emphasized code"
+        },
+        "xs-emphasized": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{qlik.code.font-family.default}",
+            "fontWeight": "{qlik.code.font-weight.emphasized}",
+            "lineHeight": "{qlik.typography.line-height.body}",
+            "fontSize": "{qlik.typography.font-size.xs}",
+            "letterSpacing": "",
+            "paragraphSpacing": "",
+            "paragraphIndent": "",
+            "textCase": "",
+            "textDecoration": ""
+          },
+          "$description": "Extra small emphasized code"
         }
       }
     },

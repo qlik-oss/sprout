@@ -28,7 +28,7 @@ export function SliderIndicator({
         {
           "h-full": !isVertical,
           "w-full": isVertical,
-        },
+        }
       )}
       role="presentation"
       style={

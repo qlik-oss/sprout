@@ -31,7 +31,6 @@ import {
   useInteractions,
   useMergeRefs,
 } from "@floating-ui/react";
-import type { layer } from "@qlik/sprout-css-modules";
 import { useId } from "@qlik/sprout-react-hooks";
 
 import { ThemeProvider } from "../ThemeProvider";
@@ -66,6 +65,7 @@ const FlipStrategy: Record<string, FlipOptions> = {
     // https://floating-ui.com/docs/flip#combining-with-shift
     crossAxis: "alignment",
     fallbackAxisSideDirection: "end",
+    fallbackStrategy: "initialPlacement",
     flipAlignment: true,
     padding: SPACE_AROUND,
   },
@@ -74,6 +74,7 @@ const FlipStrategy: Record<string, FlipOptions> = {
     // When using flip() and shift(), "alignment" is the recommended configuration
     crossAxis: "alignment",
     fallbackAxisSideDirection: "none",
+    fallbackStrategy: "initialPlacement",
     flipAlignment: true,
     padding: SPACE_AROUND,
   },
@@ -203,7 +204,13 @@ export type FloatingPrimitiveProps = {
    * @private
    * zIndex CSS variable or value to control the stacking order of the floating element.
    */
-  zIndex?: layer;
+  zIndex?:
+    | "z-stacked"
+    | "z-floating"
+    | "z-overlay"
+    | "z-context"
+    | "z-time-sensitive"
+    | "z-cursor";
 } & Omit<HTMLDivProps, "content">;
 
 export type FloatingPublicProps = Omit<
@@ -213,7 +220,7 @@ export type FloatingPublicProps = Omit<
 
 function mergeFloatingUIProps<T extends Partial<FloatingPrimitiveProps>>(
   props: Record<string, unknown>,
-  nextProps: T,
+  nextProps: T
 ) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return Object.keys(props).reduce<Record<string, any>>(
@@ -233,7 +240,7 @@ function mergeFloatingUIProps<T extends Partial<FloatingPrimitiveProps>>(
       }
       return acc;
     },
-    { ...nextProps },
+    { ...nextProps }
   );
 }
 
@@ -281,7 +288,7 @@ function FloatingPrimitiveBase(
     zIndex,
     ...props
   }: FloatingPrimitiveProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const componentId = useId(id);
   const safeTrigger = trigger || "click";
@@ -316,53 +323,49 @@ function FloatingPrimitiveBase(
         crossAxis: offsetCross || 0, // in sub deps are not updated with https://github.com/floating-ui/floating-ui/issues/3044
       }),
     ];
-    middlewareArray.push(
-      size({
-        apply({ rects, elements, availableHeight }) {
-          const minHeightValue = minHeight || 0;
-          Object.assign(elements.floating.style, {
-            maxHeight: `${Math.floor(Math.max(minHeightValue, availableHeight - viewportPadding))}px`,
-            width: getWidth(width, rects.reference.width),
-            minWidth: getWidth(minWidth, rects.reference.width),
-            maxWidth: getWidth(maxWidth, rects.reference.width),
-          });
-        },
-      }),
-    );
 
-    // When using flip() and shift(), this is the recommended order
-    // https://floating-ui.com/docs/flip#combining-with-shift
     const flipMiddleware = flip(
       FlipStrategy[
         placementUpdate === true ? "default" : placementUpdate || "default"
-      ],
+      ]
     );
     const shiftMiddleware = shift({
       mainAxis: true,
       crossAxis: placementUpdate === true,
     });
-
     if (placement.includes("-")) {
       middlewareArray.push(flipMiddleware, shiftMiddleware);
     } else {
       middlewareArray.push(shiftMiddleware, flipMiddleware);
     }
 
-    // arrow() should generally be placed toward the end of the middleware array
+    middlewareArray.push(
+      size({
+        padding: viewportPadding, // Use the padding here too
+        apply({ rects, elements, availableHeight }) {
+          const minHeightValue = minHeight || 0;
+          Object.assign(elements.floating.style, {
+            // We floor it to prevent sub-pixel ResizeObserver loops
+            maxHeight: `${Math.floor(Math.max(minHeightValue, availableHeight))}px`,
+            width: getWidth(width, rects.reference.width),
+            minWidth: getWidth(minWidth, rects.reference.width),
+            maxWidth: getWidth(maxWidth, rects.reference.width),
+          });
+        },
+      })
+    );
+
     if (arrowProps) {
-      middlewareArray.push(
-        // eslint-disable-next-line react-hooks/refs
-        arrow({
-          element: arrowRef,
-        }),
-      );
+      // eslint-disable-next-line react-hooks/refs
+      middlewareArray.push(arrow({ element: arrowRef }));
     }
+
     return middlewareArray;
   }, [
     safeOffsetMain,
     offsetCross,
-    placementUpdate,
     placement,
+    placementUpdate,
     arrowProps,
     minHeight,
     viewportPadding,
@@ -412,7 +415,7 @@ function FloatingPrimitiveBase(
       const cleanup = autoUpdate(
         floating.elements.reference,
         floating.elements.floating,
-        floating.update,
+        floating.update
       );
       return cleanup;
     }
@@ -483,9 +486,8 @@ function FloatingPrimitiveBase(
       <FloatingPortal>
         {safeTrigger !== "hover" && !hideBackdrop && controlled.open ? (
           <FloatingOverlay
-            // z_overlay (z-index) should be synced with Modal.module.css
             className={classNames({
-              [zIndex || "z_overlay"]: true,
+              [zIndex || "z-overlay"]: true,
             })}
             onClick={(event) => {
               event.preventDefault();
@@ -511,7 +513,7 @@ function FloatingPrimitiveBase(
                 setTimeout(() => {
                   onMount(
                     floating.refs.reference.current as HTMLElement,
-                    node as HTMLElement,
+                    node as HTMLElement
                   );
                 }, 0);
               }
@@ -521,10 +523,9 @@ function FloatingPrimitiveBase(
           style={
             controlled.open ? floating.floatingStyles : { display: "none" }
           }
-          // z_overlay (z-index) should be synced with Modal.module.css
           className={classNames({
             [className || ""]: !!className,
-            [zIndex || "z_overlay"]: true,
+            [zIndex || "z-overlay"]: true,
           })}
           id={componentId}
         >
@@ -558,7 +559,7 @@ function FloatingPrimitiveBase(
               "data-state": controlled.open ? "open" : "closed",
               ...refProps,
             },
-            floating.refs.setReference,
+            floating.refs.setReference
           )}
         </Fragment>
       ) : null}

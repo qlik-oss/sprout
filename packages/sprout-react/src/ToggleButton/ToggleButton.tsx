@@ -47,7 +47,7 @@ function BaseToggleButton(
     onChange,
     ...props
   }: ToggleButtonProps,
-  ref?: Ref<HTMLButtonElement>,
+  ref?: Ref<HTMLButtonElement>
 ) {
   const controlled = useToggle({
     onChange,

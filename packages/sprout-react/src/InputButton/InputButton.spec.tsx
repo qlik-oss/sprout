@@ -33,7 +33,7 @@ Object.values(inputButtonSize).forEach((size) => {
           loading
           size={size === "s" ? "s" : undefined}
         />
-      </div>,
+      </div>
     );
 
     const component = page.getByRole("button");
@@ -71,7 +71,7 @@ test("should display label when hovering over input button", async ({
       <Tooltip title="Title" placement="right">
         <InputButton aria-label="Label" onClick={() => {}} />
       </Tooltip>
-    </div>,
+    </div>
   );
 
   const component = page.getByRole("button");
@@ -99,7 +99,7 @@ test("should be accessible when using with aria-label", async ({
       id="component-testing"
     >
       <InputButton aria-label="Aria Label" onClick={() => {}} />
-    </div>,
+    </div>
   );
 
   const component = page.getByRole("button");
@@ -128,7 +128,7 @@ test("should support ref forwarding with aria-label", async ({
       <Tooltip title="Title" placement="right">
         <InputButton aria-label="Aria Label" onClick={() => {}} />
       </Tooltip>
-    </div>,
+    </div>
   );
 
   const component = page.getByRole("button");
@@ -149,7 +149,7 @@ test("should return button as event target", async ({ mount, page }) => {
       onMouseDown={(t) => {
         type = t;
       }}
-    />,
+    />
   );
 
   // Simulate a onMouseDown event
@@ -168,7 +168,7 @@ test("should return event on click", async ({ mount, page }) => {
         eventReceived = event;
       }}
       aria-label="clear"
-    />,
+    />
   );
 
   const component = page.getByRole("button");

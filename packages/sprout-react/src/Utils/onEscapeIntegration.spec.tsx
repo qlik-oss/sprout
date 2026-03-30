@@ -74,7 +74,7 @@ test(`should close on escape`, async ({ mount, page }) => {
           </Select.Multi>
         </div>
       </Modal>
-    </div>,
+    </div>
   );
   const hello = await page.getByText("Hello world");
   const modal = await page.getByRole("dialog");

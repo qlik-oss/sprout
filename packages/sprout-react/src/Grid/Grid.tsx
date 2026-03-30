@@ -5,8 +5,8 @@ import {
   forwardRef,
 } from "react";
 
-import type { ViewportSize } from "@qlik/sprout-css-modules";
 import { useMedia } from "@qlik/sprout-react-hooks";
+import type { ViewportSize } from "@qlik/sprout-css-modules";
 
 import { classNames } from "../classNames";
 
@@ -51,7 +51,7 @@ function Container(
     className,
     ...props
   }: ContainerProps,
-  ref: ForwardedRef<HTMLDivElement>,
+  ref: ForwardedRef<HTMLDivElement>
 ) {
   const media = useMedia();
   const gapClass =
@@ -95,7 +95,7 @@ function Container(
  */
 function Column(
   { s, m, l, xl, className, children, ...props }: ColumnProps,
-  ref: ForwardedRef<HTMLDivElement>,
+  ref: ForwardedRef<HTMLDivElement>
 ) {
   const media = useMedia();
 
@@ -109,7 +109,7 @@ function Column(
           l,
           xl,
         },
-        className,
+        className
       )}
       {...props}
     >

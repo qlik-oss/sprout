@@ -1,5 +1,33 @@
 # @qlik/eslint-config-sprout
 
+## 1.0.10
+
+### Patch Changes
+
+- fa3b311: fix: upgrade dependencies
+- 8167c00: fix: repository metadata
+- Updated dependencies [fa3b311]
+- Updated dependencies [8167c00]
+  - @qlik/eslint-plugin-sprout@1.1.5
+
+## 1.0.9
+
+### Patch Changes
+
+- c038242: chore: use oxfmt and format all the files
+- 91a07fe: chore: update dependencies
+- Updated dependencies [c038242]
+- Updated dependencies [91a07fe]
+  - @qlik/eslint-plugin-sprout@1.1.4
+
+## 1.0.8
+
+### Patch Changes
+
+- 494cc52: chore: update npm dependencies
+- Updated dependencies [494cc52]
+  - @qlik/eslint-plugin-sprout@1.1.3
+
 ## 1.0.7
 
 ### Patch Changes

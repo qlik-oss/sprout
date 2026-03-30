@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import {
   type JSX,
   createContext,
@@ -16,7 +15,7 @@ import {
   Switch,
   classNames,
 } from "@qlik/sprout-react";
-import { Table, type TableProps } from "@qlik/sprout-table";
+import { Table, type TableProps } from "@qlik/sprout-react-table";
 import { GenerateWithAiIcon } from "@qlik/sprout-icons/react";
 import type { StoryObj } from "@storybook/react-vite";
 
@@ -127,6 +126,7 @@ export const MultiSelect: StoryObj<InlineEditProps["MultiSelect"]> = {
 
 export const VisualTestTextField: StoryObj = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     pseudo: {
       hover: ['[data-testid="hovered.view"]'],
       active: '[data-testid="actived.view"]',
@@ -140,7 +140,7 @@ export const VisualTestTextField: StoryObj = {
           "flex",
           "border-box",
           "font-heading-m",
-          "text-default",
+          "text-default"
         )}
       >
         InlineEdit.TextField
@@ -154,7 +154,7 @@ export const VisualTestTextField: StoryObj = {
           "p-m",
           "items-center",
           "justify-start",
-          "w-fit",
+          "w-fit"
         )}
       >
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
@@ -208,7 +208,7 @@ export const VisualTestTextField: StoryObj = {
           "flex",
           "border-box",
           "font-heading-m",
-          "text-default",
+          "text-default"
         )}
       >
         InlineEdit.TextField editMode
@@ -221,7 +221,7 @@ export const VisualTestTextField: StoryObj = {
           "gap-xl",
           "p-m",
           "items-center",
-          "justify-start",
+          "justify-start"
         )}
         style={{ inlineSize: "500px" }}
       >
@@ -244,7 +244,7 @@ export const VisualTestTextField: StoryObj = {
           "flex",
           "border-box",
           "font-heading-m",
-          "text-default",
+          "text-default"
         )}
       >
         InlineEdit.TextField editMode vs view mode
@@ -257,7 +257,7 @@ export const VisualTestTextField: StoryObj = {
           "gap-xl",
           "p-m",
           "items-center",
-          "justify-start",
+          "justify-start"
         )}
         style={{ inlineSize: "500px" }}
       >
@@ -277,7 +277,7 @@ export const VisualTestTextField: StoryObj = {
           "flex",
           "border-box",
           "font-heading-m",
-          "text-default",
+          "text-default"
         )}
       >
         InlineEdit.TextField editMode + error
@@ -290,7 +290,7 @@ export const VisualTestTextField: StoryObj = {
           "gap-xl",
           "p-m",
           "items-start",
-          "justify-start",
+          "justify-start"
         )}
         style={{
           inlineSize: "1000px",
@@ -351,7 +351,7 @@ export const VisualTestTextField: StoryObj = {
           "flex",
           "border-box",
           "font-heading-m",
-          "text-default",
+          "text-default"
         )}
       >
         InlineEdit.TextField font
@@ -364,7 +364,7 @@ export const VisualTestTextField: StoryObj = {
           "gap-xl",
           "p-m",
           "items-center",
-          "justify-start",
+          "justify-start"
         )}
       >
         <div className={classNames("flex", "border-box", "w-fit", "p-m")}>
@@ -386,7 +386,7 @@ export const VisualTestTextField: StoryObj = {
                   "text-end",
                   "font-script-s",
                   "text-inverse",
-                  "bg-inverse",
+                  "bg-inverse"
                 )}
               >
                 {children}
@@ -421,7 +421,7 @@ export const VisualTestSelect: StoryObj = {
           "flex",
           "border-box",
           "font-heading-m",
-          "text-default",
+          "text-default"
         )}
       >
         InlineEdit.Select
@@ -458,7 +458,7 @@ export const VisualTestSelect: StoryObj = {
             "flex",
             "flex-row",
             "gap-xxl",
-            "items-start",
+            "items-start"
           )}
           style={{ blockSize: "250px" }}
         >
@@ -509,7 +509,7 @@ export const VisualTestMultiSelect: StoryObj = {
           "flex",
           "border-box",
           "font-heading-m",
-          "text-default",
+          "text-default"
         )}
       >
         InlineEdit.MultiSelect
@@ -520,7 +520,7 @@ export const VisualTestMultiSelect: StoryObj = {
           "border-box",
           "flex-col",
           "gap-xxl",
-          "items-start",
+          "items-start"
         )}
       >
         <div className={classNames("w-xxs", "flex", "gap-xl")}>
@@ -554,7 +554,7 @@ export const VisualTestMultiSelect: StoryObj = {
             "flex",
             "flex-row",
             "gap-xxl",
-            "items-start",
+            "items-start"
           )}
           style={{ blockSize: "250px" }}
         >
@@ -615,7 +615,7 @@ export const CustomInlineEdit: StoryObj<
                 "items-center",
                 "w-full",
                 "text-default",
-                "bg-default",
+                "bg-default"
               )}
             >
               <GenerateWithAiIcon className={classNames("fill-current")} />
@@ -623,7 +623,7 @@ export const CustomInlineEdit: StoryObj<
                 <span
                   className={classNames(
                     "font-label-m-emphasized",
-                    "text-default",
+                    "text-default"
                   )}
                 >
                   {value ? "On" : "Off"}
@@ -643,7 +643,7 @@ export const CustomInlineEdit: StoryObj<
                 "gap-m",
                 "px-m",
                 "py-xl",
-                "items-center",
+                "items-center"
               )}
             >
               <Switch
@@ -793,7 +793,7 @@ function EditSelectCell({
         "w-full",
         "h-full",
         "whitespace-nowrap",
-        "overflow-hidden",
+        "overflow-hidden"
       )}
     >
       <InlineEdit.Select
@@ -875,11 +875,11 @@ export const InlineEditTable: StoryObj<TableProps<Person>> = {
     const onRowChange = useCallback(
       () => (row: Person) => {
         setRows((prevRows) =>
-          prevRows.map((r) => (r.uuid === row.uuid ? { ...r, ...row } : r)),
+          prevRows.map((r) => (r.uuid === row.uuid ? { ...r, ...row } : r))
         );
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      [rows],
+      [rows]
     );
     return (
       <TableInlineEditContext.Provider

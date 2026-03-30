@@ -1,9 +1,32 @@
-import type { BorderToken, BoxShadowToken, Token, TokenType, TypographyToken } from "./token-set";
+import type {
+  BorderToken,
+  BoxShadowToken,
+  Token,
+  TokenType,
+  TypographyToken,
+} from "./token-set";
 
 export type StandardTShirtSize = "s" | "m" | "l";
-export type TShirtSize = "xs" | StandardTShirtSize | "xl" | "xxl" | "3xl" | "4xl";
-export type Intensity = "weak" | "default" | "moderate" | "strong" | "extra-strong";
-export type AugmentationKey = "weak" | "hover" | "pressed" | "toggled" | "disabled" | "inverse";
+export type TShirtSize =
+  | "xs"
+  | StandardTShirtSize
+  | "xl"
+  | "xxl"
+  | "3xl"
+  | "4xl";
+export type Intensity =
+  | "weak"
+  | "default"
+  | "moderate"
+  | "strong"
+  | "extra-strong";
+export type AugmentationKey =
+  | "weak"
+  | "hover"
+  | "pressed"
+  | "toggled"
+  | "disabled"
+  | "inverse";
 export type ValidTokenTypes = string | TokenType;
 
 export type CoreTokenModuleKey = "core";
@@ -23,7 +46,9 @@ export type TokenModuleKey =
 
 export type ValidTokenType = string | TokenType;
 
-export type GenericTokenModule = { [key: string]: GenericTokenModule | ValidTokenType };
+export type GenericTokenModule = {
+  [key: string]: GenericTokenModule | ValidTokenType;
+};
 
 export type TokenModuleBase = {
   name: string;
@@ -55,10 +80,11 @@ export type RoundnessTokenModuleTokens<T extends ValidTokenTypes> = {
   "element-corners": Token<ElementCornerSetting> | ElementCornerSetting;
 };
 
-export type RoundnessTokenModule<T extends ValidTokenTypes> = TokenModuleBase & {
-  module: RoundnessTokenModuleKey;
-  tokens: RoundnessTokenModuleTokens<T>;
-};
+export type RoundnessTokenModule<T extends ValidTokenTypes> =
+  TokenModuleBase & {
+    module: RoundnessTokenModuleKey;
+    tokens: RoundnessTokenModuleTokens<T>;
+  };
 
 // --- Typography ---
 export type HeaderAndBodyTokenSize = Exclude<TShirtSize, "3xl" | "4xl">;
@@ -71,7 +97,9 @@ export type DefaultAndEmphasizedModuleToken = {
 export type FontTokenModuleTokens = {
   heading: { [key in HeaderAndBodyTokenSize]: TypographyToken };
   body: { [key in HeaderAndBodyTokenSize]: TypographyToken };
-  label: { [key in "xs" & StandardTShirtSize]: DefaultAndEmphasizedModuleToken };
+  label: {
+    [key in "xs" & StandardTShirtSize]: DefaultAndEmphasizedModuleToken;
+  };
   code: { m: DefaultAndEmphasizedModuleToken };
 };
 
@@ -100,7 +128,9 @@ export type Augmentation<T extends ValidTokenTypes> = {
   [key in AugmentationKey]: T;
 };
 
-export type AdditionalBackgrounds<T extends ValidTokenTypes> = { [key in AdditionalBackgroundTypes]: T };
+export type AdditionalBackgrounds<T extends ValidTokenTypes> = {
+  [key in AdditionalBackgroundTypes]: T;
+};
 export type IntensityBackgrounds<T extends ValidTokenTypes> = {
   [key in Exclude<Intensity, "extra-strong">]: T;
 };
@@ -144,10 +174,11 @@ export type ApperanceTokenModuleTokens<T extends ValidTokenTypes> = {
   };
 };
 
-export type AppearanceTokenModule<T extends ValidTokenTypes> = TokenModuleBase & {
-  module: AppearanceTokenModuleKey;
-  tokens: ApperanceTokenModuleTokens<T>;
-};
+export type AppearanceTokenModule<T extends ValidTokenTypes> =
+  TokenModuleBase & {
+    module: AppearanceTokenModuleKey;
+    tokens: ApperanceTokenModuleTokens<T>;
+  };
 
 // --- Chart appearance ---
 
@@ -167,10 +198,11 @@ export type ChartAppearanceTokenModuleTokens<T extends ValidTokenTypes> = {
   };
 };
 
-export type ChartAppearanceTokenModule<T extends ValidTokenTypes> = TokenModuleBase & {
-  module: ChartAppearanceTokenModuleKey;
-  tokens: ChartAppearanceTokenModuleTokens<T>;
-};
+export type ChartAppearanceTokenModule<T extends ValidTokenTypes> =
+  TokenModuleBase & {
+    module: ChartAppearanceTokenModuleKey;
+    tokens: ChartAppearanceTokenModuleTokens<T>;
+  };
 
 // --- Core ---
 export type SizingTokenSize = Exclude<TShirtSize, "4xl">;
@@ -200,12 +232,18 @@ export type TokenModule<T extends ValidTokenTypes> =
   | AppearanceTokenModule<T>
   | ChartAppearanceTokenModule<T>;
 
-export type CoreModule<T extends ValidTokenTypes> = { [key in CoreTokenModuleKey]: CoreTokenModuleTokens<T> };
-export type DensityModule<T extends ValidTokenTypes> = { [key in DensityTokenModuleKey]: DensityTokenModuleTokens<T> };
+export type CoreModule<T extends ValidTokenTypes> = {
+  [key in CoreTokenModuleKey]: CoreTokenModuleTokens<T>;
+};
+export type DensityModule<T extends ValidTokenTypes> = {
+  [key in DensityTokenModuleKey]: DensityTokenModuleTokens<T>;
+};
 export type RoundnessModule<T extends ValidTokenTypes> = {
   [key in RoundnessTokenModuleKey]: RoundnessTokenModuleTokens<T>;
 };
-export type TypographyModule = { [key in TypographyTokenModuleKey]: TypographyTokenModule };
+export type TypographyModule = {
+  [key in TypographyTokenModuleKey]: TypographyTokenModule;
+};
 export type AppearanceModule<T extends ValidTokenTypes> = {
   [key in AppearanceTokenModuleKey]: AppearanceTokenModule<T>;
 };

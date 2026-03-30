@@ -36,7 +36,7 @@ test("Slider.Single should be accessible", async ({ mount, page }) => {
   await expect(slider).toHaveAttribute("aria-valuemax");
   await expect(slider).toHaveAttribute(
     "aria-labelledby",
-    `${labelId}-0 ${labelId}`,
+    `${labelId}-0 ${labelId}`
   );
   await expect(slider).toHaveAttribute("aria-orientation", "horizontal");
 
@@ -124,11 +124,11 @@ test("Slider.Range should be accessible", async ({ mount, page }) => {
   // both grips should have aria-labelledby that matches the label aria-valuenow which should be different for each grip
   await expect(slider1).toHaveAttribute(
     "aria-labelledby",
-    `${labelId}-0 ${labelId}`,
+    `${labelId}-0 ${labelId}`
   );
   await expect(slider2).toHaveAttribute(
     "aria-labelledby",
-    `${labelId}-1 ${labelId}`,
+    `${labelId}-1 ${labelId}`
   );
 
   const value1 = await slider1.getAttribute("aria-valuenow");
@@ -272,12 +272,11 @@ test("Slider.Range should support controlled usage", async ({
 
 test("Slider.Range should merge overlapping value labels (horizontal)", async ({
   mount,
-  page,
 }) => {
   const mounted = await mount(
     <div style={{ inlineSize: 320 }}>
       <RangeSliderTest value={[49, 50]} />
-    </div>,
+    </div>
   );
 
   const component = mounted.getByTestId("wrapper");
@@ -294,12 +293,11 @@ test("Slider.Range should merge overlapping value labels (horizontal)", async ({
 
 test("Slider.Range should merge overlapping value labels (vertical)", async ({
   mount,
-  page,
 }) => {
   const mounted = await mount(
     <div style={{ blockSize: 320 }}>
       <RangeSliderTest value={[49, 50]} orientation="vertical" />
-    </div>,
+    </div>
   );
 
   const component = mounted.getByTestId("wrapper");

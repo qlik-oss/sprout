@@ -43,7 +43,7 @@ test("should link the accordion and keep only one opened", async ({
           bibendum. Proin erat ipsum, tempus in aliquet sed, auctor id sem
         </p>
       </Accordion.Item>
-    </Accordion.Container>,
+    </Accordion.Container>
   );
   await expect(component).toBeVisible();
   await expect(component.getByTestId("first")).not.toBeVisible();
@@ -70,29 +70,29 @@ test("should link the accordion and keep only one opened", async ({
   //aria-controls
   await expect(allHeaders[0]).toHaveAttribute(
     "aria-controls",
-    "AccordionItem__content--first",
+    "AccordionItem__content--first"
   );
   await expect(allHeaders[1]).toHaveAttribute(
     "aria-controls",
-    "AccordionItem__content--second",
+    "AccordionItem__content--second"
   );
   await expect(allHeaders[2]).toHaveAttribute(
     "aria-controls",
-    "AccordionItem__content--third",
+    "AccordionItem__content--third"
   );
 
   // aria-labelledby
   await expect(allPanels[0]).toHaveAttribute(
     "aria-labelledby",
-    "AccordionItem__control--first",
+    "AccordionItem__control--first"
   );
   await expect(allPanels[1]).toHaveAttribute(
     "aria-labelledby",
-    "AccordionItem__control--second",
+    "AccordionItem__control--second"
   );
   await expect(allPanels[2]).toHaveAttribute(
     "aria-labelledby",
-    "AccordionItem__control--third",
+    "AccordionItem__control--third"
   );
 
   // role=region
@@ -138,7 +138,7 @@ test("should isolate the accordion and keep multiple opened", async ({
           bibendum. Proin erat ipsum, tempus in aliquet sed, auctor id sem
         </p>
       </Accordion.Item>
-    </Accordion.Container>,
+    </Accordion.Container>
   );
 
   await expect(component).toBeVisible();
@@ -162,7 +162,7 @@ test('should render header h2 when use headerLevel="2"', async ({ mount }) => {
       <Accordion.Item header="first panel">
         <p data-testid="first">Quisque efficitur, magna</p>
       </Accordion.Item>
-    </Accordion.Container>,
+    </Accordion.Container>
   );
   await expect(component).toBeVisible();
   await expect(component.getByRole("heading", { level: 2 })).toBeVisible();
@@ -207,7 +207,7 @@ test("should manage keyboard navigation with focusable content", async ({
         </p>
         <TextField label="textfield" defaultValue="one two three" />
       </Accordion.Item>
-    </Accordion.Container>,
+    </Accordion.Container>
   );
   const textfield = component.getByRole("textbox");
   await expect(textfield).toBeVisible();
@@ -215,13 +215,13 @@ test("should manage keyboard navigation with focusable content", async ({
   await expect(textfield).toBeFocused();
   // check where is the cursor
   let selectionStart = await textfield.evaluate(
-    (el) => (el as HTMLInputElement).selectionStart,
+    (el) => (el as HTMLInputElement).selectionStart
   );
   expect(selectionStart).toEqual(13);
   await textfield.press("Home");
   await expect(textfield).toBeFocused();
   selectionStart = await textfield.evaluate(
-    (el) => (el as HTMLInputElement).selectionStart,
+    (el) => (el as HTMLInputElement).selectionStart
   );
   expect(selectionStart).toEqual(0);
 });
@@ -249,7 +249,7 @@ test('should let all item opened by default with behavior="isolated" and openedD
           vestibulum enim, quis gravida est urna et ipsum.
         </p>
       </Accordion.Item>
-    </Accordion.Container>,
+    </Accordion.Container>
   );
   await expect(component).toBeVisible();
   // check all panels are opened

@@ -10,7 +10,7 @@ export function PanelTest() {
         "border-box",
         "w-full",
         "p-l",
-        "border-default",
+        "border-default"
       )}
       style={{ blockSize: "300px" }}
       id="component-testing"
@@ -30,7 +30,7 @@ export function PanelTest() {
               "border-box",
               "p-s",
               "font-body-m",
-              "text-default",
+              "text-default"
             )}
           >
             Panel content
@@ -49,7 +49,7 @@ export function PanelResizeTest() {
         "flex-row",
         "border-box",
         "w-full",
-        "border-default",
+        "border-default"
       )}
       style={{ blockSize: "300px" }}
       id="component-testing"
@@ -69,7 +69,7 @@ export function PanelResizeTest() {
               "border-box",
               "p-s",
               "font-body-m",
-              "text-default",
+              "text-default"
             )}
           >
             Panel content

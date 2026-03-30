@@ -45,7 +45,7 @@ export const GRID_CONTENT_CLASSES: Array<AllClasses> = [
 ];
 
 export const CONTENT_PROPS_TOKEN: Array<AllClasses> = CONTENT_CLASSES.filter(
-  (c) => !c.startsWith("border") || c === "border-box",
+  (c) => !c.startsWith("border") || c === "border-box"
 );
 
 export const PROPERTY_ROW_PROPS: Array<AllClasses> = [
@@ -97,7 +97,7 @@ export function Item({ children }: { children: ReactNode }) {
         "items-center",
         "p-m",
         "font-body-s",
-        "text-default",
+        "text-default"
       )}
     >
       {children}

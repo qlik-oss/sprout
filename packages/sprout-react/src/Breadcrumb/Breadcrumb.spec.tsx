@@ -7,7 +7,7 @@ test("should be a11y", async ({ page, mount }) => {
   await mount(
     <div id="component-testing">
       <BreadcrumbTest />
-    </div>,
+    </div>
   );
   const accessibilityScanResults = await getAxeReport(page);
   expect(accessibilityScanResults.violations).toEqual([]);

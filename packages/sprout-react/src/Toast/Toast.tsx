@@ -8,8 +8,8 @@ import {
   useState,
 } from "react";
 
-import { CloseIcon } from "@qlik/sprout-icons/react";
 import { useId } from "@qlik/sprout-react-hooks";
+import { CloseIcon } from "@qlik/sprout-icons/react";
 
 import type { AlertInlineSeverity } from "../AlertInline";
 import { Button, type ButtonProps, IconButton } from "../Button";
@@ -57,7 +57,7 @@ function ToastBase(
     "data-testid": dataTestId,
     ...props
   }: ToastProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const [show, setShow] = useState(false);
   const dialogRef = useRef<HTMLDivElement | null>(null);
@@ -149,7 +149,7 @@ function ToastBase(
           [style.show]: show,
           "pl-xl": !severity,
           "pr-xl": !onClose && !action,
-        },
+        }
       )}
     >
       <div
@@ -159,7 +159,7 @@ function ToastBase(
           "flex-row",
           "gap-s",
           "items-center",
-          "relative",
+          "relative"
         )}
       >
         {!!severity && (
@@ -172,7 +172,7 @@ function ToastBase(
               style.severity_icon,
               {
                 "self-start": !!title || (!!message && !title),
-              },
+              }
             )}
           >
             {SEVERITY_ICONS[severity]}
@@ -185,7 +185,7 @@ function ToastBase(
                 "flex",
                 "flex-row",
                 "gap-s",
-                "items-center",
+                "items-center"
               )}
             >
               <strong
@@ -193,7 +193,7 @@ function ToastBase(
                   "w-full",
                   "font-label-xs-emphasized",
                   "truncate",
-                  "my-s",
+                  "my-s"
                 )}
                 id={titleId}
                 data-testid={dataTestId ? `${dataTestId}-title` : undefined}
@@ -209,7 +209,7 @@ function ToastBase(
                 "flex",
                 "flex-row",
                 "items-center",
-                "gap-s",
+                "gap-s"
               )}
             >
               <p
@@ -221,7 +221,7 @@ function ToastBase(
                   {
                     "mb-s": !!title,
                     "mr-s": !!onClose,
-                  },
+                  }
                 )}
                 id={descriptionId}
                 data-testid={dataTestId ? `${dataTestId}-message` : undefined}
@@ -241,7 +241,7 @@ function ToastBase(
                 {
                   "mb-s": !!title,
                   "mr-s": !!onClose,
-                },
+                }
               )}
               id={descriptionId}
               data-testid={dataTestId ? `${dataTestId}-message` : undefined}

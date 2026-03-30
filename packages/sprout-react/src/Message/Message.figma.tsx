@@ -28,5 +28,5 @@ figma.connect(
       }),
     },
     example: ({ ...props }) => <Message {...props} />,
-  },
+  }
 );

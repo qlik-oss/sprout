@@ -57,7 +57,7 @@ figma.connect(
     example: ({ label, helpText, ...props }) => (
       <TextField label={label.text} helpText={helpText.text} {...props} />
     ),
-  },
+  }
 );
 
 figma.connect(
@@ -96,5 +96,5 @@ figma.connect(
     example: ({ label, ...props }) => (
       <TextField label={label.text} type="search" {...props} />
     ),
-  },
+  }
 );

@@ -1,15 +1,26 @@
-import { expandTypesMap, register } from "@tokens-studio/sd-transforms";
 import { rm } from "node:fs/promises";
 import path from "node:path";
 import { cwd } from "process";
 import StyleDictionary, { type Config } from "style-dictionary";
+
+import { expandTypesMap, register } from "@tokens-studio/sd-transforms";
+
 import { getConfig } from "../config";
 import { CustomDataVariables } from "../style-dictionary/custom-formats";
 import { referencesCssVarsSproutRefs } from "../style-dictionary/custom-transforms";
 import { concatFiles } from "../util/file-concat-utils";
-import { commonFilterFn, commonShorthandFilterFn, includeTokenSetsFn, sourceTokenSetsFn } from "../util/path";
+import {
+  commonFilterFn,
+  commonShorthandFilterFn,
+  includeTokenSetsFn,
+  sourceTokenSetsFn,
+} from "../util/path";
 import { runStyleDictionnaryBuild } from "../util/run";
-import { commonTransforms, shorthandTransforms, transformerOptions } from "../util/transforms";
+import {
+  commonTransforms,
+  shorthandTransforms,
+  transformerOptions,
+} from "../util/transforms";
 import type { ActionOptions } from "./options";
 
 export async function action(opts: ActionOptions) {
@@ -69,10 +80,13 @@ export async function action(opts: ActionOptions) {
     // compile files to a single css file
     await concatFiles(
       path.resolve(CWD, opts.output, "css/tmp"),
-      path.resolve(CWD, opts.output, "css/sprout-tokens.css"),
+      path.resolve(CWD, opts.output, "css/sprout-tokens.css")
     );
   } catch (error) {
     console.error("Error during CSS generation:", error);
   }
-  await rm(path.resolve(CWD, opts.output, "css/tmp"), { recursive: true, force: true });
+  await rm(path.resolve(CWD, opts.output, "css/tmp"), {
+    recursive: true,
+    force: true,
+  });
 }

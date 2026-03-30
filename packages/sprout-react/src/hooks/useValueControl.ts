@@ -24,13 +24,13 @@ export function useValueControl<P extends Record<string, any>>(
     valueKey = "value",
     onChangeKey = "onChange",
     selector = (event: any) => event.target.value,
-  }: UseValueControlOptions<P> = {},
+  }: UseValueControlOptions<P> = {}
 ): Partial<P> {
   const isControlled = typeof props[valueKey] !== "undefined";
   const defaultValue = props[defaultValueKey];
   const hasDefaultValue = typeof defaultValue !== "undefined";
   const [internalValue, setInternalValue] = useState<string>(
-    hasDefaultValue ? defaultValue : "",
+    hasDefaultValue ? defaultValue : ""
   );
   const value = isControlled ? props[valueKey] : internalValue;
   const onChangeProp = props[onChangeKey];
@@ -46,7 +46,7 @@ export function useValueControl<P extends Record<string, any>>(
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [isControlled, onChangeProp],
+    [isControlled, onChangeProp]
   );
 
   if (isControlled) {

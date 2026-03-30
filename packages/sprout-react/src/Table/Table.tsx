@@ -20,7 +20,7 @@ const containerFlex = classNames(
   "flex-row",
   "border-box",
   "size-full",
-  "flex-nowrap",
+  "flex-nowrap"
 );
 
 /**
@@ -43,7 +43,7 @@ function TableBase(
     overflowY,
     ...props
   }: TableProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const [scrollBarWidth, setScrollBarWidth] = useState(0);
   const contextValue = useMemo(() => {
@@ -77,7 +77,7 @@ function TableBase(
             "size-full",
             "radius-subtle",
             "shrink-0",
-            className.table,
+            className.table
           )}
           ref={ref}
           style={{

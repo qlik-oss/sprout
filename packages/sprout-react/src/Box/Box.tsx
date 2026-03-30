@@ -54,16 +54,16 @@ export function getBoxProps(
     typography,
     ...props
   }: BoxPropsOnly & { className?: string; style?: CSSProperties },
-  opt: FlexArgs = { apply: true },
+  opt: FlexArgs = { apply: true }
 ) {
   const { className, ...boxProps } = getOverflowProps(
     getBoxShadow(
       getBackgroundProps(
         getBorderProps(
-          getFlexProps(getPaddingProps(getInlineStyleProps(props)), opt),
-        ),
-      ),
-    ),
+          getFlexProps(getPaddingProps(getInlineStyleProps(props)), opt)
+        )
+      )
+    )
   );
 
   return {

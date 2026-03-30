@@ -8,7 +8,7 @@ test(`should img be accessible img`, async ({ mount, page }) => {
     <Avatar
       id="component-testing"
       img={{ src: "https://nohost/img/123", alt: "alternative text" }}
-    />,
+    />
   );
 
   const img = component.getByRole("img");
@@ -47,7 +47,7 @@ test("should not shrink", async ({ mount, page }) => {
   await mount(
     <div style={{ inlineSize: "10px" }}>
       <Avatar text="AB" />
-    </div>,
+    </div>
   );
   const avatar = page.getByText("AB");
   await expect(avatar).toBeVisible();

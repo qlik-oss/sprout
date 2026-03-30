@@ -136,7 +136,7 @@ test("renders with optional in zh-TW", async ({ page, mount }) => {
 
 test("renders with info tooltip", async ({ mount }) => {
   const component = await mount(
-    <FieldLabel label="Test Label" infoIconTooltip="My info to display" />,
+    <FieldLabel label="Test Label" infoIconTooltip="My info to display" />
   );
   // THEN the tooltip info button should be rendered
   await expect(component.getByTestId("info-tooltip-button")).toBeVisible();
@@ -144,7 +144,7 @@ test("renders with info tooltip", async ({ mount }) => {
 
 test("renders with info popover", async ({ mount }) => {
   const component = await mount(
-    <FieldLabel label="Test Label" infoIconPopover="My info to display" />,
+    <FieldLabel label="Test Label" infoIconPopover="My info to display" />
   );
   // THEN the popover info button should be rendered
   await expect(component.getByTestId("info-popover-button")).toBeVisible();
@@ -158,7 +158,7 @@ test("should not render both info tooltip and info popover", async ({
       label="Test Label"
       infoIconTooltip="My info to display in tooltip"
       infoIconPopover="My info to display in popover"
-    />,
+    />
   );
   // THEN the tooltip info button should be rendered
   await expect(component.getByTestId("info-tooltip-button")).toBeVisible();

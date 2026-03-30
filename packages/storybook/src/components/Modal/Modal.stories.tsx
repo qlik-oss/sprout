@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { forwardRef, useState } from "react";
 import { fn } from "storybook/test";
 
@@ -58,7 +57,7 @@ const ModalStory = forwardRef<HTMLDivElement, ModalProps>(
         {children || "(Default story child)"}
       </Modal>
     );
-  },
+  }
 );
 
 ModalStory.displayName = "Modal";
@@ -72,7 +71,7 @@ function GlobalContent() {
           "flex-col",
           "border-box",
           "gap-m",
-          "py-xl",
+          "py-xl"
         )}
       >
         <TextField label="Name" id="name" />
@@ -631,7 +630,7 @@ export const HeightScenario: StoryObj<Pick<ModalProps, "height">> = {
               "flex-row",
               "grow-1",
               "h-full",
-              "justify-between",
+              "justify-between"
             )}
             data-modal-content
           >
@@ -648,7 +647,7 @@ export const HeightScenario: StoryObj<Pick<ModalProps, "height">> = {
                 "justify-around",
                 "h-full",
                 "overflow-y-scroll",
-                "grow-1",
+                "grow-1"
               )}
             >
               <GlobalContent />

@@ -13,7 +13,9 @@ export type UseMedia = Pick<MediaAPI, "classNames" | "get" | "getViewportSize">;
  * const adaptiveProps = viewport.get<MyProps>({ s: { propA: 'value' }, m: { propA: 'otherValue' } });
  */
 export function useMedia(): UseMedia {
-  const [viewportSize, setViewportSize] = useState(sprout.media.getViewportSize());
+  const [viewportSize, setViewportSize] = useState(
+    sprout.media.getViewportSize()
+  );
   useEffect(() => {
     sprout.media.addListener(setViewportSize);
     return () => {
@@ -28,6 +30,6 @@ export function useMedia(): UseMedia {
       getViewportSize: () => sprout.media.getViewportSize(),
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [viewportSize],
+    [viewportSize]
   );
 }

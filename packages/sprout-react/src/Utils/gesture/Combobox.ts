@@ -204,7 +204,7 @@ export class ComboboxGesture<TValue> {
 
   focusOn(
     info: ReturnType<ComboboxGesture<TValue>["getListInfo"]>,
-    index: number,
+    index: number
   ) {
     if (index < 0 || index > info.lastIndex) {
       return;
@@ -248,7 +248,7 @@ export class ComboboxGesture<TValue> {
       if (info.focusIndex !== -1 && info.focusIndex !== index) {
         (info.all[info.focusIndex] as HTMLElement).setAttribute(
           DATA_ATTRIBUTE,
-          "false",
+          "false"
         );
       }
       // eslint-disable-next-line no-param-reassign

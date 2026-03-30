@@ -87,7 +87,7 @@ export type BadgeProps = BaseBadgeProps &
   NoMixProps<NewApiProps, LegacyApiProps>;
 
 function isLegacyProps(
-  props: BadgeProps,
+  props: BadgeProps
 ): props is BadgeProps & LegacyApiProps {
   return "type" in props;
 }
@@ -98,7 +98,7 @@ function isLegacyProps(
  * @param text - the text content for alphanumeric badges.
  * @param charLimit - maximum character count shown for alphanumeric badges.
  * @param color - the color of the badge, can be info, success, warning, danger, selected or neutral.
- * @param type - @deprecated use `variant` instead.
+ * @param type - deprecated use `variant` instead.
  */
 export function Badge(props: BadgeProps) {
   // eslint-disable-next-line react/destructuring-assignment
@@ -114,7 +114,7 @@ export function Badge(props: BadgeProps) {
     {
       "items-center": isOneCharText,
       "items-start": !isOneCharText,
-    },
+    }
   );
   if (isLegacyProps(props)) {
     const { type, text, color, ...rest } = props as BaseBadgeProps &

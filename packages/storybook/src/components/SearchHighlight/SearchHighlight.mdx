@@ -1,0 +1,39 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Stories from "./SearchHighlight.stories";
+
+<Meta title="Components/SearchHighlight" of={Stories} />
+
+# SearchHighlight
+
+`SearchHighlight` highlights occurrences of a search query inside a string.
+
+## Usage
+
+```tsx
+import {
+  SearchHighlight,
+  type SearchHighlightProps,
+} from "@qlik/sprout-react";
+
+const Example = (props: SearchHighlightProps) => {
+  return (
+    <SearchHighlight {...props} query="search">
+      This is a search result
+    </SearchHighlight>
+  );
+};
+```
+
+## Properties
+
+<Canvas of={Stories.Playground} />
+<Controls of={Stories.Playground} />
+
+## Accessibility
+
+HTML structure
+
+- The wrapper is a `span` containing the full text.
+- Each match is wrapped in a `span` with `role="mark"`.
+- If `activeIndex` is provided, the active match receives `aria-current="true"`.

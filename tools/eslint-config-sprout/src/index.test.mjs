@@ -16,7 +16,13 @@ describe("base ESLint config", () => {
     const rules = specificRules.rules;
 
     expect(rules["no-console"]).toBe("error");
-    expect(rules["@typescript-eslint/consistent-type-definitions"]).toEqual(["error", "type"]);
-    expect(rules["@typescript-eslint/array-type"]).toEqual(["error", { default: "generic" }]);
+    expect(rules["@typescript-eslint/consistent-type-definitions"]).toEqual([
+      "error",
+      "type",
+    ]);
+    expect(rules["@typescript-eslint/array-type"]).toEqual([
+      "error",
+      { default: "generic" },
+    ]);
   });
 });

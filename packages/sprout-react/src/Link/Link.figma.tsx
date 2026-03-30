@@ -24,5 +24,5 @@ figma.connect(
       }),
     },
     example: ({ children, ...props }) => <Link {...props}>{children}</Link>,
-  },
+  }
 );

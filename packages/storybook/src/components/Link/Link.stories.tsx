@@ -48,7 +48,7 @@ export const VisualTest: Story = {
               "items-start",
               "p-s",
               "gap-s",
-              "border-default",
+              "border-default"
             )}
           >
             <Link href="/" font="body_xs">
@@ -74,7 +74,7 @@ export const VisualTest: Story = {
               "items-start",
               "p-s",
               "gap-s",
-              "border-default",
+              "border-default"
             )}
           >
             <Link href="/" font="body_s">
@@ -100,7 +100,7 @@ export const VisualTest: Story = {
               "items-start",
               "p-s",
               "gap-s",
-              "border-default",
+              "border-default"
             )}
           >
             <Link href="/" font="body_m">
@@ -126,7 +126,7 @@ export const VisualTest: Story = {
               "items-start",
               "p-s",
               "gap-s",
-              "border-default",
+              "border-default"
             )}
           >
             <Link href="/" font="body_l">
@@ -152,7 +152,7 @@ export const VisualTest: Story = {
               "items-start",
               "p-s",
               "gap-s",
-              "border-default",
+              "border-default"
             )}
           >
             <Link href="/" font="body_xl">
@@ -178,7 +178,7 @@ export const VisualTest: Story = {
               "items-start",
               "p-s",
               "gap-s",
-              "border-default",
+              "border-default"
             )}
           >
             <Link href="/" font="body_xxl">
@@ -208,7 +208,7 @@ export const VisualTest: Story = {
             "p-s",
             "gap-s",
             "border-default",
-            "text-default",
+            "text-default"
           )}
           style={{ inlineSize: "210px" }}
         >
@@ -255,7 +255,7 @@ export const VisualTest: Story = {
             "p-s",
             "gap-s",
             "border-default",
-            "text-default",
+            "text-default"
           )}
           style={{ inlineSize: "210px" }}
         >
@@ -306,7 +306,7 @@ export const VisualTest: Story = {
               "p-s",
               "border-default",
               "items-center",
-              "w-full",
+              "w-full"
             )}
           >
             <span

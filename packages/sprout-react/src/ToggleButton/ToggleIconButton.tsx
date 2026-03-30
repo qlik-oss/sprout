@@ -42,7 +42,7 @@ function BaseToggleIconButton(
     id,
     ...props
   }: ToggleIconButtonProps,
-  ref?: Ref<HTMLButtonElement>,
+  ref?: Ref<HTMLButtonElement>
 ) {
   const tooltipId = useId();
   const controlled = useToggle({

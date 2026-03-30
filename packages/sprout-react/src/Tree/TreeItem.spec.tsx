@@ -8,7 +8,7 @@ test("should be accessible", async ({ page, mount }) => {
     <div id="component-testing">
       <TreeItem id="simple" label="Simple" />
       <TreeItem id="expanded" label="Expanded" expanded />
-    </div>,
+    </div>
   );
 
   const buttons = await content.getByRole("button").all();
@@ -22,7 +22,7 @@ test("should map properties to native attributes", async ({ mount }) => {
   const content = await mount(
     <div id="component-testing">
       <TreeItem id="simple" label="Simple" disabled />
-    </div>,
+    </div>
   );
 
   const button = await content.getByRole("button");
@@ -42,7 +42,7 @@ test("should call onexpand on click", async ({ mount }) => {
         onExpand={onExpand}
         expanded={defaultExpanded}
       />
-    </div>,
+    </div>
   );
 
   const button = await content.getByRole("button");

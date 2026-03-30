@@ -55,7 +55,7 @@ export function Tab({ icon, badge, title, useIconButton, ...props }: TabProps) {
           [style.tab_small]: isSmall,
           "px-l": !isSmall,
           "px-0": isSmall,
-        },
+        }
       )}
       onClick={(e) => context?.onChange(e, props["aria-controls"])}
       type="button"
@@ -70,7 +70,7 @@ export function Tab({ icon, badge, title, useIconButton, ...props }: TabProps) {
           "self-stretch",
           "gap-m",
           "justify-center",
-          style.inner,
+          style.inner
         )}
       >
         {icon}

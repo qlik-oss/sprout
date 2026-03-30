@@ -16,12 +16,12 @@ export type SideNavSectionProps = {
  * @param level - Heading level for the section label (`h2` through `h6`). Defaults to `h2`.
  */
 export const SideNavSection = forwardRef<HTMLDivElement, SideNavSectionProps>(
-  SideNavSectionBase,
+  SideNavSectionBase
 );
 
 function SideNavSectionBase(
   { label, level, children, ...props }: SideNavSectionProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const id = useId();
   const Title = level || "h2";
@@ -39,7 +39,7 @@ function SideNavSectionBase(
             "py-l",
             "px-xl",
             "font-label-s-emphasized",
-            "text-default",
+            "text-default"
           )}
           id={id}
         >

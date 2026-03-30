@@ -1,13 +1,24 @@
-import { expandTypesMap, register } from "@tokens-studio/sd-transforms";
 import { mkdtemp, rm } from "node:fs/promises";
 import path from "node:path";
 import { cwd } from "node:process";
 import type { Config } from "style-dictionary";
 import StyleDictionary from "style-dictionary";
+
+import { expandTypesMap, register } from "@tokens-studio/sd-transforms";
+
 import { getConfig } from "../config";
-import { CSVList, CSVListWithHeader, CustomDataVariables } from "../style-dictionary/custom-formats";
+import {
+  CSVList,
+  CSVListWithHeader,
+  CustomDataVariables,
+} from "../style-dictionary/custom-formats";
 import { concatFiles } from "../util/file-concat-utils";
-import { commonFilterFn, commonShorthandFilterFn, includeTokenSetsFn, sourceTokenSetsFn } from "../util/path";
+import {
+  commonFilterFn,
+  commonShorthandFilterFn,
+  includeTokenSetsFn,
+  sourceTokenSetsFn,
+} from "../util/path";
 import { runStyleDictionnaryBuild } from "../util/run";
 import { shorthandTransforms, transformerOptions } from "../util/transforms";
 import type { ActionOptions } from "./options";
@@ -80,7 +91,10 @@ export async function action(opts: ActionOptions) {
   try {
     await runStyleDictionnaryBuild([csvConfigs]);
     await runStyleDictionnaryBuild([csvCompositeConfigs]);
-    await concatFiles(path.resolve(CWD, tempDirPath, "csv"), path.resolve(CWD, opts.output, "csv/sprout-tokens.csv"));
+    await concatFiles(
+      path.resolve(CWD, tempDirPath, "csv"),
+      path.resolve(CWD, opts.output, "csv/sprout-tokens.csv")
+    );
   } catch (error) {
     console.error("Error during CSV generation:", error);
   }

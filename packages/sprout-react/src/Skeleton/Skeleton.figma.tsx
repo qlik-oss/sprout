@@ -18,5 +18,5 @@ figma.connect(
       }),
     },
     example: (props) => <Skeleton variant={props.variant} />,
-  },
+  }
 );

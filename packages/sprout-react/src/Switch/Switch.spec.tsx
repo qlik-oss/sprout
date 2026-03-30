@@ -79,7 +79,7 @@ test(`should Switch and aria-label be accessible`, async ({ mount, page }) => {
 
 test("should display helpText with label", async ({ mount, page }) => {
   const component = await mount(
-    <UncontrolledSwitchTest label="foo" helpText="This is a help text" />,
+    <UncontrolledSwitchTest label="foo" helpText="This is a help text" />
   );
   const checkbox = page.getByRole("switch");
   const label = page.locator("label", { hasText: "foo" });
@@ -96,7 +96,7 @@ test("should not display helpText without label", async ({ mount, page }) => {
     <UncontrolledSwitchTest
       helpText="This is a help text without a label"
       aria-label="foo"
-    />,
+    />
   );
   const checkbox = page.getByRole("switch");
   const helpText = page.getByText("This is a help text");
@@ -126,7 +126,7 @@ test.describe("Switch with uncontrolled props", () => {
     page,
   }) => {
     await mount(
-      <UncontrolledSwitchTest defaultChecked={false} label="Uncontrolled" />,
+      <UncontrolledSwitchTest defaultChecked={false} label="Uncontrolled" />
     );
     const checkbox = page.getByRole("switch");
 

@@ -76,7 +76,7 @@ function GroupBase(props: GroupProps, ref?: Ref<HTMLDivElement>) {
       name,
       orientation,
     }),
-    [iconOnly, justified, name, orientation],
+    [iconOnly, justified, name, orientation]
   );
 
   return (
@@ -99,7 +99,7 @@ function GroupBase(props: GroupProps, ref?: Ref<HTMLDivElement>) {
               "w-max": !justified,
               "justify-around": !!justified,
               "flex-col": orientation === "vertical",
-            },
+            }
           )}
         >
           {children}

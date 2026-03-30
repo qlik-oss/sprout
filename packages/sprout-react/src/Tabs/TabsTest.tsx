@@ -29,7 +29,7 @@ export function TabTests({
         "border-box",
         "gap-s",
         "p-s",
-        "w-fit",
+        "w-fit"
       )}
       data-testid="wrapper"
     >
@@ -70,7 +70,7 @@ export function TabTests({
 
 export function TabsWithTrackerTest() {
   const [containerWidth, setContainerWidth] = useState(
-    tokens.container_sizing_m,
+    tokens.container_sizing_m
   );
   const [tabTitle, setTabTitle] = useState("Assets");
   return (

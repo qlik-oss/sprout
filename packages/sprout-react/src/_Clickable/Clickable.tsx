@@ -11,12 +11,12 @@ export type ClickableProps = {
 } & HTMLButtonProps;
 
 export const Clickable = forwardRef<HTMLButtonElement, ClickableProps>(
-  ClickableBase,
+  ClickableBase
 );
 
 function ClickableBase(
   { className, disabled, ...props }: ClickableProps,
-  ref?: Ref<HTMLButtonElement>,
+  ref?: Ref<HTMLButtonElement>
 ) {
   return (
     <button
@@ -36,7 +36,7 @@ function ClickableBase(
           [className || ""]: !!className,
           "cursor-default": !!disabled,
           "cursor-pointer": !disabled,
-        },
+        }
       )}
     />
   );

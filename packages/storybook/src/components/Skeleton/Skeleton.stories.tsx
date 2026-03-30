@@ -23,7 +23,7 @@ export const Playground: Story = {
         "p-s",
         "gap-s",
         "h-auto",
-        "w-s",
+        "w-s"
       )}
       data-testid="wrapper"
     >

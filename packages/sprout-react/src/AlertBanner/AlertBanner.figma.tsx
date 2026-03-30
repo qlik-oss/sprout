@@ -33,5 +33,5 @@ figma.connect(
         action={props.action}
       />
     ),
-  },
+  }
 );

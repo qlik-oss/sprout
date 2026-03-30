@@ -6,6 +6,7 @@ import { getAxeReport } from "../PlaywrightUtils";
 import { KEYBOARD_KEYS } from "../Utils/keyboardKeys";
 import {
   MenuBackdropTest,
+  MenuContextualControlled,
   MenuControlledOpenChange,
   MenuControlledOpenState,
   MenuFocusReturnTest,
@@ -45,7 +46,7 @@ test("should menu opened on click", async ({ mount, page }) => {
       >
         <Button label="Open Menu" />
       </Menu.Trigger>
-    </div>,
+    </div>
   );
   const btn = menuEl.getByText("Open Menu");
   await btn.click();
@@ -74,7 +75,7 @@ test("should menu support selectable selected", async ({ page, mount }) => {
       }
     >
       <Button label="Open Menu" />
-    </Menu.Trigger>,
+    </Menu.Trigger>
   );
   const btn = page.getByRole("button");
   await btn.click();
@@ -115,7 +116,7 @@ test("should contextual menu display on right click", async ({
       >
         <h1>Right click on the area</h1>
       </div>
-    </Menu.Contextual>,
+    </Menu.Contextual>
   );
   const area = page.getByTestId("contextual");
   await area.click({ button: "right" });
@@ -143,6 +144,31 @@ test("should contextual menu display on right click", async ({
   const menus = await page.getByRole("menu").all();
   expect(menus.length).toBe(2);
   await expect(page.getByRole("menuitem", { name: "Lorem" })).toBeVisible();
+});
+
+test("should controlled contextual menu works", async ({ mount, page }) => {
+  await mount(<MenuContextualControlled />);
+  const area = page.getByTestId("contextual");
+  const h1 = area.getByRole("heading", {
+    name: "Contextual Menu demo",
+  });
+  await area.click({ button: "right" });
+  const component = page.getByRole("menu");
+  const items = await component.getByRole("menuitem").all();
+  await expect(component).toBeVisible();
+  expect(items.length).toBe(4);
+  const accessibilityScanResults = await getAxeReport(page);
+  expect(accessibilityScanResults.violations).toEqual([]);
+
+  // close the menu when click outside
+  await page.click("body");
+  await expect(component).not.toBeVisible();
+
+  // reopen the menu and close by clicking on menuitem
+  await h1.click({ button: "right" });
+  await expect(component).toBeVisible();
+  await page.click("text=Highlight H1");
+  await expect(component).not.toBeVisible();
 });
 
 test("should manage keyboard navigation", async ({ mount, page }) => {
@@ -208,7 +234,7 @@ test("should propagate className to the wrapper", async ({ mount, page }) => {
       >
         foo
       </div>
-    </Menu.Contextual>,
+    </Menu.Contextual>
   );
   await expect(component).toHaveClass("custom-class");
   await expect(page.getByTestId("contextual")).toBeVisible();
@@ -234,7 +260,7 @@ test('secondary action should have "open in new tab" icon and label', async ({
               window
                 .open(
                   "/?path=/story/components-menu--secondary-action",
-                  "_blank",
+                  "_blank"
                 )
                 ?.focus();
             }}
@@ -243,7 +269,7 @@ test('secondary action should have "open in new tab" icon and label', async ({
       }
     >
       <Button label="Open Menu" />
-    </Menu.Trigger>,
+    </Menu.Trigger>
   );
   const btn = page.getByRole("button");
   await btn.click();
@@ -274,7 +300,7 @@ test("secondary action should display tooltip on the right when set to right", a
       }
     >
       <Button label="Open Menu" />
-    </Menu.Trigger>,
+    </Menu.Trigger>
   );
   const btn = page.getByRole("button");
   await btn.click();
@@ -323,7 +349,7 @@ test("submenu should open on hover", async ({ mount, page }) => {
       }
     >
       <Button label="Open Menu" />
-    </Menu.Trigger>,
+    </Menu.Trigger>
   );
 
   const btn = page.getByRole("button");
@@ -380,7 +406,7 @@ test("should be able to navigate with keyboard between submenu and parent menu",
       }
     >
       <Button label="Open Menu" />
-    </Menu.Trigger>,
+    </Menu.Trigger>
   );
 
   await page.keyboard.press(KEYBOARD_KEYS.TAB);
@@ -471,7 +497,7 @@ test("should be open submenus when hovering between items quickly", async ({
       }
     >
       <Button label="Open Menu" />
-    </Menu.Trigger>,
+    </Menu.Trigger>
   );
 
   const btn = page.getByRole("button");
@@ -568,13 +594,13 @@ test("backdrop should block interaction with background elements", async ({
 
   // Try to hover the external button, should not work because of the backdrop
   await expect(
-    externalButton.hover({ trial: true, timeout: 500 }),
+    externalButton.hover({ trial: true, timeout: 500 })
   ).rejects.toThrow();
   await expect(menu).toBeVisible();
 
   // Try to click the external button, should not work because of the backdrop
   await expect(
-    externalButton.click({ trial: true, timeout: 500 }),
+    externalButton.click({ trial: true, timeout: 500 })
   ).rejects.toThrow();
   await expect(menu).toBeVisible();
 
@@ -640,7 +666,7 @@ test("should only close when interacting with items inside the menu", async ({
       }
     >
       <Button label="Open Menu" />
-    </Menu.Trigger>,
+    </Menu.Trigger>
   );
 
   const btn = page.getByRole("button", { name: "Open Menu", exact: true });
@@ -658,7 +684,7 @@ test("should only close when interacting with items inside the menu", async ({
   // Click on disabled item should not close the menu
   const disabledItem = menu.getByRole("menuitem", { name: "Profile" });
   await expect(
-    disabledItem.click({ trial: true, timeout: 500 }),
+    disabledItem.click({ trial: true, timeout: 500 })
   ).rejects.toThrow();
   await expect(menu).toBeVisible();
 
@@ -670,7 +696,7 @@ test("should only close when interacting with items inside the menu", async ({
   // Click on a divider should not close the menu
   const firstDivider = menu.getByRole("separator");
   await expect(
-    firstDivider.click({ trial: true, timeout: 500 }),
+    firstDivider.click({ trial: true, timeout: 500 })
   ).rejects.toThrow();
   await expect(menu).toBeVisible();
 
@@ -689,7 +715,7 @@ test("should only close when interacting with items inside the menu", async ({
   // Click on divider inside submenu should not close the menu
   const subMenuDivider = subSubMenu.getByRole("separator");
   await expect(
-    subMenuDivider.click({ trial: true, timeout: 500 }),
+    subMenuDivider.click({ trial: true, timeout: 500 })
   ).rejects.toThrow();
   await expect(subSubMenu).toBeVisible();
 
@@ -732,7 +758,7 @@ test("submenu should render to the right of the parent menu when there is space"
       }
     >
       <Button label="Open Menu" />
-    </Menu.Trigger>,
+    </Menu.Trigger>
   );
 
   await page.keyboard.press(KEYBOARD_KEYS.TAB);
@@ -777,7 +803,7 @@ test("should open contextual menu on right click, close current menu, and open n
       >
         <Button label="Right click on me" />
       </div>
-    </Menu.Contextual>,
+    </Menu.Contextual>
   );
 
   const button = page.getByRole("button", { name: "Right click on me" });
@@ -827,7 +853,7 @@ test("should ignore subsequent right click outside when `closeOnRightClickOutsid
       >
         <Button label="Right click on me" />
       </div>
-    </Menu.Contextual>,
+    </Menu.Contextual>
   );
 
   const button = page.getByRole("button", { name: "Right click on me" });
@@ -865,7 +891,7 @@ test("should close menu on right click outside when `closeOnRightClickOutside` i
       }
     >
       <Button label="Open Menu" />
-    </Menu.Trigger>,
+    </Menu.Trigger>
   );
 
   const trigger = page.getByRole("button", { name: "Open Menu" });
@@ -909,7 +935,7 @@ test("should close submenu when clicking on another submenu trigger", async ({
       }
     >
       <Button label="Open Menu" />
-    </Menu.Trigger>,
+    </Menu.Trigger>
   );
 
   const btn = page.getByRole("button", { name: "Open Menu", exact: true });
@@ -945,7 +971,7 @@ test("should close menu and focus trigger on Tab key press", async ({
       }
     >
       <Button label="Open Menu" />
-    </Menu.Trigger>,
+    </Menu.Trigger>
   );
 
   const trigger = page.getByRole("button", { name: "Open Menu" });
@@ -996,7 +1022,7 @@ test("should close submenu and focus parent menu item on Tab key press", async (
       }
     >
       <Button label="Open Menu" />
-    </Menu.Trigger>,
+    </Menu.Trigger>
   );
 
   const trigger = page.getByRole("button", { name: "Open Menu" });

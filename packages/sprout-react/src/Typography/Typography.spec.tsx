@@ -20,28 +20,28 @@ test(`should set the right className`, async ({ mount }) => {
   await expect(comp.getByText("body-xxl")).toHaveClass(/body_xxl/);
 
   await expect(comp.getByText("label-xs", { exact: true })).toHaveClass(
-    /label_xs/,
+    /label_xs/
   );
   await expect(comp.getByText("label-xs-emphasized")).toHaveClass(
-    /label_xs_emphasized/,
+    /label_xs_emphasized/
   );
   await expect(comp.getByText("label-s", { exact: true })).toHaveClass(
-    /label_s/,
+    /label_s/
   );
   await expect(comp.getByText("label-s-emphasized")).toHaveClass(
-    /label_s_emphasized/,
+    /label_s_emphasized/
   );
   await expect(comp.getByText("label-m", { exact: true })).toHaveClass(
-    /label_m/,
+    /label_m/
   );
   await expect(comp.getByText("label-m-emphasized")).toHaveClass(
-    /label_m_emphasized/,
+    /label_m_emphasized/
   );
   await expect(comp.getByText("label-l", { exact: true })).toHaveClass(
-    /label_l/,
+    /label_l/
   );
   await expect(comp.getByText("label-l-emphasized")).toHaveClass(
-    /label_l_emphasized/,
+    /label_l_emphasized/
   );
 
   await expect(comp.getByText("color default")).toHaveClass(/default/);

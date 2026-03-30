@@ -7,7 +7,8 @@ const {
 const ruleName = "sprout/no-hardcoded-values";
 
 const messages = ruleMessages(ruleName, {
-  rejected: (value) => `Expected a token instead of color or size in "${value}"`,
+  rejected: (value) =>
+    `Expected a token instead of color or size in "${value}"`,
   zindex: (value) => `Expected a token instead of hardcoded value "${value}"`,
 });
 
@@ -15,7 +16,14 @@ const meta = {
   url: "https://github.com/qlik-oss/sprout/blob/main/packages/stylelint-config-sprout/src/rules/",
 };
 
-const SIZE_OK_PROP = ["width", "height", "min-width", "min-height", "max-width", "max-height"];
+const SIZE_OK_PROP = [
+  "width",
+  "height",
+  "min-width",
+  "min-height",
+  "max-width",
+  "max-height",
+];
 
 const CSS_COLOR_REGEXP = /#[0-9a-f]{3,6}|rgba?\(.*\)|hsla?\(.*\)/;
 const CSS_SIZE_REGEXP = /[\d.]+(px|em|rem%)/;

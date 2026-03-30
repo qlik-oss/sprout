@@ -10,7 +10,7 @@ export function getTheme(
   // where do we start from
   element?: HTMLElement,
   // that is user preference on the current page (dark light)
-  optionalTheme?: Theme["theme"],
+  optionalTheme?: Theme["theme"]
 ): Theme {
   let parent: Partial<Theme> = {};
 
@@ -19,7 +19,7 @@ export function getTheme(
       theme:
         (
           element.parentElement?.closest(
-            `[data-qlik-theme]`,
+            `[data-qlik-theme]`
           ) as HTMLElement | null
         )?.getAttribute(`data-qlik-theme`) || undefined,
     };

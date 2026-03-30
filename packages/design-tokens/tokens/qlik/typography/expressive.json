@@ -1,0 +1,47 @@
+{
+  "qlik": {
+    "common": {
+      "font-family": {
+        "primary": {
+          "$type": "text",
+          "$value": "Source Sans Pro",
+          "$description": "Primary font family"
+        },
+        "secondary": {
+          "$type": "text",
+          "$value": "Inter",
+          "$description": "Secondary font family"
+        }
+      },
+      "font-weight": {
+        "default": {
+          "$type": "text",
+          "$value": "400"
+        },
+        "emphasized": {
+          "$type": "text",
+          "$value": "600"
+        }
+      }
+    },
+    "code": {
+      "font-family": {
+        "default": {
+          "$type": "text",
+          "$value": "Source Code Pro",
+          "$description": "Default font for code blocks and syntax"
+        }
+      },
+      "font-weight": {
+        "default": {
+          "$type": "text",
+          "$value": "400"
+        },
+        "emphasized": {
+          "$type": "text",
+          "$value": "600"
+        }
+      }
+    }
+  }
+}

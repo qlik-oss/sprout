@@ -22,7 +22,7 @@ export const TextareaNative = forwardRef<
 
 function TextareaNativeBase(
   props: TextareaNativeProps,
-  ref?: Ref<HTMLTextAreaElement>,
+  ref?: Ref<HTMLTextAreaElement>
 ) {
   const {
     id,
@@ -38,7 +38,7 @@ function TextareaNativeBase(
   } = props;
 
   const handleBlur = (
-    event: FocusEvent<HTMLTextAreaElement, HTMLTextAreaElement>,
+    event: FocusEvent<HTMLTextAreaElement, HTMLTextAreaElement>
   ) => {
     if (onBlur) {
       onBlur(event);
@@ -65,7 +65,7 @@ function TextareaNativeBase(
           resize: resizable === true,
           resize_x: resizable === "horizontal",
           resize_y: resizable === "vertical",
-        },
+        }
       )}
     >
       <textarea
@@ -97,7 +97,7 @@ function TextareaNativeBase(
           styles.textarea,
           {
             [styles.textarea_error]: !!hasError,
-          },
+          }
         )}
       />
 
@@ -114,7 +114,7 @@ function TextareaNativeBase(
             "radius-pill",
             "text-danger",
             "right-m",
-            "top-m",
+            "top-m"
           )}
         />
       )}

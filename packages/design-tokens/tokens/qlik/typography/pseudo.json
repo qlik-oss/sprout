@@ -2,10 +2,15 @@
   "qlik": {
     "common": {
       "font-family": {
-        "default": {
+        "primary": {
           "$type": "text",
           "$value": "Libre Barcode 39 Extended Text",
-          "$description": "Default font"
+          "$description": "Primary font family"
+        },
+        "secondary": {
+          "$type": "text",
+          "$value": "Libre Barcode 39 Extended Text",
+          "$description": "Secondary font family"
         }
       },
       "font-weight": {

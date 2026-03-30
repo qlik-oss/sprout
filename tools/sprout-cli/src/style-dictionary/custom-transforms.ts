@@ -10,12 +10,16 @@ export const referencesCssVarsSproutRefs: Transform = {
     return (
       typeof prop.original.$value === "string" &&
       prop.original.$value.match(/\{sprout\./) !== null &&
-      (!prop.original.$extensions || !Object.keys(prop.original.$extensions["studio.tokens"]).length)
+      (!prop.original.$extensions ||
+        !Object.keys(prop.original.$extensions["studio.tokens"]).length)
     );
   },
   transform(prop: DesignToken) {
     return prop.original.$value
       .replaceAll(/\{(sprout\..+?)\}/g, "var(--$1)")
-      .replaceAll(/sprout\.([a-z,-]*)\.([a-z,-]*)\.([a-z,-]*)/g, "sprout-$1-$2-$3"); // turning dot notation to kebab-case
+      .replaceAll(
+        /sprout\.([a-z,-]*)\.([a-z,-]*)\.([a-z,-]*)/g,
+        "sprout-$1-$2-$3"
+      ); // turning dot notation to kebab-case
   },
 };

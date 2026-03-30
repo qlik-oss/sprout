@@ -27,12 +27,12 @@ export type SkeletonProps = HTMLSpanProps & {
  * @param height - The height of the skeleton element.
  */
 export const Skeleton = forwardRef<HTMLSpanElement, SkeletonProps>(
-  SkeletonBase,
+  SkeletonBase
 );
 
 function SkeletonBase(
   { width, height, variant = "text", ...props }: SkeletonProps,
-  ref?: Ref<HTMLSpanElement>,
+  ref?: Ref<HTMLSpanElement>
 ) {
   const style: CSSProperties = {
     inlineSize: width,

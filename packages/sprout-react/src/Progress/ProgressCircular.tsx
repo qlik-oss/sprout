@@ -28,7 +28,7 @@ const CIRCUMFERENCE = {
 
 function getCircleStyle(
   percent: number | undefined,
-  size: ProgressCircularSize = "m",
+  size: ProgressCircularSize = "m"
 ) {
   if (percent) {
     return {

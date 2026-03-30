@@ -1,7 +1,9 @@
 import type { CoreTokenModuleTokens } from "../../token-module";
 import type { SizingTokens, StringToken, TokenType } from "../../token-set";
 
-export function createSizingScaleTokens(sizingTokens: CoreTokenModuleTokens<TokenType>): SizingTokens {
+export function createSizingScaleTokens(
+  sizingTokens: CoreTokenModuleTokens<TokenType>
+): SizingTokens {
   const sizingScaleToken: StringToken = {
     value: "1",
     type: "number",

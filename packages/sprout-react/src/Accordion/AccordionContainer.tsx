@@ -48,7 +48,7 @@ export function AccordionContainer({
   ...props
 }: AccordionContainerProps) {
   const [openedPanelIndex, setOpenedPanelIndex] = useState<number | undefined>(
-    openedDefault,
+    openedDefault
   );
   const ref = useRef<HTMLDivElement>(null);
   const gesture = useListGesture({ getAllItems, getSelectedItems });

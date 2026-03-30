@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { useContainer } from "@qlik/sprout-react-hooks";
 import {
   Button,
@@ -80,7 +79,7 @@ export const Form: Story = {
               "flex-col",
               "border-box",
               "gap-xxl",
-              "py-xl",
+              "py-xl"
             )}
           >
             <TextField
@@ -178,7 +177,7 @@ export const FormWide: Story = {
               "flex-col",
               "border-box",
               "gap-xxl",
-              "py-xl",
+              "py-xl"
             )}
           >
             <TextField
@@ -285,7 +284,7 @@ export const Workflow: Story = {
             "gap-xl",
             "overflow-y-auto",
             "font-body-s",
-            "grow-1",
+            "grow-1"
           )}
         >
           <Grid.Container>
@@ -370,7 +369,7 @@ export const Workflow: Story = {
                 className={classNames(
                   "flex-noreset",
                   "justify-center",
-                  "h-full",
+                  "h-full"
                 )}
               >
                 <Divider orientation="vertical" />

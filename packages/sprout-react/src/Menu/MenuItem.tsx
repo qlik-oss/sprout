@@ -29,7 +29,7 @@ export type MenuItemProps = HTMLButtonProps &
  * @param children - additional content rendered inside the menu item.
  */
 export const MenuItem = forwardRef<HTMLButtonElement, MenuItemProps>(
-  MenuItemBase,
+  MenuItemBase
 );
 
 function MenuItemBase(
@@ -46,7 +46,7 @@ function MenuItemBase(
     variant = "default",
     ...props
   }: MenuItemProps,
-  forwardedRef?: Ref<HTMLButtonElement>,
+  forwardedRef?: Ref<HTMLButtonElement>
 ) {
   const menu = useContext(MenuContext);
   const item = useListItem({ label: disabled ? null : label });

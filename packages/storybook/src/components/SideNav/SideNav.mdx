@@ -8,17 +8,40 @@ import * as Stories from "./SideNav.stories";
 
 Side navigation is typically used as a primary or secondary navigation in a side panel.
 
+## Table of Contents
+
+- [Usage](#usage)
+- [Properties](#properties)
+  - [SideNav.Nav](#sidenavnav)
+  - [SideNav.Section](#sidenavsection)
+  - [SideNav.Item](#sidenavitem)
+  - [SideNav.Link](#sidenavlink)
+- [Compact variant](#compact-variant)
+- [Accessibility](#accessibility)
+
+---
+
+## Usage
+
 ```tsx
-import { SideNav } from "@qlik/sprout-react";
+import { List, ListItem, SideNav } from "@qlik/sprout-react";
 
 <SideNav.Nav>
-  <SideNav.Section label="Default">
-    <List gap="s">
+  <SideNav.Section label="Files">
+    <List gap="density-s">
       <ListItem hasPadding={false} interactive>
         <SideNav.Link
           href="#upload"
-          icon={<CloudUploadIcon {...UNZIED_PROPS} />}
+          icon={<CloudUploadIcon />}
           label="Uploads"
+        />
+      </ListItem>
+      <ListItem hasPadding={false} interactive selected>
+        <SideNav.Link
+          href="#recent"
+          aria-current="page"
+          icon={<HistoryIcon />}
+          label="Recent"
         />
       </ListItem>
     </List>
@@ -26,46 +49,75 @@ import { SideNav } from "@qlik/sprout-react";
 </SideNav.Nav>;
 ```
 
-Note: ListItem need hasPadding={false} when used in SideNav for the sake of composition.
-and this property doesn't appear in the source code panel
+> **Note:** `ListItem` requires `hasPadding={false}` when used inside `SideNav` for correct composition. This prop does not appear in the source code panel.
 
-<Canvas of={Stories.Playground} sourceState="shown" />
+## Properties
 
-## API
+### SideNav.Nav
 
-```typescript
-import {
-  HTMLAnchorProps,
-  HTMLDivProps,
-  type HTMLNavProps,
-  type HTMLSectionProps,
-} from "../htmlTypes";
+<Canvas of={Stories.Nav} />
+<Controls of={Stories.Nav} />
 
-type SideNavProps = {
-  Nav: {
-    variant?: "compact";
-  }; // & HTMLNavProps
-  Section: {
-    label: string;
-    level?: "h2" | "h3" | "h4" | "h5" | "h6";
-  }; // & HTMLSectionProps
-  Item: {
-    variant?: "compact";
-    icon?: ReactNode;
-    iconSize?: "large";
-    label: ReactNode;
-    indentation?: number;
-    isExternal?: boolean;
-  }; // & HTMLDivProps
-  Link: {}; // same as Item + HTMLAnchorProps
-};
+### SideNav.Section
+
+<Canvas of={Stories.Section} />
+<Controls of={Stories.Section} />
+
+### SideNav.Item
+
+<Canvas of={Stories.Item} />
+<Controls of={Stories.Item} />
+
+### SideNav.Link
+
+<Canvas of={Stories.Link} />
+<Controls of={Stories.Link} />
+
+## Compact variant
+
+The `variant="compact"` prop can be applied to `SideNav.Nav`, `SideNav.Item`, and `SideNav.Link` to switch to a condensed layout. In compact mode, icons can also use `iconSize="large"` for a larger touch target.
+
+```tsx
+<SideNav.Nav variant="compact">
+  <SideNav.Section label="Files">
+    <List gap="density-s">
+      <ListItem hasPadding={false} interactive>
+        <SideNav.Link
+          variant="compact"
+          href="#upload"
+          icon={<CloudUploadIcon />}
+          label="Uploads"
+        />
+      </ListItem>
+      <ListItem hasPadding={false} interactive>
+        {/* icon-only link */}
+        <SideNav.Link
+          variant="compact"
+          href="#recent"
+          icon={<HistoryIcon />}
+          aria-label="Recent"
+        />
+      </ListItem>
+    </List>
+  </SideNav.Section>
+</SideNav.Nav>
 ```
 
 ## Accessibility
 
-- The `SideNav.Nav` use a `nav` element
-- The `SideNav.Section` use a `section` element. The title use by default `h2`. It can be set by using the `level` property.
-- The `SideNav.Link` use a `a` element and wrap the `SideNav.Item`.
-- The `SideNav.Item` use a `span` element.
+- [W3/WAI/ARIA/APG navigation landmark](https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/navigation.html)
 
-Please see the [List](?path=/docs/components-list--docs) documentation for info about it.
+HTML structure
+
+- `SideNav.Nav` renders a `nav` element.
+- `SideNav.Section` renders a `section` element with `aria-labelledby` pointing to its heading when a `label` is provided. The heading level defaults to `h2` and can be changed via the `level` prop.
+- `SideNav.Link` renders an `a` element and wraps `SideNav.Item` internally.
+- `SideNav.Item` renders a `span` element.
+
+Keyboard navigation
+
+- Use `Tab` / `Shift+Tab` to move focus between links.
+- The currently active link should carry `aria-current="page"`.
+- When a link opens an external destination, `isExternal` adds a visual indicator; pair it with a descriptive `aria-label` when no visible label is present.
+
+Please see the [List](?path=/docs/components-list--docs) documentation for further details on `List` and `ListItem`.

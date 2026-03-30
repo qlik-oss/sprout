@@ -124,7 +124,7 @@ export const Playground: StoryObj<typeof TextField> = {
         "border-box",
         "w-fit",
         "p-s",
-        "gap-s",
+        "gap-s"
       )}
     >
       <TextField {...props} />
@@ -157,7 +157,7 @@ export const Adornment: StoryObj<typeof TextField> = {
         "border-box",
         "w-fit",
         "p-s",
-        "gap-m",
+        "gap-m"
       )}
     >
       <TextField
@@ -319,7 +319,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
             "border-box",
             "w-fit",
             "p-s",
-            "gap-l",
+            "gap-l"
           )}
         >
           <TextField
@@ -379,7 +379,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
             "border-box",
             "w-fit",
             "p-s",
-            "gap-l",
+            "gap-l"
           )}
         >
           <TextField
@@ -469,7 +469,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
             "flex-row",
             "border-box",
             "w-fit",
-            "p-s",
+            "p-s"
           )}
         >
           <div
@@ -478,7 +478,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
               "flex-col",
               "border-box",
               "w-fit",
-              "p-s",
+              "p-s"
             )}
           >
             <TextField
@@ -505,7 +505,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
             "flex-row",
             "border-box",
             "w-fit",
-            "p-s",
+            "p-s"
           )}
         >
           <div
@@ -514,7 +514,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
               "flex-col",
               "border-box",
               "w-fit",
-              "p-s",
+              "p-s"
             )}
           >
             <TextField
@@ -546,7 +546,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
             "flex-col",
             "border-box",
             "w-fit",
-            "p-s",
+            "p-s"
           )}
         >
           <h2 className={classNames("font-heading-m", "text-default")}>
@@ -614,7 +614,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
             "border-box",
             "w-fit",
             "p-s",
-            "gap-m",
+            "gap-m"
           )}
         >
           <h2 className={classNames("font-heading-m", "text-default")}>
@@ -639,7 +639,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
             "border-box",
             "w-fit",
             "p-s",
-            "gap-m",
+            "gap-m"
           )}
         >
           <TextField
@@ -678,7 +678,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
             "border-box",
             "w-fit",
             "p-s",
-            "gap-m",
+            "gap-m"
           )}
         >
           <TextField type="search" label="Search" />
@@ -691,7 +691,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
             "border-box",
             "w-fit",
             "p-s",
-            "gap-m",
+            "gap-m"
           )}
         >
           <TextField designSize="small" type="search" label="Search" />
@@ -718,7 +718,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
                   "pl-s",
                   "flex",
                   "items-center",
-                  "text-default",
+                  "text-default"
                 )}
               >
                 <NumericIcon />
@@ -737,7 +737,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
                   "pl-s",
                   "flex",
                   "items-center",
-                  "text-default",
+                  "text-default"
                 )}
               >
                 <GlobeIcon />
@@ -764,7 +764,7 @@ export const VisualTest: StoryObj<typeof TextField> = {
                   "pl-s",
                   "flex",
                   "items-center",
-                  "text-default",
+                  "text-default"
                 )}
               >
                 <MailIcon />

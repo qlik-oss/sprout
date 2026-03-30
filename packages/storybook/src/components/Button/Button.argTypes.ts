@@ -132,7 +132,21 @@ export const ButtonIconArgTypes: ArgTypes = {
     options: ICON_OPTIONS,
     mapping: ICONS_MAP,
     description:
-      "Accepts a `ReactNode` and is rendered before the label. Use an icon from `@qlik/sprout-icons`",
+      "Accepts a `ReactNode` and is rendered before the label. Use an icon from `@qlik/sprout-icons`.",
+    table: {
+      type: {
+        summary: "ReactNode",
+      },
+    },
+  },
+  trailingIcon: {
+    control: {
+      type: "select",
+    },
+    options: ICON_OPTIONS,
+    mapping: ICONS_MAP,
+    description:
+      "Accepts a `ReactNode` and is rendered after the label. Use an icon from `@qlik/sprout-icons`",
     table: {
       type: {
         summary: "ReactNode",

@@ -8,7 +8,7 @@ export const OptGroup = forwardRef<HTMLDivElement, OptGroupProps>(OptGroupBase);
 
 function OptGroupBase(
   { children, ...props }: OptGroupProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   // a11y explicitly explain a group must not be empty
   if (!children) {

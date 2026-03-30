@@ -26,7 +26,7 @@ export type SelectProps = Omit<SelectFloatingProps, "open" | "onOpenChange"> &
  * @param readOnly - If true, the select is read-only.
  * @param disableScrollLock - If true, scrolling is not locked when the dropdown is open.
  * @param hideBackdrop - If true, no backdrop overlay is rendered.
- * @param isError - @deprecated Use `errorMessages` instead.
+ * @param isError - deprecated Use `errorMessages` instead.
  */
 export const Select = forwardRef<HTMLInputElement, SelectProps>(SelectBase);
 
@@ -39,7 +39,7 @@ function SelectBase(
     selectedValueDisplay = "full",
     ...props
   }: SelectProps,
-  ref?: Ref<HTMLInputElement>,
+  ref?: Ref<HTMLInputElement>
 ) {
   const [isOpen, setIsOpen] = useState<boolean>(!!defaultOpen);
   const { fieldProps, inputProps, useField } = useFieldProps(props);

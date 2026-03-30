@@ -19,5 +19,5 @@ figma.connect(
         <button type="button">{children}</button>
       </Tooltip>
     ),
-  },
+  }
 );

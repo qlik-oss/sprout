@@ -1,5 +1,38 @@
 # @qlik/stylelint-config-sprout
 
+## 6.7.8
+
+### Patch Changes
+
+- Updated dependencies [7bf7d34]
+  - @qlik/design-tokens@1.1.2
+
+## 6.7.7
+
+### Patch Changes
+
+- 8167c00: fix: repository metadata
+- Updated dependencies [fa3b311]
+  - @qlik/design-tokens@1.1.1
+
+## 6.7.6
+
+### Patch Changes
+
+- c038242: chore: use oxfmt and format all the files
+- 91a07fe: chore: update dependencies
+- Updated dependencies [c038242]
+- Updated dependencies [a58aa4e]
+- Updated dependencies [91a07fe]
+- Updated dependencies [190407f]
+  - @qlik/design-tokens@1.1.0
+
+## 6.7.5
+
+### Patch Changes
+
+- 494cc52: chore: update npm dependencies
+
 ## 6.7.4
 
 ### Patch Changes

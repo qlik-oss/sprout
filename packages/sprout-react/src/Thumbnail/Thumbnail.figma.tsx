@@ -28,5 +28,5 @@ figma.connect(
     example: ({ children, ...props }) => (
       <Thumbnail {...props}>{children}</Thumbnail>
     ),
-  },
+  }
 );

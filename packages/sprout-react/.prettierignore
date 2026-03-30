@@ -1,6 +1,0 @@
-.turbo
-lib
-dist
-.cache
-playwright-report
-storybook-static

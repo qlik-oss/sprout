@@ -69,7 +69,7 @@ function DropRight() {
  * @param onExpand - Callback when the item is expanded or collapsed.
  * @param icon - Optional icon to display.
  * @param children - Child tree items.
- * @param displayFolderIcon - @deprecated Use `icon` instead.
+ * @param displayFolderIcon - deprecated Use `icon` instead.
  */
 export function TreeItem({
   id,
@@ -119,7 +119,7 @@ export function TreeItem({
         {
           "text-default": !disabled,
           "text-disabled": !!disabled,
-        },
+        }
       )}
       {...props}
     >
@@ -158,7 +158,7 @@ export function TreeItem({
           "items-center",
           "gap-s",
           "w-full",
-          "overflow-hidden",
+          "overflow-hidden"
         )}
       >
         {safeIcon ? (

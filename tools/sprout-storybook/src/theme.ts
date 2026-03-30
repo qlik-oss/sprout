@@ -6,11 +6,16 @@ type ThemeDatasetProperty = {
   qlikTheme?: string;
 };
 
-function getParentDataAttribute<T>(element: HTMLElement, attribute: string): T | undefined {
+function getParentDataAttribute<T>(
+  element: HTMLElement,
+  attribute: string
+): T | undefined {
   return (
-    ((element.parentElement?.closest(`[data-qlik-${attribute}]`) as HTMLElement | null)?.getAttribute(
-      `data-qlik-${attribute}`,
-    ) as T) || undefined
+    ((
+      element.parentElement?.closest(
+        `[data-qlik-${attribute}]`
+      ) as HTMLElement | null
+    )?.getAttribute(`data-qlik-${attribute}`) as T) || undefined
   );
 }
 /**
@@ -22,7 +27,7 @@ export function getTheme(
   // where do we start from
   element?: HTMLElement,
   // that is user preference on the current page (dark light)
-  optionalTheme?: string,
+  optionalTheme?: string
 ): ThemeInternalAPI {
   let parent: Partial<ThemeInternalAPI> = {};
 
@@ -49,7 +54,10 @@ export function themeToDataset(theme: ThemeInternalAPI): ThemeDatasetProperty {
   };
 }
 
-export function applyTheme(element?: HTMLElement, theme: string = "qlik-light") {
+export function applyTheme(
+  element?: HTMLElement,
+  theme: string = "qlik-light"
+) {
   if (!element) {
     return;
   }

@@ -31,7 +31,10 @@ export type MediaAPI = {
    * ```
    * @return string
    */
-  classNames: (options: ViewportOptions<Array<AllClasses> | AllClasses>, className?: string) => string;
+  classNames: (
+    options: ViewportOptions<Array<AllClasses> | AllClasses>,
+    className?: string
+  ) => string;
   /**
    * addListener let you integrate sprout.media with your framework reactivity system.
    * It's based on native matchMedia API.
@@ -75,16 +78,27 @@ function getFirstDefined<T>(name: ViewportSize, s: T, m: T, l: T, xl: T): T {
 }
 
 function getTokenValue(token: string, element?: HTMLElement): number {
-  const value = getComputedStyle(element || document.documentElement).getPropertyValue(token);
+  const value = getComputedStyle(
+    element || document.documentElement
+  ).getPropertyValue(token);
   // replace any letter in the value
   return parseInt(value.replace(/[^\d]/g, ""), 10);
 }
 
 function getInternals(): Pick<PrivateMediaAPI, "breakpoints" | "queries"> {
   const breakpoints: PrivateMediaAPI["breakpoints"] = {
-    s: getTokenValue("--sprout-container-breakpoint-s", document.documentElement), // 640
-    m: getTokenValue("--sprout-container-breakpoint-m", document.documentElement), // 1024
-    l: getTokenValue("--sprout-container-breakpoint-l", document.documentElement), // 1600
+    s: getTokenValue(
+      "--sprout-container-breakpoint-s",
+      document.documentElement
+    ), // 640
+    m: getTokenValue(
+      "--sprout-container-breakpoint-m",
+      document.documentElement
+    ), // 1024
+    l: getTokenValue(
+      "--sprout-container-breakpoint-l",
+      document.documentElement
+    ), // 1600
   };
   const queries: PrivateMediaAPI["queries"] = {
     s: `(max-width: ${breakpoints.s - 0.02}px)`,
@@ -189,17 +203,30 @@ class MediaConstructor implements MediaAPI {
       l: window.matchMedia(this.queries.l).matches,
       xl: window.matchMedia(this.queries.xl).matches,
     };
-    return Object.keys(all).find((key) => all[key as ViewportSize]) as ViewportSize;
+    return Object.keys(all).find(
+      (key) => all[key as ViewportSize]
+    ) as ViewportSize;
   }
 
   get<T>({ s, m, l, xl }: Partial<Record<ViewportSize, T>>): T | undefined {
-    const output = getFirstDefined<T | undefined>(this.getViewportSize(), s, m, l, xl);
+    const output = getFirstDefined<T | undefined>(
+      this.getViewportSize(),
+      s,
+      m,
+      l,
+      xl
+    );
     return output;
   }
 
   // Generic method directly in object
-  classNames(options: Partial<Record<ViewportSize, Array<AllClasses> | AllClasses>>, className?: string): string {
-    const normalizeClasses = (value: Array<AllClasses> | AllClasses | undefined): Array<AllClasses> | undefined => {
+  classNames(
+    options: Partial<Record<ViewportSize, Array<AllClasses> | AllClasses>>,
+    className?: string
+  ): string {
+    const normalizeClasses = (
+      value: Array<AllClasses> | AllClasses | undefined
+    ): Array<AllClasses> | undefined => {
       if (value === undefined) return undefined;
       return Array.isArray(value) ? value : [value];
     };
@@ -211,10 +238,18 @@ class MediaConstructor implements MediaAPI {
     };
     return (
       this.get<string>({
-        s: safeArgs.s ? classNames(...safeArgs.s, { [className || ""]: !!className }) : undefined,
-        m: safeArgs.m ? classNames(...safeArgs.m, { [className || ""]: !!className }) : undefined,
-        l: safeArgs.l ? classNames(...safeArgs.l, { [className || ""]: !!className }) : undefined,
-        xl: safeArgs.xl ? classNames(...safeArgs.xl, { [className || ""]: !!className }) : undefined,
+        s: safeArgs.s
+          ? classNames(...safeArgs.s, { [className || ""]: !!className })
+          : undefined,
+        m: safeArgs.m
+          ? classNames(...safeArgs.m, { [className || ""]: !!className })
+          : undefined,
+        l: safeArgs.l
+          ? classNames(...safeArgs.l, { [className || ""]: !!className })
+          : undefined,
+        xl: safeArgs.xl
+          ? classNames(...safeArgs.xl, { [className || ""]: !!className })
+          : undefined,
       }) || ""
     );
   }

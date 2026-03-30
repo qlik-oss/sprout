@@ -42,5 +42,5 @@ figma.connect(
       icon: figma.instance("Icon"),
     },
     example: ({ ...props }) => <IconButton label="Label" {...props} />,
-  },
+  }
 );

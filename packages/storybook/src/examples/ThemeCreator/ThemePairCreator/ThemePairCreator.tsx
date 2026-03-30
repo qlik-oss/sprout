@@ -158,7 +158,7 @@ export function ThemePairCreator({
                 "flex-col",
                 "gap-m",
                 "h-full",
-                "overflow-auto",
+                "overflow-auto"
               )}
               style={{
                 blockSize: "var(--sprout-container-sizing-l)",

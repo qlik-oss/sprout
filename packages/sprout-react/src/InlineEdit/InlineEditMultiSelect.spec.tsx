@@ -41,7 +41,7 @@ test(`should InlineEdit.MultiSelect be accessible`, async ({ mount, page }) => {
       >
         {OPTIONS_WITH_GROUP}
       </InlineEdit.MultiSelect>
-    </div>,
+    </div>
   );
 
   const combobox = page.getByRole("combobox");
@@ -121,7 +121,7 @@ test("should be able to see focus state when rendered in a modal", async ({
       >
         {OPTIONS_WITH_GROUP}
       </InlineEdit.MultiSelect>
-    </Modal>,
+    </Modal>
   );
 
   const view = page.getByTestId("test-mulitiselect.view");

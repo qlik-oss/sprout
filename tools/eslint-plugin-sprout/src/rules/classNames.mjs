@@ -800,7 +800,10 @@ const deprecated = [
   // Outline / Focus
   { old: "outline_none", new: "outline-none" },
   { old: "outline_focus_centered", new: "outline-focus-centered" },
-  { old: "outline_focus_visible_centered", new: "outline-focus-visible-centered" },
+  {
+    old: "outline_focus_visible_centered",
+    new: "outline-focus-visible-centered",
+  },
   { old: "outline_focus_inner", new: "outline-focus-inner" },
   { old: "outline_focus_visible_inner", new: "outline-focus-visible-inner" },
   { old: "outline_focus_offset", new: "outline-focus-offset" },
@@ -811,11 +814,18 @@ function isDeprecated(className) {
   return deprecated.some((pkg) => className === pkg.old);
 }
 
-function checkAndReport(context, callExpressionNode, literalNode, value, messageId) {
+function checkAndReport(
+  context,
+  callExpressionNode,
+  literalNode,
+  value,
+  messageId
+) {
   if (!isDeprecated(value)) {
     return;
   }
-  const newClassName = deprecated.find((pkg) => pkg.old === value)?.new || value;
+  const newClassName =
+    deprecated.find((pkg) => pkg.old === value)?.new || value;
   context.report({
     node: callExpressionNode,
     messageId,
@@ -850,11 +860,29 @@ function handleCallExpression(context) {
         } else if (arg.type === "ObjectExpression") {
           // Handle object arguments like { "flex_col": condition, "border_box": true }
           arg.properties.forEach((property) => {
-            if (property.type === "Property" && property.key.type === "Literal") {
-              checkAndReport(context, node, property.key, property.key.value, "deprecated");
+            if (
+              property.type === "Property" &&
+              property.key.type === "Literal"
+            ) {
+              checkAndReport(
+                context,
+                node,
+                property.key,
+                property.key.value,
+                "deprecated"
+              );
             }
-            if (property.type === "Property" && property.key.type === "Identifier") {
-              checkAndReport(context, node, property.key, property.key.name, "deprecated");
+            if (
+              property.type === "Property" &&
+              property.key.type === "Identifier"
+            ) {
+              checkAndReport(
+                context,
+                node,
+                property.key,
+                property.key.name,
+                "deprecated"
+              );
             }
           });
         }
@@ -873,7 +901,8 @@ export default {
     fixable: "code",
     schema: [],
     messages: {
-      deprecated: "'{{className}}' is deprecated. You should use '{{newClassName}}' instead.",
+      deprecated:
+        "'{{className}}' is deprecated. You should use '{{newClassName}}' instead.",
     },
   },
   create: function create(context) {

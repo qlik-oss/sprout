@@ -20,7 +20,7 @@ figma.connect(
         {/* add one tab panel per tab */}
       </TabsContainer>
     ),
-  },
+  }
 );
 
 figma.connect(
@@ -50,5 +50,5 @@ figma.connect(
     example: (props) => {
       return <Tab aria-controls={props.title} {...props} />;
     },
-  },
+  }
 );

@@ -176,7 +176,7 @@ export function SliderIntervals({
                     "gap-xs": isVertical,
                     "flex-col": !isVertical,
                     "flex-row": isVertical,
-                  },
+                  }
                 )}
                 aria-label={String(mark.value)}
                 disabled={!!disabled}

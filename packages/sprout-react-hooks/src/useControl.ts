@@ -26,7 +26,10 @@ export type UseControlReturns<T> = {
  *  onChangeKey: "onChange",
  * });
  */
-export function useControl<T>(props: any, opts?: UseControlOptions): UseControlReturns<T> {
+export function useControl<T>(
+  props: any,
+  opts?: UseControlOptions
+): UseControlReturns<T> {
   const propsValue = props[opts?.valueKey || "value"];
   const defaultValue = props[opts?.defaultValueKey || "defaultValue"];
   const onChangeFn = props[opts?.onChangeKey || "onChange"];

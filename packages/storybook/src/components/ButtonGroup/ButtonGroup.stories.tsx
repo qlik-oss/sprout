@@ -43,7 +43,7 @@ function H2(props: { children: string }) {
         "flex-row",
         "border-box",
         "font-heading-m",
-        "text-default",
+        "text-default"
       )}
     >
       {props.children}

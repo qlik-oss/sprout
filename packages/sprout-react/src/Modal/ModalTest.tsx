@@ -60,7 +60,7 @@ export function ModalFormFocusTest() {
             "flex-col",
             "border-box",
             "gap-xl",
-            "justify-stretch",
+            "justify-stretch"
           )}
           style={{ inlineSize: "300px" }}
         >
@@ -87,7 +87,7 @@ export function ModalIntoModalTest() {
           "flex-col",
           "border-box",
           "gap-xl",
-          "pb-m",
+          "pb-m"
         )}
       >
         <TextField label="Username" id="username_1" />
@@ -113,7 +113,7 @@ export function ModalIntoModalTest() {
             "flex-col",
             "border-box",
             "gap-xl",
-            "pb-m",
+            "pb-m"
           )}
           style={{ blockSize: "50vh" }}
         >
@@ -140,7 +140,7 @@ export function ModalWithRerender({ onClose }: { onClose: () => void }) {
             "flex-col",
             "border-box",
             "gap-xl",
-            "justify-stretch",
+            "justify-stretch"
           )}
           style={{ inlineSize: "300px" }}
         >

@@ -77,6 +77,60 @@
         "semantic/typography": "enabled",
         "semantic/core": "enabled"
       }
+    },
+    {
+      "id": "theme-qlik-expressive-light",
+      "name": "qlik-expressive-light",
+      "group": "theme",
+      "selectedTokenSets": {
+        "palette/core": "source",
+        "qlik/appearance/core": "source",
+        "qlik/appearance/qlik-expressive-light": "source",
+        "qlik/density/comfortable": "source",
+        "qlik/roundness/expressive": "source",
+        "qlik/typography/core": "source",
+        "qlik/typography/expressive": "source",
+
+        "theming/appearance": "source",
+        "theming/density": "source",
+        "theming/sizing": "source",
+        "theming/roundness": "source",
+        "theming/typography": "source",
+
+        "semantic/roundness": "enabled",
+        "semantic/appearance": "enabled",
+        "semantic/sizing": "enabled",
+        "semantic/density": "enabled",
+        "semantic/typography": "enabled",
+        "semantic/core": "enabled"
+      }
+    },
+    {
+      "id": "theme-qlik-expressive-dark",
+      "name": "qlik-expressive-dark",
+      "group": "theme",
+      "selectedTokenSets": {
+        "palette/core": "source",
+        "qlik/appearance/core": "source",
+        "qlik/appearance/qlik-expressive-dark": "source",
+        "qlik/density/comfortable": "source",
+        "qlik/roundness/expressive": "source",
+        "qlik/typography/core": "source",
+        "qlik/typography/expressive": "source",
+
+        "theming/appearance": "source",
+        "theming/density": "source",
+        "theming/sizing": "source",
+        "theming/roundness": "source",
+        "theming/typography": "source",
+
+        "semantic/roundness": "enabled",
+        "semantic/appearance": "enabled",
+        "semantic/sizing": "enabled",
+        "semantic/density": "enabled",
+        "semantic/typography": "enabled",
+        "semantic/core": "enabled"
+      }
     }
   ]
 }

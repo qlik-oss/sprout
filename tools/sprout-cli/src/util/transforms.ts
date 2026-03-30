@@ -14,7 +14,11 @@ export const commonTransforms = [
   "name/kebab",
 ];
 
-export const shorthandTransforms = ["border/css/shorthand", "typography/css/shorthand", "transition/css/shorthand"];
+export const shorthandTransforms = [
+  "border/css/shorthand",
+  "typography/css/shorthand",
+  "transition/css/shorthand",
+];
 
 export const transformerOptions: TransformOptions = {
   // @ts-expect-error does it exist?

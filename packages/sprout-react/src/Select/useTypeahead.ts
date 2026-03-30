@@ -51,7 +51,7 @@ function scheduleReset(state: TypeaheadState) {
 function findStartingWithIndex(
   optionLabels: Array<string>,
   buffer: string,
-  startIndex?: number,
+  startIndex?: number
 ): number {
   if (!buffer || optionLabels.length === 0) return -1;
   const optionsLength = optionLabels.length;
@@ -80,7 +80,7 @@ function findStartingWithIndex(
 function findClosestWithIndex(
   optionsLabels: Array<string>,
   targetFirst: string,
-  startIndex?: number,
+  startIndex?: number
 ): number {
   const optionsLength = optionsLabels.length;
   if (!optionsLength || !targetFirst) {
@@ -137,7 +137,7 @@ function findClosestWithIndex(
 }
 
 export function useTypeahead<V, T extends ComboboxGesture<V>>(
-  gestureRef: RefObject<T | null>,
+  gestureRef: RefObject<T | null>
 ) {
   // On unmount, wipe the buffer and cancel the timer so nothing keeps ticking
   // after the combobox is gone.
@@ -175,7 +175,7 @@ export function useTypeahead<V, T extends ComboboxGesture<V>>(
 
     const optionsLength = buttons.length;
     const normalizedOptionLabels = buttons.map((btn) =>
-      btn.textContent.trim().toLowerCase(),
+      btn.textContent.trim().toLowerCase()
     );
 
     const buffer = state.buffer;
@@ -185,7 +185,7 @@ export function useTypeahead<V, T extends ComboboxGesture<V>>(
     if (!open) {
       const firstMatchIndex = findStartingWithIndex(
         normalizedOptionLabels,
-        buffer,
+        buffer
       );
       if (firstMatchIndex !== -1) {
         // Set selected value to the button's value not its label
@@ -207,7 +207,7 @@ export function useTypeahead<V, T extends ComboboxGesture<V>>(
 
       const closestMatchIndex = findClosestWithIndex(
         normalizedOptionLabels,
-        buffer[0],
+        buffer[0]
       );
       state.selectedValue =
         closestMatchIndex !== -1
@@ -236,7 +236,7 @@ export function useTypeahead<V, T extends ComboboxGesture<V>>(
     const firstMatchIndex = findStartingWithIndex(
       normalizedOptionLabels,
       buffer,
-      currentFocusIndex,
+      currentFocusIndex
     );
     if (firstMatchIndex !== -1) {
       gesture.focusOn(comboboxListState, firstMatchIndex);
@@ -246,7 +246,7 @@ export function useTypeahead<V, T extends ComboboxGesture<V>>(
     const closestMatchIndex = findClosestWithIndex(
       normalizedOptionLabels,
       buffer[0],
-      currentFocusIndex,
+      currentFocusIndex
     );
     if (closestMatchIndex !== -1) {
       gesture.focusOn(comboboxListState, closestMatchIndex);
@@ -254,7 +254,7 @@ export function useTypeahead<V, T extends ComboboxGesture<V>>(
   };
 
   function resetTypeahead(
-    mygestureRef?: RefObject<ComboboxGesture<unknown> | null>,
+    mygestureRef?: RefObject<ComboboxGesture<unknown> | null>
   ) {
     const gesture = mygestureRef?.current;
     if (!gesture) return;

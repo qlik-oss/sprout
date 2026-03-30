@@ -43,7 +43,8 @@ To achieve that sprout-css-modules provide some utility classes to help you with
 
 ### Display actions on Hover
 
-One common request for a dev is to display actions on hover.
+One common request for a dev is to display actions on hover. The issue with this approach is that it will not be accessible for keyboard users as they won't be able to see the actions on hover.
+Also there are devices that doesn't support hover at all and in that case the actions will be hidden for those users. Fortunately, sprout-css-modules provide a solution for that based on device capabilities and user interaction.
 
 #### Don't
 
@@ -75,7 +76,7 @@ The following example demonstrates how to implement progressive disclosure using
     "border-default",
     "p-xs",
     "w-m",
-    "bg-interactive",
+    "bg-interactive"
   )}
 >
   <button
@@ -89,11 +90,11 @@ The following example demonstrates how to implement progressive disclosure using
       "disclosure-target",
       "flex",
       "flex-row",
-      "gap-s",
+      "gap-s"
     )}
   >
-    <IconButton label="Copy" icon={<Copy height={undefined} />} />
-    <IconButton label="Paste" icon={<Paste height={undefined} />} />
+    <IconButton label="Copy" icon={<Copy />} />
+    <IconButton label="Paste" icon={<Paste />} />
   </div>
 </div>
 ```

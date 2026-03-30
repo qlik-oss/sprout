@@ -4,7 +4,8 @@
  * directly causes duplication and ordering issues.
  */
 
-const FORBIDDEN_SPECIFIER = "@qlik/design-tokens/generated/tokens/css/sprout-tokens.css";
+const FORBIDDEN_SPECIFIER =
+  "@qlik/design-tokens/generated/tokens/css/sprout-tokens.css";
 
 /** @type {import("eslint").Rule.RuleModule} */
 export default {
@@ -17,7 +18,8 @@ export default {
     },
     fixable: "code",
     messages: {
-      forbidden: "Do not import '{{ source }}' directly. The design tokens are already provided by the sprout runtime.",
+      forbidden:
+        "Do not import '{{ source }}' directly. The design tokens are already provided by the sprout runtime.",
     },
     schema: [],
   },
@@ -34,7 +36,9 @@ export default {
           data: { source: source.value },
           fix(fixer) {
             const sourceCode = context.sourceCode ?? context.getSourceCode();
-            const tokenAfter = sourceCode.getTokenAfter(node, { includeComments: true });
+            const tokenAfter = sourceCode.getTokenAfter(node, {
+              includeComments: true,
+            });
             // Remove from the start of the node to the start of the next token (eats trailing newline)
             const end = tokenAfter ? tokenAfter.range[0] : node.range[1];
             return fixer.removeRange([node.range[0], end]);

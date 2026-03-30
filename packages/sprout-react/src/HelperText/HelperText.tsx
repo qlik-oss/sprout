@@ -39,7 +39,7 @@ export function HelperText({
           "text-danger": !!isError,
           "text-weak": variant === "quiet" && !isError && !disabled,
           "text-disabled": !!disabled,
-        },
+        }
       )}
     >
       {helpText}

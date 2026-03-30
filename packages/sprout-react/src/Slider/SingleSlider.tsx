@@ -56,7 +56,7 @@ export type SingleSliderProps = {
  * @param errorMessages - Error messages to display.
  */
 export const SingleSlider = forwardRef<HTMLDivElement, SingleSliderProps>(
-  SingleSliderBase,
+  SingleSliderBase
 );
 
 function SingleSliderBase(
@@ -87,14 +87,14 @@ function SingleSliderBase(
     value,
     ...rest
   }: SingleSliderProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const step = Number.isFinite(stepProp) && stepProp > 0 ? stepProp : 1;
   const trackRef = useRef<HTMLDivElement | null>(null);
   const innerTrackRef = useRef<HTMLDivElement | null>(null);
 
   const [uncontrolledValue, setUncontrolledValue] = useState<number>(
-    defaultValue ?? min,
+    defaultValue ?? min
   );
   const isControlled = typeof value !== "undefined";
   const currentValue = isControlled ? value : uncontrolledValue;
@@ -102,7 +102,7 @@ function SingleSliderBase(
   if (isValueOutOfBounds(currentValue, min, max)) {
     // eslint-disable-next-line no-console
     console.warn(
-      `SingleSlider: current value ${currentValue} is out of bounds [${min}, ${max}].`,
+      `SingleSlider: current value ${currentValue} is out of bounds [${min}, ${max}].`
     );
   }
 
@@ -122,7 +122,7 @@ function SingleSliderBase(
   const updateSliderValue = useCallback(
     (
       newValue: number,
-      event: Event | ChangeEvent<HTMLInputElement> | KeyboardEvent,
+      event: Event | ChangeEvent<HTMLInputElement> | KeyboardEvent
     ) => {
       if (!isControlled) {
         setUncontrolledValue(newValue);
@@ -131,7 +131,7 @@ function SingleSliderBase(
       onChange?.(newValue, event as Event);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [currentValue, isControlled, onChange],
+    [currentValue, isControlled, onChange]
   );
 
   const markValues = useMemo(() => {
@@ -153,13 +153,13 @@ function SingleSliderBase(
         min,
         max,
         step,
-        event,
+        event
       );
 
       updateSliderValue(newValue, event);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [min, max, step, orientation, currentValue, updateSliderValue, markValues],
+    [min, max, step, orientation, currentValue, updateSliderValue, markValues]
   );
 
   const valueInPercent = useMemo(() => {
@@ -236,7 +236,7 @@ function SingleSliderBase(
               onChange={(event) => {
                 const newValue = Math.min(
                   Math.max(event.target.valueAsNumber, min),
-                  max,
+                  max
                 );
                 updateSliderValue(newValue, event);
               }}

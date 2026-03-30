@@ -1,7 +1,17 @@
-import { Stepper, classNames } from "@qlik/sprout-react";
+import {
+  Stepper,
+  type StepperProps,
+  classNames,
+} from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-type Story = StoryObj<typeof Stepper.Container>;
+import {
+  StepperContainerArgTypes,
+  StepperStepArgTypes,
+} from "./Stepper.argTypes";
+
+type ContainerStory = StoryObj<typeof Stepper.Container>;
+type StepStory = StoryObj<StepperProps["Step"]>;
 
 export default {
   title: "Components/Stepper",
@@ -15,7 +25,7 @@ const LOREM = (
   </div>
 );
 
-export const Playground: Story = {
+export const Playground: ContainerStory = {
   render: ({ orientation, ...args }) => (
     <div
       className={classNames("flex", "flex-row", "border-box")}
@@ -41,25 +51,30 @@ export const Playground: Story = {
     orientation: "horizontal",
     currentStepIndex: 1,
     currentStepError: false,
+    stateLess: false,
   },
-  argTypes: {
-    orientation: {
-      control: {
-        type: "select",
-      },
-      options: ["horizontal", "vertical"],
-    },
-    currentStepIndex: {
-      control: {
-        type: "number",
-      },
-    },
-    currentStepError: {
-      control: {
-        type: "boolean",
-      },
-    },
+  argTypes: StepperContainerArgTypes,
+};
+
+export const StepPlayground: StepStory = {
+  render: (args) => (
+    <div className={classNames("flex", "flex-row", "border-box", "w-fit")}>
+      <Stepper.Container orientation="vertical" stateLess>
+        <Stepper.Step {...args} />
+      </Stepper.Container>
+    </div>
+  ),
+  parameters: {
+    chromatic: { disableSnapshot: true },
   },
+  args: {
+    text: "Step label",
+    semantic: "inactive",
+    state: "default",
+    number: "1",
+    isLast: true,
+  },
+  argTypes: StepperStepArgTypes,
 };
 
 export function VisualTest() {
@@ -70,7 +85,7 @@ export function VisualTest() {
         "flex-col",
         "border-box",
         "p-xl",
-        "gap-xxl",
+        "gap-xxl"
       )}
     >
       <h2 className={classNames("font-heading-m", "text-default")}>
@@ -99,7 +114,7 @@ export function VisualTest() {
           "flex-row",
           "border-box",
           "w-fit",
-          "h-fit",
+          "h-fit"
         )}
       >
         <Stepper.Container

@@ -29,7 +29,7 @@ export const Background = {
           "border-box",
           "flex-row",
           "gap-xl",
-          "py-xl",
+          "py-xl"
         )}
       >
         <div className={sprout.classNames(...CONTENT_CLASSES, "bg-disabled")}>
@@ -67,7 +67,7 @@ export const Background = {
           className={sprout.classNames(
             ...CONTENT_CLASSES,
             "bg-inverse",
-            "text-inverse",
+            "text-inverse"
           )}
         >
           bg-inverse
@@ -77,7 +77,7 @@ export const Background = {
             ...CONTENT_CLASSES.filter((c) => c !== "border-moderate"),
             "bg-floating",
             "box-shadow-strong",
-            "border-none",
+            "border-none"
           )}
         >
           bg-floating
@@ -89,14 +89,14 @@ export const Background = {
           "border-box",
           "flex-row",
           "gap-xl",
-          "py-xl",
+          "py-xl"
         )}
       >
         <div
           className={sprout.classNames(
             ...CONTENT_CLASSES,
             "bg-danger",
-            "text-danger-inverse",
+            "text-danger-inverse"
           )}
         >
           bg-danger (text-danger-inverse)
@@ -115,7 +115,7 @@ export const Background = {
             className={sprout.classNames(
               ...CONTENT_CLASSES,
               "bg-danger-interactive",
-              "text-danger-inverse",
+              "text-danger-inverse"
             )}
           >
             bg-danger-interactive (text-danger-inverse) / {state}
@@ -128,14 +128,14 @@ export const Background = {
           "border-box",
           "flex-row",
           "gap-xl",
-          "py-xl",
+          "py-xl"
         )}
       >
         <div
           className={sprout.classNames(
             ...CONTENT_CLASSES,
             "bg-warning",
-            "text-warning-inverse",
+            "text-warning-inverse"
           )}
         >
           bg-warning (text-warning-inverse)
@@ -149,7 +149,7 @@ export const Background = {
           className={sprout.classNames(
             ...CONTENT_CLASSES,
             "bg-warning-inverse",
-            "text-warning",
+            "text-warning"
           )}
         >
           bg-warning-inverse (text-warning)
@@ -161,14 +161,14 @@ export const Background = {
           "border-box",
           "flex-row",
           "gap-xl",
-          "py-xl",
+          "py-xl"
         )}
       >
         <div
           className={sprout.classNames(
             ...CONTENT_CLASSES,
             "bg-info",
-            "text-info-inverse",
+            "text-info-inverse"
           )}
         >
           bg-info (text-info-inverse)
@@ -180,7 +180,7 @@ export const Background = {
           className={sprout.classNames(
             ...CONTENT_CLASSES,
             "bg-info-inverse",
-            "text-info",
+            "text-info"
           )}
         >
           bg-info-inverse (text-info)
@@ -192,14 +192,14 @@ export const Background = {
           "border-box",
           "flex-row",
           "gap-xl",
-          "py-xl",
+          "py-xl"
         )}
       >
         <div
           className={sprout.classNames(
             ...CONTENT_CLASSES,
             "bg-success",
-            "text-success-inverse",
+            "text-success-inverse"
           )}
         >
           bg-success (text-success-inverse)
@@ -213,7 +213,7 @@ export const Background = {
           className={sprout.classNames(
             ...CONTENT_CLASSES,
             "bg-success-inverse",
-            "text-success",
+            "text-success"
           )}
         >
           bg-success-inverse (text-success)
@@ -225,14 +225,14 @@ export const Background = {
           "border-box",
           "flex-row",
           "gap-xl",
-          "py-xl",
+          "py-xl"
         )}
       >
         <div
           className={sprout.classNames(
             ...CONTENT_CLASSES,
             "bg-selected",
-            "text-selected-inverse",
+            "text-selected-inverse"
           )}
         >
           bg-selected (text-selected-inverse)
@@ -241,7 +241,7 @@ export const Background = {
           className={sprout.classNames(
             ...CONTENT_CLASSES,
             "bg-selected-default",
-            "text-selected",
+            "text-selected"
           )}
         >
           bg-selected-default (text-selected)

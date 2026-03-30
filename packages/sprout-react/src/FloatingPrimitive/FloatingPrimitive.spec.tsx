@@ -16,7 +16,7 @@ test(`should FloatingPrimitive with children open on click`, async ({
       content={<div data-testid="floating-content">content</div>}
     >
       <button type="button">click me</button>
-    </FloatingPrimitive>,
+    </FloatingPrimitive>
   );
 
   const content = page.getByTestId("floating-content");
@@ -42,7 +42,7 @@ test(`should FloatingPrimitive open using anchorPos`, async ({
       content={<div data-testid="floating-content">content</div>}
       initialOpen
       anchorPosition={{ left: 20, top: 20 }}
-    />,
+    />
   );
   const content = page.getByTestId("floating-content");
   await expect(content).toBeVisible();
@@ -64,7 +64,7 @@ test(`should FloatingPrimitive open using anchorEl`, async ({
       wrapBtn
       placement="top-start"
       content={<div data-testid="floating-content">content</div>}
-    />,
+    />
   );
   const content = page.getByTestId("floating-content");
   await expect(content).not.toBeVisible();
@@ -81,7 +81,7 @@ test(`should FloatingPrimitive open using anchorEl`, async ({
     <FloatingPrimitiveAnchorEl
       placement="bottom-start"
       content={<div data-testid="floating-content">content</div>}
-    />,
+    />
   );
   await expect(content).not.toBeVisible();
   await page.getByRole("button").click();
@@ -115,7 +115,7 @@ test(`should FloatingPrimitive close while scrolling on ancestor`, async ({
           <button type="button">click me</button>
         </FloatingPrimitive>
       </div>
-    </div>,
+    </div>
   );
 
   const content = page.getByTestId("floating-content");
@@ -134,7 +134,7 @@ test("renders overlay only when open", async ({ mount, page }) => {
       content={<div data-testid="floating-content">content</div>}
     >
       <button type="button">click me</button>
-    </FloatingPrimitive>,
+    </FloatingPrimitive>
   );
 
   const content = page.getByTestId("floating-content");
@@ -165,7 +165,7 @@ test("locks page scroll when `disableScrollLock` is false or undefined", async (
           <button type="button">click me</button>
         </FloatingPrimitive>
       </div>
-    </div>,
+    </div>
   );
 
   const container = page.getByTestId("overflow-container");
@@ -173,12 +173,12 @@ test("locks page scroll when `disableScrollLock` is false or undefined", async (
   const overlay = page.getByTestId("sprout-floating-overlay");
 
   const isOverflowed = await container.evaluate(
-    (el) => el.scrollHeight > el.clientHeight,
+    (el) => el.scrollHeight > el.clientHeight
   );
   expect(isOverflowed).toBe(true);
 
   const beforeBodyOverflow = await page.evaluate(
-    () => getComputedStyle(document.body).overflow,
+    () => getComputedStyle(document.body).overflow
   );
   expect(beforeBodyOverflow).not.toBe("hidden");
 
@@ -188,7 +188,7 @@ test("locks page scroll when `disableScrollLock` is false or undefined", async (
   await expect(content).toBeVisible();
 
   const afterBodyOverflow = await page.evaluate(
-    () => getComputedStyle(document.body).overflow,
+    () => getComputedStyle(document.body).overflow
   );
   expect(afterBodyOverflow).toBe("hidden");
 

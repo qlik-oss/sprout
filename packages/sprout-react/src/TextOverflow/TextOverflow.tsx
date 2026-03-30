@@ -27,7 +27,7 @@ function TextOverflowTooltip({
 }: Pick<TextOverflowProps, "children" | "text" | "maxLength" | "className">) {
   const textRef = useRef<HTMLSpanElement | null>(null);
   const [overflow, setOverflow] = useState(
-    text && maxLength && text.length > maxLength,
+    text && maxLength && text.length > maxLength
   );
 
   useLayoutEffect(() => {

@@ -65,16 +65,17 @@ test(`should support a11y rules with useGesture`, async ({ page, mount }) => {
   await expect(list).toBeVisible();
 
   await expect(allButtons[1]).toBeDisabled();
+  await expect(allButtons[1]).not.toHaveAttribute("tabindex", "0");
   await expect(allButtons[0]).not.toBeFocused();
   await expect(allButtons[2]).not.toBeFocused();
   await expect(allItems[2]).toHaveAttribute("data-selected", "true");
 
   await page.keyboard.press("Tab");
-  await expect(allButtons[2]).toBeFocused();
+  await expect(allButtons[0]).toBeFocused();
   await page.keyboard.press("ArrowDown");
-  await expect(allButtons[3]).toBeFocused();
+  await expect(allButtons[2]).toBeFocused();
   await page.keyboard.press("Enter");
-  await expect(allItems[3]).toHaveAttribute("data-selected", "true");
+  await expect(allItems[2]).toHaveAttribute("data-selected", "true");
   await page.keyboard.press("Home");
   await expect(allButtons[0]).toBeFocused();
   await page.keyboard.press("End");

@@ -1,8 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 import { type MouseEvent, type Ref, forwardRef } from "react";
 
-import sprout from "@qlik/sprout-css-modules";
 import { useControl } from "@qlik/sprout-react-hooks";
+import sprout from "@qlik/sprout-css-modules";
 
 import { ProgressCircular } from "../Progress";
 import type { HTMLButtonProps } from "../htmlTypes";
@@ -19,7 +19,7 @@ export type InputButtonProps = Omit<
   initialLoading?: boolean;
   onLoadingChange?: (loading: boolean) => void;
   onClick: (
-    event: MouseEvent<HTMLButtonElement>,
+    event: MouseEvent<HTMLButtonElement>
     // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-invalid-void-type
   ) => void | Promise<any>;
 };
@@ -34,7 +34,7 @@ export type InputButtonProps = Omit<
  * @param onLoadingChange - callback fired when the loading state changes.
  */
 export const InputButton = forwardRef<HTMLButtonElement, InputButtonProps>(
-  InputButtonBase,
+  InputButtonBase
 );
 
 function InputButtonBase(
@@ -48,7 +48,7 @@ function InputButtonBase(
     size,
     ...props
   }: InputButtonProps,
-  ref?: Ref<HTMLButtonElement>,
+  ref?: Ref<HTMLButtonElement>
 ) {
   const controlledLoading = useControl(
     { loading, initialLoading, onLoadingChange },
@@ -57,7 +57,7 @@ function InputButtonBase(
       defaultValueKey: "initialLoading",
       onChangeKey: "onLoadingChange",
       selector: (value) => value,
-    },
+    }
   );
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
@@ -95,7 +95,7 @@ function InputButtonBase(
         "text-default",
         {
           [style.input_button]: true,
-        },
+        }
       )}
       aria-label={ariaLabel}
       {...props}

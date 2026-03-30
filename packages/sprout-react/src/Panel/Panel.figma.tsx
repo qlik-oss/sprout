@@ -31,7 +31,7 @@ figma.connect(
         </Panel.Primitive>
       </Panel.Container>
     ),
-  },
+  }
 );
 
 function MyPanelContent() {
@@ -54,5 +54,5 @@ figma.connect(
         <span className={classNames("font-body-m")}>Panel content</span>
       </div>
     ),
-  },
+  }
 );

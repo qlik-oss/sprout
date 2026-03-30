@@ -16,5 +16,5 @@ export const ICON_OPTIONS = [undefined, ...Object.keys(AllIcons)] as Array<
 >;
 
 export const ICONS_MAP = Object.fromEntries(
-  ICON_OPTIONS.map((icon) => [icon, getIcon(icon)]),
+  ICON_OPTIONS.map((icon) => [icon, getIcon(icon)])
 ) as Record<keyof typeof AllIcons, ReactNode>;

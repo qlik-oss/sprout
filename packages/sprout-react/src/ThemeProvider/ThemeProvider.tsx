@@ -45,7 +45,7 @@ type ThemeProviderProps = ThemeAPI & {
 const ThemeContext = createContext<Partial<ThemeAPI>>({});
 
 export function themeToProps(
-  theme: ReturnType<typeof getTheme>,
+  theme: ReturnType<typeof getTheme>
 ): DataAttributes {
   return Object.keys(theme).reduce((acc: DataAttributes, key: string) => {
     acc[`data-qlik-${key.toLowerCase()}`] = (theme as Record<string, string>)[
@@ -68,12 +68,12 @@ export function themeToProps(
  * @param children - Content to render inside the themed container.
  */
 export const ThemeProvider = forwardRef<HTMLDivElement, ThemeProviderProps>(
-  ThemeProviderBase,
+  ThemeProviderBase
 );
 
 function ThemeProviderBase(
   props: ThemeProviderProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const [myRef, setMyRef] = useState<HTMLDivElement | null>(null);
   const {
@@ -89,18 +89,26 @@ function ThemeProviderBase(
   const device = getDeviceInputType();
 
   const [bodyTheme, setBodyTheme] = useState<Partial<Theme>>(() =>
-    getBodyTheme(),
+    getBodyTheme()
   );
 
   useEffect(() => {
+    // When asDiv=true the consumer is providing an explicit theme via a
+    // data-attribute so the MutationObserver callback is a guaranteed no-op
+    // (guarded by `if (!asDiv)`). Skipping the observer entirely avoids
+    // attaching a document.body MutationObserver for every portalled floating
+    // element (each Menu.Contextual mounts a ThemeProvider asDiv inside
+    // FloatingPortal), which would otherwise accumulate during rapid
+    // context-menu interactions.
+    if (asDiv) {
+      return undefined;
+    }
     // observe body attributes to update globalTheme accordingly
     const observer = new MutationObserver(() => {
-      if (!asDiv) {
-        const newBodyTheme = getBodyTheme();
-        if (newBodyTheme.theme !== bodyTheme.theme) {
-          if (newBodyTheme.theme) {
-            setBodyTheme(newBodyTheme);
-          }
+      const newBodyTheme = getBodyTheme();
+      if (newBodyTheme.theme !== bodyTheme.theme) {
+        if (newBodyTheme.theme) {
+          setBodyTheme(newBodyTheme);
         }
       }
     });

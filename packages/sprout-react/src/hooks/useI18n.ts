@@ -31,6 +31,8 @@ import zhCNPlural from "../translations/zh-CN.plural.json";
 import zhTW from "../translations/zh-TW.json";
 import zhTWPlural from "../translations/zh-TW.plural.json";
 
+const DEFAULT_LANG: HTMLHtmlElement["lang"] = "en";
+
 export type TranslationSlot = {
   value: string;
   comment: string;
@@ -91,12 +93,24 @@ const cache: Record<
 
 function sanitizeLang(lang?: string): HTMLHtmlElement["lang"] {
   if (!lang) {
-    return "en";
+    return DEFAULT_LANG;
   }
   if (lang === "zh-CN" || lang === "zh-TW") {
     return lang;
   }
   return lang.split("-")[0];
+}
+
+function getTranslations(
+  langCode: HTMLHtmlElement["lang"]
+): Record<string, TranslationSlot> {
+  return cache[langCode] ?? {};
+}
+
+function getPluralTranslations(
+  langCode: HTMLHtmlElement["lang"]
+): Record<string, TranslationPluralSlot> {
+  return cachePlurals[langCode] ?? {};
 }
 
 export function useI18n(ref?: RefObject<HTMLElement | null>) {
@@ -111,12 +125,12 @@ export function useI18n(ref?: RefObject<HTMLElement | null>) {
       return null;
     };
   }
-  const [langState, setLangState] = useState("en");
+  const [langState, setLangState] = useState(DEFAULT_LANG);
 
   useEffect(() => {
     const withLangEl = queryFn("[lang]") as HTMLElement | null;
     const lang: HTMLHtmlElement["lang"] = sanitizeLang(
-      withLangEl?.getAttribute("lang") || undefined,
+      withLangEl?.getAttribute("lang") || undefined
     );
     if (langState !== lang) {
       setLangState(lang);
@@ -124,7 +138,7 @@ export function useI18n(ref?: RefObject<HTMLElement | null>) {
     // observe changes to lang attribute
     const observer = new MutationObserver(() => {
       const newLang = sanitizeLang(
-        withLangEl?.getAttribute("lang") || undefined,
+        withLangEl?.getAttribute("lang") || undefined
       );
       if (langState !== newLang) {
         setLangState(newLang);
@@ -141,26 +155,28 @@ export function useI18n(ref?: RefObject<HTMLElement | null>) {
 
   const [translations, setTranslations] = useState<
     Record<string, TranslationSlot>
-  >(cache[langState]);
+  >(getTranslations(langState));
 
   const [plurals, setPlurals] = useState<Record<string, TranslationPluralSlot>>(
-    cachePlurals[langState],
+    getPluralTranslations(langState)
   );
 
   useEffect(() => {
-    if (langState && cache[langState] !== translations) {
-      setTranslations(cache[langState]);
+    const validTranslations = getTranslations(langState);
+    const validPlurals = getPluralTranslations(langState);
+
+    if (validTranslations !== translations) {
+      setTranslations(validTranslations);
     }
 
-    if (langState && cachePlurals[langState] !== plurals) {
-      setPlurals(cachePlurals[langState]);
+    if (validPlurals !== plurals) {
+      setPlurals(validPlurals);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [langState]);
 
   return (key: string, plural?: number, opts?: Record<string, string>) => {
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-    if (plural !== undefined && plurals[key]) {
+    if (plural !== undefined && key in plurals) {
       const zero = plurals[key].value.zero || plurals[key].value.other;
       const one = plurals[key].value.one || plurals[key].value.other;
       const other = plurals[key].value.other;
@@ -177,13 +193,12 @@ export function useI18n(ref?: RefObject<HTMLElement | null>) {
       if (plural > 1) {
         return interpolate(other, { count: `${plural}`, ...(opts || {}) });
       }
-      return "";
+      return key;
     }
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-    if (translations[key]) {
+    if (key in translations) {
       return translations[key].value;
     }
-    return "";
+    return key;
   };
 }
 

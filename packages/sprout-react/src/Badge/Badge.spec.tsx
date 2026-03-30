@@ -16,7 +16,7 @@ test("should be accessible", async ({ mount, page }) => {
       text="1"
       role="status"
       aria-live="polite"
-    />,
+    />
   );
   const updatedAccessibilityScanResults = await getAxeReport(page);
   expect(updatedAccessibilityScanResults.violations).toEqual([]);

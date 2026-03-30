@@ -12,12 +12,12 @@ type SliderTrackProps = PropsWithChildren<{
 }>;
 
 export const SliderTrack = forwardRef<HTMLDivElement, SliderTrackProps>(
-  SliderTrackBase,
+  SliderTrackBase
 );
 
 function SliderTrackBase(
   { children, orientation = "horizontal", innerTrackRef }: SliderTrackProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   return (
     <div
@@ -34,7 +34,7 @@ function SliderTrackBase(
             "relative",
             "radius-round",
             "border-box",
-            styles.slider_track,
+            styles.slider_track
           )}
           data-orientation={orientation}
           ref={innerTrackRef}

@@ -11,8 +11,6 @@ import {
 import { menuStyle } from "./MenuClassName";
 import { MenuRenderer, type MenuRendererProps } from "./MenuRenderer";
 
-import style from "./Menu.module.css";
-
 export type MenuContextualProps = {
   wrapperClassName?: string;
   menu?: ReactNode | MenuRendererProps["menu"];
@@ -54,7 +52,7 @@ export function MenuContextual({
       valueKey: "open",
       onChangeKey: "onOpenChange",
       selector: (v) => v,
-    },
+    }
   );
 
   const allowMouseUpCloseRef = useRef(false);
@@ -73,11 +71,7 @@ export function MenuContextual({
       e.preventDefault();
       setEvent(e);
 
-      controlled.onChange(true);
-      if (onOpenChange) {
-        onOpenChange(true, e);
-      }
-
+      controlled.onChange(true, e);
       clearTimeout(timeout);
 
       allowMouseUpCloseRef.current = false;
@@ -86,13 +80,10 @@ export function MenuContextual({
       }, 300);
     }
 
-    function onMouseUp() {
+    function onMouseUp(e: MouseEvent) {
       if (allowMouseUpCloseRef.current) {
-        controlled.onChange(false);
         setEvent(null);
-        if (onOpenChange) {
-          onOpenChange(false);
-        }
+        controlled.onChange(false, e);
       }
     }
     if (ref.current) {
@@ -123,10 +114,7 @@ export function MenuContextual({
           (event ? { left: event.clientX, top: event.clientY } : undefined)
         }
         onOpenChange={(value) => {
-          controlled.onChange(value);
-          if (onOpenChange) {
-            onOpenChange(value, event || undefined);
-          }
+          controlled.onChange(value, event || undefined);
         }}
         onClick={(e) => {
           if (
@@ -134,7 +122,7 @@ export function MenuContextual({
           )
             return;
           context.closeAll();
-          controlled.onChange(false);
+          controlled.onChange(false, e);
           if (onClick) {
             onClick(e);
           }

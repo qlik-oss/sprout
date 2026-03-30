@@ -15,7 +15,7 @@ export function MenuGroupLabel({ label, ...props }: MenuGroupLabelProps) {
         "font-label-s-emphasized",
         "text-default",
         "px-l",
-        "py-m",
+        "py-m"
       )}
       {...props}
     >

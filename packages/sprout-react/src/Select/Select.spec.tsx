@@ -49,7 +49,7 @@ test(`should be accessible`, async ({ mount, page }) => {
   await expect(combobox).toBeFocused();
   await expect(options[0]).toHaveAttribute("data-hovered", "true");
   let optionId = await options[0].evaluate(
-    (node) => node.getAttribute("id") || "",
+    (node) => node.getAttribute("id") || ""
   );
   await expect(combobox).toHaveAttribute("aria-activedescendant", optionId);
   await page.keyboard.press(KEYBOARD_KEYS.DOWN);
@@ -156,7 +156,7 @@ test.describe("corner case", () => {
     if (selectDownwardBox) {
       await page.mouse.click(
         selectDownwardBox.x + selectDownwardBox.width / 2,
-        selectDownwardBox.y + selectDownwardBox.height / 2,
+        selectDownwardBox.y + selectDownwardBox.height / 2
       );
     }
 
@@ -503,7 +503,7 @@ test("should hide description of selected option when selectedValueDisplay is la
   await mount(
     <div id="component-testing">
       <SelectTest selectedValueDisplay="label" />
-    </div>,
+    </div>
   );
 
   const combobox = page.getByRole("combobox");

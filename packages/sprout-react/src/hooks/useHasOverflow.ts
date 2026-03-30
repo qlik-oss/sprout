@@ -17,7 +17,7 @@ export function onVisible(element: HTMLElement, callback: () => void) {
  * @returns { overflowX: boolean, overflowY: boolean }
  */
 export function useHasOverflow<T extends HTMLElement>(
-  ref: RefObject<T | null>,
+  ref: RefObject<T | null>
 ) {
   const [overflowX, setOverflowX] = useState(false);
   const [overflowY, setOverflowY] = useState(false);
@@ -43,7 +43,7 @@ export function useHasOverflow<T extends HTMLElement>(
           }
           return acc;
         },
-        { x: 0, y: 0 },
+        { x: 0, y: 0 }
       );
       if (myAcc.y > ref.current.clientHeight) {
         setOverflowY(true);

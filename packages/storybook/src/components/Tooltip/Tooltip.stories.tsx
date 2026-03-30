@@ -35,7 +35,7 @@ export const Playground: StoryObj<
           "grow-1",
           "shrink-0",
           "items-center",
-          "justify-center",
+          "justify-center"
         )}
         style={{ inlineSize: 1000, blockSize: 300 }}
       >
@@ -83,7 +83,7 @@ export function VisualTest() {
           "p-3xl",
           "justify-start",
           "items-center",
-          "gap-3xl",
+          "gap-3xl"
         )}
         style={{ inlineSize: 300 }}
       >
@@ -115,7 +115,7 @@ export function VisualTest() {
           "flex-col",
           "justify-start",
           "items-start",
-          "gap-3xl",
+          "gap-3xl"
         )}
       >
         <Tooltip

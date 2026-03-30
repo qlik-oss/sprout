@@ -25,7 +25,7 @@ export default [
       "**/playwright",
       "**/playwright-report",
       "**/storybook-static",
-      "**/.prettierignore",
+
       "**/.storybook",
       "**/test-results",
     ],
@@ -41,7 +41,7 @@ export default [
 
       parserOptions: {
         projectService: {
-          allowDefaultProject: ["*.js", "*.mjs", "*.ts"],
+          allowDefaultProject: ["*.js", "*.mjs", "*.ts", "*.tsx"],
         },
         tsconfigRootDir: import.meta.dirname,
       },

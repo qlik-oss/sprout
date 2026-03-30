@@ -36,7 +36,7 @@ type NormalizedVariant = Exclude<
 >;
 
 const normalizeVariant = (
-  variant: AlertModalProps["variant"],
+  variant: AlertModalProps["variant"]
 ): NormalizedVariant => {
   if (variant === "positive") {
     return "information";
@@ -60,10 +60,10 @@ const ICON_BY_VARIANT: Record<NormalizedVariant, ReactNode> = {
  * @param children - additional content rendered in the modal body.
  * @param details - a details section rendered below the main content.
  * @param footerRight - the footer action buttons (required).
- * @param footerLeft - @deprecated renders alongside `footerRight`. Will be removed in a future release.
+ * @param footerLeft - deprecated renders alongside `footerRight`. Will be removed in a future release.
  */
 export const AlertModal = forwardRef<HTMLDivElement, AlertModalProps>(
-  AlertModalBase,
+  AlertModalBase
 );
 
 function AlertModalBase(
@@ -77,7 +77,7 @@ function AlertModalBase(
     variant = "information",
     ...props
   }: AlertModalProps,
-  ref?: ForwardedRef<HTMLDivElement>,
+  ref?: ForwardedRef<HTMLDivElement>
 ) {
   const t = useI18n();
   const [displayDetails, setDisplayDetails] = useState(false);
@@ -108,7 +108,7 @@ function AlertModalBase(
             "flex-noreset",
             "flex-col",
             "items-start",
-            "overflow-hidden",
+            "overflow-hidden"
           )}
         >
           <div
@@ -119,7 +119,7 @@ function AlertModalBase(
               "pt-xxl",
               "pr-xl",
               "pb-xl",
-              "pl-xxl",
+              "pl-xxl"
             )}
           >
             {title}
@@ -132,7 +132,7 @@ function AlertModalBase(
               "pb-m",
               "pl-m",
               "gap-m",
-              "self-stretch",
+              "self-stretch"
             )}
           >
             <div
@@ -140,7 +140,7 @@ function AlertModalBase(
                 "pl-xl",
                 "gap-m",
                 "font-body-s",
-                "text-default",
+                "text-default"
               )}
             >
               {children}
@@ -152,7 +152,7 @@ function AlertModalBase(
                   "flex-col",
                   "border-box",
                   "items-start",
-                  "gap-density-m",
+                  "gap-density-m"
                 )}
               >
                 <Button
@@ -173,7 +173,7 @@ function AlertModalBase(
                       "overflow-auto",
                       "pl-xl",
                       "gap-xxl",
-                      "items-center",
+                      "items-center"
                     )}
                     data-testid={
                       dataTestId ? `${dataTestId}-details` : undefined

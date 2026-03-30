@@ -36,7 +36,7 @@ Step.displayName = "Stepper.Step";
 
 function StepBase(
   { number, semantic, text, children, state, isLast, ...rest }: StepProps,
-  ref?: Ref<HTMLLIElement>,
+  ref?: Ref<HTMLLIElement>
 ) {
   const safeSemantic = semantic || "inactive";
   const safeState = state || "default";
@@ -55,7 +55,7 @@ function StepBase(
           "basis-auto",
           "gap-m",
           "p-s",
-          styles.step,
+          styles.step
         )}
         data-semantic={semantic}
         {...rest}
@@ -70,7 +70,7 @@ function StepBase(
               "flex-col",
               "items-center",
               "size-xxl",
-              "justify-center",
+              "justify-center"
             )}
           >
             <ProgressCircular />
@@ -82,7 +82,7 @@ function StepBase(
               "inline-flex",
               "border-box",
               "size-xxl",
-              styles.indicator,
+              styles.indicator
             )}
           >
             {(safeSemantic === "inactive" || safeSemantic === "active") && (
@@ -94,7 +94,7 @@ function StepBase(
                   "size-xxl",
                   "items-center",
                   "justify-center",
-                  "font-label-s-emphasized",
+                  "font-label-s-emphasized"
                 )}
               >
                 {number}
@@ -109,7 +109,7 @@ function StepBase(
             "inline-flex",
             "shrink-1",
             "font-label-s-emphasized",
-            "text-default",
+            "text-default"
           )}
         >
           {text}

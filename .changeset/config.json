@@ -6,5 +6,5 @@
   "linked": [],
   "access": "public",
   "baseBranch": "main",
-  "ignore": ["@qlik/sprout-table", "@qlik/storybook", "@qlik/test-app"]
+  "ignore": ["@qlik/sprout-react-table", "@qlik/storybook", "@qlik/test-app"]
 }

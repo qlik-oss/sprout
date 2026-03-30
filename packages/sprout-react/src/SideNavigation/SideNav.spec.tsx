@@ -20,7 +20,7 @@ test(`should SideNav be accessible`, async ({ mount, page }) => {
           </ListItem>
         </List>
       </SideNav.Section>
-    </SideNav.Nav>,
+    </SideNav.Nav>
   );
 
   const sectionLabel = page.getByText("Files");

@@ -47,6 +47,10 @@
     "value": "Opens in a new tab",
     "comment": "Label for an icon button used as a secondary action in a menu item to open the link in a new browser tab."
   },
+  "message.label.details": {
+    "value": "Details",
+    "comment": "Label for a button in the Message component which trigger the display of more information for the user."
+  },
   "progress.circular.loading": {
     "value": "Loading",
     "comment": "Is read by screen reader. This is used as aria-label property of the visual circular progress to indicate this is a loading state."

@@ -15,7 +15,7 @@ export type WidthStrategy =
 
 export function getWidth(
   width: WidthStrategy,
-  referenceWidth: number,
+  referenceWidth: number
 ): CSSProperties["width"] {
   // eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check
   switch (width) {

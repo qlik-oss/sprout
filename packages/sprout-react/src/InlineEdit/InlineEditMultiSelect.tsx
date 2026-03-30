@@ -34,7 +34,7 @@ export type InlineEditMultiSelectProps = Omit<
   defaultValue?: SelectProps["Multi"]["defaultValue"];
   onChange?: (
     e: Parameters<ChangeEventHandler<HTMLInputElement>>[0],
-    reason?: ChangeReasons | "cancel",
+    reason?: ChangeReasons | "cancel"
   ) => void;
   hasError?: SelectProps["Multi"]["hasError"];
   errorMessages?: SelectProps["Multi"]["errorMessages"];
@@ -73,7 +73,7 @@ function InlineEditMultiSelectBase(
     onChange,
     ...props
   }: InlineEditMultiSelectProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const controlled = useControl<Array<string>>(
     {
@@ -87,7 +87,7 @@ function InlineEditMultiSelectBase(
       defaultValueKey: "defaultValue",
       selector: (e) =>
         e.target.selectedOptions.map((o: { value: string }) => o.value),
-    },
+    }
   );
   const [selectedProps, setSelectedProps] = useState<
     Record<string, SelectOptionProps>

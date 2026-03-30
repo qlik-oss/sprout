@@ -30,7 +30,7 @@ export function SelectSearch() {
       if (queryFilter) {
         const listBox = document.querySelector('[role="listbox"]');
         const filteredOptions = listBox?.querySelectorAll(
-          'button[data-option]:not([aria-hidden="true"])',
+          'button[data-option]:not([aria-hidden="true"])'
         );
         setFilteredOptionsCount(filteredOptions?.length);
       } else {

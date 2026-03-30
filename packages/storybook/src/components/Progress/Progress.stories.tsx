@@ -65,7 +65,7 @@ export const VisualTestProgressBar = {
           "gap-l",
           "p-xl",
           "w-m",
-          "border-default",
+          "border-default"
         )}
       >
         <h3 className={classNames("font-heading-m", "text-default")}>
@@ -111,7 +111,7 @@ export const VisualTestCircular = {
             "flex-row",
             "border-box",
             "items-center",
-            "gap-m",
+            "gap-m"
           )}
         >
           <span className={classNames("font-body-s", "text-default")}>
@@ -125,7 +125,7 @@ export const VisualTestCircular = {
             "flex-row",
             "border-box",
             "items-center",
-            "gap-m",
+            "gap-m"
           )}
         >
           <span className={classNames("font-body-s", "text-default")}>
@@ -139,7 +139,7 @@ export const VisualTestCircular = {
             "flex-row",
             "border-box",
             "items-center",
-            "gap-m",
+            "gap-m"
           )}
         >
           <span className={classNames("font-body-s", "text-default")}>
@@ -154,7 +154,7 @@ export const VisualTestCircular = {
             "flex-row",
             "border-box",
             "items-center",
-            "gap-m",
+            "gap-m"
           )}
         >
           <span className={classNames("font-body-s", "text-default")}>

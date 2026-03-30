@@ -15,16 +15,21 @@ function getLangFromElement(el: HTMLElement | null): HTMLHtmlElement["lang"] {
 }
 
 export function useLang(ref?: RefObject<HTMLElement | null>) {
-  let queryFn = (selector: string): HTMLElement | null => document.querySelector(selector);
+  let queryFn = (selector: string): HTMLElement | null =>
+    document.querySelector(selector);
   if (ref) {
     queryFn = (selector) => {
       if (ref.current) {
-        return ref.current.lang ? ref.current : ref.current.closest(selector) || null;
+        return ref.current.lang
+          ? ref.current
+          : ref.current.closest(selector) || null;
       }
       return null;
     };
   }
-  const langInitialValue: HTMLHtmlElement["lang"] = getLangFromElement(queryFn("[lang]"));
+  const langInitialValue: HTMLHtmlElement["lang"] = getLangFromElement(
+    queryFn("[lang]")
+  );
   const [langState, setLangState] = useState(langInitialValue);
 
   useEffect(() => {

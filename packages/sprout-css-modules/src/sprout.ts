@@ -31,8 +31,19 @@ import {
   createContainer,
   type CreateContainerAPI,
 } from "./create-container";
-import { type Breakpoint, media, type MediaAPI, type ViewportOptions, type ViewportSize } from "./media";
-import { type BoxSizing, type BoxSizingKeys, widthObserver, type WidthObserverAPI } from "./width-observer";
+import {
+  type Breakpoint,
+  media,
+  type MediaAPI,
+  type ViewportOptions,
+  type ViewportSize,
+} from "./media";
+import {
+  type BoxSizing,
+  type BoxSizingKeys,
+  widthObserver,
+  type WidthObserverAPI,
+} from "./width-observer";
 
 export type {
   AllClasses,
@@ -71,4 +82,10 @@ export type {
   WidthObserverAPI,
 };
 
-export default { classNames, widthObserver, createContainer, media, ...sproutClasses };
+export default {
+  classNames,
+  widthObserver,
+  createContainer,
+  media,
+  ...sproutClasses,
+};

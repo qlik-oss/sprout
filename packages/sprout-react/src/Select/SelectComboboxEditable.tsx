@@ -8,9 +8,9 @@ import {
   useState,
 } from "react";
 
+import { useControl } from "@qlik/sprout-react-hooks";
 import sprout from "@qlik/sprout-css-modules";
 import { ErrorIcon } from "@qlik/sprout-icons/react";
-import { useControl } from "@qlik/sprout-react-hooks";
 
 import { InputButton } from "../InputButton";
 import { Tooltip } from "../Tooltip";
@@ -32,7 +32,7 @@ export type ComboboxPropsEditable = Omit<HTMLInputProps, "children"> & {
   renderValues: (
     value: Array<string>,
     selectedProps: Record<string, SelectOptionProps>,
-    filterInput: ReactNode,
+    filterInput: ReactNode
   ) => JSX.Element;
   children: ReactNode;
   values?: Array<string>;
@@ -51,7 +51,7 @@ export const ComboboxEditable = forwardRef<
 
 function ComboboxEditableBase(
   props: ComboboxPropsEditable,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const {
     id,
@@ -86,7 +86,7 @@ function ComboboxEditableBase(
       valueKey: "value",
       defaultValueKey: "defaultValue",
       selector: (e) => e.target.value,
-    },
+    }
   );
   const [selectedProps, setSelectedProps] = useState<
     Record<string, SelectOptionProps>
@@ -122,7 +122,7 @@ function ComboboxEditableBase(
           {
             "cursor-text": !disabled,
             "cursor-not-allowed": !!disabled,
-          },
+          }
         )}
         ref={inputRef}
       />
@@ -148,7 +148,7 @@ function ComboboxEditableBase(
           [multiStyles.input_error]: !!hasError,
           [multiStyles.input_readonly]: !!readOnly,
           [multiStyles.input_disabled]: !!disabled,
-        },
+        }
       )}
       data-testid={dataTestId}
       ref={ref}
@@ -174,7 +174,7 @@ function ComboboxEditableBase(
           {
             "cursor-pointer": !disabled,
             "cursor-not-allowed": !!disabled,
-          },
+          }
         )}
         onClick={() => {
           if (disabled || readOnly) {
@@ -219,7 +219,7 @@ function ComboboxEditableBase(
             "size-xl",
             "shrink-0",
             "mr-m",
-            "text-danger",
+            "text-danger"
           )}
         />
       )}
@@ -230,7 +230,7 @@ function ComboboxEditableBase(
           "self-center",
           {
             "fill-disabled": !!disabled || !!readOnly,
-          },
+          }
         )}
       />
     </div>

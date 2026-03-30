@@ -30,7 +30,7 @@ export type InlineEditSelectProps = Omit<
   defaultValue?: SelectProps["Select"]["defaultValue"];
   onChange?: (
     e: Parameters<ChangeEventHandler<HTMLInputElement>>[0],
-    reason?: ChangeReasons | "cancel",
+    reason?: ChangeReasons | "cancel"
   ) => void;
   hasError?: SelectProps["Select"]["hasError"];
   errorMessages?: SelectProps["Select"]["errorMessages"];
@@ -68,7 +68,7 @@ function InlineEditSelectBase(
     hasError,
     ...props
   }: InlineEditSelectProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const controlled = useControl<string>(
     {
@@ -81,7 +81,7 @@ function InlineEditSelectBase(
       valueKey: "value",
       defaultValueKey: "defaultValue",
       selector: (e) => e?.target?.value,
-    },
+    }
   );
   const [selectedProps, setSelectedProps] = useState<SelectProps["Option"]>({
     children: "",
@@ -124,7 +124,7 @@ function InlineEditSelectBase(
             "w-full",
             "break-words",
             "text-default",
-            "text-start",
+            "text-start"
           )}
         >
           {selectedProps.children || controlled.value || (

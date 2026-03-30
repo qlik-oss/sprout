@@ -34,7 +34,7 @@ Object.values(ButtonSize).forEach((size) => {
           }
           onClick={() => {}}
         />
-      </div>,
+      </div>
     );
     const component = page.getByRole("button");
     await expect(component).toBeVisible();
@@ -76,7 +76,7 @@ test("should display label when hovering over button", async ({
         }
         onClick={() => {}}
       />
-    </div>,
+    </div>
   );
 
   const component = page.getByRole("button");
@@ -113,7 +113,7 @@ test("should be accessible when using with aria-label", async ({
         }
         onClick={() => {}}
       />
-    </div>,
+    </div>
   );
 
   const component = page.getByRole("button");
@@ -150,7 +150,7 @@ test("should support ref forwarding with aria-label", async ({
           onClick={() => {}}
         />
       </Tooltip>
-    </div>,
+    </div>
   );
 
   const component = page.getByRole("button");

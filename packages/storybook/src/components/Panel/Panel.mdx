@@ -11,6 +11,10 @@ Panels can display various types of information, such as forms, media, lists, or
 Panels are used to divide the page into distinct sections, often serving as containers for related elements.
 Panels are attached to an edge of a parent container or viewport.
 
+The `Panel.Primitive` component extends [HTML div element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/div#attributes) attributes, so all standard properties are supported.
+
+## Usage
+
 ```tsx
 import { Panel } from "@qlik/sprout-react";
 
@@ -33,15 +37,42 @@ import { Panel } from "@qlik/sprout-react";
 </Panel.Container>
 ```
 
+## Properties
+
 <Canvas of={Stories.Playground} />
 <Controls of={Stories.Playground} />
 
 ## API
 
-The `Panel.Container` `overlay` props will move content into the grid.
+### Panel.Container
 
-The `Panel.Container` `children` accept only one `Panel.Left|Right|Top|Bottom` as children. Any overflow is hidden.
-The Panel is considered as a region and it is nice to had an `aria-label` to describe that region.
+Creates a grid layout container that manages panel positioning.
 
-All Panel support a `resizable` property that control the size of the panel along it's axis.
-`onResize` is provided if you want to make it persistent.
+**Props:**
+
+- `overlay` — Optional. Controls overlay behavior. Pass `true` for always-overlay, or a size token (`s`, `m`, `l`, `xl`, `xxl`, `3xl`, `4xl`) for responsive overlay at container breakpoints. When overlay is active, panels float over the main content instead of occupying grid space.
+- All standard HTML div attributes are supported.
+
+**Usage:**
+
+```tsx
+<Panel.Container overlay="l">
+  <div>Main content (shown below panels on small screens)</div>
+  <Panel.Left>Left panel</Panel.Left>
+</Panel.Container>
+```
+
+### Panel.Left, Panel.Right, Panel.Top, Panel.Bottom
+
+Pre-configured panel placement variants. Each wraps [Panel.Primitive](#properties) with a fixed placement.
+
+**Usage:**
+
+```tsx
+<Panel.Container>
+  <Panel.Left resizable maxWidth={300} aria-label="Navigation">
+    Navigation content
+  </Panel.Left>
+  <div>Main content</div>
+</Panel.Container>
+```

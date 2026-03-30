@@ -49,7 +49,7 @@ export const Contextual: StoryObj<typeof Menu.Contextual> = {
                       </Menu.Trigger>
                     </>
                   )}
-                </>,
+                </>
               );
             }, 1000);
           }
@@ -61,7 +61,7 @@ export const Contextual: StoryObj<typeof Menu.Contextual> = {
             "flex-col",
             "p-m",
             "w-full",
-            "border-default",
+            "border-default"
           )}
           data-testid="contextual"
         >

@@ -14,7 +14,7 @@ test("should not have overflow with small content", async ({ page, mount }) => {
       footerRight={<Button variant="primary" label="Ok" onClick={() => {}} />}
     >
       This is a description
-    </AlertModal>,
+    </AlertModal>
   );
   const modal = page.getByRole("alertdialog");
   await expect(modal).toBeVisible();

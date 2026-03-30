@@ -20,13 +20,21 @@ export function cli() {
     .description("Transform design tokens")
     .option("-c, --config <string>", "token config path")
     .option("-s, --source <string>", "token source folder path")
-    .option("-f, --format <string>", "Output format (theme, typescript, jsonschema, css, csv)")
+    .option(
+      "-f, --format <string>",
+      "Output format (theme, typescript, jsonschema, css, csv)"
+    )
     .option("-o, --output <string>", "Output file path")
     .option("-v, --verbose", "Enable verbose logging")
     .action(async (options) => {
       console.log("Compiling tokens with options:", options.format);
       // always run json as it's the base used by csv and js
-      if (options.format === "json" || !options.format || options.format === "csv" || options.format === "js") {
+      if (
+        options.format === "json" ||
+        !options.format ||
+        options.format === "csv" ||
+        options.format === "js"
+      ) {
         try {
           await compileJSON(options);
         } catch (error) {

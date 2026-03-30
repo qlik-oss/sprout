@@ -24,7 +24,12 @@ const gitignorePatterns = fs
 export default [
   ...tsConfig,
   {
-    ignores: ["**/dist", "**/.prettierignore", "./src/flex.module.css.d.ts", ...gitignorePatterns],
+    ignores: [
+      "**/dist",
+
+      "./src/flex.module.css.d.ts",
+      ...gitignorePatterns,
+    ],
   },
   ...compat.extends("plugin:import/recommended", "plugin:import/typescript"),
   {

@@ -54,7 +54,7 @@ export type SelectFloatingProps = Omit<
 } & Pick<FloatingPublicProps, "disableScrollLock" | "hideBackdrop">;
 
 export const SelectFloating = forwardRef<HTMLInputElement, SelectFloatingProps>(
-  SelectFloatingBase,
+  SelectFloatingBase
 );
 
 function getSelectFloatingContent(children: ReactNode): ReactNode {
@@ -100,7 +100,7 @@ function SelectFloatingBase(
     value,
     ...props
   }: SelectFloatingProps,
-  ref?: Ref<HTMLInputElement>,
+  ref?: Ref<HTMLInputElement>
 ) {
   const safeId = useId(id);
 
@@ -134,7 +134,7 @@ function SelectFloatingBase(
     },
     {
       selector: (e) => e?.target?.value,
-    },
+    }
   );
 
   const onComboboxChange = useCallback((btn?: HTMLElement) => {
@@ -160,7 +160,7 @@ function SelectFloatingBase(
         controlled.onChange(e);
         onChangeDelayed(e);
       },
-    }),
+    })
   );
 
   useEffect(() => {
@@ -214,7 +214,7 @@ function SelectFloatingBase(
       gestureRef.current.onKeyDownHandler(event);
       resetTypeahead();
     },
-    [open, onKeydown, resetTypeahead, controlled.onChange],
+    [open, onKeydown, resetTypeahead, controlled.onChange]
   );
 
   const contextValue = useMemo(
@@ -225,7 +225,7 @@ function SelectFloatingBase(
       open,
       onKeyDownCapture,
     }),
-    [controlled.value, queryFilter, setQueryFilter, open, onKeyDownCapture],
+    [controlled.value, queryFilter, setQueryFilter, open, onKeyDownCapture]
   );
 
   const renderedOptions = (
@@ -269,6 +269,7 @@ function SelectFloatingBase(
         ref={mergeInputRef}
       />
       <FloatingPrimitive
+        zIndex="z-context"
         disableScrollLock={disableScrollLock}
         hideBackdrop={hideBackdrop}
         initialOpen={defaultOpen}

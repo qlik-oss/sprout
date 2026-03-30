@@ -11,12 +11,12 @@ export type FloatingWrapperProps = {
  * @param children - the elements to render inside the floating pill-shaped container.
  */
 export const FloatingWrapper = forwardRef<HTMLDivElement, FloatingWrapperProps>(
-  FloatingWrapperBase,
+  FloatingWrapperBase
 );
 
 function FloatingWrapperBase(
   { children }: FloatingWrapperProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   return (
     <div
@@ -29,7 +29,7 @@ function FloatingWrapperBase(
         "box-shadow-default",
         "radius-pill",
         "bg-default",
-        "items-stretch",
+        "items-stretch"
       )}
     >
       {children}

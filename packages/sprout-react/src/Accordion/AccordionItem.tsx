@@ -59,7 +59,7 @@ export type AccordionItemProps = AccordionItemCommonPropsType &
  * @param onToggleOpened - callback fired when the accordion item is toggled.
  */
 export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
-  AccordionItemBase,
+  AccordionItemBase
 );
 
 function AccordionItemBase(
@@ -82,7 +82,7 @@ function AccordionItemBase(
     disabled = false,
     ...rest
   }: AccordionItemProps,
-  ref?: Ref<HTMLButtonElement>,
+  ref?: Ref<HTMLButtonElement>
 ) {
   const controlled = useControl(
     {
@@ -95,7 +95,7 @@ function AccordionItemBase(
       valueKey: "opened",
       defaultValueKey: "openedDefault",
       selector: (e) => e,
-    },
+    }
   );
   const safeComponentId = useId();
   const componentId = id || safeComponentId;
@@ -116,7 +116,7 @@ function AccordionItemBase(
         "gap-m",
         {
           [style.divider]: variant === "default",
-        },
+        }
       )}
       {...rest}
     >

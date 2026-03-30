@@ -3,93 +3,14 @@ import { type ReactNode, useState } from "react";
 import { Button, Panel, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import { PanelPrimitiveArgTypes } from "./Panel.argTypes";
+
 export default {
   title: "Components/Panel",
   component: Panel.Primitive,
-  argTypes: {
-    resizable: {
-      control: {
-        type: "boolean",
-      },
-    },
-  },
-} as Meta;
+} as Meta<typeof Panel.Primitive>;
 
 export const Playground: StoryObj<typeof Panel.Primitive> = {
-  args: {},
-  argTypes: {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-ignore
-    placement: {
-      table: {
-        disable: true,
-      },
-    },
-    overlay: {
-      control: {
-        type: "select",
-      },
-      options: [
-        undefined,
-        false,
-        true,
-        "s",
-        "m",
-        "l",
-        "xl",
-        "xxl",
-        "2xl",
-        "3xl",
-        "4xl",
-      ],
-    },
-    "aria-label": {
-      control: {
-        type: "text",
-      },
-    },
-    resizable: {
-      control: {
-        type: "boolean",
-      },
-    },
-    showResizeHandle: {
-      control: {
-        type: "boolean",
-      },
-    },
-    minHeight: {
-      table: {
-        disable: true,
-      },
-    },
-    minWidth: {
-      control: {
-        type: "text",
-      },
-    },
-    maxHeight: {
-      table: {
-        disable: true,
-      },
-    },
-    maxWidth: {
-      control: {
-        type: "text",
-      },
-    },
-    initialSize: {
-      control: {
-        type: "text",
-      },
-    },
-    "data-drawer": {
-      control: {
-        type: "select",
-      },
-      options: [undefined, "closed", "opened"],
-    },
-  },
   render: ({ overlay, ...props }) => (
     <div
       className={classNames(
@@ -97,7 +18,7 @@ export const Playground: StoryObj<typeof Panel.Primitive> = {
         "flex-row",
         "border-box",
         "p-l",
-        "border-default",
+        "border-default"
       )}
       style={{ inlineSize: "100%", blockSize: "300px" }}
     >
@@ -107,7 +28,7 @@ export const Playground: StoryObj<typeof Panel.Primitive> = {
             "flex",
             "flex-row",
             "border-box",
-            "text-default",
+            "text-default"
           )}
         >
           <p>
@@ -123,7 +44,7 @@ export const Playground: StoryObj<typeof Panel.Primitive> = {
               "border-box",
               "p-s",
               "font-body-m",
-              "text-default",
+              "text-default"
             )}
           >
             Panel content
@@ -132,7 +53,7 @@ export const Playground: StoryObj<typeof Panel.Primitive> = {
       </Panel.Container>
     </div>
   ),
-
+  argTypes: PanelPrimitiveArgTypes,
   parameters: {
     layout: "fullscreen",
     chromatic: { disableSnapshot: true },
@@ -143,8 +64,9 @@ export const Drawer: StoryObj<typeof Panel.Primitive> = {
   render: () => {
     const [drawerLeft, setDrawerLeft] = useState<"closed" | "opened">("closed");
     const [drawerRight, setDrawerRight] = useState<"closed" | "opened">(
-      "closed",
+      "closed"
     );
+
     return (
       <div
         className={classNames(
@@ -152,7 +74,7 @@ export const Drawer: StoryObj<typeof Panel.Primitive> = {
           "flex-row",
           "border-box",
           "p-l",
-          "border-default",
+          "border-default"
         )}
         style={{ inlineSize: "100%", blockSize: "300px" }}
       >
@@ -163,7 +85,7 @@ export const Drawer: StoryObj<typeof Panel.Primitive> = {
               "flex-col",
               "border-box",
               "items-start",
-              "gap-s",
+              "gap-s"
             )}
           >
             <p className={classNames("text-default")}>
@@ -172,7 +94,7 @@ export const Drawer: StoryObj<typeof Panel.Primitive> = {
                 label="Toggle left drawer"
                 onClick={() => {
                   setDrawerLeft((prev) =>
-                    prev === "closed" ? "opened" : "closed",
+                    prev === "closed" ? "opened" : "closed"
                   );
                 }}
               />
@@ -180,7 +102,7 @@ export const Drawer: StoryObj<typeof Panel.Primitive> = {
                 label="Toggle right drawer"
                 onClick={() => {
                   setDrawerRight((prev) =>
-                    prev === "closed" ? "opened" : "closed",
+                    prev === "closed" ? "opened" : "closed"
                   );
                 }}
               />
@@ -194,7 +116,7 @@ export const Drawer: StoryObj<typeof Panel.Primitive> = {
                 "border-box",
                 "p-s",
                 "font-body-m",
-                "text-default",
+                "text-default"
               )}
             >
               Panel content
@@ -208,7 +130,7 @@ export const Drawer: StoryObj<typeof Panel.Primitive> = {
                 "border-box",
                 "p-s",
                 "font-body-m",
-                "text-default",
+                "text-default"
               )}
             >
               Panel content
@@ -236,7 +158,7 @@ const CONTENT = (
       "p-m",
       "overflow-hidden",
       "overflow-x-auto",
-      "overflow-y-auto",
+      "overflow-y-auto"
     )}
   >
     Haec subinde Constantius audiens et quaedam referente Thalassio doctus, quem
@@ -260,7 +182,7 @@ function DemoPanelContent({ children }: { children: ReactNode }) {
         "p-s",
         "justify-center",
         "font-body-m",
-        "text-default",
+        "text-default"
       )}
     >
       {children}
@@ -280,7 +202,7 @@ export const VisualTest = {
         "font-body-m",
         "text-default",
         "p-m",
-        "gap-s",
+        "gap-s"
       )}
       style={{ inlineSize: "100vw" }}
     >
@@ -295,7 +217,7 @@ export const VisualTest = {
           "w-xxl",
           "gap-3xl",
           "flex-nowrap",
-          "grow",
+          "grow"
         )}
         style={{ blockSize: ROW_HEIGHT }}
       >
@@ -305,7 +227,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container>
@@ -322,7 +244,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container>
@@ -339,7 +261,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container overlay>
@@ -356,7 +278,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container overlay>
@@ -379,7 +301,7 @@ export const VisualTest = {
           "w-xxl",
           "gap-3xl",
           "flex-nowrap",
-          "grow",
+          "grow"
         )}
         style={{ blockSize: ROW_HEIGHT }}
       >
@@ -389,7 +311,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container>
@@ -406,7 +328,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container>
@@ -423,7 +345,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container overlay>
@@ -440,7 +362,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container overlay>
@@ -463,7 +385,7 @@ export const VisualTest = {
           "w-xxl",
           "gap-3xl",
           "flex-nowrap",
-          "grow",
+          "grow"
         )}
         style={{ blockSize: ROW_HEIGHT }}
       >
@@ -473,7 +395,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container>
@@ -490,7 +412,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container>
@@ -507,7 +429,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container overlay>
@@ -524,7 +446,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container overlay>
@@ -547,7 +469,7 @@ export const VisualTest = {
           "w-xxl",
           "gap-3xl",
           "flex-nowrap",
-          "grow",
+          "grow"
         )}
         style={{ blockSize: ROW_HEIGHT }}
       >
@@ -557,7 +479,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container>
@@ -574,7 +496,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container>
@@ -591,7 +513,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container overlay>
@@ -608,7 +530,7 @@ export const VisualTest = {
             "flex-row",
             "border-box",
             "border-default",
-            "grow",
+            "grow"
           )}
         >
           <Panel.Container overlay>

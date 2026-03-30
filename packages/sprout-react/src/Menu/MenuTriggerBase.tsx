@@ -34,7 +34,7 @@ function getAllItems(element: HTMLElement) {
 
 function getSelectedItems(element: HTMLElement) {
   return element.querySelectorAll(
-    `[role^="menuitem"][aria-selected=true]:not([disabled])`,
+    `[role^="menuitem"][aria-selected=true]:not([disabled])`
   );
 }
 
@@ -43,7 +43,7 @@ function getParentMenuTrigger(element: HTMLElement) {
   if (menu) {
     const menuId = menu.getAttribute("id");
     const trigger = document.querySelector(
-      `[role^="menuitem"][aria-controls="${menuId}"]`,
+      `[role^="menuitem"][aria-controls="${menuId}"]`
     ) as HTMLElement;
     return trigger;
   }
@@ -55,7 +55,7 @@ function hasSubMenu(element: HTMLElement) {
 }
 
 export const MenuTriggerBase = forwardRef<HTMLDivElement, MenuTriggerBaseProps>(
-  TriggerBase,
+  TriggerBase
 );
 
 function TriggerBase(
@@ -72,7 +72,7 @@ function TriggerBase(
     maxWidth = "xs",
     ...props
   }: MenuTriggerBaseProps,
-  parentRef?: Ref<HTMLDivElement>,
+  parentRef?: Ref<HTMLDivElement>
 ) {
   const ref = useRef<HTMLDivElement>(null);
   const mergedRef = useMergeRefs([ref, parentRef]);

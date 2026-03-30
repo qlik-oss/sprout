@@ -3,25 +3,42 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["lib/**", "dist/**", "generated/**", "react/**", "raw/**", "vue/**"]
+      "outputs": ["dist/**", "lib/**", "build/**"]
     },
-    "clean": {
-      "dependsOn": ["^clean"]
+    "@qlik/sprout-css-modules#build": {
+      "outputs": ["src/*.js", "src/*.d.ts", "src/*.js.map", "dist/**"]
+    },
+    "@qlik/sprout-icons#build": {
+      "outputs": ["react/**", "vue/**"]
+    },
+    "code-connect:check": {
+      "env": ["FIGMA_ACCESS_TOKEN"]
     },
     "start": {},
     "storybook:build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^storybook:build"],
+      "outputs": ["storybook-static/**"]
     },
-    "lint": {
-      "dependsOn": ["^lint"]
+    "lint": {},
+    "lint:ci": {
+      "dependsOn": ["^lint:ci"],
+      "outputs": ["**/stylelint-report.json", "**/eslint-report.json"]
     },
-    "check-types": {
-      "dependsOn": ["^check-types"]
+    "check-types": {},
+    "playwright:install": {
+      "cache": false,
+      "outputs": []
     },
-    "test": {
-      "dependsOn": ["^build"],
-      "outputs": ["coverage/**", "test-results/**", "playwright-report/**"]
+    "test:node": {
+      "outputs": []
     },
+    "test:playwright": {
+      "outputs": ["playwright-report/**", "test-results/**"]
+    },
+    "test:vitest": {
+      "outputs": []
+    },
+    "test:update": {},
     "format:write": {},
     "format:check": {}
   }

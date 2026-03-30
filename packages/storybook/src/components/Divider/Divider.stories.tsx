@@ -40,7 +40,7 @@ export const Horizontal: Story = {
         "w-xxs",
         "gap-m",
         "text-default",
-        "font-body-s",
+        "font-body-s"
       )}
     >
       Foo
@@ -65,7 +65,7 @@ export const VisualTest: Story = {
         "gap-xl",
         "w-s",
         "text-default",
-        "font-body-s",
+        "font-body-s"
       )}
     >
       <div className={sprout.classNames("flex", "flex-row", "gap-m")}>
@@ -88,7 +88,7 @@ export const VisualTest: Story = {
           "gap-m",
           "w-full",
           "items-center",
-          "flex-row",
+          "flex-row"
         )}
       >
         <div
@@ -96,7 +96,7 @@ export const VisualTest: Story = {
             "flex",
             "justify-center",
             "items-center",
-            "w-s",
+            "w-s"
           )}
         >
           Flexbox container with Divider that takes the full height of it's
@@ -108,7 +108,7 @@ export const VisualTest: Story = {
             "flex",
             "justify-center",
             "items-center",
-            "w-s",
+            "w-s"
           )}
         >
           Flexbox container with Divider that takes the full height of it's

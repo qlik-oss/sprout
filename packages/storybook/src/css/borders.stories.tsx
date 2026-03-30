@@ -21,7 +21,7 @@ export const border: StoryObj<unknown> = {
         "border-box",
         "flex-col",
         "gap-0",
-        "border-none",
+        "border-none"
       )}
     >
       <div className={sprout.classNames(...PROPERTY_ROW_PROPS)}>
@@ -47,7 +47,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-default",
+              "border-default"
             )}
           >
             1
@@ -58,7 +58,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-moderate",
+              "border-moderate"
             )}
           >
             1
@@ -69,7 +69,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-strong",
+              "border-strong"
             )}
           >
             1
@@ -80,7 +80,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-extra-strong",
+              "border-extra-strong"
             )}
           >
             1
@@ -95,7 +95,7 @@ export const border: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "border-t-none",
+              "border-t-none"
             )}
           >
             1
@@ -106,7 +106,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-t-weak",
+              "border-t-weak"
             )}
           >
             1
@@ -117,7 +117,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-t-default",
+              "border-t-default"
             )}
           >
             1
@@ -128,7 +128,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-t-moderate",
+              "border-t-moderate"
             )}
           >
             1
@@ -139,7 +139,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-t-strong",
+              "border-t-strong"
             )}
           >
             1
@@ -150,7 +150,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-t-extra-strong",
+              "border-t-extra-strong"
             )}
           >
             1
@@ -165,7 +165,7 @@ export const border: StoryObj<unknown> = {
               ...CONTENT_PROPS_TOKEN,
 
               "border-default",
-              "border-r-none",
+              "border-r-none"
             )}
           >
             1
@@ -176,7 +176,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-r-weak",
+              "border-r-weak"
             )}
           >
             1
@@ -187,7 +187,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-r-default",
+              "border-r-default"
             )}
           >
             1
@@ -198,7 +198,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-r-moderate",
+              "border-r-moderate"
             )}
           >
             1
@@ -209,7 +209,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-r-strong",
+              "border-r-strong"
             )}
           >
             1
@@ -220,7 +220,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-r-extra-strong",
+              "border-r-extra-strong"
             )}
           >
             1
@@ -234,7 +234,7 @@ export const border: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "border-b-none",
+              "border-b-none"
             )}
           >
             1
@@ -245,7 +245,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-b-weak",
+              "border-b-weak"
             )}
           >
             1
@@ -256,7 +256,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-b-default",
+              "border-b-default"
             )}
           >
             1
@@ -267,7 +267,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-b-moderate",
+              "border-b-moderate"
             )}
           >
             1
@@ -278,7 +278,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-b-strong",
+              "border-b-strong"
             )}
           >
             1
@@ -289,7 +289,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-b-extra-strong",
+              "border-b-extra-strong"
             )}
           >
             1
@@ -303,7 +303,7 @@ export const border: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "border-l-none",
+              "border-l-none"
             )}
           >
             1
@@ -314,7 +314,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-l-weak",
+              "border-l-weak"
             )}
           >
             1
@@ -325,7 +325,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-l-default",
+              "border-l-default"
             )}
           >
             1
@@ -336,7 +336,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-l-moderate",
+              "border-l-moderate"
             )}
           >
             1
@@ -347,7 +347,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-l-strong",
+              "border-l-strong"
             )}
           >
             1
@@ -358,7 +358,7 @@ export const border: StoryObj<unknown> = {
           <div
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
-              "border-l-extra-strong",
+              "border-l-extra-strong"
             )}
           >
             1
@@ -379,7 +379,7 @@ export const BorderWidth = {
           className={sprout.classNames(
             ...CONTENT_PROPS_TOKEN,
             "border-default",
-            "border-width-0",
+            "border-width-0"
           )}
         >
           1
@@ -391,7 +391,7 @@ export const BorderWidth = {
           className={sprout.classNames(
             ...CONTENT_PROPS_TOKEN,
             "border-default",
-            "border-width-default",
+            "border-width-default"
           )}
         >
           1
@@ -403,7 +403,7 @@ export const BorderWidth = {
           className={sprout.classNames(
             ...CONTENT_PROPS_TOKEN,
             "border-default",
-            "border-width-strong",
+            "border-width-strong"
           )}
         >
           1
@@ -424,7 +424,7 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-subtle",
+              "radius-subtle"
             )}
           >
             1
@@ -436,7 +436,7 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-soft",
+              "radius-soft"
             )}
           >
             1
@@ -448,7 +448,7 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-cushiony",
+              "radius-cushiony"
             )}
           >
             1
@@ -460,7 +460,7 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-round",
+              "radius-round"
             )}
           >
             1
@@ -472,7 +472,7 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-pill",
+              "radius-pill"
             )}
           >
             1
@@ -486,14 +486,14 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-subtle",
+              "radius-subtle"
             )}
           >
             <div
               className={sprout.classNames(
                 ...CONTENT_PROPS_TOKEN,
                 "border-default",
-                "radius-nested-subtle-xs",
+                "radius-nested-subtle-xs"
               )}
             >
               1
@@ -506,14 +506,14 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-soft",
+              "radius-soft"
             )}
           >
             <div
               className={sprout.classNames(
                 ...CONTENT_PROPS_TOKEN,
                 "border-default",
-                "radius-nested-soft-s",
+                "radius-nested-soft-s"
               )}
             >
               1
@@ -526,14 +526,14 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-soft",
+              "radius-soft"
             )}
           >
             <div
               className={sprout.classNames(
                 ...CONTENT_PROPS_TOKEN,
                 "border-default",
-                "radius-nested-soft-xs",
+                "radius-nested-soft-xs"
               )}
             >
               1
@@ -546,14 +546,14 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-cushiony",
+              "radius-cushiony"
             )}
           >
             <div
               className={sprout.classNames(
                 ...CONTENT_PROPS_TOKEN,
                 "border-default",
-                "radius-nested-cushiony-xs",
+                "radius-nested-cushiony-xs"
               )}
             >
               1
@@ -566,14 +566,14 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-cushiony",
+              "radius-cushiony"
             )}
           >
             <div
               className={sprout.classNames(
                 ...CONTENT_PROPS_TOKEN,
                 "border-default",
-                "radius-nested-cushiony-s",
+                "radius-nested-cushiony-s"
               )}
             >
               1
@@ -586,14 +586,14 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-cushiony",
+              "radius-cushiony"
             )}
           >
             <div
               className={sprout.classNames(
                 ...CONTENT_PROPS_TOKEN,
                 "border-default",
-                "radius-nested-cushiony-m",
+                "radius-nested-cushiony-m"
               )}
             >
               1
@@ -608,21 +608,21 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-soft",
+              "radius-soft"
             )}
           >
             <div
               className={sprout.classNames(
                 ...CONTENT_PROPS_TOKEN,
                 "border-default",
-                "radius-nested-soft-xs",
+                "radius-nested-soft-xs"
               )}
             >
               <div
                 className={sprout.classNames(
                   ...CONTENT_PROPS_TOKEN,
                   "border-default",
-                  "radius-twice-soft-xs",
+                  "radius-twice-soft-xs"
                 )}
               >
                 1
@@ -636,21 +636,21 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-cushiony",
+              "radius-cushiony"
             )}
           >
             <div
               className={sprout.classNames(
                 ...CONTENT_PROPS_TOKEN,
                 "border-default",
-                "radius-nested-cushiony-s",
+                "radius-nested-cushiony-s"
               )}
             >
               <div
                 className={sprout.classNames(
                   ...CONTENT_PROPS_TOKEN,
                   "border-default",
-                  "radius-twice-cushiony-s-xs",
+                  "radius-twice-cushiony-s-xs"
                 )}
               >
                 1
@@ -664,21 +664,21 @@ export const BorderRadius: StoryObj<unknown> = {
             className={sprout.classNames(
               ...CONTENT_PROPS_TOKEN,
               "border-default",
-              "radius-cushiony",
+              "radius-cushiony"
             )}
           >
             <div
               className={sprout.classNames(
                 ...CONTENT_PROPS_TOKEN,
                 "border-default",
-                "radius-nested-cushiony-m",
+                "radius-nested-cushiony-m"
               )}
             >
               <div
                 className={sprout.classNames(
                   ...CONTENT_PROPS_TOKEN,
                   "border-default",
-                  "radius-twice-cushiony-m-s",
+                  "radius-twice-cushiony-m-s"
                 )}
               >
                 1
@@ -701,7 +701,7 @@ export const BorderColor: StoryObj<unknown> = {
           className={sprout.classNames(
             ...CONTENT_PROPS_TOKEN,
             "border-default",
-            "border_info",
+            "border_info"
           )}
         />
       </div>
@@ -711,7 +711,7 @@ export const BorderColor: StoryObj<unknown> = {
           className={sprout.classNames(
             ...CONTENT_PROPS_TOKEN,
             "border-default",
-            "border_danger",
+            "border_danger"
           )}
         />
       </div>
@@ -721,7 +721,7 @@ export const BorderColor: StoryObj<unknown> = {
           className={sprout.classNames(
             ...CONTENT_PROPS_TOKEN,
             "border-default",
-            "border_warning",
+            "border_warning"
           )}
         />
       </div>
@@ -731,7 +731,7 @@ export const BorderColor: StoryObj<unknown> = {
           className={sprout.classNames(
             ...CONTENT_PROPS_TOKEN,
             "border-default",
-            "border_success",
+            "border_success"
           )}
         />
       </div>

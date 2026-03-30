@@ -1,9 +1,4 @@
-import {
-  Button,
-  Divider,
-  Message,
-  classNames,
-} from "@qlik/sprout-react";
+import { Button, Message, classNames } from "@qlik/sprout-react";
 import type { StoryObj } from "@storybook/react-vite";
 
 import { MessageArgTypes } from "./Message.argTypes";
@@ -192,6 +187,7 @@ export const Playground: Story = {
         <Button variant="quiet" label="Another action" />
       </>
     ),
+    layout: "vertical",
   },
   argTypes: MessageArgTypes,
   parameters: {
@@ -202,85 +198,247 @@ export const Playground: Story = {
 export const VisualTest: Story = {
   render: () => (
     <div className={classNames("flex", "border-box", "flex-col", "gap-xxl")}>
-      <h2 className={classNames("font-heading-m", "text-default")}>Simple</h2>
-      <Message
-        title="Message title"
-        message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
-      />
+      <div
+        className={classNames(
+          "grid",
+          "border-box",
+          "grid-cols-2",
+          "gap-xxl",
+          "items-start"
+        )}
+      >
+        <h2 className={classNames("font-heading-m", "text-default")}>
+          Vertical layout
+        </h2>
+        <h2 className={classNames("font-heading-m", "text-default")}>
+          Horizontal layout
+        </h2>
+      </div>
 
-      <Divider />
+      <h2 className={classNames("font-heading-m", "text-default")}>Simple</h2>
+      <div
+        className={classNames("grid", "border-box", "grid-cols-2", "gap-xxl")}
+      >
+        <Message
+          title="Message title"
+          message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
+        />
+        <Message
+          title="Message title"
+          message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
+          layout="horizontal"
+        />
+      </div>
+
       <h2 className={classNames("font-heading-m", "text-default")}>
         With illustration
       </h2>
-      <Message
-        title="Message title"
-        message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
-        illustration={<Illustration />}
-      />
+      <div
+        className={classNames("grid", "border-box", "grid-cols-2", "gap-xxl")}
+      >
+        <Message
+          title="Message title"
+          message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
+          illustration={<Illustration />}
+        />
+        <Message
+          title="Message title"
+          message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
+          illustration={<Illustration />}
+          layout="horizontal"
+        />
+      </div>
 
-      <Divider />
       <h2 className={classNames("font-heading-m", "text-default")}>
         Without message
       </h2>
-      <Message title="Message title" illustration={<Illustration />} />
+      <div
+        className={classNames("grid", "border-box", "grid-cols-2", "gap-xxl")}
+      >
+        <Message title="Message title" illustration={<Illustration />} />
+        <Message
+          title="Message title"
+          illustration={<Illustration />}
+          layout="horizontal"
+        />
+      </div>
 
-      <Divider />
       <h2 className={classNames("font-heading-m", "text-default")}>
         With actions
       </h2>
-      <Message
-        title="Message title"
-        message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
-        actions={
-          <>
-            <Button variant="primary" label="Primary action" />
-            <Button variant="quiet" label="Another action" />
-          </>
-        }
-      />
-      <Divider />
+      <div
+        className={classNames("grid", "border-box", "grid-cols-2", "gap-xxl")}
+      >
+        <Message
+          title="Message title"
+          message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
+          actions={
+            <>
+              <Button variant="primary" label="Primary action" />
+              <Button variant="quiet" label="Another action" />
+            </>
+          }
+        />
+        <Message
+          title="Message title"
+          message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
+          actions={
+            <>
+              <Button variant="primary" label="Primary action" />
+              <Button variant="quiet" label="Another action" />
+            </>
+          }
+          layout="horizontal"
+        />
+      </div>
+
       <h2 className={classNames("font-heading-m", "text-default")}>
         With large message
       </h2>
-      <Message
-        title="Message title"
-        message="Vivamus felis tellus quisque, convallis hac molestie efficitur. Auctor tincidunt volutpat curae sociosqu neque luctus efficitur pretium est. Non cursus leo aliquet magnis faucibus mus ac."
-      />
-      <Divider />
+      <div
+        className={classNames("grid", "border-box", "grid-cols-2", "gap-xxl")}
+      >
+        <Message
+          title="Message title"
+          message="Vivamus felis tellus quisque, convallis hac molestie efficitur. Auctor tincidunt volutpat curae sociosqu neque luctus efficitur pretium est. Non cursus leo aliquet magnis faucibus mus ac."
+        />
+        <Message
+          title="Message title"
+          message="Vivamus felis tellus quisque, convallis hac molestie efficitur. Auctor tincidunt volutpat curae sociosqu neque luctus efficitur pretium est. Non cursus leo aliquet magnis faucibus mus ac."
+          layout="horizontal"
+        />
+      </div>
+
       <h2 className={classNames("font-heading-m", "text-default")}>
         With large title
       </h2>
-      <Message
-        title="So long message title that splits into two lines because it is too long"
-        message="Vivamus felis tellus quisque, convallis hac molestie efficitur. Auctor tincidunt volutpat curae sociosqu neque luctus efficitur pretium est. Non cursus leo aliquet magnis faucibus mus ac."
-      />
-      <Divider />
+      <div
+        className={classNames("grid", "border-box", "grid-cols-2", "gap-xxl")}
+      >
+        <Message
+          title="So long message title that splits into two lines because it is too long"
+          message="Vivamus felis tellus quisque, convallis hac molestie efficitur. Auctor tincidunt volutpat curae sociosqu neque luctus efficitur pretium est. Non cursus leo aliquet magnis faucibus mus ac."
+        />
+        <Message
+          title="So long message title that splits into two lines because it is too long"
+          message="Vivamus felis tellus quisque, convallis hac molestie efficitur. Auctor tincidunt volutpat curae sociosqu neque luctus efficitur pretium est. Non cursus leo aliquet magnis faucibus mus ac."
+          layout="horizontal"
+        />
+      </div>
+
       <h2 className={classNames("font-heading-m", "text-default")}>
         With progress
       </h2>
-      <Message
-        title="Message title"
-        message="Vivamus felis tellus quisque, convallis hac molestie efficitur. Auctor tincidunt volutpat curae sociosqu neque luctus efficitur pretium est. Non cursus leo aliquet magnis faucibus mus ac."
-        progress={{ percent: 35, label: "Loading progress" }}
-      />
+      <div
+        className={classNames("grid", "border-box", "grid-cols-2", "gap-xxl")}
+      >
+        <Message
+          title="Message title"
+          message="Vivamus felis tellus quisque, convallis hac molestie efficitur. Auctor tincidunt volutpat curae sociosqu neque luctus efficitur pretium est. Non cursus leo aliquet magnis faucibus mus ac."
+          progress={{ percent: 35, label: "Loading progress" }}
+        />
+        <Message
+          title="Message title"
+          message="Vivamus felis tellus quisque, convallis hac molestie efficitur. Auctor tincidunt volutpat curae sociosqu neque luctus efficitur pretium est. Non cursus leo aliquet magnis faucibus mus ac."
+          progress={{ percent: 35, label: "Loading progress" }}
+          layout="horizontal"
+        />
+      </div>
+
       <h2 className={classNames("font-heading-m", "text-default")}>
         With paragraph
       </h2>
-      <Message
-        title="Message title"
-        message={
-          <>
-            <p className={classNames("font-body-s", "text-default")}>
-              This issue may be caused by a temporary server problem, a service
-              disconnection, or an unstable internet connection.
+      <div
+        className={classNames("grid", "border-box", "grid-cols-2", "gap-xxl")}
+      >
+        <Message
+          title="Message title"
+          message={
+            <>
+              <p className={classNames("font-body-s", "text-default")}>
+                This issue may be caused by a temporary server problem, a
+                service disconnection, or an unstable internet connection.
+              </p>
+              <p className={classNames("font-body-s", "text-default")}>
+                Please try to refreshing the page, checking your connection, or
+                clearing your browser cache.
+              </p>
+            </>
+          }
+        />
+        <Message
+          title="Message title"
+          message={
+            <>
+              <p className={classNames("font-body-s", "text-default")}>
+                This issue may be caused by a temporary server problem, a
+                service disconnection, or an unstable internet connection.
+              </p>
+              <p className={classNames("font-body-s", "text-default")}>
+                Please try to refreshing the page, checking your connection, or
+                clearing your browser cache.
+              </p>
+            </>
+          }
+          layout="horizontal"
+        />
+      </div>
+
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        With details
+      </h2>
+      <div
+        className={classNames("grid", "border-box", "grid-cols-2", "gap-xxl")}
+      >
+        <Message
+          title="Message title"
+          message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
+          details={
+            <p className={classNames("font-body-s", "m-0")}>
+              Details content displayed below the main message.
             </p>
-            <p className={classNames("font-body-s", "text-default")}>
-              Please try to refreshing the page, checking your connection, or
-              clearing your browser cache.
+          }
+        />
+        <Message
+          title="Message title"
+          message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
+          details={
+            <p className={classNames("font-body-s", "m-0")}>
+              Details content displayed below the main message.
             </p>
-          </>
-        }
-      />
+          }
+          layout="horizontal"
+        />
+      </div>
+
+      <h2 className={classNames("font-heading-m", "text-default")}>
+        With action and details
+      </h2>
+      <div
+        className={classNames("grid", "border-box", "grid-cols-2", "gap-xxl")}
+      >
+        <Message
+          title="Message title"
+          message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
+          actions={<Button variant="primary" label="Primary action" />}
+          details={
+            <p className={classNames("font-body-s", "m-0")}>
+              Details content displayed below the main message.
+            </p>
+          }
+        />
+        <Message
+          title="Message title"
+          message="Curabitur sagittis ac felis tristique molestie. Nam non eros a magna tincidunt congue."
+          actions={<Button variant="primary" label="Primary action" />}
+          details={
+            <p className={classNames("font-body-s", "m-0")}>
+              Details content displayed below the main message.
+            </p>
+          }
+          layout="horizontal"
+        />
+      </div>
     </div>
   ),
   parameters: {

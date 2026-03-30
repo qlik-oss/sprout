@@ -17,7 +17,7 @@ export const SideNav = forwardRef<HTMLDivElement, SideNavProps>(SideNavBase);
 
 function SideNavBase(
   { variant, ...props }: SideNavProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   return (
     <nav
