@@ -1,8 +1,4 @@
-import {
-  Textarea,
-  type TextareaProps,
-  classNames,
-} from "@qlik/sprout-react";
+import { Textarea, type TextareaProps, classNames } from "@qlik/sprout-react";
 import type { Meta } from "@storybook/react-vite";
 
 import { TextareaArgTypes } from "./Textarea.argTypes";

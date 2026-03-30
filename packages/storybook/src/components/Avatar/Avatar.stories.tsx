@@ -1,8 +1,4 @@
-import {
-  Avatar,
-  type AvatarProps,
-  classNames,
-} from "@qlik/sprout-react";
+import { Avatar, type AvatarProps, classNames } from "@qlik/sprout-react";
 import { PersonIcon } from "@qlik/sprout-icons/react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 

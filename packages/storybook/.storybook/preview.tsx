@@ -3,8 +3,19 @@ import { StrictMode, useEffect, useState } from "react";
 import { MINIMAL_VIEWPORTS, type ViewportMap } from "storybook/viewport";
 
 import { ThemeProvider as SproutThemeProvider } from "@qlik/sprout-react";
-import { getSproutGlobalTypes, getSproutIntialGlobals, sproutCSSDecorator } from "@qlik/sprout-storybook";
-import { Controls, Description, Primary, Stories, Subtitle, Title } from "@storybook/addon-docs/blocks";
+import {
+  getSproutGlobalTypes,
+  getSproutIntialGlobals,
+  sproutCSSDecorator,
+} from "@qlik/sprout-storybook";
+import {
+  Controls,
+  Description,
+  Primary,
+  Stories,
+  Subtitle,
+  Title,
+} from "@storybook/addon-docs/blocks";
 import type { Preview } from "@storybook/react";
 
 import { DocsContainer } from "./docsContainer";
@@ -50,7 +61,9 @@ const preview: Preview = {
     sproutCSSDecorator,
     (Story, context) => {
       const [lang, setLang] = useState(context.globals.locale);
-      const [previewTheme, setPreviewTheme] = useState<"qlik-dark" | "qlik-light">("qlik-light");
+      const [previewTheme, setPreviewTheme] = useState<
+        "qlik-dark" | "qlik-light"
+      >("qlik-light");
 
       useEffect(() => {
         const contextMode = context.globals.mode;
@@ -69,7 +82,10 @@ const preview: Preview = {
 
         if (typeof document !== "undefined") {
           document.body.style.backgroundColor = newBgColor;
-          document.body.setAttribute("data-qlik-appearance", `qlik-${appearance}`);
+          document.body.setAttribute(
+            "data-qlik-appearance",
+            `qlik-${appearance}`
+          );
           document.body.setAttribute("data-qlik-theme", `qlik-${appearance}`);
         }
       }, [context.globals.mode, previewTheme]);
@@ -118,7 +134,7 @@ const preview: Preview = {
         method: "alphabetical",
         locales: "en-EN",
         order: [
-                    "Getting Started",
+          "Getting Started",
           "Design Tokens",
           ["Introduction", "All Tokens"],
           "Icons",

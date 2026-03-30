@@ -1,8 +1,4 @@
-import {
-  ProgressBar,
-  ProgressCircular,
-  classNames,
-} from "@qlik/sprout-react";
+import { ProgressBar, ProgressCircular, classNames } from "@qlik/sprout-react";
 import type { StoryObj } from "@storybook/react";
 
 import {

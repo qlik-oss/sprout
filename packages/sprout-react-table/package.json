@@ -42,9 +42,9 @@
     "test:ui": "playwright test --ui"
   },
   "dependencies": {
-    "@qlik/sprout-react-hooks": "workspace:*",
-    "@qlik/sprout-react": "workspace:*",
     "@qlik/sprout-icons": "0.2.2",
+    "@qlik/sprout-react": "workspace:*",
+    "@qlik/sprout-react-hooks": "workspace:*",
     "@tanstack/react-table": "^8.21.3",
     "@tanstack/react-virtual": "^3.13.23"
   },

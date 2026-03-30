@@ -1,11 +1,6 @@
 import type { ReactNode } from "react";
 
-import {
-  Avatar,
-  Badge,
-  Button,
-  classNames,
-} from "@qlik/sprout-react";
+import { Avatar, Badge, Button, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { BadgeArgTypes } from "./Badge.argTypes";

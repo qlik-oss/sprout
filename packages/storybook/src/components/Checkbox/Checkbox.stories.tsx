@@ -2,11 +2,7 @@ import { type ChangeEvent, useState } from "react";
 import { fn } from "storybook/test";
 
 import sprout from "@qlik/sprout-css-modules";
-import {
-  Checkbox,
-  CheckboxGroup,
-  classNames,
-} from "@qlik/sprout-react";
+import { Checkbox, CheckboxGroup, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { CheckboxArgTypes, CheckboxGroupArgTypes } from "./Checkbox.argTypes";

@@ -1,10 +1,6 @@
 import { fn } from "storybook/test";
 
-import {
-  Switch,
-  type SwitchProps,
-  classNames,
-} from "@qlik/sprout-react";
+import { Switch, type SwitchProps, classNames } from "@qlik/sprout-react";
 import type { StoryObj } from "@storybook/react-vite";
 
 import { SwitchArgTypes } from "./Switch.argTypes";

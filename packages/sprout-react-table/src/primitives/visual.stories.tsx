@@ -1,11 +1,6 @@
 import type { ReactNode } from "react";
 
-import {
-  Button,
-  Menu,
-  Message,
-  classNames,
-} from "@qlik/sprout-react";
+import { Button, Menu, Message, classNames } from "@qlik/sprout-react";
 
 import { TableHTML } from ".";
 

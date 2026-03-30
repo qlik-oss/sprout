@@ -49,7 +49,7 @@ jobs:
       - run: pnpm format:check
       - run: pnpm build
       - run: pnpm check-types
-      # - run: pnpm lint
+      - run: pnpm lint:ci
       # - run: pnpm test
       # - name: Run Chromatic
       #   uses: chromaui/action@latest

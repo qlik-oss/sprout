@@ -1,8 +1,4 @@
-import {
-  Tooltip,
-  type TooltipProps,
-  classNames,
-} from "@qlik/sprout-react";
+import { Tooltip, type TooltipProps, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { TooltipArgTypes } from "./Tooltip.argTypes";

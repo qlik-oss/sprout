@@ -1,8 +1,4 @@
-import {
-  Stepper,
-  type StepperProps,
-  classNames,
-} from "@qlik/sprout-react";
+import { Stepper, type StepperProps, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import {

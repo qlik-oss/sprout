@@ -17,17 +17,38 @@ function App() {
   const [count, setCount] = useState(0);
   const [color, setColor] = useState("red");
   return (
-    <ThemeProvider asDiv className={sprout.classNames("flex", "col", "text-default", "bg-default", "gap-m")}>
-      <h1 className={sprout.classNames("font-heading_l", "text-default")}>Vite + React</h1>
+    <ThemeProvider
+      asDiv
+      className={sprout.classNames(
+        "flex",
+        "col",
+        "text-default",
+        "bg-default",
+        "gap-m"
+      )}
+    >
+      <h1 className={sprout.classNames("font-heading_l", "text-default")}>
+        Vite + React
+      </h1>
       <div className={sprout.classNames("flex", "flex-col", "gap-xl")}>
         <h2>Accordion</h2>
-        <Accordion.Container variant="default" renderContent openedDefault={0} behavior="linked">
+        <Accordion.Container
+          variant="default"
+          renderContent
+          openedDefault={0}
+          behavior="linked"
+        >
           <Accordion.Item header="first panel" description="" value="value">
             <p>Content</p>
           </Accordion.Item>
         </Accordion.Container>
         <h2>AlertBanner</h2>
-        <AlertBanner variant="info" content="Alert content" onClickDismiss={() => {}} action={<></>} />
+        <AlertBanner
+          variant="info"
+          content="Alert content"
+          onClickDismiss={() => {}}
+          action={<></>}
+        />
 
         <h2>AlertInline</h2>
         <AlertInline
@@ -41,15 +62,39 @@ function App() {
         </AlertInline>
 
         <h2>Button</h2>
-        <Button variant="primary" size="small" label="Click me" onClick={() => {}} />
-        <IconButton variant="default" icon={<BookmarkIcon />} label="Click me" onClick={() => {}} />
+        <Button
+          variant="primary"
+          size="small"
+          label="Click me"
+          onClick={() => {}}
+        />
+        <IconButton
+          variant="default"
+          icon={<BookmarkIcon />}
+          label="Click me"
+          onClick={() => {}}
+        />
         <ButtonFloating>
-          <Button variant="primary" size="small" label="Click me" onClick={() => {}} />
+          <Button
+            variant="primary"
+            size="small"
+            label="Click me"
+            onClick={() => {}}
+          />
         </ButtonFloating>
         <ButtonFloating>
-          <IconButton variant="default" icon={<BookmarkIcon />} label="Click me" onClick={() => {}} />
+          <IconButton
+            variant="default"
+            icon={<BookmarkIcon />}
+            label="Click me"
+            onClick={() => {}}
+          />
         </ButtonFloating>
-        <Button variant="primary" onClick={() => setCount((count) => count + 1)} label={`count is ${count}`} />
+        <Button
+          variant="primary"
+          onClick={() => setCount((count) => count + 1)}
+          label={`count is ${count}`}
+        />
         <Select.Select
           value={color}
           onChange={(e) => {

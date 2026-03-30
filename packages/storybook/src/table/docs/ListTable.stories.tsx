@@ -2,12 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { fn } from "storybook/test";
 
-import {
-  Button,
-  Menu,
-  Skeleton,
-  classNames,
-} from "@qlik/sprout-react";
+import { Button, Menu, Skeleton, classNames } from "@qlik/sprout-react";
 import {
   type SortingState,
   Table,

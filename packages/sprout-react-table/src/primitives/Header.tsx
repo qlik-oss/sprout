@@ -1,12 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 import { forwardRef } from "react";
 
-import {
-  Checkbox,
-  Radio,
-  classNames,
-  useSproutI18n,
-} from "@qlik/sprout-react";
+import { Checkbox, Radio, classNames, useSproutI18n } from "@qlik/sprout-react";
 
 import type { HTMLDivProps } from "../utils/htmlTypes";
 import { CellActionWrapper } from "./CellActionWrapper";

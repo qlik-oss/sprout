@@ -1,12 +1,6 @@
 import { type CSSProperties, useCallback, useMemo, useState } from "react";
 
-import {
-  Button,
-  Menu,
-  Panel,
-  TextField,
-  classNames,
-} from "@qlik/sprout-react";
+import { Button, Menu, Panel, TextField, classNames } from "@qlik/sprout-react";
 
 import { type ColumnDef, Table, TableInlineEdit, type TableProps } from ".";
 import {

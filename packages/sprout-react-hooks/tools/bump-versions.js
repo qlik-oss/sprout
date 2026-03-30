@@ -7,7 +7,8 @@ const rootPackageJson = require("../package.json");
 console.log("argv", process.argv);
 console.log("env.VERSION", process.env.VERSION);
 
-const versionToBump = process.argv[2] || process.env.VERSION || rootPackageJson.version;
+const versionToBump =
+  process.argv[2] || process.env.VERSION || rootPackageJson.version;
 console.log("Updating all package.json versions to", versionToBump);
 
 (async () => {
@@ -18,6 +19,9 @@ console.log("Updating all package.json versions to", versionToBump);
     // eslint-disable-next-line import-x/no-dynamic-require
     const packageJson = require(`../${packageJsonPath}`);
     packageJson.version = versionToBump;
-    await fs.writeFile(packageJsonPath, `${JSON.stringify(packageJson, null, 2)}\n`);
+    await fs.writeFile(
+      packageJsonPath,
+      `${JSON.stringify(packageJson, null, 2)}\n`
+    );
   });
 })();
