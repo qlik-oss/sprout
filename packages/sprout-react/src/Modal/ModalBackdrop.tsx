@@ -9,7 +9,7 @@ import styles from "./Modal.module.css";
 export type DialogBackdropProps = HTMLDivProps & DialogState;
 
 export const ModalBackdrop = forwardRef<HTMLDivElement, DialogBackdropProps>(
-  BackdropBase,
+  BackdropBase
 );
 
 function BackdropBase(props: DialogBackdropProps, ref?: Ref<HTMLDivElement>) {

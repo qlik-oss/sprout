@@ -15,14 +15,14 @@ export function TableBody({ children, ...props }: TableBodyProps) {
   useEffect(() => {
     if (bodyRef.current) {
       context.setScrollBarWidth(
-        bodyRef.current.offsetWidth - bodyRef.current.clientWidth,
+        bodyRef.current.offsetWidth - bodyRef.current.clientWidth
       );
 
       if (context.overflowY === "virtualized") {
         const rowgroups =
           bodyRef.current.parentElement?.querySelectorAll("[role='rowgroup']");
         const currentIndex = Array.from(rowgroups || []).indexOf(
-          bodyRef.current,
+          bodyRef.current
         );
         if (currentIndex > 0) {
           const header = rowgroups?.[currentIndex - 1] as HTMLDivElement | null;
@@ -45,7 +45,7 @@ export function TableBody({ children, ...props }: TableBodyProps) {
           "bg-default",
           "w-full",
           "border-box",
-          className.tbody,
+          className.tbody
         )}
         style={{
           blockSize: context.containerHeight
@@ -76,7 +76,7 @@ export function TableBody({ children, ...props }: TableBodyProps) {
         "w-full",
         "border-box",
         "overflow-y-auto",
-        className.tbody,
+        className.tbody
       )}
       {...props}
     >

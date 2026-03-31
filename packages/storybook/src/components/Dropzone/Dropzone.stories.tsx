@@ -46,7 +46,7 @@ export const Playground: StoryObj<typeof Dropzone> = {
           "flex-noreset",
           "flex-row",
           "gap-xl",
-          "items-start",
+          "items-start"
         )}
       >
         <div className={classNames("w-xxs")}>

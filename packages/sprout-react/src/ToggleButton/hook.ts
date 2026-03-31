@@ -21,7 +21,7 @@ export const useToggle = ({
       onChangeKey: "onChange",
       valueKey: "toggled",
       defaultValueKey: "defaultToggled",
-    },
+    }
   );
   return controlled;
 };

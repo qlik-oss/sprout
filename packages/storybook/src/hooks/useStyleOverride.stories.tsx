@@ -8,29 +8,28 @@ function getCSSVar(key: string) {
   return key.replace("--sprout-", "").replace(/_/g, "-") as TokenKey;
 }
 
-const ARGS: Record<string, string> = Object.keys(tokenData as Record<string, { $value: string; $type: string }>).reduce<
-  Record<string, string>
->((acc, key) => {
+const ARGS: Record<string, string> = Object.keys(
+  tokenData as Record<string, { $value: string; $type: string }>
+).reduce<Record<string, string>>((acc, key) => {
   const cssVar = getCSSVar(key);
   acc[cssVar] = tokenData[key as keyof typeof tokenData].$value;
   return acc;
 }, {});
 
-const ARG_TYPES = Object.keys(tokenData).reduce<Record<string, { control: string; defaultValue: string }>>(
-  (acc, key) => {
-    const cssVar = getCSSVar(key);
-    const token = tokenData[key as keyof typeof tokenData];
-    acc[cssVar] = {
-      control: token.$type === "color" ? "color" : "text",
-      defaultValue: token.$value,
-    };
-    return acc;
-  },
-  {},
-);
+const ARG_TYPES = Object.keys(tokenData).reduce<
+  Record<string, { control: string; defaultValue: string }>
+>((acc, key) => {
+  const cssVar = getCSSVar(key);
+  const token = tokenData[key as keyof typeof tokenData];
+  acc[cssVar] = {
+    control: token.$type === "color" ? "color" : "text",
+    defaultValue: token.$value,
+  };
+  return acc;
+}, {});
 
 export default {
-  title: "Hooks/useStyleOverride",
+  title: "hooks/useStyleOverride",
 };
 
 export const Default = {

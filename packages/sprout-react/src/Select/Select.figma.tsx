@@ -65,5 +65,5 @@ figma.connect(
         </Select.Option>
       </Select.Select>
     ),
-  },
+  }
 );

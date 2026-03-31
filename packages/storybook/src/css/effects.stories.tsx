@@ -24,7 +24,7 @@ export const BoxShadow = {
         "border-box",
         "flex-row",
         "gap-xl",
-        "p-xl",
+        "p-xl"
       )}
     >
       <div className={sprout.classNames("box-shadow-none", ...CONTENT_CLASSES)}>

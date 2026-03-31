@@ -37,7 +37,7 @@ export type ComboboxProps = Omit<
 };
 
 export const Combobox = forwardRef<HTMLButtonElement, ComboboxProps>(
-  ComboboxBase,
+  ComboboxBase
 );
 
 function ComboboxBase(
@@ -57,7 +57,7 @@ function ComboboxBase(
     children,
     ...props
   }: ComboboxProps,
-  ref?: Ref<HTMLButtonElement>,
+  ref?: Ref<HTMLButtonElement>
 ) {
   const [selectedProps, setSelectedProps] = useState<SelectOptionProps>({
     children: "",
@@ -100,7 +100,7 @@ function ComboboxBase(
           "bg-interactive": !readOnly && !isOpen,
           "bg-disabled": !!readOnly,
           "bg-pressed": !!isOpen,
-        },
+        }
       )}
       onClick={(e: MouseEvent<HTMLButtonElement>) => {
         if (!disabled && !readOnly && onClick) {
@@ -108,7 +108,7 @@ function ComboboxBase(
         }
         if (readOnly) {
           const label = e.currentTarget.querySelector(
-            `[data-testid="selected-value"]`,
+            `[data-testid="selected-value"]`
           ) as HTMLElement | undefined;
           if (label) {
             const range = document.createRange();
@@ -133,7 +133,7 @@ function ComboboxBase(
             "w-full",
             "text-default",
             "font-label-s",
-            "pointer-events-none",
+            "pointer-events-none"
           )}
         >
           {renderValue(value, selectedProps)}
@@ -147,7 +147,7 @@ function ComboboxBase(
             "w-full",
             "truncate",
             "text-default",
-            "font-label-s",
+            "font-label-s"
           )}
         >
           {selectedProps.children}
@@ -160,7 +160,7 @@ function ComboboxBase(
             "pr-m",
             "text-weak",
             "font-label-s",
-            "w-full",
+            "w-full"
           )}
         >
           {placeholder}
@@ -178,7 +178,7 @@ function ComboboxBase(
             {
               "size-xl": size !== "small",
               "size-l": size === "small",
-            },
+            }
           )}
         />
       )}
@@ -189,7 +189,7 @@ function ComboboxBase(
           "self-center",
           {
             "fill-disabled": !!disabled || !!readOnly,
-          },
+          }
         )}
       />
     </button>

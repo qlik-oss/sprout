@@ -20,5 +20,5 @@ figma.connect(
       ],
     },
     example: (props) => <Breadcrumb {...props} />,
-  },
+  }
 );

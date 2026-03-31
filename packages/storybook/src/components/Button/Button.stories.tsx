@@ -34,7 +34,7 @@ export const Playground: Story = {
         "flex-row",
         "border-box",
         "p-s",
-        "border-default",
+        "border-default"
       )}
       data-testid="wrapper"
       style={{ inlineSize: "300px" }}
@@ -63,7 +63,7 @@ function Cell({ children, width }: { children: ReactNode; width?: string }) {
         "flex-row",
         "border-box",
         "font-body-s",
-        "text-default",
+        "text-default"
       )}
       style={{ inlineSize: width || "100px" }}
     >
@@ -114,8 +114,8 @@ export const DeprecatedDestructiveVariant: Story = {
         Deprecated destructive variant
       </h1>
       <p className={classNames("font-body-s")}>
-        The props `variant="destructive"` must be replaced by `variant="primary"
-        destructive` props.
+        The props `variant=&rdquo;destructive&rdquo;` must be replaced by
+        `variant=&rdquo;primary&quot;` destructive` props.
       </p>
       <div className={classNames("flex", "flex-row", "gap-m")}>
         <Button variant="destructive" {...props} onClick={onClick} />
@@ -247,6 +247,11 @@ export const VisualTest: Story = {
           {...newProps}
           badge={{ text: "1", variant: "alphanumeric" }}
         />
+        <Row
+          rowTitle="trailingIcon"
+          label={newProps.label}
+          trailingIcon={<AddIcon />}
+        />
         <div className={classNames("flex", "flex-row", "border-box", "gap-m")}>
           <Cell>Loading +</Cell>
           <div
@@ -339,6 +344,12 @@ export const VisualTest: Story = {
             </ButtonFloating>
           </Cell>
         </div>
+        <Row
+          rowTitle="trailingIcon"
+          label={newProps.label}
+          trailingIcon={<AddIcon />}
+          size="small"
+        />
         <div className={classNames("flex", "flex-row", "border-box", "gap-m")}>
           <Cell>Justified</Cell>
           <div
@@ -402,12 +413,13 @@ export const IconPlayground: StoryObj = {
       data-testid="wrapper"
       style={{ inlineSize: "300px" }}
     >
-      <IconButton icon={<AddIcon />} {...props} onClick={onClick} />
+      <IconButton {...props} onClick={onClick} />
     </div>
   ),
   args: {
     label: "Label",
     variant: "default",
+    icon: "AddIcon",
   },
   argTypes: {
     ...ButtonIconArgTypes,
@@ -524,7 +536,7 @@ export const VisualTestIcon: Story = {
             "flex-col",
             "border-box",
             "content-start",
-            "gap-m",
+            "gap-m"
           )}
           style={{ inlineSize: "300px" }}
         >

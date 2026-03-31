@@ -11,7 +11,7 @@ test(`should link support a11y rules`, async ({ page, mount }) => {
       <Button label="Second" />
       <Button label="Third" />
       <Button label="Last" />
-    </ButtonGroup>,
+    </ButtonGroup>
   );
   const buttons = await page.getByRole("button").all();
 

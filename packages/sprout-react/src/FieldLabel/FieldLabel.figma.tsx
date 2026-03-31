@@ -19,5 +19,5 @@ figma.connect(
       }),
     },
     example: (props) => <FieldLabel htmlFor="fieldId" {...props} />,
-  },
+  }
 );

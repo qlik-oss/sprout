@@ -80,7 +80,7 @@ function ColumnVisibilityMenuContent({
           "pl-xl",
           "pr-m",
           "py-l",
-          "bg-weak",
+          "bg-weak"
         )}
         data-layoutid="header"
       >
@@ -147,7 +147,7 @@ function ColumnVisibilityMenuContent({
           "py-l",
           "bg-weak",
           "font-label-xs-emphasized",
-          "text-default",
+          "text-default"
         )}
       >
         {t(
@@ -155,7 +155,7 @@ function ColumnVisibilityMenuContent({
           safeColumns.filter((col) => col.visible).length,
           {
             total: `${safeColumns.length}`,
-          },
+          }
         )}
       </div>
     </div>

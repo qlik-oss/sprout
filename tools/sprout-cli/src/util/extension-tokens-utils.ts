@@ -12,7 +12,9 @@ export type ExtensionTokenMap = Record<string, ExtensionToken>;
  * Matches inline comments: --token-name: value; /* comment \*\/
  * and block comments: /* comment *\/ \n --token-name: value;
  */
-export async function parseTokenComments(cssFilePath: string): Promise<Map<string, string>> {
+export async function parseTokenComments(
+  cssFilePath: string
+): Promise<Map<string, string>> {
   const content = await readFile(cssFilePath, "utf-8");
   const commentMap = new Map<string, string>();
 
@@ -44,7 +46,7 @@ export async function parseTokenComments(cssFilePath: string): Promise<Map<strin
 export function flattenLightThemeTokens(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   tokens: Record<string, any>,
-  commentMap: Map<string, string>,
+  commentMap: Map<string, string>
 ): ExtensionTokenMap {
   const flattened: ExtensionTokenMap = {};
 
@@ -53,7 +55,11 @@ export function flattenLightThemeTokens(
   const addTokens = (source: any) => {
     if (!source || typeof source !== "object") return;
     for (const [key, value] of Object.entries(source)) {
-      if (key.startsWith("--sprout-") && typeof value === "string" && value.trim() !== "") {
+      if (
+        key.startsWith("--sprout-") &&
+        typeof value === "string" &&
+        value.trim() !== ""
+      ) {
         if (!(key in flattened)) {
           // Only add if not already present (first occurrence wins)
           flattened[key] = {

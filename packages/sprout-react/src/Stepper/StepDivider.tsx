@@ -11,7 +11,7 @@ export function StepDivider({ children }: { children?: ReactNode }) {
         "border-box",
         "grow-1",
         "flex-row",
-        "w-full",
+        "w-full"
       )}
     >
       <StepLine />

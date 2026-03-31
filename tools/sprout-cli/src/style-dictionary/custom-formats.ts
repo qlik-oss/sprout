@@ -37,7 +37,9 @@ export const CustomDTSObject: Format = {
         }
         cssVariables[token.$type].push(`"--${token.name}"`);
       } else {
-        console.warn(`Token ${token.name} is missing a type and will not be included in the CSS variable types.`);
+        console.warn(
+          `Token ${token.name} is missing a type and will not be included in the CSS variable types.`
+        );
       }
     });
 
@@ -47,13 +49,18 @@ export const CustomDTSObject: Format = {
 
 ${Object.keys(cssVariables)
   .map(
-    (type) => `export type SproutVariables${type.charAt(0).toUpperCase() + type.slice(1)} = 
-  | ${cssVariables[type].join("\n  | ")};`,
+    (
+      type
+    ) => `export type SproutVariables${type.charAt(0).toUpperCase() + type.slice(1)} = 
+  | ${cssVariables[type].join("\n  | ")};`
   )
   .join("\n\n")}
 
 export type SproutVariables = ${Object.keys(cssVariables)
-      .map((type) => `SproutVariables${type.charAt(0).toUpperCase() + type.slice(1)}`)
+      .map(
+        (type) =>
+          `SproutVariables${type.charAt(0).toUpperCase() + type.slice(1)}`
+      )
       .join(" | ")};
 
 export const tokens: {
@@ -75,7 +82,9 @@ function createCSVVarFromProp(token: DesignToken): string {
 export const CSVListWithHeader: Format = {
   name: "csv/list/with-header",
   format({ dictionary }) {
-    const csvVars = dictionary.allTokens.map((token) => createCSVVarFromProp(token)).join("\n");
+    const csvVars = dictionary.allTokens
+      .map((token) => createCSVVarFromProp(token))
+      .join("\n");
 
     return `TokenName, TokenValue, TokenDescription    
 ${csvVars}`;
@@ -87,7 +96,9 @@ ${csvVars}`;
 export const CSVList: Format = {
   name: "csv/list",
   format({ dictionary }) {
-    const csvVars = dictionary.allTokens.map((token) => createCSVVarFromProp(token)).join("\n");
+    const csvVars = dictionary.allTokens
+      .map((token) => createCSVVarFromProp(token))
+      .join("\n");
 
     return csvVars;
   },
@@ -97,7 +108,9 @@ export const CSVList: Format = {
 export const CustomDataVariables: Format = {
   name: "css/custom-data-variables",
   format({ dictionary, file }) {
-    const themeMatches = (file.destination as string).match(/([^/]*)\/([^/]*)\./) as unknown as string;
+    const themeMatches = (file.destination as string).match(
+      /([^/]*)\/([^/]*)\./
+    ) as unknown as string;
     const dimension = themeMatches[1];
     const tokens = dictionary.allTokens;
 
@@ -105,7 +118,9 @@ export const CustomDataVariables: Format = {
       tokens.sort((a, b) => (a.name > b.name ? 1 : -1));
     }
 
-    const cssVars = tokens.map((token) => createCSSVarFromProp(token)).join("\n\t");
+    const cssVars = tokens
+      .map((token) => createCSSVarFromProp(token))
+      .join("\n\t");
     if (dimension === "core") {
       return `
 :root{
@@ -134,7 +149,10 @@ export const CustomDataVariables: Format = {
 export const JSONFlatCSSVarInfo: Format = {
   name: "json/flat-css-var-info",
   format: ({ dictionary }) => {
-    const tokens: Record<string, { $value?: string; $type?: string; $description?: string }> = {};
+    const tokens: Record<
+      string,
+      { $value?: string; $type?: string; $description?: string }
+    > = {};
     dictionary.allTokens.forEach((token: DesignToken) => {
       tokens[`--${token.name}`] = {
         $value: token.$value,

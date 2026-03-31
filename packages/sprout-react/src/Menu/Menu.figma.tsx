@@ -12,7 +12,7 @@ figma.connect(
       menuSections: figma.children("_MenuSection"),
     },
     example: (props) => <Menu.Container>{props.menuSections}</Menu.Container>,
-  },
+  }
 );
 
 figma.connect(
@@ -22,7 +22,7 @@ figma.connect(
       menuItems: figma.children(["_MenuItem", "_Divider", "_GroupLabel"]),
     },
     example: (props) => props.menuItems, //TODO - think if we can remove the <></> wrapping - implementation has no MenuSection component
-  },
+  }
 );
 
 figma.connect(
@@ -49,7 +49,7 @@ figma.connect(
       }),
     },
     example: (props) => <Menu.Item {...props} />,
-  },
+  }
 );
 
 figma.connect(
@@ -76,7 +76,7 @@ figma.connect(
       }),
     },
     example: (props) => <Menu.Sub {...props} menu={[]} />,
-  },
+  }
 );
 
 figma.connect(
@@ -84,7 +84,7 @@ figma.connect(
   "https://www.figma.com/design/HmokLgpDo4ogI5l5hpNApf/Sprout-Core-Components?node-id=18560-23109&node-type=symbol&t=2OkrIxIbW3HANZ5b-11",
   {
     example: (/*props*/) => <Menu.Divider />,
-  },
+  }
 );
 
 figma.connect(
@@ -95,5 +95,5 @@ figma.connect(
       label: figma.string("Text"),
     },
     example: (props) => <Menu.GroupLabel {...props} />,
-  },
+  }
 );

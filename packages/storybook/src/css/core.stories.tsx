@@ -1,5 +1,5 @@
 /* eslint-disable react/no-array-index-key */
-/* eslint-disable react-hooks/rules-of-hooks */
+
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import sprout, {
@@ -46,7 +46,7 @@ export const Responsive = {
               l: "gap-xxl",
               xl: "gap-3xl",
             },
-            sprout.classNames("grid", "grid-cols-16"),
+            sprout.classNames("grid", "grid-cols-16")
           )}
         >
           <div
@@ -136,7 +136,7 @@ export const CreateContainer: StoryObj = {
 
     const container = useMemo(
       () => sprout.createContainer(size, ref.current),
-      [size],
+      [size]
     );
 
     useEffect(() => {
@@ -167,7 +167,7 @@ export const CreateContainer: StoryObj = {
           "border-box",
           "flex-col",
           "gap-m",
-          "w-full",
+          "w-full"
         )}
       >
         <p className={sprout.classNames("font-body-s", "text-default")}>
@@ -182,7 +182,7 @@ export const CreateContainer: StoryObj = {
             "border-box",
             "border-default",
             "p-m",
-            "w-full",
+            "w-full"
           )}
           style={{ resize: "horizontal", overflow: "auto" }}
         >
@@ -206,7 +206,7 @@ export const CreateContainer: StoryObj = {
                 "3xl": ["grid-cols-8", "gap-xl"],
                 "4xl": ["grid-cols-9", "gap-xl"],
               },
-              sprout.classNames("grid", "border-box", "p-m"),
+              sprout.classNames("grid", "border-box", "p-m")
             )}
           >
             {Array.from({ length: 9 }).map((_, i) => (
@@ -217,7 +217,7 @@ export const CreateContainer: StoryObj = {
                   "p-s",
                   "items-center",
                   "justify-center",
-                  "flex",
+                  "flex"
                 )}
               >
                 Item {i + 1}
@@ -261,7 +261,7 @@ export const WidthObserver: StoryObj = {
           "border-box",
           "flex-col",
           "gap-m",
-          "w-full",
+          "w-full"
         )}
         style={{ alignItems: "flex-start" }}
       >
@@ -278,7 +278,7 @@ export const WidthObserver: StoryObj = {
           }
           onClick={() => {
             setBoxSizing(
-              boxSizing === "border-box" ? "content-box" : "border-box",
+              boxSizing === "border-box" ? "content-box" : "border-box"
             );
           }}
         />
@@ -289,7 +289,7 @@ export const WidthObserver: StoryObj = {
             "border-default",
             "bg-default",
             "p-m",
-            "w-m",
+            "w-m"
           )}
           style={{
             resize: "horizontal",
@@ -303,7 +303,7 @@ export const WidthObserver: StoryObj = {
             className={sprout.classNames(
               "font-label-s",
               "text-default",
-              "pt-s",
+              "pt-s"
             )}
           >
             box: {boxSizing}
@@ -342,7 +342,7 @@ export const RTL: StoryObj = {
         "text-default",
         "gap-3xl",
         "w-m",
-        "p-m",
+        "p-m"
       )}
     >
       {RTL_CONFIG.map(({ dir, styles }) => (
@@ -355,7 +355,7 @@ export const RTL: StoryObj = {
             "border-box",
             "border-default",
             "p-m",
-            "gap-m",
+            "gap-m"
           )}
         >
           <span>

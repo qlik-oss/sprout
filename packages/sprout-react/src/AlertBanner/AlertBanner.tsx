@@ -35,7 +35,7 @@ export type AlertBannerProps = Omit<HTMLDivProps, "content" | "title"> &
  * @param justify - set to "center" to center-align the banner content.
  */
 export const AlertBanner = forwardRef<HTMLDivElement, AlertBannerProps>(
-  AlertBannerBase,
+  AlertBannerBase
 );
 
 function AlertBannerBase(
@@ -50,7 +50,7 @@ function AlertBannerBase(
     onClickDismiss,
     ...props
   }: AlertBannerProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const t = useI18n();
   const dismissLabelDefault = t("alertbanner.dismiss");
@@ -68,7 +68,7 @@ function AlertBannerBase(
       "overflow-x-hidden": typeof content !== "string",
       [styles.content_max_height]: typeof content !== "string",
       [styles.content_max_rows]: typeof content === "string",
-    },
+    }
   );
 
   return (
@@ -95,7 +95,7 @@ function AlertBannerBase(
             border_success: variant === "success",
             "bg-info-weak": variant === "info" || !variant,
             border_info: variant === "info" || !variant,
-          },
+          }
         )}
         style={{ minBlockSize: tokens.common_sizing_5xl }}
       >
@@ -110,7 +110,7 @@ function AlertBannerBase(
             "justify-start",
             {
               "justify-center": justify === "center",
-            },
+            }
           )}
         >
           <span
@@ -120,7 +120,7 @@ function AlertBannerBase(
               "items-center",
               "py-l",
               "px-xl",
-              "icon-size-xl",
+              "icon-size-xl"
             )}
           >
             {SEVERITY_ICONS[variant || "info"]}
@@ -139,7 +139,7 @@ function AlertBannerBase(
                   "pl-0": justify !== "center",
                   "pl-m": justify === "center",
                   "pr-m": !onClickDismiss || !!action,
-                },
+                }
               )}
             >
               {link}
@@ -154,7 +154,7 @@ function AlertBannerBase(
                 "pl-0",
                 {
                   "pr-m": !onClickDismiss,
-                },
+                }
               )}
             >
               {action}

@@ -31,7 +31,7 @@ export function SupportCell({
         {
           "bg-moderate": !interactive,
           "bg-weak": !!interactive,
-        },
+        }
       )}
     >
       <TableCell noRole>{children}</TableCell>

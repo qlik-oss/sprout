@@ -1,13 +1,8 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { type ChangeEvent, useState } from "react";
 import { fn } from "storybook/test";
 
 import sprout from "@qlik/sprout-css-modules";
-import {
-  Checkbox,
-  CheckboxGroup,
-  classNames,
-} from "@qlik/sprout-react";
+import { Checkbox, CheckboxGroup, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { CheckboxArgTypes, CheckboxGroupArgTypes } from "./Checkbox.argTypes";
@@ -52,7 +47,7 @@ export const Controlled: Story = {
             "flex-row",
             "border-box",
             "p-s",
-            "w-fit",
+            "w-fit"
           )}
         >
           <Checkbox {...args} checked={checked} onChange={handleChange} />
@@ -87,7 +82,7 @@ export const Group: StoryObj = {
         "p-s",
         "items-start",
         "gap-m",
-        "w-fit",
+        "w-fit"
       )}
     >
       <CheckboxGroup
@@ -136,7 +131,7 @@ export const Indeterminate: Story = {
           "border-box",
           "p-s",
           "gap-m",
-          "w-fit",
+          "w-fit"
         )}
       >
         <Checkbox
@@ -153,7 +148,7 @@ export const Indeterminate: Story = {
             "border-box",
             "pl-m",
             "items-start",
-            "gap-m",
+            "gap-m"
           )}
         >
           <Checkbox
@@ -189,7 +184,7 @@ export const VisualTest: Story = {
           "flex-row",
           "border-box",
           "justify-stretch",
-          "gap-m",
+          "gap-m"
         )}
       >
         <div
@@ -198,7 +193,7 @@ export const VisualTest: Story = {
             "flex-col",
             "border-box",
             "gap-m",
-            "justify-stretch",
+            "justify-stretch"
           )}
         >
           <Checkbox name="checkbox1" label="Uncheck default" />
@@ -221,7 +216,7 @@ export const VisualTest: Story = {
             "flex-col",
             "border-box",
             "gap-m",
-            "justify-stretch",
+            "justify-stretch"
           )}
         >
           <Checkbox
@@ -254,7 +249,7 @@ export const VisualTest: Story = {
             "flex-col",
             "border-box",
             "gap-m",
-            "justify-stretch",
+            "justify-stretch"
           )}
         >
           <Checkbox name="checkbox3" label="Checked default" checked />
@@ -288,7 +283,7 @@ export const VisualTest: Story = {
           "flex-row",
           "border-box",
           "justify-stretch",
-          "gap-m",
+          "gap-m"
         )}
       >
         <div
@@ -297,7 +292,7 @@ export const VisualTest: Story = {
             "flex-col",
             "border-box",
             "gap-m",
-            "justify-stretch",
+            "justify-stretch"
           )}
         >
           <Checkbox
@@ -353,7 +348,7 @@ export const VisualTest: Story = {
           "border-box",
           "p-s",
           "gap-m",
-          "w-fit",
+          "w-fit"
         )}
       >
         <CheckboxGroup

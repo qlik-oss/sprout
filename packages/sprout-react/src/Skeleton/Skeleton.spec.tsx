@@ -18,7 +18,7 @@ Object.values(VARIANTS).forEach((variant) => {
     await mount(
       <div data-testid="wrapper" id="component-testing">
         <Skeleton variant={variant} />
-      </div>,
+      </div>
     );
 
     const component = page.getByTestId("wrapper");

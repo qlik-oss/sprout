@@ -12,7 +12,7 @@ figma.connect(
       listItems: figma.children("*"),
     },
     example: (props) => <List>{props.listItems}</List>,
-  },
+  }
 );
 
 figma.connect(
@@ -32,7 +32,7 @@ figma.connect(
     example: ({ content, ...props }) => (
       <ListItem {...props}>{content}</ListItem>
     ),
-  },
+  }
 );
 
 figma.connect(
@@ -46,5 +46,5 @@ figma.connect(
         {props.text}
       </div>
     ),
-  },
+  }
 );

@@ -30,5 +30,5 @@ figma.connect(
       }),
     },
     example: (props) => <Avatar {...props} />,
-  },
+  }
 );

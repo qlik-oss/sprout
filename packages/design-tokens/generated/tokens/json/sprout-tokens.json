@@ -65,22 +65,22 @@
     "$description": "Disabled background color for interactive elements"
   },
   "--sprout-common-elevation-default": {
-    "$value": "dropShadow 0 2px 4px 0 #00000026, dropShadow 0 0 0 1px #0000000d",
+    "$value": "0 2px 4px 0 #00000026, 0 0 0 1px #0000000d",
     "$type": "shadow",
     "$description": "Default elevation box shadow style"
   },
   "--sprout-common-elevation-weak": {
-    "$value": "dropShadow 0 1px 2px 0 #00000026, dropShadow 0 0 0 1px #0000000d",
+    "$value": "0 1px 2px 0 #00000026, 0 0 0 1px #0000000d",
     "$type": "shadow",
     "$description": "Weak elevation box shadow style"
   },
   "--sprout-common-elevation-moderate": {
-    "$value": "dropShadow 0 4px 10px 0 #00000026, dropShadow 0 0 0 1px #0000000d",
+    "$value": "0 4px 10px 0 #00000026, 0 0 0 1px #0000000d",
     "$type": "shadow",
     "$description": "Moderate elevation box shadow style"
   },
   "--sprout-common-elevation-strong": {
-    "$value": "dropShadow 0 6px 20px 0 #00000026, dropShadow 0 0 0 1px #0000000d",
+    "$value": "0 6px 20px 0 #00000026, 0 0 0 1px #0000000d",
     "$type": "shadow",
     "$description": "Strong elevation box shadow style"
   },
@@ -528,15 +528,40 @@
     "$type": "color",
     "$description": "Selected color"
   },
+  "--sprout-selected-color-hover": {
+    "$value": "rgb(6.5019% 41.875% 19.617%)",
+    "$type": "color",
+    "$description": "Selected color. (hover)"
+  },
+  "--sprout-selected-color-pressed": {
+    "$value": "rgb(8.2447% 29.243% 14.579%)",
+    "$type": "color",
+    "$description": "Selected color. (pressed)"
+  },
+  "--sprout-selected-color-disabled": {
+    "$value": "rgb(0% 0% 0% / 0.03)",
+    "$type": "color",
+    "$description": "Selected color. (disabled)"
+  },
+  "--sprout-selected-color-focus": {
+    "$value": "rgb(6.5019% 41.875% 19.617%)",
+    "$type": "color",
+    "$description": "Selected color. (focus)"
+  },
   "--sprout-selected-color-inverse": {
     "$value": "#ffffff",
     "$type": "color",
-    "$description": "Selected inverse color"
+    "$description": "Selected inverse color. For use on top of selected colors"
   },
   "--sprout-selected-background-color-default": {
     "$value": "rgb(0% 0% 0% / 0.05)",
     "$type": "color",
-    "$description": "Background color for selected items"
+    "$description": "Neutral background color for selected items"
+  },
+  "--sprout-selected-background-color-emphasized": {
+    "$value": "rgb(0% 52.941% 23.922% / 0.1)",
+    "$type": "color",
+    "$description": "Emphasized background color for selected items"
   },
   "--sprout-illustration-color-palette-0": {
     "$value": "#595959",
@@ -1190,6 +1215,51 @@
     "$type": "textDecoration",
     "$description": "Medium default code"
   },
+  "--sprout-script-font-xs-font-family": {
+    "$value": "Source Code Pro",
+    "$type": "fontFamily",
+    "$description": "Extra small default code"
+  },
+  "--sprout-script-font-xs-font-weight": {
+    "$value": "400",
+    "$type": "fontWeight",
+    "$description": "Extra small default code"
+  },
+  "--sprout-script-font-xs-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Extra small default code"
+  },
+  "--sprout-script-font-xs-font-size": {
+    "$value": "12px",
+    "$type": "dimension",
+    "$description": "Extra small default code"
+  },
+  "--sprout-script-font-xs-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Extra small default code"
+  },
+  "--sprout-script-font-xs-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small default code"
+  },
+  "--sprout-script-font-xs-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small default code"
+  },
+  "--sprout-script-font-xs-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Extra small default code"
+  },
+  "--sprout-script-font-xs-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Extra small default code"
+  },
   "--sprout-script-font-s-font-family": {
     "$value": "Source Code Pro",
     "$type": "fontFamily",
@@ -1324,6 +1394,51 @@
     "$value": "",
     "$type": "textDecoration",
     "$description": "Small emphasized code"
+  },
+  "--sprout-script-font-xs-emphasized-font-family": {
+    "$value": "Source Code Pro",
+    "$type": "fontFamily",
+    "$description": "Extra small emphasized code"
+  },
+  "--sprout-script-font-xs-emphasized-font-weight": {
+    "$value": "600",
+    "$type": "fontWeight",
+    "$description": "Extra small emphasized code"
+  },
+  "--sprout-script-font-xs-emphasized-line-height": {
+    "$value": "150%",
+    "$type": "lineHeight",
+    "$description": "Extra small emphasized code"
+  },
+  "--sprout-script-font-xs-emphasized-font-size": {
+    "$value": "12px",
+    "$type": "dimension",
+    "$description": "Extra small emphasized code"
+  },
+  "--sprout-script-font-xs-emphasized-letter-spacing": {
+    "$value": "",
+    "$type": "letterSpacing",
+    "$description": "Extra small emphasized code"
+  },
+  "--sprout-script-font-xs-emphasized-paragraph-spacing": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small emphasized code"
+  },
+  "--sprout-script-font-xs-emphasized-paragraph-indent": {
+    "$value": "",
+    "$type": "dimension",
+    "$description": "Extra small emphasized code"
+  },
+  "--sprout-script-font-xs-emphasized-text-case": {
+    "$value": "",
+    "$type": "textCase",
+    "$description": "Extra small emphasized code"
+  },
+  "--sprout-script-font-xs-emphasized-text-decoration": {
+    "$value": "",
+    "$type": "textDecoration",
+    "$description": "Extra small emphasized code"
   },
   "--sprout-selected-border-default-color": {
     "$value": "#00873d",
@@ -2604,6 +2719,11 @@
     "$type": "typography",
     "$description": "Medium default code"
   },
+  "--sprout-script-font-xs": {
+    "$value": "400 12px/150% Source Code Pro",
+    "$type": "typography",
+    "$description": "Extra small default code"
+  },
   "--sprout-script-font-s": {
     "$value": "400 14px/150% Source Code Pro",
     "$type": "typography",
@@ -2618,6 +2738,11 @@
     "$value": "600 14px/150% Source Code Pro",
     "$type": "typography",
     "$description": "Small emphasized code"
+  },
+  "--sprout-script-font-xs-emphasized": {
+    "$value": "600 12px/150% Source Code Pro",
+    "$type": "typography",
+    "$description": "Extra small emphasized code"
   },
   "--sprout-selected-border-default": {
     "$value": "2px solid #00873d",

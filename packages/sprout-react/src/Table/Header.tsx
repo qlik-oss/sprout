@@ -70,10 +70,10 @@ export function TableHeaderContent({
           "py-m",
           "pl-m",
           "items-center",
-          "font-heading-s",
+          "font-label-s-emphasized",
           "text-default",
           "w-full",
-          "overflow-hidden",
+          "overflow-hidden"
         )}
       >
         <div
@@ -84,7 +84,7 @@ export function TableHeaderContent({
             "gap-m",
             "w-full",
             "overflow-hidden",
-            "pr-m",
+            "pr-m"
           )}
         >
           {!!selection && (
@@ -113,7 +113,7 @@ export function TableHeaderContent({
               "flex",
               "flex-col",
               "w-full",
-              "overflow-hidden",
+              "overflow-hidden"
             )}
             data-layoutid="frame-95"
           >
@@ -125,7 +125,7 @@ export function TableHeaderContent({
                 "gap-m",
                 "items-center",
                 "icon-size-xl",
-                className.sort_indicator__wrapper,
+                className.sort_indicator__wrapper
               )}
             >
               {statusIcon}{" "}
@@ -156,7 +156,7 @@ export function TableHeaderContent({
                 "font-label-s",
                 "text-weak",
                 "flex-nowrap",
-                "truncate",
+                "truncate"
               )}
               data-layoutid="frame-97"
             >
@@ -178,7 +178,7 @@ export function TableHeaderContent({
             "pb-m",
             "gap-s",
             "overflow-hidden",
-            "truncate",
+            "truncate"
           )}
         >
           {children}
@@ -225,7 +225,7 @@ function TableHeaderBase(
      */
     variant?: "list" | "data";
   },
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   let style = {};
   if (width) {
@@ -254,7 +254,7 @@ function TableHeaderBase(
         "flex-wrap",
         "outline-none",
         "relative",
-        className.th,
+        className.th
       )}
       aria-sort={ariaSortOrder}
       tabIndex={0}
@@ -293,24 +293,24 @@ function TableHeaderBase(
 TableHeaderBase.displayName = "Table.Header";
 
 export const DataTableHeader = forwardRef<HTMLDivElement, TableHeaderProps>(
-  DataTableHeaderBase,
+  DataTableHeaderBase
 );
 
 function DataTableHeaderBase(
   props: TableHeaderProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   return <TableHeader {...props} ref={ref} />;
 }
 DataTableHeaderBase.displayName = "Table.DataHeader(Deprecated)";
 
 export const ListTableHeader = forwardRef<HTMLDivElement, TableHeaderProps>(
-  ListTableHeaderBase,
+  ListTableHeaderBase
 );
 
 function ListTableHeaderBase(
   props: TableHeaderProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   return <TableHeader {...props} ref={ref} />;
 }

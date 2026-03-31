@@ -1,4 +1,7 @@
-export type BoxSizing = "content-box" | "border-box" | "device-pixel-content-box";
+export type BoxSizing =
+  | "content-box"
+  | "border-box"
+  | "device-pixel-content-box";
 export type BoxSizingKeys = keyof Pick<
   ResizeObserverEntry,
   "borderBoxSize" | "contentBoxSize" | "devicePixelContentBoxSize"
@@ -8,7 +11,7 @@ export type WidthObserverAPI = (
   opts?: {
     boxSizing?: BoxSizing;
     onResize?: (width: number | undefined) => void;
-  },
+  }
 ) => {
   observe: () => void;
   disconnect: () => void;
@@ -110,7 +113,10 @@ export const widthObserver: WidthObserverAPI = (element, opts = {}) => {
   };
 };
 
-function extractWidth(entry: ResizeObserverEntry, box: BoxSizingKeys): number | undefined {
+function extractWidth(
+  entry: ResizeObserverEntry,
+  box: BoxSizingKeys
+): number | undefined {
   const size = entry[box];
 
   if (size.length === 0) {

@@ -19,7 +19,7 @@ figma.connect(
         {props.children}
       </SideNav.Section>
     ),
-  },
+  }
 );
 
 figma.connect(
@@ -35,7 +35,7 @@ figma.connect(
     example: (props) => (
       <SideNav.Nav variant={props.variant}>{props.children}</SideNav.Nav>
     ),
-  },
+  }
 );
 
 figma.connect(
@@ -66,7 +66,7 @@ figma.connect(
             {
               Default: undefined,
               Large: "large",
-            },
+            }
           ),
         }),
         false: {
@@ -88,5 +88,5 @@ figma.connect(
         indentation={props.indentation}
       />
     ),
-  },
+  }
 );

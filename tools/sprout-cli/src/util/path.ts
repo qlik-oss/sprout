@@ -23,4 +23,6 @@ export function commonFilterFn(token: DesignToken) {
 const expandTypes = ["typography", "border", "transition"];
 
 export const commonShorthandFilterFn = (token: DesignToken) =>
-  token.name?.startsWith("sprout") && !token.isSource && expandTypes.includes(token.$type as string);
+  token.name?.startsWith("sprout") &&
+  !token.isSource &&
+  expandTypes.includes(token.$type as string);

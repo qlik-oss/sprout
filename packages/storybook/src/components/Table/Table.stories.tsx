@@ -183,7 +183,7 @@ export const VisualTest = {
             "items-start",
             "flex-row",
             "gap-s",
-            "w-full",
+            "w-full"
           )}
           style={{ blockSize: "300px" }}
         >

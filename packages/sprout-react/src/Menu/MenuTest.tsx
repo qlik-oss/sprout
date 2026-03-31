@@ -1,4 +1,10 @@
-import { forwardRef, useEffect, useRef, useState } from "react";
+import {
+  type MouseEvent as ReactMouseEvent,
+  forwardRef,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 import { Button } from "../Button";
 import { TextField } from "../Input";
@@ -8,7 +14,7 @@ import { Menu, type MenuProps } from "./Menu";
 
 // Enforce we have forwardRef in the Menu.Trigger
 const ForwardRefTest = forwardRef<HTMLDivElement, MenuProps["Trigger"]>(
-  (props, ref) => <Menu.Trigger ref={ref} {...props} />,
+  (props, ref) => <Menu.Trigger ref={ref} {...props} />
 );
 ForwardRefTest.displayName = "ForwardRefTest";
 
@@ -170,6 +176,86 @@ export function MenuBackdropTest() {
         <Button label="Open Menu" />
       </Menu.Trigger>
       <Button label="External Button" />
+    </div>
+  );
+}
+
+export function MenuContextualControlled() {
+  const [contextMenu, setContextMenu] =
+    useState<ReactMouseEvent<HTMLDivElement> | null>(null);
+  const [tagName, setTagName] = useState<string>("");
+
+  const handleContextMenu = (event: ReactMouseEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    setContextMenu(event);
+    setTagName((event.target as HTMLElement).tagName);
+  };
+
+  const handleClose = () => {
+    setContextMenu(null);
+  };
+  return (
+    <div
+      className={classNames("flex", "flex-row", "w-full")}
+      onContextMenu={handleContextMenu}
+      style={{ cursor: "context-menu" }}
+    >
+      <div
+        className={classNames(
+          "flex",
+          "flex-col",
+          "p-m",
+          "w-full",
+          "border-default"
+        )}
+        data-testid="contextual"
+      >
+        <h1
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "font-heading-m",
+            "text-default"
+          )}
+        >
+          Contextual Menu demo
+        </h1>
+        <p
+          className={classNames(
+            "flex",
+            "flex-row",
+            "border-box",
+            "font-body-m",
+            "text-default"
+          )}
+        >
+          This a paragraph with a bit of text.
+        </p>
+      </div>
+      <Menu.Contextual
+        minWidth="xxs"
+        menu={
+          <>
+            <Menu.Item onClick={handleClose} label="Copy" />
+            <Menu.Item onClick={handleClose} label="Cut" />
+            <Menu.Item onClick={handleClose} label={`Highlight ${tagName}`} />
+            <Menu.Item onClick={handleClose} label="Email" />
+          </>
+        }
+        open={Boolean(contextMenu)}
+        onOpenChange={(value) => {
+          if (!value) {
+            setContextMenu(null);
+            setTagName("");
+          }
+        }}
+        anchorPosition={
+          contextMenu
+            ? { left: contextMenu.clientX, top: contextMenu.clientY }
+            : undefined
+        }
+      />
     </div>
   );
 }

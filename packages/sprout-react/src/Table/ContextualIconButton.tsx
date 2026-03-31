@@ -12,7 +12,7 @@ export const ContextualIconButton = forwardRef<
 
 function ContextualIconButtonBase(
   { onClick, ...props }: Partial<ButtonProps>,
-  ref?: Ref<HTMLButtonElement>,
+  ref?: Ref<HTMLButtonElement>
 ) {
   const t = useI18n();
   return (

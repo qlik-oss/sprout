@@ -20,15 +20,15 @@ export type RadioGroupProps = Omit<FieldProps, "id" | "children"> & {
  * @param name - The name attribute shared by all radio inputs in the group.
  * @param id - The id for the group's input element.
  * @param children - Radio inputs to render inside the group.
- * @param options - @deprecated Use `children` instead.
+ * @param options - deprecated Use `children` instead.
  */
 export const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>(
-  RadioGroupBase,
+  RadioGroupBase
 );
 
 function RadioGroupBase(
   { name, options, children, ...rest }: RadioGroupProps,
-  ref?: Ref<HTMLInputElement>,
+  ref?: Ref<HTMLInputElement>
 ) {
   const { fieldProps, ariaProps } = useFieldAriaProps({
     label: rest.label,
@@ -52,7 +52,7 @@ function RadioGroupBase(
           "flex",
           "flex-col",
           "border-box",
-          "gap-density-l",
+          "gap-density-l"
         )}
         role="radiogroup"
         {...ariaProps}

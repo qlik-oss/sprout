@@ -20,7 +20,7 @@ export const Listbox = forwardRef<HTMLDivElement, ListboxProps>(ListboxBase);
 
 function ListboxBase(
   { children, ...props }: ListboxProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   return (
     <div ref={ref} className={menuStyle.menu} role="listbox" {...props}>

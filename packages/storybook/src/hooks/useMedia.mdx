@@ -37,7 +37,10 @@ export type MediaAPI = {
    * ```
    * @return string
    */
-  classNames(options: ViewportOptions<AllClasses[] | AllClasses>, className?: string): string;
+  classNames(
+    options: ViewportOptions<AllClasses[] | AllClasses>,
+    className?: string
+  ): string;
   /**
    * @return the current viewport size based on the system definition of it
    */

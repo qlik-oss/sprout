@@ -2,10 +2,15 @@
   "qlik": {
     "common": {
       "font-family": {
-        "default": {
+        "primary": {
           "$type": "text",
           "$value": "Inter",
-          "$description": "Default font"
+          "$description": "Primary font family"
+        },
+        "secondary": {
+          "$type": "text",
+          "$value": "Inter",
+          "$description": "Secondary font family"
         }
       },
       "font-weight": {

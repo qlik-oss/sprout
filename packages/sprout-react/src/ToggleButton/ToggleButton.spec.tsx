@@ -13,7 +13,7 @@ test("should be accessible", async ({ page, mount }) => {
         <ToggleButton label="InGroup" />
         <ToggleButton label="InGroup toggled" toggled />
       </ButtonGroup>
-    </div>,
+    </div>
   );
 
   const buttons = await content.getByRole("button").all();

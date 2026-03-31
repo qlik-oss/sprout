@@ -38,7 +38,7 @@ export function SelectTest(props: SelectProps["Select"]) {
         "border-box",
         "gap-xl",
         "p-l",
-        "items-center",
+        "items-center"
       )}
     >
       <Select.Select
@@ -73,7 +73,7 @@ export function WithoutNoValueOption() {
         "border-box",
         "gap-xl",
         "p-l",
-        "items-center",
+        "items-center"
       )}
     >
       <Select.Select label="color" placeholder="Please select a color">
@@ -248,7 +248,7 @@ export function SearchableSelect(props: SelectProps["Select"]) {
         "border-box",
         "gap-xl",
         "p-l",
-        "items-center",
+        "items-center"
       )}
     >
       <Select.Select

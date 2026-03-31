@@ -132,7 +132,7 @@ export const FIGMA_URLS: Record<string, FigmaURL> = {
 
 export const getFigmaStorybookParams = (
   componentName: string,
-  variant: string = "default",
+  variant: string = "default"
 ) => {
   const URI = FIGMA_URLS[componentName][variant];
 

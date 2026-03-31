@@ -8,7 +8,7 @@ const normalizeString = (text: string) => text.normalize("NFKC");
 const normalizedStringSearch = (
   searchString: string,
   fieldString: string,
-  startIndex = 0,
+  startIndex = 0
 ) => {
   const normalizedSearchString = normalizeString(searchString);
   const matchLength =
@@ -17,7 +17,7 @@ const normalizedStringSearch = (
       : normalizedSearchString.length;
   const matchStartIndex = normalizeString(fieldString).indexOf(
     normalizedSearchString,
-    startIndex,
+    startIndex
   );
 
   if (matchStartIndex > -1) {
@@ -88,10 +88,11 @@ export function SearchHighlight(props: SearchHighlightProps) {
     ...restProps
   } = props;
   const incomingText = children || "";
+  const trimmedQuery = query.trim();
   let key = 0;
   let matchIndex = 0;
 
-  if (!query || !incomingText) {
+  if (!trimmedQuery || !incomingText) {
     return (
       <span data-testid={datatestid} {...restProps}>
         {incomingText}
@@ -106,15 +107,15 @@ export function SearchHighlight(props: SearchHighlightProps) {
     ? incomingText.toString()
     : incomingText.toString().toUpperCase();
   const searchQuery = caseSensitive
-    ? query.toString()
-    : query.toString().toUpperCase();
+    ? trimmedQuery.toString()
+    : trimmedQuery.toString().toUpperCase();
 
   if (searchQuery.length > 0) {
     while (currentIndex !== -1) {
       const searchResult = normalizedStringSearch(
         searchQuery,
         searchText,
-        currentIndex,
+        currentIndex
       );
       const updatedIndex = searchResult.index;
 
@@ -137,9 +138,9 @@ export function SearchHighlight(props: SearchHighlightProps) {
           >
             {incomingText.substring(
               updatedIndex,
-              updatedIndex + searchResult.length,
+              updatedIndex + searchResult.length
             )}
-          </span>,
+          </span>
         );
 
         matches.push(matchIndex);

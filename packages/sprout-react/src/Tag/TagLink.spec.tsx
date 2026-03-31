@@ -5,7 +5,7 @@ import { TagButton, TagLink } from "./TagLink";
 
 test("should TagLink wrap the tag in a link", async ({ mount, page }) => {
   const component = await mount(
-    <TagLink href="#" text="Tag" id="component-testing" />,
+    <TagLink href="#" text="Tag" id="component-testing" />
   );
 
   await expect(component).toBeVisible();
@@ -20,7 +20,7 @@ test("should TagLink wrap the tag in a link", async ({ mount, page }) => {
 
 test("should TagButton wrap the tag in a button", async ({ mount, page }) => {
   const component = await mount(
-    <TagButton onClick={() => {}} text="Tag" id="component-testing" />,
+    <TagButton onClick={() => {}} text="Tag" id="component-testing" />
   );
 
   await expect(component).toBeVisible();

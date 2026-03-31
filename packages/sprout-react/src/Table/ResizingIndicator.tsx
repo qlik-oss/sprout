@@ -8,7 +8,7 @@ import className from "./Table.module.css";
 
 export type ResizingIndicatorProps = {
   onResize: (
-    event: MouseEvent<HTMLButtonElement> | TouchEvent<HTMLButtonElement>,
+    event: MouseEvent<HTMLButtonElement> | TouchEvent<HTMLButtonElement>
   ) => void;
   resetSize: () => void;
 };
@@ -27,7 +27,7 @@ export function ResizingIndicator({
         "top-0",
         "cursor-col-resize",
         "z-floating",
-        className.resizing_indicator,
+        className.resizing_indicator
       )}
       aria-label={t("table.header.resize-column.aria-label")}
       onDoubleClick={resetSize}

@@ -40,7 +40,7 @@ test(`should RadioGroup be accessible`, async ({ mount, page }) => {
   await expect(helpText).not.toBeVisible();
   await expect(errorMessage).toHaveAttribute(
     "id",
-    aria.helpId || "typescript-id",
+    aria.helpId || "typescript-id"
   );
 
   // keyboard Tab
@@ -75,7 +75,7 @@ test(`should RadioGroup be accessible`, async ({ mount, page }) => {
   await page.keyboard.up(KEYBOARD_KEYS.SHIFT);
   await expect(dog).not.toBeFocused();
   const isBodyFocused = dog.evaluate(
-    () => document.body === document.activeElement,
+    () => document.body === document.activeElement
   );
   expect(isBodyFocused).toBeTruthy();
 
@@ -130,7 +130,7 @@ test("should render info icon on Radio when infoIconTooltip prop is provided", a
       label="Radio with info icon"
       helpText="Additional context for this option"
       infoIconTooltip={tooltipText}
-    />,
+    />
   );
 
   const radio = page.getByRole("radio", { name: "Radio with info icon" });
@@ -153,7 +153,7 @@ test("should check if clicked on helper text", async ({ mount, page }) => {
       label="Label"
       helpText="helpText"
       infoIconTooltip="This is additional info about the radio option"
-    />,
+    />
   );
   const radio = page.getByRole("radio");
   const helpText = page.getByText("helpText");
@@ -172,7 +172,7 @@ test.describe("RadioGroup with uncontrolled prop", () => {
         label="Uncontrolled radio"
         defaultChecked
         onChange={() => {}}
-      />,
+      />
     );
 
     const radio = page.getByRole("radio", { name: "Uncontrolled radio" });
@@ -189,7 +189,7 @@ test.describe("RadioGroup with uncontrolled prop", () => {
         label="Uncontrolled radio"
         defaultChecked={false}
         onChange={() => {}}
-      />,
+      />
     );
 
     const radio = page.getByRole("radio", { name: "Uncontrolled radio" });

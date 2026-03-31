@@ -18,7 +18,7 @@ test(`should Tag text move content in tooltip if too long`, async ({
   page,
 }) => {
   await mount(
-    <Tag text="Tag text is really too long" id="component-testing" />,
+    <Tag text="Tag text is really too long" id="component-testing" />
   );
 
   const tooltip = page.getByRole("tooltip");

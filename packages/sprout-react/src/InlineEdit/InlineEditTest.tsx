@@ -1,4 +1,6 @@
 import { InlineEdit } from ".";
+import { Button } from "../Button";
+import { Modal } from "../Modal";
 import { Select } from "../Select";
 import { classNames } from "../classNames";
 import { InlineEditPrimitive } from "./InlineEditPrimitive";
@@ -171,7 +173,7 @@ export function InlineEditHorizontalRowTest() {
           "flex-noreset",
           "flex-row",
           "gap-l",
-          "border-box",
+          "border-box"
         )}
         style={{ inlineSize: "max-content", minInlineSize: "100%" }}
       >
@@ -192,6 +194,40 @@ export function InlineEditHorizontalRowTest() {
           />
         </div>
       </div>
+    </div>
+  );
+}
+
+export function InlineEditModalFocusTest() {
+  return (
+    <div>
+      <Button variant="primary" label="Open Modal" onClick={() => {}} />
+
+      <Modal.Root visible>
+        <Modal.Header>InlineEdit in Modal</Modal.Header>
+        <Modal.Content>
+          <InlineEdit.TextField
+            blurAction="cancel"
+            aria-label="Edit text"
+            defaultValue="Edit me"
+            data-testid="test-textfield-modal"
+          />
+          <InlineEdit.Select
+            aria-label="Edit color"
+            defaultValue="red"
+            data-testid="test-select-modal"
+          >
+            {OPTIONS_WITH_GROUP}
+          </InlineEdit.Select>
+          <InlineEdit.MultiSelect
+            aria-label="Edit Colors"
+            defaultValue={["red"]}
+            data-testid="test-multiselect-modal"
+          >
+            {OPTIONS_WITH_GROUP}
+          </InlineEdit.MultiSelect>
+        </Modal.Content>
+      </Modal.Root>
     </div>
   );
 }

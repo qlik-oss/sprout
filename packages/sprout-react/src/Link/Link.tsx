@@ -27,7 +27,7 @@ export type LinkProps = Omit<HTMLAnchorProps, "className"> & {
  * @param isExternal - whether clicking opens a new tab, also renders an external link icon.
  * @param withEllipsis - whether to truncate long link text with an ellipsis.
  * @param font - the font style applied to the link text. Defaults to body_m.
- * @param label - @deprecated use `children` instead.
+ * @param label - deprecated use `children` instead.
  */
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(LinkBase);
 
@@ -46,7 +46,7 @@ function LinkBase(
     rel,
     ...rest
   }: LinkProps,
-  ref?: Ref<HTMLAnchorElement>,
+  ref?: Ref<HTMLAnchorElement>
 ) {
   return (
     <a

@@ -64,14 +64,14 @@ function ThemeColorCombo({
                 "grid",
                 "grid-cols-4",
                 "items-baseline",
-                "mt-m",
+                "mt-m"
               )}
             >
               <span
                 className={classNames(
                   "overflow-hidden",
                   "text-nowrap",
-                  "truncate",
+                  "truncate"
                 )}
               >
                 {fgKey}
@@ -83,7 +83,7 @@ function ThemeColorCombo({
                     "flex",
                     "items-center",
                     "flex-row",
-                    "mr-xs",
+                    "mr-xs"
                   )}
                   style={{
                     color: fgColor,
@@ -96,7 +96,7 @@ function ThemeColorCombo({
                   className={classNames(
                     "overflow-hidden",
                     "text-nowrap",
-                    "truncate",
+                    "truncate"
                   )}
                 >
                   {fgColor}
@@ -110,7 +110,7 @@ function ThemeColorCombo({
                         "#ffffff",
                         backgroundColor,
                         chroma(backgroundColor).alpha(),
-                        "rgb",
+                        "rgb"
                       )
                     : chroma(backgroundColor);
                 const blendedFg =
@@ -119,7 +119,7 @@ function ThemeColorCombo({
                         blendedBg.hex(),
                         fgColor,
                         chroma(fgColor).alpha(),
-                        "rgb",
+                        "rgb"
                       )
                     : chroma(fgColor);
                 const contrastRatio = chroma.contrast(blendedBg, blendedFg);
@@ -170,7 +170,7 @@ function SemanticGroupColorPreview({
           "grid",
           lightColorCombos.length > 0 && darkColorCombos.length > 0
             ? "grid_cols_2"
-            : "grid_cols_1",
+            : "grid_cols_1"
         )}
       >
         <div>
@@ -187,7 +187,7 @@ function SemanticGroupColorPreview({
                 backgroundColor={backgroundColor}
                 backgroundColorName={backgroundColorName}
               />
-            ),
+            )
           )}
         </div>
         <div>
@@ -204,7 +204,7 @@ function SemanticGroupColorPreview({
                 backgroundColor={backgroundColor}
                 backgroundColorName={backgroundColorName}
               />
-            ),
+            )
           )}
         </div>
       </div>
@@ -213,7 +213,7 @@ function SemanticGroupColorPreview({
 }
 
 function getPossibleForegroundColorsForColor(
-  semanticGroup: SemanticGroupPartial,
+  semanticGroup: SemanticGroupPartial
 ): {
   [key: string]: { value: string };
 } {
@@ -229,7 +229,7 @@ function getPossibleForegroundColorsForColor(
 }
 
 function getPossibleForegroundColorsForBackground(
-  semanticGroup: SemanticGroupPartial,
+  semanticGroup: SemanticGroupPartial
 ): {
   [key: string]: { value: string };
 } {
@@ -262,7 +262,7 @@ type ColorCombo = {
 };
 
 function getColorCombosFromSemanticGroup(
-  semanticGroup: SemanticGroupPartial,
+  semanticGroup: SemanticGroupPartial
 ): Array<ColorCombo> {
   const colorCombos: Array<ColorCombo> = [];
 
@@ -315,7 +315,7 @@ export function ThemePreviewer({ theme }: { theme: SproutThemePartial }) {
   const semanticGroupKeys = Object.keys(
     Object.hasOwn(theme, "light")
       ? (theme as LightModeSproutThemePartial).light.sprout
-      : (theme as DarkModeSproutThemePartial).dark.sprout,
+      : (theme as DarkModeSproutThemePartial).dark.sprout
   );
 
   return (

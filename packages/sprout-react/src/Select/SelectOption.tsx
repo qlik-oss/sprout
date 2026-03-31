@@ -23,13 +23,13 @@ export type SelectOptionProps = {
 } & Omit<HTMLButtonProps, "type" | "disabled">;
 
 export const SelectOption = forwardRef<HTMLButtonElement, SelectOptionProps>(
-  OptionBase,
+  OptionBase
 );
 export const OptionStyled = MenuContentPrimitive;
 
 function OptionBase(
   { id, selectable, ...props }: SelectOptionProps,
-  ref?: Ref<HTMLButtonElement>,
+  ref?: Ref<HTMLButtonElement>
 ) {
   const safeId = useId(id);
   const [display, setDisplay] = useState(true);

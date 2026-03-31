@@ -16,5 +16,5 @@ figma.connect(
     example: ({ helpText, isError }) => (
       <HelperText helpText={helpText} isError={isError} />
     ),
-  },
+  }
 );

@@ -64,7 +64,7 @@ function DropzoneBase(
     onDrop,
     ...props
   }: DropzoneProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const controlled = useControl<Status>(
     {
@@ -77,7 +77,7 @@ function DropzoneBase(
       valueKey: "status",
       defaultValueKey: "statusDefault",
       selector: (e) => e,
-    },
+    }
   );
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   const dataState = controlled.value || (disabled && "disabled") || "enabled";
@@ -99,7 +99,7 @@ function DropzoneBase(
         "gap-m",
         {
           [styles.container]: true,
-        },
+        }
       )}
       onDragOver={(e) => {
         controlled.onChange("dragging");
@@ -126,7 +126,7 @@ function DropzoneBase(
           "gap-xl",
           "w-full",
           "items-center",
-          "justify-center",
+          "justify-center"
         )}
       >
         {icon ? (
@@ -145,7 +145,7 @@ function DropzoneBase(
               "flex-noreset",
               "flex-col",
               "items-center",
-              "gap-s",
+              "gap-s"
             )}
           >
             {title ? (

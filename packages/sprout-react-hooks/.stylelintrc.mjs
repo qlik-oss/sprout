@@ -1,5 +1,9 @@
 export default {
-  extends: ["stylelint-config-standard", "stylelint-config-css-modules", "@qlik/stylelint-config-sprout/next"],
+  extends: [
+    "stylelint-config-standard",
+    "stylelint-config-css-modules",
+    "@qlik/stylelint-config-sprout/next",
+  ],
   rules: {
     "color-named": "always-where-possible",
     "declaration-block-no-duplicate-properties": true,

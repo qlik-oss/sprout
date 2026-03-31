@@ -16,7 +16,9 @@ const rules = {
   ...nextRules,
 };
 
-const plugins = Array.from(new Set([...(baseConfig?.plugins ?? []), plugin, ...nextPlugins]));
+const plugins = Array.from(
+  new Set([...(baseConfig?.plugins ?? []), plugin, ...nextPlugins])
+);
 
 const config = {
   ...baseConfig,

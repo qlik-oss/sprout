@@ -1,8 +1,4 @@
-import {
-  Textarea,
-  type TextareaProps,
-  classNames,
-} from "@qlik/sprout-react";
+import { Textarea, type TextareaProps, classNames } from "@qlik/sprout-react";
 import type { Meta } from "@storybook/react-vite";
 
 import { TextareaArgTypes } from "./Textarea.argTypes";
@@ -29,7 +25,7 @@ export function VisualTest(props: Partial<TextareaProps>) {
         "border-box",
         "w-fit",
         "p-s",
-        "w-xs",
+        "w-xs"
       )}
     >
       <Textarea

@@ -14,7 +14,7 @@ export const menuStyle = {
     "overflow-y-auto",
     "radius-subtle",
     "max-w-s",
-    styleSheet.menu,
+    styleSheet.menu
   ),
   menuitem: classNames(
     "cursor-pointer",
@@ -28,13 +28,13 @@ export const menuStyle = {
     "m-0",
     "p-0",
     "outline-none",
-    styleSheet.menuitem,
+    styleSheet.menuitem
   ),
   menu_icon: classNames(
     "self-start",
     "size-xl",
     "shrink-0",
-    styleSheet.menu_icon,
+    styleSheet.menu_icon
   ),
   menu_content_description: (disabled?: boolean) =>
     classNames(
@@ -46,13 +46,13 @@ export const menuStyle = {
       {
         "text-weak": !disabled,
         "text-disabled": !!disabled,
-      },
+      }
     ),
   menu_content_label: classNames(
     "font-label-s",
     "text-start",
     "w-full",
     "break-words",
-    styleSheet.menu_content_label,
+    styleSheet.menu_content_label
   ),
 };

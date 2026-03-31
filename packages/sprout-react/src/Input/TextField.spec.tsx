@@ -39,18 +39,18 @@ test(`should TextField be accessible`, async ({ mount, page }) => {
 
 test("should map properties to native attributes", async ({ mount, page }) => {
   const component = await mount(
-    <TextFieldTest disabled label="Label" helpText="helpText" />,
+    <TextFieldTest disabled label="Label" helpText="helpText" />
   );
   const textbox = page.getByRole("textbox");
   await expect(textbox).toBeDisabled();
 
   await component.update(
-    <TextFieldTest readOnly label="Label" helpText="helpText" />,
+    <TextFieldTest readOnly label="Label" helpText="helpText" />
   );
   await expect(textbox).toHaveAttribute("readonly");
 
   await component.update(
-    <TextFieldTest hasError label="Label" helpText="helpText" />,
+    <TextFieldTest hasError label="Label" helpText="helpText" />
   );
   await expect(textbox).toHaveAttribute("aria-invalid", "true");
 });
@@ -63,7 +63,7 @@ test("Inline textfield should support errorMessages", async ({
     <div>
       <TextFieldTest useField aria-label="label" data-testid="input" />
       <button type="button">button</button>
-    </div>,
+    </div>
   );
   const errorMessages = ["Error message 1"];
   const input = page.getByTestId("input");
@@ -80,7 +80,7 @@ test("Inline textfield should support errorMessages", async ({
         errorMessages={errorMessages}
       />
       <button type="button">button</button>
-    </div>,
+    </div>
   );
   await expect(input).toHaveValue("F");
   await expect(input).toBeFocused();
@@ -100,7 +100,7 @@ test("Textfield should show counter when maxCharacterCount property is set", asy
         value="0123456789"
         maxCharacterCount={10}
       />
-    </div>,
+    </div>
   );
   await expect(page.getByText("10 / 10")).toBeVisible();
 
@@ -113,7 +113,7 @@ test("Textfield should show counter when maxCharacterCount property is set", asy
         value="0123456789"
         maxCharacterCount={9}
       />
-    </div>,
+    </div>
   );
 
   await expect(page.getByText("10 / 9")).toBeVisible();
@@ -122,7 +122,7 @@ test("Textfield should show counter when maxCharacterCount property is set", asy
 
 test("should support optional and infoIconTooltip", async ({ mount, page }) => {
   await mount(
-    <TextFieldTest label="Label" infoIconTooltip="Info tooltip" optional />,
+    <TextFieldTest label="Label" infoIconTooltip="Info tooltip" optional />
   );
   const infoIcon = page.getByTestId("info-tooltip-button");
   const tooltip = page.getByRole("tooltip");
@@ -136,7 +136,7 @@ test("should support optional and infoIconTooltip", async ({ mount, page }) => {
 
 test("should support infoIconPopover", async ({ mount, page }) => {
   await mount(
-    <TextFieldTest label="Label" infoIconPopover="Info popover" optional />,
+    <TextFieldTest label="Label" infoIconPopover="Info popover" optional />
   );
   const infoIcon = page.getByTestId("info-popover-button");
   const popover = page.getByRole("dialog");
@@ -185,7 +185,7 @@ test.describe("TextField with uncontrolled prop", () => {
         label="Uncontrolled"
         defaultValue="Initial"
         onChange={() => {}}
-      />,
+      />
     );
 
     const input = page.getByRole("textbox");
@@ -208,7 +208,7 @@ test.describe("TextField with uncontrolled prop", () => {
         label="Uncontrolled"
         defaultValue="Initial"
         onChange={() => {}}
-      />,
+      />
     );
     const input = page.getByRole("textbox");
     await expect(input).toHaveValue("Initial");
@@ -222,7 +222,7 @@ test.describe("TextField with uncontrolled prop", () => {
     await expect(input).toHaveValue("Initial123");
 
     const actualDomValue = await input.evaluate(
-      (element) => (element as HTMLInputElement).value,
+      (element) => (element as HTMLInputElement).value
     );
     expect(actualDomValue).toBe("Initial123");
   });
@@ -235,7 +235,7 @@ test.describe("TextField with uncontrolled prop", () => {
       <UncontrolledTextFieldFormTest
         label="Uncontrolled"
         defaultValue="Initial"
-      />,
+      />
     );
     const input = page.getByRole("textbox");
 
@@ -275,7 +275,7 @@ test.describe("TextField with controlled prop", () => {
     page,
   }) => {
     await mount(
-      <TextFieldTest label="Controlled" value="Initial" onChange={undefined} />,
+      <TextFieldTest label="Controlled" value="Initial" onChange={undefined} />
     );
 
     const input = page.getByRole("textbox");
@@ -294,7 +294,7 @@ test.describe("TextField with controlled prop", () => {
     page,
   }) => {
     await mount(
-      <ControlledTextFieldFormTest label="Controlled" value="Initial" />,
+      <ControlledTextFieldFormTest label="Controlled" value="Initial" />
     );
     const input = page.getByRole("textbox");
 

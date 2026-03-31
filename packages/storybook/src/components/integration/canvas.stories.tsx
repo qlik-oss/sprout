@@ -29,20 +29,20 @@ function CanvasComponent() {
 
     // Draw a rectangle
     context.fillStyle = style.getPropertyValue(
-      "--sprout-common-background-color-default",
+      "--sprout-common-background-color-default"
     );
     context.fillRect(50, 50, 200, 100);
 
     // Draw a border around the rectangle
     context.strokeStyle = style.getPropertyValue(
-      "--sprout-common-border-default-color",
+      "--sprout-common-border-default-color"
     );
     context.lineWidth = 1;
     context.strokeRect(50, 50, 200, 100);
 
     // Draw some text
     context.fillStyle = style.getPropertyValue(
-      "--sprout-common-foreground-color-default",
+      "--sprout-common-foreground-color-default"
     );
     context.font = style.getPropertyValue("--sprout-heading-font-m");
     context.fillText("Hello, Canvas!", 60, 120);

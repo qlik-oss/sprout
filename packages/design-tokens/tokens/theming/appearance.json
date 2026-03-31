@@ -771,6 +771,53 @@
           "$value": "{qlik.appearance.green}",
           "$description": "Selected color"
         },
+        "hover": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "darken",
+                "value": "0.2",
+                "space": "lch"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{sprout.selected.color.default}",
+          "$description": "Selected color. (hover)"
+        },
+        "pressed": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "darken",
+                "value": "0.3",
+                "space": "lch"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{sprout.selected.color.hover}",
+          "$description": "Selected color. (pressed)"
+        },
+        "disabled": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.03",
+                "space": "lch"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{qlik.appearance.background-color.disabled}",
+          "$description": "Selected color. (disabled)"
+        },
+        "focus": {
+          "$type": "color",
+          "$value": "{sprout.selected.color.hover}",
+          "$description": "Selected color. (focus)"
+        },
         "inverse": {
           "$type": "color",
           "$value": "{qlik.appearance.background-color.default}",
@@ -780,8 +827,22 @@
       "background-color": {
         "default": {
           "$type": "color",
-          "$value": "{qlik.appearance.background-color.pressed}",
-          "$description": "Background color for selected items"
+          "$value": "{qlik.appearance.background-color.selected}",
+          "$description": "Neutral background color for selected items"
+        },
+        "emphasized": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.1",
+                "space": "lch"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{sprout.selected.color.default}",
+          "$description": "Emphasized background color for selected items"
         }
       }
     },

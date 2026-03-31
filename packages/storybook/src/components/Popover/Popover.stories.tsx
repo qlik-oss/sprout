@@ -1,11 +1,13 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { useEffect, useState } from "react";
 import { fn } from "storybook/test";
+import { FocusTrap } from "@qlik/sprout-gesture";
 
 import {
   AlertInline,
   Button,
+  Checkbox,
   List,
+  ListDivider,
   ListItem,
   Menu,
   Popover,
@@ -19,6 +21,7 @@ import {
   PopoverDemoContentArgTypes,
   type PopoverDemoContentProps,
 } from "./Popover.argTypes";
+import { InboxIcon, SendIcon } from "@qlik/sprout-icons/react";
 
 type Story = StoryObj<PopoverProps>;
 
@@ -53,7 +56,7 @@ export const Playground: StoryObj<PopoverProps & PopoverDemoContentProps> = {
         "border-box",
         "flex-col",
         "items-center",
-        "justify-center",
+        "justify-center"
       )}
       style={{ inlineSize: demoContainerWidth, blockSize: demoContainerHeight }}
     >
@@ -199,7 +202,7 @@ export const AnchorPositionAPI: Story = {
                 "flex-col",
                 "gap-m",
                 "items-start",
-                "bg-default",
+                "bg-default"
               )}
               onSubmit={(e) => {
                 e.preventDefault();
@@ -219,7 +222,7 @@ export const AnchorPositionAPI: Story = {
                   "flex-col",
                   "gap-m",
                   "w-full",
-                  "items-end",
+                  "items-end"
                 )}
               >
                 <Button variant="primary" label="Yes" type="submit" />
@@ -248,7 +251,7 @@ export const Nested: Story = {
         "gap-xl",
         "p-xl",
         "items-center",
-        "justify-center",
+        "justify-center"
       )}
       style={{ inlineSize: "400px", blockSize: "300px" }}
     >
@@ -290,7 +293,7 @@ export const VisualTest: Story = {
           "p-xl",
           "items-center",
           "justify-between",
-          "w-full",
+          "w-full"
         )}
         style={{ blockSize: "100vh" }}
       >
@@ -313,7 +316,7 @@ export const VisualTest: Story = {
             "flex-col",
             "self-center",
             "gap-3xl",
-            "items-center",
+            "items-center"
           )}
           style={{ inlineSize: "30%" }}
         >
@@ -374,4 +377,45 @@ export const VisualTest: Story = {
       disable: true,
     },
   },
+};
+
+export const PopoverWithList: Story = {
+  render: (props) => (
+    <div className={classNames("bg-default", "text-default")}>
+      <p>This is a demo of how to build keyboard navigation in a popover</p>
+      <Popover
+        {...props}
+        content={
+          <FocusTrap>
+            <List useGesture>
+              <ListItem selected onClick={() => {}}>
+                <Checkbox label="select item 1" />
+              </ListItem>
+              <ListItem onClick={() => {}}>
+                <Checkbox label="select item 2" />
+              </ListItem>
+              <ListDivider />
+              <ListItem onClick={() => {}}>
+                <InboxIcon />
+                Inbox
+              </ListItem>
+              <ListItem onClick={() => {}}>
+                <SendIcon />
+                Draft
+              </ListItem>
+              <ListItem disabled onClick={() => {}}>
+                <SendIcon />
+                Disabled
+              </ListItem>
+            </List>
+          </FocusTrap>
+        }
+        p="xl"
+        pb="m"
+      >
+        <Button label="My trigger" />
+      </Popover>
+    </div>
+  ),
+  parameters: chromatic,
 };

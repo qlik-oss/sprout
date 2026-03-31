@@ -10,7 +10,7 @@ export type ThemeParameters = {
 };
 
 export function createTokenValuesFromBaseColors(
-  themeParams: ThemeParameters,
+  themeParams: ThemeParameters
 ): SingleModeThemePartial {
   return {
     sprout: {
@@ -89,7 +89,7 @@ export function createTokenValuesFromBaseColors(
             value: chroma(
               chroma.contrast(themeParams.selected, "#ffffff") > 4.5
                 ? "#ffffff"
-                : "#000000",
+                : "#000000"
             )
               .darken(0.4)
               .hex(),

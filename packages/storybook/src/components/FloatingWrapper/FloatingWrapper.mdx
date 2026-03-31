@@ -6,10 +6,18 @@ import * as Stories from "./FloatingWrapper.stories";
 
 # FloatingWrapper
 
-Allows a subset of components to assume a floating style and behaviour, to use on dynamic backgrounds such as a canvas.
+Allows a subset of components to assume a floating style and behaviour, to use on dynamic backgrounds such as a canvas. The wrapper extends attributes and properties from a standard [HTML div element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/div#attributes) with floating pill style.
 
 ```tsx
-import { FloatingWrapper } from "@qlik/sprout-react";
+import { Button, FloatingWrapper, TextField } from "@qlik/sprout-react";
+
+<FloatingWrapper>
+  <Button>Button</Button>
+</FloatingWrapper>;
+
+<FloatingWrapper>
+  <TextField type="search" placeholder="Search" />
+</FloatingWrapper>;
 ```
 
 ## Button

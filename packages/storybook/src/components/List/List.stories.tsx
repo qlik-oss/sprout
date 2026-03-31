@@ -3,10 +3,14 @@ import {
   List,
   ListDivider,
   ListItem,
+  type ListItemProps,
+  type ListProps,
   Menu,
   classNames,
 } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
+
+import { ListArgTypes, ListItemArgTypes } from "./List.argTypes";
 
 export default {
   title: "Components/List",
@@ -50,9 +54,10 @@ function Inbox() {
   );
 }
 
-type Story = StoryObj;
+type ListStory = StoryObj<ListProps>;
+type ListItemStory = StoryObj<ListItemProps>;
 
-export const Default: Story = {
+export const ListPlayground: ListStory = {
   render: (props) => (
     <div
       className={classNames("flex", "flex-col", "border-box", "p-s", "gap-s")}
@@ -83,25 +88,39 @@ export const Default: Story = {
     </div>
   ),
   args: {},
-  argTypes: {
-    gap: {
-      control: {
-        type: "select",
-      },
-      options: ["0", "s", "m", "l", "xl"],
-    },
-    dense: {
-      control: {
-        type: "boolean",
-      },
-    },
-  },
+  argTypes: ListArgTypes,
   parameters: {
     chromatic: { disableSnapshot: true },
   },
 };
 
-export const VisualTest: Story = {
+export const ItemPlayground: ListItemStory = {
+  render: (props) => (
+    <div
+      className={classNames("flex", "flex-col", "border-box", "p-s", "gap-s")}
+      style={{ inlineSize: "300px" }}
+      data-testid="wrapper"
+    >
+      <List gap="s">
+        <ListItem {...props} />
+      </List>
+    </div>
+  ),
+  args: {
+    children: "List item",
+    onClick: () => {},
+    selected: false,
+    disabled: false,
+    hasPadding: undefined,
+    interactive: undefined,
+  },
+  argTypes: ListItemArgTypes,
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+};
+
+export const VisualTest: ListStory = {
   render: () => (
     <div
       className={classNames("flex", "flex-row", "border-box", "p-s", "gap-xl")}
@@ -154,7 +173,7 @@ export const VisualTest: Story = {
               "w-full",
               "h-full",
               "font-body-s",
-              "text-default",
+              "text-default"
             )}
           >
             List hasPadding=true
@@ -170,7 +189,7 @@ export const VisualTest: Story = {
               "w-full",
               "h-full",
               "font-body-s",
-              "text-default",
+              "text-default"
             )}
           >
             ListItem hasPadding
@@ -187,7 +206,7 @@ export const VisualTest: Story = {
               "border-default",
               "w-full",
               "font-body-s",
-              "text-default",
+              "text-default"
             )}
           >
             List hasPadding=true
@@ -202,7 +221,7 @@ export const VisualTest: Story = {
               "border-default",
               "w-full",
               "font-body-s",
-              "text-default",
+              "text-default"
             )}
           >
             ListItem hasPadding=false
@@ -218,7 +237,7 @@ export const VisualTest: Story = {
               "border-box",
               "content-center",
               "items-center",
-              "justify-between",
+              "justify-between"
             )}
           >
             <div
@@ -231,7 +250,7 @@ export const VisualTest: Story = {
                     "flex-row",
                     "border-box",
                     "font-label-m",
-                    "text-default",
+                    "text-default"
                   )}
                 >
                   Custom Item
@@ -242,7 +261,7 @@ export const VisualTest: Story = {
                     "flex-row",
                     "border-box",
                     "font-body-s",
-                    "text-default",
+                    "text-default"
                   )}
                 >
                   3 tasks
@@ -259,7 +278,7 @@ export const VisualTest: Story = {
               "border-box",
               "content-center",
               "items-center",
-              "justify-between",
+              "justify-between"
             )}
           >
             <div
@@ -272,7 +291,7 @@ export const VisualTest: Story = {
                     "flex-row",
                     "border-box",
                     "font-label-m",
-                    "text-default",
+                    "text-default"
                   )}
                 >
                   Custom Item hover
@@ -283,7 +302,7 @@ export const VisualTest: Story = {
                     "flex-row",
                     "border-box",
                     "font-body-s",
-                    "text-default",
+                    "text-default"
                   )}
                 >
                   3 tasks
@@ -300,7 +319,7 @@ export const VisualTest: Story = {
               "border-box",
               "content-center",
               "items-center",
-              "justify-between",
+              "justify-between"
             )}
           >
             <div
@@ -313,7 +332,7 @@ export const VisualTest: Story = {
                     "flex-row",
                     "border-box",
                     "font-label-m",
-                    "text-default",
+                    "text-default"
                   )}
                 >
                   Custom Item focus
@@ -324,7 +343,7 @@ export const VisualTest: Story = {
                     "flex-row",
                     "border-box",
                     "font-body-s",
-                    "text-default",
+                    "text-default"
                   )}
                 >
                   3 tasks
@@ -341,7 +360,7 @@ export const VisualTest: Story = {
               "border-box",
               "content-center",
               "items-center",
-              "justify-between",
+              "justify-between"
             )}
           >
             <div
@@ -354,7 +373,7 @@ export const VisualTest: Story = {
                     "flex-row",
                     "border-box",
                     "font-label-m",
-                    "text-default",
+                    "text-default"
                   )}
                 >
                   Custom Item pressed
@@ -365,7 +384,7 @@ export const VisualTest: Story = {
                     "flex-row",
                     "border-box",
                     "font-body-s",
-                    "text-default",
+                    "text-default"
                   )}
                 >
                   3 tasks
@@ -382,7 +401,7 @@ export const VisualTest: Story = {
               "border-box",
               "content-center",
               "items-center",
-              "justify-between",
+              "justify-between"
             )}
           >
             <div
@@ -395,7 +414,7 @@ export const VisualTest: Story = {
                     "flex-row",
                     "border-box",
                     "font-label-m",
-                    "text-default",
+                    "text-default"
                   )}
                 >
                   Custom Item selected
@@ -406,7 +425,7 @@ export const VisualTest: Story = {
                     "flex-row",
                     "border-box",
                     "font-body-s",
-                    "text-default",
+                    "text-default"
                   )}
                 >
                   2 tasks

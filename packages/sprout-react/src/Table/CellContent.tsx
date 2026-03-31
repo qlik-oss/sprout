@@ -35,7 +35,7 @@ export function CellContent({
           "justify-start": variant !== "number",
           "font-label-s": variant !== "number",
           "justify-end": variant === "number",
-        },
+        }
       )}
       data-variant={variant}
     >

@@ -82,7 +82,7 @@ export function Avatar({
           [style.l]: size === "l",
           [style.xl]: size === "xl",
           [style.illustration]: size === "illustration",
-        },
+        }
       )}
     >
       {child}

@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { useRef, useState } from "react";
 import { fn } from "storybook/test";
 
@@ -115,7 +114,7 @@ function H2({ children }: { children: string }) {
         "flex-row",
         "border-box",
         "font-heading-m",
-        "text-default",
+        "text-default"
       )}
     >
       {children}
@@ -131,7 +130,7 @@ export const VisualTest: Story = {
         "border-box",
         "flex-col",
         "gap-l",
-        "w-s",
+        "w-s"
       )}
     >
       <H2>States</H2>
@@ -141,7 +140,7 @@ export const VisualTest: Story = {
           "border-box",
           "gap-s",
           "w-full",
-          "flex-row",
+          "flex-row"
         )}
       >
         <ToggleButton label="Default" />
@@ -157,7 +156,7 @@ export const VisualTest: Story = {
           "border-box",
           "gap-s",
           "w-full",
-          "flex-row",
+          "flex-row"
         )}
       >
         <ToggleButton icon={<DeleteIcon />} label="Default" />
@@ -181,7 +180,7 @@ export const VisualTest: Story = {
           "border-box",
           "gap-s",
           "w-full",
-          "flex-row",
+          "flex-row"
         )}
       >
         <ToggleIconButton
@@ -227,7 +226,7 @@ export const VisualTest: Story = {
           "border-box",
           "gap-s",
           "w-full",
-          "flex-row",
+          "flex-row"
         )}
       >
         <ToggleButton

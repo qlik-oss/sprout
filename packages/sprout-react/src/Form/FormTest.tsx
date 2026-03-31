@@ -50,7 +50,7 @@ export function FormDefaultValuesTest() {
           "border-box",
           "gap-xl",
           "justify-stretch",
-          "align_content_stretch",
+          "align_content_stretch"
         )}
         style={{ inlineSize: "300px" }}
       >
@@ -106,7 +106,7 @@ export function Form() {
             "border-box",
             "gap-xl",
             "justify-stretch",
-            "align_content_stretch",
+            "align_content_stretch"
           )}
           style={{ inlineSize: "300px" }}
         >
@@ -212,7 +212,7 @@ export function FormRerenderTest() {
             "border-box",
             "gap-xl",
             "justify-stretch",
-            "align_content_stretch",
+            "align_content_stretch"
           )}
         >
           <Select.Select
@@ -253,7 +253,7 @@ export function FormDefaultValuesMultiSelectTest() {
             "border-box",
             "gap-xl",
             "justify-stretch",
-            "align_content_stretch",
+            "align_content_stretch"
           )}
         >
           <Select.Select

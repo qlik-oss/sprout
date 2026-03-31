@@ -51,7 +51,7 @@ export const Padding = {
         ...BOX_CLASSES,
         "flex-col",
         "border-none",
-        "gap-0",
+        "gap-0"
       )}
     >
       {PADDING_PROPERTIES.map((property) => (
@@ -70,7 +70,7 @@ export const Padding = {
                 <div
                   className={sprout.classNames(
                     ...omit(CONTENT_CLASSES, "p-xl"),
-                    className,
+                    className
                   )}
                 >
                   content
@@ -126,7 +126,7 @@ export const Margin = {
         ...BOX_CLASSES,
         "flex-col",
         "border-none",
-        "gap-0",
+        "gap-0"
       )}
     >
       {MARGIN_PROPERTIES.map((property) => (
@@ -146,7 +146,7 @@ export const Margin = {
                 <div
                   className={sprout.classNames(
                     ...CONTENT_CLASSES,
-                    `${property.name}_${value}` as AllClasses,
+                    `${property.name}_${value}` as AllClasses
                   )}
                 >
                   content

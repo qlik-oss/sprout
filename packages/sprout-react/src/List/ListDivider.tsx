@@ -1,10 +1,9 @@
 import { Divider } from "../Divider";
-
-import styles from "./List.module.css";
+import { classNames } from "../classNames";
 
 export function ListDivider() {
   return (
-    <li className={styles.item_divider}>
+    <li className={classNames("flex-noreset")}>
       <Divider role="separator" />
     </li>
   );

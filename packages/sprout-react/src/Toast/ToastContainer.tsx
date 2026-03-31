@@ -23,12 +23,12 @@ export type ToastContainerProps = {
  * @param children - Toast content items.
  */
 export const ToastContainer = forwardRef<HTMLDivElement, ToastContainerProps>(
-  ToastContainerBase,
+  ToastContainerBase
 );
 
 function ToastContainerBase(
   { placement, children, ...props }: ToastContainerProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   return (
     <div
@@ -41,7 +41,7 @@ function ToastContainerBase(
         "gap-m",
         "w-fit",
         "z-time-sensitive",
-        style.container,
+        style.container
       )}
       {...props}
     >

@@ -32,7 +32,7 @@ export function CheckboxGroup({
           "flex",
           "flex-col",
           "border-box",
-          "gap-density-l",
+          "gap-density-l"
         )}
         role="group"
         {...ariaProps}

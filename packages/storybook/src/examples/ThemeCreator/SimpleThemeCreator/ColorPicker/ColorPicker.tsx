@@ -15,7 +15,7 @@ export function ColorPicker({
   colors?: Array<string>;
 }) {
   const [selectedColor, setSelectedColor] = useState<string>(
-    defaultSelectedColor || "#fff",
+    defaultSelectedColor || "#fff"
   );
 
   const handleChangeComplete = (color: ColorResult) => {

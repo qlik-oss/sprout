@@ -25,5 +25,5 @@ figma.connect(
       checked: figma.boolean("Checked"),
     },
     example: ({ ...props }) => <Switch {...props} />,
-  },
+  }
 );

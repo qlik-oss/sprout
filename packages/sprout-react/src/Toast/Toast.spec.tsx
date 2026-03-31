@@ -7,7 +7,7 @@ test(`should Toast text be accessible`, async ({ mount, page }) => {
   await mount(
     <Toast.Container placement="top" id="component-testing">
       <Toast.Content message="Toast" onClose={() => {}} />
-    </Toast.Container>,
+    </Toast.Container>
   );
 
   const text = page.getByText("Toast");

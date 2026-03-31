@@ -12,10 +12,10 @@ sprout-common-background-color-hover, "rgb(0% 0% 0% / 0.03)", Hover background c
 sprout-common-background-color-pressed, "rgb(0% 0% 0% / 0.05)", Pressed background color for interactive elements
 sprout-common-background-color-toggled, "rgb(0% 0% 0% / 0.08)", Background color for toggled state of interactive elements
 sprout-common-background-color-disabled, "rgb(0% 0% 0% / 0.03)", Disabled background color for interactive elements
-sprout-common-elevation-default, "dropShadow 0 2px 4px 0 #00000026, dropShadow 0 0 0 1px #0000000d", Default elevation box shadow style
-sprout-common-elevation-weak, "dropShadow 0 1px 2px 0 #00000026, dropShadow 0 0 0 1px #0000000d", Weak elevation box shadow style
-sprout-common-elevation-moderate, "dropShadow 0 4px 10px 0 #00000026, dropShadow 0 0 0 1px #0000000d", Moderate elevation box shadow style
-sprout-common-elevation-strong, "dropShadow 0 6px 20px 0 #00000026, dropShadow 0 0 0 1px #0000000d", Strong elevation box shadow style
+sprout-common-elevation-default, "0 2px 4px 0 #00000026, 0 0 0 1px #0000000d", Default elevation box shadow style
+sprout-common-elevation-weak, "0 1px 2px 0 #00000026, 0 0 0 1px #0000000d", Weak elevation box shadow style
+sprout-common-elevation-moderate, "0 4px 10px 0 #00000026, 0 0 0 1px #0000000d", Moderate elevation box shadow style
+sprout-common-elevation-strong, "0 6px 20px 0 #00000026, 0 0 0 1px #0000000d", Strong elevation box shadow style
 sprout-common-border-radius-subtle, "4px", Subtle border radius for use of smaller UI elements or those with a slightly less sharp feeling.
 sprout-common-border-radius-soft, "8px", Medium border radius for medium sizes UI elements and a softer feeling.
 sprout-common-border-radius-cushiony, "16px", Very soft border radius for use of larger elements or elements with a cushiony feeling.
@@ -106,8 +106,13 @@ sprout-script-color-string, "rgb(17.569% 53.804% 31.216%)", Syntax highlight col
 sprout-script-color-measure, "rgb(38.275% 36.392% 58.745%)", Syntax highlight color for measure
 sprout-script-color-table, "rgb(73.098% 16.941% 47.059%)", Syntax highlight color for tables
 sprout-selected-color-default, "#00873d", Selected color
-sprout-selected-color-inverse, "#ffffff", Selected inverse color
-sprout-selected-background-color-default, "rgb(0% 0% 0% / 0.05)", Background color for selected items
+sprout-selected-color-hover, "rgb(6.5019% 41.875% 19.617%)", Selected color. (hover)
+sprout-selected-color-pressed, "rgb(8.2447% 29.243% 14.579%)", Selected color. (pressed)
+sprout-selected-color-disabled, "rgb(0% 0% 0% / 0.03)", Selected color. (disabled)
+sprout-selected-color-focus, "rgb(6.5019% 41.875% 19.617%)", Selected color. (focus)
+sprout-selected-color-inverse, "#ffffff", Selected inverse color. For use on top of selected colors
+sprout-selected-background-color-default, "rgb(0% 0% 0% / 0.05)", Neutral background color for selected items
+sprout-selected-background-color-emphasized, "rgb(0% 52.941% 23.922% / 0.1)", Emphasized background color for selected items
 sprout-illustration-color-palette-0, "#595959", Illustration palette color
 sprout-illustration-color-palette-1, "#999999", Illustration palette color
 sprout-illustration-color-palette-2, "#009844", Illustration palette color
@@ -239,6 +244,15 @@ sprout-script-font-m-paragraph-spacing, "", Medium default code
 sprout-script-font-m-paragraph-indent, "", Medium default code
 sprout-script-font-m-text-case, "", Medium default code
 sprout-script-font-m-text-decoration, "", Medium default code
+sprout-script-font-xs-font-family, "Source Code Pro", Extra small default code
+sprout-script-font-xs-font-weight, "400", Extra small default code
+sprout-script-font-xs-line-height, "150%", Extra small default code
+sprout-script-font-xs-font-size, "12px", Extra small default code
+sprout-script-font-xs-letter-spacing, "", Extra small default code
+sprout-script-font-xs-paragraph-spacing, "", Extra small default code
+sprout-script-font-xs-paragraph-indent, "", Extra small default code
+sprout-script-font-xs-text-case, "", Extra small default code
+sprout-script-font-xs-text-decoration, "", Extra small default code
 sprout-script-font-s-font-family, "Source Code Pro", Small default code
 sprout-script-font-s-font-weight, "400", Small default code
 sprout-script-font-s-line-height, "150%", Small default code
@@ -266,6 +280,15 @@ sprout-script-font-s-emphasized-paragraph-spacing, "", Small emphasized code
 sprout-script-font-s-emphasized-paragraph-indent, "", Small emphasized code
 sprout-script-font-s-emphasized-text-case, "", Small emphasized code
 sprout-script-font-s-emphasized-text-decoration, "", Small emphasized code
+sprout-script-font-xs-emphasized-font-family, "Source Code Pro", Extra small emphasized code
+sprout-script-font-xs-emphasized-font-weight, "600", Extra small emphasized code
+sprout-script-font-xs-emphasized-line-height, "150%", Extra small emphasized code
+sprout-script-font-xs-emphasized-font-size, "12px", Extra small emphasized code
+sprout-script-font-xs-emphasized-letter-spacing, "", Extra small emphasized code
+sprout-script-font-xs-emphasized-paragraph-spacing, "", Extra small emphasized code
+sprout-script-font-xs-emphasized-paragraph-indent, "", Extra small emphasized code
+sprout-script-font-xs-emphasized-text-case, "", Extra small emphasized code
+sprout-script-font-xs-emphasized-text-decoration, "", Extra small emphasized code
 sprout-selected-border-default-color, "#00873d", Border for selected items
 sprout-selected-border-default-width, "2px", Border for selected items
 sprout-selected-border-default-style, "solid", Border for selected items
@@ -522,9 +545,11 @@ sprout-inverse-border-default, "1px solid #ffffff", Compound token for default i
 sprout-inverse-border-weak, "1px solid rgb(100% 100% 100% / 0.3)", Compound token for inverse weak border
 sprout-focus-border-default, "2px solid #005db9", undefined
 sprout-script-font-m, "400 16px/150% Source Code Pro", Medium default code
+sprout-script-font-xs, "400 12px/150% Source Code Pro", Extra small default code
 sprout-script-font-s, "400 14px/150% Source Code Pro", Small default code
 sprout-script-font-m-emphasized, "600 16px/150% Source Code Pro", Medium emphasized code
 sprout-script-font-s-emphasized, "600 14px/150% Source Code Pro", Small emphasized code
+sprout-script-font-xs-emphasized, "600 12px/150% Source Code Pro", Extra small emphasized code
 sprout-selected-border-default, "2px solid #00873d", Border for selected items
 sprout-data-font-tabular-m, "400 16px/150% Source Code Pro", Medium default font for right-aligned tabular data
 sprout-data-font-tabular-s, "400 14px/150% Source Code Pro", Small default font for right-aligned tabular data

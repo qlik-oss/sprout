@@ -14,8 +14,8 @@ import {
 } from "react";
 
 import { tokens } from "@qlik/design-tokens";
-import { CloseIcon, EditIcon } from "@qlik/sprout-icons/react";
 import { useControl } from "@qlik/sprout-react-hooks";
+import { CloseIcon, EditIcon } from "@qlik/sprout-icons/react";
 
 import { AlertInline } from "../AlertInline";
 import { IconButton } from "../Button";
@@ -62,7 +62,7 @@ export type InlineEditPrimitiveProps = {
  * @param view - the element or render function shown in view (read-only) mode.
  * @param edit - the element or render function shown in edit mode.
  * @param showEditIcon - whether to show an edit icon button in view mode.
- * @param showEditButton - @deprecated use `showEditIcon` instead.
+ * @param showEditButton - deprecated use `showEditIcon` instead.
  * @param showFormButtons - whether to show save and cancel form buttons in edit mode.
  * @param editFocusSelector - a CSS selector used to focus an element when entering edit mode.
  * @param editOffsetX - horizontal offset of the edit overlay from the view element.
@@ -102,11 +102,11 @@ function InlineEditPrimitiveBase(
     "data-testid": dataTestId,
     ...props
   }: InlineEditPrimitiveProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const t = useI18n();
   const [focusOn, setFocusOn] = useState<"edit" | "view" | undefined>(
-    undefined,
+    undefined
   );
   const [viewHeight, setViewHeight] = useState<number>(0);
   const viewRef = useRef<HTMLDivElement | null>(null);
@@ -122,13 +122,13 @@ function InlineEditPrimitiveBase(
       onChangeKey: "onEdit",
       valueKey: "isEditing",
       defaultValueKey: "isEditingDefault",
-    },
+    }
   );
 
   useLayoutEffect(() => {
     if (focusOn === "view") {
       const focusable = viewRef.current?.querySelectorAll(
-        FOCUSABLE_ELEMENT_SELECTOR,
+        FOCUSABLE_ELEMENT_SELECTOR
       );
       if (focusable && focusable.length > 0) {
         (focusable[0] as HTMLElement).focus();
@@ -138,7 +138,7 @@ function InlineEditPrimitiveBase(
       }
     } else if (focusOn === "edit") {
       const focusable = formRef.current?.querySelectorAll(
-        editFocusSelector || FOCUSABLE_ELEMENT_SELECTOR,
+        editFocusSelector || FOCUSABLE_ELEMENT_SELECTOR
       );
       if (focusable && focusable.length > 0) {
         const visibleFocusable = Array.from(focusable).filter((el) => {
@@ -178,7 +178,7 @@ function InlineEditPrimitiveBase(
 
       onFocusLost();
     },
-    [editControl, onFocusLost],
+    [editControl, onFocusLost]
   );
 
   useEffect(() => {
@@ -211,7 +211,7 @@ function InlineEditPrimitiveBase(
         "size-xl",
         "border-box",
         "text-default",
-        css.value_edit_btn,
+        css.value_edit_btn
       )}
     />
   );
@@ -258,7 +258,7 @@ function InlineEditPrimitiveBase(
             "gap-s",
             "border-box",
             "size-full",
-            "items-center",
+            "items-center"
           )}
           data-testid={dataTestId ? `${dataTestId}.edit` : "edit"}
           style={{
@@ -275,7 +275,7 @@ function InlineEditPrimitiveBase(
               "border-box",
               "w-full",
               "h-fit",
-              "bg-default",
+              "bg-default"
             )}
             onSubmit={(e) => {
               e.preventDefault();
@@ -288,6 +288,7 @@ function InlineEditPrimitiveBase(
               if (e.key === KEYBOARD_KEYS.TAB) {
                 if (!showFormButtons || e.shiftKey) {
                   onFocusLost();
+                  setFocusOn("view");
                 }
               }
               if (e.key === KEYBOARD_KEYS.ESCAPE) {
@@ -307,7 +308,7 @@ function InlineEditPrimitiveBase(
               "w-full",
               "items-start",
               "gap-xl",
-              css.floating_container,
+              css.floating_container
             )}
           >
             <div
@@ -324,7 +325,7 @@ function InlineEditPrimitiveBase(
                   "flex",
                   "flex-row",
                   "items-start",
-                  "gap-m",
+                  "gap-m"
                 )}
               >
                 <FloatingWrapper data-target>
@@ -378,7 +379,7 @@ function InlineEditPrimitiveBase(
           "relative",
           "w-full",
           "border-box",
-          css.value_container,
+          css.value_container
         )}
         data-testid={dataTestId}
         {...props}
@@ -435,7 +436,7 @@ function InlineEditPrimitiveBase(
             "cursor-text",
             "outline-focus-visible-centered",
             "radius-pill",
-            css.value_clickable,
+            css.value_clickable
           )}
           aria-label={ariaLabel}
           aria-labelledby={ariaLabelledBy}

@@ -48,7 +48,7 @@ export const createMultiSelectOnChangeEvent = ({
     }
   } else if (action === "remove") {
     output.target.selectedOptions = output.target.selectedOptions?.filter(
-      (v) => v.value !== value,
+      (v) => v.value !== value
     );
   }
   return output;

@@ -17,16 +17,16 @@ export function SimpleThemeCreator({
   onUpdate: (theme: SingleModeThemePartial) => void;
 }) {
   const [backgroundThemeValue, setBackgroundThemeValue] = useState<string>(
-    defaultThemeParams.background,
+    defaultThemeParams.background
   );
   const [foregroundThemeValue, setForegroundThemeValue] = useState<string>(
-    defaultThemeParams.foreground,
+    defaultThemeParams.foreground
   );
   const [brandThemeValue, setBrandThemeValue] = useState<string>(
-    defaultThemeParams.brand,
+    defaultThemeParams.brand
   );
   const [selectedThemeValue, setSelectedThemeValue] = useState<string>(
-    defaultThemeParams.selected,
+    defaultThemeParams.selected
   );
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export function SimpleThemeCreator({
           "grid-cols-2",
           "gap-m",
           "flex-row",
-          "items-baseline",
+          "items-baseline"
         )}
       >
         <span className={classNames("font-label-s")}>Background</span>

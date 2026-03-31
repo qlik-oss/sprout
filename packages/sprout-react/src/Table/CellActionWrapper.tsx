@@ -14,7 +14,7 @@ export const CellActionWrapper = forwardRef<
 
 function CellActionWrapperBase(
   { children, ...props }: CellActionWrapperProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   return (
     <div
@@ -25,7 +25,7 @@ function CellActionWrapperBase(
         "gap-s",
         "items-center",
         "justify-start",
-        className.cell_action_wrapper,
+        className.cell_action_wrapper
       )}
       data-layoutid="cell-action-wrapper"
       ref={ref}

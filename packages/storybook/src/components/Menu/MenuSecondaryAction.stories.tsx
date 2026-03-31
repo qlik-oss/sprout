@@ -28,7 +28,7 @@ export const SecondaryAction: StoryObj<typeof Menu.SecondaryAction> = {
                 window
                   .open(
                     "/?path=/story/components-menu--secondary-action",
-                    "_blank",
+                    "_blank"
                   )
                   ?.focus();
               }}
@@ -51,7 +51,7 @@ export const SecondaryAction: StoryObj<typeof Menu.SecondaryAction> = {
                     window
                       .open(
                         "/?path=/story/components-menu--secondary-action",
-                        "_blank",
+                        "_blank"
                       )
                       ?.focus();
                   }}
@@ -75,7 +75,7 @@ export const SecondaryAction: StoryObj<typeof Menu.SecondaryAction> = {
                     window
                       .open(
                         "/?path=/story/components-menu--secondary-action",
-                        "_blank",
+                        "_blank"
                       )
                       ?.focus();
                   }}

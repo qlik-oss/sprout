@@ -1,6 +1,9 @@
 import { useLayoutEffect, useRef, useState } from "react";
 
-import sprout, { type BoxSizing, type ContainerSize } from "@qlik/sprout-css-modules";
+import sprout, {
+  type BoxSizing,
+  type ContainerSize,
+} from "@qlik/sprout-css-modules";
 
 export type UseContainerProps = {
   boxSizing?: BoxSizing;
@@ -53,7 +56,9 @@ export function useContainer<T extends HTMLElement = HTMLDivElement>({
   const ref = useRef<T>(null);
   const prevSize = useRef<string | null>(null);
 
-  const [container, setContainer] = useState(() => sprout.createContainer(initialSize, null));
+  const [container, setContainer] = useState(() =>
+    sprout.createContainer(initialSize, null)
+  );
 
   useLayoutEffect(() => {
     setContainer(sprout.createContainer(size, ref.current));

@@ -9,7 +9,7 @@ import className from "./Table.module.css";
 export type TableHeadProps = HTMLDivProps;
 
 export const TableHead = forwardRef<HTMLDivElement, TableHeadProps>(
-  TableHeadBase,
+  TableHeadBase
 );
 
 function TableHeadBase(props: TableHeadProps, ref?: Ref<HTMLDivElement>) {

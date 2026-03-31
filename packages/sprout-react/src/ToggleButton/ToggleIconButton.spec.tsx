@@ -18,7 +18,7 @@ test("should be accessible", async ({ page, mount }) => {
           icon={<DeleteIcon />}
         />
       </ButtonGroup>
-    </div>,
+    </div>
   );
 
   const buttons = await content.getByRole("button").all();

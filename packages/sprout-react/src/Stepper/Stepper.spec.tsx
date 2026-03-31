@@ -13,7 +13,7 @@ test(`Stepper be is accessible`, async ({ page, mount }) => {
         <Stepper.Step text="Last" />
       </Stepper.Container>
       ,
-    </div>,
+    </div>
   );
 
   const accessibilityScanResults = await getAxeReport(page);

@@ -4,16 +4,21 @@
     "qlik/appearance/core",
     "qlik/appearance/qlik-dark",
     "qlik/appearance/qlik-light",
+    "qlik/appearance/qlik-expressive-light",
+    "qlik/appearance/qlik-expressive-dark",
     "qlik/density/comfortable",
     "qlik/density/dense",
     "qlik/density/spacious",
+    "qlik/density/expressive",
     "qlik/roundness/rounded",
     "qlik/roundness/sharp",
     "qlik/roundness/soft",
+    "qlik/roundness/expressive",
     "qlik/typography/core",
     "qlik/typography/inter",
     "qlik/typography/pseudo",
     "qlik/typography/source-sans",
+    "qlik/typography/expressive",
     "theming/appearance",
     "theming/density",
     "theming/roundness",
@@ -26,7 +31,9 @@
     "semantic/sizing",
     "semantic/typography",
     "figma/appearance",
+    "figma/typography/pseudo",
+    "figma/typography/source-sans",
     "figma/typography/inter",
-    "figma/typography/source-sans"
+    "figma/typography/expressive"
   ]
 }

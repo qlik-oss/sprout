@@ -18,5 +18,5 @@ figma.connect(
       percent: figma.enum("Type", { Determined: 75, Indetermined: undefined }),
     },
     example: ({ ...props }) => <ProgressCircular {...props} />,
-  },
+  }
 );

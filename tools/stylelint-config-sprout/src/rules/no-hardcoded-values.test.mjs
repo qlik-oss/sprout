@@ -1,4 +1,5 @@
 import { testRule } from "stylelint-test-rule-node";
+
 import plugins from "../plugin.mjs";
 import rule from "./no-hardcoded-values.mjs";
 
@@ -35,19 +36,23 @@ testRule({
   reject: [
     {
       code: "a { color: #fff; }",
-      message: 'Expected a token instead of color or size in "#fff" (sprout/no-hardcoded-values)',
+      message:
+        'Expected a token instead of color or size in "#fff" (sprout/no-hardcoded-values)',
     },
     {
       code: "a { padding: 10px; }",
-      message: 'Expected a token instead of color or size in "10px" (sprout/no-hardcoded-values)',
+      message:
+        'Expected a token instead of color or size in "10px" (sprout/no-hardcoded-values)',
     },
     {
       code: "div { z-index: 10; }",
-      message: 'Expected a token instead of hardcoded value "10" (sprout/no-hardcoded-values)',
+      message:
+        'Expected a token instead of hardcoded value "10" (sprout/no-hardcoded-values)',
     },
     {
       code: "div { z-index: calc(1200 - 1); }",
-      message: 'Expected a token instead of hardcoded value "1200" (sprout/no-hardcoded-values)',
+      message:
+        'Expected a token instead of hardcoded value "1200" (sprout/no-hardcoded-values)',
     },
   ],
 });

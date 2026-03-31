@@ -8,10 +8,9 @@ import {
   TextField,
   classNames,
 } from "@qlik/sprout-react";
+import iconsMetadata from "@qlik/sprout-icons/metadata.json";
 import * as Icons from "@qlik/sprout-icons/react";
 import type { Meta } from "@storybook/react";
-
-import iconsMetadata from "./metadata.json";
 
 const meta: Meta = {
   title: "Icons",
@@ -39,7 +38,7 @@ function AllIconsStoryContent() {
     const nameMatch = name.toLowerCase().includes(search.toLowerCase());
     const metadata = metadataByName[name];
     const tagMatch = metadata.tags.some((tag) =>
-      tag.toLowerCase().includes(search.toLowerCase()),
+      tag.toLowerCase().includes(search.toLowerCase())
     );
     const categoryMatch = metadata.category
       .toLowerCase()
@@ -57,7 +56,7 @@ function AllIconsStoryContent() {
         "p-xl",
         "w-xl",
         "h-screen",
-        "overflow-y-hidden",
+        "overflow-y-hidden"
       )}
     >
       <div
@@ -67,7 +66,7 @@ function AllIconsStoryContent() {
           "border-box",
           "items-center",
           "w-full",
-          "gap-m",
+          "gap-m"
         )}
       >
         <TextField
@@ -95,7 +94,7 @@ function AllIconsStoryContent() {
                 void navigator.clipboard.writeText(
                   showImport
                     ? `import { ${name} } from '@qlik/sprout-icons/react';`
-                    : name,
+                    : name
                 );
               }}
               aria-label={`Copy icon name: ${name}`}
@@ -110,7 +109,7 @@ function AllIconsStoryContent() {
                   "justify-between",
                   "w-full",
                   "gap-l",
-                  "p-m",
+                  "p-m"
                 )}
               >
                 <div
@@ -118,7 +117,7 @@ function AllIconsStoryContent() {
                     "flex",
                     "items-center",
                     "justify-center",
-                    "text-default",
+                    "text-default"
                   )}
                 >
                   <Icon />
@@ -128,14 +127,14 @@ function AllIconsStoryContent() {
                     "flex",
                     "flex-col",
                     "flex-1",
-                    "shrink-0",
+                    "shrink-0"
                   )}
                 >
                   <span
                     className={classNames(
                       "font-body-s",
                       "text-default",
-                      "break-all",
+                      "break-all"
                     )}
                   >
                     {name}
@@ -144,7 +143,7 @@ function AllIconsStoryContent() {
                     className={classNames(
                       "font-body-s",
                       "text-weak",
-                      "break-all",
+                      "break-all"
                     )}
                   >
                     {metadataByName[name].category}
@@ -157,7 +156,7 @@ function AllIconsStoryContent() {
                     "flex-1",
                     "gap-s",
                     "justify-start",
-                    "flex-wrap",
+                    "flex-wrap"
                   )}
                 >
                   {metadataByName[name].tags.map((tag) => (

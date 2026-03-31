@@ -9,7 +9,22 @@ import { ListItem } from "./ListItem";
 import styles from "./List.module.css";
 
 export type ListProps = HTMLUlProps & {
-  gap?: string;
+  gap?:
+    | "0"
+    | "xs"
+    | "s"
+    | "m"
+    | "l"
+    | "xl"
+    | "xxl"
+    | "3xl"
+    | "density-xs"
+    | "density-s"
+    | "density-m"
+    | "density-l"
+    | "density-xl"
+    | "density-xxl"
+    | "density-3xl";
   /**
    * @deprecated this has been removed from the spec.
    */
@@ -20,12 +35,12 @@ export type ListProps = HTMLUlProps & {
 
 function getAllItems(ref: HTMLElement): NodeList {
   return ref.querySelectorAll(
-    `li > button.${styles.item_interactive}:not(:disabled)`,
+    `li > button.${styles.item_interactive}:not(:disabled)`
   );
 }
 function getSelectedItems(ref: HTMLElement): NodeList {
   return ref.querySelectorAll(
-    `li[aria-selected="true"] > button.${styles.item_interactive}:not(:disabled)`,
+    `li[aria-selected="true"] > button.${styles.item_interactive}:not(:disabled)`
   );
 }
 
@@ -34,7 +49,7 @@ function getSelectedItems(ref: HTMLElement): NodeList {
  * @param gap - CSS gap between list items.
  * @param hasPadding - whether list items have padding. Passed as context to all ListItem children.
  * @param useGesture - whether to enable keyboard arrow navigation between items.
- * @param dense - @deprecated this option has been removed from the design spec.
+ * @param dense - deprecated this option has been removed from the design spec.
  */
 export const List = Object.assign(ListBase, {
   Item: ListItem,
@@ -59,7 +74,7 @@ function ListBase({
       useGesture: !!useGesture,
       hasPadding: hasPadding === undefined ? true : !!hasPadding,
     }),
-    [hasPadding, useGesture],
+    [hasPadding, useGesture]
   );
   useEffect(() => {
     if (ref.current && useGesture) {
@@ -76,9 +91,17 @@ function ListBase({
       <ul
         ref={ref}
         {...props}
-        className={classNames(styles.list, {
-          [`gap_${gap?.replace("-", "_")}`]: !!gap,
-        })}
+        className={classNames(
+          "m-0",
+          "p-0",
+          "w-full",
+          "flex-noreset",
+          "flex-col",
+          "border-box",
+          {
+            [`gap-${gap?.replace("_", "-")}`]: !!gap,
+          }
+        )}
         data-dense={dense ? "true" : undefined}
       >
         {children}

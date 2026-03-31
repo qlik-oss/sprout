@@ -98,7 +98,7 @@ const STYLE_CONDITIONS: Record<
 };
 
 export function getBorderProps<T extends BorderProps & { className?: string }>(
-  props: T,
+  props: T
 ) {
   const { className, ...rest } = props;
   const cond = BORDER_PROPS.reduce<Record<string, boolean>>(
@@ -112,7 +112,7 @@ export function getBorderProps<T extends BorderProps & { className?: string }>(
     },
     {
       [className ?? ""]: !!className,
-    },
+    }
   );
   const newClassName = classNames(cond);
   return { className: newClassName, ...rest };

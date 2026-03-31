@@ -106,7 +106,7 @@ export function PanelPrimitive({
         });
       }
     },
-    [placement],
+    [placement]
   );
 
   useEffect(() => {
@@ -150,7 +150,7 @@ export function PanelPrimitive({
           const deltaX = e.clientX - (buttonRect.left + buttonRect.right) / 2;
           const maxContainerWidth = containerRect.width;
           const newWidth = Math.floor(
-            deltaX * mutator - panelRect.left + panelRect.right,
+            deltaX * mutator - panelRect.left + panelRect.right
           );
           if (newWidth > MIN_SIZE && newWidth < maxContainerWidth) {
             crossSize.size = newWidth;
@@ -162,7 +162,7 @@ export function PanelPrimitive({
           const deltaY = e.clientY - (buttonRect.top + buttonRect.bottom) / 2;
           const maxContainerHeight = containerRect.height;
           const newHeight = Math.floor(
-            deltaY * mutator - panelRect.top + panelRect.bottom,
+            deltaY * mutator - panelRect.top + panelRect.bottom
           );
           if (newHeight > MIN_SIZE && newHeight < maxContainerHeight) {
             crossSize.size = newHeight;

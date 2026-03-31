@@ -10,5 +10,5 @@ export default qlik.compose(
       ecmaVersion: 2020,
       sourceType: "module",
     },
-  },
+  }
 );

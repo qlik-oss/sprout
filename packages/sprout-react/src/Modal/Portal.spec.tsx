@@ -6,7 +6,7 @@ test("should Portal apply theme", async ({ mount, page }) => {
   await mount(
     <Portal>
       <div data-testid="test-element">foo</div>
-    </Portal>,
+    </Portal>
   );
   const el = page.getByTestId("test-element");
   const parent = el.locator("..");

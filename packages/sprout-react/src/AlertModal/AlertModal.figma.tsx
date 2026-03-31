@@ -29,5 +29,5 @@ figma.connect(
         {children}
       </AlertModal>
     ),
-  },
+  }
 );

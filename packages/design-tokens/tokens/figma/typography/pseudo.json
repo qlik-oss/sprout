@@ -1,0 +1,47 @@
+{
+  "theme": {
+    "common": {
+      "font-family": {
+        "primary": {
+          "$type": "text",
+          "$value": "Libre Barcode 39 Extended Text",
+          "$description": "Primary font family"
+        },
+        "secondary": {
+          "$type": "text",
+          "$value": "Libre Barcode 39 Extended Text",
+          "$description": "Secondary font family"
+        }
+      },
+      "font-weight": {
+        "default": {
+          "$type": "text",
+          "$value": "Regular"
+        },
+        "emphasized": {
+          "$type": "text",
+          "$value": "Regular"
+        }
+      }
+    },
+    "code": {
+      "font-family": {
+        "default": {
+          "$type": "text",
+          "$value": "Libre Barcode 39 Extended Text",
+          "$description": "Default font for code blocks and syntax"
+        }
+      },
+      "font-weight": {
+        "default": {
+          "$type": "text",
+          "$value": "Regular"
+        },
+        "emphasized": {
+          "$type": "text",
+          "$value": "Regular"
+        }
+      }
+    }
+  }
+}

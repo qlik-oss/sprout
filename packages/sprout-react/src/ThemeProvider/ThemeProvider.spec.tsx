@@ -20,8 +20,8 @@ test(`should ThemeProvider cascade`, async ({ mount, page }) => {
   // test casing. No uppercase letters should be present
   expect(
     await root.evaluate((el) =>
-      el.getAttributeNames().some((n) => /[A-Z]/.test(n)),
-    ),
+      el.getAttributeNames().some((n) => /[A-Z]/.test(n))
+    )
   ).toBe(false);
   // test global
   await expect(root).toHaveAttribute("data-qlik-theme", "qlik-light");

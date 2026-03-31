@@ -134,7 +134,7 @@ export function useDialogGesture(args: DialogGestureOptions) {
       }
       if (event.key === "Tab") {
         const allFocusableElements = getAllFocusableItems(
-          ref.current as HTMLElement,
+          ref.current as HTMLElement
         );
         const lastIndex = event.shiftKey ? 0 : allFocusableElements.length - 1;
         const nextIndex = event.shiftKey ? allFocusableElements.length - 1 : 0;
@@ -184,6 +184,6 @@ export function useDialogGesture(args: DialogGestureOptions) {
         }
       }
     },
-    [args.active, args.open],
+    [args.active, args.open]
   );
 }

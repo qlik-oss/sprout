@@ -2,11 +2,9 @@
  * @fileoverview Check if the import of d3 is not on d3-*
  * @author Jean-Michel FRANCOIS
  */
-
 //------------------------------------------------------------------------------
 // Requirements
 //------------------------------------------------------------------------------
-
 import rule from "./classNames.mjs";
 import { VitestRuleTester as RuleTester } from "./rule-tester.js";
 
@@ -51,7 +49,8 @@ ruleTester.run("classNames", rule, {
       output: "<foo className={sprout.classNames('flex-row')} />",
       errors: [
         {
-          message: "'flex_row' is deprecated. You should use 'flex-row' instead.",
+          message:
+            "'flex_row' is deprecated. You should use 'flex-row' instead.",
           type: "CallExpression",
         },
       ],
@@ -67,7 +66,8 @@ ruleTester.run("classNames", rule, {
       )`,
       errors: [
         {
-          message: "'border_b_default' is deprecated. You should use 'border-b-default' instead.",
+          message:
+            "'border_b_default' is deprecated. You should use 'border-b-default' instead.",
           type: "CallExpression",
         },
       ],
@@ -81,35 +81,42 @@ ruleTester.run("classNames", rule, {
           type: "CallExpression",
         },
         {
-          message: "'flex_col' is deprecated. You should use 'flex-col' instead.",
+          message:
+            "'flex_col' is deprecated. You should use 'flex-col' instead.",
           type: "CallExpression",
         },
       ],
     },
     {
       code: "<foo className={classNames({ 'flex_col': condition, 'border_box': true })} />",
-      output: "<foo className={classNames({ 'flex-col': condition, 'border-box': true })} />",
+      output:
+        "<foo className={classNames({ 'flex-col': condition, 'border-box': true })} />",
       errors: [
         {
-          message: "'flex_col' is deprecated. You should use 'flex-col' instead.",
+          message:
+            "'flex_col' is deprecated. You should use 'flex-col' instead.",
           type: "CallExpression",
         },
         {
-          message: "'border_box' is deprecated. You should use 'border-box' instead.",
+          message:
+            "'border_box' is deprecated. You should use 'border-box' instead.",
           type: "CallExpression",
         },
       ],
     },
     {
       code: "<foo className={classNames({ flex_col: condition, border_box: true })} />",
-      output: '<foo className={classNames({ "flex-col": condition, "border-box": true })} />',
+      output:
+        '<foo className={classNames({ "flex-col": condition, "border-box": true })} />',
       errors: [
         {
-          message: "'flex_col' is deprecated. You should use 'flex-col' instead.",
+          message:
+            "'flex_col' is deprecated. You should use 'flex-col' instead.",
           type: "CallExpression",
         },
         {
-          message: "'border_box' is deprecated. You should use 'border-box' instead.",
+          message:
+            "'border_box' is deprecated. You should use 'border-box' instead.",
           type: "CallExpression",
         },
       ],

@@ -47,5 +47,5 @@ figma.connect(
     example: ({ label, helpText, ...props }) => (
       <Textarea label={label.text} helpText={helpText.text} {...props} />
     ),
-  },
+  }
 );

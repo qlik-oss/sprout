@@ -18,7 +18,7 @@ export type SelectContextType = {
    */
   open?: boolean;
   onKeyDownCapture?: (
-    event: ReactKeyboardEvent<HTMLButtonElement | HTMLInputElement>,
+    event: ReactKeyboardEvent<HTMLButtonElement | HTMLInputElement>
   ) => void;
 };
 
@@ -26,7 +26,7 @@ export const SelectContext = createContext<SelectContextType>({});
 
 export const isValueSelected = (
   context: SelectContextType | undefined,
-  value?: string,
+  value?: string
 ) => {
   if (value === undefined) {
     return false;

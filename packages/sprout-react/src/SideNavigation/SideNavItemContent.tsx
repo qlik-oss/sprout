@@ -41,7 +41,7 @@ function SideNavItemContentBase(
     isExternal,
     ...props
   }: SideNavItemContentProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const safeIconSize = variant === "compact" ? iconSize : undefined;
   const commonContent = (
@@ -65,7 +65,7 @@ function SideNavItemContentBase(
             "text-default",
             {
               "text-center": variant === "compact",
-            },
+            }
           )}
         >
           {label}
@@ -86,7 +86,7 @@ function SideNavItemContentBase(
           "gap-l",
           "py-density-l",
           "pr-l",
-          "text-default",
+          "text-default"
         )}
         style={{
           paddingInlineStart: indentation
@@ -115,7 +115,7 @@ function SideNavItemContentBase(
         "radius-subtle",
         "gap-density-l",
         "relative",
-        style.item_compact,
+        style.item_compact
       )}
       {...props}
     >
@@ -125,7 +125,7 @@ function SideNavItemContentBase(
           "flex-col",
           "items-center",
           "px-m",
-          "gap-m",
+          "gap-m"
         )}
       >
         {commonContent}
@@ -137,7 +137,7 @@ function SideNavItemContentBase(
             "flex",
             "shrink-0",
             "text-default",
-            "size-m",
+            "size-m"
           )}
           style={{
             insetBlockStart: "8px",

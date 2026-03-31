@@ -44,7 +44,7 @@ test(`should validate the form`, async ({ page, mount }) => {
   await page.getByRole("button", { name: /submit/i }).click();
 
   await expect(page.getByTestId("formdata")).toHaveText(
-    JSON.stringify(formData, null, 2),
+    JSON.stringify(formData, null, 2)
   );
 
   const accessibilityScanResults = await getAxeReport(page);
@@ -56,7 +56,7 @@ test(`should set default values to the form`, async ({ page, mount }) => {
   await expect(page.getByTestId("form")).toBeVisible();
   await expect(page.getByTestId("name")).toHaveValue("default name");
   await expect(page.getByTestId("description")).toHaveValue(
-    "default description",
+    "default description"
   );
 });
 
@@ -96,7 +96,7 @@ test("should display default selected values", async ({ mount, page }) => {
 
   // Verify the vegetables input has the correct default tag
   const vegetablesSelect = page.getByTestId(
-    "select-vegetables.combobox.tag.beans",
+    "select-vegetables.combobox.tag.beans"
   );
   await expect(vegetablesSelect).toBeVisible();
 });

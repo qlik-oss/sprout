@@ -12,6 +12,7 @@ import { Badge, type BadgeProps } from "../Badge";
 import { InputButton } from "../InputButton";
 import { TextOverflow } from "../TextOverflow/TextOverflow";
 import { Tooltip } from "../Tooltip";
+import { classNames } from "../classNames";
 import { useI18n } from "../hooks/useI18n";
 import type { HTMLSpanProps } from "../htmlTypes";
 
@@ -57,7 +58,7 @@ function TagBase(
     removeLabel,
     ...props
   }: TagProps,
-  ref?: Ref<HTMLSpanElement>,
+  ref?: Ref<HTMLSpanElement>
 ) {
   const t = useI18n();
   const removeLabelDefault = t("tag.remove");
@@ -66,12 +67,17 @@ function TagBase(
     <TextOverflow
       text={text}
       maxLength={CHARACTER_LIMIT}
-      className={style.tag_text}
+      className={classNames("truncate", {
+        "font-label-s": size !== "s",
+        "p-s": size !== "s",
+        "font-label-xs": size === "s",
+        "py-xs": size === "s",
+        "px-s": size === "s",
+      })}
       variant="tooltip"
     />
   );
 
-  const variant = color ? style[color] : "";
   let badgeRendered: ReactNode;
   if (!isValidElement(badge) && typeof badge === "object") {
     badgeRendered = <Badge {...badge} />;
@@ -97,16 +103,38 @@ function TagBase(
         style.tag,
         {
           [style.tag_small]: size === "s",
-          [variant]: !!color,
-        },
+          "border-success": color === "success",
+          "text-success": color === "success",
+          "border-danger": color === "error",
+          "text-danger": color === "error",
+          "border-info": color === "info",
+          "text-info": color === "info",
+          "border-warning": color === "warning",
+          "text-warning": color === "warning",
+        }
       )}
       {...props}
     >
-      {!!icon && <span className={style.tag_icon}>{icon}</span>}
+      {!!icon && (
+        <span
+          className={classNames(
+            "flex-noreset",
+            "pt-0",
+            "pr-0",
+            "pb-0",
+            "pl-s",
+            "icon-size-xl"
+          )}
+        >
+          {icon}
+        </span>
+      )}
       {avatar}
       {content}
       {!!badgeRendered && (
-        <span className={style.tag_badge}>{badgeRendered}</span>
+        <span className={classNames("flex-noreset", "pr-s")}>
+          {badgeRendered}
+        </span>
       )}
 
       {!!onRemove && (

@@ -41,7 +41,7 @@ const WARMUP_CACHE: {
  * @param placement - Placement of the tooltip relative to the trigger.
  * @param hoverDelay - Delay before the tooltip opens on hover.
  * @param initialOpen - If true, the tooltip is open by default.
- * @param isDisplayedForTesting - @deprecated Use `initialOpen` instead.
+ * @param isDisplayedForTesting - deprecated Use `initialOpen` instead.
  */
 export const Tooltip = forwardRef<HTMLButtonElement, TooltipProps>(TooltipBase);
 
@@ -56,7 +56,7 @@ function TooltipBase(
     placement = "top",
     ...rest
   }: TooltipProps,
-  ref?: Ref<HTMLButtonElement>,
+  ref?: Ref<HTMLButtonElement>
 ) {
   const controlled = useOpenControl({
     open,
@@ -64,10 +64,10 @@ function TooltipBase(
     defaultOpen: initialOpen || isDisplayedForTesting || false,
   });
   const [isMounted, setIsMounted] = useState(
-    isDisplayedForTesting || initialOpen || controlled.open,
+    isDisplayedForTesting || initialOpen || controlled.open
   );
   const [isDisplayed, setIsDisplayed] = useState(
-    isDisplayedForTesting || initialOpen || controlled.open,
+    isDisplayedForTesting || initialOpen || controlled.open
   );
 
   // warmup hover using singleton WARMUP_CACHE
@@ -115,7 +115,7 @@ function TooltipBase(
       arrowProps={{
         className: styles.arrow,
       }}
-      zIndex="z_context"
+      zIndex="z-context"
       role="tooltip"
       className={styles.container}
       data-displayed={isDisplayed}

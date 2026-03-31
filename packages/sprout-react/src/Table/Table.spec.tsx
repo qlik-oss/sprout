@@ -45,7 +45,7 @@ test("should be responsive without width attribute but just the container", asyn
       width={MIN_TABLE_WIDTH * 2}
       firstColumnWidth={200}
       columnWidth={150}
-    />,
+    />
   );
   const table = page.getByRole("grid");
   const cells = page.getByRole("gridcell");
@@ -59,7 +59,7 @@ test("should be responsive without width attribute but just the container", asyn
   expect(tableBB?.width).toBe(MIN_TABLE_WIDTH * 2);
   let overflowX = await page.evaluate(() => {
     const tableElement = document.querySelector(
-      "#component-testing > div > div",
+      "#component-testing > div > div"
     );
     return tableElement
       ? tableElement.scrollWidth > tableElement.clientWidth
@@ -84,13 +84,13 @@ test("should be responsive without width attribute but just the container", asyn
       width={MIN_TABLE_WIDTH - 50}
       firstColumnWidth={200}
       columnWidth={150}
-    />,
+    />
   );
   tableBB = await table.boundingBox();
   expect(tableBB?.width).toBe(MIN_TABLE_WIDTH - 50);
   overflowX = await page.evaluate(() => {
     const tableElement = document.querySelector(
-      "#component-testing > div > div",
+      "#component-testing > div > div"
     );
     return tableElement
       ? tableElement.scrollWidth > tableElement.clientWidth
@@ -111,13 +111,13 @@ test("should be responsive without width attribute but just the container", asyn
       width={MIN_TABLE_WIDTH}
       firstColumnWidth={200}
       columnWidth={150}
-    />,
+    />
   );
   tableBB = await table.boundingBox();
   expect(tableBB?.width).toBe(MIN_TABLE_WIDTH);
   overflowX = await page.evaluate(() => {
     const tableElement = document.querySelector(
-      "#component-testing > div > div",
+      "#component-testing > div > div"
     );
     return tableElement
       ? tableElement.scrollWidth > tableElement.clientWidth
@@ -153,14 +153,14 @@ test("should display resizing indicator in header cell", async ({
       firstColumnWidth={200}
       columnWidth={150}
       enableResizing
-    />,
+    />
   );
 
   const headers = await page.getByRole("columnheader").all();
 
   // column resizing indicator is shown when hovering over the header border
   const resizingIndicator = await headers[1].getByTestId(
-    "table.header.resize-column",
+    "table.header.resize-column"
   );
   await resizingIndicator.hover();
   await expect(resizingIndicator).toHaveCSS("cursor", "col-resize");

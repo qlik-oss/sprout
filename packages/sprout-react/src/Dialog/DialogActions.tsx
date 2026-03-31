@@ -50,7 +50,7 @@ export function DialogActions({
           "w-full",
           "gap-l",
           "flex-wrap",
-          styles.dialog_actions_container,
+          styles.dialog_actions_container
         )}
       >
         {/* Start section */}
@@ -63,7 +63,7 @@ export function DialogActions({
               "grow-1",
               "flex-wrap",
               "gap-m",
-              styles.dialog_actions_start_section,
+              styles.dialog_actions_start_section
             )}
           >
             {left ? (
@@ -76,7 +76,7 @@ export function DialogActions({
                   "flex",
                   "flex-row",
                   "border-box",
-                  "font-label-s",
+                  "font-label-s"
                 )}
               >
                 {metaLabel}
@@ -94,7 +94,7 @@ export function DialogActions({
             "justify-end",
             "gap-m",
             "flex-wrap",
-            styles.dialog_actions_end_section,
+            styles.dialog_actions_end_section
           )}
         >
           {!preventClose && (

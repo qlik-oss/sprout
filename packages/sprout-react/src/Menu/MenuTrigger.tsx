@@ -12,12 +12,12 @@ export type MenuTriggerProps = Pick<MenuRendererProps, "menu"> &
  * @param defaultOpen - whether the menu is open by default (uncontrolled).
  */
 export const MenuTrigger = forwardRef<HTMLDivElement, MenuTriggerProps>(
-  TriggerBase,
+  TriggerBase
 );
 
 function TriggerBase(
   { menu, ...props }: MenuTriggerProps,
-  parentRef?: Ref<HTMLDivElement>,
+  parentRef?: Ref<HTMLDivElement>
 ) {
   return (
     <MenuTriggerBase

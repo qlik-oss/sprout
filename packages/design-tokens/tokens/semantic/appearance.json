@@ -483,17 +483,42 @@
           "$value": "{theming.selected.color.default}",
           "$description": "Selected color"
         },
+        "hover": {
+          "$type": "color",
+          "$value": "{theming.selected.color.hover}",
+          "$description": "Selected color. (hover)"
+        },
+        "pressed": {
+          "$type": "color",
+          "$value": "{theming.selected.color.pressed}",
+          "$description": "Selected color. (pressed)"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{theming.selected.color.disabled}",
+          "$description": "Selected color. (disabled)"
+        },
+        "focus": {
+          "$type": "color",
+          "$value": "{theming.selected.color.focus}",
+          "$description": "Selected color. (focus)"
+        },
         "inverse": {
           "$type": "color",
           "$value": "{theming.selected.color.inverse}",
-          "$description": "Selected inverse color"
+          "$description": "Selected inverse color. For use on top of selected colors"
         }
       },
       "background-color": {
         "default": {
           "$type": "color",
           "$value": "{theming.selected.background-color.default}",
-          "$description": "Background color for selected items"
+          "$description": "Neutral background color for selected items"
+        },
+        "emphasized": {
+          "$type": "color",
+          "$value": "{theming.selected.background-color.emphasized}",
+          "$description": "Emphasized background color for selected items"
         }
       }
     },

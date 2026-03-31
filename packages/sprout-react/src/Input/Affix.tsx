@@ -46,7 +46,7 @@ export function Affix({ affix }: { affix: AffixProps | ReactNode }) {
       {
         height: undefined,
         width: undefined,
-      },
+      }
     );
   }
   return (

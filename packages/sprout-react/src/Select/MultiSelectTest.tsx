@@ -33,7 +33,7 @@ export function MultiSelectTest(props?: Partial<MultiSelectProps>) {
         "border-box",
         "p-l",
         "gap-xl",
-        "items-center",
+        "items-center"
       )}
     >
       <MultiSelect {...props} label="color" placeholder="Please select colors">
@@ -53,7 +53,7 @@ export function WithoutNoValueOption(props?: Partial<MultiSelectProps>) {
         "border-box",
         "p-l",
         "gap-xl",
-        "items-center",
+        "items-center"
       )}
     >
       <MultiSelect {...props} label="color" placeholder="Please select colors">
@@ -72,7 +72,7 @@ export function WithCustomDataTestId() {
         "border-box",
         "p-l",
         "gap-xl",
-        "items-center",
+        "items-center"
       )}
     >
       <MultiSelect
@@ -163,7 +163,7 @@ export function MultiSelectWithOnFilterChangeProp() {
         { value: "magenta", label: "Magenta" },
       ]);
     },
-    [],
+    []
   );
   return (
     <div

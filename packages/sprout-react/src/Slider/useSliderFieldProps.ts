@@ -22,7 +22,7 @@ type UseSliderFieldProps = {
  * to address accessibility inconsistencies that don't align with standard field behavior.
  */
 export function useSliderFieldProps<T extends UseSliderFieldProps>(
-  props: T,
+  props: T
 ): {
   fieldProps: UseSliderFieldProps;
   inputProps: Omit<T, keyof UseSliderFieldProps> & {

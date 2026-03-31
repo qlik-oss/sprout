@@ -32,5 +32,5 @@ figma.connect(
         <Badge variant="alphanumeric" text={text} color={color} />
       );
     },
-  },
+  }
 );

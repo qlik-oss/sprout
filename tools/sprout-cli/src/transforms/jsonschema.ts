@@ -2,19 +2,27 @@
 import fs from "fs";
 import path from "path";
 import { cwd } from "process";
+
 import { checkIfFolderExists } from "../utils";
 
 const CWD = cwd();
 const DEFAULT_OUTPUT = path.resolve(CWD, "theming-api.schema.json");
 
-function deepMerge<T extends object, U extends object>(target: T, source: U): T & U {
+function deepMerge<T extends object, U extends object>(
+  target: T,
+  source: U
+): T & U {
   const output = { ...target } as T & U;
 
   if (typeof target === "object" && typeof source === "object") {
     Object.keys(source).forEach((key) => {
       const sourceValue = (source as any)[key];
       const targetValue = (target as any)[key];
-      if (sourceValue && typeof sourceValue === "object" && !Array.isArray(sourceValue)) {
+      if (
+        sourceValue &&
+        typeof sourceValue === "object" &&
+        !Array.isArray(sourceValue)
+      ) {
         if (!(key in target)) {
           Object.assign(output, { [key]: sourceValue });
         } else {
@@ -99,8 +107,10 @@ function getValueSchema(tokenType: string): any {
     case "color":
       return {
         type: "string",
-        pattern: "^(#[0-9A-Fa-f]{3,8}|rgb\\(|rgba\\(|hsl\\(|hsla\\(|\\{[^}]+\\}).*$",
-        description: "Color value (hex, rgb, rgba, hsl, hsla) or token reference",
+        pattern:
+          "^(#[0-9A-Fa-f]{3,8}|rgb\\(|rgba\\(|hsl\\(|hsla\\(|\\{[^}]+\\}).*$",
+        description:
+          "Color value (hex, rgb, rgba, hsl, hsla) or token reference",
       };
 
     case "dimension":
@@ -178,13 +188,22 @@ function getValueSchema(tokenType: string): any {
   }
 }
 
-type ActionOptions = { source: string; objPath: string; output: string; verbose?: boolean };
+type ActionOptions = {
+  source: string;
+  objPath: string;
+  output: string;
+  verbose?: boolean;
+};
 
 export async function action(opts: ActionOptions) {
   // Implementation goes here
   const themingApiTokenFiles = fs.readdirSync(path.resolve(CWD, opts.source));
   const outputFolder = path.join(opts.output || DEFAULT_OUTPUT, "json");
-  const outputPath = path.join(opts.output || DEFAULT_OUTPUT, "json", "theming-api.schema.json");
+  const outputPath = path.join(
+    opts.output || DEFAULT_OUTPUT,
+    "json",
+    "theming-api.schema.json"
+  );
   let themeData: any = {};
 
   for (const file of themingApiTokenFiles) {
@@ -192,7 +211,9 @@ export async function action(opts: ActionOptions) {
       console.log("Processing file:", file);
     }
     if (file.endsWith(".json")) {
-      const tokenData = JSON.parse(fs.readFileSync(path.resolve(CWD, opts.source, file), "utf-8"));
+      const tokenData = JSON.parse(
+        fs.readFileSync(path.resolve(CWD, opts.source, file), "utf-8")
+      );
       themeData = deepMerge(themeData, tokenData);
     }
   }

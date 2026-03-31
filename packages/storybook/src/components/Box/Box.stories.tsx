@@ -53,7 +53,7 @@ const CONTENT_PROPS: BoxProps = {
 
 function omit(obj: Record<string, unknown>, keys: Array<string>) {
   return Object.fromEntries(
-    Object.entries(obj).filter(([key]) => !keys.includes(key)),
+    Object.entries(obj).filter(([key]) => !keys.includes(key))
   );
 }
 
@@ -71,7 +71,7 @@ function PropertyTile({ children }: { children: ReactNode }) {
         "border-box",
         "font-heading-l",
         "text-default",
-        "py-l",
+        "py-l"
       )}
     >
       {children}
@@ -87,7 +87,7 @@ function PropertyValue({ children }: { children: ReactNode }) {
         "border-box",
         "font-label-m",
         "text-default",
-        "py-m",
+        "py-m"
       )}
     >
       {children}
@@ -1242,7 +1242,7 @@ export const ContainerSizing: Story = {
             "flex-row",
             "border-box",
             "font-heading-m",
-            "text-default",
+            "text-default"
           )}
         >
           Container

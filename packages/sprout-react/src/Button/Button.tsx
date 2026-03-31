@@ -25,7 +25,14 @@ export type ButtonProps = Omit<HTMLButtonProps, "label"> & {
   size?: "small" | "default";
   label?: string;
   loading?: boolean;
+  /**
+   * `icon` is rendered in the leading icon slot.
+   */
   icon?: ReactNode;
+  /**
+   * `trailingIcon` is rendered in a separate trailing icon slot after the label.
+   */
+  trailingIcon?: ReactNode;
 };
 
 /**
@@ -38,7 +45,8 @@ export type ButtonProps = Omit<HTMLButtonProps, "label"> & {
  * @param size - the size of the button, can be small or default.
  * @param label - the label of the button, rendered as the content of the button.
  * @param loading - whether the button is in loading state, renders a loader on top of the button and disables it.
- * @param icon - the icon of the button, rendered on the left side of the label.
+ * @param icon - the icon rendered in the leading icon slot.
+ * @param trailingIcon - the icon rendered in the trailing icon slot after the label.
  */
 export const Button = forwardRef(BaseButton);
 
@@ -55,10 +63,11 @@ function BaseButton(
     label,
     type = "button",
     icon,
+    trailingIcon,
     title,
     ...props
   }: ButtonProps,
-  ref?: Ref<HTMLButtonElement>,
+  ref?: Ref<HTMLButtonElement>
 ) {
   const safeVariant = variant === "destructive" ? "primary" : variant;
   const safeDestructive = destructive || variant === "destructive";
@@ -89,6 +98,7 @@ function BaseButton(
       <span className={style.content}>
         {icon ? <span data-type="icon">{icon}</span> : null}
         {label ? <span data-label>{label}</span> : null}
+        {trailingIcon ? <span data-type="icon">{trailingIcon}</span> : null}
         {badge ? (
           <span className={style.badge}>
             <Badge {...badge} />

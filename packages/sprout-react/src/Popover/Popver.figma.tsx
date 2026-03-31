@@ -14,5 +14,5 @@ figma.connect(
         <Button label="Trigger" />
       </Popover>
     ),
-  },
+  }
 );

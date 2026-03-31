@@ -38,12 +38,12 @@ export type CheckboxProps = CheckboxNativeProps & {
  * @param infoIconTooltip - content for an info tooltip icon shown next to the label.
  */
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  CheckboxBase,
+  CheckboxBase
 );
 
 function CheckboxBase(
   props: CheckboxProps,
-  ref?: Ref<HTMLInputElement | null>,
+  ref?: Ref<HTMLInputElement | null>
 ) {
   const checkboxRef = useRef<HTMLInputElement | null>(null);
   // Forward ref to parent ref
@@ -97,7 +97,7 @@ function CheckboxBase(
         "items-start",
         "relative",
         "w-full",
-        styles.checkbox,
+        styles.checkbox
       )}
       data-disabled={disabled}
     >
@@ -115,7 +115,7 @@ function CheckboxBase(
           "outline-none",
           {
             "cursor-pointer": !disabled,
-          },
+          }
         )}
         disabled={disabled}
         ref={checkboxRef}
@@ -133,7 +133,7 @@ function CheckboxBase(
           "justify-center",
           "size-xl",
           "radius-subtle",
-          styles.box,
+          styles.box
         )}
       >
         {indeterminate ? <CheckboxIndeterminate /> : null}
@@ -164,7 +164,7 @@ function CheckboxBase(
                     "p-xs",
                     {
                       "text-disabled": disabled,
-                    },
+                    }
                   )}
                 >
                   <InfoTooltipPrimitive

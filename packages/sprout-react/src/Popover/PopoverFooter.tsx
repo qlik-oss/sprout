@@ -22,7 +22,7 @@ export function PopoverFooter({
         "flex-row",
         "border-box",
         "gap-m",
-        "justify-end",
+        "justify-end"
       )}
     >
       {secondaryAction ? <Button {...secondaryAction} /> : null}

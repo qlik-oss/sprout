@@ -34,7 +34,7 @@ export type RangeSliderProps = {
   onChange?: (
     value: Array<number>,
     event: Event,
-    activeGripIndex: number,
+    activeGripIndex: number
   ) => void;
   onChangeCommitted?: (value: Array<number>, event: Event) => void;
   startInputRef?: Ref<HTMLInputElement>;
@@ -63,7 +63,7 @@ export type RangeSliderProps = {
  * @param errorMessages - Error messages to display.
  */
 export const RangeSlider = forwardRef<HTMLDivElement, RangeSliderProps>(
-  RangeSliderBase,
+  RangeSliderBase
 );
 
 function RangeSliderBase(
@@ -96,7 +96,7 @@ function RangeSliderBase(
     value,
     ...rest
   }: RangeSliderProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const step = Number.isFinite(stepProp) && stepProp > 0 ? stepProp : 1;
   const trackRef = useRef<HTMLDivElement | null>(null);
@@ -107,7 +107,7 @@ function RangeSliderBase(
 
   const [isOverlapping, setIsOverlapping] = useState(false);
   const [uncontrolledValue, setUncontrolledValue] = useState<Array<number>>(
-    defaultValue ?? [min, max],
+    defaultValue ?? [min, max]
   );
   const isControlled = typeof value !== "undefined";
   const resolvedValue = isControlled ? value : uncontrolledValue;
@@ -115,20 +115,20 @@ function RangeSliderBase(
   const currentValue = useMemo(
     () => (resolvedValue.length >= 2 ? resolvedValue.slice(0, 2) : [min, max]),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [isControlled, value, uncontrolledValue, min, max],
+    [isControlled, value, uncontrolledValue, min, max]
   );
 
   if (isRangeOutOfBounds(currentValue, min, max)) {
     // eslint-disable-next-line no-console
     console.warn(
-      `RangeSlider: current values [${currentValue[0]}, ${currentValue[1]}] is out of bounds [${min}, ${max}].`,
+      `RangeSlider: current values [${currentValue[0]}, ${currentValue[1]}] is out of bounds [${min}, ${max}].`
     );
   }
 
   if (resolvedValue.length > 2) {
     // eslint-disable-next-line no-console
     console.warn(
-      "RangeSlider expects exactly 2 values ([start, end]). Extra values will be ignored.",
+      "RangeSlider expects exactly 2 values ([start, end]). Extra values will be ignored."
     );
   }
 
@@ -149,7 +149,7 @@ function RangeSliderBase(
     (
       baseValue: Array<number>,
       event: Event | ChangeEvent<HTMLInputElement> | KeyboardEvent,
-      activeGripIndex: number,
+      activeGripIndex: number
     ) => {
       const [start, end] = baseValue;
 
@@ -162,7 +162,7 @@ function RangeSliderBase(
 
       onChange?.(sortedValue, event as Event, activeGripIndex);
     },
-    [isControlled, onChange],
+    [isControlled, onChange]
   );
 
   const markValues = useMemo(() => {
@@ -184,7 +184,7 @@ function RangeSliderBase(
         min,
         max,
         step,
-        event,
+        event
       );
 
       const activeGrip = activeGripRef.current ?? 0;
@@ -195,7 +195,7 @@ function RangeSliderBase(
           : [currentValue[0], newValue];
       updateSliderValue(nextValue, event, activeGrip);
     },
-    [min, max, step, currentValue, updateSliderValue, orientation],
+    [min, max, step, currentValue, updateSliderValue, orientation]
   );
 
   const valueInPercent = useMemo(() => {
@@ -226,7 +226,7 @@ function RangeSliderBase(
         min,
         max,
         step,
-        event,
+        event
       );
 
       const distanceToStart = Math.abs(currentValue[0] - newValue);
@@ -353,7 +353,7 @@ function RangeSliderBase(
               onChange={(event) => {
                 const newValue = Math.min(
                   Math.max(event.target.valueAsNumber, min),
-                  max,
+                  max
                 );
                 const updated = [newValue, currentValue[1]];
                 activeGripRef.current = 0;
@@ -378,7 +378,7 @@ function RangeSliderBase(
               onChange={(event) => {
                 const newValue = Math.min(
                   Math.max(event.target.valueAsNumber, min),
-                  max,
+                  max
                 );
                 const updated = [currentValue[0], newValue];
                 activeGripRef.current = 1;

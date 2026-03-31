@@ -1,12 +1,7 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import type { ReactNode } from "react";
 import { useState } from "react";
 
-import {
-  Select,
-  type SelectProps,
-  classNames,
-} from "@qlik/sprout-react";
+import { Select, type SelectProps, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { PaletteOutlineIcon } from "../../icons";
@@ -70,7 +65,7 @@ export const UnControlled: StoryObj<StoryProps> = {
           "flex-noreset",
           "border-box",
           "p-s",
-          "items-start",
+          "items-start"
         )}
         data-testid="wrapper"
         style={{ inlineSize: 300 }}
@@ -115,7 +110,7 @@ export const VisualTest: StoryObj<StoryProps> = {
     const renderCustomValue = (
       values: Array<string>,
       selectedProps: Record<string, SelectProps["Option"]>,
-      input: ReactNode,
+      input: ReactNode
     ) => {
       return (
         <div
@@ -129,7 +124,7 @@ export const VisualTest: StoryObj<StoryProps> = {
             "gap-m",
             "items-center",
             "text-default",
-            "font-body-m",
+            "font-body-m"
           )}
         >
           <PaletteOutlineIcon />
@@ -157,7 +152,7 @@ export const VisualTest: StoryObj<StoryProps> = {
                     "flex",
                     "flex-row",
                     "text-default",
-                    "font-label-s",
+                    "font-label-s"
                   )}
                 >
                   {selectedProps[value]?.children || value}
@@ -181,7 +176,7 @@ export const VisualTest: StoryObj<StoryProps> = {
             "flex-row",
             "p-l",
             "gap-3xl",
-            "items-start",
+            "items-start"
           )}
           data-testid="wrapper"
           style={{ inlineSize: 1200, blockSize: 640 }}
@@ -240,7 +235,7 @@ export const VisualTest: StoryObj<StoryProps> = {
               "border-box",
               "flex-col",
               "gap-m",
-              "w-xxs",
+              "w-xxs"
             )}
           >
             <Select.Multi
@@ -315,7 +310,7 @@ export const CustomRenderValue: StoryObj<StoryProps> = {
     const renderCustomValue = (
       values: Array<string>,
       selectedProps: Record<string, SelectProps["Option"]>,
-      input: ReactNode,
+      input: ReactNode
     ) => {
       return (
         <div
@@ -329,7 +324,7 @@ export const CustomRenderValue: StoryObj<StoryProps> = {
             "gap-m",
             "items-center",
             "text-default",
-            "font-body-m",
+            "font-body-m"
           )}
         >
           <PaletteOutlineIcon />
@@ -357,7 +352,7 @@ export const CustomRenderValue: StoryObj<StoryProps> = {
                     "flex",
                     "flex-row",
                     "text-default",
-                    "font-label-s",
+                    "font-label-s"
                   )}
                 >
                   {selectedProps[value]?.children || value}
@@ -378,7 +373,7 @@ export const CustomRenderValue: StoryObj<StoryProps> = {
           "flex-noreset",
           "border-box",
           "p-s",
-          "items-start",
+          "items-start"
         )}
         data-testid="wrapper"
         style={{ inlineSize: 300 }}
@@ -429,7 +424,7 @@ export const CreateOption: StoryObj<StoryProps> = {
           "flex-noreset",
           "border-box",
           "p-s",
-          "items-start",
+          "items-start"
         )}
         data-testid="wrapper"
         style={{ inlineSize: 300 }}

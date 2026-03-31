@@ -1,4 +1,7 @@
-export function getTokenValue(token: string, element?: HTMLElement): string | undefined {
+export function getTokenValue(
+  token: string,
+  element?: HTMLElement
+): string | undefined {
   const safeElement = element || document.documentElement;
 
   const computedStyle = window.getComputedStyle(safeElement);
@@ -11,7 +14,10 @@ export function getTokenValue(token: string, element?: HTMLElement): string | un
   return value.replace(/['"]/g, "").trim();
 }
 
-export function getTokenInt(token: string, element?: HTMLElement): number | undefined {
+export function getTokenInt(
+  token: string,
+  element?: HTMLElement
+): number | undefined {
   const value = getTokenValue(token, element);
   if (value === undefined) return undefined;
 

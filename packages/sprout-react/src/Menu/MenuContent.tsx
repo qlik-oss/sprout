@@ -66,7 +66,7 @@ export function MenuContent({
         "pointer-events-none",
         "break-words",
         "text-start",
-        "w-full",
+        "w-full"
       )}
     >
       {selectable && !selected ? <NotSelected /> : null}
@@ -81,7 +81,7 @@ export function MenuContent({
             "overflow-hidden",
             "grow-0",
             "break-words",
-            "w-full",
+            "w-full"
           )}
         >
           {children}
@@ -102,7 +102,7 @@ export function MenuContent({
             "rtl-rotate-y-180",
             "size-xl",
             "self-center",
-            "shrink-0",
+            "shrink-0"
           )}
         >
           <ChevronRight className={classNames("fill-current")} />
@@ -129,7 +129,7 @@ export function MenuContentPrimitive({
         "gap-m",
         "flex-row",
         "items-center",
-        "w-full",
+        "w-full"
       )}
     >
       {icon !== undefined && (
@@ -145,7 +145,7 @@ export function MenuContentPrimitive({
           "flex-col",
           "items-start",
           "gap-xs",
-          "w-full",
+          "w-full"
         )}
       >
         <span data-part="label" className={menuStyle.menu_content_label}>

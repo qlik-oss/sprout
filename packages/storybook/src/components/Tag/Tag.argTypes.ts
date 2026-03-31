@@ -1,6 +1,8 @@
 import type { TagProps } from "@qlik/sprout-react";
 import type { ArgTypes } from "@storybook/react-vite";
 
+import { ICONS_MAP, ICON_OPTIONS } from "../../internal/icons/Icons";
+
 export const SIZES = [undefined, "s"];
 export const COLORS = [undefined, "error", "info", "success", "warning"];
 
@@ -58,7 +60,9 @@ export const TagArgTypes: ArgTypes<TagProps> = {
     },
   },
   icon: {
-    control: false,
+    control: "select",
+    options: ICON_OPTIONS,
+    mapping: ICONS_MAP,
     description:
       "Icon component displayed at the start of the tag, before the text.",
     table: {

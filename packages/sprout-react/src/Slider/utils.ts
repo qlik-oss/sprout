@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 export function getClampedPercentFromValue(
   value: number,
   min: number,
-  max: number,
+  max: number
 ): number {
   if (min === max) return 0;
   const PERCENT_MIN = 0;
@@ -23,7 +23,7 @@ export function getValueFromPointer(
   min: number,
   max: number,
   step: number,
-  event: PointerEvent,
+  event: PointerEvent
 ): number {
   let percent: number;
 
@@ -50,7 +50,7 @@ export function getValueFromPointer(
 export const isRangeOutOfBounds = (
   [start, end]: Array<number>,
   min: number,
-  max: number,
+  max: number
 ) => start < min || end < min || start > max || end > max;
 
 export const isValueOutOfBounds = (value: number, min: number, max: number) =>
@@ -60,7 +60,7 @@ export function resolveMarkValues(
   marks: boolean | Array<{ value: number; label?: ReactNode }> | undefined,
   min: number,
   max: number,
-  step: number,
+  step: number
 ): Array<{ value: number; label?: ReactNode }> | undefined {
   if (!marks) return undefined;
 

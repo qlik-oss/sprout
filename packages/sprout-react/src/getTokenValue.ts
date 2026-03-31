@@ -1,6 +1,6 @@
 export function getTokenValue(
   token: string,
-  element?: HTMLElement,
+  element?: HTMLElement
 ): string | undefined {
   const safeElement = element || document.documentElement;
 
@@ -16,7 +16,7 @@ export function getTokenValue(
 
 export function getTokenInt(
   token: string,
-  element?: HTMLElement,
+  element?: HTMLElement
 ): number | undefined {
   const value = getTokenValue(token, element);
   if (value === undefined) return undefined;

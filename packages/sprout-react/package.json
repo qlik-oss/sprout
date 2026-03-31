@@ -1,23 +1,27 @@
 {
   "name": "@qlik/sprout-react",
-  "version": "6.43.1",
-  "homepage": "https://github.com/qlik/sprout#readme",
+  "version": "6.45.2",
+  "homepage": "https://github.com/qlik-oss/sprout#readme",
   "bugs": {
-    "url": "https://github.com/qlik/sprout/issues"
+    "url": "https://github.com/qlik-oss/sprout/issues"
   },
-  "repository": "https://github.com/qlik/sprout.git",
   "license": "MIT",
+  "repository": "https://github.com/qlik-oss/sprout.git",
   "sideEffects": false,
+  "module": "./lib/sprout-react.js",
+  "types": "./lib/sprout-react.d.ts",
   "exports": {
     ".": {
       "import": "./lib/sprout-react.js"
     }
   },
-  "module": "./lib/sprout-react.js",
-  "types": "./lib/sprout-react.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "scripts": {
     "build": "pnpm run build:tsc",
-    "build:tsc": "rm -rf lib && tsc -p tsconfig.npm.json && pnpm run copy",
+    "build:tsc": "tsc -p tsconfig.npm.json && pnpm run copy",
     "build:watch": "concurrently \"tsc -p tsconfig.npm.json --watch\" \"pnpm run copy:watch\"",
     "check-types": "tsc --noEmit -p tsconfig.npm.json",
     "clean": "rimraf playwright-report storybook-static test-results playwright/.cache lib stylelint-report.json eslint-report.json",
@@ -27,42 +31,34 @@
     "copy": "cpx -v \"src/**/*.css\" lib && pnpm run copy:i18n",
     "copy:watch": "cpx \"src/**/*.css\" lib --watch",
     "copy:i18n": "node i18n.mjs",
-    "format:check": "prettier --check . --ignore-unknown",
-    "format:write": "prettier --write . --ignore-unknown",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:css:fix": "stylelint --fix 'src/**/*.css'",
     "lint:ci": "eslint . -f json -o eslint-report.json && stylelint 'src/**/*.css' -f json -o stylelint-report.json",
-    "test": "pnpm vitest:run && pnpm playwright:test",
-    "vitest:run": "vitest run",
-    "playwright:test": "playwright test",
+    "test:vitest": "vitest run",
+    "test:playwright": "playwright test",
     "playwright:test:ui": "playwright test --ui",
     "playwright:install": "pnpm -w exec playwright install --with-deps"
   },
-  "browserslist": [
-    "extends @qlik/browserslist-config"
-  ],
   "dependencies": {
     "@floating-ui/react": "0.27.19",
-    "@qlik/design-tokens": "workspace:*",
-    "@qlik/sprout-css-modules": "workspace:*",
+    "@qlik/design-tokens": "workspace:^",
+    "@qlik/sprout-css-modules": "workspace:^",
     "@qlik/sprout-icons": "0.2.2",
-    "@qlik/sprout-react-hooks": "workspace:*"
+    "@qlik/sprout-react-hooks": "workspace:^"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.1",
     "@eslint/eslintrc": "^3.3.5",
-    "@eslint/js": "^9.39.4",
+    "@eslint/js": "^9.39.2",
     "@figma/code-connect": "^1.4.2",
     "@playwright/experimental-ct-react": "^1.58.2",
     "@playwright/test": "^1.58.2",
     "@qlik/browserslist-config": "^3.0.0",
-    "@qlik/eslint-config-sprout": "workspace:*",
-    "@qlik/prettier-config": "^0.4.36",
-    "@qlik/stylelint-config-sprout": "workspace:*",
+    "@qlik/eslint-config-sprout": "workspace:^",
+    "@qlik/stylelint-config-sprout": "workspace:^",
     "@qlik/tsconfig": "^0.3.1",
-    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/node": "^24.12.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
@@ -74,23 +70,21 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-storybook": "^10.3.3",
     "eslint-plugin-vitest": "^0.5.4",
-    "prettier": "^3.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.72.0",
     "rimraf": "6.1.3",
-    "stylelint": "^17.6.0",
+    "stylelint": "^17.5.0",
     "stylelint-config-css-modules": "^4.6.0",
     "stylelint-config-standard": "^40.0.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.1.2"
+    "vitest": "^4.1.1"
   },
   "peerDependencies": {
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
   },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  }
+  "browserslist": [
+    "extends @qlik/browserslist-config"
+  ]
 }

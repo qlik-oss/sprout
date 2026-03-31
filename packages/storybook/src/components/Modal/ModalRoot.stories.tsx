@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { fn } from "storybook/test";
 
 import { useContainer } from "@qlik/sprout-react-hooks";

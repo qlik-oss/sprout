@@ -29,7 +29,7 @@ function TextFieldView({ children, font }: TextFieldViewProps): JSX.Element {
         `font_${font || "label_s"}`,
         `text_default`,
         `text_start`,
-        "truncate",
+        "truncate"
       )}
       // Setting inline style to override `white-space: nowrap` in `ellipsis` class
       style={{ whiteSpace: "pre" }}
@@ -51,7 +51,7 @@ export type InlineEditTextFieldProps = Omit<
   defaultValue?: TextFieldProps["defaultValue"];
   onChange?: (
     e: Parameters<ChangeEventHandler<HTMLInputElement>>[0],
-    reason?: ChangeReasons | "cancel",
+    reason?: ChangeReasons | "cancel"
   ) => void;
   hasError?: TextFieldProps["hasError"];
   errorMessages?: TextFieldProps["errorMessages"];
@@ -94,7 +94,7 @@ function InlineEditTextFieldBase(
     onChange,
     ...props
   }: InlineEditTextFieldProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   const controlled = useControl<string>(
     {
@@ -107,7 +107,7 @@ function InlineEditTextFieldBase(
       defaultValueKey: "defaultValue",
       onChangeKey: "onChange",
       selector: (e) => (e.target as HTMLInputElement).value,
-    },
+    }
   );
 
   const View = view;
@@ -130,7 +130,7 @@ function InlineEditTextFieldBase(
         onCancel?.();
         controlled.onChange(
           { target: { value: defaultValue || value } },
-          "cancel",
+          "cancel"
         );
       }}
       showFormButtons={showFormButtons}

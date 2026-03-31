@@ -9,7 +9,7 @@ test(`should be accessible`, async ({ mount, page }) => {
       id="component-testing"
       content="Alert content"
       severity="info"
-    />,
+    />
   );
   await expect(component).toBeVisible();
 
@@ -30,7 +30,7 @@ test("should support role and aria-live props", async ({ mount }) => {
       aria-live="assertive"
       content="Alert content"
       severity="info"
-    />,
+    />
   );
   await expect(component).toHaveAttribute("role", "alert");
   await expect(component).toHaveAttribute("aria-live", "assertive");

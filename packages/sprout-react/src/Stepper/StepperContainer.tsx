@@ -52,7 +52,7 @@ export function StepperContainer({
           "flex-row": orientation !== "horizontal",
           "overflow-y-auto": orientation === "vertical",
           "overflow-x-auto": orientation === "horizontal",
-        },
+        }
       )}
       {...props}
       data-orientation={orientation}

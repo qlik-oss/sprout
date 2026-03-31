@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { type CSSProperties, useState } from "react";
 
 import {
@@ -83,7 +82,7 @@ export const DropzoneIntegration: StoryObj<DropzoneProps> = {
           "flex-row",
           "gap-xl",
           "items-start",
-          "w-xl",
+          "w-xl"
         )}
       >
         <DndContext

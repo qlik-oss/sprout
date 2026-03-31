@@ -17,7 +17,7 @@ export function LinkTest() {
         "border-box",
         "items-start",
         "border-default",
-        "p-s",
+        "p-s"
       )}
       style={{ inlineSize: "200px" }}
     >

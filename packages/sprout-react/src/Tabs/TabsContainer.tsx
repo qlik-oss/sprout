@@ -56,12 +56,12 @@ export function TabsContainer({
       onChangeKey: "onSelect",
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       selector: (e: any, id: string) => id,
-    },
+    }
   );
   const contextValue = useMemo(
     () => ({ size, ...controlled, height }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [size, controlled],
+    [size, controlled]
   );
   const navRef = useRef<HTMLDivElement>(null);
   return (
@@ -77,7 +77,7 @@ export function TabsContainer({
           "flex",
           "border-box",
           "flex-col",
-          style.container,
+          style.container
         )}
       >
         <TabsInternalContext.Provider value={contextValue}>

@@ -10,7 +10,7 @@ export function StepLine() {
         "grow-1",
         "border-box",
         "justify-center",
-        styles.line,
+        styles.line
       )}
       role="presentation"
     />

@@ -4,7 +4,7 @@ import { COMMON_PROPS } from "./Icons/common";
 
 function DropdownArrowBase(
   props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
 ) {
   return (
     <svg {...COMMON_PROPS} ref={ref} {...props}>

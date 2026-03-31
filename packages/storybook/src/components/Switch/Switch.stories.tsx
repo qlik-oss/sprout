@@ -1,10 +1,6 @@
 import { fn } from "storybook/test";
 
-import {
-  Switch,
-  type SwitchProps,
-  classNames,
-} from "@qlik/sprout-react";
+import { Switch, type SwitchProps, classNames } from "@qlik/sprout-react";
 import type { StoryObj } from "@storybook/react-vite";
 
 import { SwitchArgTypes } from "./Switch.argTypes";
@@ -71,7 +67,7 @@ export const VisualTest: Story = {
             "p-l",
             "flex-col",
             "gap-m",
-            "border-default",
+            "border-default"
           )}
         >
           <h3 className={classNames("font-heading-s", "text-default")}>
@@ -93,7 +89,7 @@ export const VisualTest: Story = {
             "p-l",
             "flex-col",
             "gap-m",
-            "border-default",
+            "border-default"
           )}
         >
           <h3 className={classNames("font-heading-s", "text-default")}>
@@ -115,7 +111,7 @@ export const VisualTest: Story = {
             "p-l",
             "flex-col",
             "gap-m",
-            "border-default",
+            "border-default"
           )}
         >
           <h3 className={classNames("font-heading-s", "text-default")}>
@@ -137,7 +133,7 @@ export const VisualTest: Story = {
             "p-l",
             "flex-col",
             "gap-m",
-            "border-default",
+            "border-default"
           )}
         >
           <h3 className={classNames("font-heading-s", "text-default")}>
@@ -161,7 +157,7 @@ export const VisualTest: Story = {
             "p-l",
             "gap-m",
             "flex-col",
-            "border-default",
+            "border-default"
           )}
           style={{ inlineSize: "150px" }}
         >
@@ -189,7 +185,7 @@ export const VisualTest: Story = {
             "p-l",
             "flex-col",
             "gap-m",
-            "border-default",
+            "border-default"
           )}
         >
           <h3 className={classNames("font-heading-s", "text-default")}>
@@ -240,7 +236,7 @@ export const VisualTest: Story = {
             "p-l",
             "flex-col",
             "gap-m",
-            "border-default",
+            "border-default"
           )}
         >
           <h3 className={classNames("font-heading-s", "text-default")}>
@@ -274,7 +270,7 @@ export const VisualTest: Story = {
             "p-l",
             "flex-col",
             "gap-m",
-            "border-default",
+            "border-default"
           )}
         >
           <h3 className={classNames("font-heading-s", "text-default")}>

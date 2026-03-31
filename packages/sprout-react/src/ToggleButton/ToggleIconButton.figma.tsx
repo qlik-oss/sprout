@@ -22,5 +22,5 @@ figma.connect(
       disabled: figma.enum("State", { Disabled: true }),
     },
     example: ({ ...props }) => <ToggleIconButton label="Label" {...props} />,
-  },
+  }
 );

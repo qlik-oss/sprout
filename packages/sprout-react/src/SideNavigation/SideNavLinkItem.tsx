@@ -37,7 +37,7 @@ function SideNavLinkItemBase(
     isExternal,
     ...props
   }: SideNavLinkItemProps,
-  ref?: Ref<HTMLAnchorElement>,
+  ref?: Ref<HTMLAnchorElement>
 ) {
   return (
     <a

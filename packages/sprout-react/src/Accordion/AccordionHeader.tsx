@@ -74,13 +74,13 @@ function HeaderLabel({
 const headerDisabled = classNames(
   "cursor-not-allowed",
   "bg-disabled",
-  "text-disabled",
+  "text-disabled"
 );
 const headerEnabled = classNames(
   "cursor-pointer",
   "bg-interactive",
   "text-default",
-  "outline-focus-visible-inner",
+  "outline-focus-visible-inner"
 );
 
 export const AccordionHeader = forwardRef<
@@ -105,7 +105,7 @@ function AccordionHeaderBase(
     affix,
     ...props
   }: AccordionHeaderPropsType,
-  ref?: Ref<HTMLButtonElement>,
+  ref?: Ref<HTMLButtonElement>
 ) {
   return (
     <button
@@ -128,7 +128,7 @@ function AccordionHeaderBase(
           [headerEnabled]: !disabled,
           [headerDisabled]: disabled,
           "w-fit": width === "compact",
-        },
+        }
       )}
       disabled={disabled}
       ref={ref}
@@ -147,7 +147,7 @@ function AccordionHeaderBase(
             "flex-row",
             "flex-nowrap",
             "items-center",
-            "justify-center",
+            "justify-center"
           )}
         >
           <ChevronIcon opened={opened} />
@@ -160,7 +160,7 @@ function AccordionHeaderBase(
             "pt-s",
             "text-default",
             "self-start",
-            styles.icon,
+            styles.icon
           )}
         >
           {icon}
@@ -175,7 +175,7 @@ function AccordionHeaderBase(
           "gap-s",
           "py-s",
           "pr-m",
-          "overflow-hidden",
+          "overflow-hidden"
         )}
       >
         <HeaderLabel
@@ -184,7 +184,7 @@ function AccordionHeaderBase(
             "font-label-s-emphasized",
             "p-0",
             "m-0",
-            "text-start",
+            "text-start"
           )}
         >
           {header}
@@ -203,7 +203,7 @@ function AccordionHeaderBase(
           "flex-row",
           "items-center",
           "justify-end",
-          "gap-m",
+          "gap-m"
         )}
       >
         {value ? (
@@ -228,7 +228,7 @@ function AccordionHeaderBase(
               "flex-row",
               "flex-nowrap",
               "items-center",
-              "justify-center",
+              "justify-center"
             )}
           >
             <ChevronIcon opened={opened} />

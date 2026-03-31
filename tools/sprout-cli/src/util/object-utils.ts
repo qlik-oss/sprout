@@ -6,7 +6,10 @@ function isNestedObject(obj: unknown) {
   return typeof obj === "object" && obj !== null && !Array.isArray(obj);
 }
 
-export function mergeObjects(obj1: NestedObject, obj2: NestedObject): NestedObject {
+export function mergeObjects(
+  obj1: NestedObject,
+  obj2: NestedObject
+): NestedObject {
   const merged: NestedObject = { ...obj1 };
 
   for (const key in obj2) {
@@ -26,7 +29,10 @@ export function mergeObjects(obj1: NestedObject, obj2: NestedObject): NestedObje
   return merged;
 }
 
-export function createNestedObject(keyString: string, value: NestedObject): NestedObject {
+export function createNestedObject(
+  keyString: string,
+  value: NestedObject
+): NestedObject {
   const keys = keyString.split("/");
   const result: NestedObject = {};
 
@@ -50,7 +56,9 @@ export function createNestedObject(keyString: string, value: NestedObject): Nest
 }
 
 function kebabToCamel(kebabCaseString: string): string {
-  return kebabCaseString.replace(/-([a-z])/g, (_, match) => match.toUpperCase());
+  return kebabCaseString.replace(/-([a-z])/g, (_, match) =>
+    match.toUpperCase()
+  );
 }
 
 export function camelToKebab(camelCaseString: string) {
@@ -60,16 +68,22 @@ export function camelToKebab(camelCaseString: string) {
 export function createNestedObjectWithFormat(
   keys: string[],
   value: NestedObject,
-  format: "kebab" | "camel" = "camel",
+  format: "kebab" | "camel" = "camel"
 ): NestedObject {
   return keys.reduceRight<NestedObject>(
-    (acc, key) => ({ [format === "kebab" ? camelToKebab(key) : kebabToCamel(key)]: acc }),
-    value,
+    (acc, key) => ({
+      [format === "kebab" ? camelToKebab(key) : kebabToCamel(key)]: acc,
+    }),
+    value
   );
 }
 
 // Function to filter objects based on the presence of a property
-export function filterProps(obj: NestedObject, prop: string, propValue?: string): NestedObject | null {
+export function filterProps(
+  obj: NestedObject,
+  prop: string,
+  propValue?: string
+): NestedObject | null {
   if (obj[prop] && (!propValue || obj[prop] === propValue)) {
     return obj;
   }

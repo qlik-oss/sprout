@@ -25,7 +25,7 @@ type UseModalAPI = {
 
 function elementIsIn(
   element: HTMLElement | null,
-  container?: HTMLElement | null,
+  container?: HTMLElement | null
 ) {
   if (!element || !container) {
     return false;
@@ -100,7 +100,7 @@ function useFocus(
   dialog: ReturnType<typeof useDialogState>,
   gesture: DialogGesture,
   containerRef: RefObject<HTMLDivElement | null>,
-  preventFocus?: boolean,
+  preventFocus?: boolean
 ) {
   useEffect(() => {
     if (dialog.visible) {
@@ -117,7 +117,7 @@ function useFocus(
      */
     const onFocusOut = (ev: FocusEvent) => {
       const allFocusableElements = containerRef.current?.querySelectorAll(
-        FOCUSABLE_ELEMENT_SELECTOR,
+        FOCUSABLE_ELEMENT_SELECTOR
       );
       if (
         dialog.visible &&
@@ -190,7 +190,7 @@ export function useModal({
         onClosePlus();
       }
     },
-    [preventEscaping, preventInteractiveBackdrop, onClosePlus],
+    [preventEscaping, preventInteractiveBackdrop, onClosePlus]
   );
 
   const onHideDialog = useCallback(() => {

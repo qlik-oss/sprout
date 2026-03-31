@@ -15,7 +15,7 @@ figma.connect(
       tags: figma.children("Tag"),
     },
     example: (props) => <TagGroups>{props.tags}</TagGroups>,
-  },
+  }
 );
 
 figma.connect(
@@ -57,5 +57,5 @@ figma.connect(
     example: (props: TagProps) => {
       return <Tag {...props} />;
     },
-  },
+  }
 );

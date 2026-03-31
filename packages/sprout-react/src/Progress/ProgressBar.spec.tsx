@@ -6,7 +6,7 @@ import { getAxeReport } from "../PlaywrightUtils";
 test(`should ProgressBar be accessible`, async ({ mount, page }) => {
   // infinite use case
   const output = await mount(
-    <ProgressBar aria-label="WIP" id="component-testing" />,
+    <ProgressBar aria-label="WIP" id="component-testing" />
   );
   const component = page.getByRole("status");
   const progressbar = page.getByRole("progressbar");
@@ -22,7 +22,7 @@ test(`should ProgressBar be accessible`, async ({ mount, page }) => {
 
   // using displayed label and percent
   await output.update(
-    <ProgressBar percent={30} label="in progress" id="component-testing" />,
+    <ProgressBar percent={30} label="in progress" id="component-testing" />
   );
   await expect(component).not.toBeVisible();
   await expect(progressbar).toBeVisible();
@@ -34,7 +34,7 @@ test(`should ProgressBar be accessible`, async ({ mount, page }) => {
 
   //using
   await output.update(
-    <ProgressBar percent={30} tooltip="in progress" id="component-testing" />,
+    <ProgressBar percent={30} tooltip="in progress" id="component-testing" />
   );
   await expect(component).not.toBeVisible();
   await expect(progressbar).toBeVisible();

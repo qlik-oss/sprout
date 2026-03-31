@@ -50,7 +50,7 @@ export const Playground: StoryObj<ToastArgs> = {
           "flex",
           "border-box",
           "items-start",
-          "w-full",
+          "w-full"
         )}
         style={{ blockSize: "300px" }}
       >
@@ -59,7 +59,7 @@ export const Playground: StoryObj<ToastArgs> = {
             const newToast = { ...args, id: Math.random().toString() };
             newToast.onClose = () => {
               setToast((current) =>
-                current.filter((t) => t.id !== newToast.id),
+                current.filter((t) => t.id !== newToast.id)
               );
             };
             setToast([...toast, newToast]);
@@ -112,7 +112,7 @@ export const ProblematicContent = {
         "border-box",
         "flex-col",
         "gap-l",
-        "w-fit",
+        "w-fit"
       )}
     >
       <Toast.Container placement="top-start">
@@ -203,7 +203,7 @@ export const Responsive = {
         "border-box",
         "flex-col",
         "gap-l",
-        "w-fit",
+        "w-fit"
       )}
     >
       <Toast.Container placement="top">
@@ -253,7 +253,7 @@ export const VisualTest = {
         "border-box",
         "flex-col",
         "gap-l",
-        "w-fit",
+        "w-fit"
       )}
     >
       <Toast.Container placement="top-start">

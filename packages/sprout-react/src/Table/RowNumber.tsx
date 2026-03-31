@@ -18,7 +18,7 @@ export function RowNumber({ index }: RowNumberProps) {
         "gap-s",
         "border-box",
         "justify-center",
-        className.row_number,
+        className.row_number
       )}
     >
       {index}

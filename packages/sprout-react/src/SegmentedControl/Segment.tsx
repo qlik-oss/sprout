@@ -49,7 +49,7 @@ function SegmentBase(props: SegmentProps, ref?: Ref<HTMLInputElement>) {
         {
           "w-full": !!justified,
           "w-max": !justified,
-        },
+        }
       )}
     >
       <input
@@ -70,7 +70,7 @@ function SegmentBase(props: SegmentProps, ref?: Ref<HTMLInputElement>) {
           "p-m",
           "radius-pill",
           "cursor-pointer",
-          "border-box",
+          "border-box"
         )}
       >
         {icon}

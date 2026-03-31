@@ -41,7 +41,7 @@ test(`should InlineEdit.Select be accessible`, async ({ mount, page }) => {
       >
         {OPTIONS}
       </InlineEdit.Select>
-    </div>,
+    </div>
   );
   const combobox = page.getByRole("combobox");
   const listbox = page.getByRole("listbox");
@@ -110,7 +110,7 @@ test("should be able to see focus state when rendered in a modal", async ({
       >
         {OPTIONS}
       </InlineEdit.Select>
-    </Modal>,
+    </Modal>
   );
 
   const view = page.getByTestId("test-select.view");

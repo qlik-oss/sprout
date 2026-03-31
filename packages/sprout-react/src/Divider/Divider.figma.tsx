@@ -22,5 +22,5 @@ figma.connect(
       }),
     },
     example: (props) => <Divider {...props} />,
-  },
+  }
 );

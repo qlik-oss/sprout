@@ -32,7 +32,7 @@ function TableRowBase(
     startPosition,
     ...props
   }: TableRowProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   let style: CSSProperties = {
     blockSize: height,

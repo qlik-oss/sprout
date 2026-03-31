@@ -7,11 +7,7 @@ import {
   useState,
 } from "react";
 
-import {
-  Divider,
-  SegmentedControl,
-  classNames,
-} from "@qlik/sprout-react";
+import { Divider, SegmentedControl, classNames } from "@qlik/sprout-react";
 
 import { JSONViewer } from "../JSONViewer/JSONViewer";
 import {
@@ -158,7 +154,7 @@ export function ThemePairCreator({
                 "flex-col",
                 "gap-m",
                 "h-full",
-                "overflow-auto",
+                "overflow-auto"
               )}
               style={{
                 blockSize: "var(--sprout-container-sizing-l)",

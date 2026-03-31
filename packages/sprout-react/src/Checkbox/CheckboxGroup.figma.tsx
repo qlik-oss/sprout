@@ -16,5 +16,5 @@ figma.connect(
     example: ({ ...props }) => (
       <CheckboxGroup options={[{ label: "Label" }]} {...props} />
     ),
-  },
+  }
 );

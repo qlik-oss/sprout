@@ -1,7 +1,6 @@
 /**
  * @fileoverview Tests for no-direct-token-import rule
  */
-
 import rule from "./no-direct-token-import.mjs";
 import { VitestRuleTester as RuleTester } from "./rule-tester.js";
 
@@ -40,7 +39,8 @@ ruleTester.run("no-direct-token-import", rule, {
         {
           messageId: "forbidden",
           data: {
-            source: "@qlik/design-tokens/generated/tokens/css/sprout-tokens.css",
+            source:
+              "@qlik/design-tokens/generated/tokens/css/sprout-tokens.css",
           },
         },
       ],

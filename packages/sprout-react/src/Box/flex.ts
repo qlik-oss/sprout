@@ -65,7 +65,7 @@ const STYLE_CONDITIONS: Record<
   }),
   boxSizing: (
     boxSizing: "border-box" | "content-box",
-    opt: FlexArgs = { apply: true },
+    opt: FlexArgs = { apply: true }
   ) => ({
     content_box: boxSizing === "content-box",
     border_box: boxSizing !== "content-box" && opt.apply,
@@ -77,7 +77,7 @@ const STYLE_CONDITIONS: Record<
   }),
   direction: (
     direction: "row" | "row-reverse" | "col" | "col-reverse",
-    opt: FlexArgs = { apply: true },
+    opt: FlexArgs = { apply: true }
   ) => ({
     row: direction === "row" || (opt.apply && !direction),
     row_reverse: direction === "row-reverse",
@@ -134,7 +134,7 @@ const FLEX_PROPS: Array<keyof FlexProps> = [
 
 export function getFlexProps<T extends FlexProps & { className?: string }>(
   props: T,
-  opt: FlexArgs = { apply: true },
+  opt: FlexArgs = { apply: true }
 ) {
   const { className, ...rest } = props;
 
@@ -156,7 +156,7 @@ export function getFlexProps<T extends FlexProps & { className?: string }>(
     },
     {
       flex: opt.apply,
-    },
+    }
   );
   // We are fixing a bug here that need to escape ts
   // <Box className={sprout.classNames('col')} />; => col is considered false

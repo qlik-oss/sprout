@@ -45,5 +45,5 @@ figma.connect(
       }),
     },
     example: (props) => <Button {...props} />,
-  },
+  }
 );

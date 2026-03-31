@@ -9,12 +9,12 @@ export type TextFieldProps = Omit<InputProps, "leftIcon" | "labelClear"> &
   CommonFieldProps;
 
 export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
-  TextFieldBase,
+  TextFieldBase
 );
 
 function TextFieldBase(
   { value, onChange, defaultValue, ...props }: TextFieldProps,
-  ref?: Ref<HTMLInputElement>,
+  ref?: Ref<HTMLInputElement>
 ) {
   const { fieldProps, inputProps, useField } = useFieldProps(props);
   const controlled = useValueControl<HTMLInputProps>({

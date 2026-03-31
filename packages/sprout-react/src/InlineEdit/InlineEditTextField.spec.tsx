@@ -15,7 +15,7 @@ test(`should InlineEdit.TextField be accessible`, async ({ mount, page }) => {
       aria-label="Edit color"
       id="component-testing"
       defaultValue="value"
-    />,
+    />
   );
 
   const text = page.getByText("value");
@@ -49,7 +49,7 @@ test("should let me edit the content", async ({ mount, page }) => {
         defaultValue="value"
         showFormButtons
       />
-    </div>,
+    </div>
   );
 
   const button = page.getByRole("button");
@@ -115,7 +115,7 @@ test("should close and cancel when go outside", async ({ mount, page }) => {
       <button type="button" data-testid="test-button">
         click me
       </button>
-    </div>,
+    </div>
   );
 
   const view = page.getByTestId("view");
@@ -187,7 +187,7 @@ test('should save on blur/click outside with the props "blurAction" set to "save
       <button type="button" data-testid="test-button">
         click me
       </button>
-    </div>,
+    </div>
   );
 
   const view = page.getByTestId("test-textfield.view");
@@ -240,7 +240,7 @@ test("should be able to see focus state when rendered in a modal", async ({
         defaultValue="value"
         data-testid="test-textfield"
       />
-    </Modal>,
+    </Modal>
   );
 
   const view = page.getByTestId("test-textfield.view");
@@ -340,7 +340,7 @@ test("should not close when reaching end of container with long content", async 
   await page.waitForTimeout(150);
 
   await input.fill(
-    "this is a very long value that should force horizontal scrolling inside the text field component",
+    "this is a very long value that should force horizontal scrolling inside the text field component"
   );
 
   await input.evaluate((element) => {

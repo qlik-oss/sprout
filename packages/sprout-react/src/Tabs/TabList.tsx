@@ -17,7 +17,7 @@ function getAllItems(ref: HTMLElement): NodeList {
 }
 function getSelectedItems(ref: HTMLElement): NodeList {
   return ref.querySelectorAll(
-    `[role="tab"][aria-selected="true"]:not(:disabled)`,
+    `[role="tab"][aria-selected="true"]:not(:disabled)`
   );
 }
 

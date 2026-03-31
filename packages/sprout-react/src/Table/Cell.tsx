@@ -52,7 +52,7 @@ export function TableCell({
         "border-box",
         "flex-row",
         "overflow-hidden",
-        className.cell,
+        className.cell
       )}
       tabIndex={interactive || contextMenu ? 0 : undefined}
       style={style}
@@ -67,7 +67,7 @@ export function TableCell({
           "h-full",
           "w-full",
           "overflow-hidden",
-          className.cell_state,
+          className.cell_state
         )}
       >
         {children}

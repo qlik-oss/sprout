@@ -1,13 +1,15 @@
 {
   "name": "@qlik/eslint-config-sprout",
-  "version": "1.0.7",
-  "homepage": "https://github.com/qlik/sprout-kit#readme",
+  "version": "1.0.10",
+  "homepage": "https://github.com/qlik-oss/sprout#readme",
   "bugs": {
-    "url": "https://github.com/qlik/sprout-kit/issues"
+    "url": "https://github.com/qlik-oss/sprout/issues"
   },
-  "repository": "https://github.com/qlik/sprout-kit.git",
   "license": "MIT",
+  "repository": "https://github.com/qlik-oss/sprout.git",
   "type": "module",
+  "main": "./src/index.mjs",
+  "types": "./src/index.d.ts",
   "exports": {
     ".": {
       "types": "./src/index.d.ts",
@@ -22,26 +24,21 @@
       "import": "./src/rules.mjs"
     }
   },
-  "main": "./src/index.mjs",
-  "types": "./src/index.d.ts",
   "scripts": {
-    "format:check": "prettier --check . --ignore-unknown",
-    "format:write": "prettier --write . --ignore-unknown",
     "lint": "eslint .",
     "lint:ci": "eslint . -f json -o eslint-report.json",
-    "test": "vitest run"
+    "test:vitest": "vitest run"
   },
   "dependencies": {
-    "@qlik/eslint-config": "^1.4.27",
-    "@qlik/eslint-plugin-sprout": "workspace:*",
+    "@qlik/eslint-config": "^1.4.26",
+    "@qlik/eslint-plugin-sprout": "workspace:^",
     "@typescript-eslint/eslint-plugin": "^8.57.2",
     "eslint-plugin-react": "^7.37.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^9.39.2",
-    "prettier": "^3.8.1",
-    "vitest": "^4.1.2"
+    "vitest": "^4.1.1"
   },
   "peerDependencies": {
     "eslint": "^9.35.0"

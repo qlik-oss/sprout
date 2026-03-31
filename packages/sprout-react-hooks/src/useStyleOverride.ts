@@ -1,5 +1,7 @@
-import { tokens } from "@qlik/design-tokens";
 import { useLayoutEffect } from "react";
+
+import { tokens } from "@qlik/design-tokens";
+
 import { useId } from "./useId";
 
 /**
@@ -23,7 +25,10 @@ function removeStyleSheet(selectorId: string) {
   document.querySelector(`#${selectorId}`)?.remove();
 }
 
-export function useStyleOverride(customValues: Partial<Tokens>, querySelector = "body") {
+export function useStyleOverride(
+  customValues: Partial<Tokens>,
+  querySelector = "body"
+) {
   const id = useId().replace(/:/g, "_");
   useLayoutEffect(() => {
     removeStyleSheet(id);

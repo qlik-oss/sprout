@@ -13,8 +13,8 @@ import {
 } from "react";
 import { useMemo } from "react";
 
-import sprout from "@qlik/sprout-css-modules";
 import { useControl } from "@qlik/sprout-react-hooks";
+import sprout from "@qlik/sprout-css-modules";
 
 import { type CommonFieldProps, Field, useFieldProps } from "../Field";
 import {
@@ -102,7 +102,7 @@ export type MultiSelectProps = {
   renderValue?: (
     value: Array<string>,
     selectedOptions: Record<string, SelectOptionProps>,
-    input: ReactNode,
+    input: ReactNode
   ) => JSX.Element;
 } & Pick<ComboboxPropsEditable, "labelClear" | "readOnly"> &
   CommonFieldProps & {
@@ -131,10 +131,10 @@ export type MultiSelectProps = {
  * @param readOnly - If true, the select is read-only.
  * @param disableScrollLock - If true, scrolling is not locked when the dropdown is open.
  * @param hideBackdrop - If true, no backdrop overlay is rendered.
- * @param isError - @deprecated Use `errorMessages` instead.
+ * @param isError - deprecated Use `errorMessages` instead.
  */
 export const MultiSelect = forwardRef<HTMLSelectElement, MultiSelectProps>(
-  MultiSelectBase,
+  MultiSelectBase
 );
 
 function MultiSelectBase(
@@ -159,7 +159,7 @@ function MultiSelectBase(
     value,
     ...props
   }: MultiSelectProps,
-  ref?: Ref<HTMLSelectElement>,
+  ref?: Ref<HTMLSelectElement>
 ) {
   const t = useI18n();
   const { inputProps, fieldProps, useField } = useFieldProps(props);
@@ -183,7 +183,7 @@ function MultiSelectBase(
     },
     {
       selector: (e) => e.target.value,
-    },
+    }
   );
 
   const onChangeDelayed = (e: ChangeEvent) => {
@@ -207,7 +207,7 @@ function MultiSelectBase(
       defaultValueKey: "defaultValue",
       selector: (e) =>
         e.target.selectedOptions.map((o: { value: string }) => o.value),
-    },
+    }
   );
 
   const controlledOpen = useControl<boolean>(
@@ -221,7 +221,7 @@ function MultiSelectBase(
       valueKey: "open",
       onChangeKey: "onOpenChange",
       selector: (v) => v,
-    },
+    }
   );
   const isOpen = !!controlledOpen.value;
   const setIsOpen = controlledOpen.onChange;
@@ -235,7 +235,7 @@ function MultiSelectBase(
     if (selectRef.current && !value) {
       // Only sync if not externally controlled
       const nativeValue = Array.from(selectRef.current.selectedOptions).map(
-        (opt) => opt.value,
+        (opt) => opt.value
       );
       if (
         nativeValue.length > 0 &&
@@ -246,7 +246,7 @@ function MultiSelectBase(
           createMultiSelectOnChangeEvent({
             name,
             values: nativeValue,
-          }),
+          })
         );
       }
     }
@@ -282,7 +282,7 @@ function MultiSelectBase(
           },
         });
       },
-    }),
+    })
   );
 
   if (refsFloating.current) {
@@ -317,7 +317,7 @@ function MultiSelectBase(
       if (filterControlled.value) {
         const listBox = document.querySelector('[role="listbox"]');
         const filteredOptions = listBox?.querySelectorAll(
-          'button[data-option]:not([aria-hidden="true"])',
+          'button[data-option]:not([aria-hidden="true"])'
         );
         setFilteredOptionsCount(filteredOptions?.length);
       } else {
@@ -341,7 +341,7 @@ function MultiSelectBase(
     (
       values: Array<string>,
       selectedProps: Record<string, SelectOptionProps>,
-      input: ReactNode,
+      input: ReactNode
     ) => {
       if (renderValue) {
         return renderValue(values, selectedProps, input);
@@ -351,7 +351,7 @@ function MultiSelectBase(
           {values.map((newValue: string) => {
             const label: string = getSelectedValueString(
               selectedProps,
-              newValue,
+              newValue
             );
             return (
               <Tag
@@ -372,7 +372,7 @@ function MultiSelectBase(
                             value: newValue,
                             values,
                             action: "remove",
-                          }),
+                          })
                         );
                       }
                     : undefined
@@ -385,14 +385,14 @@ function MultiSelectBase(
       );
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [disabled, readOnly, renderValue],
+    [disabled, readOnly, renderValue]
   );
   const contextValue = useMemo(
     () => ({
       queryFilter: filterControlled.value || "",
       value: controlled.value,
     }),
-    [filterControlled.value, controlled.value],
+    [filterControlled.value, controlled.value]
   );
   const renderOptions = (
     <SelectContext.Provider value={contextValue}>
@@ -412,7 +412,7 @@ function MultiSelectBase(
   // Extract all available option values from children for the hidden select
   const allOptionValues = useMemo(
     () => extractOptionValues(children),
-    [children],
+    [children]
   );
 
   const mergeSelectRef = mergeRefs([selectRef, ref]);
@@ -472,7 +472,7 @@ function MultiSelectBase(
           controlled.value?.length
             ? () => {
                 controlled.onChange(
-                  createMultiSelectOnChangeEvent({ name, values: [] }),
+                  createMultiSelectOnChangeEvent({ name, values: [] })
                 );
               }
             : undefined
@@ -517,7 +517,7 @@ function MultiSelectBase(
             event.stopPropagation();
             const target = event.target as HTMLElement;
             const btn = target.closest(
-              "button[data-option]",
+              "button[data-option]"
             ) as HTMLElement | null;
             if (btn) {
               const newValue = btn.dataset.option;
@@ -528,7 +528,7 @@ function MultiSelectBase(
                   value: newValue,
                   values: controlled.value,
                   action: selected ? "remove" : "add",
-                }),
+                })
               );
               filterControlled.onChange({
                 target: {

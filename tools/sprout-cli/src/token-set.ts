@@ -1,5 +1,4 @@
 // Manually created type object for the theme. Needs to be updated as changes to the token architecture is done
-
 import type {
   AugmentationKey,
   FontTokenModuleTokens,
@@ -12,9 +11,13 @@ import type {
 // This was being referenced in token-module.d.ts, but nowhere defined
 export type TypographyToken = unknown;
 
-export type TokenSetParams = { [key in TokenModuleKey]?: string | TokenModule<ValidTokenType> };
+export type TokenSetParams = {
+  [key in TokenModuleKey]?: string | TokenModule<ValidTokenType>;
+};
 export type TokenSetStringParams = { [key in TokenModuleKey]?: string };
-export type TokenSetModules<T extends ValidTokenType> = { [key in TokenModuleKey]?: TokenModule<T> };
+export type TokenSetModules<T extends ValidTokenType> = {
+  [key in TokenModuleKey]?: TokenModule<T>;
+};
 
 // --- Token type values ---
 

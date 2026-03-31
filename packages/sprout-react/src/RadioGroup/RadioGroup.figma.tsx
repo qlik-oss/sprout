@@ -22,7 +22,7 @@ figma.connect(
       //TODO - remove Radio from docs and remove onChange from them - they make no sense to use outside a RadioGroup
     },
     example: (props) => <Radio {...props} />,
-  },
+  }
 );
 
 figma.connect(
@@ -57,5 +57,5 @@ figma.connect(
         onChange={() => {}}
       />
     ),
-  },
+  }
 );

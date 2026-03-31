@@ -14,12 +14,12 @@ export type MenuGroupProps = {
  * @param children - the menu items belonging to this group.
  */
 export const MenuGroup = forwardRef<HTMLDivElement, MenuGroupProps>(
-  MenuGroupBase,
+  MenuGroupBase
 );
 
 function MenuGroupBase(
   { label, children, ...props }: MenuGroupProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   return (
     <div

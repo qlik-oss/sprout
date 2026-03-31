@@ -50,7 +50,7 @@ test(`should be accessible`, async ({ mount, page }) => {
   await expect(combobox).toBeFocused();
   await expect(options[0]).toHaveAttribute("data-hovered", "true");
   let optionId = await options[0].evaluate(
-    (node) => node.getAttribute("id") || "",
+    (node) => node.getAttribute("id") || ""
   );
   await expect(combobox).toHaveAttribute("aria-activedescendant", optionId);
   await page.keyboard.press(KEYBOARD_KEYS.DOWN);
@@ -89,7 +89,7 @@ test(`should be accessible`, async ({ mount, page }) => {
   // Check tag value
   await expect(page.getByTestId("combobox.tag.sage")).toBeVisible();
   await expect(page.getByTestId("combobox.tag.sage")).toHaveText(
-    "Lorem ipsum dolor sit, am…",
+    "Lorem ipsum dolor sit, am…"
   );
   await expect(combobox).toBeFocused();
 
@@ -103,7 +103,7 @@ test(`should be accessible`, async ({ mount, page }) => {
   // Check tag value
   await expect(page.getByTestId("combobox.tag.sage")).toBeVisible();
   await expect(page.getByTestId("combobox.tag.sage")).toHaveText(
-    "Lorem ipsum dolor sit, am…",
+    "Lorem ipsum dolor sit, am…"
   );
   await expect(combobox).toBeFocused();
 
@@ -119,13 +119,13 @@ test(`should be accessible`, async ({ mount, page }) => {
   // Check tag value
   await expect(page.getByTestId("combobox.tag.sage")).toBeVisible();
   await expect(page.getByTestId("combobox.tag.sage")).toHaveText(
-    "Lorem ipsum dolor sit, am…",
+    "Lorem ipsum dolor sit, am…"
   );
   await expect(page.getByTestId("combobox.tag.pink")).toBeVisible();
   await expect(page.getByTestId("combobox.tag.pink")).toHaveText("Gainsboro");
   await expect(page.getByTestId("combobox.tag.cornsilk")).toBeVisible();
   await expect(page.getByTestId("combobox.tag.cornsilk")).toHaveText(
-    "Cornsilk",
+    "Cornsilk"
   );
 
   // re open it and unselect middle value
@@ -137,11 +137,11 @@ test(`should be accessible`, async ({ mount, page }) => {
   // Check tag value
   await expect(page.getByTestId("combobox.tag.sage")).toBeVisible();
   await expect(page.getByTestId("combobox.tag.sage")).toHaveText(
-    "Lorem ipsum dolor sit, am…",
+    "Lorem ipsum dolor sit, am…"
   );
   await expect(page.getByTestId("combobox.tag.cornsilk")).toBeVisible();
   await expect(page.getByTestId("combobox.tag.cornsilk")).toHaveText(
-    "Cornsilk",
+    "Cornsilk"
   );
 
   await page.keyboard.press(KEYBOARD_KEYS.TAB);
@@ -183,7 +183,7 @@ test("should set custom data-testid", async ({ mount, page }) => {
 
   await expect(page.getByTestId("my_multiselect.listbox")).toBeVisible();
   await expect(
-    page.getByTestId("my_multiselect.combobox.tag.red"),
+    page.getByTestId("my_multiselect.combobox.tag.red")
   ).toBeVisible();
 
   // Hide
@@ -229,7 +229,7 @@ test("should hide list on click outside", async ({ mount, page }) => {
       }}
     >
       <MultiSelectTest />
-    </div>,
+    </div>
   );
   const combobox = page.getByRole("combobox");
   const box = (await combobox.boundingBox()) as {
@@ -284,11 +284,11 @@ test("should clear tags", async ({ mount, page }) => {
     // Click twice. First to close the list, second to clear the tags
     await page.mouse.click(
       buttonBox.x + buttonBox.width / 2,
-      buttonBox.y + buttonBox.height / 2,
+      buttonBox.y + buttonBox.height / 2
     );
     await page.mouse.click(
       buttonBox.x + buttonBox.width / 2,
-      buttonBox.y + buttonBox.height / 2,
+      buttonBox.y + buttonBox.height / 2
     );
   }
 
@@ -340,7 +340,7 @@ test("should clear input text on outside click", async ({ mount, page }) => {
       }}
     >
       <MultiSelectTest />
-    </div>,
+    </div>
   );
   const combobox = page.getByRole("combobox");
   await combobox.focus();
@@ -368,7 +368,7 @@ test("should show list clicking between tags and input", async ({
       }}
     >
       <MultiSelectTest defaultValue={["blue", "red", "yellow"]} />
-    </div>,
+    </div>
   );
 
   const tag = page.getByTestId("combobox.tag.red");
@@ -419,7 +419,7 @@ test("should not hide the list if shown on tag removal", async ({
   if (comboboxBox) {
     await page.mouse.click(
       comboboxBox.x + comboboxBox.width / 2,
-      comboboxBox.y + comboboxBox.height / 2,
+      comboboxBox.y + comboboxBox.height / 2
     );
   }
 
@@ -508,7 +508,7 @@ test("should display No results found message on empty search result", async ({
 
 test("should hover proper item on search", async ({ mount, page }) => {
   await mount(
-    <WithoutNoValueOption defaultValue={["pink", "purple", "maroon"]} />,
+    <WithoutNoValueOption defaultValue={["pink", "purple", "maroon"]} />
   );
 
   const combobox = page.getByRole("combobox");
@@ -543,7 +543,7 @@ test("should hover proper item on search", async ({ mount, page }) => {
   await expect(options[4]).toHaveText("Gainsboro");
   await expect(options[4]).toHaveAttribute("data-hovered", "true");
   await expect(options[5]).toHaveText(
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, pariatur?",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, pariatur?"
   );
   await expect(options[5]).toHaveAttribute("data-hovered", "false");
 
@@ -571,7 +571,7 @@ test("should hover proper item on search", async ({ mount, page }) => {
   await expect(options[7]).toHaveText("Gainsboro");
   await expect(options[7]).toHaveAttribute("data-hovered", "false");
   await expect(options[8]).toHaveText(
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, pariatur?",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, pariatur?"
   );
   await expect(options[8]).toHaveAttribute("data-hovered", "false");
 });
@@ -604,7 +604,7 @@ test("when hovering on truncated selected tag, tooltip should be visible", async
   await expect(tooltip).toBeVisible();
   await expect(tagText).toHaveAttribute("data-state", "open");
   await expect(tooltip).toHaveText(
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, pariatur?",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, pariatur?"
   );
 });
 
@@ -730,7 +730,7 @@ test("when open other elements should not be interactive", async ({
     await page.mouse.move(selectBox.x + selectBox.width / 2, selectBox.y + 10);
   }
   const selectIsHovered = await select.evaluate((element) =>
-    element.matches(":hover"),
+    element.matches(":hover")
   );
   expect(selectIsHovered).toBeFalsy();
 

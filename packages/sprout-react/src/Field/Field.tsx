@@ -56,7 +56,7 @@ function FieldBase(
     currentCount = 0,
     ...props
   }: FieldProps,
-  ref?: Ref<HTMLDivElement>,
+  ref?: Ref<HTMLDivElement>
 ) {
   return (
     <div className={styles.field} ref={ref} {...props}>

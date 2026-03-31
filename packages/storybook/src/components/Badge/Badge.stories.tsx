@@ -1,11 +1,6 @@
 import type { ReactNode } from "react";
 
-import {
-  Avatar,
-  Badge,
-  Button,
-  classNames,
-} from "@qlik/sprout-react";
+import { Avatar, Badge, Button, classNames } from "@qlik/sprout-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { BadgeArgTypes } from "./Badge.argTypes";
@@ -103,7 +98,7 @@ export const VisualTest: Story = {
         "border-box",
         "w-fit",
         "p-s",
-        "gap-m",
+        "gap-m"
       )}
       data-testid="wrapper"
     >

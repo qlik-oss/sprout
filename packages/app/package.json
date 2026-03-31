@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@qlik/sprout-css-modules": "workspace:*",
+    "@qlik/sprout-css-modules": "workspace:^",
     "@qlik/sprout-icons": "0.2.2",
-    "@qlik/sprout-react": "workspace:*",
+    "@qlik/sprout-react": "workspace:^",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

@@ -33,7 +33,7 @@ for (let i = 0; i < 1000; i++) {
       diam. Suspendisse nisi est, placerat a placerat vitae, mollis in est.
       Aliquam suscipit suscipit lacus, eu vestibulum ante consequat id. Donec
       diam velit, porta at elit a, pretium aliquam arcu.
-    </p>,
+    </p>
   );
 }
 
@@ -48,7 +48,7 @@ test("should not have overflow with small content", async ({ page, mount }) => {
       }
     >
       <p>Simple text</p>
-    </Modal>,
+    </Modal>
   );
   const modal = page.getByRole("dialog");
   await expect(modal).toBeVisible();
@@ -68,7 +68,7 @@ test("should have overflow with lots of content", async ({ page, mount }) => {
       }
     >
       {BIG_TEXT.map((t) => t)}
-    </Modal>,
+    </Modal>
   );
   const modal = page.getByRole("dialog");
   await expect(modal).toBeVisible();
@@ -86,7 +86,7 @@ test(`should be accessible`, async ({ mount, page }) => {
       id="component-testing"
     >
       {BIG_TEXT.map((t) => t)}
-    </Modal>,
+    </Modal>
   );
   // role="dialog"
   const modal = page.getByRole("dialog");
@@ -107,7 +107,7 @@ test(`should be accessible`, async ({ mount, page }) => {
   await expect(modal).toHaveAttribute("aria-labelledby", headerTitleId || "");
   await expect(modal).toHaveAttribute(
     "aria-describedby",
-    headerDescriptionId || "",
+    headerDescriptionId || ""
   );
 
   // should have theme provider dataset
@@ -119,7 +119,7 @@ test("should take the focus by default", async ({ mount, page }) => {
   await mount(
     <Modal headerTitle="Default Modal" visible preventEscaping>
       {BIG_TEXT.map((t) => t)}
-    </Modal>,
+    </Modal>
   );
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect(page.getByRole("dialog")).toBeFocused();
@@ -136,7 +136,7 @@ test("should close the modal on escape key", async ({ mount, page }) => {
       }}
     >
       {BIG_TEXT.map((t) => t)}
-    </Modal>,
+    </Modal>
   );
   const dialog = page.getByRole("dialog");
 
@@ -158,7 +158,7 @@ test("should not close if preventEscaping is true", async ({ mount, page }) => {
       }}
     >
       {BIG_TEXT.map((t) => t)}
-    </Modal>,
+    </Modal>
   );
 
   await page.keyboard.press(KEYBOARD_KEYS.ESCAPE);
@@ -176,7 +176,7 @@ test("should close the modal on backdrop click", async ({ mount, page }) => {
       }}
     >
       {BIG_TEXT.map((t) => t)}
-    </Modal>,
+    </Modal>
   );
 
   const backdrop = page.getByTestId("modal.backdrop");
@@ -200,7 +200,7 @@ test("should not close the modal on backdrop click while preventEscaping is true
       }}
     >
       {BIG_TEXT.map((t) => t)}
-    </Modal>,
+    </Modal>
   );
   expect(cache.called).toBe(false);
   const backdrop = page.getByTestId("modal.backdrop");
@@ -225,7 +225,7 @@ test("should display a checkbox on the left side of the footer", async ({
       }
     >
       Text
-    </Modal>,
+    </Modal>
   );
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect(page.getByRole("checkbox")).toBeVisible();
@@ -244,11 +244,11 @@ test("should display a button on the left side of the footer", async ({
       }
     >
       Text
-    </Modal>,
+    </Modal>
   );
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect(
-    page.getByRole("button").filter({ hasText: "Create" }),
+    page.getByRole("button").filter({ hasText: "Create" })
   ).toBeVisible();
 });
 
@@ -312,14 +312,14 @@ test("should set focus on child modal", async ({ mount, page }) => {
   await expect(modals[1].getByRole("textbox")).toBeVisible();
 
   await expect(
-    modals[0].getByRole("button", { name: "Close" }),
+    modals[0].getByRole("button", { name: "Close" })
   ).not.toBeFocused();
   await expect(modals[1].getByRole("button", { name: "Close" })).toBeFocused();
 
   await modals[1].getByRole("button", { name: "Close" }).click();
 
   await expect(
-    page.getByRole("button", { name: "Show second modal" }),
+    page.getByRole("button", { name: "Show second modal" })
   ).toBeFocused();
 });
 
@@ -334,13 +334,13 @@ test("when the modal is open, the body should not scroll", async ({
       defaultVisible
     >
       Text
-    </Modal>,
+    </Modal>
   );
   const modal = page.getByRole("dialog");
   await expect(modal).toBeVisible();
   const body = page.locator("body");
   const overscrollBehavior = await body.evaluate(
-    (el: HTMLElement) => getComputedStyle(el).overscrollBehavior,
+    (el: HTMLElement) => getComputedStyle(el).overscrollBehavior
   );
   expect(overscrollBehavior).toBe("none");
 });
@@ -355,7 +355,7 @@ test("should call onClose once on ESC even after re-render", async ({
       onClose={() => {
         calls.count += 1;
       }}
-    />,
+    />
   );
 
   const modal = page.getByRole("dialog");
@@ -383,7 +383,7 @@ test("should render the select in front of the modal", async ({
           <Select.Option value="3">Option 3</Select.Option>
         </Select.Select>
       </Modal>
-    </StrictMode>,
+    </StrictMode>
   );
   const modal = page.getByRole("dialog");
   await expect(modal).toBeVisible();
@@ -417,7 +417,7 @@ test("should Modal.Content with overflowY=auto trigger a scroll bar", async ({
           ))}
         </div>
       </Modal.Content>
-    </Modal.Root>,
+    </Modal.Root>
   );
   const dialogContent = page.getByTestId("modal.content");
   await expect(dialogContent).toBeVisible();
@@ -480,7 +480,7 @@ test("should Modal.Content with overflowY=hidden let the content manage overflow
           </div>
         </div>
       </Modal.Content>
-    </Modal.Root>,
+    </Modal.Root>
   );
   const dialogContent = page.getByTestId("modal.content");
   await expect(dialogContent).toBeVisible();
@@ -491,12 +491,12 @@ test("should Modal.Content with overflowY=hidden let the content manage overflow
   await expect(mainContent).toBeVisible();
 
   const sideNavOverflow = await sideNav.evaluate(
-    (el: HTMLElement) => getComputedStyle(el).overflowY,
+    (el: HTMLElement) => getComputedStyle(el).overflowY
   );
   expect(sideNavOverflow).toBe("visible");
 
   const mainContentOverflow = await mainContent.evaluate(
-    (el: HTMLElement) => getComputedStyle(el).overflowY,
+    (el: HTMLElement) => getComputedStyle(el).overflowY
   );
   expect(mainContentOverflow).toBe("auto");
   // check if it is scrollable
@@ -536,10 +536,10 @@ test("should modal comes after anything in the body", async ({
   // Check
   const portalIsAfterAddedElement = await page.evaluate(() => {
     const portal = document.documentElement.querySelector(
-      '[data-sprout-portal="true"]',
+      '[data-sprout-portal="true"]'
     );
     const addedElement = document.documentElement.querySelector(
-      '[data-testid="added-element"]',
+      '[data-testid="added-element"]'
     );
     if (!portal || !addedElement) {
       return null;
@@ -573,7 +573,7 @@ test("should be responsive to browser size changes", async ({
         </span>
       </Modal.Content>
       <Modal.Actions labelClose="bar" />
-    </Modal.Root>,
+    </Modal.Root>
   );
 
   const fooText = page.locator("text=foo");

@@ -1,14 +1,18 @@
 {
   "name": "@qlik/sprout-cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "CLI tools for Qlik Design System Sprout",
   "license": "MIT",
+  "bin": {
+    "sprout": "./sprout-cli.js"
+  },
   "type": "module",
   "exports": {
     ".": "./lib/index.js"
   },
-  "bin": {
-    "sprout": "./sprout-cli.js"
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "scripts": {
     "build": "tsup",
@@ -29,9 +33,5 @@
   },
   "engines": {
     "node": ">=20"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
   }
 }

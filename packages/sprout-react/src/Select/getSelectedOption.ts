@@ -37,7 +37,7 @@ function getUnwrapDisplayName(displayName?: string) {
  */
 export function getSelectedOption(
   children?: ReactNode,
-  selected?: string,
+  selected?: string
 ): Partial<SelectOptionProps> {
   if (!children) {
     return {};
@@ -93,7 +93,7 @@ type EmptyObject = {};
 
 export function getSelectedOptions(
   children?: ReactNode,
-  selected?: Array<string>,
+  selected?: Array<string>
 ): Record<string, SelectOptionProps> | EmptyObject {
   if (!children) {
     return {};
@@ -142,7 +142,7 @@ export function getSelectedOptions(
 
 export function getSelectedValueString(
   selectedProps: Record<string, SelectOptionProps>,
-  value: string,
+  value: string
 ): string {
   let label = value;
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition

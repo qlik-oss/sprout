@@ -45,13 +45,17 @@ ruleTester.run("logical-properties/no-physical-properties", rule, {
     // height -> blockSize
     {
       code: "function Component() { return <div style={{ height: '100px' }} />;}",
-      output: "function Component() { return <div style={{ blockSize: '100px' }} />;}",
-      errors: ["Use logical property 'blockSize' instead of physical property 'height'."],
+      output:
+        "function Component() { return <div style={{ blockSize: '100px' }} />;}",
+      errors: [
+        "Use logical property 'blockSize' instead of physical property 'height'.",
+      ],
     },
     // height + marginLeft
     {
       code: "function Component() { return <div style={{ height: '100px', marginLeft: '10px' }} />;}",
-      output: "function Component() { return <div style={{ blockSize: '100px', marginInlineStart: '10px' }} />;}",
+      output:
+        "function Component() { return <div style={{ blockSize: '100px', marginInlineStart: '10px' }} />;}",
       errors: [
         "Use logical property 'blockSize' instead of physical property 'height'.",
         "Use logical property 'marginInlineStart' instead of physical property 'marginLeft'.",
@@ -60,26 +64,38 @@ ruleTester.run("logical-properties/no-physical-properties", rule, {
     // width -> inlineSize
     {
       code: "function Component() { return <div style={{ width: '75%' }} />;}",
-      output: "function Component() { return <div style={{ inlineSize: '75%' }} />;}",
-      errors: ["Use logical property 'inlineSize' instead of physical property 'width'."],
+      output:
+        "function Component() { return <div style={{ inlineSize: '75%' }} />;}",
+      errors: [
+        "Use logical property 'inlineSize' instead of physical property 'width'.",
+      ],
     },
     // marginRight -> marginInlineEnd
     {
       code: "function Component() { return <div style={{ marginRight: '1rem' }} />;}",
-      output: "function Component() { return <div style={{ marginInlineEnd: '1rem' }} />;}",
-      errors: ["Use logical property 'marginInlineEnd' instead of physical property 'marginRight'."],
+      output:
+        "function Component() { return <div style={{ marginInlineEnd: '1rem' }} />;}",
+      errors: [
+        "Use logical property 'marginInlineEnd' instead of physical property 'marginRight'.",
+      ],
     },
     // paddingTop -> paddingBlockStart
     {
       code: "function Component() { return <div style={{ paddingTop: 10 }} />;}",
-      output: "function Component() { return <div style={{ paddingBlockStart: 10 }} />;}",
-      errors: ["Use logical property 'paddingBlockStart' instead of physical property 'paddingTop'."],
+      output:
+        "function Component() { return <div style={{ paddingBlockStart: 10 }} />;}",
+      errors: [
+        "Use logical property 'paddingBlockStart' instead of physical property 'paddingTop'.",
+      ],
     },
     // borderLeftWidth -> borderInlineStartWidth
     {
       code: "function Component() { return <div style={{ borderLeftWidth: 3 }} />;}",
-      output: "function Component() { return <div style={{ borderInlineStartWidth: 3 }} />;}",
-      errors: ["Use logical property 'borderInlineStartWidth' instead of physical property 'borderLeftWidth'."],
+      output:
+        "function Component() { return <div style={{ borderInlineStartWidth: 3 }} />;}",
+      errors: [
+        "Use logical property 'borderInlineStartWidth' instead of physical property 'borderLeftWidth'.",
+      ],
     },
     // left/top positioning -> insetInlineStart / insetBlockStart
     {

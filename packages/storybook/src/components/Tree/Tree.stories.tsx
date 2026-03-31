@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import {
   type ReactNode,
   createContext,
@@ -23,7 +22,7 @@ import {
   type ColumnDef,
   Table,
   type TableCellParams,
-} from "@qlik/sprout-table";
+} from "@qlik/sprout-react-table";
 import {
   CopyIcon,
   EditIcon,
@@ -175,7 +174,7 @@ const data: Array<TreeNode> = [
           "flex-row",
           "items-center",
           "justify-end",
-          "w-full",
+          "w-full"
         )}
       >
         <IconButton variant="quiet" icon={<CopyIcon />} aria-label="Copy" />
@@ -212,7 +211,7 @@ const data: Array<TreeNode> = [
             "bg-transparent",
             "cursor-pointer",
             "radius-round",
-            "outline-focus-visible-centered",
+            "outline-focus-visible-centered"
           )}
         >
           <InfoIcon />
@@ -230,7 +229,7 @@ const data: Array<TreeNode> = [
 
 function computeNodeSelectionState(
   data: Array<TreeNode>,
-  selectedNodeIds: Array<string>,
+  selectedNodeIds: Array<string>
 ): Record<string, SelectionState> {
   const selectedSet = new Set(selectedNodeIds);
   const nodeMap = new Map<string, TreeNode>();
@@ -260,7 +259,7 @@ function computeNodeSelectionState(
 
   // Step 2: Walk up tree to compute folders
   const sortedNodes = [...data].sort(
-    (a, b) => (b.path?.length ?? 0) - (a.path?.length ?? 0),
+    (a, b) => (b.path?.length ?? 0) - (a.path?.length ?? 0)
   );
 
   for (const node of sortedNodes) {
@@ -324,7 +323,7 @@ function MyListItem({
           "pl-l",
           "pr-l",
           "items-center",
-          "overflow-hidden",
+          "overflow-hidden"
         )}
       >
         <div className={classNames("flex", "w-fit")}>
@@ -360,7 +359,7 @@ function updateSelectedNodeIds(
   data: Array<TreeNode>,
   currentSelected: Array<string>,
   toggledNodeId: string,
-  isSelected: boolean,
+  isSelected: boolean
 ): Array<string> {
   const nodeMap = new Map<string, TreeNode>();
   const childrenMap = new Map<string, Array<string>>(); // parentId -> childIds
@@ -419,13 +418,13 @@ export const WithCheckbox = {
 
     const onCheck = (e: { id: string; checked: boolean }) => {
       const selectedNodesIds = Object.keys(treeSelected).filter(
-        (key) => treeSelected[key] === true,
+        (key) => treeSelected[key] === true
       );
       const newSelectedIds = updateSelectedNodeIds(
         data,
         selectedNodesIds,
         e.id,
-        e.checked,
+        e.checked
       );
       const newState = computeNodeSelectionState(data, newSelectedIds);
       setTreeSelected(newState);
@@ -504,17 +503,17 @@ export const WithCheckboxAndLongNames = {
 
     const onCheck = (e: { id: string; checked: boolean }) => {
       const selectedNodesIds = Object.keys(treeSelected).filter(
-        (key) => treeSelected[key] === true,
+        (key) => treeSelected[key] === true
       );
       const newSelectedIds = updateSelectedNodeIds(
         dataWithLongNames,
         selectedNodesIds,
         e.id,
-        e.checked,
+        e.checked
       );
       const newState = computeNodeSelectionState(
         dataWithLongNames,
-        newSelectedIds,
+        newSelectedIds
       );
       setTreeSelected(newState);
     };
@@ -561,7 +560,7 @@ function TreeCell({ row }: Pick<TableCellParams<TreeNode>, "row">) {
         "pl-l",
         "pr-l",
         "items-center",
-        "overflow-hidden",
+        "overflow-hidden"
       )}
       onClick={() => {
         context.onExpand?.(row.id, !safeExpanded);
