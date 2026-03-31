@@ -520,6 +520,9 @@ importers:
       '@qlik/sprout-css-modules':
         specifier: workspace:*
         version: link:../sprout-css-modules
+      '@qlik/sprout-gesture':
+        specifier: 0.0.2
+        version: 0.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@qlik/sprout-icons':
         specifier: 0.2.2
         version: 0.2.2(react@18.3.1)(vue@3.5.30(typescript@5.9.3))
@@ -2145,6 +2148,12 @@ packages:
     peerDependencies:
       eslint: '>=9.0.0'
       svelte: ^3.37.0 || ^4.0.0 || ^5.0.0
+
+  '@qlik/sprout-gesture@0.0.2':
+    resolution: {integrity: sha512-nuDz0duXmlgAx8CNjlKqGPOtmgE2jW8LaRz+sBv9+Uverx2y2Hyz/aKF4FFcXlHNcAOJ7j8u64GE1NvD2XGO5A==}
+    peerDependencies:
+      react: '>=18.2.0'
+      react-dom: '>=18.2.0'
 
   '@qlik/sprout-icons@0.2.2':
     resolution: {integrity: sha512-WT+uakWz2Z9zncaaZMpBIDlmb1E8ftb69pQbpMtW6qJU1nh/PxWB0Jy3TqxFjy8hT4/OWCwuoEcaVz+WRvghKg==}
@@ -8425,6 +8434,11 @@ snapshots:
       - ts-node
       - typescript
       - vitest
+
+  '@qlik/sprout-gesture@0.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   '@qlik/sprout-icons@0.2.2(react@18.3.1)(vue@3.5.30(typescript@5.9.3))':
     optionalDependencies:
