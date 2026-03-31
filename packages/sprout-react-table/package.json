@@ -43,8 +43,8 @@
   },
   "dependencies": {
     "@qlik/sprout-icons": "0.2.2",
-    "@qlik/sprout-react": "workspace:*",
-    "@qlik/sprout-react-hooks": "workspace:*",
+    "@qlik/sprout-react": "workspace:^",
+    "@qlik/sprout-react-hooks": "workspace:^",
     "@tanstack/react-table": "^8.21.3",
     "@tanstack/react-virtual": "^3.13.23"
   },
@@ -55,8 +55,8 @@
     "@faker-js/faker": "^10.4.0",
     "@playwright/experimental-ct-react": "^1.58.2",
     "@playwright/test": "^1.58.2",
-    "@qlik/design-tokens": "workspace:*",
-    "@qlik/eslint-config-sprout": "workspace:*",
+    "@qlik/design-tokens": "workspace:^",
+    "@qlik/eslint-config-sprout": "workspace:^",
     "@qlik/tsconfig": "^0.3.1",
     "@storybook/addon-a11y": "^10.3.3",
     "@storybook/addon-designs": "^11.1.3",

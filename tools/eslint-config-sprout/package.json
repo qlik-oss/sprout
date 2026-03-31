@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@qlik/eslint-config": "^1.4.26",
-    "@qlik/eslint-plugin-sprout": "workspace:*",
+    "@qlik/eslint-plugin-sprout": "workspace:^",
     "@typescript-eslint/eslint-plugin": "^8.57.2",
     "eslint-plugin-react": "^7.37.5"
   },

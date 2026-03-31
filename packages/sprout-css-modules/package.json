@@ -41,14 +41,14 @@
     "vitest:ui": "vitest --ui"
   },
   "dependencies": {
-    "@qlik/design-tokens": "workspace:*",
+    "@qlik/design-tokens": "workspace:^",
     "classnames": "^2.5.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^9.39.2",
-    "@qlik/eslint-config-sprout": "workspace:*",
-    "@qlik/stylelint-config-sprout": "workspace:*",
+    "@qlik/eslint-config-sprout": "workspace:^",
+    "@qlik/stylelint-config-sprout": "workspace:^",
     "@qlik/tsconfig": "^0.3.1",
     "@vitejs/plugin-react": "^6.0.1",
     "@vitest/ui": "^4.1.1",

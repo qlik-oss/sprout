@@ -21,7 +21,7 @@
     "copy": "cpx src/*.css lib/"
   },
   "dependencies": {
-    "@qlik/design-tokens": "workspace:*",
+    "@qlik/design-tokens": "workspace:^",
     "@storybook/react-vite": "^10.3.3",
     "source-code-pro": "^2.42.0",
     "source-sans-pro": "^3.6.0"

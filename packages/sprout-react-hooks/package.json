@@ -38,17 +38,17 @@
     "test:ui": "playwright test --ui"
   },
   "dependencies": {
-    "@qlik/design-tokens": "workspace:*",
-    "@qlik/sprout-css-modules": "workspace:*"
+    "@qlik/design-tokens": "workspace:^",
+    "@qlik/sprout-css-modules": "workspace:^"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.1",
     "@faker-js/faker": "^10.4.0",
     "@playwright/experimental-ct-react": "^1.58.2",
     "@playwright/test": "^1.58.2",
-    "@qlik/design-tokens": "workspace:*",
+    "@qlik/design-tokens": "workspace:^",
     "@qlik/eslint-config": "^1.4.26",
-    "@qlik/stylelint-config-sprout": "workspace:*",
+    "@qlik/stylelint-config-sprout": "workspace:^",
     "@qlik/tsconfig": "^0.3.1",
     "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",

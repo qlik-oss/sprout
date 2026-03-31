@@ -23,7 +23,7 @@
     "test:node": "node --test 'src/**/*.test.mjs'"
   },
   "dependencies": {
-    "@qlik/design-tokens": "workspace:*",
+    "@qlik/design-tokens": "workspace:^",
     "stylelint": "^17.5.0",
     "stylelint-plugin-logical-css": "^2.0.2"
   },

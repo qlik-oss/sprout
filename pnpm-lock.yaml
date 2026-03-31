@@ -39,13 +39,13 @@ importers:
   packages/app:
     dependencies:
       '@qlik/sprout-css-modules':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../sprout-css-modules
       '@qlik/sprout-icons':
         specifier: 0.2.2
         version: 0.2.2(react@18.3.1)(vue@3.5.30(typescript@5.9.3))
       '@qlik/sprout-react':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../sprout-react
       react:
         specifier: ^18.3.1
@@ -79,7 +79,7 @@ importers:
   packages/design-tokens:
     devDependencies:
       '@qlik/sprout-cli':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../tools/sprout-cli
       tsup:
         specifier: ^8.5.1
@@ -94,7 +94,7 @@ importers:
   packages/sprout-css-modules:
     dependencies:
       '@qlik/design-tokens':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../design-tokens
       classnames:
         specifier: ^2.5.1
@@ -107,10 +107,10 @@ importers:
         specifier: ^9.39.2
         version: 9.39.4
       '@qlik/eslint-config-sprout':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../tools/eslint-config-sprout
       '@qlik/stylelint-config-sprout':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../tools/stylelint-config-sprout
       '@qlik/tsconfig':
         specifier: ^0.3.1
@@ -170,16 +170,16 @@ importers:
         specifier: 0.27.19
         version: 0.27.19(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@qlik/design-tokens':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../design-tokens
       '@qlik/sprout-css-modules':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../sprout-css-modules
       '@qlik/sprout-icons':
         specifier: 0.2.2
         version: 0.2.2(react@18.3.1)(vue@3.5.30(typescript@5.9.3))
       '@qlik/sprout-react-hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../sprout-react-hooks
     devDependencies:
       '@axe-core/playwright':
@@ -204,10 +204,10 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       '@qlik/eslint-config-sprout':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../tools/eslint-config-sprout
       '@qlik/stylelint-config-sprout':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../tools/stylelint-config-sprout
       '@qlik/tsconfig':
         specifier: ^0.3.1
@@ -276,10 +276,10 @@ importers:
   packages/sprout-react-hooks:
     dependencies:
       '@qlik/design-tokens':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../design-tokens
       '@qlik/sprout-css-modules':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../sprout-css-modules
     devDependencies:
       '@axe-core/playwright':
@@ -298,7 +298,7 @@ importers:
         specifier: ^1.4.26
         version: 1.4.27(@typescript-eslint/eslint-plugin@8.57.2(@typescript-eslint/parser@8.57.2(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.57.2(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(svelte@4.2.18)(typescript@5.9.3)(vitest@4.1.2)
       '@qlik/stylelint-config-sprout':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../tools/stylelint-config-sprout
       '@qlik/tsconfig':
         specifier: ^0.3.1
@@ -358,10 +358,10 @@ importers:
         specifier: 0.2.2
         version: 0.2.2(react@18.3.1)(vue@3.5.30(typescript@5.9.3))
       '@qlik/sprout-react':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../sprout-react
       '@qlik/sprout-react-hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../sprout-react-hooks
       '@tanstack/react-table':
         specifier: ^8.21.3
@@ -389,10 +389,10 @@ importers:
         specifier: ^1.58.2
         version: 1.58.2
       '@qlik/design-tokens':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../design-tokens
       '@qlik/eslint-config-sprout':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../tools/eslint-config-sprout
       '@qlik/tsconfig':
         specifier: ^0.3.1
@@ -515,10 +515,10 @@ importers:
         specifier: ^1.2.3
         version: 1.2.3
       '@qlik/design-tokens':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../design-tokens
       '@qlik/sprout-css-modules':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../sprout-css-modules
       '@qlik/sprout-gesture':
         specifier: 0.0.2
@@ -527,16 +527,16 @@ importers:
         specifier: 0.2.2
         version: 0.2.2(react@18.3.1)(vue@3.5.30(typescript@5.9.3))
       '@qlik/sprout-react':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../sprout-react
       '@qlik/sprout-react-hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../sprout-react-hooks
       '@qlik/sprout-react-table':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../sprout-react-table
       '@qlik/sprout-storybook':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../tools/sprout-storybook
       '@tanstack/react-virtual':
         specifier: ^3.13.23
@@ -591,7 +591,7 @@ importers:
         specifier: ^1.4.27
         version: 1.4.27(@typescript-eslint/eslint-plugin@8.57.2(@typescript-eslint/parser@8.57.2(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.57.2(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(svelte@4.2.18)(typescript@5.9.3)(vitest@4.1.2)
       '@qlik/eslint-config-sprout':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../tools/eslint-config-sprout
       '@qlik/tsconfig':
         specifier: ^0.3.1
@@ -678,7 +678,7 @@ importers:
         specifier: ^1.4.26
         version: 1.4.27(@typescript-eslint/eslint-plugin@8.57.2(@typescript-eslint/parser@8.57.2(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.57.2(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(svelte@4.2.18)(typescript@5.9.3)(vitest@4.1.2)
       '@qlik/eslint-plugin-sprout':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../eslint-plugin-sprout
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.57.2
@@ -746,7 +746,7 @@ importers:
   tools/sprout-storybook:
     dependencies:
       '@qlik/design-tokens':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/design-tokens
       '@storybook/react-vite':
         specifier: ^10.3.3
@@ -792,7 +792,7 @@ importers:
   tools/stylelint-config-sprout:
     dependencies:
       '@qlik/design-tokens':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/design-tokens
       stylelint:
         specifier: ^17.5.0

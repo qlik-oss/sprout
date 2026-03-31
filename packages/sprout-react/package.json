@@ -43,10 +43,10 @@
   },
   "dependencies": {
     "@floating-ui/react": "0.27.19",
-    "@qlik/design-tokens": "workspace:*",
-    "@qlik/sprout-css-modules": "workspace:*",
+    "@qlik/design-tokens": "workspace:^",
+    "@qlik/sprout-css-modules": "workspace:^",
     "@qlik/sprout-icons": "0.2.2",
-    "@qlik/sprout-react-hooks": "workspace:*"
+    "@qlik/sprout-react-hooks": "workspace:^"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.1",
@@ -56,8 +56,8 @@
     "@playwright/experimental-ct-react": "^1.58.2",
     "@playwright/test": "^1.58.2",
     "@qlik/browserslist-config": "^3.0.0",
-    "@qlik/eslint-config-sprout": "workspace:*",
-    "@qlik/stylelint-config-sprout": "workspace:*",
+    "@qlik/eslint-config-sprout": "workspace:^",
+    "@qlik/stylelint-config-sprout": "workspace:^",
     "@qlik/tsconfig": "^0.3.1",
     "@types/node": "^24.12.0",
     "@types/react": "^19.2.14",
