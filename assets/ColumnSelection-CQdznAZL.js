@@ -1,8 +1,0 @@
-import{n as e}from"./chunk-BneVvdWh.js";import{r as t}from"./react-Lc6HZYGU.js";import{Fn as n,i as r,l as i,n as a,s as o}from"./iframe-RiXBydPV.js";import{t as s}from"./mdx-react-shim-Cw1WyOhr.js";import{t as c}from"./ListTable.stories-BTqrwU1i.js";import{ColumnSelection as l,t as u}from"./DataTable.stories-DpSkvHvD.js";function d(e){let n={code:`code`,h1:`h1`,h2:`h2`,p:`p`,...t(),...e.components};return(0,p.jsxs)(p.Fragment,{children:[(0,p.jsx)(o,{title:`Table/Docs/Columns/column selection`}),`
-`,(0,p.jsx)(n.h1,{id:`column-selection`,children:`Column selection`}),`
-`,(0,p.jsx)(n.p,{children:`Column selection allows users to select one or more columns in a table. This can be useful for various purposes, such as highlighting important data or enabling actions on selected columns.`}),`
-`,(0,p.jsx)(n.h2,{id:`enabling-column-selection`,children:`Enabling column selection`}),`
-`,(0,p.jsxs)(n.p,{children:[`To enable column selection, you need to set the `,(0,p.jsx)(n.code,{children:`columnSelectionMode`}),` prop on the `,(0,p.jsx)(n.code,{children:`Table`}),` component. This prop can take two values: `,(0,p.jsx)(n.code,{children:`single`}),` or `,(0,p.jsx)(n.code,{children:`multiple`}),`.
-Then you can push your controlled state into it. To make it easier to use with typescript both states can be pushed but only one will be used:`]}),`
-`,(0,p.jsx)(r,{of:l}),`
-`,(0,p.jsx)(a,{of:l})]})}function f(e={}){let{wrapper:n}={...t(),...e.components};return n?(0,p.jsx)(n,{...e,children:(0,p.jsx)(d,{...e})}):d(e)}var p;e((()=>{p=n(),s(),i(),c(),u()}))();export{f as default};

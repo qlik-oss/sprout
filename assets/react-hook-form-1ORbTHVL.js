@@ -1,5 +1,0 @@
-import{n as e}from"./chunk-BneVvdWh.js";import{r as t}from"./react-Lc6HZYGU.js";import{Fn as n,l as r,n as i,s as a}from"./iframe-RiXBydPV.js";import{t as o}from"./mdx-react-shim-Cw1WyOhr.js";import{Form as s,t as c}from"./react-hook-form.stories-BQcjgh_q.js";function l(e){let n={a:`a`,p:`p`,...t(),...e.components};return(0,d.jsxs)(d.Fragment,{children:[(0,d.jsx)(a,{title:`Integration/react-hook-form`}),`
-`,(0,d.jsxs)(n.p,{children:[(0,d.jsx)(n.a,{href:`https://react-hook-form.com/`,rel:`nofollow`,children:`react-hook-form`}),` is Performant, flexible and extensible forms with easy-to-use validation.`]}),`
-`,(0,d.jsx)(n.p,{children:`It is a great library to use in your application with react.`}),`
-`,(0,d.jsx)(n.p,{children:`You can find here a demo of the current integration of react-hook-form with Sprout.`}),`
-`,(0,d.jsx)(i,{of:s})]})}function u(e={}){let{wrapper:n}={...t(),...e.components};return n?(0,d.jsx)(n,{...e,children:(0,d.jsx)(l,{...e})}):l(e)}var d;e((()=>{d=n(),o(),r(),c()}))();export{u as default};

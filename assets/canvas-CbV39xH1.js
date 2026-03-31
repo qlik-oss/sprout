@@ -1,0 +1,5 @@
+import{n as e}from"./chunk-BneVvdWh.js";import{r as t}from"./react-jHDfyI4s.js";import{Ln as n,l as r,n as i,s as a}from"./iframe-B0xl5hqz.js";import{t as o}from"./mdx-react-shim-C5WuC5zb.js";import{Canvas as s,t as c}from"./canvas.stories-BD_wvnJv.js";function l(e){let n={a:`a`,p:`p`,...t(),...e.components};return(0,d.jsxs)(d.Fragment,{children:[(0,d.jsx)(a,{title:`Integration/canvas`}),`
+`,(0,d.jsxs)(n.p,{children:[(0,d.jsx)(n.a,{href:`https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas`,rel:`nofollow`,children:`canvas`}),` The Graphics Canvas HTML element.`]}),`
+`,(0,d.jsx)(n.p,{children:`It is a powerfull tool to create custom rendering on the web.`}),`
+`,(0,d.jsx)(n.p,{children:`You can find here a demo of the current integration of canvas with Sprout.`}),`
+`,(0,d.jsx)(i,{of:s})]})}function u(e={}){let{wrapper:n}={...t(),...e.components};return n?(0,d.jsx)(n,{...e,children:(0,d.jsx)(l,{...e})}):l(e)}var d;e((()=>{d=n(),o(),r(),c()}))();export{u as default};

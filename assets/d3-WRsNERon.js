@@ -1,0 +1,5 @@
+import{n as e}from"./chunk-BneVvdWh.js";import{r as t}from"./react-jHDfyI4s.js";import{Ln as n,l as r,n as i,s as a}from"./iframe-B0xl5hqz.js";import{t as o}from"./mdx-react-shim-C5WuC5zb.js";import{BarChartDemo as s,t as c}from"./d3.stories-WNpWUfyg.js";function l(e){let n={a:`a`,p:`p`,...t(),...e.components};return(0,d.jsxs)(d.Fragment,{children:[(0,d.jsx)(a,{title:`Integration/d3`}),`
+`,(0,d.jsxs)(n.p,{children:[(0,d.jsx)(n.a,{href:`https://d3js.org/`,rel:`nofollow`,children:`D3`}),` is The JavaScript library for bespoke data visualization`]}),`
+`,(0,d.jsx)(n.p,{children:`It is a great library to use in your application with or without react.`}),`
+`,(0,d.jsx)(n.p,{children:`You can find here a demo of the current integration of d3 with Sprout.`}),`
+`,(0,d.jsx)(i,{of:s})]})}function u(e={}){let{wrapper:n}={...t(),...e.components};return n?(0,d.jsx)(n,{...e,children:(0,d.jsx)(l,{...e})}):l(e)}var d;e((()=>{d=n(),o(),r(),c()}))();export{u as default};

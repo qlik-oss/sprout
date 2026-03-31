@@ -1,0 +1,8 @@
+import{n as e}from"./chunk-BneVvdWh.js";import{r as t}from"./react-jHDfyI4s.js";import{Ln as n,i as r,l as i,n as a,s as o}from"./iframe-B0xl5hqz.js";import{t as s}from"./mdx-react-shim-C5WuC5zb.js";import{t as c}from"./DataTable.stories-BafCGHBW.js";import{Pagination as l,t as u}from"./ListTable.stories-yabvCW8q.js";function d(e){let n={h2:`h2`,p:`p`,...t(),...e.components};return(0,p.jsxs)(p.Fragment,{children:[(0,p.jsx)(o,{title:`table/Pagination`}),`
+`,(0,p.jsx)(n.h2,{id:`pagination`,children:`Pagination`}),`
+`,(0,p.jsx)(n.p,{children:`Pagination is a technique used to divide large datasets into smaller, more manageable chunks or pages.
+In the context of the table component, pagination allows users to navigate through large sets of data without overwhelming the interface or causing performance issues.`}),`
+`,(0,p.jsx)(n.p,{children:`In the current implementation, pagination is achieved through a combination using infinite scrolling and traditional pagination controls on touch devices, ensuring a smooth user experience across different devices.
+On a touch enabled device, a "Load more" button will appear at the bottom of the table to allow users to load additional rows manually. Otherwise, as the user scrolls down the table, more rows will be automatically loaded when they reach the bottom of the current view.`}),`
+`,(0,p.jsx)(a,{of:l}),`
+`,(0,p.jsx)(r,{of:l})]})}function f(e={}){let{wrapper:n}={...t(),...e.components};return n?(0,p.jsx)(n,{...e,children:(0,p.jsx)(d,{...e})}):d(e)}var p;e((()=>{p=n(),s(),i(),c(),u()}))();export{f as default};
