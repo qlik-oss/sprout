@@ -521,8 +521,8 @@ importers:
         specifier: workspace:^
         version: link:../sprout-css-modules
       '@qlik/sprout-gesture':
-        specifier: 0.0.2
-        version: 0.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 0.0.4
+        version: 0.0.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@qlik/sprout-icons':
         specifier: 0.2.2
         version: 0.2.2(react@18.3.1)(vue@3.5.30(typescript@5.9.3))
@@ -2149,8 +2149,8 @@ packages:
       eslint: '>=9.0.0'
       svelte: ^3.37.0 || ^4.0.0 || ^5.0.0
 
-  '@qlik/sprout-gesture@0.0.2':
-    resolution: {integrity: sha512-nuDz0duXmlgAx8CNjlKqGPOtmgE2jW8LaRz+sBv9+Uverx2y2Hyz/aKF4FFcXlHNcAOJ7j8u64GE1NvD2XGO5A==}
+  '@qlik/sprout-gesture@0.0.4':
+    resolution: {integrity: sha512-ahRycoF+DhE7EYe7QcYUZsqHABjib0TNabLaKDL3HBB3NwpXXIrdo3X86Bodjw1dzVZYIk5mWkuOKFgeg8dDhA==}
     peerDependencies:
       react: '>=18.2.0'
       react-dom: '>=18.2.0'
@@ -3473,6 +3473,7 @@ packages:
   basic-ftp@5.2.0:
     resolution: {integrity: sha512-VoMINM2rqJwJgfdHq6RiUudKt2BV+FY5ZFezP/ypmwayk68+NzzAQy4XXLlqsGD4MCzq3DrmNFD/uUmBJuGoXw==}
     engines: {node: '>=10.0.0'}
+    deprecated: Security vulnerability fixed in 5.2.1, please upgrade
 
   before-after-hook@4.0.0:
     resolution: {integrity: sha512-q6tR3RPqIB1pMiTRMFcZwuG5T8vwp+vUvEG0vuI6B+Rikh5BfPp2fQ82c925FOs+b0lcFQ8CFrL+KbilfZFhOQ==}
@@ -8435,7 +8436,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@qlik/sprout-gesture@0.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@qlik/sprout-gesture@0.0.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
