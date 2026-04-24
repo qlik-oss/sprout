@@ -30,7 +30,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^10.0.1",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.0",
     "eslint-plugin-import": "^2.32.0",
     "stylelint-test-rule-node": "^1.1.0"
   }
