@@ -1,13 +1,11 @@
 // for demo purpose do not rely on those two files
 import { StrictMode, useEffect, useState } from "react";
 import { MINIMAL_VIEWPORTS, type ViewportMap } from "storybook/viewport";
+import "@qlik/design-tokens/dist/css/sprout-tokens.css";
+import "source-code-pro/source-code-pro.css";
+import "source-sans-pro/source-sans-pro.css";
 
 import { ThemeProvider as SproutThemeProvider } from "@qlik/sprout-react";
-import {
-  getSproutGlobalTypes,
-  getSproutIntialGlobals,
-  sproutCSSDecorator,
-} from "@qlik/sprout-storybook";
 import {
   Controls,
   Description,
@@ -58,7 +56,6 @@ const CUSTOM_VIEWPORTS: ViewportMap = {
 
 const preview: Preview = {
   decorators: [
-    sproutCSSDecorator,
     (Story, context) => {
       const [lang, setLang] = useState(context.globals.locale);
       const [previewTheme, setPreviewTheme] = useState<
@@ -82,10 +79,6 @@ const preview: Preview = {
 
         if (typeof document !== "undefined") {
           document.body.style.backgroundColor = newBgColor;
-          document.body.setAttribute(
-            "data-qlik-appearance",
-            `qlik-${appearance}`
-          );
           document.body.setAttribute("data-qlik-theme", `qlik-${appearance}`);
         }
       }, [context.globals.mode, previewTheme]);
@@ -167,7 +160,6 @@ const preview: Preview = {
     },
   },
   initialGlobals: {
-    ...getSproutIntialGlobals({ appearance: false }),
     ...getInitialMode(),
     locale: "en",
   },
@@ -183,7 +175,6 @@ const preview: Preview = {
         ],
       },
     },
-    ...getSproutGlobalTypes({ appearance: false }),
     locale: {
       description: "Internationalization locale",
       toolbar: {

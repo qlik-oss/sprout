@@ -11,7 +11,7 @@ import {
   useState,
 } from "react";
 
-import sproutTokens from "@qlik/design-tokens/generated/tokens/json/sprout-tokens.json";
+import sproutTokens from "@qlik/design-tokens/dist/json/sprout-tokens.json";
 import sprout from "@qlik/sprout-css-modules";
 import {
   TextField,

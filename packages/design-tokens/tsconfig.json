@@ -1,5 +1,0 @@
-{
-  "extends": "@qlik/tsconfig/recommended.json",
-  "include": [".*", "./**/*"],
-  "exclude": ["node_modules", "lib"]
-}
