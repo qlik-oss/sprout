@@ -80,10 +80,6 @@ const preview: Preview = {
 
         if (typeof document !== "undefined") {
           document.body.style.backgroundColor = newBgColor;
-          document.body.setAttribute(
-            "data-qlik-appearance",
-            `qlik-${appearance}`
-          );
           document.body.setAttribute("data-qlik-theme", `qlik-${appearance}`);
         }
       }, [context.globals.mode, previewTheme]);
