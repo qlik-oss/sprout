@@ -5,7 +5,6 @@ import "@qlik/design-tokens/dist/css/sprout-tokens.css";
 import "source-code-pro/source-code-pro.css";
 import "source-sans-pro/source-sans-pro.css";
 
-
 import { ThemeProvider as SproutThemeProvider } from "@qlik/sprout-react";
 import {
   Controls,
