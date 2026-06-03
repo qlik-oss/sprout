@@ -1,8 +1,0 @@
-.clickable {
-  color: currentcolor;
-}
-
-.clickable:focus-visible {
-  outline: var(--sprout-focus-border-default);
-  border-radius: var(--sprout-common-border-radius-subtle);
-}
