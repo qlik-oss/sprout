@@ -25,7 +25,7 @@
     "prepare-release": "changeset",
     "publish-packages": "changeset publish",
     "storybook:build": "turbo run storybook:build",
-    "storybook:start": "concurrently \"pnpm run build:watch\" \"pnpm --filter @qlik/storybook start\"",
+    "storybook:start": "pnpm --filter @qlik/storybook start",
     "test:node": "turbo run test:node",
     "test:playwright": "turbo run test:playwright --concurrency 1",
     "test:vitest": "turbo run test:vitest"

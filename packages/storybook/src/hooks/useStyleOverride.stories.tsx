@@ -1,5 +1,5 @@
 import { tokens } from "@qlik/design-tokens";
-import tokenData from "@qlik/design-tokens/generated/tokens/json/sprout-tokens.json";
+import tokenData from "@qlik/design-tokens/dist/json/sprout-tokens.json";
 import { useStyleOverride } from "@qlik/sprout-react-hooks";
 
 type TokenKey = keyof typeof tokens;
