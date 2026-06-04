@@ -75,6 +75,6 @@
     "storybook": "^10.3.3",
     "storybook-addon-pseudo-states": "^10.3.3",
     "storybook-addon-rtl": "^3.0.1",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.0"
   }
 }
