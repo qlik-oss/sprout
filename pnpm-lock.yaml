@@ -164,8 +164,8 @@ importers:
         specifier: ^1.4.27
         version: 1.4.27(@typescript-eslint/eslint-plugin@8.57.2(@typescript-eslint/parser@8.57.2(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.57.2(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(svelte@4.2.18)(typescript@5.9.3)(vitest@4.1.2)
       '@qlik/tsconfig':
-        specifier: ^0.3.1
-        version: 0.3.1
+        specifier: ^1.0.0
+        version: 1.0.0
       '@storybook/addon-a11y':
         specifier: ^10.3.3
         version: 10.3.3(storybook@10.3.3(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
@@ -1220,8 +1220,8 @@ packages:
       react: '>=18.2.0'
       react-dom: '>=18.2.0'
 
-  '@qlik/tsconfig@0.3.1':
-    resolution: {integrity: sha512-ue4DK/EV9RWBKfuuiwgVKd7oSr0+lhggv2fKHYeTLQFnTHgH2X/1fuh/32Fesm6XIJfwtcE7Fmy3S7rSS5patA==}
+  '@qlik/tsconfig@1.0.0':
+    resolution: {integrity: sha512-cQ4oeS7d5QxFUg/wn4zLOpOAGmZ1LXCc1wwvVpIb3sVgu4UsNzZsjmo0z5VkEnD/Fre3/oFJECAE5iN3rYlmwA==}
 
   '@rolldown/binding-android-arm64@1.0.0-rc.12':
     resolution: {integrity: sha512-pv1y2Fv0JybcykuiiD3qBOBdz6RteYojRFY1d+b95WVuzx211CRh+ytI/+9iVyWQ6koTh5dawe4S/yRfOFjgaA==}
@@ -5636,7 +5636,7 @@ snapshots:
     transitivePeerDependencies:
       - vue
 
-  '@qlik/tsconfig@0.3.1': {}
+  '@qlik/tsconfig@1.0.0': {}
 
   '@rolldown/binding-android-arm64@1.0.0-rc.12':
     optional: true

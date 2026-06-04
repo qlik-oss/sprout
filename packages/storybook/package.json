@@ -48,7 +48,7 @@
     "@playwright/experimental-ct-react": "^1.58.2",
     "@playwright/test": "^1.58.2",
     "@qlik/eslint-config": "^1.4.27",
-    "@qlik/tsconfig": "^0.3.1",
+    "@qlik/tsconfig": "^1.0.0",
     "@storybook/addon-a11y": "^10.3.3",
     "@storybook/addon-designs": "^11.1.3",
     "@storybook/addon-docs": "^10.3.3",
