@@ -97,8 +97,8 @@ importers:
         specifier: ^6.43.6
         version: 6.43.6
       '@qlik/sprout-gesture':
-        specifier: 0.0.2
-        version: 0.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 0.0.8
+        version: 0.0.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@qlik/sprout-icons':
         specifier: 0.2.2
         version: 0.2.2(react@18.3.1)(vue@3.5.30(typescript@5.9.3))
@@ -1190,8 +1190,8 @@ packages:
   '@qlik/sprout-css-modules@6.43.6':
     resolution: {integrity: sha512-S1U0z0I7cS7t4Q6tAw1XgtDBCXSOipL5YKh5hoZa6zy1KkOONkBQHVsgF43waBuMUZKnrrp0DkXF6tLI/xuIuA==}
 
-  '@qlik/sprout-gesture@0.0.2':
-    resolution: {integrity: sha512-nuDz0duXmlgAx8CNjlKqGPOtmgE2jW8LaRz+sBv9+Uverx2y2Hyz/aKF4FFcXlHNcAOJ7j8u64GE1NvD2XGO5A==}
+  '@qlik/sprout-gesture@0.0.8':
+    resolution: {integrity: sha512-rNAUjKCMsAUXrk4PRdi5bJkxnYEYQbYQtRrfyoaXCrfFkoyktPieMnjBO0ETc0PT/a2L1KuRRmPJCFJU+MR6qg==}
     peerDependencies:
       react: '>=18.2.0'
       react-dom: '>=18.2.0'
@@ -5597,7 +5597,7 @@ snapshots:
       '@qlik/design-tokens': 1.3.4
       classnames: 2.5.1
 
-  '@qlik/sprout-gesture@0.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@qlik/sprout-gesture@0.0.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
