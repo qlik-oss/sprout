@@ -24,7 +24,7 @@
     "@lezer/highlight": "^1.2.3",
     "@qlik/design-tokens": "^1.3.4",
     "@qlik/sprout-css-modules": "^6.43.6",
-    "@qlik/sprout-gesture": "0.0.2",
+    "@qlik/sprout-gesture": "0.0.8",
     "@qlik/sprout-icons": "0.2.2",
     "@qlik/sprout-react": "^6.45.2",
     "@qlik/sprout-react-hooks": "^1.2.8",
