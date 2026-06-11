@@ -42,8 +42,8 @@ importers:
         specifier: ^6.43.6
         version: 6.43.6
       '@qlik/sprout-icons':
-        specifier: 0.2.2
-        version: 0.2.2(react@18.3.1)(vue@3.5.30(typescript@5.9.3))
+        specifier: 0.11.0
+        version: 0.11.0
       '@qlik/sprout-react':
         specifier: ^6.45.2
         version: 6.45.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vue@3.5.30(typescript@5.9.3))
@@ -100,8 +100,8 @@ importers:
         specifier: 0.0.2
         version: 0.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@qlik/sprout-icons':
-        specifier: 0.2.2
-        version: 0.2.2(react@18.3.1)(vue@3.5.30(typescript@5.9.3))
+        specifier: 0.11.0
+        version: 0.11.0
       '@qlik/sprout-react':
         specifier: ^6.45.2
         version: 6.45.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vue@3.5.30(typescript@5.9.3))
@@ -1195,6 +1195,9 @@ packages:
     peerDependencies:
       react: '>=18.2.0'
       react-dom: '>=18.2.0'
+
+  '@qlik/sprout-icons@0.11.0':
+    resolution: {integrity: sha512-wP/iKMqs3ApzzpssOacuCRT0OANb4fKJ8JecW7e+5ZvI58083WE2gs5tUcGJUSNNfq+P5dPIxNzkktd7i+3B+Q==}
 
   '@qlik/sprout-icons@0.2.2':
     resolution: {integrity: sha512-WT+uakWz2Z9zncaaZMpBIDlmb1E8ftb69pQbpMtW6qJU1nh/PxWB0Jy3TqxFjy8hT4/OWCwuoEcaVz+WRvghKg==}
@@ -5601,6 +5604,8 @@ snapshots:
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
+
+  '@qlik/sprout-icons@0.11.0': {}
 
   '@qlik/sprout-icons@0.2.2(react@18.3.1)(vue@3.5.30(typescript@5.9.3))':
     optionalDependencies:
