@@ -12,7 +12,7 @@ runs:
   using: "composite"
   steps:
     - name: Cache asdf
-      uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+      uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
       with:
         path: |
           ~/.asdf/
@@ -22,7 +22,7 @@ runs:
           ${{ runner.os }}-asdf-v0.18.0
 
     - name: Cache for Turbo
-      uses: rharkor/caching-for-turbo@0abc2381e688c4d2832f0665a68a01c6e82f0d6c #v2.3.11
+      uses: rharkor/caching-for-turbo@75f8ebf4a43d2c60b23bc2a27082cfea94ffdad9 # v2.5.0
 
     - name: Install asdf & tools
       uses: asdf-vm/actions/install@b7bcd026f18772e44fe1026d729e1611cc435d47 # v4.0.1
