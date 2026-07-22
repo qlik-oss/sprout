@@ -1,0 +1,5 @@
+import{n as e}from"./rolldown-runtime-DaJ6WEGw.js";import{h as t,l as n,n as r}from"./blocks-CCeqoOOO.js";import{t as i}from"./jsx-runtime-Bq1bXGty.js";import{i as a}from"./react-BnCtKaSV.js";import{t as o}from"./mdx-react-shim-9RzcSRdq.js";import{BarChartDemo as s,t as c}from"./d3.stories-D8OO5aBg.js";function l(e){let t={a:`a`,p:`p`,...a(),...e.components};return(0,d.jsxs)(d.Fragment,{children:[(0,d.jsx)(n,{title:`Integration/d3`}),`
+`,(0,d.jsxs)(t.p,{children:[(0,d.jsx)(t.a,{href:`https://d3js.org/`,rel:`nofollow`,children:`D3`}),` is The JavaScript library for bespoke data visualization`]}),`
+`,(0,d.jsx)(t.p,{children:`It is a great library to use in your application with or without react.`}),`
+`,(0,d.jsx)(t.p,{children:`You can find here a demo of the current integration of d3 with Sprout.`}),`
+`,(0,d.jsx)(r,{of:s})]})}function u(e={}){let{wrapper:t}={...a(),...e.components};return t?(0,d.jsx)(t,{...e,children:(0,d.jsx)(l,{...e})}):l(e)}var d;e((()=>{d=i(),o(),t(),c()}))();export{u as default};

@@ -1,0 +1,53 @@
+import{n as e}from"./rolldown-runtime-DaJ6WEGw.js";import{h as t,i as n,l as r,n as i}from"./blocks-CCeqoOOO.js";import{t as a}from"./jsx-runtime-Bq1bXGty.js";import{i as o}from"./react-BnCtKaSV.js";import{t as s}from"./mdx-react-shim-9RzcSRdq.js";import{Basic as c,t as l}from"./Breadcrumb.stories-BQmsV_oq.js";function u(e){let t={a:`a`,code:`code`,h1:`h1`,h2:`h2`,li:`li`,p:`p`,pre:`pre`,ul:`ul`,...o(),...e.components};return(0,f.jsxs)(f.Fragment,{children:[(0,f.jsx)(r,{title:`Components/Breadcrumb`}),`
+`,(0,f.jsx)(t.h1,{id:`breadcrumb`,children:`Breadcrumb`}),`
+`,(0,f.jsxs)(t.p,{children:[`A breadcrumb is a navigational UI for hierarchical content.
+The `,(0,f.jsx)(t.code,{children:`Breadcrumb`}),` component extends the native `,(0,f.jsx)(t.a,{href:`https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav`,rel:`nofollow`,children:`HTML nav element`}),` attributes, so all standard navigation landmark properties are supported.`]}),`
+`,(0,f.jsx)(t.h2,{id:`usage`,children:`Usage`}),`
+`,(0,f.jsx)(t.pre,{children:(0,f.jsx)(t.code,{className:`language-tsx`,children:`import { Breadcrumb, BreadcrumbItem, Link } from "@qlik/sprout-react";
+
+<Breadcrumb
+  items={[
+    {
+      label: "Root",
+      href: "/",
+    },
+    {
+      label: "Folder",
+      href: "/folder",
+    },
+    {
+      label: "Page",
+      href: "/page",
+    },
+  ]}
+/>
+
+// Both examples are equivalent and valid but note that you need
+// to add the \`aria-current="page"\` attribute on the last link.
+
+<Breadcrumb>
+    <BreadcrumbItem>
+      <Link href="/">Home</Link>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      <Link href="/folder">Folder</Link>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      <Link href="/folder/mypage" aria-current="page">
+        current page
+      </Link>
+    </BreadcrumbItem>
+</Breadcrumb>
+`})}),`
+`,(0,f.jsx)(t.h2,{id:`properties`,children:`Properties`}),`
+`,(0,f.jsx)(i,{of:c}),`
+`,(0,f.jsx)(n,{of:c}),`
+`,(0,f.jsx)(t.h2,{id:`accessibility`,children:`Accessibility`}),`
+`,(0,f.jsxs)(t.p,{children:[`The `,(0,f.jsx)(t.code,{children:`composition`}),` API doesn't add the needed attribute to respect the accessibility spec, so please consider that great powers comes with responsibilities.`]}),`
+`,(0,f.jsx)(t.p,{children:(0,f.jsx)(t.a,{href:`https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/`,rel:`nofollow`,children:`W3/WAI/ARIA/APG Breadcrumb`})}),`
+`,(0,f.jsxs)(t.p,{children:[`The current component use the `,(0,f.jsx)(t.code,{children:`Link`}),` component so refer to it for the corresponding accessibility questions.`]}),`
+`,(0,f.jsxs)(t.ul,{children:[`
+`,(0,f.jsx)(t.li,{children:`The set of Links is structured using an ordered list.`}),`
+`,(0,f.jsx)(t.li,{children:`The Breadcrumb (nav element) is labeled Breadcrumb identifies the structure as a breadcrumb trail and makes it a navigation landmark so that it is easy to locate.`}),`
+`,(0,f.jsx)(t.li,{children:`The Link to the current page has aria-current set to page. If the element representing the current page is not a link, aria-current is optional.`}),`
+`]})]})}function d(e={}){let{wrapper:t}={...o(),...e.components};return t?(0,f.jsx)(t,{...e,children:(0,f.jsx)(u,{...e})}):u(e)}var f;e((()=>{f=a(),s(),t(),l()}))();export{d as default};

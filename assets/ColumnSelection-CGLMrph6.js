@@ -1,0 +1,8 @@
+import{n as e}from"./rolldown-runtime-DaJ6WEGw.js";import{h as t,i as n,l as r,n as i}from"./blocks-CCeqoOOO.js";import{t as a}from"./jsx-runtime-Bq1bXGty.js";import{i as o}from"./react-BnCtKaSV.js";import{t as s}from"./mdx-react-shim-9RzcSRdq.js";import{ColumnSelection as c,t as l}from"./DataTable.stories-D5kIkkjc.js";import{t as u}from"./ListTable.stories-BP4VZRQb.js";function d(e){let t={code:`code`,h1:`h1`,h2:`h2`,p:`p`,...o(),...e.components};return(0,p.jsxs)(p.Fragment,{children:[(0,p.jsx)(r,{title:`table/Columns/column selection`}),`
+`,(0,p.jsx)(t.h1,{id:`column-selection`,children:`Column selection`}),`
+`,(0,p.jsx)(t.p,{children:`Column selection allows users to select one or more columns in a table. This can be useful for various purposes, such as highlighting important data or enabling actions on selected columns.`}),`
+`,(0,p.jsx)(t.h2,{id:`enabling-column-selection`,children:`Enabling column selection`}),`
+`,(0,p.jsxs)(t.p,{children:[`To enable column selection, you need to set the `,(0,p.jsx)(t.code,{children:`columnSelectionMode`}),` prop on the `,(0,p.jsx)(t.code,{children:`Table`}),` component. This prop can take two values: `,(0,p.jsx)(t.code,{children:`single`}),` or `,(0,p.jsx)(t.code,{children:`multiple`}),`.
+Then you can push your controlled state into it. To make it easier to use with typescript both states can be pushed but only one will be used:`]}),`
+`,(0,p.jsx)(n,{of:c}),`
+`,(0,p.jsx)(i,{of:c})]})}function f(e={}){let{wrapper:t}={...o(),...e.components};return t?(0,p.jsx)(t,{...e,children:(0,p.jsx)(d,{...e})}):d(e)}var p;e((()=>{p=a(),s(),t(),l(),u()}))();export{f as default};
