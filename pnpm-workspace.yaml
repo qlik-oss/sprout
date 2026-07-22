@@ -1,2 +1,17 @@
 packages:
   - "packages/*"
+
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
+
+minimumReleaseAgeExclude:
+  - "@qlik/design-tokens"
+  - "@qlik/sprout-gesture"
+  - "postcss"
+
+updateConfig:
+  ignoreDependencies:
+    - "eslint"
+    - "react"
+    - "react-dom"
