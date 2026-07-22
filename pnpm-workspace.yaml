@@ -1,2 +1,8 @@
 packages:
   - "packages/*"
+
+updateConfig:
+  ignoreDependencies:
+    - "eslint"
+    - "react"
+    - "react-dom"
