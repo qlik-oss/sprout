@@ -1,1 +1,0 @@
-import{n as e}from"./chunk-BneVvdWh.js";var t,n=e((()=>{t=``+new URL(`image-CprsGvi_.png`,import.meta.url).href}));export{n,t};
