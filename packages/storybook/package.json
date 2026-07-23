@@ -32,7 +32,7 @@
     "@tanstack/react-virtual": "^3.13.23",
     "@uiw/codemirror-themes": "^4.25.9",
     "@uiw/react-codemirror": "^4.25.9",
-    "@uiw/react-json-view": "2.0.0-alpha.41",
+    "@uiw/react-json-view": "2.0.0-alpha.43",
     "chroma-js": "^3.2.0",
     "classnames": "^2.5.1",
     "d3": "^7.9.0",
